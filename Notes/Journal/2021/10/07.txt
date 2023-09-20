@@ -1,0 +1,181 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-07T12:09:49+13:00
+
+====== Thursday 07 Oct 2021 ======
+
+==== Pan-Pacific seasonal forecasts validation ====
+
+@ICU 
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/validation]] 
+
+--------------------
+
+==== ICU validation paper ====
+
+@ICU 
+
+sections 
+
+== Introduction ==
+
+Seasoanal forecasts important to prepare for 
+
+Especially important in Pacifif Island countries, notably for water resources, sanitation, agriculture, etc 
+
+recognized importance of integrating with other sources of information
+
+In this paper, we present a system, complete with code library, code examples, notebooks etc, for i) development and validation of monthly and seasonal probabilistic forecasts for the Pacific region
+
+This  system leverages open data, respectively the forecast and hindcast data for 8 ddifferent operational seasonal forecast systems, available on theCopernicus Climate Data store 
+
+== Data ==
+
+**Seasonal forecast and hindcast data**
+
+The monthly and seasonal forecasts and hindcast data is sourced from from the CopernicusClimate Data Store (CDS). Currently, data for 8 diferent General Circulation Models (GCMs) is available, via a well-designed API (Application Programmer Interface) [references] 
+
+Near realtime gridded precipitation estimates 
+
+GPM-IMERG 
+
+==== Methods ====
+
+**Climatologies** 
+
+The system developped relies on the calculation of several climatological quantities, especially quantiles, from time-series of satellite precipitation estimates, and monthly and seasonal hindcast data 
+
+For the GPM-IMERG satellite estimates, the percentile of scores for given accumulation periods (30, 60, 90, 180 and 360 days) are calculated compared to the whole archived dataset over the period 2001 - 2020 (20 years): i.e the latest accumulation is compared to the corresponding accumulation for the target day of year, + and minus a buffer of 3 days, so that e.g. a 90 days accumulation ending on the 30 September 2021 (UTC) is compared to the 90 days accumulations ending 28,29,30 September as well as 1,2,3 October, for each year from 2001 to 2020 (i.e a total of 6 * 20 values). 
+
+From these percentile of scores, we derive the EAR (Early Action Rainfall) Watch levels, as well as the US Drought Monitor levels (USDM) 
+
+In addition, the Standardized Precipitation Index is also calculated, following the methodology exposed in Lloyd-Hughes and Saunders (2002) 
+
+The monthly and seasonal leadtime dependent climatological values for each GCM are derived from all the corresponding available hindcast data, spanning the years 
+1993 to 2016. 
+
+The tercile, decile and percentiles (percentile 2%, then 5 to 95 in 5% increments) are calculated from all instances, number of initial months (i.e 24) X number of ensemble members
+
+The number of instances for each GCM are summarized in table X 
+
+We calculated both the empirical quantiles, as well as parametrized quantiles, whereby a Gamma distribution is first fitted to the monthly or seasonal accumulations, the differences did not significantly affect the final validations 
+
+**Calculation of sub-regional time-series**
+
+The provision of sub-regional (administrative areas) probabilistic forecasts and their validation required the calculation of area-averaged time-series of precipitation from GCMs hindcasts and forecasts. 
+
+To that effect, we derived land-sea masks for each of the 73 administrative areas [Figure here], but given the small areas of many Islands and Atolls, we apply a buffer, and the GCM outputs are first interpolated to 0.2 degree (i.e. 5 times the original resolution) 
+
+The figure X presents an example for Papua New Guinea. 
+
+== Software infrastructure ==
+
+The software infrastructure developed for the download, processing and calculations necessary to reproduce the results and figures presented in this paper is made available freely at https://github.com/nicolasfauchereau/ICU_Water_Watch. It has been developed using the open-source language Python, and relies heavily on the Scientific Python Ecosystem (cite ?) and in particular the foundational libraries of the Pangeo project (cite ?) 
+
+
+--------------------
+
+==== using rioxarray to reproject netcdf after having set a CRS ====
+
+@python @geo @geopsatial @rioxarray 
+
+see: https://gis.stackexchange.com/questions/345650/how-do-i-add-projection-to-this-netcdf-file-satellite/345697#345697 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== References ==
+
+Lloyd-Hughes, B., and M. A. Saunders, 2002: A drought climatology for Europe. Int. J. Climatol., 22, 1571–1592, https://doi.org/10.1002/joc.846.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

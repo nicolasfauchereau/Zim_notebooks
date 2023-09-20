@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-14T09:07:47+13:00
+
+====== Thursday 14 Jan 2021 ======
+
+==== GAMMA-FACET: A New Approach for Universal Explanations of Machine Learning Models ====
+
+see https://github.com/BCG-Gamma/facet 
+
+installed in environment `ML` with: 
+
+conda install gamma-facet -c bcg_gamma -c conda-forge
+
+--------------------
+
+==== sklearndf:  DataFrame support for scikit-learn. ====
+
+https://github.com/BCG-Gamma/sklearndf 
+
+installed in environment `ML` with: 
+
+conda install sklearndf -c bcg_gamma -c conda-forge 
+
+--------------------
+
+==== ZESPRI: extract then read the extracted VCSN weather variables time-series ====
+
+→ see **20210113_NF_extract_VCSN_time-series.ipynb** for the extraction 
+→ see  **20210114_NF_read_extracted_VCSN_ts.ipynb** for reading and calculating (e.g.) anomalies 
+
+**NOTE:** 
+
+Processed daily VCSN to 2020-12-31 in [[/home/nicolasf/operational/VCSN/data/NC/DAILY]] : 
+
+[*] RAIN_BC: [[/home/nicolasf/operational/VCSN/data/NC/DAILY/RAIN_BC]]	
+[*] TMAX_N: [[/home/nicolasf/operational/VCSN/data/NC/DAILY/TMAX_N]] 
+[*] TMIN_N: [[/home/nicolasf/operational/VCSN/data/NC/DAILY/TMIN_N]] 
+[*] TMEAN_N: see **make_Tmean_N_daily.ipynb** in [[/home/nicolasf/operational/VCSN/notebooks]] 
+
+--------------------
+
+==== Response of the biosphere to Climate Change ====
+
+
+
+
+
+But: Climate change and primary production: Forty years in a bunchgrass prairie (https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0243496): "Therefore, seasonal climate changes at a smaller geographical scale (local), rather than average annual climate changes over a larger geographical scale (regional), may better reflect plant community responses, and this makes ecological forecasting of climate change more difficult." 
+
+
+
+
+
+
+

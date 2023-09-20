@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-13T09:05:08+12:00
+
+====== Thursday 13 May 2021 ======
+
+==== LAZYPREDICT ====
+
+@autoML 
+
+https://github.com/shankarpandala/lazypredict
+
+--------------------
+
+==== example of apply_ufunc ====
+
+def fcn_of_desire(var1, var2):
+	# note that in this example var1, var2 are of type ndarray(time, )
+	# the fuction must return a ndarray of shape ndarray(time, )
+
+	# perform an arbitary function on the arrays
+	# make sure to return a ndarray of shape (time, )
+	return var1 * var2
+
+variables = [cube['air_temperature_2m'], cube['radiation_era5']]  # DataArrays of shape (time, lat, lon)
+
+res_arr = xr.apply_ufunc(fcn_of_desire,  # function to apply
+						 *variables,  # pass arguments.
+						 input_core_dims=(('time',),('time',)),
+						 # the core dimensions* needed to apply the funciton, in other words, the dimensions we apply the function across
+						 output_core_dims=(('time',),),  # the core dimensions* that will come out
+						 vectorize=True,
+						 # vectorize the function: https://numpy.org/doc/stable/reference/generated/numpy.vectorize.html
+						 dask='parallelized',  # let dask handle the parallelization
+						 output_dtypes=[np.float32])  # data type of the output(s)

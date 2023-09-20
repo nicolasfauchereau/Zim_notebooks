@@ -1,0 +1,90 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-26T15:26:15+13:00
+
+====== Thursday 26 Mar 2020 ======
+
+VCSN processing
+
+@VCSN @SI 
+
+Note that the original projection of the VCSN data as in the Wellington 'CLIMATE' group files (zip files containing dat files) is NZGD1949 
+
+corresponds to EPSG:27200 or https://epsg.io/4272 
+
+see: https://epsg.io/4272 
+
+and 
+
+https://epsg.io/27200
+
+The corresponding proj4 string for **NZDG49 / EPSG 4272** is: 
+
+{{{code: lang="python" linenumbers="True"
++proj=longlat +ellps=intl +towgs84=59.47,-5.04,187.44,0.47,-0.1,1.024,-4.5993 +no_defs 
+}}}
+
+
+while for **NZDG49 / EPSG 27200 **it is: 
+
+{{{code: lang="python" linenumbers="True"
++proj=nzmg +lat_0=-41 +lon_0=173 +x_0=2510000 +y_0=6023150 +ellps=int+towgs84=59.47,-5.04,187.44,0.47,-0.1,1.024,-4.5993 +units=m +no_defs 
+}}}
+
+*
+see also: https://lris.scinfo.org.nz/p/lris_faqs/ 
+
+* New Zealand Transverse Mercator / New Zealand Geodetic Datum 2000 (EPSG:2193)
+* New Zealand Map Grid / **New Zealand Geodetic Datum 1949 (EPSG:27200)**
+* World geodetic System 1984 (EPSG:4326 Lat/Long)
+* North Island Grid / New Zealand Geodetic Datum 1949 (EPSG:27291)
+* South Island Grid / New Zealand Geodetic Datum 1949 (EPSG:27292)
+
+The lats and lons in the .dat files then need to be projected to EPSG:4326 (WGS84) using pyproj 
+
+example code: 
+
+{{{code: lang="python" linenumbers="True"
+from pyproj import Proj, transform
+
+proj_in = Proj(init="EPSG:27200", preserve_units=False)
+proj_out = Proj(init="EPSG:4326", preserve_units=False)
+
+lon = data.loc[:,'Longt'].values
+lat = data.loc[:,'Lat'].values
+
+xin, yin = proj_in(lon,lat)
+
+xout, yout = transform(proj_in,proj_out,xin, yin)
+
+xs, ys = np.meshgrid(lon4grid, lat4grid)
+
+swath_def_out = geometry.GridDefinition(lons=xs, lats=ys)
+
+swath_def_in = geometry.SwathDefinition(lons=xout, lats=yout)
+}}}
+
+
+see in 
+
+**process_VCSN_monthly_daily_ops.ipynb** in [[/operational/VCSN]] 
+
+add the following attribute to the xarray dataset so that salem can recognize it: 
+
+**dset.attrs['pyproj_srs'] = '+units=m +init=epsg:4272'**
+
+
+--------------------
+
+=== JMA downloads ===
+
+something went wrong with the download of **/home/nicolasf/research/Smart_Ideas/data/GCMs/downloads/hindcasts/JMA/JMA/SST/surf_Pss_mon.20140630.grb2**
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-07T12:24:05+13:00
+
+====== Thursday 07 Jan 2021 ======
+
+Discussion with Gus 
+
+Potential alternative sources of funding 
+
+1) AI for Good / AI for health (MS) 
+2) AI Impact challenge / AI for social good (Google): see https://ai.google/static/documents/impact-challenge-application.pdf and https://ai.google/social-good/impact-challenge/application/ 
+
+**Special Interest Group** 
+
+impact on human behavior, moods, attitudes ... 

@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-02T11:33:08+13:00
+
+====== Monday 02 Nov 2020 ======
+
+==== some more experiments with PYCARET ====
+
+see Apple_and_Pears_SSTs_obs_noPCA.ipynb in [[/home/nicolasf/research/Smart_Ideas/code/models/application_cases/classification/Apple_and_Pears/AutoML/PYCARET/notebooks]] 
+
+parameters: 
+
+# Parameters 
+
+application = 'Apple_and_Pears'
+varname = 'RAIN_BC'
+stat = 'mean'
+num_quantiles = 3
+target_type = f'cat{num_quantiles}'
+step = 4
+lag_sst = True
+max_lag = 6
+detrend_sst = False
+
+results of compare_models()
+
+{{./screenshot_2020-11-02-113515.png?width=700}}
+
+==== AUTOGLUON run with target TMEAN_N ====
+
+**parameters:** 
+
+# Parameters 
+
+application = 'Apple_and_Pears'
+varname = 'TMEAN_N'
+stat = 'mean'
+num_quantiles = 3
+target_type = f'cat{num_quantiles}'
+step = 4
+lag_sst = True
+max_lag = 6
+detrend_sst = False
+
+**results:** 
+
+{{./screenshot_2020-11-02-161132.png?width=1000}}
+
+performance ~ 0.68 accuracy (0.63 for rainfall) 
+
+
+
+
+
+
+
+
+
+
+
+
+

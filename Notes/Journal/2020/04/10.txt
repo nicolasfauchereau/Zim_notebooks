@@ -1,0 +1,97 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-10T11:23:56+12:00
+
+====== Friday 10 Apr 2020 ======
+
+=== some more experiments with autogluon and the newly updated GCMs (see 09/04/20) ===
+
+== GCM: CMCC, var T2M → TMEAN ==
+
+**NNI**: SCO acc = **0.72** over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.694561	0.346325	0.000634	1
+
+**WNI**: SCO acc = 0.58 over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.627615	0.309804	0.000616	1
+
+**ENI**: SCO acc = 0.55 over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.635983	0.306032	0.000538	1
+
+**NSI**: SCO acc = 0.55 over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.677824	0.322905	0.000749	1
+
+**WSI**: SCO acc = 0.58 over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.610879	0.315355	0.000523	1
+
+**ESI**: SCO acc = 0.27 over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.552301	0.325639	0.000608	1
+
+=== NOTES: ===
+
+---------------------------------------------------------------------------------------------------
+
+== comparison between ML-based forecasts, GCM-only forecasts, and NIWA's seasonal climate outlook (SCO) forecasts accuracy ==
+
+Methodology 
+
+SCO accuracy score 
+
+NIWA's SCO has been produced since 1999, over this period NIWA consistently recorded the tercile probabilistic outlooks for the NZ '6 regions' (see figure) as well as the observed, actual category 
+
+
+== GCM baselines: ==
+
+The GCM baselines are calculated as the accuracy scores and Pearson's R between the observed time-series of terciles-based categories, and the predictred categories derived from the regional averages of the corresponding climate variables derived directly from the GCMs. 
+
+Stacked and bagged ensemble models as in AUTOGLUON out-perform the GCM baselines consistently, and are on par with the accuracy score calculated for the 
+
+---------------------------------------------------------------------------------------------------
+
+=== Hyperparameters tuning for the models included in AutoGLUON ===
+
+see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/AUTOGLUON/AutoGluon_HyperParams_tuning.ipynb]] 
+
++ **NN (Neural Networks)**: `autogluon/utils/tabular/ml/models/tabular_nn/hyperparameters/parameters.py`
+	Note: certain hyperparameter settings may cause these neural networks to train much slower.
+
+**+ GBM (Gradient Boosted Machines)**: `autogluon/utils/tabular/ml/models/lgb/hyperparameters/parameters.py`
+	 See also the **lightGBM** docs: https://lightgbm.readthedocs.io/en/latest/Parameters.html
+
++ **CAT (gradient boosting on decision trees)**: `autogluon/utils/tabular/ml/models/catboost/hyperparameters/parameters.py`
+	 See also the CatBoost docs: https://catboost.ai/docs/concepts/parameter-tuning.html
+
++ **RF (Random Forest Classifier)**: See sklearn documentation: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+	**Note: Hyperparameter tuning is disabled for this model.**
+	Note: 'criterion' parameter will be overriden. Both 'gini' and 'entropy' are used automatically, training two models.
+ 
++ XT (Extra Trees Classifiers) See sklearn documentation: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesClassifier.html
+	Note: Hyperparameter tuning is disabled for this model.
+	Note: 'criterion' parameter will be overriden. Both 'gini' and 'entropy' are used automatically, training two models.
+
++ **KNN (K-nearest Neighbors)**: See sklearn documentation: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+	Note: Hyperparameter tuning is disabled for this model.
+	Note: 'weights' parameter will be overriden. Both 'distance' and 'uniform' are used automatically, training two models.
+
+
+=== Dask XGBOOST ===
+
+Distributed training with XGBoost and Dask.distributed
+
+https://github.com/dask/dask-xgboost
+
+https://gist.github.com/mrocklin/19c89d78e34437e061876a9872f4d2df 
+
+
+
+
+
+
+
+
+
+
+
+
+

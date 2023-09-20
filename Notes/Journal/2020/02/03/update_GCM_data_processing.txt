@@ -1,0 +1,129 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-03T09:12:47+13:00
+
+====== update GCM data pre processing and processing ======
+Created Monday 03 February 2020
+
+== ============================================================================================================================================ ==
+
+===== CDS =====
+
+==== pre-processing ====
+
+read the grib, rename variables and dimensions, flip latitudes, check consistency, saves in netcdf (one file per month) 
+
+=== Hindcasts (training period, 2017 - 2019): ===
+
+CODE: [[/home/nicolasf/research/Smart_Ideas/code/pre-processors/CDS/notebooks/pre-process_CDS_hindcasts_1993_2016.ipynb]]	
+
+=== ECMWF ===
+	[*] T2M
+	[*] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+
+=== UKMO ===
+	[*] T2M
+	[*] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== METEO_FRANCE ===
+	[*] T2M
+	[*] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== DWD ===
+	[*] T2M
+	[*] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== CMCC ===
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== Forecasts (test period, 2017 - 2019): ===
+
+CODE: [[/home/nicolasf/research/Smart_Ideas/code/pre-processors/CDS/notebooks/pre-process_CDS_forecasts_2017_2019.ipynb]]	
+
+=== ECMWF ===
+
+	[*] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== UKMO: note: not available from January to September ===
+
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== METEO_FRANCE ===
+
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== DWD ===
+
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+=== CMCC ===
+
+== ================================================================================================================================================ ==
+
+=== parametrisation and execution of notebooks via papermill ===
+
+see: 
+
+https://papermill.readthedocs.io/en/latest/usage-parameterize.html
+
+If using the JupyterLab interface
+
+	1) Select the cell to parameterize
+   2) Click the cell inspector (wrench icon)
+   3) Edit the Cell Metadata field by adding **"tags":["parameters"]** in the dictionnary 
+
+then 
+
+papermill ./pre-process_CDS_hindcasts_1993_2016.ipynb ./pre-process_CDS_hindcasts_1993_2016.ipynb -p GCM "METEO_FRANCE" -p var_name "T2M"
+
+
+
+
+
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+==== processing ====
+
+read the netcdf files, calculate the monthly climatology, calculates the monthly anomalies, calculates the seasonal averages, calculate the climatology (1993 - 2016), calculate the seasonal anomalies, interpolate on the JMA grid (but keep all ensemble members for now) and saves one file per month and per season ... 
+
+=== Hindcasts ===
+
+
+
+=== Forecasts ===
+
+
+== ============================================================================================================================================ ==
+
+===== IRI =====
+
+
+
+

@@ -1,0 +1,54 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-23T09:25:51+13:00
+
+====== Wednesday 23 Mar 2022 ======
+
+==== markdown preview in VSCODE ====
+
+<CTRL>-<k> then <v> to open preview on the side 
+
+--------------------
+
+==== number of members in ensemble ====
+
+@ICU 
+
+hindcasts 
+
+- ECMWF: 25
+- UKMO: 28 
+- MF: 25
+- DWD: 30 
+- CMCC: 40
+- NCEP: 20
+- JMA: 10
+- ECCC_CanCM4i: 10
+- ECCC_GEM_NEMO: 10
+
+forecasts (as of 15 March 2022
+
+ECMWF: 51
+UKMO: 56
+FRANCE: 51
+DWD: 50
+CMCC: 50
+NCEP: 112
+JMA: 140
+ECCC: 10
+ECCC: 10
+
+--------------------
+list of Smart Ideas concept notes 
+
+{{./screenshot_2022-03-23-104642.png}}
+{{./screenshot_2022-03-23-104712.png}}
+
+
+--------------------
+
+
+
+
+
+

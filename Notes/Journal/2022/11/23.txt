@@ -1,0 +1,77 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-23T09:58:44+13:00
+
+====== Wednesday 23 Nov 2022 ======
+
+==== xclim indices relevant for the evaluation of CMIP6 downscaling techniques ====
+
+see in https://xclim.readthedocs.io/en/stable/indices.html#indices-library
+
+== daily precipitation intensity ==
+
+from xclim.indices import daily_pr_intensity
+pr = xr.open_dataset(path_to_pr_file).pr
+
+at the annual time scale 
+
+daily_int = daily_pr_intensity(pr, thresh="1 mm/day", freq="Y")
+
+at the seasonal time scale (DJF, MAM, JJA, SON, DJF, etc)
+
+daily_int = daily_pr_intensity(pr, thresh="5 mm/day", freq="QS-DEC")
+
+--------------------
+
+==== My ERA5 Journey: From API-to-ARCO ====
+
+see https://github.com/rsignell-usgs/pangeo_showcase_20221012 
+
+some useful stuff 
+
+		n_cores = os.cpu_count() # set to match your machine
+		cluster = LocalCluster(threads_per_worker=n_cores)
+		client = Client(cluster)
+
+xbitinfo for compression: see https://github.com/rsignell-usgs/pangeo_showcase_20221012/blob/main/01_era5-land-bitinfo.ipynb 
+
+and https://github.com/observingClouds/xbitinfo 
+
+see also from kerchunk.combine import MultiZarrToZarr: combine multiple ZARR files to ZARR ? 
+
+https://gist.github.com/peterm790/1ad0194df364b6efd51631ecaa96deda 
+
+GEFS_single_var.ipynb  
+
+--------------------
+
+==== problem with year 1972 in the BCSD adjusted CCAM runs ====
+
+/media/nicolasf/END19101/research/CMIP6_downscaling/ACCESS-CM2_CCAM_to_VCSN/outputs/QMds_ACCESS-CM2_CCAM_historical_pr_BCSD_QM_adjusted_calibration_cross_validated_LOO_1972.nc
+
+see adjusted CCAM 
+
+**downscale_xclim_ACCESS-CM2_CCAM_to_VCSN_cross_validation_adjust.ipynb**
+
+or 
+
+**downscale_xclim_ACCESS-CM2_CCAM_ssp370_to_VCSN_from_cross_validation.ipynb**
+
+seems other files not affected 
+
+OK now fixed ... had to rerun the training ... 
+
+
+{{./screenshot_2022-11-23-160957.png}}
+
+
+
+
+
+
+
+
+
+
+
+

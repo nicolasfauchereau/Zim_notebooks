@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-14T13:52:42+13:00
+
+====== TAIAO ======
+Created Friday 14 February 2020
+
+ML for data streams
+
+weak signals (one end of the spectrum) or extremes 
+
+explainability 
+
+access to data become 'easier' but tools for keeping up lagging 
+
+goal: at least at first: Open source framework and data repository
+
+TAIAO: 
+
+Tools for analyzing data 
+
+Platform for organizing and accessing data 
+
+see below pics: 
+

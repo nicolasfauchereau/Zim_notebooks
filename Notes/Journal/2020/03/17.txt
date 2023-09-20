@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-17T08:42:29+13:00
+
+====== Tuesday 17 Mar 2020 ======
+
+=== VCSN processing ===
+
+@SI @VCSN 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN/calculates_6_regions_terciles_from_grid.ipynb]] 
+
+calculates the indices (seasonal anomalies and seasonal tercile categories) from the gridded version of the VCSN dataset, using salem and the shapefiles in 
+[[/home/nicolasf/research/Smart_Ideas/data/shapefiles/NZ_regions/NZ_6_regions]] 
+

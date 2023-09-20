@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-22T21:04:35+12:00
+
+====== Thursday 22 Apr 2021 ======
+
+**shutil.rmtree(temp_dir)** to delete a directory 
+
+--------------------
+
+==== Microsoft Planetary Computer ====
+
+https://planetarycomputer.microsoft.com/catalog 
+
+includes: https://www.ospo.noaa.gov/Products/atmosphere/ghe/ 
+
+see 
+
+
+
+
+

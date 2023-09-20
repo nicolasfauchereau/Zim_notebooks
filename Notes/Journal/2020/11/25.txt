@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-25T11:43:10+13:00
+
+====== Wednesday 25 Nov 2020 ======
+
+Send stuff to Albert Bifet
+
+e.g. https://www.ametsoc.org/index.cfm/stac/committees/committee-on-artificial-intelligence-applications-to-environmental-science/past-conferences-and-events/  
+
+--------------------
+
+==== MetSoc conference ====
+
+some ideas 
+
+→ we are using tree-based algorithns 
+
+→ when and where (and why) predictability from obsevred SSTs > predictabiliuty for simulated (forecast) SSTs, alternative view compared to simple 'validation' of GCM forecasts against observations 
+
+
+--------------------
+
+==== chat with Neil Gordon at MetSoc ====
+
+
+--------------------
+
+==== climpred workshop ====
+
+https://github.com/bradyrx/climpred_workshop 
+
+should use for the comparison of the GCM forecasts to the observations 
+
+--------------------
+
+==== idea: train over overlapping seasons, bu evaluate / test over center season ====
+
+e.g. train using all instances corresponding to NDJ, DJF, JFM, but only evaluate over DJF 

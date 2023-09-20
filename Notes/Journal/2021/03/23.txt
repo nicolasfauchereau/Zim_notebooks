@@ -1,0 +1,55 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-23T09:07:35+13:00
+
+====== Tuesday 23 Mar 2021 ======
+
+==== Marine Heat Waves ====
+
+--------------------
+EPSG for buffering 
+
+for NZ: https://spatialreference.org/ref/epsg/nzgd2000/ 
+
+EPSG:4167 
+
+--------------------
+
+==== deep learning meeting ====
+
+U, V, W 850 
+
+160E →  180E  
+-50 → -30
+
+U200 global domain 
+
+== Climate Indices ==
+
+→  LSTMs 
+→ resnet for time-series https://github.com/hfawaz/dl-4-tsc/ 
+→ linear model with custom loss function 
+
+the next step for the latter SST as inputs 
+
+--------------------
+
+==== UNOCHA meeting ====
+
+The further we go in the forecast horizon, the larger the potential uncertainties, so makes sense to use MMEs 
+
+https://www.humanitarianresponse.info/en/operations/pacific-region/enso-working-group
+
+provide Tim with hi-resolution product 
+
+**ACCESS-S validation**: see  Beischer, T. A., P. Gregory, K. Dayal, J. R. Brown, A. N. Charles, W. X. D. Wang, and J. N. Brown, 2021: Scope for predicting seasonal variation of the SPCZ with ACCESS-S1. Clim Dyn, 56, 1519–1540, https://doi.org/10.1007/s00382-020-05550-6.
+ 
+also: http://access-s.clide.cloud/files/regional/pacific/ 
+
+
+
+
+
+
+
+

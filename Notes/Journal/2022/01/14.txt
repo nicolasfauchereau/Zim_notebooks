@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-14T09:36:46+13:00
+
+====== Friday 14 Jan 2022 ======
+
+
+==== Storms drive outgassing of CO2 in the subpolar Southern cd Ocean ====
+
+Nicholson, S.-A., D. B. Whitt, I. Fer, M. D. du Plessis, A. D. Lebéhot, S. Swart, A. J. Sutton, and P. M. S. Monteiro, 2022: Storms drive outgassing of CO2 in the subpolar Southern Ocean. Nat Commun, 13, 158, https://doi.org/10.1038/s41467-021-27780-w.
+
+code: https://github.com/sarahnicholson/SouthernOceanStormsCO2 
+
+and cloned in https://github.com/sarahnicholson/SouthernOceanStormsCO2 
+
+--------------------
+
+==== vectorizing a raster ====
+
+@xarray @geo @geojson 
+
+see **experiments_vectorizing_rasters.ipynb** 
+
+in [[/home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper]] 
+
+--------------------
+
+
+
+

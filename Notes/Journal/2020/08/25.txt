@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-25T11:58:12+12:00
+
+====== Tuesday 25 Aug 2020 ======
+
+==== Work on the SCO GCM-based tercile probabilistic forecasts ====
+
+Now base the probabilities on the calculated climatological terciles for each month 
+
+see: 
+
+**SCO_copernicus/notebooks/get_copernicus_seasonal_all_centres_temp_regionmask_NZ_6regions_clim_terciles.ipynb** 
+
+in [[/home/nicolasf/operational/NCC_ops/SCO_copernicus/notebooks]] 
+
+==== Time distributed layer ====
+
+This wrapper allows to apply a layer to every temporal slice of an input.
+
+The input should be at least 3D, and the dimension of index one will be considered to be the temporal dimension.
+
+Consider a batch of 32 video samples, where each sample is a 128x128 RGB image with channels_last data format, across 10 timesteps. The batch input shape is (32, 10, 128, 128, 3).
+
+{{./screenshot_2020-08-25-171355.png}}
+
+
+
+
+
+
+
+

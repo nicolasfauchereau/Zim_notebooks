@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-16T11:31:12+13:00
+
+====== Wednesday 16 Dec 2020 ======
+
+==== Heat Waves Tracking ====
+
+https://escience.washington.edu/data-science-to-track-mhws 
+
+http://www.hillaryscannell.com/ocetrac/
+
+see Teams message  and email sent to Doug: 
+
+"""
+//Have a look at this://
+
+//https://escience.washington.edu/data-science-to-track-mhws//
+	
+//Using Data Science to Track Marine Heatwaves//
+//By: Louisa Gaylord UW School of Oceanography Professor LuAnne Thompson and recent PhD graduate Hillary Scannell are leading a team that uses data science to track and predict marine heatwaves (MHW). These extreme hot-water events have had dramatic ecological impacts and have led//
+//escience.washington.edu//
+
+
+//I am VERY keen to pick that up in the new year (yes, after the new ICU product is operationalised 🙂 ...) and have something automated based on this, for tracking regional MHWs ... what is really interesting with this is that it looks at the shape, extent and spatial evolution of MHWs, would be really cool to do this for the SW Pacific and have a nice product// 
+"""
+
+--------------------
+
+==== Spatial and temporal tracking of circulation anomalies in weather and climate data ====
+
+@track  @tracking @cyclone @blocking  
+
+https://github.com/steidani/ConTrack
+
+→ use this to do a climatology of cyclone, blocking etc over NZ 
+
+see also tempest extremes: https://github.com/ClimateGlobalChange/tempestextremes 
+
+--------------------

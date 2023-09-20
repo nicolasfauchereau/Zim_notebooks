@@ -1,0 +1,325 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-04T14:39:03+12:00
+
+====== HPCF ======
+Created Thursday 04 August 2022
+
+==== NESI / HPC login ====
+
+@NESI @HPC @CMIP @CMIP6 @downscaling @MBIE 
+
+=== NESI details ===
+
+https://my.nesi.org.nz 
+
+login: fauchereaun
+pass: SakyamuniPOM2022
+
+== HPC nodes ==
+
+ssh -Y fauchereaun@w-nwp01.maui.niwa.co.nz 
+pass: Alh....6644!
+
+note that ssh -Y fauchereaun@w-clim01.maui.niwa.co.nz does not work with the same password 
+
+ssh -X fauchereaun@login.kupe.niwa.co.nz 
+pass: Alh....6644!
+
+ssh -X fauchereaunn@hafs01.kupe.niwa.co.nz 
+
+
+== projects ==
+
+**niwa00018**: lead Abha Sood, Project Title "Regional Modelling - Atmospheric"
+**niwa02916**: lead Stephen Stuart, Project Title "CMIP6 data"
+
+== directories ==
+
+/nesi/project/niwa00018
+/nesi/project/niwa02916 
+
+[[/nesi/project/niwa02916/niwa02916/synda_home/data/CMIP6/ScenarioMIP/]]
+
+--------------------
+
+**KUPE is now dedicated to the MBIE downscaling project **
+
+ssh user@hafs01.kupe.niwa.co.nz
+
+does not work with normal password 
+
+**UPDATE**: Now works 
+
+== MAUI: ==
+
+ssh -Y fauchereaun@w-nwp01.maui.niwa.co.nz 
+
+or
+
+ssh -Y fauchereaun@w-clim01.maui.niwa.co.nz 
+
+password is Alh...4!
+
+== KUPE: ==
+
+ssh -Y fauchereaun@hafs01.kupe.niwa.co.nz
+
+or 
+
+ssh -Y fauchereaun@kupe01.kupe.niwa.co.nz
+
+or 
+
+ssh -Y fauchereaun@kupe02.kupe.niwa.co.nz 
+
+--------------------
+
+==== Running papermill on the HPCF ====
+
+https://github.com/nesi/papermill_demo 
+
+From a terminal running on NeSI, clone this repository:
+
+git clone https://github.com/nesi/papermill_demo
+
+Create a Conda environment:
+
+//module purge && module load Miniconda3/4.10.3//
+
+module purge && module load Anaconda3/2021.05-GCC-7.1.0
+
+conda env create -p venv -f environment.lock.yml
+
+Install a jupyter kernel for the notebooks:
+
+module purge && module load JupyterLab
+nesi-add-kernel -p ./venv papermill_demo cuDNN/8.1.1.33-CUDA-11.2.0
+
+Note: The environment.lock.yml file contains the version of all installed packages for reproducibility. It has been generated from a conda environment created using the environment.yml file and exported it as follows:
+
+conda env export -p venv --no-builds | sed "/^name/d; /^prefix/d" > environment.lock.yml
+
+--------------------
+
+==== To start working on the HPCF ====
+
+First use Maui, by connecting to https://jupyter.maui.niwa.co.nz 
+
+Module avail 
+
+module load cuDNN/8.1.1.33-CUDA-11.2.0  
+
+nvidia-smi 
+
+always do a: 
+
+**module load Anaconda3/2020.02-GCC-7.1.0**
+
+before using conda to create, activate or install packages in conda environments   
+
+e.g. 
+
+conda create -n BCSD -c conda-forge Python=3.9 netcdf4 xarray dask xclim regionmask jupyterlab
+
+condarc files 
+
+cd .local/ 
+
+cd share/jupyter 
+
+[[/home/fauchereaun/.local/share/jupyter/kernels/gpu_env]]
+
+data 
+
+
+For level 
+
+[[/nesi/project/niwa00018/ML_downscaling_CCAM/era5_ccam]] 
+
+no precip in ERA5 CCAM 
+
+[[/nesi/project/niwa00018/ML_downscaling_CCAM/gpu_env]] 
+
+runs on KUPE 
+
+all data is 
+
+[[/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/]]
+
+e.g. for the ERA5_C192
+
+[[/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/historical/ERA5_c192/OUTPUT/NZ_domain]]
+
+except precip, which is in 
+
+[[/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/historical/ERA5_c192/OUTPUT/NZ_surf_domain/201912>]] 
+
+On KUPE, look into 
+
+[[/nesi/project/niwa00018/rampaln/bashrc/]] 
+
+copy that bashrc on my home directory on kupe ... 
+
+hafs01
+kupe01
+kupe02 
+
+Parallel CDO: [[/nesi/project/niwa00018/rampaln/downscaling-application/CDO/subset_ccam_output.py]]
+
+see /nesi/project/niwa00018/rampaln
+
+for the processing scripts (aggregation, etc) 
+
+--------------------
+
+==== ON KUPE ====
+
+1) module load Anaconda3/2021.05-GCC-7.1.0
+
+conda activate BCSD
+
+
+--------------------
+create an environment oin KUPE ? export SYSTEM_STRING=CS500
+export OS_ARCH_STRING=centos7
+export CPUARCH_STRING=skl
+
+
+module purge 
+module avail 
+
+
+
+conda create --prefix ./demo python=3.6 scipy=0.15.0 
+ 
+conda activate ./demo
+
+--------------------
+
+==== working environment with xclim on KUPE ====
+
+== creating the environment ==
+
+cd [[/nesi/project/niwa00018/fauchereaun]] 
+
+step 1: 
+
+module use /opt/nesi/modulefiles/
+module unuse /opt/niwa/CS500_centos7_skl/modules/all
+module unuse /opt/niwa/share/modules/all
+
+export SYSTEM_STRING=CS500
+export OS_ARCH_STRING=centos7
+export CPUARCH_STRING=skl
+
+module purge 
+module load NeSI
+module load Miniconda3/4.12.0
+
+source $(conda info --base)/etc/profile.d/conda.sh
+export PYTHONNOUSERSITE=1
+
+conda deactivate base 
+
+Step 2: create an environment barebone with conda, specifying the directory 
+
+conda create --prefix ./cmip6 python=3.6
+
+conda activate [[/scale_akl_persistent/filesets/project/niwa00018/fauchereaun/BCSD]]
+
+conda install -c conda-forge "pint<0.20" 
+conda install -c conda-forge xesmf
+conda install -c conda-forge xclim
+conda install -c conda-forge netcdf4 zarr 
+conda install -c conda-forge cartopy 
+
+also 
+
+in src 
+
+```
+pip install -e .
+```
+
+--------------------
+
+==== using the environment ====
+
+**first do (on Kupe)**
+
+{{{code: lang="sh" linenumbers="True"
+niwa00018 
+}}}
+
+
+then get into [[/nesi/project/niwa00018/fauchereaun/notebooks/processing]]
+
+then: 
+
+{{{code: lang="sh" linenumbers="True"
+module use /opt/nesi/modulefiles/
+module unuse /opt/niwa/CS500_centos7_skl/modules/all
+module unuse /opt/niwa/share/modules/all
+
+export SYSTEM_STRING=CS500
+export OS_ARCH_STRING=centos7
+export CPUARCH_STRING=skl
+
+module purge 
+module load NeSI
+module load Miniconda3/4.12.0
+
+source $(conda info --base)/etc/profile.d/conda.sh
+export PYTHONNOUSERSITE=1
+
+conda deactivate
+conda activate /scale_akl_persistent/filesets/project/niwa00018/fauchereaun/cmip6
+
+jupyter notebook --no-browser
+}}}
+
+
+
+**Then locally** 
+
+{{{code: lang="sh" linenumbers="True"
+ssh -N -f -L localhost:8890:localhost:8888 fauchereaun@hafs01.kupe.niwa.co.nz
+}}}
+
+
+
+first set of localhost:port refers to **local machine**, second localhost:port to **distant server (KUPE)**  
+
+--------------------
+
+==== to get the list of files in a project folder who are going to be deleted ====
+
+nn_doomed_list -p niwa00018 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

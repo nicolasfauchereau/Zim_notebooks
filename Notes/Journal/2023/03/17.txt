@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-17T15:16:48+13:00
+
+====== Friday 17 Mar 2023 ======
+
+==== meeting with Richard Heim, Steve Ansari ====
+
+@GDIS @ICU 
+
+some links 
+
+https://app.climateengine.com/climateEngine
+
+https://dri-apps.earthengine.app/view/climatology-comparison-explorer
+
+https://www.drought.gov/
+
+
+==== Apply SDBA to the outputs of the CNN by Neelesh ====
+
+@CMIP6 
+
+
+--------------------
+
+==== tracking systems for each GCM ====
+
+
+https://niwa-my.sharepoint.com/:x:/r/personal/nicolas_fauchereau_niwa_co_nz/_layouts/15/Doc.aspx?sourcedoc=%7BA64FC94E-849E-4742-BC74-72B55BBB9439%7D&file=C3S_GCM_forecasts_system_history.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&login_hint=Nicolas.Fauchereau%40niwa.co.nz&ct=1679015430649&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=dc3caf9c-8005-4a00-b569-6318f5336961
+
+--------------------
+
+==== number of systems per initial month in the C3S MME ====
+
+see **read_forecasts_and_evaluate.ipynb** in [[/home/nicolasf/operational/SST_forecasting/notebooks]] 
+
+{{{code: lang="python3" linenumbers="True"
+nmembers_df = {}
+
+for GCM in GCMs: 
+    
+    lfiles = list(forecasts_path.joinpath(f"{GCM}/{varname.upper()}").glob("*.netcdf"))
+    
+    numbers = {}
+
+    for fname in lfiles: 
+    
+        if 'METEO_FRANCE' in fname.name: 
+    
+            date = datetime(int(fname.name.split('_')[-4]), int(fname.name.split('_')[-3]), 1)
+            
+        else: 
+    
+            date = datetime(int(fname.name.split('_')[-3]), int(fname.name.split('_')[-2]), 1)
+    
+        dset = xr.open_dataset(fname)
+    
+        nmembers = len(dset.dropna('number', how='all')['number'])
+    
+        numbers[f"{date:%Y-%m}"] = nmembers
+        
+        dset.close()
+
+    numbers = pd.Series(numbers)
+    
+    nmembers_df[GCM] = numbers 
+    
+nmembers_df = pd.DataFrame(nmembers_df)
+
+
+
+}}}

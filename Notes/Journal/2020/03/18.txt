@@ -1,0 +1,102 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-18T09:23:50+13:00
+
+====== Wednesday 18 Mar 2020 ======
+
+=== NZ territorial authorities: ===
+
+
+see 
+
+https://koordinates.com/layer/4241-nz-territorial-authorities-2012-yearly-pattern/ 
+
+for the shapefiles, also in 
+
+[[/home/nicolasf/research/Smart_Ideas/data/shapefiles/NZ_districts]] 
+
+{{./screenshot_2020-03-18-100707.png?width=400}}
+
+
+see **notebook for processing**: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN/calculates_territorial_authorities_terciles_from_grid.ipynb]] 
+
+the outputs are in 
+
+HOME / 'research' / 'Smart_Ideas' / 'outputs' / 'targets' / 'NZ_territorial_authorities'
+
+=== NZ "FENZ" regions ===
+
+15 regions as used in the FENZ forecasts:
+
+0             Northland Region
+1              Auckland Region
+2               Waikato Region
+3         Bay of Plenty Region
+4              Gisborne Region
+5           Hawke's Bay Region
+6              Taranaki Region
+7     Manawatu-Wanganui Region
+8            Wellington Region
+9            West Coast Region
+10           Canterbury Region
+11                Otago Region
+12            Southland Region
+13               Tasman Region
+14               Nelson Region
+15          Marlborough Region
+ 
+see 
+
+[[/home/nicolasf/operational/FENZ/notebooks]] 
+
+and shapefiles in [[/home/nicolasf/operational/FENZ/data/shapes,]] copied in 
+
+need to read with 
+
+{{{code: lang="python" linenumbers="True"
+shape_gpd = gpd.read_file(shapes_path / 'svr.shp')
+shape_gpd = shape_gpd.loc[:,['REGC2018_1','geometry']]
+shape_gpd = shape_gpd.drop(16, axis=0)
+}}}
+
+
+{{./screenshot_2020-03-18-100825.png?width=400}}
+
+see **notebook for processing**: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN/calculates_15_regions_terciles_from_grid.ipynb]] 
+
+=== CLIMATE INDICATORS COMPUTATIONS ===
+
+see 
+
+https://xclim.readthedocs.io/en/stable/indicators.html
+
+which includes GDD (growing degree days)
+
+and 
+
+https://xclim.readthedocs.io/en/stable/icclim.html
+
+see
+
+file:///home/nicolasf/research/Smart_Ideas/resources/targets/Climate indicators — XClim Official Documentation (2020-03-17 12_57_10 PM).html 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

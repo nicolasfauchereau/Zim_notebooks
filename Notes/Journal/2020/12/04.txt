@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-04T12:46:04+13:00
+
+====== Friday 04 Dec 2020 ======
+
+
+==== Artificial Intelligence and Climate Change: Opportunities, considerations, and policy levers to align AI with climate change goals ====
+
+
+https://eu.boell.org/en/2020/12/03/artificial-intelligence-and-climate-change
+
+
+--------------------
+
+==== comparison ERA5 vs VCSN ? ====
+
+{{~/Pictures/Screenshot from 2020-12-04 14-24-22.png?width=800}}

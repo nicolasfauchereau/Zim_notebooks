@@ -1,0 +1,54 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-20T08:29:53+12:00
+
+====== Monday 20 Jul 2020 ======
+
+@AutoML tools, see [[Journal:2020:07:17|17/07/20]] 
+
+added the https://github.com/Palashio/libra library 
+
+==== TODO ====
+
+@TODO 
+
+1. ~~review Shailesh's report ~~
+2. ~~write Simon Woodward~~ 
+3. Hubs: 
+	a. ~~statistics channel in the analytics and modelling hub~~ 
+	b. create a channel on each hub dedicated to ideas sharing, 'hounding' people who participated in the workshops to create a short post explaining their idea, hopefully this will generate discussions 
+	c. change the 'Key Experts' tab to 'Team members' expertise', the 'key experts' will emerge naturally (hopefully) from this, maybe people do not feel comfortable being seen a considering themselves 'experts' ? also change it to e.g. excel spreadsheet, it is a wiki presently and it seems it does not allow for simultaneous editing, same goes for the ideas / suggestions table 
+
+4. schedule follow up on T&I Hubs leadership meeting 
+
+
+do not forget to invite: 
+
+Aquaculture: Andrew Forsythe, CS
+CAH: Andrew Tait, CS | Petra Pearce, PM
+Coasts and Ocean: Barb Hayden, CS | Graeme Inglis, PM
+EI: Jochen, CS
+Fisheries: Rosemary Hurst, CS
+Freshwater and Eastuaries: Scott Larned, CS | Neale Hudson, PM
+Te Kuwaha ?
+Pacific Rim: Doug Ramsey, Manager
+HPC: Kameron
+IT ? 
+
+5. Watercare, see email from JM dated Monday 20 July 
+6. write back to Raghav re. calculations of the observed categories 
+
+==== ESMTOOLS ====
+
+see 
+
+https://esmtools.readthedocs.io/en/stable 
+
+some methods:
+
+linear_slope()
+linregress()
+polyfit()
+rm_poly()
+rm_trend()
+

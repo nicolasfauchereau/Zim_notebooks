@@ -1,0 +1,69 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-14T09:09:13+13:00
+
+====== Monday 14 Mar 2022 ======
+
+==== ICU download of forecasts and hindcasts from March ====
+
+
+
+==== ICU forecast table ops (operational) ====
+
+climatologies for each countries are saved in [[~/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/admin/operational/climatoogies]]
+
+→ **GCMs_admin_hindcast_climatologies_and_probabilities.ipynb**: calculates the climatologies and the hindcast categories over the hindcast period 1993 - 2016
+
+
+--------------------
+
+==== ICU video ====
+
+netcdf to be generated 
+
+--------------------
+
+==== workshop on climate data and analytics ====
+
+https://www.otago.ac.nz/he-kaupapa-hononga/index.html
+
+types of climate data 
+
+formats of climate data 
+csv 
+netcdf 
+geotiff
+
+past: identify patterns and trends 
+
+- station data 
+- reanalysis 
+- satellite remote sensing (precipitation) 
+
+Future: 
+
+weather and climate forecasts 
+climate change scenarios simulations 
+
+web-based platforms to interact with climate data 
+KNMI 
+reanalysis.org (https://climatereanalyzer.org/) 
+
+more resources 
+
+jupyter book 
+
+--------------------
+
+==== Open Workshop on “Spatio-temporal trend analysis of spatial climate data (temperature and rainfall) using Python” ====
+
+https://biogeomon2020.ut.ee/pre-conference-workshop
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-13T10:18:08+12:00
+
+====== Friday 13 May 2022 ======
+
+==== Extract sequences ====
+
+@extremes 
+
+see function 'extract_sequences' in : [[/home/nicolasf/research/CPP/indices/code/src.py]] 
+
+
+--------------------
+
+==== FLOX, flox xarray, fast groupby on xarray ====
+
+@xarray @dask 
+
+see https://flox.readthedocs.io/en/latest/index.html 
+
+--------------------
+
+==== accessing netcdf data on AWS (ICU example) ====
+
+@ICU @cloud @netcdf @xarray @AWS 
+
+{{./pasted_image.png}}
+
+
+notebook: read_AWS_netcdf_ICU.ipynb in [[~/Jupyter_notebooks]] 
+
+
+
+
+

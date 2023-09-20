@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-04T09:22:59+12:00
+
+====== Planning ======
+Created Thursday 04 August 2022
+
+@planning 
+
+for this FY:
+ 
+[*] **Complete the new tercile / decile / imagery generation for the SCO (leftover from last FY)**
+
+	Now part the real time validation code 
+	
+	**tercile OK** 
+	**quartiles OK** 
+	decile ?  
+	
+[*] **Real-time validation (leftover from last FY)**
+
+[ ] **Monthly-to-seasonal marine heatwave outlooks (methodology consistent with ICU / SCO)**
+
+schedule that in October ahead of the NDJ season (marine heatwave in the works) 
+
+	Probability of exceedence for percentile threshold (using the MME): 
+	
+		- 80th percentile 
+		- 90th percentile 
+	
+	Deterministic information: 
+	
+		- how many std from the mean 
+		- whether anomalies are exceeding max over the hindcast period 
+
+[*] **Operational task - calculate SST indices (NOAA OISSTv2) with respect to 1991-2020 (cease relying on BoM SST values)**
+
+realtime 
+
+using OISST 
+
+NINO
+
+IOD 
+
+SPSD 
+
+NZ coastal SSTs indices need 
+
+ASAP 
+
+
+
+
+
+
+

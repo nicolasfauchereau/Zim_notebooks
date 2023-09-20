@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-03T08:46:42+13:00
+
+====== Tuesday 03 Mar 2020 ======
+
+------------------------------------------------------------------------------------------------------------------------
+
+=== Processing of forecasts ===
+
+@SI 
+
+**CDS** 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks/process_CDS_hindcasts_per_month_climatology.ipynb]] 
+
+
+note: the CDS seasonal climatologies do contain (but not for all GCMs) all the members instead of the ensemble mean, so need to test for 
+the presence of a 'member' dimension, and if so calculate the ensemble mean ... 
+
+**IRI** 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks/process_IRI_hindcasts_per_month_climatology.ipynb]] 
+
+**JMA** 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/JMA/notebooks/]]
+process_JMA_hindcasts_per_month_climatology.ipynb 
+
+
+
+

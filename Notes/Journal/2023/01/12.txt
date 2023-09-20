@@ -1,0 +1,121 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-01-12T10:07:30+13:00
+
+====== Thursday 12 Jan 2023 ======
+
+===== BAMS STOC 2022 =====
+
+to convert pdf or png to eps, do 
+
+{{{code: lang="sh" linenumbers="True"
+convert Figure1.png eps3:Figure1.eps
+}}}
+
+
+sent doc and pdf of the text and inline figures, see in [[/home/nicolasf/research/BAMS_Intertropical_Convergence_Zones/2022]] 
+
+--------------------
+
+==== Marine Heat Waves prediction ====
+
+@MHW 
+
+**references:** 
+
+de Burgh-Day, C. O., C. M. Spillman, C. Stevens, O. Alves, and G. Rickard, 2019: Predicting seasonal ocean variability around New Zealand using a coupled ocean-atmosphere model. New Zealand Journal of Marine and Freshwater Research, 53, 201–221, https://doi.org/10.1080/00288330.2018.1538052.
+
+de Burgh-Day, C. O., C. M. Spillman, G. Smith, and C. L. Stevens, 2022: Forecasting extreme marine heat events in key aquaculture regions around New Zealand. J. South. Hemisph. Earth Syst. Sci., 72, 58–72, https://doi.org/10.1071/ES21012.
+
+Jacox, M. G., M. A. Alexander, C. A. Stock, and G. Hervieux, 2019: On the skill of seasonal sea surface temperature forecasts in the California Current System and its connection to ENSO variability. Clim Dyn, 53, 7519–7533, https://doi.org/10.1007/s00382-017-3608-y.
+
+== email from Neelesh with the locations of interest: ==
+
+**Methods:**
+
+1. Datasets (OISSTA, CDS, ERSST), feel free to copy content from your ICU paper.
+
+2. Validation metrics (e.g. RMSE, correlation, binary accuracy for marine heatwaves)
+
+3. Stratification by season.
+
+**Results:**
+
+//section 1//
+
+MME spatial plot for a given lead time (e.g. 3 months) to illustrate the spatial variability in model skill. Maybe subplots to also show the poorer skill in the JJA period. 
+
+//section 2//
+
+**a**. MME correlation plot – but again stratified for different seasons. Two plots come to mind. This would paint a “New Zealand wide” measure of accuracy.
+Make sure you also have persistence in your plots too? What do you think. You could probably write a bit of a story here.
+
+**b**. Stratify the accuracy as a function of ENSO phase?
+
+//section 3//
+
+Site Specific plots of the model skill at various locations, ranking the different GCMs for different seasons.
+It would be nice to compare it to persistence also. This plot might show that some GCMs are more skilful in some areas than others.
+
+Locations (approx.)
+
+	Pelorus Sound: 41.1628° S, 173.8632° E
+	Golden Bay: 40.6548° S, 172.8210° E
+	Coromandel: 36.7587° S, 175.4981° E
+	Opotikii: 38.0123° S, 177.2871° E
+
+//section 4// 
+
+Marine heatwave accuracy for all 9 GCMs
+
+a. Evaluate the skill of the 9 GCMs (on average for New Zealand) – binary accuracy score across all grid points in New Zealand. Evaluate this as a function of lead-time and season (see example plot below).
+
+b. If the skill of the MME is far greater – only use the MME when making a plot.
+
+c. Evaluate the skill of the marine heatwave accuracy for the 4 locations (show a similar plot to that of the above).
+
+d. Probabilistic accuracies (we might not have time to do this right not) – look at evaluation metrics (e.g. CRPS) on xskillscore
+
+--------------------
+
+==== significance testing for e.g. correlation ====
+
+
+https://esmtools.readthedocs.io/en/latest/api/esmtools.testing.multipletests.html#esmtools.testing.multipletests 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+
+

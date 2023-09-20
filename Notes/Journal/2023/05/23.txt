@@ -1,0 +1,105 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-23T16:40:12+12:00
+
+====== Tuesday 23 May 2023 ======
+
+==== Cross-validated adjustment of the historical scenarios ====
+
+i.e. one file per year over the 1972 - 2014 period 
+
+files created by **BCSD_adjust_historical_crossvalidation.py** 
+
+see in [[/media/nicolasf/END19101/research/CMIP6_downscaling/outputs/adjusted/historical/]]
+
+[*] ACCESS-CM2
+	[*] pr 
+	[*] tasmin 
+	[*] tasmax 
+
+[ ] NorESM2-MM
+	[*] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] EC-Earth3
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] GFDL-ESM4
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] MPI-ESM1-2-HR
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] NZESM
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] AWI-CM-1-1-MR
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] CNRM-CM6-1
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+==== calibration files (no cross-validation) over the period 1972 - 2014 ====
+
+for adjustment of scenarios (ssp126, ssp245, ssp370) only, see **BDSD_calibrate.py** 
+
+[*] ACCESS-CM2
+	[*] pr 
+	[*] tasmin 
+	[*] tasmax 
+
+[*] NorESM2-MM
+	[*] pr 
+	[*] tasmin 
+	[*] tasmax 
+
+[>] EC-Earth3
+	[>] pr 
+	[>] tasmin 
+	[>] tasmax 
+
+[ ] GFDL-ESM4
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] MPI-ESM1-2-HR
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] NZESM
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] AWI-CM-1-1-MR
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+[ ] CNRM-CM6-1
+	[ ] pr 
+	[ ] tasmin 
+	[ ] tasmax 
+
+
+
+
+
+
+
+

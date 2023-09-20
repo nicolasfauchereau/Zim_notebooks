@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-05T11:18:11+12:00
+
+====== Wednesday 05 Aug 2020 ======
+
+===== Successful install of tensorflow GPU =====
+
+in env TF_GPU 
+
+with 
+
+but need to launch directly using 
+
+[[/home/nicolasf/anaconda3/envs/TF_GPU/bin/jupyter-lab]]
+
+and all the extra packages need to be installed using PIP (NOT conda) 
+
+! ADAM optimizer seem to lead to a much smaller loss 
+
+see history 
+
+

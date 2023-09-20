@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-05T09:12:28+13:00
+
+====== Friday 05 Feb 2021 ======
+
+--------------------
+
+==== Mathematics and Climate ====
+
+see https://sites.google.com/view/oneworldmathsofclimate 
+
+in particular A talk from Stephan Rasp on the latest progress in improving climate models with machine learning: 
+
+youtube video: https://www.youtube.com/watch?v=HWKkyGq5jKI 
+
+--------------------
+
+==== ICU paper: ====
+
+**open data and opensource software for the development of multi-model objective probabilistic seasonal climate forecasts in the Pacific** 
+Fauchereau, D. Ramsay, D. Lorrey 
+
+--------------------
+
+==== sequences of regimes using itertools ? ====
+
+from itertools import groupby
+
+s = 'aaaabbbcca'
+
+s = list(s) 
+
+
+for k, g in groupby(s): 
+	print(k) 
+	print(list(g))
+
+a
+['a', 'a', 'a', 'a']
+b
+['b', 'b', 'b']
+c
+['c', 'c']
+a
+['a']
+
+--------------------
+experiments with LSTMs and climate indices 
+
+see (for now) in [[~/Desltop/LSTMTestNNI15-NINO34_EMI_IOD_SAM-v1.ipynb]] 
+
+notebook developped by Raghav 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-09T10:20:36+13:00
+
+====== Tuesday 09 Nov 2021 ======
+
+
+==== A global inventory of photovoltaic solar generating units ====
+
+to be published in Nature 
+
+code on Zenodo: https://zenodo.org/record/5045001 
+code on github: https://github.com/Lkruitwagen/solar-pv-global-inventory
+
+personal webpage of the author: https://lkruitwagen.github.io/ 
+
+recording of a presentation: https://slideslive.com/38922408/a-global-inventory-of-utilityscale-solar-photovoltaic-power-stations 
+
+
+--------------------
+
+==== windows of opportunity ====
+
+XAI techniques have been used to disentangle forced climate signal in single forcing large ensembles 
+
+see Labe, Z. M., and E. A. Barnes, 2021: Detecting Climate Signals Using Explainable AI With Single‐Forcing Large Ensembles. J Adv Model Earth Syst, 13, https://doi.org/10.1029/2021MS002464.
+ 
+and blog post at https://sites.uci.edu/zlabe/climate-signals-and-explainable-ai/
+
+--------------------
+
+==== perceptually uniform colormaps ====
+
+@Python 
+
+see https://www.fabiocrameri.ch/colourmaps/ 
+
+package on github at https://github.com/callumrollo/cmcrameri 
+
+--------------------
+
+==== xcube: pangeo showcase ====
+
+
+@Python @xarray 
+
+see: https://discourse.pangeo.io/t/november-3-2021-xcube-python-package-for-earth-observation-data-cubes/1903 
+
+and code: https://xcube.readthedocs.io/en/latest/overview.html 
+
+--------------------
+
+==== https://github.com/carbonplan/maps:  interactive multi-dimensional data-driven web maps ====
+
+code: https://github.com/carbonplan/maps
+demo: https://maps.demo.carbonplan.org/ 
+
+
+
+
+
+
+

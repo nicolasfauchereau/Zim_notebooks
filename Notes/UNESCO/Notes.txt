@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-07T11:04:56+13:00
+
+====== Notes ======
+Created Tuesday 07 March 2023
+
+==== Emails pertaining to the UNESCO project ====
+
+== Neelesh ==
+
+I have the model training scripts, so can send them over to you at a later stage.
+
+In regards to the model training, Tristan has started downloading some more ERA5 data (to cover the domain of the Pacific).
+
+We’ll have to subset this over the domain we are interested in.
+
+ Tuesday morning 12pm  -1pm works well for me or after 2pm. Should be free from 9am – 11am on Wednesday morning also.
+
+ Things that we mainly need to ensure:
+
+	GEFS data that Trevor downloads is subset over the correct domain (@Tristan Meyers) will probably know about this. I believe currently it is only downloaded over New Zealand.
+	So in summary we’d need to expand the domain which we download over.
+	Training data: Tristan has been downloading some ERA5 data. We’ll need to preprocess this data into a desired format. This is a relatively easy exercise where we xr.open_mfdataset(), and subset / concatenate the data.
+	Training the ML model. We should be able to all of the existing scripts that I’ve developed. We just need to ensure that the downscaled performance is good! I should be able to provide HPC resources to train from the Smart Ideas, but it would probably only cost < 100$ of compute anyways.
+	Deploying the ML model – we will need to ensure that the ML model is trained in a relatively similar way, to minimize the workload.
+	We’d probably want to validate forecasts on this model for a few weeks and monitor if it is producing relatively consistent things. 
+
+== Tristan ==
+
+Hi everyone,
+
+This sounds great! Sorry, I was on leave last week, but chiming in with a few notes:
+
+	GEFS data that operations downloads is global, so we don’t have to adjust anything. We just need to make sure the variables we train off in ERA5 match those that are in GEFS.
+	ERA5 is being downloaded from 20N to 70S, for u, v, w, q, T, and z at 1000, 850, 700, 500, 200, and 250 hPa. I have a slurm script that is doing this, and I keep forgetting to kick it off after it times out, but we’re nearly there with the whole dataset. It’s about 1.5 TB.
+	Deploying should be pretty easy; I imagine it will be a Cylc suite similar to the NIWA35, so I can use this as a template.

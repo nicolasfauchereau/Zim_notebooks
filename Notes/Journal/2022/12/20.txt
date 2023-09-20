@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-20T13:56:45+13:00
+
+====== Tuesday 20 Dec 2022 ======
+
+==== eResearch conference ====
+
+https://www.eresearchnz2023.org.nz/
+
+
+--------------------
+
+==== Perkins skill score ====
+
+@MBIE @downscaling 
+
+
+Perkins S.E., Pitman A.J., Holbrook N.J., McAneney J. (2007) Evaluation of the AR4 climate models’ simulated daily maximum temperature, minimum temperature, and precipitation over Australia using probability density functions. J Clim 20(17):4356–4376. https://doi.org/10.1175/JCLI4253.1
+
+--------------------
+
+==== Kullback–Leibler (KL) divergence ====
+
+@MBIE @downscaling 
+
+https://www.statology.org/kl-divergence-python/
+
+https://datascience.stackexchange.com/questions/9262/calculating-kl-divergence-in-python
+
+https://machinelearningmastery.com/divergence-between-probability-distributions/
+
+https://www.discoverbits.in/2730/python-calculate-probability-density-function-histogram
+

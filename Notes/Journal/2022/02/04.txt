@@ -1,0 +1,107 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-04T10:43:56+13:00
+
+====== Friday 04 Feb 2022 ======
+
+==== SPATE-GAN: Improved Generative Modeling of Dynamic Spatio-Temporal Patterns with an Autoregressive Embedding Loss ====
+
+@GAN @DL @ML 
+
+https://arxiv.org/abs/2109.15044
+
+also: 
+
+https://link.springer.com/chapter/10.1007/978-3-319-99052-1_4
+
+--------------------
+
+==== Time Series Forecasting on Solar Irradiance ====
+
+On the Climate Change AI platform: 
+
+https://community.climatechange.ai/c/research-ideas/time-series-forecasting-on-solar-irradiance?login_token=HdHyDS8rg7is67QYYjFN6KSL5K3qjbaouAva
+
+
+{{./screenshot_2022-02-04-110058.png}}
+
+https://github.com/derevirn/ts-forecasting 
+
+{{./screenshot_2022-02-04-110751.png}}
+
+see also: 
+
+https://towardsdatascience.com/forecasting-renewable-energy-generation-with-streamlit-and-sktime-ab789ef1299f 
+
+--------------------
+
+==== Forecasting with sktime: Designing sktime's New Forecasting API and Applying It to Replicate and Extend the M4 Study ====
+
+https://arxiv.org/abs/2005.08067
+
+We present a new open-source framework for forecasting in Python. Our framework forms part of sktime, a more general machine learning toolbox for time series with scikit-learn compatible interfaces for different learning tasks. Our new framework provides dedicated forecasting algorithms and tools to build, tune and evaluate composite models. We use sktime to both replicate and extend key results from the M4 forecasting study. In particular, we further investigate the potential of simple off-the-shelf machine learning approaches for univariate forecasting. Our main results are that simple hybrid approaches can boost the performance of statistical models, and that simple pure approaches can achieve competitive performance on the hourly data set, outperforming the statistical algorithms and coming close to the M4 winner.
+
+--------------------
+
+==== Time to look up ====
+
+@ClimateCommons 
+
+Idea: get the email addresses of every MP etc and send then an email with the headlines from the most dire papers out there: 
+
+- coral reefs doomed 
+- etc etc 
+
+
+--------------------
+
+==== Tim Ingold: [the] world of life is woven from knots, and not built from blocks as commonly thought.” . ====
+
+Amen to that ... life is a web, a network, it is made of *relationships*, not *things*
+
+Tim Ingold: https://en.wikipedia.org/wiki/Tim_Ingold 
+
+--------------------
+
+==== Climate Change AI ====
+
+datasets for climate change: 
+
+{{./screenshot_2022-02-04-163346.png}}
+
+--------------------
+
+==== CMIP6: A Quick Introduction to CMIP6 ====
+
+@CMIP 
+
+
+https://towardsdatascience.com/a-quick-introduction-to-cmip6-e017127a49d3 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

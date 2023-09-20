@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-31T16:47:55+13:00
+
+====== Monday 03 Feb 2020 ======
+
+
+
+TODO: 
+
+[ ] write back to Varvara and Eibe regarding the datasets (GCMs) @SI 
+[*] process ERA5 SST @SI	
+	
+	at the command line: 
+{{{code: lang="sh" linenumbers="True"
+jupyter nbconvert --ExecutePreprocessor.timeout=6000 --to notebook --execute mynotebook.ipynb
+}}}
+
+	the `--ExecutePreprocessor.timeout=6000` parameter set the maximum time (in second) a cell is allowed to run 
+	see: https://nbconvert.readthedocs.io/en/latest/execute_api.html	
+
+[ ] process GPM / IMERG for ICU @ICU
+
+	1) calculate the climatologies, see notebook number 2 in [[/home/nicolasf/operational/ICU/ops/GPM_IMERG/notebooks]]	
+	
+
+[ ] @SI make TODO list for GCMs post-processing, see 
+
+[[Journal:2019:12:19 data processing]]
+
+and 
+
+[[+update GCM data processing]] 
+
+
+[ ] respond to Barry and all about the actions needed to develop ML research program around environmental forecasting @HUB	
+[ ] send CV to Varvara @projects
+[ ] estimate number of member in 'super ensemble' including all different GCMs from CDS, IRI and JMA @SI	
+
+	CDS
+		ECMWF: 25 (min)
+		UKMO: 28 
+		METEO_FRANCE: 25
+		CMCC: 40
+		DWD: 30
+
+	JMA
+		JMA: 5
+	 
+	IRI
+		GEM_NEMO: 
+		CanSIPSv2
+		CanCM4i
+		NASA_GEOSS2S
+		NCEP_CFSv2
+
+
+
+
+
+
+
+

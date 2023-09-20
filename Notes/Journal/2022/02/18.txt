@@ -1,0 +1,77 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-18T10:01:46+13:00
+
+====== Friday 18 Feb 2022 ======
+
+
+==== KrigR—a tool for downloading and statistically downscaling climate reanalysis data ====
+
+@downscaling 
+
+Kusch, E., and R. Davy, 2022: KrigR—a tool for downloading and statistically downscaling climate reanalysis data. Environ. Res. Lett., 17, 024005, https://doi.org/10.1088/1748-9326/ac48b3.
+
+https://iopscience.iop.org/article/10.1088/1748-9326/ac48b3
+
+The KrigR R-package enables users to (a) download ERA5(-Land) climate reanalysis data for a user-specified region, and time-period, (b) aggregate these climate products to desired temporal resolutions and metrics, (c) acquire topographical co-variates, and (d) statistically downscale spatial data to a user-specified resolution using co-variate data via kriging. KrigR can execute all these tasks in a single function call, thus enabling the user to obtain any of 83 (ERA5)/50 (ERA5-Land) climate variables at high spatial and temporal resolution with a single R-command. Additionally, KrigR contains functionality for computation of bioclimatic variables and aggregate metrics from the variables offered by ERA5(-Land). This R-package provides an easy-to-implement workflow for implementation of state-of-the-art climate data while avoiding issues of storage limitations at high temporal and spatial resolutions by providing data according to user-needs rather than in global data sets. Consequently, KrigR provides a toolbox to obtain a wide range of tailored climate data at unprecedented combinations of high temporal and spatial resolutions thus enabling the use of world-leading climate data through the R-interface and beyond.
+
+see also https://github.com/ErikKusch/KrigR 
+
+and https://github.com/ErikKusch/KrigRMS	
+
+--------------------
+
+==== CLIMTAS: climtas: Climate Extremes Timeseries Analysis ====
+
+example: 
+
+90th percentile in ERA5 
+
+https://nbviewer.org/github/ScottWales/climtas/blob/master/notebooks/era5-heatwave.ipynb 
+
+--------------------
+
+==== synda ====
+
+Synda is a command line tool to search and download files from the Earth System Grid Federation (ESGF) archive. Synda is a useful tool if you need to download Climate Model Intercomparison Project Phase 6 (CMIP6) data in particular. Synda supports different download protocols (e.g. HTTPS) and can download files in parallel.
+
+see https://support.nesi.org.nz/hc/en-gb/articles/360001208256-Synda 
+
+--------------------
+
+==== Forecasting large-scale circulation regimes using deformable convolutional neural networks and global spatiotemporal climate data. ====
+
+Nielsen, A. H., A. Iosiﬁdis, and H. Karstoft, Forecasting large-scale circulation regimes using deformable convolutional neural networks and global spatiotemporal climate data. 12.
+
+https://arxiv.org/abs/2202.04964
+
+	 Classifying the state of the atmosphere into a finite number of large-scale circulation regimes is a popular way of investigating teleconnections, the predictability of severe weather events, and climate change. Here, we investigate a supervised machine learning approach based on deformable convolutional neural networks (deCNNs) and transfer learning to forecast the North Atlantic-European weather regimes during extended boreal winter for 1 to 15 days into the future. We apply state-of-the-art interpretation techniques from the machine learning literature to attribute particular regions of interest or potential teleconnections relevant for any given weather cluster prediction or regime transition. We demonstrate superior forecasting performance relative to several classical meteorological benchmarks, as well as logistic regression and random forests. Due to its wider field of view, we also observe deCNN achieving considerably better performance than regular convolutional neural networks at lead times beyond 5-6 days. Finally, we find transfer learning to be of paramount importance, similar to previous data-driven atmospheric forecasting studies. 
+
+--------------------
+
+==== Open Spaces Society ====
+
+see https://twitter.com/parachutemind 
+
+and https://www.oss.org.uk/ 
+
+--------------------
+
+==== ClimateBench: ClimateBench:  A  benchmark  dataset  for  data-driven   climate projections ====
+
+https://www.essoar.org/pdfjs/10.1002/essoar.10509765.2 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

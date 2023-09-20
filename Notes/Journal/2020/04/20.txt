@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-20T09:28:20+12:00
+
+====== Monday 20 Apr 2020 ======
+
+@TODO for the week of 20 April 2020
+
+- reply July Ungaro re. CAVA19 project  **DONE**
+- reply Ramona re. invoice from Landcare
+- action plan re. END19101 sector engagement. **DONE**
+
+		start talking about Tier 1 application cases stakeholder about: 
+			- the format via which the forecasts need to be communicated 
+			- the uncertainties 
+			- How their decision making process could be influenced by forecasts at different level of certainty 
+			- write report on that 
+
+- write up on the experiments I have been running with ensemble learning
+
+== Air pollution and COVID-19 ==
+
+Message from Gus on Slack (NIWA coders): 
+
+"""
+The air quality team received a request from colleagues in the UK and Switzerland to collaborate on quantifying the air quality impacts of various COVID-19 control strategies (lock-down levels) using historic meteorological and air quality data to build models to estimate what the air quality would be today if the lock down hadn't been implemented.
+They want to do that using random forest and asked us for both data and potentially ML insights ... so ... who would be interested in this?
+We have "some" hours through our existing SSIF programme but it's more symbolic than anything but there may be future collaborations around this.
+
+see: 
+
+https://ee.ricardo.com/news/analysis-of-covid-19-lockdown-on-uk-local-air-pollution
+https://empa-interim.github.io/empa.interim/swiss_air_quality_and_covid_19.html
+
+and paper implementing RF: 
+
+https://www.atmos-chem-phys.net/18/6223/2018/ 
+
+see also in [[/home/nicolasf/research/COVID-19-Pollution]] 
+
+"""
+
+
+== NZDI forecasting ==
+
+@SI @NZDI 
+
+see in [[/home/nicolasf/operational/NZDI/resources]] for client report and paper by Mol et al on the derivation of the NZDI 
+as available through https://niwa.co.nz/climate/information-and-resources/drought-monitor 
+
+== Pacific RCC ==
+
+see in: [[/home/nicolasf/operational/Pacific_RCC]] 
+
+and github repo: https://github.com/nicolasfauchereau/Pacific_RCC 
+
+Note that a model for the automatic transfer of e.g. the ENSO tracker plot via FTP (FTPlib) can be found in the `NZDI.py` script in [[~/operational/NZDI]]   

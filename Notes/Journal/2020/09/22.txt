@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-22T08:56:18+12:00
+
+====== Tuesday 22 Sep 2020 ======
+
+--------------------
+
+==== update the ICU "hotspot" figure ====
+
+{{~/operational/ICU/development/hotspots/figures/decile_categories_90days_2020-09-19.png?width=900}}
+
+
+--------------------
+
+==== meeting with Simon and Doug on Rainfall anomalies monitoring ====
+
+
+
+
+--------------------
+
+==== copy ECMWF 1981 - 2019 netcdf files to the Ham project drive ====
+
+in: 
+
+[[/home/nicolasf/drives/ham_projects/END19101/Working/data/GCMs/downloads/CDS/ECMWF/]] 
+
+--------------------
+
+==== MSWEP 2.0 ====
+
+http://hydrology.princeton.edu/data/hylkeb/MSWEP_V220/ 
+
+email: 
+
+"""
+//Dear Nicolas Fauchereau,//
+
+//The historical MSWEP dataset can be accessed via the following URL://
+
+//http://hydrology.princeton.edu/data/hylkeb/MSWEP_V220///
+
+//The documentation with code examples on how to read the data and the version history is available at the MSWEP website. Follow @hylke_beck on Twitter to stay up to date on the latest MSWEP news.//
+
+//Best regards,//
+//Hylke Beck//
+
+//Your MSWEP data request//
+//Name: Nicolas Fauchereau//
+//University or institution: NIWA (National Institute for Water and Atmospheric Research), Auckland, New Zealand//
+//Official email address: Nicolas.Fauchereau@niwa.co.nz//
+//Intended use of MSWEP: study of precipitation variability and predictability at intra-seasonal time-scales over the southwest Pacific region, and validation / bias correction of realtime satellite derived precipitation (GPM - IMERG)//
+//Consented: I confirm that my intended use of MSWEP is non-commercial//
+//Consented: I will use MSWEP only for the intended use specified here//
+//Consented: I will not redistribute MSWEP to anyone else//
+//Consented: I will cite Beck et al. (2019) in any publications using MSWEP//
+//Consented: If MSWEP forms a key component of my research, I will give the MSWEP developers the opportunity to comment on my results prior to publication//
+""" 
+
+code for downloading the daily files: 
+
+[[/media/nicolasf/END19101/data/MSWEP/data/get_MSWEP2.ipynb]] 
+
+code for reading and inspecting the files: 
+
+[[/media/nicolasf/END19101/data/MSWEP/data/read_MSWEP.ipynb]] 
+
+unit is mm/day .... 
+
+
+
+
+

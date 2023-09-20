@@ -1,0 +1,149 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-02T11:42:53+12:00
+
+====== Sunday 02 Aug 2020 ======
+
+===== Functions to copy in ml4seas =====
+
+https://github.com/pangeo-data/WeatherBench/blob/master/src/regrid.py 
+
+	regrid at given resolution, uses xesmf
+
+https://github.com/pangeo-data/WeatherBench/blob/master/src/score.py
+	Compute the RMSE with latitude weighting from two xr.DataArrays.
+	Compute the ACC with latitude weighting from two xr.DataArrays.
+	Compute the MAE with latitude weighting from two xr.DataArrays.
+	 
+	Load the test dataset. If z return z500, if t return t850.
+	
+
+===== Copy the structure of the scripts, example  https://github.com/pangeo-data/WeatherBench/blob/master/src/train_nn.py =====
+
+https://github.com/pangeo-data/WeatherBench/blob/master/src/train_nn.py 
+
+1) functions definitions for functions and classes called in the script 
+
+2) main function, takes arguments, cobble together above functions 
+
+3) 
+if __name__ == '__main__':
+   # parse arguments  
+   p = ArgParser()
+	p.add_argument('-c', '--my-config', is_config_file=True, help='config file path')
+	.....
+	.....
+	args = p.parse_args()
+   
+   # pass them to the `main` function 
+	main(
+		datadir=args.datadir,
+	....
+	....
+	)
+
+Have tried the `quickstart.ipynb` notebook in 
+
+[[/home/nicolasf/research/Smart_Ideas/resources/repos_application_cases/WeatherBench]] 
+
+and it works ! 
+
+
+===== Magee Tropical Cyclones outlook =====
+
+His paper 
+
+1. Magee, A. D., Lorrey, A. M., Kiem, A. S. & Colyvas, K. A new island-scale tropical cyclone outlook for southwest Pacific nations and territories. Sci Rep 10, 11286 (2020).
+
+doesnt cite 
+
+https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.1878
+
+1. Kim, H.-S., Ho, C.-H., Chu, P.-S. & Kim, J.-H. Seasonal prediction of summertime tropical cyclone activity over the East China Sea using the least absolute deviation regression and the Poisson regression. International Journal of Climatology 219, n/a-n/a (2009).
+
+===== Rasterized = True =====
+
+Try keyword 'rasterize=True' in xarray.plot(...)
+
+===== PeriodicPadding2D = pad as function of the kernel size ! =====
+
+see in WeatherBench
+
+so can come after the **ResizeLayer** of Brohan ... 
+
+But need to write A PrunePeriodicPadding2D class
+
+Architecture of a model 
+
+autoencoder = tf.keras.models.Model(input,output) 
+
+where input is a keras input layer, e.g. 
+
+input = tf.keras.layers.Input(shape=(91,180,1,))
+
+and output is the last layer (resize layer or the such) of a stack of layer that takes `input` as it's inputs 
+
+e.g. 
+
+output=ResizeLayer(newsize=(91,180))(pruned)
+
+see also 
+
+def **build_cnn**(filters, kernels, input_shape, dr=0):
+	"""Fully convolutional network"""
+	x = input = Input(shape=input_shape)
+	for f, k in zip(filters[:-1], kernels[:-1]):
+		x = PeriodicConv2D(f, k)(x)
+		x = LeakyReLU()(x)
+		if dr > 0: x = Dropout(dr)(x)
+	output = PeriodicConv2D(filters[-1], kernels[-1])(x)
+	return keras.models.Model(input, output)
+
+see: 
+
+**notebooks/4-cnn-example_Z500.ipynb** in WeatherBench 
+
+need to edit the **DataGenerator** Class to be suitable for a Auto-encoder, instead of generating a tuple 
+wilth (X, y = X + leadtime), need to generate (X, X) 
+
+Also needs to be extended to replace X with y (VCSN fields for example), returning 
+
+(X = GCMs, y = VCSN) 
+
+or write a separate **DataGenerator** Class for preparing y 
+
+The **DataGenerator** class also seemingly normalize by the field (lat / lon / time) mean and std 
+
+		self.mean = self.data.mean(('time', 'lat', 'lon')).compute() if mean is None else mean
+		self.std = self.data.std('time').mean(('lat', 'lon')).compute() if std is None else std
+		# Normalize
+		self.data = (self.data - self.mean) / self.std
+
+This below adds a general 'level' to each field time-step, as a '**channel**' 
+
+		data = []
+		generic_level = xr.DataArray([1], coords={'level': [1]}, dims=['level'])
+		for var, levels in var_dict.items():
+			try:
+				data.append(ds[var].sel(level=levels))
+			except ValueError:
+				data.append(ds[var].expand_dims({'level': generic_level}, 1))
+
+
+===== Some interesting libraries built on top of matplotlib =====
+
+https://github.com/pog87/PtitPrince 
+
+https://github.com/gecko984/supervenn
+
+https://github.com/sbebo/joypy 
+
+
+
+
+
+
+
+
+
+

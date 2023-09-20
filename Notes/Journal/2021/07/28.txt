@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-28T10:01:42+12:00
+
+====== Wednesday 28 Jul 2021 ======
+
+
+==== PYEXTREME: Extreme Value Analysis (EVA) in Python ====
+
+@EVA @extremes @Python 
+
+https://georgebv.github.io/pyextremes/quickstart.html
+
+
+https://github.com/georgebv/pyextremes → cloned in [[~/sources]] 
+
+
+see notebooks tutorials and examples at: https://github.com/georgebv/pyextremes-notebooks 
+
+**Pyextremes** is a very good repository to use as a template for a Python Package with different subpackage @Python 

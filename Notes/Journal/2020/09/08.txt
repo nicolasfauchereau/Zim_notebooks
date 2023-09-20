@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-08T09:05:07+12:00
+
+====== Tuesday 08 Sep 2020 ======
+
+==== Download the remaining files for CDS / ECMWF TMEAN ====
+
+from 1987 - 10 
+
+==== Update on the SCO notebooks (derive tercile probabilistic forecasts) ====
+
+[*] Updated the ACCESS notebook 
+[*] update NMME notebook 
+try download several steps (leadtimes) at once using the multiprocessing module 
+
+see from https://stackoverflow.com/questions/11546858/python-multiprocessing-keyword-arguments 
+
+I am trying to pass the same style keyword arguments to a multiprocessing task, but the use of **, in the args list is a syntax error. I know that my function, stretch() will take two positional arguments and n keyword arguments. 
+pool = [multiprocessing.Process(target=stretch, args= (shared_arr,slice(i, i+step)),kwargs=args) for i in range (0, y, step)]
+
+==== Continued work on the ICU "hotspot" development ====
+
+ 

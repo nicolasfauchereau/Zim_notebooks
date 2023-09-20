@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-11T09:00:38+12:00
+
+====== Thursday 11 Jun 2020 ======
+
+=== Structured Data Classification with Keras / Tensorflow ===
+
+How to performa classification on tabular data using keras 
+
+see: 
+
+https://keras.io/examples/structured_data/structured_data_classification_from_scratch/
+
+and in [[/home/nicolasf/research/Smart_Ideas/resources]] filename Structured data classification from scratch (2020-06-10 9_00_04 AM).html

@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-12T09:54:10+13:00
+
+====== Tuesday 12 Jan 2021 ======
+
+==== VCSN notebook for Matthew Skiffington ====
+
+see [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN/2D/example_read_VCSN.ipynb]]  and the corresponding HTML file 
+
+--------------------
+
+==== extraction of daily time-series for ZESPRI ====
+
+use daily VCSN
+
+1) update daily rainfall, Tmin, Tmax, Tmean and other variables, to include all of 2020 
+
+see **process_VCSN_monthly_daily_ops.ipynb** in [[/home/nicolasf/operational/VCSN/notebooks]] 
+
+2) extract daily VCSN time-series for each Orchard
+
+see  20210112_NF_extract_VCSN_time-series.ipynb in 
+
+
+
+--------------------
+
+==== Gus, interest group related to air quality, weather, climate and human behavior ====
+
+
+→ scales of human mobiilty 
+→ how weather affects scales of human mobility, **trajectories **of human mobility  
+
+see **movingpandas**: a Python library for handling movement data based on Pandas and GeoPandas. It provides trajectory data structures and functions for analysis and visualization.
+
+https://anitagraser.github.io/movingpandas/ 
+
+--------------------
+
+==== predictabilty from the stratosphere ====
+
+@stratosphere @stratospheric @windows_of_opportunity 
+
+Stratospheric drivers of extreme events at the Earth’s surface
+
+https://www.nature.com/articles/s43247-020-00060-z
+
+--------------------
+
+==== ALIBI-DETECT:  Algorithms for outlier and adversarial instance detection, concept drift and metrics. ====
+
+https://github.com/SeldonIO/alibi-detect 
+
+example with FBProphet outllier detection on weather data: https://github.com/SeldonIO/alibi-detect/blob/master/examples/od_prophet_weather.ipynb 
+
+
+
+
+
+
+

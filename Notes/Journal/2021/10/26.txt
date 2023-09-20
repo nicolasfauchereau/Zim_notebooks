@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-26T11:00:50+13:00
+
+====== Tuesday 26 Oct 2021 ======
+
+==== ICU: validation of ICU admin areas forecast table ====
+
+→ drive_admin_GCMs_evaluation.ipynb runs: 
+→ GCMs_admin_hindcast_climatologies_and_probabilities.ipynb 
+
+which calculates the admin areas climatologies 
+
+→ drive_admin_MME_evaluation.ipynb runs: 
+→ C3S_MME_ICU_admin_validation.ipynb 
+
+which derives the validation accuracy (1993 - 2016) for the MME (calculated as the unweigthed average of the individual GCMs probabiilities) 
+
+→ compile_MME_ICU_admin_validation_scores.ipynb
+
+compile the MME validation scores for each country and creates a table such as below: 
+
+{{./screenshot_2021-10-26-112844.png}}
+
+
+==== ICU: generation of operational forecast table every month ====
+
+→ drive_make_tercile_probs_table.ipynb runs: 
+
+make_tercile_probs_table.ipynb
+
+
+
+

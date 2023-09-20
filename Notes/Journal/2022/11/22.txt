@@ -1,0 +1,120 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-22T14:45:54+13:00
+
+====== Tuesday 22 Nov 2022 ======
+
+ETCCDI indices anbd xclim equivalent 
+
+precipitation / rainfall: 
+
+17. **Rx1day, Monthly maximum 1-day precipitation:**
+
+Let RRij be the daily precipitation amount on day i in period j. The maximum 1-day value for period j are:
+
+Rx1dayj = max (RRij)
+
+23. **CDD. Maximum length of dry spell, maximum number of consecutive days with RR < 1mm:** 
+Let RRij be the daily precipitation amount on day i in period j. Count the largest number of consecutive days where:
+
+RRij < 1mm 
+
+24. **CWD. Maximum length of wet spell, maximum number of consecutive days with RR ≥ 1mm:** 
+Let RRij be the daily precipitation amount on day i in period j. Count the largest number of consecutive days where:
+
+RRij ≥ 1mm 
+
+Tmin: 
+
+Tmax:
+ 
+--------------------
+
+==== For the ETCCDI indices in Python ====
+
+https://github.com/cerfacs-globc/icclim 
+
+see http://etccdi.pacificclimate.org/list_27_indices.shtml 
+
+Python implementations
+
+- https://github.com/bgroenks96/pyclimdex
+- https://icclim.readthedocs.io/en/stable/
+
+see **evaluate_BCSD_outputs.ipynb** in [[/home/nicolasf/research/CMIP6_downscaling/ACCESS-CM2_CCAM_to_VCSN/notebooks]] for use of pyclimdex to computed e.g. annual CWD in VCSN and BCSD adjusted ACCESS-CM2 CCAM 
+
+e.g. for annual indices: 
+
+- cdd: indices.cdd(adjusted['pr_BCSD'], period='1A')
+- cwd: indices.cwd(adjusted['pr_BCSD'], period='1A')
+- indices.annual_rnmm: Annual count of days when precipitation exceeds n mm 
+
+
+https://icclim.readthedocs.io/en/latest/ is also extremely interesting, see in particular the dask configuration for large datasets: 
+
+https://icclim.readthedocs.io/en/latest/how_to/dask.html#large-to-huge-dataset-1gb-and-above 
+
+it does the same thing as pyclimdex, e.g. 
+
+
+{{{code: lang="python3" linenumbers="True"
+dset_vcsn.pr.attrs = {}
+cdd = icclim.index(in_files=dset_vcsn['pr'], index_name='cdd', var_name='pr', slice_mode='year', out_file='./tmp.nc') 
+}}}
+
+
+is the same as:
+
+{{{code: lang="python3" linenumbers="True"
+import climdex.precipitation as pdex
+indices = pdex.indices(time_dim='time')
+cdd_vcsn = indices.cdd(dset_vcsn['pr'], period='1A')
+}}}
+
+
+
+see the list of indices at: 
+
+https://icclim.readthedocs.io/en/stable/references/ecad_functions_api.html# 
+
+and some example notebooks at 
+
+https://gitlab.com/is-enes-cdi-c4i/notebooks/-/tree/master 
+
+downloaded in [[/home/nicolasf/research/CMIP6_downscaling/repos/icclim_notebooks]] 
+
+see also [[Journal:2022:11:23|23/11/22]]
+
+
+--------------------
+
+==== OpenClimate GIS ====
+
+https://ocgis.readthedocs.io/en/latest/ 
+
+OpenClimateGIS (OCGIS) is a Python package designed for geospatial manipulation, subsetting, computation, and translation of spatiotemporal datasets stored in local NetCDF files or files served through THREDDS data servers. OpenClimateGIS has a straightforward, request-based API that is simple to use yet complex enough to perform a variety of computational tasks. The software is built entirely from open source packages.
+
+
+	Subsetting (intersects and intersection) of climate datasets by bounding box, Shapely geometries, or shapefiles (city centroid, river reach, a single county or watershed, state boundaries).
+	Time and level range subsetting. Also allows for arbitrary label-based slicing.
+	Single or multi-dataset requests (concatenation).
+	Area-weighted aggregation (spatial averaging) to selection geometries.
+	Handles CF-based coordinate systems with full support for coordinate transformations (including the rotated pole coordinate system)
+	Geometry wrapping and unwrapping to maintain logically consistent longitudinal domains.
+	Polygon, line, and point geometric abstractions.
+	ESMPy regridding
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+

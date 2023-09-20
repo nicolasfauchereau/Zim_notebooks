@@ -1,0 +1,130 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-07T12:32:13+13:00
+
+====== processed ======
+Created Friday 07 February 2020
+
+== ================================================================================================================================= ==
+
+===== CDS =====
+
+see [[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks/process_hindcasts.ipynb]] 
+
+NOTE on [[Journal:2020:02:11|11/02/20]] : kernel died, create a new version calculating anomalies and climatology etc independantly for each month 
+
+which now calculates everything, including **monthly and seasonal climatologies**, **monthly and seasonal anomalies**, and the **regridded** (2.5 x 2.5) versions of these 
+
+== parameters for papermill ==
+
+**# Parameters** 
+stage_in = 'pre_processed'
+stage_out = 'processed'
+period = 'hindcasts'
+provider = 'CDS'
+GCM = 'ECMWF'
+var_name = 'T2M'
+
+outputs in 
+
+[[/home/nicolasf/drives/auck_projects/END19101/Working/data/GCMs/processed/hindcasts/CDS/]]	
+
+==== hindcasts (1993 - 2016) ====
+
+[ ] ECMWF
+	[*] T2M
+	[*] PRECIP
+	[ ] SST 
+	[ ] Z500 
+
+[ ] UKMO
+	[*] T2M
+	[*] PRECIP on way 
+	[ ] SST 
+	[ ] Z500 
+
+[ ] METEO_FRANCE
+	[*] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+[ ] DWD
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+[ ] CMCC
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+==== forecasts ====
+
+[ ] ECMWF
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+[ ] UKMO
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+[ ] METEO_FRANCE
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+[ ] DWD
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+[ ] CMCC
+	[ ] T2M
+	[ ] PRECIP 
+	[ ] SST 
+	[ ] Z500 
+
+== ================================================================================================================================= ==
+
+==== JMA ====
+
+==== JMA ====
+
+=== hindcasts (1979 - 2014) TODO: extend to 2016 ===
+
+original NC files in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/JMA/JMA/]]
+
+output files in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/GCMs/processed/hindcasts/JMA/JMA]]	
+
+[*] T2M 
+	**seasonal anomalies interp**: dimensions (time, step [5], lat[73], lon[144]): the ensemble mean is calculated ... keep this as the 'hindcasts' for 2015 2016 are already only the ensemble mean 
+
+[*] PRECIP 
+	**seasonal anomalies interp**: dimensions (time, step [5], lat[73], lon[144]): the ensemble mean is calculated ... keep this as the 'hindcasts' for 2015 2016 are already only the ensemble mean 
+
+
+=== forecasts ===
+
+[*] T2M 
+	**seasonal anomalies interp**: dimensions (time, step [5], lat[73], lon[144]): the ensemble mean is calculated ... keep this as the 'hindcasts' for 2015 2016 are already only the ensemble mean 
+
+[*] PRECIP 
+	**seasonal anomalies interp**: dimensions (time, step [5], lat[73], lon[144]): the ensemble mean is calculated ... keep this as the 'hindcasts' for 2015 2016 are already only the ensemble mean 
+
+
+
+
+
+
+
+
+NOTE Maybe the interpolated fields need NOT be saved on disk but interpolated on the fly before saving in CSV ?

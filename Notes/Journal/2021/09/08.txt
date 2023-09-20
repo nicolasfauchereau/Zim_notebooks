@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-08T09:03:17+12:00
+
+
+
+====== Wednesday 08 Sep 2021 ======
+
+==== Emergency Department analysis and modelling of diagnoses clusters ====
+
+see 
+
+**NF_20210525_read_welly_cluster_diagnosis.ipynb**
+
+for notebook creating the time-series corresponding to the 2 clusters 
+
+files: 
+
+subset_diagnoses_cluster_1_daily_counts.csv
+subset_diagnoses_cluster_2_daily_counts.csv
+
+--------------------
+
+==== FLAML:  A fast and lightweight AutoML library. ====
+
+@autoML 
+
+→ https://github.com/microsoft/FLAML 
+→ paper: https://www.microsoft.com/en-us/research/publication/flaml-a-fast-and-lightweight-automl-library/ 
+→ https://microsoft.github.io/FLAML/ documentation 
+
+see example for application to the modelling and prediction of daily ED counts: 
+
+**NF_20210601_regression_FLAML.ipynb** 
+
+in [[/home/nicolasf/research/ED/notebooks]] 
+
+--------------------
+
+

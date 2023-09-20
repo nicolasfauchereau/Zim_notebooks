@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-03T08:17:30+13:00
+
+====== Friday 03 Feb 2023 ======
+
+==== Latest water stress outlook images ====
+
+@ICU 
+
+https://s3.ap-southeast-2.amazonaws.com/icu.niwa/c3s/Water_Stress/images.html 
+
+--------------------
+
+==== Planning for February ====
+
+== → SST validation paper ==
+
+see https://niwa-my.sharepoint.com/:w:/g/personal/neelesh_rampal_niwa_co_nz/EacKu4goiEVNuJnb_H8Tq_kBw9Y6daXlH0rv8mcKHeKqFw?email=Nicolas.Fauchereau%40niwa.co.nz&e=4%3ASJdzcj&at=9&CID=51a34cd9-8ae8-4445-6e9c-f33d0aef8a37 
+
+→ see also Notes in Index, 
+
+for the point locations validation: 
+
+Pelorus Sound: 41.1628° S, 173.8632° E
+Golden Bay: 40.6548° S, 172.8210° E
+Coromandel: 36.7587° S, 175.4981° E
+Opotikii: 38.0123° S, 177.2871° E
+
+=== → MSWEP update ===
+
+--------------------
+
+==== issue with cartopy after mamba update -c conda-forge --all ====
+
+
+ AttributeError: 'GeoAxesSubplot' object has no attribute '_autoscaleXon' #2086  
+
+
+just downgrade matplotlib to 3.5.2 and then you don't need the newer cartopy and the GDAL stack dependency issues currently within conda-forge.
+
+solution: mamba install matplotlib=3.5.2 -c conda-forge  
+
+--------------------
+
+==== SST forecasting and validation ====
+
+
+**verification_deterministic_sst.ipynb** for the validation of the deterministic forecasts 
+
+note that the observational dataset is detrended, make sure the same is true for the forecasts / hindcasts 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

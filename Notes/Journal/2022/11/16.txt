@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-16T13:39:33+13:00
+
+====== Wednesday 16 Nov 2022 ======
+
+==== MBIE downscaling ====
+
+added functions to calculate MAE, RMSE, MAPE and PCOR 
+
+see in utils.py (in [[/home/nicolasf/research/CMIP6_downscaling/src]]) 
+
+see application: 
+
+**evaluate_BCSD_outputs.ipynb** in [[/home/nicolasf/research/CMIP6_downscaling/ACCESS-CM2_CCAM_to_VCSN/notebooks]] 
+
+==== Julia for Machine Learning ====
+
+see installation instructions for RezBaz at: 
+
+https://github.com/ablaom/HelloJulia.jl/wiki/Preparing-for-your-ResBaz-2022-Julia-workshop 
+
+
+
+
+
+
+

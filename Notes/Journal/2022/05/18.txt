@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-18T08:41:03+12:00
+
+====== Wednesday 18 May 2022 ======
+
+==== NZ station data: daily temperature and rainfall ====
+
+@extremes @compound 
+
+can be downloaded from 
+
+→ https://data.mfe.govt.nz/table/105056-daily-temperature-1909-2019/ for temperature 
+→ https://data.mfe.govt.nz/table/105055-rainfall-1960-2019/ for rainfall 
+
+Notebook to read the daily station time-series: 
+
+**read_NZ_station_data.ipynb** in [[/home/nicolasf/research/compound_extremes/notebooks]] 
+
+--------------------

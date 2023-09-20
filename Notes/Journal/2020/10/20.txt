@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-20T08:42:32+13:00
+
+====== Tuesday 20 Oct 2020 ======
+
+--------------------
+
+==== Climate Downscaling Using YNet: A Deep Convolutional Network with Skip Connections and Fusion ====
+
+Liu, Y., A. R. Ganguly, and J. Dy, 2020: Climate Downscaling Using YNet: A Deep Convolutional Network with Skip Connections and Fusion. Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, KDD ’20, New York, NY, USA, Association for Computing Machinery, 3145–3153.
+
+https://dl.acm.org/doi/abs/10.1145/3394486.3403366 
+
+see also the video [[~/Videos/YNET_climate_downscaling.mp4]]
+
+The code is at https://github.com/yuminliu/Downscaling 
+
+see also : 
+
+Liu, Y., J. Chen, A. Ganguly, and J. Dy, 2019: Nonparametric Mixture of Sparse Regressions on Spatio-Temporal Data -- An Application to Climate Prediction. Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, KDD ’19: The 25th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Anchorage AK USA, ACM, 2556–2564.
+
+by the same author (Yumin Liu) 
+
+and associated code: 
+
+https://github.com/yuminliu/MRFmodel 
+
+--------------------
+
+==== seasonally and lead time varying correlation fields between regional time-series and GCM outputs ====
+
+see **correlation_fields.ipynb** 
+
+examples: 
+
+
+
+--------------------
+
+==== project PYTHIA: ====
+
+https://ncar.github.io/ProjectPythia/pages/about.html 
+
+Pythia is a community educational resource for helping students, scientists, and educators learn how to analyze and visualize geosciences data using the Scientifc Python Ecosystem. 

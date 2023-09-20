@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-16T11:49:12+13:00
+
+====== VCSN updates ======
+Created Thursday 16 January 2020
+
+see: 
+
+file:///home/nicolasf/Notebooks/attachments/Daily%20VCSN%20Extraction%20and%20Copies_%20_run_getdays_vcsn.sh_%20and%20_getdays_vcsn.pl_%20-%20Climate%20Database%20-%20One.NIWA%20(2020-01-15%2010_56_16%20AM).html
+
+for a local copy of the confluence entry on trhe VCSN update process
+
+VCSN data is updated on 
+
+[[/home/nicolasf/drives/well_groups/CLIMATE/vcsn_data]] 
+
+//welwfs07/groups$
+
+for VCSN times and field descriptions see: 
+
+[[~/operational/VCSN/VCSN Times and Field Descriptions - Climate Database - One.NIWA (2020-02-21 2_09_36 PM).html]]
+
+

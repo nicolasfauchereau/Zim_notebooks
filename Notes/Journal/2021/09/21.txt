@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-21T14:25:49+12:00
+
+====== Tuesday 21 Sep 2021 ======
+
+==== Twitter archive ====
+
+@twitter 
+
+Twitter archive downloaded in [[/home/nicolasf/Documents/private/twitter]] 
+
+--------------------
+

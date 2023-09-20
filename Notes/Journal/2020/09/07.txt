@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-07T15:54:48+12:00
+
+====== Monday 07 Sep 2020 ======
+
+==== Resigned from Hub Leader position ====
+
+==== Pacific RCC ENSO tracker ====
+
+see last code at: 
+
+https://github.com/nicolasfauchereau/Pacific_RCC 
+
+==== Working with images and dask images ====
+
+for image processing etc 
+
+see documentation: https://examples.dask.org/applications/image-processing.html 
+
+and video presentation https://www.youtube.com/watch?v=MpjgzNeISeI&feature=youtu.be 
+
+==== ECMWF seasonal hindcasts back to 1981 ====
+
+PRECIP finished downloaded in 
+
+[[/media/nicolasf/END19101/data/GCMs/downloads/ECMWF/]] 
+
+and TMEAN currently being download from 1983-11 
+
+==== Forecasting with time series imaging ====
+
+https://arxiv.org/abs/1904.08064 and code available at https://github.com/lixixibj/forecasting-with-time-series-imaging 
+
+==== Marine Heat Waves in GCM simulations ====
+
+see paper: Insights into projected changes in marine heatwaves from a high-resolution ocean circulation model 
+
+https://www.nature.com/articles/s41467-020-18241-x
+
+and code adapted from Eric C J Oliver, at 
+

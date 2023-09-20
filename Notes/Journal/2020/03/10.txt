@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-10T08:38:42+13:00
+
+====== Tuesday 10 Mar 2020 ======
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== Julia Climate ===
+
+@BIAS @HUB 
+
+
+https://github.com/JuliaClimate
+and 
+https://juliaclimate.github.io/ClimateTools.jl/stable/ 
+
+also:
+
+https://github.com/JuliaClimate/ClimatePlots.jl 
+
+provides some bias correction (quantile quantile mapping) functions 
+
+see also for the latter 
+
+https://pycat.readthedocs.io/en/latest/index.html 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+=== Probabilistic-Programming-and-Bayesian-Methods-for-Hackers ===
+
+now using TFP (TensorFlow Probability) 
+
+see: https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_TFP.ipynb 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+=== Python code to manage ERA5 downloads at NCI ===
+
+@SI 
+
+https://github.com/coecms/era5
+
+also in [[~/research/Smart_Ideas/code/exporters/era5]]
+
+note that "It uses a modified version of the CDS api which stops after a request has been submitted and executed. The target download url is saved and downloads are run in parallel by the code using the Pool multiprocessing module" 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+=== Neelesh's github: https://github.com/nram812 ===
+
+--------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+=== AE versus PCA ===
+
+see PCA_vs_ICA_vs_AE_GCM_version_2.ipynb in [[/home/nicolasf/research/Smart_Ideas/code/features-extractors/dimensionality_reduction/AE_vs_PCA]] 
+
+seems that a 0 to 1 scaling allows a better reconstruction 
+
+
+
+
+
+
+
+
+
+
+
+
+

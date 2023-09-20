@@ -1,0 +1,123 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-07T08:50:59+12:00
+
+====== Friday 07 May 2021 ======
+
+==== Clustergram for the visualisation of cluster analysis ====
+
+https://martinfleischmann.net/clustergam-visualisation-of-cluster-analysis/
+
+--------------------
+
+==== VCSN improvement ====
+
+see 
+
+https://pykrige.readthedocs.io/en/latest/
+
+https://pykrige.readthedocs.io/en/latest/#regression-kriging 
+
+https://pykrige.readthedocs.io/en/latest/examples/07_regression_kriging2d.html
+
+also : https://github.com/Pan-YANG/FBRK 
+
+Fast Bayesian Regression Kriging Method for Real-Time Merging of Radar, Rain Gauge, and Crowdsourced Rainfall Data
+
+Yang, P., and T. L. Ng, 2019: Fast Bayesian Regression Kriging Method for Real‐Time Merging of Radar, Rain Gauge, and Crowdsourced Rainfall Data. Water Resour. Res., 55, 3194–3214, https://doi.org/10.1029/2018WR023857.
+
+
+--------------------
+
+==== Growing and Pruning Ensembles in Python ====
+
+https://machinelearningmastery.com/growing-and-pruning-ensembles-in-python/
+
+--------------------
+
+==== some tutorial on xarray dask that could be useful ====
+
+see in particular this notebook with a reference to dask.LocalCluster 
+
+https://github.com/pangeo-data/cog-best-practices/blob/main/2-dask-localcluster.ipynb
+
+%%time 
+
+with LocalCluster(local_directory='/tmp') as cluster, Client(cluster) as client:
+	dataArrays = dask.compute(*[lazy_open(href) for href in images])
+	da = xr.concat(dataArrays, dim='band', join='override', combine_attrs='drop').rename(band='time')
+	da['time'] = dates
+	spatial_means = da.mean(dim=['x','y']).compute()
+
+with LocalCluster(processes=False, local_directory='/tmp') as cluster, Client(cluster) as client:
+	temporal_mean = da.mean(dim='time').compute()
+
+--------------------
+
+==== Dynamic ensemble selection in Python ====
+
+https://machinelearningmastery.com/dynamic-ensemble-selection-in-python
+
+**include explanation of DESLIB** 
+
+Perhaps the canonical approach to dynamic ensemble selection is the k-Nearest Neighbor Oracle, or KNORA, algorithm as it is a natural extension of the canonical dynamic classifier selection algorithm “Dynamic Classifier Selection Local Accuracy,” or DCS-LA.
+
+DCS-LA involves selecting the k-nearest neighbors from the training or validation dataset for a given new input pattern, then selecting the single best classifier based on its performance in that neighborhood of k examples to make a prediction on the new example.
+
+KNORA was described by Albert Ko, et al. in their 2008 paper titled “From Dynamic Classifier Selection To Dynamic Ensemble Selection.” It is an extension of DCS-LA that selects multiple models that perform well on the neighborhood and whose predictions are then combined using majority voting to make a final output prediction.
+
+	For any test data point, KNORA simply finds its nearest K neighbors in the validation set, figures out which classifiers correctly classify those neighbors in the validation set and uses them as the ensemble for classifying the given pattern in that test set.
+
+--------------------
+
+==== Interpolation of NaN values ====
+
+see **interpolate_NaN_da** function  in **utils** (**ICU_Water_Watch**) 
+
+--------------------
+
+==== SST validation ====
+
+see **comparison** with ACCESS-S(1) correlation maps 
+
+{{./screenshot_2021-05-07-152603.png?width=700}}
+
+--------------------
+extracting colors from colormap in matplotlib 
+
+cmap = plt.cm.get_cmap('seismic', 8)    # PiYG
+
+for i in range(cmap.N):
+	rgba = cmap(i)
+	# rgb2hex accepts rgb or rgba
+	print(matplotlib.colors.rgb2hex(rgba))
+
+**see: in plot.py (~/research/CPP/WRs/notebooks)** 
+
+def **make_colormap**(unique_regimes, nregimes=8, cmap=None, colors=['#66ffff', '#66ffff', '#99ff66', '#ff9933', '#6600ff', '#ff9999', '#ff99ff', '#009933']):
+    
+	import matplotlib
+	from matplotlib import pyplot as plt 
+    
+	lcolors = ['w'] * nregimes
+    
+	if cmap is not None: 
+		cmap = plt.cm.get_cmap(cmap, nregimes)
+		colors = [matplotlib.colors.rgb2hex(cmap(i)) for i in range(cmap.N)]
+	else: 
+		colors = colors 
+    
+	for r in unique_regimes:
+		lcolors[r-1] = colors[r-1]
+        
+	cmap = matplotlib.colors.ListedColormap(lcolors, name='regimes')
+    
+	return cmap 
+
+
+
+
+
+
+
+

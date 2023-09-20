@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-28T10:30:11+12:00
+
+====== Friday 28 May 2021 ======
+
+==== Summary of catch up with Neelesh ====
+
+@SI @ML @DL @END19101 
+
+Training "from scratch" leads to poor performance and often leads to overfitting, a limitation of the size of the dataset, which is small by deep learning standard 
+
+This is why transfer learning has been explored, this leads generally to better skill (i.e. ~ 0.5 accuracy on tercile categories) 
+
+
+== ideas ==
+
+→ train 2 DL models independantly, then combine their predictions, instead of training a DL model with different variables (e.g. SST, HGT, etc) on different channels 
+→ one model can be trained with OBSERVED SSTs as inputs, the other one with FORECAST SSTs as inputs, and the outputs (forecasts) are combined into another model ? 
+→ windows of opportunities might be open or not depending on the forecast horizon / leadtime, e.g. for the GEFS, seems this is the case maybe mostly after 15 days 
+→ analog approach: given a future forecast, look into the hindcast for similar forecast patterns, and associate observations (composites) essentially it is a KNN model 
+→ interpolate NaNs for the SSTs before intergrating in the models, for this look at 
+
+== for report ==
+
+The variability in skill of the different GCMs is very similar, i.e. periods when skill is low tend to be low for all GCMs, and are generally related to the absence of strong climate modes signals. We investigated the role of different ENSO phases and flavor play in determining the skill of the dynamical models' forecasts, the skill is generally higher during both positive and negative phases of ENSO than during neutral phases, but contrast between "canonical" ENSO events, when skill is much higher during positive phases, and "Modoki" ENSO events, when skill is higher during **negative** phases. I.e. it seems that the longitude of the maxium SST anomalies along the equator plays an important role in determining the ability of tge GCMs to accurately forecast the regional climates of the Pacific region and NZ. 
+
+More generally the fact that the skill variability along time is largely correlated across the different GCMs poses some challenges for Machine Learning approaches 
+
+--------------------
+
+==== GCM details ====
+
+@SI  @END19101 @GCM 
+
+can be found at https://confluence.ecmwf.int/display/CKB/Description+of+the+C3S+seasonal+multi-system 
+
+
+
+
+
+

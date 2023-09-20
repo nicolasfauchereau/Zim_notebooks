@@ -1,0 +1,140 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-09T09:01:56+12:00
+
+====== Wednesday 09 Sep 2020 ======
+
+==== Fastcore library ====
+
+see https://fastpages.fast.ai/fastcore/ 
+
+many interesting functions and methods and decorators to reduce boilerplate code 
+
+see also the extension to pathlib (https://fastcore.fast.ai/utils.html#Extensions-to-Pathlib.Path) 
+
+==== Machine Learning Surveys: a collection of resources (papers) on Machine Learning: ====
+
+https://github.com/eugeneyan/ml-surveys#deep-learning
+
+==== Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery ====
+
+paper here 
+ 
+https://www.mdpi.com/2072-4292/12/16/2532 
+ 
+and code here: 
+ 
+https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/Fastai%20training.ipynb 
+ 
+Note that it uses the https://www.fast.ai/ library, built on top of Pytorch, and which seems really powerful notably for transfer learning 
+
+Multiscale Geographically Weighted Regression (MGWR) in Python 
+
+see https://mgwr.readthedocs.io/en/latest/index.html and paper https://www.mdpi.com/2220-9964/8/6/269 
+
+==== Download of the ECMWF hindcasts ====
+
+for TMEAN, see  [[/home/nicolasf/research/Smart_Ideas/code/exporters/CDS/download_ECMWF_1981_TMEAN.ipynb]] 
+
+download re-started from 1993-04
+
+==== Preparation of the presentation to the ML group in Machine Learning interpretation in the climate sciences ====
+
+papers: 
+
+Barnes, E. A., J. W. Hurrell, I. Ebert‐Uphoff, C. Anderson, and D. Anderson, 2019: Viewing Forced Climate Patterns Through an AI Lens. Geophys. Res. Lett., 46, 13389–13398, https://doi.org/10.1029/2019GL084944.
+
+Note that the code is actually available on Zenodo at https://zenodo.org/record/3533714#.Xcbp1DJKjzI : apparently they ([[https://www.patternexploration.com/|Pattern Exploration LLC)]] have developed the code from scratch, including the optimizer ( ), see also GH repo at https://github.com/Davidgraey/NeuralNetworks-for-Forced-Climate-Patterns
+
+Barnes, E. A., B. Toms, J. W. Hurrell, I. Ebert‐Uphoff, C. Anderson, and D. Anderson, 2020: Indicator patterns of forced change learned by an artificial neural network. J. Adv. Model. Earth Syst., https://doi.org/10.1029/2020MS002195.
+ 
+
+Toms, B. A., K. Kashinath, Prabhat, and D. Yang, 2020: Testing the Reliability of Interpretable Neural Networks in Geoscience Using the Madden-Julian Oscillation. Climate and Earth System Modeling,.
+
+also 
+
+Toms, B. A., E. A. Barnes, and I. Ebert-Uphoff, 2020: Physically Interpretable Neural Networks for the Geosciences: Applications to Earth System Variability. arXiv:1912.01752 [physics, stat],.
+
+A great review is "Making the black-box transparent", it notably includes a review of the methods that can be used: 
+
+* Saliency Maps (https://arxiv.org/abs/1312.6034) 
+* Grad-CAM (Gradient-weighted class-activation maps (Grad-CAM) (https://arxiv.org/abs/1610.02391) 
+* Backward optimization 
+* Novelty detection
+* Layerwise Relevance Propagation (https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140)
+
+Some relevant code repositories: 
+
+https://github.com/primozgodec/keras-explain but seems unable to work with Keras > 2.2.0 
+http://www.heatmapping.org/ and https://github.com/albermax/innvestigate 
+
+
+==== Pattern Exploration ====
+
+https://www.patternexploration.com/ 
+
+Interesting "Father and Son" company focused on Deep Learning applications and development, have developed the code used in "Viewing Forced Climate Patterns Through an AI Lens", see also https://davidgraey.com/category/tutorials/ 
+
+
+==== Ensemble Feature Selection in Machine Learning using OptimalFlow ====
+
+see 
+
+* https://towardsdatascience.com/ensemble-feature-selection-in-machine-learning-by-optimalflow-49f6ee0d52eb 
+* https://towardsdatascience.com/an-omni-ensemble-automated-machine-learning-optimalflow-369d6485e453 
+
+and code at https://github.com/tonyleidong/OptimalFlow also cloned locally in resources/repos_libraries 
+
+documentation at https://optimal-flow.readthedocs.io/en/latest/autoFS.html 
+
+==== Maxime Rio presentation and demo: Jupyter hub om the HPC and hyperparameter optimization (NZRSE) ====
+
+@dask @jupyterhub @jupyterhub @optimization 
+
+see https://github.com/nesi/hpc_for_datascience_demos/blob/master/notebooks/hyperparameters_search_nzrse.ipynb 
+
+also cloned in [[/home/nicolasf/research/Smart_Ideas/resources/repos_application_cases/hpc_for_datascience_demos]] 
+
+
+--------------------
+
+==== Discussion with Ben and Chris ====
+
+Possibility to use the new GEFS ensemble forecasts, which go out to 35 days and contain 31 members, to re-develop 15days to one month downscaling for NZ 
+if hindcasts are not availablke, then need to use the 'perfect prognosis' approach 
+
+--------------------
+
+==== Checks download, pre-processing and processing steps for the GCMs ====
+
+see: [[/home/nicolasf/research/Smart_Ideas/code/checks]] 
+
+in `check_downloads.ipynb` illustration of writing / loading a dictionnary to / from a YAML file 
+
+@yaml 
+
+models = {}
+models['CDS'] = ['ECMWF','UKMO','METEO_FRANCE','DWD','CMCC']
+models['IRI'] = ['NCEP-CFSv2','NASA-GEOSS2S', 'GEM-NEMO','CanSIPSv2','CanCM4i'] 
+models['JMA'] = ['JMA']
+
+yaml_models = '/media/nicolasf/END19101/data/GCMs/list_gcms.yaml'
+
+with open(yaml_models, 'w') as fp:
+	yaml.dump(models, fp, allow_unicode=True, default_flow_style=False) 
+
+with open(yaml_models, 'r') as fp:
+	models = yaml.load(fp, Loader=yaml.FullLoader)
+
+
+
+
+
+
+
+
+
+
+
+
+ 

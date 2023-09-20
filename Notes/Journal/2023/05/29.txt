@@ -1,0 +1,108 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-29T09:10:59+12:00
+
+====== Monday 29 May 2023 ======
+
+==== Economic impacts of tipping points in the climate system ====
+
+@PwC 
+
+Dietz, S., J. Rising, T. Stoerk, and G. Wagner, 2021: Economic impacts of tipping points in the climate system. Proc. Natl. Acad. Sci. U.S.A., 118, e2103081118, https://doi.org/10.1073/pnas.2103081118.
+
+by Dietz et al is basically nonsense, as shown by 
+
+Keen, S., T. M. Lenton, T. J. Garrett, J. W. B. Rae, B. P. Hanley, and M. Grasselli, 2022: Estimates of economic and environmental damages from tipping points cannot be reconciled with the scientific literature. Proc. Natl. Acad. Sci. U.S.A., 119, e2117308119, https://doi.org/10.1073/pnas.2117308119.
+
+see also: 
+
+Social tipping processes towards climate action: A conceptual framework
+
+https://www.sciencedirect.com/science/article/abs/pii/S0921800921003013?via%3Dihub
+
+Abstract: Societal transformations are necessary to address critical global challenges, such as mitigation of anthropogenic climate change and reaching UN sustainable development goals. Recently, social tipping processes have received increased attention, as they present a form of social change whereby a small change can shift a sensitive social system into a qualitatively different state due to strongly self-amplifying (mathematically positive) feedback mechanisms. Social tipping processes with respect to technological and energy systems, political mobilization, financial markets and sociocultural norms and behaviors have been suggested as potential key drivers towards climate action. 
+
+
+--------------------
+
+==== look more into papers in Nature sustainability ====
+
+https://www.nature.com/natsustain/ 
+
+--------------------
+
+==== proplot ====
+
+@PwC 
+
+https://proplot.readthedocs.io/en/stable/
+
+see how to MAKE colormaps ! 
+
+https://proplot.readthedocs.io/en/stable/colormaps.html 
+
+and example for geographic plot 
+
+https://github.com/nicolasfauchereau/CMIP6/blob/main/notebooks/CMIP6_via_intake-esm.ipynb
+
+--------------------
+
+==== Rain: Relaxations in the sky ====
+
+@PwC  
+
+Peters, O., and K. Christensen, 2002: Rain: Relaxations in the sky. Phys. Rev. E, 66, 036120, https://doi.org/10.1103/PhysRevE.66.036120.
+
+Olr Peters at Santa Fe 
+
+https://sites.santafe.edu/~ole/ 
+
+recently worked on ergodicity Economics 
+
+see his blog: https://ergodicityeconomics.com/ 
+
+https://ergodicityeconomics.com/2020/02/26/democratic-domestic-product/  on inequality 
+
+https://ergodicityeconomics.com/2017/08/14/wealth-redistribution-and-interest-rates/ 
+
+"""measure what you value because you will value what you measure""" 
+
+--------------------
+
+==== 54 Great Sources for Climate Change News ====
+
+@PwC 
+
+also: realclimate 
+
+https://www.realclimate.org/ 
+
+see the IPCC AR6 summary for policy-makers: https://www.youtube.com/watch?v=bulhsb4IZFQ 
+
+https://www.bloomberg.com/green/esg-investing 
+
+
+--------------------
+https://www.linkedin.com/in/rjbarnes/ 
+
+--------------------
+
+==== Green Biz ====
+
+@PwC 
+
+https://www.youtube.com/@greenbiz 
+
+https://www.youtube.com/watch?v=_HxgGPsnUwA: The Climate Crisis as a Data Problem 
+
+Kentaro Kawamori: CEO of https://www.persefoni.com/ 
+
+https://deloitte.wsj.com/articles/persefoni-ceo-how-carbon-accounting-advances-climate-strategy-disclosure-493900c0 
+
+https://www.greenbiz.com/ 
+
+
+
+
+
+

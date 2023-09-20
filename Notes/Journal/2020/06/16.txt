@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-16T10:23:06+12:00
+
+====== Tuesday 16 Jun 2020 ======
+
+=== Processing and derivation ofGPM deciles climatologies with CDO and Python ===
+
+CDO is installed in [[/home/nicolasf/anaconda3/envs/CDO/bin]]
+
+so:  
+
+conda activate CDO 
+
+is needed before the below
+
+=== 1) merge all the daily files for each year into a yearly file ===
+
+for y in $(seq 2001 2019); do cdo mergetime GPM_IMERG_daily.v06.${y}.??.??.nc GPM_IMERG_daily.v06.${y}.nc; done 
+
+=== 2) select the variable (precipitationCal) ===
+
+for f in  GPM_IMERG_daily.v06.????.nc; do cdo selvar,precipitationCal ${f} ${f%%.nc}_precipitationCal.nc; done 
+
+=== 3) merge all files ===
+
+cdo mergetime GPM_IMERG_daily.v06.????_precipitationCal.nc GPM_IMERG_daily.v06.2001.2019_precipitationCal.nc
+
+=== 4) calculates the running 30 (or 60, or 90) wdays cumulative rainfalll ===
+
+**note**: the --timestat_date last option ensures that the 30 days total is assigned to the LAST day of the 30 days period 
+
+cdo --timestat_date last runsum,30 GPM_IMERG_daily.v06.2001.2019_precipitationCal.nc GPM_IMERG_daily.v06.2001.2019_precipitationCal_30d_runsum.nc
+
+And now switch to 
+
+=== CDO_select_dates_calculate_quantiles.ipynb ===
+
+in:  [[/home/nicolasf/operational/ICU/development/hotspots/notebooks]] 
+
+which reads in the resulting running 30 days cumulative dataset and calculates the quantiles 
+
+=== Attributing each 30 days cumulative value (per grid point) to a bin based on the decille values calculated ... ===
+
+see notebook calculate_decile_bin.ipynb in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks]]  
+
+uses the **numpy.digitize**  https://numpy.org/doc/stable/reference/generated/numpy.digitize.html function 
+
+
+
+
+
+
+
+
+
+
+

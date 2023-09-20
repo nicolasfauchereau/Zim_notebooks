@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-28T11:59:31+13:00
+
+====== Tuesday 28 Feb 2023 ======
+
+==== Board report ====
+
+Hi Chris
+
+As promised, some items of potential interest for the board report: 
+
+**Projects update** 
+
+Nicolas Fauchereau has recently overhauled the software code underlying the production of the regional-scale probabilistic forecasts behind NIWA's Seasonal Climate Outlook (SCO). This will allow the full operationalisation and automation of all the processes gathering and processing the forecast data from a range of forecast models, namely the C3S Multi-Model Ensemble (MME), the US National MME, the Australian Bureau of Meteorology ACCESS-S model and the Asia Pacific Climate Change MME. Validation of each individual General Circulation Model (GCM) or MME forecast system can also now be automated, freeing time for the forecaster to provide better insights and communication media from the, This output is supported by SSIF project CACV2301 (reported by Nicolas Fauchereau and Ben Noll). 
+
+Nicolas Fauchereau and Neelesh Rampal have recently completed the development and validation of monthly and seasonal Sea Surface Temperature (SST) forecasts for the Aotearoa New Zealand region. Based on the C3S (Copernicus Climate Change Service) Multi-Model-Ensemble, this system can provide deterministic forecasts of SST anomalies, as well as the probability for Marine Heatwave conditions emerging over the next 5 months. This output is supported by SSIF project CEEE2303 (reported by Nicolas Fauchereau and Ben Noll) 
+
+**Contracts awarded** 
+
+Doug Ramsay, Neelesh Rampal and Nicolas Fauchereau have secured a contract with the UNESCO Office for the Pacific States, for the provision of improved Drought Situation reporting and forecasts for Tuvalu and Kiribati. This project will leverage both the NIWA35 model and the drought monitoring and forecasting capability built as part of the Island Climate Update (ICU, PRAS2301) to provide country-level (9 islands in Tuvalu and 21 Islands in Kiribati) rainfall monitoring and sub-seasonal to seasonal (S2S) probabilistic forecast information to the Tuvalu and Kiribati Meteorological Services. Value of the contract is 39500 NZD and completion is scheduled for October 2023.
+
+Gregor Macara and Nicolas Faucherau have been awarded 13500 NZD to provide the Greater Wellington Regional Council (GWRC) with an update on some aspects of a report ("Regional climate mode impacts on the Wellington Region") delivered in 2018 to the GWRC and authored by Nava Fedaeff and Nicolas Fauchereau. Delivery is scheduled for November 2023 (reported by Gregor Macara and Nicolas Fauchereau) 
+
+**Collaborations** 
+
+Nicolas Fauchereau has developed a collaboration with Dr. Hylke Beck, assistant professor at the King Abdullah University of Science and Technology. Dr. Beck is the founder of the Glo2Ho initiative (http://www.gloh2o.org/) providing a range of weather and hydrology monitoring and forecasting products. This collaboration will notably allow NIWA to access the realtime Multi-Source Weigthed Ensemble Precipitation (MSWEP) dataset, which merges gauge, reanalysis and satellite remote sensing to provide high quality and high resolution rainfall estimates for the Pacific region. This product will be used to enhance our capacity to monitor and forecast drought condition in the Pacific region, built as part of the Island Climate Update (ICU, PRAS2301). Reported by Nicolas Fauchereau and Doug Ramsay 
+
+--------------------
+
+==== PwC job application ====
+
+ 
+
+https://www.pwc.co.nz/careers/experienced-careers-at-pwc/job-search/description.html?wdjobreqid=419463WD&wdcountry=NZL&wdjobsite=Global_Experienced_Careers&wdjd=simple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

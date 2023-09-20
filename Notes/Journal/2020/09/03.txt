@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-03T09:55:00+12:00
+
+====== Thursday 03 Sep 2020 ======
+
+==== Work on the image inpainting data preparation ====
+
+see in 
+
+ [[~/research/Smart_Ideas/code/processors/prep_Image_Inpainting/notebooks]] 
+
+domain: 
+
+domain_def['ext_regional'] = [70, 300, -70, 60]
+
+Meeting with Alvin Jia 
+
+Interpretable Machine Learning 
+
+Talked about the possibility to use the interpretability as an auxiliary task, multi-target system, one target is the actual predicted target (i.e. VCSN or regional targets), the other one is a metric related to e.g. the intepretability or the phyisicality of the patterns used by the network (layerwise relevance propagation or the like), i.e this metric could be related to the 'distance' between the learning pattern and observed fields from reanalysis 
+
+==== Meeting with Eibe and Dong ====
+
+Discussions around the work of Kudow et al. 
+
+* Training and validation set 
+* Loss function is a custom composed function as in Liu et al, which includes the Loss calculated over the 'holes' (compared to the ground truth) but also over the features extracted over a (subspace of) the 'valid' data, see Liu, G., F. A. Reda, K. J. Shih, T.-C. Wang, A. Tao, and B. Catanzaro, 2018: Image Inpainting for Irregular Holes Using Partial Convolutions. arXiv:1804.07723 [cs],.
+ 
+{{./screenshot_2020-09-03-155806.png}} 
+
+	
+	The different components of the loss function have different weights, these coefficients are learned using hyperparameters optimization, using maybe the MSE only over the hole as the objective on the validation set 
+	
+* possibility of using several variables as different channels, the model learn to reproduce simultaneously the target field (tmean) and auxiliary fields such as Z500, U200, etc ... 
+

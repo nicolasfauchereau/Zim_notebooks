@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-07T09:50:25+13:00
+
+====== Friday 07 Feb 2020 ======
+
+== ====================================================================================== ==
+	
+
+==== GCMs ====
+
+Go back to [[04]] for update on the downloads etc 
+
+== ============================================================================================= ==
+
++ 10AM, VC (zoom) with Jan Dutton, director of prescient weather 
+
+== ============================================================================================= ==
+
+== xarray subplots with Cartopy ==
+
+{{./screenshot_2020-02-07-095040.png?width=1000}}
+
+== ============================================================================================= ==
+
+== STERCP-Synchronisation to enhance reliability of climate predictions ==
+
+https://www.researchgate.net/project/STERCP-Synchronisation-to-enhance-reliability-of-climate-predictions
+
+Goal: Climate prediction is the next frontier in climate research. Prediction of climate on timescales from a season to a decade has shown progress, but beyond the ocean skill remains low. And while the historical evolution of climate at global scales can be reasonably simulated, agreement at a regional level is limited and large uncertainties exist in future climate change. These large uncertainties pose a major challenge to those providing climate services and to informing policy makers. This proposal aims to investigate the potential of an innovative technique to reduce model systematic error, and hence to improve climate prediction skill and reduce uncertainties in future climate projections. The current practice to account for model systematic error, as for example adopted by the Intergovernmental Panel on Climate Change, is to perform simulations with ensembles of different models. This leads to more reliable predictions, and to a better representation of climate. Instead of running models independently, we propose to connect the different models in manner that they synchronise and errors compensate, thus leading to a model superior to any of the individual models – a super model. The concept stems from theoretical non-dynamics and relies on advanced machine learning algorithms. Its application to climate modelling has been rudimentary. Nevertheless, our initial results show it holds great promise for improving climate prediction. To achieve even greater gains, we will extend the approach to allow greater connectivity among multiple complex climate models to create a true super climate model. We will assess the approach’s potential to enhance seasonal-to-decadal prediction, focusing on the Tropical Pacific and North Atlantic, and to reduce uncertainties in climate projections. Importantly, this work will improve our understanding of climate, as well as how systematic model errors impact prediction skill and contribute to climate change uncertainties.
+
+
+== ============================================================================================= ==
+
+=== geographical plotting with PROPLOT ===
+
+{{./screenshot_2020-02-07-143105.png}}
+
+
+
+
+
+
+
+
+
+
+

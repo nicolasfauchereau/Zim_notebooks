@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-18T11:56:36+12:00
+
+====== Thursday 18 Jun 2020 ======
+
+===== clustering ensembles for seasonal forecasts =====
+
+see https://xclim.readthedocs.io/en/stable/api.html#module-xclim.ensembles 
+
+xclim.ensembles.kmeans_reduce_ensemble 
+
+Return a sample of ensemble members using k-means clustering. The algorithm attempts to reduce the total number of ensemble members while maintaining adequate coverage of the ensemble uncertainty in a N-dimensional data space. K-Means clustering is carried out on the input selection criteria data-array in order to group individual ensemble members into a reduced number of similar groups. Subsequently a single representative simulation is retained from each group.
+
+===== CDS: the NCEP CFSv2 forecasts are now available on the CDS ... =====
+
+It includes Z500, see about downloading Z500 for ALL GCMs
+
+
+ 
+

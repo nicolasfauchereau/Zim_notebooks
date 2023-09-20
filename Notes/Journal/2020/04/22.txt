@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-22T10:57:17+12:00
+
+====== Wednesday 22 Apr 2020 ======
+
+==== Clarifications regarding the CDFP2012 project ====
+
+See MS Teams chat with Jorge, Andrea and Shailesh 
+
+==== Carrying on experimentations with PYCARET ====
+
+

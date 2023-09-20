@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-22T14:03:14+12:00
+
+====== Monday 22 May 2023 ======
+
+==== UNESCO project ====
+
+... 
+
+==== EVA on gridded data (extreme value analysis) ====
+
+https://xclim.readthedocs.io/en/stable/notebooks/frequency_analysis.html 
+
+see for univariate extreme value analysis: 
+
+https://github.com/georgebv/pyextremes 
+https://github.com/georgebv/pyextremes-notebooks 

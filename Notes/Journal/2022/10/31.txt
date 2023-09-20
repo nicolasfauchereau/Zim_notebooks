@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-31T10:46:47+13:00
+
+====== Monday 31 Oct 2022 ======
+
+==== Jupyter nbconvert failure ====
+
+AttributeError: module 'jinja2' has no attribute 'Markup
+
+solution: mamba install -c conda-forge jinja2==3.0.3 
+
+--------------------
+
+==== ERA5-CCAM forced runs on KUPE ====
+
+
+
+see in 
+
+[[/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/historical/ERA5_c192/OUTPUT/NZ_surf_domain/]]
+
+pr_ERA5_eval_surf.ccam_12km.YYYYMM_NZ.nc
+
+to do: 
+
+1) reads in the hourly precip files, convert to daily, and export to netcdf 
+2) take only a few years, i.e. 1986-2005 and 2010 to develop the algo 
+3) deplot at scale 
+
+
+
+
+
+
+
+
+

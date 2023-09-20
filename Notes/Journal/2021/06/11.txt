@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-11T10:06:20+12:00
+
+====== Friday 11 Jun 2021 ======
+
+==== Snakemake ====
+
+relies on disk files (xarray) 
+
+
+--------------------
+
+==== composite anomalies of U, V and HGT for primary and secondary clusters ====
+
+@CPP @WR 
+
+**composites_HGT_and_UV.ipynb **in /home/nicolasf/research/CPP/WRs/notebooks 

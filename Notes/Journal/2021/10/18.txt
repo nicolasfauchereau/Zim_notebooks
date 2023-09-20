@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-18T11:51:10+13:00
+
+====== Monday 18 Oct 2021 ======
+
+ICU tercile probabilistic forecasts 
+
+@ICU 
+
+see 4_map_MME_probabilistic_tercile_forecast.ipynb 
+
+comparison with the C3S Multi-System 
+
+available at 
+
+https://climate.copernicus.eu/charts/c3s_seasonal/c3s_seasonal_spatial_mm_rain_3m?facets=Centres,C3S%20multi-system&time=2021100100,744,2021110100&type=terc_lo&area=area31
+
+{{./screenshot_2021-10-18-115525.png?width=500}}{{./screenshot_2021-10-18-115555.png?height=330}}{{./screenshot_2021-10-18-115654.png?height=330}}
+
+
+My plots: 
+
+
+{{./screenshot_2021-10-18-115753.png}}
+
+
+--------------------
+
+==== AUTOSKLEARN ====
+
+see 
+
+https://github.com/automl/auto-sklearn-talks/tree/main/2021_07_28_EuroPython 
+
+for a demo ran during the EuroPython 2021 
+
+The video is at: https://www.youtube.com/watch?v=ugN8U--oUaU 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-07T09:10:44+13:00
+
+====== Tuesday 07 Dec 2021 ======
+
+===== State of the Climate Report email from Howard Diamond =====
+
+see 
+
+[[https://outlook.office.com/mail/inbox/id/AAMkAGQyNTRkOTY2LTY2ZTAtNDIxMS1iMTM3LTdjZTYzMzYyNDdmZgBGAAAAAAA72QX96aKuR7KFZAy6bbtaBwDkCOwa56iSQ7B63dAd8Q1rAAAAVmCnAABqY5UDv5xfS5WuEc%2B2HrA5AAIclL%2F2AAA%3D|This email]]
+
+Deadline 27 January 
+
+--------------------
+
+==== SWH and circulation regimes ====
+
+Was a dead end, see notebooks in 
+
+[[/home/nicolasf/research/WRs_and_waves/notebooks]]
+
+but pay attention to the notebook for downloading and processing the hourly ERA5 variable(s) and calculating the daily aggregates, as it could be used for something else 
+
+--------------------
+
+==== ICU forecast table: validation and operationalisation ====
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_forecast_table]] 
+
+→ 1) **ICU_forecast_table/drive_admin_GCMs_evaluation.ipynb** use papermill to loop over the administrative shapes and run **ICU_forecast_table/GCMs_admin_hindcast_climatologies_and_probabilities.ipynb** 
+
+parameters: 
+
+**provider** = 'CDS'
+**varname** = 'tprate'
+**period** = 'seasonal'
+**GCM** = 'ECMWF' //in ['ECMWF', 'UKMO', 'METEO_FRANCE', 'DWD', 'CMCC', 'NCEP', 'JMA', 'ECCC_CanCM4i', 'ECCC_GEM_NEMO']//
+**quantiles** = 'tercile' //(can be 'tercile', 'quartile', 'decile', 'percentile')// 
+**country** = "{}"
+**admin** = "{}"
+**method** = 'empirical' # whether to calculate the parametrized or empirical quantiles 
+
+-> **ICU_forecast_table/GCMs_admin_hindcast_climatologies_and_probabilities.ipynb** 
+
+	For each GCM and administrative area:
+
+	- reads in the GCM hindcasts dataset in  [[/media/nicolasf/END19101/ICU/data/{provider}/{GCM}]] .... potentially change to [[/media/nicolasf/END19101/ICU/data/CDS/operational/hindcasts]] 
+	- do conversions, calculates seasonal accumulation if 'seasonal' period 
+	- extract the administrative area 
+	- buffer the shape by 0.25 (degree) 
+	- mask the GCM hindcast dataset 
+	- plot the shape and the resulting land-sea mask in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/figures/ICU_validation/masks/admin]] 
+	- calculates the regional average 
+	- calculates the climatological quantiles, either **empirical** (//C3S.calc_parametrized_quantiles//) or **parametrized** (//C3S.calc_empirical_quantiles//)) 
+	- the climatologies for each GCM and administrative area are saved in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin/climatologies]] in netcdf, with pattern **f"{method}_{quantiles}_{varname}_{period}_{GCM}_{utils.sanitize_name(country)}_{utils.sanitize_name(admin)}.nc"** 
+	- digitize: each member of the ensemble is given a category, uses //C3S.get_GCM_category_digitize// 
+	- calculate the probabilities as the proportion of members in each category, uses //C3S.calculate_quantiles_probabilities//
+	- saves the probabilities for each time-step and leadtime in **netcdf**, in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin/hindcast_categories]]
+	- casts the probabilities in csv, and saves in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin/hindcast_categories]] 
+	- reads in the ERA5 dataset 
+	- calculates the seasonal accumulations if needed, interpolates 
+	- insert and apply the mask from the GCM 
+	- calculates the regional averages 
+	- calculates the climatological quantiles (do not save to disk) 
+	- calculates the categories 
+	- merge the categories with the dataframe holding the quantile probabilities from the GCM 
+	
+				{{./screenshot_2021-12-07-110434.png?width=500}}
+
+	- Now validate the forecasts against the observations ... note that we don't deal with ties (e.g. 20|40|40) ? 
+	- saves the validation scores (accuracy) in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin,]] in csv files with filenames **f"validation_{utils.sanitize_name(country)}_{utils.sanitize_name(admin)}_{period}_{GCM}_{quantiles}.csv"**
+	- saves the barplot of the validation for the given GCM and administrative area in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/figures/ICU_validation]] 
+	
+→ 2) **ICU_forecast_table/C3S_MME_ICU_admin_validation.ipynb** use papermill to loop over the administrative shapes and run **ICU_forecast_table/C3S_MME_ICU_admin_validation.ipynb** 
+
+parameters:
+
+country_col = 'Country'
+admin_col = 'Admin_boun'
+quantiles = 'quartile'
+
+**ICU_forecast_table/C3S_MME_ICU_admin_validation.ipynb** reads in the csv files containing the quantile (tercile or quartile) probabilities for each of the GCMs as well as the observed category (in outputs/ICU_validation/admin), then calculates the ensemble mean of these probabilities, and compare the most likely category to the observed category to derive an accuracy score
+
+→ 2) **ICU_forecast_table/compile_ICU_admin_validation_scores.ipynb **compiles the MME validation scores and creates on big table (73 rows) with these, + attempts the mapping of these (choropleth) 
+
+e.g. for quartiles forecasts
+{{./screenshot_2021-12-08-133427.png}}
+
+for tercile forecasts
+{{./screenshot_2021-12-08-133801.png}}
+
+
+**→ mapping of the validation scores**
+
+**ICU_forecast_table_validation/compile_ICU_admin_validation_scores.ipynb**
+
+in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_forecast_table_validation]]
+

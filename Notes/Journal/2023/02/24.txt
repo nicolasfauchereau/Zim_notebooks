@@ -1,0 +1,126 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-24T10:33:08+13:00
+
+====== qFriday 24 Feb 2023 ======
+
+===== ICU coordination meeting =====
+
+@ICU 
+
+see Island Climate Update WIKI: https://teams.microsoft.com/l/channel/19%3Af6907003180c41198e1aa95641d4be63%40thread.tacv2/tab%3A%3A3a0cdf2a-7765-4b56-9070-cfde490dd88f?groupId=cd4e2038-56c7-4920-b11a-e1a85a84b240&tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&allowXTenantAccess=false 
+
+
+--------------------
+
+==== Aquarel:  Styling matplotlib made easy ====
+
+https://github.com/lgienapp/aquarel 
+
+to fix the issues related to some basic fonts not present 
+
+```
+sudo apt install font-manager 
+rm ~/.cache/matplotlib -fr
+```
+
+then restart Jupyter
+
+--------------------
+
+==== SST forecasts ====
+
+To download the SST forecasts for the latest available, see in 
+
+download_historical_forecasts.ipynb 
+
+in [[/home/nicolasf/operational/seasonal_forecasting/notebooks/SCO]] 
+
+and https://niwa-my.sharepoint.com/:x:/r/personal/nicolas_fauchereau_niwa_co_nz/_layouts/15/Doc.aspx?sourcedoc=%7BA64FC94E-849E-4742-BC74-72B55BBB9439%7D&file=C3S_GCM_forecasts_system_history.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&login_hint=Nicolas.Fauchereau%40niwa.co.nz&ct=1677208249211&wdOrigin=OFFICECOM-WEB.START.REC&cid=c2b26fa5-a932-4bac-9260-9c5a98690e18
+
+
+[*] ECMWF: 
+
+2017: 11
+2018: 12
+2019: 12
+2020: 12
+2021: 12
+2022: 12
+
+[*] UKMO: 
+
+2017: 4
+2018: 12
+2019: 12
+2020: 12
+2021: 11
+2022: 12
+
+[*] METEO_FRANCE 
+
+2017: 12
+2018: 12
+2019: 12
+2020: 12
+2021: 12
+2022: 12
+
+[*] DWD 
+
+2017: 12
+2018: 12
+2019: 12
+2020: 12
+2021: 12
+2022: 12
+
+[*] CMCC
+
+2017: 0
+2018: 2
+2019: 12
+2020: 12
+2021: 12
+2022: 12
+
+[*] NCEP 
+
+2017: 0
+2018: 0
+2019: 3
+2020: 12
+2021: 12
+2022: 12
+
+[*] JMA 
+
+2017: 1
+2018: 1
+2019: 1
+2020: 4
+2021: 12
+2022: 12
+
+[*] ECCC_CanCM4i 
+
+2017: 12
+2018: 12
+2019: 12
+2020: 12
+2021: 8
+2022: 12
+
+[*] ECCC_GEM5_NEMO
+
+2017: 12
+2018: 12
+2019: 12
+2020: 12
+2021: 1
+2022: 12
+
+
+
+
+

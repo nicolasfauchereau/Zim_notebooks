@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-04T12:31:47+12:00
+
+====== Friday 04 Sep 2020 ======
+
+==== Rioxarray for nearest neighbour interpolation ====
+
+see 
+
+https://corteva.github.io/rioxarray/stable/examples/interpolate_na.html 
+
+==== Climate Networks ====
+
+See PYUNICORN 
+
+https://github.com/pik-copan/pyunicorn 

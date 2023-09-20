@@ -1,0 +1,126 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-11T08:39:05+13:00
+
+====== Wednesday 11 Mar 2020 ======
+
+Google Earth Engine beginner cookbook 
+
+@EO @HUB 
+
+https://developers.google.com/earth-engine/tutorials/community/beginners-cookbook 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------  
+
+=== advanced course in ML ===
+
+@ML @HUB 
+
+https://www.reddit.com/r/MachineLearning/comments/fdw0ax/d_advanced_courses_update/
+
+and 
+
+[D] Advanced courses update _ MachineLearning (2020-03-10 8_44_26 AM).html in [[/home/nicolasf/HUB/ML/advanced_ML_courses]] 
+
+also: 
+
+https://www.youtube.com/playlist?list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq 
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------  
+
+=== Electricity Networks News ===
+
+see 
+
+https://mailchi.mp/electricity.org.nz/stakeholder-update-from-the-electricity-networks-association-4820521?e=5a0d909314 
+
+and 
+
+https://www.ena.org.nz/dmsdocument/628
+
+submission in response to MBIE document: 
+
+https://www.mbie.govt.nz/have-your-say/accelerating-renewable-energy-and-energy-efficiency/
+
+https://www.mbie.govt.nz/dmsdocument/10349-discussion-document-accelerating-renewable-energy-and-energy-efficiency 
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------  
+
+=== Processed FORECASTS ===
+
+@SI @GCM 
+
+local = True
+
+in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/]] 
+
+=== CDS ===
+
+[*] ECMWF 
+	[*] T2M: 2017-01 → 2019-12 
+	[*] PRECIP: 2017-01 → 2019-12 
+
+[*] CMCC 
+	[*] T2M: 2018-11 → 2019-12 
+	[*] PRECIP: 2018-11 → 2019-12 
+
+[*] METEO_FRANCE 
+	[*] T2M: 2017-01 → 2019-12 
+	[*] PRECIP: 2017-01 → 2019-12 
+
+[*] DWD 
+	[*] T2M: 2017-01 → 2019-12
+	[*] PRECIP: 2017-01 → 2019-12
+
+[*] UKMO 
+	[*] T2M: 2018-01 → 2019-12
+	[*] PRECIP: 2018-01 → 2019-12
+
+=== IRI ===
+
+[*] NCEP_CFSv2 
+	[*] T2M: 2017-01 → 2019-12
+	[*] PRECIP: 2017-01 → 2019-12
+
+[*] CanSIPSv2
+	[*] T2M: 2017-01 → 2018-12, then 2019-08 → 2019-12
+	[*] PRECIP: 2017-01 → 2018-12, then 2019-08 → 2019-12
+
+[*] NASA_GEOSS2S
+	[*] T2M: 2017-01 then 2017-11 → 2019-12
+	[*] PRECIP: 2017-01 then 2017-11 → 2019-12
+
+[*] GEM_NEMO
+	[*] T2M: 2017-01 → 2018-12 then 2019-09 → 2019-12
+	[*] PRECIP: 2017-01 → 2018-12 then 2019-09 → 2019-12
+
+[*] CanCM4i
+	[*] T2M: 2017-01 → 2018-12, then 2019-08 → 2019-12 
+	[*] PRECIP: 2017-01 → 2018-12, then 2019-08 → 2019-12 
+
+=== JMA ===
+
+[ ] JMA 
+	[ ] T2M 
+	[ ] PRECIP 
+
+
+
+
+
+
+
+
+!! WARNING, the interpolated fields miss value at -90 and 90 so need to **restrict domain in latitude to e.g. -80 → 80**
+
+Also: no actual need to calculate the seasonal climatology: can calculate first the monthly anomalies, then calculate the seasonal anomalies from that 
+
+
+
+

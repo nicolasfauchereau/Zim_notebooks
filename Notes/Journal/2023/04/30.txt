@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-30T12:23:05+12:00
+
+====== Sunday 30 Apr 2023 ======
+
+==== SkillMetric: A Python library for calculating and displaying the skill of model predictions against observations. ====
+
+https://github.com/PeterRochford/SkillMetrics 
+
+https://pypi.org/project/SkillMetrics/
+
+include code for Taylor Diagrams
+
+{{./screenshot_2023-04-30-141021.png}}
+
+
+
+--------------------
+
+==== Robust bias-correction of precipitation extremes using a novel hybrid empirical quantile-mapping method ====
+
+Holthuijzen, M., B. Beckage, P. J. Clemins, D. Higdon, and J. M. Winter, 2022: Robust bias-correction of precipitation extremes using a novel hybrid empirical quantile-mapping method: Advantages of a linear correction for extremes. Theor Appl Climatol, 149, 863–882, https://doi.org/10.1007/s00704-022-04035-2.
+
+https://link.springer.com/article/10.1007/s00704-022-04035-2
+
+says: 
+
+""
+Code availability Code will be available in a public Github repository
+""
+
+Actually, available in R: https://github.com/maikeh7/EQM-LIN 
+

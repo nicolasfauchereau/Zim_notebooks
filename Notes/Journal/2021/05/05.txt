@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-05T15:43:56+12:00
+
+====== Wednesday 05 May 2021 ======
+
+==== Weather Regimes ====
+
+notebook to download, read, process the NCEP1 Z1000 data, then do Affinity Propagation then K-Means clustering, and composites, as well 
+as reconstruction of the clusters centroids from the centroids in PC space: 
+
+**do_AP_and_kmeans_NCEP1_Z1000.ipynb** in [[/home/nicolasf/research/CPP/WRs/notebooks]] 
+
+--------------------
+
+==== generation of consolidated VCSN datasets for ZESPRI ====
+
+see: 20210505_NF_read_smart_monitoring_createVCSN.ipynb in [[/home/nicolasf/operational/ZESPRI/notebooks]] 
+
+
+--------------------
+
+==== modelling wind power generation with TPOT (AutoML) ====
+
+see [[/home/nicolasf/jupyter_notebooks/modelling_wind_generation_with_TPOT.ipynb]] and https://www.kaggle.com/scratchpad/notebook8d49d8a1f4/edit (or https://www.kaggle.com/matteodefelice/modelling-wind-power-using-tpot-python-automl/notebook) 
+
+--------------------
+
+==== A database of global storm surge reconstructions ====
+
+code in Python to do some ML 
+
+https://figshare.com/articles/software/surgeReconstructionScripts/12978191
+
+and [[/home/nicolasf/operational/extractionPreprocessingReconstruction.7z]] 
+
+--------------------
+
+==== REXA (Regimes Extreme Analysis) on VCSN and circulation regimes over New Zealand ====
+
+Notebook: **read_VCSN_do_extremes_analysis.ipynb** 
+
+in [[/home/nicolasf/research/CPP/WRs/notebooks/]]
+
+probably enough material already for a paper, maybe re-do using ERA5 ? 
+
+**methodology:**
+
+Determining the optimal number of circulation regimes: Affinity Propagation 
+
+Mapping extremes to circulation regimes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

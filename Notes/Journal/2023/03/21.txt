@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-21T09:38:17+13:00
+
+====== Tuesday 21 Mar 2023 ======
+
+==== Diagnostics on MSWEP quality control: ====
+
+CHIRPS 
+
+publication: https://www.nature.com/articles/sdata201566 
+
+data: 
+
+ftp://ftp.chg.ucsb.edu/pub/org/chg/products/CHIRPS-2.0 
+
+https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p05/
+
+
+
+

@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-23T10:52:11+13:00
+
+====== Wednesday 23 Dec 2020 ======
+
+==== uncertainty-toolbox:  A python toolbox for predictive uncertainty quantification, calibration, metrics, and visualization ====
+
+https://github.com/uncertainty-toolbox/uncertainty-toolbox
+
+list of papers: 
+
+https://github.com/uncertainty-toolbox/uncertainty-toolbox/blob/master/docs/paper_list.md
+
+glosssary of terms: 
+
+https://github.com/uncertainty-toolbox/uncertainty-toolbox/blob/master/docs/glossary.md
+
+
+--------------------
+
+==== Cycling counts and weather ====
+
+candidates cycling counters for the analysis 
+
+Grafton bridge 
+
+{{./screenshot_2020-12-23-105236.png?width=500}}
+
+NW_Cycleway_Kingsland 
+
+{{./screenshot_2020-12-23-105346.png?width=500}}
+
+Tamaki drive EB 
+
+{{./screenshot_2020-12-23-105546.png?width=500}}
+
+Note the drop to zero at the beginning of 2017, probably due to instrument failure 
+
+Tamaki Drive WB 
+
+{{./screenshot_2020-12-23-105658.png?width=500}}
+
+Upper Harbour Shared Path 
+
+{{./screenshot_2020-12-23-105905.png?width=500}}
+
+--------------------
+
+==== screenshots in cinnamon ====
+
+CTRL + SHIFT + PRINT 
+
+
+
+
+
+
+
+
+
+
+

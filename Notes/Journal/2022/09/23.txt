@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-23T09:03:52+12:00
+
+====== Friday 23 Sep 2022 ======
+
+===== C3S T2M forecasts for UKMO and JMA, systems for which the data is available 1993 - 2016 =====
+
+@ICU @SCO 
+
+see https://confluence.ecmwf.int/display/CKB/Summary+of+available+data scroll down to 'hindcasts' table 
+
+* **ECMWF**: SEAS5 | system = 5
+* **Meteo-France**: System = 8
+* **UKMO**: system = 600 or 14
+* **DWD**: GCFS2.1 | system = 21
+* **CMCC**: SPSv3.5 | system = 35
+* **NCEP**: system = 2 
+* **JMA**: system = 3
+* **ECCC CanCM4i**: system = 2
+* **ECCC GEM5-NEMO**: system = 3
+
+url = 'https://confluence.ecmwf.int/display/CKB/Description+of+the+C3S+seasonal+multi-system'
+
+see [[~/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/C3S/CDS_config_operational.yaml]] for the latest (operational forecasts) 
+
+and [[~/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/C3S/CDS_config_hindcasts.yaml]] for the hindcasts
+
+--------------------
+
+==== CMIP6 downscaling ====
+
+@CMIP6 @MBIE 
+
+ACCESS-CM2 : highest ECS model 
+NorESM2-MM: lowest ECS model 

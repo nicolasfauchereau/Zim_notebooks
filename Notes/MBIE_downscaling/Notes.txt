@@ -1,0 +1,771 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-08-23T09:39:34+12:00
+
+====== Notes ======
+Created Tuesday 23 August 2022
+
+==== VCSN Station density ====
+
+@MBIE 
+
+source data [[/home/srinivasanr/VCSN_ChristianZ/500comb/input]]  on cliops	 you a
+
+example: https://tiofaizintio.medium.com/how-to-visualize-spatial-point-based-data-and-its-density-with-python-basemap-bfe6d9da76df 
+
+Notebook: **VCSN_Stations_Density.ipynb** in [[/home/nicolasf/research/CMIP6_downscaling/notebooks/VCSN]] 
+
+uses **np.histogram2d** https://numpy.org/doc/stable/reference/generated/numpy.histogram2d.html 
+
+For the VCSN data 
+
+[[/nesi/project/niwa00018/VCSN_data/Rain_bc/19710101-20220730_Rain_bc.nc]] 
+
+/nesi/project/niwa00018/VCSN_data/total_precipitation/gridded_vcsn_Rain_bc_1973-01-01_2022-03-28_updated.nc
+
+/nesi/project/niwa00018/VCSN_data/augmented_VCSN
+
+seems like these locations are the 'definite' ones 
+ 
+[[/nesi/project/niwa00018/VCSN_data/Rain_bc/19710101-20220730_Rain_bc.nc]] original 
+
+[[/nesi/project/niwa00018/VCSN_data/augmented_VCSN]] augmentedca
+
+--------------------
+
+==== existing downscaled global datasets ====
+
+→ **__CarbonPlan__**, see https://carbonplan.org/research/cmip6-downscaling-explainer and https://github.com/carbonplan/cmip6-downscaling/blob/main/notebooks/accessing_data_example.ipynb (the latter for accessing data) 
+
+mailto: **hello@carbonplan.org** 
+
+→ **__Climate Impact Lab__**: https://impactlab.org/news-insights/introducing-our-new-global-downscaled-projections-for-climate-impacts-research/ 
+
+→ **__NASA / NEX__**: https://www.nasa.gov/nex/gddp (note: only over land), available via THREDDS server (see https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6) 
+
+for example, the downscaled ACCESS-CM2 outputs for historical, ssp126, ssp245, ssp370 and ssp585, are available at: https://ds.nccs.nasa.gov/thredds2/catalog/AMES/NEX/GDDP-CMIP6/ACCESS-CM2/catalog.html 
+
+Historical is available from 1950 to 2014
+scenarios are available from 2015 to 2100 
+
+→ **__Xu_et_al:__** Xu, Z., Y. Han, C.-Y. Tam, Z.-L. Yang, and C. Fu, 2021: Bias-corrected CMIP6 global dataset for dynamical downscaling of the historical and future climate (1979–2100). Sci Data, 8, 293, https://doi.org/10.1038/s41597-021-01079-3. data available at https://www.scidb.cn/en/detail?dataSetId=791587189614968832&dataSetType=personal 
+
+see notebooks in [[/home/nicolasf/research/CMIP6_downscaling/notebooks/Global_Downscaled_Datasets]] 
+
+see also: 
+
+Navarro-Racines, C., Tarapues, J., Thornton, P., Jarvis, A., Ramirez-Villegas, J., 2020. High-resolution and bias-corrected **CMIP5** projections for climate change impact assessments. Sci Data 7, 7. https://doi.org/10.1038/s41597-019-0343-8 (Colombia)
+
+__→ **CHELSA-W5E5: daily 1 km meteorological forcing data for climate impact studies (only covers the historical period:**__ 
+
+The CHELSA-W5E5 dataset was created to serve as observational climate input data for the impact assessments carried out in phase 3a of the Inter-Sectoral Impact Model Intercomparison Project (ISIMIP3a).
+
+Version 1.0 of the CHELSA-W5E5 dataset covers the entire globe (except the Arctic Ocean beyond 84°N) at 30 arcsec horizontal and daily temporal resolution from **1979 to 2016.**
+
+https://essd.copernicus.org/articles/15/2445/2023/ 
+
+code ① : https://zenodo.org/record/8010301 
+
+code ②: https://zenodo.org/record/8010710 
+
+__ISIMIP data__ 
+
+https://www.isimip.org/outputdata/ 
+
+isimip client API
+
+https://github.com/ISI-MIP/isimip-client
+
+
+
+
+--------------------
+
+==== Carbon Plan explainer ====
+
+https://carbonplan.org/research/cmip6-downscaling-explainer
+
+**references (in order)** 
+
+1. Lopez‐Cantu, T., Prein, A.F., Samaras, C., 2020. Uncertainties in Future U.S. Extreme Precipitation From Downscaled Climate Projections. Geophys. Res. Lett. 47. https://doi.org/10.1029/2019GL086797
+2. Dai, A., 2006. Precipitation Characteristics in Eighteen Coupled Climate Models. Journal of Climate 19, 4605–4630. https://doi.org/10.1175/JCLI3884.1
+3. Khan, M.S., Coulibaly, P., Dibike, Y., 2006. Uncertainty analysis of statistical downscaling methods. Journal of Hydrology 319, 357–382. https://doi.org/10.1016/j.jhydrol.2005.06.035
+4. Chen, J., Brissette, F.P., Chaumont, D., Braun, M., 2013. Performance and uncertainty evaluation of empirical downscaling methods in quantifying the climate change impacts on hydrology over two North American river basins. Journal of Hydrology 479, 200–214. https://doi.org/10.1016/j.jhydrol.2012.11.062
+5. Wootten, A., Terando, A., Reich, B.J., Boyles, R.P., Semazzi, F., 2017. Characterizing Sources of Uncertainty from Global Climate Models and Downscaling Techniques. Journal of Applied Meteorology and Climatology 56, 3245–3262. https://doi.org/10.1175/JAMC-D-17-0087.1
+6. Chegwidden, O.S., Nijssen, B., Rupp, D.E., Arnold, J.R., Clark, M.P., Hamman, J.J., Kao, S., Mao, Y., Mizukami, N., Mote, P.W., Pan, M., Pytlak, E., Xiao, M., 2019. How Do Modeling Decisions Affect the Spread Among Hydrologic Climate Change Projections? Exploring a Large Ensemble of Simulations Across a Diversity of Hydroclimates. Earth’s Future 7, 623–637. https://doi.org/10.1029/2018EF001047
+7. Abatzoglou, J.T., Brown, T.J., 2012. A comparison of statistical downscaling methods suited for wildfire applications: STATISTICAL DOWNSCALING FOR WILDFIRE APPLICATIONS. Int. J. Climatol. 32, 772–780. https://doi.org/10.1002/joc.2312
+8. Vandal, T., Kodra, E., Ganguly, S., Michaelis, A., Nemani, R., Ganguly, A.R., 2017. DeepSD: Generating High Resolution Climate Change Projections through Single Image Super-Resolution, in: Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. Presented at the KDD ’17: The 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, ACM, Halifax NS Canada, pp. 1663–1672. https://doi.org/10.1145/3097983.3098004
+9. Sunyer, M.A., Hundecha, Y., Lawrence, D., Madsen, H., Willems, P., Martinkova, M., Vormoor, K., Bürger, G., Hanel, M., Kriaučiūnienė, J., Loukas, A., Osuch, M., Yücel, I., 2015. Inter-comparison of statistical downscaling methods for projection of extreme precipitation in Europe. Hydrol. Earth Syst. Sci. 19, 1827–1847. https://doi.org/10.5194/hess-19-1827-2015
+10. Werner, A.T., Cannon, A.J., 2016. Hydrologic extremes – an intercomparison of multiple gridded statistical downscaling methods. Hydrol. Earth Syst. Sci. 20, 1483–1508. https://doi.org/10.5194/hess-20-1483-2016
+11. ~~Mullan, D., Chen, J. & Zhang, X.J. Validation of non-stationary precipitation series for site-specific impact assessment: comparison of two statistical downscaling techniques. Clim Dyn 46, 967–986 (2016). https://doi.org/10.1007/s00382-015-2626-x~~ not available, requested from the 1st author
+12. Tabari, H., Paz, S.M., Buekenhout, D., Willems, P., 2021. Comparison of statistical downscaling methods for climate change impact analysis on precipitation-driven drought. Hydrol. Earth Syst. Sci. 25, 3493–3517. https://doi.org/10.5194/hess-25-3493-2021
+13. Wood, A.W., Leung, L.R., Sridhar, V., Lettenmaier, D.P., 2004. Hydrologic Implications of Dynamical and Statistical Approaches to Downscaling Climate Model Outputs. Climatic Change 62, 189–216. https://doi.org/10.1023/B:CLIM.0000013685.99609.9e
+14. Cannon, A.J., Sobie, S.R., Murdock, T.Q., 2015. Bias Correction of GCM Precipitation by Quantile Mapping: How Well Do Methods Preserve Changes in Quantiles and Extremes? Journal of Climate 28, 6938–6959. https://doi.org/10.1175/JCLI-D-14-00754.
+
+--------------------
+
+==== list of references in xclim ====
+
+1. Thrasher, B., Maurer, E.P., McKellar, C., Duffy, P.B., 2012. Technical Note: Bias correcting climate model simulated daily temperature extremes with quantile mapping. Hydrol. Earth Syst. Sci. 16, 3309–3314. https://doi.org/10.5194/hess-16-3309-2012
+2. Agbazo, M.N., Grenier, P., 2020. Characterizing and avoiding physical inconsistency generated by the application of univariate quantile mapping on daily minimum and maximum temperatures over Hudson Bay. Int J Climatol 40, 3868–3884. https://doi.org/10.1002/joc.6432
+3. Grenier, P., 2018. Two Types of Physical Inconsistency to Avoid with Univariate Quantile Mapping: A Case Study over North America Concerning Relative Humidity and Its Parent Variables. Journal of Applied Meteorology and Climatology 57, 347–364. https://doi.org/10.1175/JAMC-D-17-0177.1
+4. Hoffmann, H., Rath, T., 2012. Meteorologically consistent bias correction of climate time series for agricultural models. Theor Appl Climatol 110, 129–141. https://doi.org/10.1007/s00704-012-0618-x
+5. Hoffmann, H., Rath, T., 2012. Meteorologically consistent bias correction of climate time series for agricultural models. Theor Appl Climatol 110, 129–141. https://doi.org/10.1007/s00704-012-0618-x
+6. Deque, M., 2007. Frequency of precipitation and temperature extremes over France in an anthropogenic scenario: Model results and statistical correction according to observed values. Global and Planetary Change 57, 16–26. https://doi.org/10.1016/j.gloplacha.2006.11.030
+7. Mamalakis, A., Langousis, A., Deidda, R., Marrocu, M., 2017. A parametric approach for simultaneous bias correction and high-resolution downscaling of climate model rainfall: PARAMETRIC BIAS CORRECTION AND DOWNSCALING. Water Resour. Res. 53, 2149–2170. https://doi.org/10.1002/2016WR019578
+8. Schmidli, J., Frei, C., Vidale, P.L., 2006. Downscaling from GCM precipitation: a benchmark for dynamical and statistical downscaling methods. Int. J. Climatol. 26, 679–689. https://doi.org/10.1002/joc.1287
+9. Cannon, A.J., 2018. Multivariate quantile mapping bias correction: an N-dimensional probability density function transform for climate model simulations of multiple variables. Clim Dyn 50, 31–49. https://doi.org/10.1007/s00382-017-3580-6
+10. Hnilica, J., Hanel, M., Puš, V., 2017. Multisite bias correction of precipitation data from regional climate models: MULTISITE BIAS CORRECTION. Int. J. Climatol. 37, 2934–2946. https://doi.org/10.1002/joc.4890
+11. Themeßl, M.J., Gobiet, A., Heinrich, G., 2012. Empirical-statistical downscaling and error correction of regional climate models and its impact on the climate change signal. Climatic Change 112, 449–468. https://doi.org/10.1007/s10584-011-0224-4
+12. Alavoine, M., Grenier, P., 2021. The distinct problems of physical inconsistency and of multivariate bias potentially involved in the statistical adjustment of climate simulations (preprint). Physical Sciences and Mathematics. https://doi.org/10.31223/X5C34C
+
+== see also for the calculation of spatial analogs ==
+
+Roy, P., Grenier, P., Barriault, E., Logan, T., Blondlot, A., Bourgeois, G., Chaumont, D., 2017. Probabilistic climate change scenarios for viticultural potential in Québec. Climatic Change 143, 43–58. https://doi.org/10.1007/s10584-017-1960-x
+
+Grenier, P., Parent, A.-C., Huard, D., Anctil, F., Chaumont, D., 2013. An Assessment of Six Dissimilarity Metrics for Climate Analogs. Journal of Applied Meteorology and Climatology 52, 733–752. https://doi.org/10.1175/JAMC-D-12-0170.1
+
+
+--------------------
+
+==== MACA: Multivariate Adaptive Constructed Analogs (MACA) ====
+
+see https://www.climatologylab.org/maca.html 
+
+MACA is a multi-step procedure that uses bias correction procedures and a constructed analogs approach for developing the fine-scale spatial pattern using a library of observed patterns. The analog concept uses the idea that large-scale patterns such as those adequately simulated by GCMs can be matched using a combination of observed patterns. The fine-scale "footprint" accompanying these observed patterns can then serve as the basis for  the fine-scale features corresponding to a model "day". A more thorough explanation and videos can be found here.​
+
+https://climate.northwestknowledge.net/MACA/MACAmethod.php 
+
+--------------------
+
+==== LOCA: LOCA Statistical Downscaling (Localized Constructed Analogs) ====
+
+see: http://loca.ucsd.edu/what-is-loca/ 
+
+--------------------
+
+==== Friday Meeting 26-08-2022 ====
+
+see status of runs: [[https://niwa-my.sharepoint.com/:x:/g/personal/peter_gibson_niwa_co_nz/Eevq4KDucxpEsap0eHuMe60B41w3nZLYMn5lVd2HgXE5Cw?email=Nicolas.Fauchereau%40niwa.co.nz&e=93Eb4K|CCAM_CMIP6_run_status.xlsx]]
+
+- ACCESS-CM2 — ECS = 4.66 (large warming signal) 
+- NorESM2-MM — ECS = 2.49 (less warming signal) 
+
+good because we have both end of the spectrum of ECSs ('recommended' ECS is ~ 3oC) 
+
+current runs
+
+-  ACCESS-CM2
+- NorESM2-MM
+- EC-Earth3 
+- NZESM 
+
+For investigating the **climate change signal,** do 
+
+do **2080 - 2099** (scenario) minus **1986-2005** (historical) 
+
+ANN 
+DJF
+JJA 
+SON 
+
+climate change signal by weather type ?
+
+Downscaling Methods: 
+
+- BCSD: 
+- MACA: Multivariate Adaptative Constucted Analog
+- GARD: Generalized Analog Regression Downscaling 
+
+--------------------
+
+==== Carbon Plan Global Downscaled dataset ====
+
+If looking for source_id (models) which provide  tasmin, tasmax and pr for historical + ssp245 + ssp370, these are the only 2 models that are available only 
+
+**- CanESM5** 
+**- MPI-ESM1-2-HR** 
+
+and these are only available for the GARD-SV method 
+
+see: [[~/research/CMIP6_downscaling/notebooks/Global_Downscaled_Datasets/CarbonPlan/exps_historical_ssp245_ssp370.csv]]
+
+--------------------
+
+==== For 'normal' BCSD, look into the CIL (Climate Impact Lab) implementations: ====
+
+- Quantile Delta Mapping (Cannon et al, 2015) 
+- Quantile-Preserving Localized-Analog Downscaling (QPLAD)  
+
+For Quantile Delta Mapping: from **xclim.sdba.adjustment import QuantileDeltaMapping** 
+
+Get in touch with the CIL for guidance 
+
+see also: 
+
+→  https://github.com/ISI-MIP/isimip-protocol-3 
+
+--------------------
+
+==== Bias-Adjustment-Python ====
+
+[[Journal:2022:09:30|30/09/22]]
+
+@repos @MBIE @downscaling @CMIP6 
+
+Includes **QDM (Quantile Delta Mapping)** see paper 
+
+Cannon, A. J., S. R. Sobie, and T. Q. Murdock, 2015: Bias Correction of GCM Precipitation by Quantile Mapping: How Well Do Methods Preserve Changes in Quantiles and Extremes? Journal of Climate, 28, 6938–6959, https://doi.org/10.1175/JCLI-D-14-00754.1.
+
+https://github.com/btschwertfeger/Bias-Adjustment-Python
+
+cloned into [[/home/nicolasf/research/CMIP6_downscaling/repos/Bias-Adjustment-Python]] 
+
+see example: 
+
+https://github.com/btschwertfeger/Bias-Adjustment-Python/blob/master/examples/examples.ipynb 
+
+for the implementation in C++: 
+
+https://github.com/btschwertfeger/Bias-Adjustment-Cpp 
+
+--------------------
+
+==== SBCK (Statistical Bias Correction Kit) ====
+
+[[Journal:2022:09:30|30/09/22]]
+
+@repos @MBIE @downscaling @CMIP6 
+
+https://github.com/yrobink/SBCK
+
+https://github.com/yrobink/SBCK-python 
+
+also cloned into [[~/research/CMIP6_downscaling/repos]] 
+
+requires the Eigen library: http://eigen.tuxfamily.org/index.php?title=Main_Page 
+
+see also https://gitlab.com/libeigen/eigen and archive copied in 
+
+[[/home/nicolasf/research/CMIP6_downscaling/repos/Eigen]] 
+
+
+Implement classic methods of bias correction (see [8,9] for the definition of bias correction)
+Quantile Mapping [5,7,14], parametric and non parametric version
+CDFt methods [6]
+OTC and dOTC methods [9]
+R2D2 method [11]
+MBCn method [4]
+QDM method [3]
+MRec method [1]
+ECBC method [12]
+TSMBC method [15], for autocorrelations.
+
+
+[1] Bárdossy, A. and Pegram, G.: Multiscale spatial recorrelation of RCM precipitation to produce unbiased climate change scenarios over large areas and small, Water Resources Research, 48, 9502–, https://doi.org/10.1029/2011WR011524, 2012.
+[2] Bazaraa, M. S., Jarvis, J. J., and Sherali, H. D.: Linear Programming and Network Flows, 4th edn., John Wiley & Sons, 2009.
+[3] Cannon, A. J., Sobie, S. R., and Murdock, T. Q.: Bias correction of simulated precipitation by quantile mapping: how well do methods preserve relative changes in quantiles and extremes?, J. Climate, 28, 6938–6959, https://doi.org/10.1175/JCLI-D-14-00754.1, 2015.
+[4] Cannon, Alex J.: Multivariate quantile mapping bias correction: an N-dimensional probability density function transform for climate model simulations of multiple variables, Climate Dynamics, nb. 1, vol. 50, p. 31-49, 10.1007/s00382-017-3580-6, 2018.
+[5] Déqué, M.: Frequency of precipitation and temperature extremes over France in an anthropogenic scenario: Model results and statistical correction according to observed values, Global Planet. Change, 57, 16–26, https://doi.org/10.1016/j.gloplacha.2006.11.030, 2007.
+[6] Michelangeli, P.-A., Vrac, M., and Loukos, H.: Probabilistic downscaling approaches: Application to wind cumulative distribution functions, Geophys. Res. Lett., 36, L11708, https://doi.org/10.1029/2009GL038401, 2009.
+[7] Panofsky, H. A. and Brier, G. W.: Some applications of statistics to meteorology, Mineral Industries Extension Services, College of Mineral Industries, Pennsylvania State University, 103 pp., 1958.
+[8] Piani, C., Weedon, G., Best, M., Gomes, S., Viterbo, P., Hagemann, S., and Haerter, J.: Statistical bias correction of global simulated daily precipitation and temperature for the application of hydrological models, J. Hydrol., 395, 199–215, https://doi.org/10.1016/j.jhydrol.2010.10.024, 2010.
+[9] Robin, Y., Vrac, M., Naveau, P., Yiou, P.: Multivariate stochastic bias corrections with optimal transport, Hydrol. Earth Syst. Sci., 23, 773–786, 2019, https://doi.org/10.5194/hess-23-773-2019
+[10] Sinkhorn Distances: Lightspeed Computation of Optimal Transportation Distances. arXiv, https://arxiv.org/abs/1306.0895
+[11] Vrac, M.: Multivariate bias adjustment of high-dimensional climate simulations: the Rank Resampling for Distributions and Dependences (R2 D2 ) bias correction, Hydrol. Earth Syst. Sci., 22, 3175–3196, https://doi.org/10.5194/hess-22-3175-2018, 2018.
+[12] Vrac, M. and P. Friederichs, 2015: Multivariate—Intervariable, Spatial, and Temporal—Bias Correction. J. Climate, 28, 218–237, https://doi.org/10.1175/JCLI-D-14-00059.1
+[13] Wasserstein, L. N. (1969). Markov processes over denumerable products of spaces describing large systems of automata. Problems of Information Transmission, 5(3), 47-52.
+[14] Wood, A. W., Leung, L. R., Sridhar, V., and Lettenmaier, D. P.: Hydrologic Implications of Dynamical and Statistical Approaches to Downscaling Climate Model Outputs, Clim. Change, 62, 189–216, https://doi.org/10.1023/B:CLIM.0000013685.99609.9e, 2004.
+[15] Robin, Y. and Vrac, M.: Is time a variable like the others in multivariate statistical downscaling and bias correction?, Earth Syst. Dynam. Discuss. [preprint], https://doi.org/10.5194/esd-2021-12, in review, 2021.
+François, B., Vrac, M., Cannon, A., Robin, Y., and Allard, D.: Multivariate bias corrections of climate simulations: Which benefits for which losses?, Earth Syst. Dyn., 11, 537–562, https://doi.org/10.5194/esd-11-537-2020, https://esd.copernicus.org/articles/11/537/2020/, 2020.
+
+--------------------
+
+==== CCdownscaling ====
+
+[[Journal:2022:09:30|30/09/22]]
+
+This package provides implementation of several statistical climate downscaling techniques, as well as evaluation tools for downscaling outputs.
+
+https://github.com/drewpolasky/CCdownscaling.git 
+
+and paper: Polasky, A. D., J. L. Evans, and J. D. Fuentes, 2022: CCdownscaling: an open-source Python package for multivariable statistical climate model downscaling V1.0. Climate and Earth system modeling
+
+To reproduce the results: 
+
+ The exact version of the model used to produce the results used in this paper is archived on Zenodo (DOI: 10.5281/zenodo.6506660 ), as are input data and scripts to run the model and produce the plots for all the simulations presented in this paper: https://zenodo.org/record/6506677.
+
+see conda environment ccdown (/home/nicolasf/research/CMIP6_downscaling/repos/CCdownscaling/environment.yml) 
+
+see also, for A simple implementation of the ETCCDI climdex indices in python. Calculates index values on array data. 
+
+https://github.com/drewpolasky/simple_pyclimdex
+
+look into the development branch of https://github.com/drewpolasky/CCdownscaling (https://github.com/drewpolasky/CCdownscaling/tree/development) 
+
+
+--------------------
+
+==== Red River CMIP5 bias correction and downscaling ====
+
+
+https://github.com/scrim-network/red_river 
+
+Quinn JD, Reed PM, Giuliani M, Castelletti A, Oyler JW, Nicholas RE. 2018. Exploring How Changing Monsoonal Dynamics and Human Pressures Challenge Multi-Reservoir Management for Flood Protection, Hydropower Production and Agricultural Water Supply. Water resources research. DOI: 10.1029/2018WR022743.
+
+**Bias Correction Methods**
+
+We use a variation of the modified equidistant quantile matching (EDCDFm) algorithm (Li et al. 2010) of (Pierce et al. 2015) to bias correct CMIP5 projections for the Red River, Vietnam. Details of the Red River variation of EDCDFm are provided at  https://github.com/scrim-network/red_river/blob/master/docs/bias_correction_methods.ipynb 
+
+**Downscaling Methods**
+
+We use a variation of the constructed analogs method described by (Pierce et al. 2014) to downscale CMIP5 projections for the Red River, Vietnam. Our modified method is termed Constructed Analogs with Single Anomaly Analog (CASAA). Details of the Red River CASAA method are provided at https://github.com/scrim-network/red_river/blob/master/docs/downscaling_methods.ipynb.
+
+cloned into [[/home/nicolasf/research/CMIP6_downscaling/repos/red_river]] 
+
+--------------------
+
+==== Climate Change Impact Assessment: A practical walk-through ====
+
+https://claut.gitlab.io/man_ccia/ 
+
+--------------------
+
+==== Packages developed at the UNSW for bias correction / downscaling ====
+
+https://www.hydrology.unsw.edu.au/
+
+https://www.hydrology.unsw.edu.au/robust-multivariate-bias-correction-rombc
+https://www.hydrology.unsw.edu.au/multivariate-bias-correction-mbc
+https://www.hydrology.unsw.edu.au/multisite-rainfall-downscaling-mrd
+
+--------------------
+
+===== CMIP6 Downscaling documentation =====
+
+see https://docs.carbonplan.org/cmip6-downscaling 
+
+https://docs.carbonplan.org/cmip6-downscaling/quick-start
+https://docs.carbonplan.org/cmip6-downscaling/running-flows
+https://docs.carbonplan.org/cmip6-downscaling/input-datasets
+https://docs.carbonplan.org/cmip6-downscaling/api 
+
+downscaling methods explainer: 
+
+https://docs.carbonplan.org/cmip6-downscaling/downscaling-methods 
+
+--------------------
+
+==== Climate Impact Lab (CIL) codebase ====
+
+**USES XCLIM, so take examples from there** **when trying to apply xclim methods** 
+
+see https://github.com/ClimateImpactLab/downscaleCMIP6 
+
+in the **README.md**: 
+
+This project makes use of statistical bias correction and downscaling algorithms, which are specifically designed to accurately represent changes in the extremes. For this reason, we selected Quantile Delta Mapping (QDM), following the method introduced by Cannon et al. (2015), which preserves quantile-specific trends from the GCM while fitting the full distribution for a given day-of-year to a reference dataset (ERA5).
+
+We then introduce a similar method tailored to increase spatial resolution while preserving extreme behavior, **Quantile-Preserving Localized-Analog Downscaling (QPLAD)**.
+
+seems to be implemented in **AnalogQuantilePreservingDownscaling** in xclim OR the **CIL fork of xclim** in https://github.com/ClimateImpactLab/xclim (and cloned locally in [[~/research/CMIP6_downscaling/repos/xclim_fork_ClimateImpactLab]] 
+
+see notably in https://github.com/ClimateImpactLab/xclim/tree/add_analog_downscaling 
+
+Look into the module: 
+
+https://github.com/ClimateImpactLab/xclim/blob/add_analog_downscaling/xclim/sdba/_adjustment.py 
+
+
+Together, these methods provide a robust means to handle both the central and tail behavior seen in climate model output, while aligning the full distribution to a state-of-the-art reanalysis dataset and providing the spatial granularity needed to study surface impacts.
+
+A publication providing additional detail is in process and will be linked here as soon as it is available.
+
+email: info@impactlab.org 
+
+__citation for the repo__: Diana Gergel, Kelly McCusker, Brewster Malevich, Emile Tenezakis, Meredith Fish, Michael Delgado (2022). ClimateImpactLab/downscaleCMIP6: (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6403794
+
+--------------------
+
+==== Climate Impact Lab Global Downscaled Projections for Climate Impacts Research ====
+
+log onto MS Planetary Computer Hub 
+
+see email 
+
+"""
+Welcome to the Planetary Computer preview!
+
+Your account request was recently approved and you now have access to all of the resources of the Planetary Computer.
+
+Next steps:
+
+1. To access the Planetary Computer resources, Nicolas.Fauchereau@niwa.co.nz needs to be associated with a Microsoft Account. You'll be prompted to create one when you first log in, if necessary.
+
+2. Launch a server on the Planetary Computer Hub to access a compute environment hosted on Azure near our datasets. 
+
+You can start getting familiar with the Planetary Computer by checking out the Data Catalog and documentation. The Data Catalog has example Python notebooks for several of our datasets, which can be launched directly in the Hub, and is a great starting point for using all of the features of the service. Finally, the Developer Portal lets you manage your API keys for requesting data outside of the Hub.
+
+During this preview period, we are actively seeking feedback on features, workflows, and issues you may encounter during usage. Please be sure to read our Terms of Use. If you have questions regarding your account, or wish to close your account, please email planetarycomputer@microsoft.com.
+
+Thank you for your interest in the Planetary Computer, and for agreeing to help test and improve the service.
+
+-Dan, and the rest of the Planetary Computer team
+
+
+"""
+
+
+https://aus01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fplanetarycomputer.microsoft.com%2Fcompute&data=04%7C01%7CNicolas.Fauchereau%40niwa.co.nz%7Ce7e0d587fe7e48ab887d08d95b7ea112%7C41caed736a0c468aba499ff6aafd1c77%7C0%7C1%7C637641421750965899%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0&sdata=Faw46v2avoplhZBCn3XfA5%2FyoGVlASYwsvkacbOPMmM%3D&reserved=0
+
+notebook: 
+
+https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/datasets/cil-gdpcir/cil-gdpcir-example.ipynb 
+
+https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/datasets/cil-gdpcir/cil-gdpcir-example-CCsignal.ipynb
+
+
+start at 
+
+https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/workspaces/auto-0/tree/PlanetaryComputerExamples/README.md 
+
+and look at the doc: 
+
+https://planetarycomputer.microsoft.com/docs/overview/about 
+
+can also start at 
+
+http://planetarycomputer.microsoft.com/compute 
+
+or
+
+https://pccompute.westeurope.cloudapp.azure.com/compute/hub/login 
+
+see in 
+
+[[/home/jovyan/PlanetaryComputerExamples/datasets/]] 
+
+--------------------
+
+==== calculation of surface parameters from elevation (hillshade, slope, curvature, and aspect ) using xarray-spatial ====
+
+@MBIE @CMIP6 
+
+see https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/tutorials/surface_analysis.ipynb 
+
+also downloaded in [[/home/nicolasf/Jupyter_notebooks/]]**surface_analysis_xarray-spatial_Planetary_Computer.ipynb**
+
+with example around Hamilton, NZ
+
+could use NASA-DEM to calculate the average and std quantities for each VCSN grid point, and feed that to a model including wind and spec etc 
+
+see also https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/tutorials/proximity_tools.ipynb 
+
+[[/home/nicolasf/Jupyter_notebooks/proximity_tools_xarray-spatial_Planetary_Computer.ipynb]] 
+
+--------------------
+
+==== NASA NEX Global Downscaled Dataset ====
+
+see https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/datasets/nasa-nex-gddp-cmip6/nasa-nex-gddp-cmip6-example.ipynb 
+
+--------------------
+
+==== interesting papers (Climate Change AI) ====
+
+**Multivariate climate downscaling with latent neural processes** (Papers Track)
+Anna Vaughan (Univeristy of Cambridge); Nic Lane (University of Cambridge); Michael Herzog (University of Cambridge)
+
+**On the use of Deep Generative Models for "Perfect" Prognosis Climate Downscaling** (Proposals Track) 
+Jose González-Abad (Institute of Physics of Cantabria); Jorge Baño-Medina (Institute of Physics of Cantabria); Ignacio Heredia (Institute of Physics of Cantabria)
+
+--------------------
+
+==== calculation of surface parameters from elevation (slope, curvature, and aspect ) using xarray-spatial ====
+
+@MBIE @CMIP6 
+
+see https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/tutorials/surface_analysis.ipynb 
+
+also downloaded in [[/home/nicolasf/Jupyter_notebooks/]]**surface_analysis_xarray-spatial_Planetary_Computer.ipynb** 
+
+with example around Hamilton, NZ
+
+could use NASA-DEM to calculate the average and std quantities for each VCSN grid point, and feed that to a model including wind and spec etc 
+
+see also https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/tutorials/proximity_tools.ipynb 
+
+[[/home/nicolasf/Jupyter_notebooks/proximity_tools_xarray-spatial_Planetary_Computer.ipynb]] 
+
+--------------------
+
+==== Trend-preserving bias adjustment and statistical downscaling with ISIMIP3BASD (v1.0) ====
+
+Lange, S., 2019: Trend-preserving bias adjustment and statistical downscaling with ISIMIP3BASD (v1.0). Geosci. Model Dev., 12, 3055–3070, https://doi.org/10.5194/gmd-12-3055-2019.
+
+code (Python): https://zenodo.org/record/7151476 
+
+and in [[/home/nicolasf/research/CMIP6_downscaling/repos/isimip3basd-master]] 
+
+--------------------
+
+==== Bias Correction Spatial Disaggregation ====
+
+https://github.com/tjvandal/bcsd-python 
+
+--------------------
+
+==== conservative regridding using xesmf ====
+
+
+import xesmf as xe
+
+ds_out = dset_vcsn'lat','lon'
+
+dset_ccam = dset_ccam'pr'
+
+regridder = xe.Regridder(dset_ccam, ds_out, "conservative")
+
+dr_out = regridder(dset_ccam['pr'])
+
+--------------------
+
+==== xclim calendar utilities ====
+
+https://xclim.readthedocs.io/en/stable/api.html#calendar-handling-utilities
+
+
+--------------------
+
+==== EOFs / XCLIM ====
+
+TIL (today I learned) that EOFs https://ajdawson.github.io/eofs/latest/index.html is a cheeky toolbox 
+ 
+If you don't tell it to not be greedy, it will take all the cores of the machine it is running on, not great if you are running on a shared machine with other users... how to prevent this?
+ 
+If you are running a script from the command line, export some environment variables to limit numpy multithreading (here to 1 thread)
+
+
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+
+(you don't need all these variables, it depends how your numpy has been compiled, e.g. with or without MKL, but... in doubt it's easier to just set all of them )
+ 
+and if you are running in a notebook, set these variables in your first cell, before any python import using
+
+%env MKL_NUM_THREADS=1
+%env NUMEXPR_NUM_THREADS=1
+%env OMP_NUM_THREADS=1
+
+ 
+I hope this can help.
+FYI Amir Pirooz, Jonny Williams, Nicolas Fauchereau, Ashley Broadbent
+
+--------------------
+
+==== Available time periods ====
+
+- ACCESS-CM2_CCAM, historical: 1960 - 2014 
+- ERA5-c192_CCAM: 1981 - 2019
+- VCSN: 1971 - 2021 
+
+calibration period common 
+
+1981 - 2010 (30 years) 
+
+or 
+
+1991 - 2020
+
+adjustment period: everything outside of that that intersect with the VCSN period 
+
+BCSD_calibrated_OBS_p1982-2019_applied_ACCESS-CM2.nc
+
+BCSD_calibrated_OBS_p1982-2011_applied_ACCESS-CM2.nc
+
+BCSD_calibrated_MOD_p{xxxx-xxxx}_applied_ACCESS-CM2.nc
+
+--------------------
+
+==== copy files locally from KUPE ====
+
+first create directory structure 
+
+scenario='ssp370' # 'historical' 'ssp126' 'ssp245' 'ssp370' 
+model='EC-Earth3'
+varname='pr'
+
+mkdir -p [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6/${scenario}/${model}/OUTPUT/NZ_surf_domain]]
+
+cd [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6/${scenario}/${model}/OUTPUT/NZ_surf_domain]]
+
+scp -r "[[fauchereaun@hafs01.kupe.niwa.co.nz:/nesi/project/niwa00018/fauchereaun/outputs/${scenario}/${model}/NZ_surf_domain/${varname}*.nc]]" [[./.]]
+
+
+--------------------
+
+==== fixing issues with -infinite values in the outputs of xclim sdba ====
+
+The solution is to filter and only keep the finite values, then multiply by the mask 
+
+arr = arr.where(np.isfinite(arr), 0.0) * mask
+
+--------------------
+
+==== calculates the indices using CDO instead of python climdex ====
+
+{{{code: lang="python3" linenumbers="True"
+merged_dset[f"pr_BCSD_{nquantiles}quantiles{suffix}"].sel(time='1972').to_netcdf('tmp/1972.nc') 
+cdo = '/home/nicolasf/mambaforge/envs/CDO/bin/cdo' 
+from subprocess import call
+cmd = f"{cdo} eca_cdd ./tmp/1972.nc ./tmp/1972_CDD.nc"
+r = call(cmd, shell=True) 
+dset_cdd = xr.open_dataset('./tmp/1972_CDD.nc') 
+cdd_cdo = dset_cdd['consecutive_dry_days_index_per_time_period'].squeeze()
+
+
+cdd_climdex = cdd_bcsd.isel(time=0) * mask
+
+(cdd_cdo - cdd_climdex).plot()
+}}}
+
+
+
+{{./screenshot_2023-03-09-131653.png}}
+
+
+other solution, just using CDO 
+
+{{{code: lang="python3" linenumbers="True"
+#!/bin/ksh
+
+  infile="in.nc" 
+  outfile="new_outfile.nc" 
+
+  nyears=$(cdo nyear $infile)                           #-- how many years in infile
+  set -A years $(cdo -s showyear $infile)               #-- retrieve the years
+
+  y=${years[0]}                                         #-- initialize start year
+  i=1
+  for ((i=1; i<=$nyears-1; ++i))                        #-- loop over all years
+  do
+    y=`expr $y + 1`                                     #-- set year to be selected
+    cdo -eca_rx5day -selyear,$y $infile out_${i}.nc     #-- highest five day precipitation amount per selected year
+  done
+
+  cdo -cat out_*.nc $outfile                            #-- concatenate yearly output files to new_outfile.nc
+
+exit
+}}}
+
+
+see also: 
+
+https://github.com/adammwilson/SpatialAnalysisTutorials/blob/master/climate/code/ClimateMetrics.md pa
+
+--------------------
+
+==== Process (calculate daily averages or accumulations) TAS + PR for the CCAM runs ====
+
+@CMIP6 
+
+see notebook **process_CMIP6_driven_CCAM_runs.ipynb** 
+
+in  [[/scale_akl_persistent/filesets/project/niwa00018/fauchereaun/notebooks/processing]] on KUPE 
+
+saved on KUPE: [[/nesi/project/niwa00018/fauchereaun/outputs/historical/EC-Earth3/NZ_surf_domain]]  
+
+to copy locally in: 
+
+[[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6/]] 
+
+historical/
+ssp126/
+ssp245/
+ssp370/
+
+scenario='ssp370' # 'historical' 'ssp126' 'ssp245' 'ssp370' 
+model='EC-Earth3'
+varname='pr' # 'pr' or 'tas' 
+
+mkdir -p [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6/${scenario}/${model}/OUTPUT/NZ_surf_domain]]
+
+cd [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6/${scenario}/${model}/OUTPUT/NZ_surf_domain]]
+
+scp -r "[[fauchereaun@hafs01.kupe.niwa.co.nz:/nesi/project/niwa00018/fauchereaun/outputs/$scenario/$model/NZ_surf_domain/$varname*.nc]]" ./.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

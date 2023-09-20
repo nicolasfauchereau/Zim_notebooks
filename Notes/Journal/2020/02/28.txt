@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-28T10:34:34+13:00
+
+====== Friday 28 Feb 2020 ======
+
+------------------------------------------------------------------------------------------------------------------------------------------ 
+
+@VALIDATION @SI 
+
+initial GCM validation notebook 
+
+[[/home/nicolasf/research/Smart_Ideas/code/GCM-validations/notebooks/initial_notebook_validations.ipynb]]
+
+

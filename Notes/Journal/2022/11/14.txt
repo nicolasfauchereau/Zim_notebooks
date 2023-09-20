@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-14T09:16:04+13:00
+
+====== Monday 14 Nov 2022 ======
+
+==== French Pacific Fund ====
+
+New opportunity in ~ 6 months ... check back again in March 2023 
+
+all doc in https://niwa-my.sharepoint.com/:f:/r/personal/nicolas_fauchereau_niwa_co_nz/Documents/Documents/proposals/French_Pacific_Fund_2022?csf=1&web=1&e=xKsTrb 
+
+--------------------
+
+==== ICU November ====
+
+number of members in the forecasts initialised 1 November 2022 
+
+see **2_download_latest_C3S_forecasts.ipynb** 
+
+ECMWF: 51
+UKMO: 62
+FRANCE: 51
+DWD: 50
+CMCC: 50
+NCEP: 124
+JMA: 155
+ECCC: 10
+ECCC: 10
+TOTAL NUMBER OF MEMBERS IN THE C3S MME for forecasts issued November 2022: 563
+
+--------------------
+
+==== xclim calendar utilities ====
+
+https://xclim.readthedocs.io/en/stable/api.html#calendar-handling-utilities
+
+
+--------------------
+
+==== EOFs / XCLIM ====
+
+TIL (today I learned) that EOFs https://ajdawson.github.io/eofs/latest/index.html is a cheeky toolbox 
+ 
+If you don't tell it to not be greedy, it will take all the cores of the machine it is running on, not great if you are running on a shared machine with other users... how to prevent this?
+ 
+If you are running a script from the command line, export some environment variables to limit numpy multithreading (here to 1 thread)
+
+
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+
+(you don't need all these variables, it depends how your numpy has been compiled, e.g. with or without MKL, but... in doubt it's easier to just set all of them )
+ 
+and if you are running in a notebook, set these variables in your first cell, before any python import using
+
+%env MKL_NUM_THREADS=1
+%env NUMEXPR_NUM_THREADS=1
+%env OMP_NUM_THREADS=1
+
+ 
+I hope this can help.
+FYI Amir Pirooz, Jonny Williams, Nicolas Fauchereau, Ashley Broadbent
+
+
+

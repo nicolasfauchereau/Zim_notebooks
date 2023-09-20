@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-12T08:43:46+12:00
+
+====== Friday 12 Jun 2020 ======
+
+@TODO 
+
+- schedule meeting with CS and Platforms Managers
+- sort out Deuce access 
+- 

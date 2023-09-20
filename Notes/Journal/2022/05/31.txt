@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-31T13:16:16+12:00
+
+====== Tuesday 31 May 2022 ======
+
+==== Fast Bayesian estimation of SARIMAX models ====
+
+@timeseries 
+
+https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_pymc3.html 

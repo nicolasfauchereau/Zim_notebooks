@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-17T09:19:46+12:00
+
+====== Monday 17 Apr 2023 ======
+
+==== new papers ====
+
+Carvalho-Oliveira, J., L. F. Borchert, E. Zorita, and J. Baehr, 2022: Self-Organizing Maps Identify Windows of Opportunity for Seasonal European Summer Predictions. Front. Clim., 4, 844634, https://doi.org/10.3389/fclim.2022.844634.
+
+Horton, D. E., N. C. Johnson, D. Singh, D. L. Swain, B. Rajaratnam, and N. S. Diffenbaugh, 2015: Contribution of changes in atmospheric circulation patterns to extreme temperature trends. Nature, 522, 465–469, https://doi.org/10.1038/nature14550.
+
+Thomas, C., A. Voulgarakis, G. Lim, J. Haigh, and P. Nowack, An unsupervised learning approach to identifying blocking events: the case of European summer.
+
+Yuan, X., Y. Wang, P. Ji, P. Wu, J. Sheffield, and J. A. Otkin, 2023: A global transition to flash droughts under climate change.
+
+Zhang, S., Y. Chen, Y. Luo, B. Liu, G. Ren, T. Zhou, C. Martinez‐Villalobos, and M. Chang, 2022: Revealing the Circulation Pattern Most Conducive to Precipitation Extremes in Henan Province of North China. Geophysical Research Letters, 49, https://doi.org/10.1029/2022GL098034.
+
+
+  

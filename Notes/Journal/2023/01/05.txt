@@ -1,0 +1,163 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-01-05T09:27:32+13:00
+
+====== Thursday 05 Jan 2023 ======
+
+==== BAMS STOC 2022 ====
+
+@BAMS @CPP 
+
+see in [[/home/nicolasf/operational/BAMS_SOTC_2022]] 
+
+problem with the download of CMORPH from the RDA 
+
+switch to MSWEP ? 
+
+note that prelim data in grads binary format (!) can be found in 
+
+https://ftp.cpc.ncep.noaa.gov/precip/CMORPH_RT/GLOBE/data/ 
+
+should be able to be opened with https://github.com/miniufo/xgrads 
+
+Update: just use CMAP for everything ... 
+
+download it from https://downloads.psl.noaa.gov/Datasets/cmap/enh/ 
+
+as of today, only available to November 2022 
+
+for some content related to the evolution of La Nina conditions during 2022, see the January 2023 draft outlook statement, e.g. 
+
+//Sea Surface Temperature (SSTs) anomalies in the central equatorial Pacific were within the La Niña range during December but became less anomalous, suggestive of an event that is past-peak. //
+
+//In the subsurface equatorial Pacific, substantial changes took place between November and December as warmth associated with the WPWP shifted eastward. Cooler than average waters contracted toward the central part of the basin while warmer than average waters at depth pushed from the central to the east. The setup was reflective of a decaying La Niña. Any substantial relaxation or reversal in trade winds over the next three months will move the system toward ENSO-neutral.// 
+
+**MSWEP** 
+
+calculation of the MSWEP monthly values from the daily values, and development of a monthly climatology: see **calculate_MSWEP_monthly_from_daily_climatology.ipynb** in [[/home/nicolasf/operational/BAMS_SOTC_2022/notebooks]] 
+
+each yearly file (1991 to 2020) contains the monthly values (so 12 maps per file) 
+
+from this calculate the climatology 
+
+then use notebooks/calculate_MSWEP_monthly_2022_from_daily.ipynb to calculate the monthly values from the daily 2022 values, and subtract the climatology calculated earlier 
+
+
+--------------------
+
+==== PICT / Paleopy notebooks ====
+
+@PICT @CPP 
+
+To develop notebooks with dropdown widgets to select values (for example files) see example notebook 
+
+**notebooks/download_ds502.2.ipynb** 
+
+in  [[/home/nicolasf/operational/BAMS_SOTC_2022]] 
+
+--------------------
+
+==== Processing of MSWEP ... continued ====
+
+see instructions in Notes of the ICU notebooks [[Island Climate Update:Notes]] 
+
+in [[/home/nicolasf/data/MSWEP]] 
+
+60 days runsums: 
+
+merged_1979_2020_noleap_runsum_60.nc
+
+90 days runsums: 
+
+merged_1979_2020_noleap_runsum_90.nc
+
+to process (calculate average and quantiles for each day of the year) again see **process_runsums.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/MSWEP]] 
+
+--------------------
+
+==== automatic chunking for xarray dataset ====
+
+
+# This will tell dask to automatically determine a good chunk size for the other dimensions
+# Assuming that the sst variable has (time, lat, lon) dimensions
+
+sst = sst.chunk({'time': -1, **'lat': 'auto', 'lon': 'auto'**})
+
+--------------------
+
+==== MHW detection code using xarray ====
+
+https://github.com/coecms/xmhw/blob/master/docs/xmhw_demo.ipynb
+
+see also [[/home/nicolasf/sources/xmhw/docs]] 
+
+but the code seems extremely slow to run 
+
+one solution seems to actually physically loop over the chunks 
+
+e.g. 
+
+{{{code: lang="python3" linenumbers="True"
+dummy, xt, yt = sst.chunks
+
+xtstep = xt[0]
+ytstep = yt[0]
+# the length of the list gives has the number of chunks, in the example 3
+xtblocks = len(xt)
+ytblocks = len(yt)
+print(xtstep, ytstep, xtblocks, ytblocks)
+
+results = []
+for i in range(xtblocks):
+
+    xt_from = i*xtstep
+    
+    xt_to = (i+1)*xtstep
+    
+    for j in range (ytblocks):
+    
+        yt_from = j*ytstep
+        
+        yt_to = (j+1)*ytstep
+        
+        ts = sst.isel(lon=slice(xt_from,xt_to),lat=slice(yt_from,yt_to))
+        
+        clim = threshold(ts, climatologyPeriod=['1991','2020'])
+        
+        mhw = detect(ts, clim['thresh'], clim['seas'])
+        
+        
+}}}
+
+
+
+
+--------------------
+
+==== Dask.distributed and Pangeo: Better performance for everyone thanks to science / software collaboration ====
+
+https://medium.com/pangeo/dask-distributed-and-pangeo-better-performance-for-everyone-thanks-to-science-software-63f85310a36b 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

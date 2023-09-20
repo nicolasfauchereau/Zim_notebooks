@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-12T16:12:10+12:00
+
+====== Meetings ======
+Created Wednesday 12 August 2020
+
+== Meeting with Eibe aand Dong, 2020-08-12 ==
+
+Some notes from our meetings, things to try:
+
+1) Deep and Wide networks, with auxiliary inputs being structured data (observed climate indices, optionally over the N past seasons), the GCM outputs go through the deep path (stacked CNNs) while the climate indices go through the wide path
+
+2) In stacked CNNs as already played with, replace the last dense layer by a fully convolutional layer, with only one filter (feature map) but size and stride of the filter calculated so that its output matches the dimensionality of the target (2D). This would allow the last layer to still explicitely represent spatial information, as opposed to a simple dense layer
+
+3) image inpainting
+
+How to transform a 'super-resolution' task to an 'image inpainting' task: Dong thought (excellent idea, sorry I didnt catch on earlier 🙂) that we could mask NZ in interpolated fields from the GCM outputs, and a deep CNN with partial convolution (Liu et al paper) would then learn to infill the missing values. Essentially similar to Kadlow et al, except the mask is fixed in time (always the same), and the training would need to be done on a training set e.g. made up of a subset of all ensemble members with the mask actually replaced by the VCSN values, and tested on another subset of the ensemble (i.e. some models have up to 50 ensemble members). There are some analogies with dynamical downscaling (see e.g. https://www.gfdl.noaa.gov/climate-model-downscaling/) where regional, limited area high resolution dynamical models are forced at the boundaries by the outputs of global, coarse resolution GCMs, which is expensive and impractical for many institutions ...
+
+4) Tying weights / weight sharing in the Autoencoders
+
+see p 577 in HOML2 
+
+whiteboard below 
+
+{{~/research/Smart_Ideas/resources/whiteboards/20200812.jpg?width=1000}}
+
+
+--------------------
+

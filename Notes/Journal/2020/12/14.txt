@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-14T12:33:39+13:00
+
+====== Monday 14 Dec 2020 ======
+
+==== Ideas blog posts ====
+
+1) Kidson Types in Python 
+2) using regionmask to extract regions 
+3) dimensionality reduction on station data (sent by Raghav) 
+
+--------------------

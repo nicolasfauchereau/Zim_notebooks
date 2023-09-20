@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-10T14:57:44+13:00
+
+====== Thursday 10 Nov 2022 ======
+
+==== xclim extra dependencies ====
+
+https://xclim.readthedocs.io/en/stable/installation.html#extra-dependencies
+
+
+To improve performance of xclim, we highly recommend you also install flox (see: flox API). This package integrates into xarray and significantly improves the performance of the grouping and resampling algorithms, especially when using dask on large datasets.

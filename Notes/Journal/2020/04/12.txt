@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-12T12:32:18+12:00
+
+====== Sunday 12 Apr 2020 ======
+
+==== continuation of experimentations with KNN ====
+
+Using ALL IRI and CDS GCMs, and **10 neighbors**, we obtain slightly better accuracy.
+
+!!! **Note: there was an error as the increment for looping over the test set was position, not date !!!**
+
+see now in **KNN_all_GCMs_retrain_NCA.ipynb**
+
+== T2M, ext_regional domain, t2m features ==
+
+NNI = 0.91
+WNI = 0.7
+ENI = 0.88
+NSI = 0.6
+WSI = 0.76
+ESI = 0.51
+

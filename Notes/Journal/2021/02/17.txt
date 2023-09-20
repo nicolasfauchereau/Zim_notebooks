@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-17T10:24:52+13:00
+
+====== Wednesday 17 Feb 2021 ======
+
+==== geovoronoi – a package to create and plot Voronoi regions inside geographic areas ====
+
+https://github.com/WZBSocialScienceCenter/geovoronoi
+
+--------------------
+
+==== shift geometries in shapefiles (0 → 360) ====
+
+import cartopy.crs as ccrs
+import geopandas
+import matplotlib.pyplot as plt
+import geopandas as gpd
+from shapely.geometry import LineString
+from shapely.ops import split
+from shapely.affinity import translate
+
+def **shift_geom(**shift, gdataframe, plotQ=False, extent=[-60,120, -50,40]):
+	# shift: expect positive values for good results
+	# crs: crs="EPSG:4326" (not anything else); this handles world geometries
+	# this code is adapted from answer found in SO
+	# will be credited here: ???
+	shift -= 180
+	moved_geom = []
+	splitted_geom = []
+	border = LineString([(shift,90),(shift,-90)])
+
+	for row in gdataframe["geometry"]:
+		splitted_geom.append(split(row, border))
+	for element in splitted_geom:
+		items = list(element)
+		for item in items:
+			minx, miny, maxx, maxy = item.bounds
+			if minx >= shift:
+				moved_geom.append(translate(item, xoff=-180-shift))
+			else:
+				moved_geom.append(translate(item, xoff=180-shift))
+
+	# got `moved_geom` as the moved geometry
+	# must specify CRS here
+	moved_geom_gdf = gpd.GeoDataFrame({"geometry": moved_geom}, crs="EPSG:4326")
+
+	# can change crs here
+	if plotQ:
+		#fig1, ax1 = plt.subplots(figsize=[8,6])
+		fig = plt.figure( figsize=(8,8) )
+		ax1 = fig.add_subplot( projection=ccrs.PlateCarree() )
+		moved_geom_gdf.plot( ax=ax1, figsize=(8,5), scheme='quantiles', cmap='tab20')
+		ax1.set_extent(extent, crs=ccrs.PlateCarree())
+		# ax1.gridlines( draw_labels=True ) # careful, misleading labels
+		plt.show()
+
+	return moved_geom_gdf
+	
+	
+--------------------
+
+==== for shiftting longitudes of a shapefile ====
+
+
+1) **ogr2ogr -s_srs EPSG:4326 -t_srs "+proj=longlat +ellps=WGS84 +pm=-180 +datum=WGS84 +no_defs" shapefile_shifted.shp shapefile.shp**
+
+2) use the above function (**shift_geom**), e.g: 
+
+shift = -180
+
+shape_moved = shift_geom(shift, shape) 
+
+--------------------
+
+==== clipping shapefiles with some geometries ====
+
+see 
+
+
+
+
+
+
+
+

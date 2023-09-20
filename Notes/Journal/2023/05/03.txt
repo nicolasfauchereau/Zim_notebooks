@@ -1,0 +1,89 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-03T11:59:12+12:00
+
+====== Wednesday 03 May 2023 ======
+
+==== Bias correction (including QDM) in Python and C++ ====
+
+Schwertfeger, B. T., G. Lohmann, and H. Lipskoch, 2023: Introduction of the BiasAdjustCXX command-line tool for the application of fast and efficient bias corrections in climatic research. SoftwareX, 22, 101379, https://doi.org/10.1016/j.softx.2023.101379.
+
+https://github.com/btschwertfeger/BiasAdjustCXX
+
+https://github.com/btschwertfeger/python-cmethods
+
+https://biasadjustcxx.readthedocs.io/en/latest/ 
+
+https://python-cmethods.readthedocs.io/en/latest/ 
+
+--------------------
+
+==== Catastrophic cascade of failures in interdependent networks ====
+
+@networks @graphs 
+
+https://scitechdaily.com/from-theory-to-reality-a-groundbreaking-manifestation-of-interdependent-networks-in-a-physics-lab/
+
+https://www.nature.com/articles/nature08932
+
+Prof. **Shlomo Havlin** Google Scholar: 
+
+https://scholar.google.com/citations?hl=en&user=mB6GO8UAAAAJ&view_op=list_works&sortby=pubdate 
+
+""""
+In 2010 Prof. Shlomo Havlin and collaborators published an article in the journal Nature proposing that the abrupt electricity failure causing the famous 2003 Italy blackout was a consequence of the inter-dependency of two networks. According to Havlin’s theory, the dependency between the power network and its communication system led to cascading failures and abrupt collapse. Havlin’s seminal work ignited a new field in statistical physics known as “network of networks” or “interdependent networks” and paved the way for understanding and predicting the effects of the interaction between networks.
+
+The main novelty of Havlin’s model is the existence of two types of links that represent two qualitatively different kinds of interactions. Within networks, links between nodes describe connectivity such as electric power or communication connections. Between networks, on the other hand, links describe dependency relationships in which the functionality of a node in one network depends on the functionality of a node in the other. The communication hubs need electricity and the electric power stations depend on communication control. This dependency leads to a cascading effect in which failure of a single node in one of the networks could lead to an abrupt breakdown of both networks.
+"""'
+
+see also: https://www.geeksforgeeks.org/k-shell-decomposition-on-social-networks/ 
+
+stuff not accessible: 
+
+Robustness of networks composed of interdependent networks 
+https://iopscience.iop.org/book/mono/978-0-7503-1046-8/chapter/bk978-0-7503-1046-8ch4 
+
+Direct link paths detection for observed teleconnections in climate networks 
+https://ui.adsabs.harvard.edu/abs/2015EGUGA..17.9596Z/abstract 
+
+Climate network reveals the effect of deep equatorial Pacific ridge on El-Nino 
+https://ui.adsabs.harvard.edu/abs/2015EGUGA..1714422W/abstract 
+
+The dynamical climate network, its major centroids, and their close relation to the ENSO cycle 
+https://ui.adsabs.harvard.edu/abs/2013EGUGA..1512928G/abstract 
+
+ENSO reflections on the climate network : variabilities on top of an 80% robust background 
+https://ui.adsabs.harvard.edu/abs/2013EGUGA..1513365G/abstract 
+
+Precursor-based Forecast of El Nino Episodes One Year Ahead via Climate Networks 
+https://ui.adsabs.harvard.edu/abs/2012AGUFMNG23B1555B/abstract
+
+Climate network structure evolves with North Atlantic Oscillation phases
+https://iopscience.iop.org/article/10.1209/0295-5075/98/38006/meta 
+
+Dynamical Patterns of Climate Networks: Blinking Links and Stable Structures 
+https://ui.adsabs.harvard.edu/abs/2009EGUGA..11.3792G/abstract 
+
+Complex networks as detector of environmental changes
+https://ken.ieice.org/ken/paper/200711223Azh/eng/ 
+
+--------------------
+
+==== Sustainability and Climate Change, PwC New Zealand ====
+
+@PwC 
+
+Jared McCormack 
+Daisy Smith 
+
+
+
+https://www.pwc.com/us/en/tech-effect/ai-analytics/scaling-ai-capabilities-with-generative-investment.html
+
+https://www.xrb.govt.nz/standards/climate-related-disclosures/aotearoa-new-zealand-climate-standards/ 
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-03T12:44:11+12:00
+
+====== Friday 03 Sep 2021 ======
+
+==== Jupyter on the NeSI environment ====
+
+@jupyter @NESI @HPC @HPCF 
+
+see documentation: 
+
+→ NeSI documentation to add a kernel https://support.nesi.org.nz/hc/en-gb/articles/360001555615-Jupyter-on-NeSI#adding_a_custom_python_kernel
+	
+→ the experimental tool to make your life easier to install custom kernels https://support.nesi.org.nz/hc/en-gb/articles/360001555615-Jupyter-on-NeSI#adding_a_custom_python_kernel
+	
+→ the extension (already installed on NeSI/NIWA instances) to reverse proxy webapps https://github.com/jupyterhub/jupyter-server-proxy
+	
+→ and some usecases at NeSI
+			
+	rstudio https://github.com/nesi/rstudio_on_nesi
+		
+	virtual desktop https://github.com/nesi/nesi-virtual-desktops
+	
+the webapp version of VSCode shown at the end https://github.com/cdr/code-server
+
+--------------------
+
+==== ICENET:  Seasonal Arctic sea ice forecasting with probabilistic deep learning ====
+
+paper: https://www.nature.com/articles/s41467-021-25257-4
+
+code: https://github.com/tom-andersson/icenet-paper
+
+see installed **icenet** environment 
+
+--------------------
+
+==== Graph Neural Networks: A Gentle Introduction to Graph Neural Networks ====
+
+@GNN @DL 
+
+https://distill.pub/2021/gnn-intro/ 
+
+--------------------
+
+==== gradsflow: An open-source AutoML Library in PyTorch ====
+
+https://docs.gradsflow.com/en/latest/
+
+--------------------
+
+==== MPIRE (MultiProcessing Is Really Easy) ====
+
+https://github.com/Slimmer-AI/mpire
+
+
+
+
+
+
+
+
+
+
+

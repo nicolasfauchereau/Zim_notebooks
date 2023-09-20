@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-06-01T08:41:30+12:00
+
+====== Wednesday 01 Jun 2022 ======
+
+==== PCRIC collaboration ====
+
+Paul Wilson 
+
+**cat risk modeling** 
+
+aggregated loss model 
+
+--------------------
+
+==== Explicit Calculations of Wet-Bulb GloExplicit Calculations of Wet-Bulb Globe Temperature Compared With Approximations and Why It Matters for Labor Productivity ====
+
+code 
+
+https://zenodo.org/record/5980536 
+
+--------------------
+
+==== cmaps in python (NCL cmaps) ====
+
+
+https://github.com/hhuangwx/cmaps
+
+--------------------
+
+==== VCSN regional time-series ====
+
+@SCO 
+
+make_VCSN_time_series.ipynb

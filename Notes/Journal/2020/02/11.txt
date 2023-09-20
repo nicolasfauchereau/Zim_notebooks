@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-11T09:17:54+13:00
+
+====== Tuesday 11 Feb 2020 ======
+
+IDEA: @SI
+
+csv files contains the **5 ensemble averages for one date** 
+
+file pattern would be 
+
+GCM_var_name_initdate_forecast_date.csv 
+
+and would contain 5 lines, each corresponding to the average of 5 members taken at random from the ensemble 
+
+== ============================================================================================================================================ ==
+
+===== LSTMs =====
+
+video: https://www.youtube.com/watch?v=xaIA83x5Icg 
+
+article: https://www.curiousily.com/posts/demand-prediction-with-lstms-using-tensorflow-2-and-keras-in-python/ 
+
+also local [[~/research/Smart_Ideas/resources/LSTMs/Demand Prediction with LSTMs using TensorFlow 2 and Keras in Python - Adventures in Artificial Intelligence _ Venelin Valkov (2020-02-11 4_19_51 PM).html]] 
+
+see also: 
+
+https://www.tensorflow.org/tutorials/structured_data/time_series
+
+== ============================================================================================================================================ ==
+
+**process_IRI** = kernel died for month 5 for T2M NCEP_CFSv2
+
+see [[./process_IRI_per_months.ipynb]] in [[/home/nicolasf/research/Smart_Ideas/code/processors/IRI/notebooks]] 
+
+run with papermill with parameters: 
+
+for m in $(seq 1 12); do papermill ./process_IRI_per_months.ipynb ./process_IRI_per_months.ipynb -p stage_in 'downloads' -p stage_out 'processed' -p period 'hindcasts' -p provider 'IRI' -p GCM 'NCEP_CFSv2' -p var_name 'T2M' -p month ${m}; done
+
+
+
+
+
+

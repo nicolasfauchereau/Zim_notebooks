@@ -1,0 +1,198 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-21T12:26:13+12:00
+
+====== Tuesday 21 Apr 2020 ======
+
+**------------------------------------------------------------------------------------------------------------**
+
+==== Meeting with Christo et al on the project proposal ====
+
+proposal accessible at: 
+
+https://metservicenz-my.sharepoint.com/:w:/r/personal/christo_rautenbach_metocean_co_nz/_layouts/15/guestaccess.aspx?e=4%3Avf6whC&at=9&share=EYoddRC9kSxFrqFm828r7mEBarQhPMq5A46o6ljRUFgeDw 
+
+some ideas / notes: 
+
+This proposal 'connects the dots'
+
+Innovative aspects of the projects hinge on: 
+
+a consideration of multi-scale variability, from extremes (meteorological time-scales) to synoptic (weather regimes) to subseasonal~//MJO// / SAM) to interannual (ENSO, SAM) and beyond (climate change) 
+
+the leveraging of recent advances in Machine Learning (ensemble learning  ?) and applications to causal networks / complex networks theory to he analysis of scale interactions in the climate system 
+
+**------------------------------------------------------------------------------------------------------------**
+
+==== T&I Hub MS Teams meeting ====
+
+Meeting with Jochen and Kameron 1:30 Tuesday 
+
+**action points:** 
+
+1. refer to doc https://niwa-my.sharepoint.com/:w:/r/personal/nicolas_fauchereau_niwa_co_nz/_layouts/15/doc2.aspx?sourcedoc=%7B75C33649-DD21-4258-9047-E2127010B276%7D&file=T%26I_Teams_channels.docx&action=default&mobileredirect=true&DefaultItemOpen=1 
+to create the different channels in each team
+
+2. create a **wiki for each channel and a welcome page for each Team**, explaining what the team is about, what the channels cover. Note that general -> general discussions. Channels aim at being a vehicle to foster innovations, that's where you are free to spark discussions around 'moonshot' ideas, points towards emerging technological trends and innovations that we need to investigate, start creating some virtual groups to collaborate on funding opportunities to foster innovation, etc ... i.e. the teams are not a place to keep track of the advancement of existing projects, this should be reserved for your group or project Team. 
+
+3. channels in each team: 
+
+== T&I sensing hub: ==
+
+* general 
+* sensors 
+* high density monitoring / IOT 
+* Near field sensing 
+* Remote Sensing / Earth observations 
+
+== T&I sample analytics hub: ==
+
+* general 
+* ... 
+
+== T&I data management hub: ==
+
+* general 
+* telemetry 
+* data storage infrastructure 
+	* date lakes, data warehouses, big data solutions, file formats and infrastructure 
+* data schemas and semantics 
+	* logic, databases, databases for spatio-temporal data 
+
+== T&I analytics and modelling hub: ==
+
+* general 
+* statistics, ML and AI  
+* geospatial 
+	* GIS, geospatial analysis, spatial statistics, geographic data science 
+* environmental simulations / physical modelling 
+
+== T&I delivery and visualisation hub: ==
+
+* **general** 
+* **interactive visualisations and dashboards**
+	* web-ready interactive visualisation solutions (from JS to wrappers in the R and Python ecosystems). Dashboard solutions (R-Shiny, Python frameworks such as Dash, Streamlit, Voila, Bokeh, etc) and how to deliver to clients.  
+* **multi-dimensional visualisations** 
+	* Innovations in the visualisations of multi-dimensional spatio-temporal information, includes geospatial visualization (overlap with geospatial data analysis) and includes PCART 
+* **extended reality**
+	* Augmented reality, virtual reality  
+
+**------------------------------------------------------------------------------------------------------------**
+
+==== PYCARET ====
+
+Another '**AutoML**' framework, can perform classification, regression, apply ensemble methods 
+
+see: 
+
+https://pycaret.org 
+
+installed in the `ML` environment 
+
+initial notebook **pycaret.ipynb** in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/PYCARET]] 
+
+== list of the available models (for classification): ==
+
+---------------------------------------------------------- 
+**Estimator 				Abbreviated String**
+Logistic Regression 			‘lr’
+K Nearest Neighbour 			‘knn’
+Naives Bayes 				‘nb’
+Decision Tree 				‘dt’
+SVM (Linear) 				‘svm’
+SVM (RBF) 				‘rbfsvm’
+Gaussian Process 			‘gpc’
+Multi Level Perceptron 			‘mlp’
+Ridge Classifier 			‘ridge’
+Random Forest 				‘rf’
+Quadratic Disc. Analysis 		‘qda’
+AdaBoost 				‘ada’
+Gradient Boosting Classifier 		‘gbc’
+Linear Disc. Analysis 			‘lda’
+Extra Trees Classifier 			‘et’
+Extreme Gradient Boosting 		‘xgboost’
+Light Gradient Boosting 		‘lightgbm’
+Cat Boost Classifier 			‘catboost’
+---------------------------------------------------------- 
+
+== list of available models (for regression): ==
+
+---------------------------------------------------------- 
+**Estimator 				Abbreviated String**
+Linear Regression 			‘lr’
+Lasso Regression 			‘lasso’
+Ridge Regression 			‘ridge’
+Elastic Net 				‘en’
+Least Angle Regression 			‘lar’
+Lasso Least Angle Regression 		‘llar’
+Orthogonal Matching Pursuit 		‘omp’
+Bayesian Ridge 				‘br’
+Automatic Relevance Determination 	‘ard’
+Passive Aggressive Regressor 		‘par’
+Random Sample Consensus 		‘ransac’
+TheilSen Regressor 			‘tr’
+Huber Regressor 			‘huber’
+Kernel Ridge 				‘kr’
+Support Vector Machine 			‘svm’
+K Neighbors Regressor 			‘knn’
+Decision Tree 				‘dt’
+Random Forest 				‘rf’
+Extra Trees Regressor 			‘et’
+AdaBoost Regressor 			‘ada’
+Gradient Boosting Regressor 		‘gbr’
+Multi Level Perceptron 			‘mlp’
+Extreme Gradient Boosting 		‘xgboost’
+Light Gradient Boosting 		‘lightgbm’
+CatBoost Regressor 			‘catboost’
+---------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

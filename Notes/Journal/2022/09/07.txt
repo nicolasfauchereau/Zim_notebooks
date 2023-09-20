@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-07T09:19:56+12:00
+
+====== Wednesday 07 Sep 2022 ======
+
+==== PICT: updating the VCSN datasets ====
+
+@PICT 
+
+The datasets are updated to 2021 / backdated back to 1972 in 
+
+[[/media/nicolasf/END19101/data/VCSN/daily]] 
+
+- Rain_bc 
+
+2021 + 1972 - 1978
+
+- Tmax_n 
+
+2021 + 1972 - 1978
+
+- Tmin_n ok c
+
+2021 + 1972 - 1978
+
+- Rad
+
+2021 + 1972 - 1978
+ 
+- Rh
+
+2021 + 1972 - 1978
+
+- Tmean: see **make_Tmean_n.ipynb** 
+
+in [[/media/nicolasf/END19101/data/VCSN/daily]] 
+
+
+--------------------
+
+==== Regressio: A python library for univariate regression, interpolation, and smoothing. ====
+
+@Python 
+
+https://github.com/brendanartley/Regressio 
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-05T09:23:35+13:00
+
+====== Wednesday 05 Jan 2022 ======
+
+==== ICU (operational) figures ====
+
+rename the EAR Watch plots: 
+
+Suggestion to address – how does this sound:
+
+Title: Change to “Regional Situation Summary (30 November 2021)” – and carry this through to the SPI and USDM pages
+
+First line:  “Alert levels (aligned with the Early Action Rainfall thresholds) for cumulative rainfall over the last 90 and 30 days are shown in the plots below”  (swap in SPI/USDM on those pages)
+
+In the figures we change legend title of the three plots to:
+
+**→ Water Stress (90 days to 30 Nov 2021)**
+
+**(aligned to “EAR” Alert levels)**
+
+→ Water Stress (90 days to 30 Nov 2021)
+
+(aligned to “SPI” Alert levels)
+
+→ Water Stress (90 days to 30 Nov 2021)
+
+(aligned to “USDM” Alert levels)
+
+--------------------
+
+==== shifting geometries ====
+
+@geo 
+
+see email from James Potemra dating from the 28/12/2021
+
+https://outlook.office.com/mail/id/AAMkAGQyNTRkOTY2LTY2ZTAtNDIxMS1iMTM3LTdjZTYzMzYyNDdmZgBGAAAAAAA72QX96aKuR7KFZAy6bbtaBwDkCOwa56iSQ7B63dAd8Q1rAAAAVmCnAABqY5UDv5xfS5WuEc%2B2HrA5AAIrWfBLAAA%3D
+
+solution is to test whether the maximum longitude is below 0, if yes, we reproject using 0 as the Prime Meridian, if not, we use geo.shift_geom 
+
+see: 
+
+[[~/Desktop/Pac/shift_shapes.html]]
+
+and 
+
+shift_shapes.ipynb in [[~/Jupyter_notebooks/]] 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

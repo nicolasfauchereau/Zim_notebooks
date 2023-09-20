@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-26T09:35:20+13:00
+
+====== Wednesday 26 Feb 2020 ======
+
+==== fastpages blogging ====
+
+@BLOG @FASTPAGES @JUPYTER 
+
+see 
+
+https://github.com/fastai/fastpages#setup-instructions 
+
+for the setup instructions 
+
+a video is available at: 
+
+https://youtu.be/L0boq3zqazI
+
+see: 
+
+https://nicolasfauchereau.github.io/blog/ 
+
+and local repo in 
+
+[[/home/nicolasf/blog/fastpages/blog]] 
+
+Posting a blog post is as easy as dropping a Jupyter notebook in the **_notebooks** folder in the repo, and **git add**, **git commit** and **git push**
+
+for markdown posts: drop markdown files in **_posts** 
+
+--------------------
+
+=== list of "all good" ticked GCMs for T2M and PRECIP: ===
+
+[*] CDS / UKMO 
+[*] CDS / DWD 
+[*] IRI / NCEP_CFSv2 
+[*] IRI / CanSIPSv2 
+[*] IRI / GEM_NEMO 
+[*] JMA / JMA 
+
+
+--------------------
+
+==== 1 PM meeting on NCEP on odin ====
+
+see 
+
+https://workflow.niwa.co.nz/browse/ECO-3002?page=com.atlassian.jira.plugin.system.issuetabpanels%3Aall-tabpanel
+
+
+
+
+
+
+

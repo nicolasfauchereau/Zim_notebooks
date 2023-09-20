@@ -1,0 +1,92 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-06T09:37:06+13:00
+
+====== Friday 06 Nov 2020 ======
+
+--------------------
+
+==== Improving seasonal forecast using probabilistic deep learning ====
+
+https://deepai.org/publication/improving-seasonal-forecast-using-probabilistic-deep-learning
+
+Pan, B., G. J. Anderson, A. Goncalves, D. D. Lucas, Ce. J. W. Bonfils, and J. Lee, 2020: Improving seasonal forecast using probabilistic deep learning. arXiv:2010.14610 [physics, stat],.
+
+--------------------
+
+==== TPOT with CuML ====
+
+see article at:  
+
+https://medium.com/rapids-ai/faster-automl-with-tpot-and-rapids-758455cd89e5#cid=av01_so-twit_en-us 
+
+relies on **CuML installation**, see installation instructions at: http://epistasislab.github.io/tpot/installing/ 
+
+$ conda env create -f tpot-cuml.yml -n tpot-cuml
+$ conda activate tpot-cuml
+
+The enviromment file **tpot-cuml.yml** is in ~/conda_envs
+
+--------------------
+
+==== visualizing cross validation strategies in scikit-learn ====
+
+see the excellent bit of documentation 
+
+https://scikit-learn.org/stable/auto_examples/model_selection/plot_cv_indices.html#sphx-glr-auto-examples-model-selection-plot-cv-indices-py 
+
+--------------------
+jupyterlab extensions 
+
+several jupyterlab extensions can now be installed using 
+
+→ code-snippets: https://github.com/jupytercalpoly/jupyterlab-code-snippets 
+→ celltags: https://github.com/jupyterlab/jupyterlab 
+→ table of content (TOC): https://github.com/jupyterlab/jupyterlab-toc
+→ GeoJSON renderer: https://github.com/jupyterlab/jupyter-renderers ⇒ works using MIME, so can display any geojson file in the current directory 
+→ colorblind: http://localhost:8890/lab/workspaces/auto-8?clone 
+
+see below: click on the extensions icons in the left panel 
+
+
+{{./screenshot_2020-11-06-131134.png?width=800}}
+
+--------------------
+
+==== markdown for jupyter notebooks ====
+
+see https://towardsdatascience.com/organise-your-jupyter-notebook-with-these-tips-d164d5dcd51f 
+
+#### Headers
+# Header 1 
+## Header 2
+
+#### Styles
+*Italic*, **bold**, _underscore_, ~~strikethrough~~
+
+#### Hyperlink
+[hyperlink](https://www.markdownguide.org/)
+
+#### Table
+| Default | Left-aligned | Center-aligned | Right-aligned |
+|---------|:-------------|:--------------:|--------------:|
+| Default | Left         |     Center     |         Right |
+
+#### Others
+* Bulleted item 1
+	* Bulleted subitem 1
+* Bulleted item 2
+
+***
+1. Ordered item 1  
+	1.1. Ordered subitem 1  
+2. Ordered item 2
+
+***
+- [ ] Unchecked box
+- [x] Checked box
+
+
+
+
+

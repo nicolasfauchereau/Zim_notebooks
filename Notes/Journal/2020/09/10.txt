@@ -1,0 +1,134 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-10T08:19:47+12:00
+
+====== Thursday 10 Sep 2020 ======
+
+==== check dAPCC availability ====
+
+see in [[/home/nicolasf/research/Smart_Ideas/code/exporters/APCC]] 
+
+the URL is e.g. (OpenDAP) 
+
+http://adss.apcc21.org:80/opendap/MME/6-MON/FORECAST/GAUS/AUG/t2m_GAUS_Fcst_201908-202001_Monthly.nc 
+
+LOGIN: **nicolasf**
+PASS: **+love4ks** 
+
+But doesnt seem to include the probabilities, just the raw values .... 
+
+--------------------
+
+==== scikeras ====
+
+https://github.com/adriangb/scikeras
+
+Scikit-Learn API wrapper for Keras: same(ish) as skorch but for keras / tensorflow ... recently released library but worth a try
+
+--------------------
+
+==== MGWR: Multiscale Geographically Weighted Regression (MGWR)  in Python ====
+
+see repository at 
+
+https://github.com/pysal/mgwr 
+
+and docs at 
+
+https://mgwr.readthedocs.io 
+
+paper at https://www.mdpi.com/2220-9964/8/6/269 
+
+Oshan, T., Z. Li, W. Kang, L. Wolf, and A. Fotheringham, 2019: mgwr: A Python Implementation of Multiscale Geographically Weighted Regression for Investigating Process Spatial Heterogeneity and Scale. IJGI, 8, 269, https://doi.org/10.3390/ijgi8060269.
+ 
+
+→ Potential to use this method to create the VCSN from station rainfall and regressor variables 
+→ would have to be run independently over each time step   
+
+--------------------
+
+==== RepeatedStratifiedKFold in scikit-learn ====
+
+see: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RepeatedStratifiedKFold.html  
+
+Repeats Stratified K-Fold n times with different randomization in each repetition. 
+
+maybe try that for repeated cross-validation of models 
+
+--------------------
+
+==== re-downloading Z500 ECMWF from 1981 ====
+
+see [[/home/nicolasf/research/Smart_Ideas/code/exporters/CDS/]]download_ECMWF_1981_Z500.ipynb
+
+--------------------
+
+==== SCO, automation of probabilistic forecasts derivation from the GCM outputs ====
+
+Updated **get_NMME_calculate_prob_TForecasts.ipynb** to now use the `groupby` mechanism of `regionmask` to calculate the mean of each region 
+
+{{./screenshot_2020-09-11-104004.png}}
+
+see also notebook example_regionmask_points_selection.ipynb for an illustration of the behavior of the point masking 
+
+
+{{./screenshot_2020-09-11-105830.png}}
+
+--------------------
+
+==== NESI Hackaton ====
+
+== Winning solution uses scikit-garden's Random Forest Quantile Regressor ==
+
+https://scikit-garden.github.io/ 
+
+Scikit-garden or skgarden (pronounced as skarden) is a garden for **scikit-learn compatible trees**.
+
+The estimators in Scikit-Garden are Scikit-Learn compatible and can serve as a drop-in replacement for Scikit-Learn's trees and forests. Implements for example 
+
+* MondrianForestRegressor, see https://arxiv.org/abs/1406.2673 
+* **RandomForestQuantileRegressor, **see https://jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf 
+
+see notebook `train.ipynb` in  [[/home/nicolasf/research/Nesi_Hackathon/solutions/submissions/centre_for_eresearch_02/code]] 
+
+and conda environment **scikit_garden** 
+
+The MSE on the validation set (train / validation split) is ~ 390 hours ... 
+
+== Solution using Random Forest Regressor ==
+
+Another good solution uses quite a bit of feature engineering, and scikit-learn's Random Forest Regressor (RandomForestRegressor) 
+
+see [[/home/nicolasf/research/Nesi_Hackathon/solutions/submissions/k_wilson/code/nb/nesi-hackathon-final.ipynb]] 
+
+Eleven estimators were evaluated, including a neural net, with `RandomForestRegressor` having the lowest loss. The `GradientBoostingRegressor` achieved similar, but slighly larger loss. Hyperparameters were evaluated using `GridSearchCV`.
+
+the train / test split was done using `X_train, X_validation, y_train, y_validation  = train_test_split(data_X, data_y, 
+																 test_size=0.20, random_state=42, 
+																 shuffle=True)`
+
+
+== Solution with interesting application of the pipeline mechanism in scikit learn (with Elastic Net) ==
+
+[[/home/nicolasf/research/Nesi_Hackathon/solutions/submissions/test_submission/code/submission.py]] 
+
+{{./screenshot_2020-09-11-132212.png}}
+
+== Another entry uses catboost regressor and pass the custom evaluation metric ==
+
+see [[/home/nicolasf/research/Nesi_Hackathon/solutions/submissions/chris_love_amy/code/02_find_best_estimator.ipynb]] 
+
+{{./screenshot_2020-09-11-133339.png}}
+
+also make used of a Rosbust Scaler to deal with outliers 
+
+x_scaler = preprocessing.**RobustScaler**().fit(df[x_cols]) 
+
+
+ 
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-10T14:35:20+12:00
+
+====== Wednesday 10 Aug 2022 ======
+
+# Calculate anom
+
+anoms = xr.apply_ufunc(
+	lambda x, m : (x - m),
+	merged_ds.groupby("time.dayofyear"),
+	climate.groupby("time.dayofyear").mean("time")
+)
+
+--------------------
+
+==== Productivity tools for scientist ====
+
+
+[[~/Downloads/Thread by @scientistswrite on Thread Reader App – Thread Reader App (10_08_2022 3_11_43 pm).html]]
+
+
+**#1: Time-tracking with Toggl**
+
+toggl.com
+
+* Understand how you are spending your time
+* Track how long each task is taking you so you can plan accordingly
+* Be more focused on the task at hand 
+
+**#2: Proof-read your papers with Writefull**
+
+writefull.com
+
+* AI-powered proof-reading tool specifically for scientific texts
+* Integrates into Word and Overleaf 
+
+**#3: Organise your references with Zotero**
+
+zotero.org
+
+* Open-source program
+* Saves references from your browser
+* Organises them in folders and using tags
+* Creates bibliographies for your manuscript
+* Lets you co-create citation libraries with co-authors 
+
+**#4: Stay focused with Forest**
+
+forestapp.cc
+
+* Start the app when you want to tackle deep work
+* A virtual tree starts growing
+* When you leave the app to do something else, the tree dies
+* The larger your forest, the more deep work you got done! 
+
+**#5: Discover papers (1) with Citation Gecko**
+
+citationgecko.com
+
+* Upload 5-6 "seed papers"
+* The app extracts all references in and to these seed papers
+* Creates a visual citation network
+* Open-source web app
+
+ **#6: Discover papers (2) with Research Rabbit**
+
+researchrabbit.ai
+
+* Alternative to Citation Gecko
+* Build your own citation network
+* Label network entries
+* Download paper PDFs
+* Get alerts for new papers
+ResearchRabbit
+The most powerful discovery app ever built for researchers 🔥
+http://researchrabbit.ai
+
+**#7: Visualise your thoughts with XMind**
+
+xmind.net
+
+* Intuitive mindmapping tool
+* Embed hyperlinks, images & attachements
+
+Excellent for organising references for review papers or brainstorming the story of your paper! 💡
+Xmind - Full-featured mind mapping and brainstorming tool.
+Boost efficiency both in work and life. Millions of people love it.
+https://xmind.net
+
+**#8: Listen to scientific papers with Audemic**
+
+audemic.io
+
+* Skip sections
+* Highlight text while listening
+* Take notes
+* Get summaries that go beyond the abstract
+Audemic - Listen to academic research - Try it now!
+A powerful tool that enables researchers to save time and organise their knowledge.
+http://audemic.io
+
+**#9: Record training or feedback videos with Loom**
+
+loom.com
+
+* Record your screen, webcam and/or audio
+* Share the video link after recording
+* 25 5-min videos included in free plan
+
+I use this one all the time!
+Loom: Async Video Messaging for Work
+Record your screen, share your thoughts, and get things done faster with async video.
+http://loom.com
+
+**#10: Project manage your papers with Trello**
+
+trello.com
+
+* Use lists, cards & checklist to organise the tasks in each project
+* Collaborate with co-authors
+* Communicate via comment function
+
+PS: We provide you with several Trello templates inside our course!
+https://trello.com
+
+**#11: Choose your target journal (1) with SciRev**
+
+scirev.org
+
+* Compare publication speeds, peer review quality and journal statistics
+* Contribute your own publishing experiences
+* Made by researchers
+http://scirev.org
+
+**#12: Choose your target journal (2) with Transpose**
+
+transpose-publishing.github.io
+
+* Compare journal policies on open peer review, co-reviewing and preprint policies
+
+You might be surprised how vague some journals are on these topics!
+https://transpose-publishing.github.io
+
+**#13: Share methods on Protocols**
+
+protocols.io
+
+* Publish your chemical synthesis protocols, clinical trial descriptions or computational workflows
+* Keep them updated
+* Receive a DOI
+* Run protocols as checklists
+* Free for individuals
+Bring structure to your research - protocols.io
+A secure platform for developing and sharing reproducible methods.
+http://protocols.io
+
+**#14: Cite correctly with CiteAs**
+
+citeas.org
+
+* Obtain the correct citation for any preprint, software or dataset in one click
+* Open-source tool
+
+**#15: Understand your research landscape with Dimensions**
+
+dimensions.ai
+
+* Analyse all research-related data (grants, papers, patents, datasets, online mentions, clinical trials, policy documents)
+* Identify collaborators
+* Find who has cited and used your work
+
+Dimensions AI | The most advanced scientific research database
+From idea to impact: Navigate the links between grants, publications, datasets, clinical trials, patents, and policy documents.
+http://dimensions.ai
+
+**TL;DR - 15 free tools for researchers you should bookmark now**
+
+#1: Toggl
+#2: Writefull
+#3: Zotero
+#4: Forest
+#5: CitationGecko
+#6: ResearchRabbit
+#7: XMind
+#8: Audemic
+#9: Loom
+#10: Trello
+#11: SciRev
+#12: Protocols
+#13: Transpose
+#14: CiteAs
+#15: Dimensions
+
+--------------------
+
+==== on cliops ====
+
+VCSN augmented 
+
+files created in April 21 
+
+home/srinivasanr/VCSN_ChristianZ/500comb/input
+
+
+
+
+
+

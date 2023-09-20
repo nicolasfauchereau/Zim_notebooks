@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-06-01T09:39:19+12:00
+
+====== Thursday 01 Jun 2023 ======
+
+==== Ensemble bias correction using quantile mapping ====
+
+https://github.com/lizanafj/ensemble-bias-correction 
+
+--------------------
+
+==== Interpolation of NaN values with PyInterp ====
+
+see https://pangeo-pyinterp.readthedocs.io/en/latest/auto_examples/ex_fill_undef.html 
+
+In the case of an interpolation of the nearest neighbor the undefined values have no impact because no arithmetic operation is done on the grid values: we just return the value of the nearest point.
+
+--------------------
+
+==== Ross Sea Types ====
+
+see [[/home/nicolasf/research/CPP/indices/notebooks/Ross_Sea_WRs/figures/Ross_Sea_types_1979_2021_hgt_detrend.png]] 
+
+{{./screenshot_2023-06-01-111150.png?width=800}}
+
+
+cluster 1  = Low Amundsen 
+cluster 2 = Zonal 
+cluster 3 = Low-Ross 
+cluster 4 = Ridge 
+cluster 5 = Low 
+cluster 6 = Low-Bellingshausen/Amundsen 
+
+--------------------
+
+==== data sources ====
+
+https://nomads.ncep.noaa.gov/ 
+
+

@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-12T10:00:42+13:00
+
+====== Thursday 12 Mar 2020 ======
+
+[[Journal:2020:03:11|11/03/20]] for tracking processed forecasts 
+
+===== STATISTICAL DOWNSCALING PACKAGES =====
+
+=== scikit-downscale: Statistical climate downscaling in Python ===
+
+Statistical downscaling and postprocessing models for climate and weather model simulations.
+
+https://github.com/jhamman/scikit-downscale 
+
+and 
+
+https://xsd.readthedocs.io/en/latest/ 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+see also 
+
+=== Generalized Analog Regression Downscaling (GARD) ===
+
+in Fortran 
+
+https://github.com/NCAR/GARD 
+
+and 
+
+
+https://gard.readthedocs.io/en/latest/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== DeepSD: Generating High Resolution Climate Change Projections through Single Image Super-Resolution ===
+
+https://github.com/tjvandal/deepsd 
+
+paper: https://www.kdd.org/kdd2017/papers/view/deepsd-generating-high-resolution-climate-change-projections-through-single 
+
+https://github.com/tjvandal/bcsd-python 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+=== Implementation of G. E. Hinton and R. R. Salakhutdinov's Reducing the Dimensionality of Data with Neural Networks (Tensorflow) ===
+
+https://www.cs.toronto.edu/~hinton/science.pdf 
+
+see 
+
+https://predictivehacks.com/autoencoders-for-dimensionality-reduction/
+
+
+
+
+
+
+
+
+
+
+

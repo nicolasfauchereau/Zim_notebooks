@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-10T14:34:35+13:00
+
+====== Wednesday 10 Feb 2021 ======
+
+--------------------
+
+==== ICU Hotspots development ====
+
+see calculate_and_map_percentile_of_score.ipynb in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/GPM_IMERG]] 
+
+for the GCM data 
+
+see in  [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CDS]]
+
+2_read_CDS_convert_rainfall.ipynb: 
+
+**number of members:** 
+
+ECMWF            	51
+UKMO             	62
+METEO_FRANCE     	51
+CMCC             	50
+DWD              	50
+NCEP            		124
+JMA              		91
+
+total: **479** 
+
+
+--------------------
+
+==== Nuitka: Python compiler ====
+
+https://github.com/Nuitka/Nuitka 
+
+--------------------
+ICU Water Watch 
+
+Started n November 2014
+based on TRMM and the then outlook from METPI 
+
+towards the end 2018, we started developping the new ICU outlook based on GCM data from the CDS (Copernicus Data Store), this was made operational in January 2019 
+
+large ensemble 
+
+5 models, ~ 260 members 
+
+Now 7 models (NCEP CFSv2 and then JMA) ~ 479 members 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,180 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-29T09:35:34+12:00
+
+====== Thursday 29 Apr 2021 ======
+
+==== SST downloaded for the whole globe (-55 → 55) ====
+
+in [[/media/nicolasf/END19101/ICU/data/CDS]] 
+
+ran **check_downloads.ipynb** in the same folder, to check for missing files etc 
+
+== missing files ==
+
+**8 files missing for GCM UKMO**
+
+2017_01 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO/SST
+to
+2017_08 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO/SST
+
+**22 files missing for GCM CMCC**
+
+2017_01 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC/SST
+to: 
+2018_10 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC/SST
+
+**33 files missing for GCM NCEP**
+
+2017_01 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP/SST
+to: 
+2019_09 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP/SST
+
+other GCMs 'ECMWF', 'METEO_FRANCE', 'DWD' complete apparently 
+
+== dimensions etc ==
+
+**ECMWF** 
+
+ECMWF 1993 - 01 => lat: 111, lon: 111, member: 25, step: 5 
+to 
+ECMWF 2016 - 12 => lat: 111, lon: 111, member: 25, step: 5
+
+then 
+
+ECMWF 2017 - 01 => lat: 111, lon: 111, member: 51, step: 5
+to 
+ECMWF 2021 - 04 => lat: 111, lon: 111, member: 51, step: 5
+
+**UKMO** 
+
+UKMO 1993 - 02 => lat: 111, lon: 111, member: 28, step: 5
+to 
+UKMO 2016 - 12 => lat: 111, lon: 111, member: 28, step: 5
+
+then 
+
+members varying between 50 and 62 
+
+**METEO_FRANCE** 
+
+METEO_FRANCE 1993 - 01 => lat: 111, lon: 111, member: 25, step: 5
+to 
+METEO_FRANCE 2016 - 12 => lat: 111, lon: 111, member: 25, step: 5
+
+then 
+
+METEO_FRANCE 2017 - 01 => lat: 111, lon: 111, member: 51, step: 5
+to 
+METEO_FRANCE 2021 - 04 => lat: 111, lon: 111, member: 51, step: 5
+
+**DWD** 
+
+DWD 1993 - 01 => lat: 111, lon: 111, member: 30, step: 5
+to 
+DWD 2018 - 01 => lat: 111, lon: 111, member: 50, step: 5
+
+then 
+
+DWD 2018 - 02 => lat: 111, lon: 111, member: 50, step: 5
+to 
+DWD 2021 - 04 => lat: 111, lon: 111, member: 50, step: 5
+
+**CMCC**
+
+CMCC 1993 - 01 => lat: 111, lon: 111, member: 40, step: 5
+to 
+CMCC 2016 - 12 => lat: 111, lon: 111, member: 40, step: 5
+
+then 
+
+CMCC 2018 - 11 => lat: 111, lon: 111, member: 50, step: 5
+to 
+CMCC 2021 - 04 => lat: 111, lon: 111, member: 50, step: 5
+
+**NCEP** 
+
+from 
+
+NCEP 1993 - 01 => lat: 111, lon: 111, member: 28, step: 5
+to 
+NCEP 2016 - 12 => lat: 111, lon: 111, member: 24, step: 5
+
+the number of members vary between **20 and 28** 
+
+then from 
+
+NCEP 2019 - 10 => lat: 111, lon: 111, member: 120, step: 5
+to 
+NCEP 2021 - 04 => lat: 111, lon: 111, member: 124, step: 5 
+
+The number of member varies between **112 and 124** 
+
+--------------------
+
+==== SST: diagnosed problems in the dataset ====
+
+**UKMO: time 41 = 1996-07-01**
+
+{{./screenshot_2021-04-29-154751.png}}
+
+
+downloaded the GRIB file in /media/nicolasf/END19101/ICU/data/CDS/UKMOcd/SST/GRIB/ensemble_seas_forecasts_sst_from_1996_07_UKMO.grib for comparison 
+
+solution: use the OLD SST dataset downloaded here 
+
+[[/home/nicolasf/drives/ham_projects/END19101/Working/data/GCMs/downloads/hindcasts/CDS/UKMO/SST/UKMO_system_12_13_14_SST_1996_07.grib']]
+
+and open with 
+
+backend_kwargs={"indexpath":"", 'filter_by_keys':{'longitudeOfFirstGridPointInDegrees': 0.0}}
+
+see notebook: **fix_UKMO_2018_forecasts.ipynb**  in [[/home/nicolasf/research/Smart_Ideas/code/pre-processors/CDS/notebooks]] 
+
+then save back to disk 
+
+it is likely OTHER fields are also corrupted, for years after 2016 ... 
+
+OK so the problem arises because in the change in the version 
+
+if one only downloads system 12 13 14 
+
+see: [[/media/nicolasf/END19101/ICU/data/CDS/UKMO/SST/GRIB/ensemble_seas_forecasts_sst_from_1996_07_UKMO_system_12_13_14.grib']]
+
+this problem disappears: 
+
+and the dataset is well posed ... 
+
+see validation/inspect_UKMO_NCEP_SST.ipynb at the end: 
+
+dset_ukmo = xr.open_dataset('/media/nicolasf/END19101/ICU/data/CDS/UKMO/SST/GRIB/ensemble_seas_forecasts_sst_from_1996_07_UKMO_system_12_13_14.grib', \
+							engine='cfgrib', \
+							backend_kwargs=backend_kwargs)
+
+{{./screenshot_2021-04-29-170852.png}}
+
+
+
+
+
+**NCEP: time 55 = 1997-08-01**
+
+{{./screenshot_2021-04-29-160612.png}}
+
+opening '/media/nicolasf/END19101/ICU/data/CDS/NCEP/SST/ensemble_seas_forecasts_sst_from_1997_08_NCEP.netcdf'
+dset.isel(time=4)['sst'].plot(col='number', col_wrap=6)
+
+{{./screenshot_2021-04-29-161206.png}}
+
+downloaded the GRIB file in [[/media/nicolasf/END19101/ICU/data/CDS/NCEP/SST/GRIB/ensemble_seas_forecasts_sst_from_1997_08_NCEP.grib]] 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-28T11:33:45+13:00
+
+====== Thursday 28 Oct 2021 ======
+
+==== ICU: recalculate the tercile probabilities for the hindcasts (1993 - 2016) ====
+
+@ICU 
+
+see: in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/C3S]] 
+
+→  calculate_C3S_GCMs_hindcast_tercile_probabilities.ipynb 
+
+which calculates the tercile probabilities for each month 
+
+this is driven by papermill, run by the notebook **drive_calculate_C3S_GCMs_hindcast_tercile_probabilities.ipynb** 
+
+for the validation of tercile probabilistic forecasts against observations, see **validation_initial_probabilistic.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/validation]] 
+
+--------------------
+
+==== Project PYTHIA: a collection of resources for learning Python for the Earth Sciences ====
+
+@Python @PANGEO  
+
+see: https://projectpythia.org/index.html 
+
+→ foundations book: https://foundations.projectpythia.org/landing-page.html 
+→ resources gallery: https://projectpythia.org/gallery.html 
+
+--------------------
+
+==== ICU validation paper ====
+
+@ICU 
+
+summary of available data,
+
+https://confluence.ecmwf.int/display/CKB/Summary+of+available+data
+
+the hindcasts are complete for 
+
+→ ECMWF: SEAS5 
+→ Meteo-France: system 7 
+→ metoffice (UKMO): system 14 
+→ DWD: GCFS2.1 
+→ CMCC: CPS2 
+→ NCEP: CFSv2 
+→ JMA: CPS2
+→ ECCC: not all months available 
+
+**! the ECCC is actually 2 systems: GEM-NEMO (system1) AND CanCM4i** (system 2)
+
+for a good example of how to read a YAML file with configuration variables (e.g. paths, etc) see 
+
+C3S_data_loader.py in [[/home/nicolasf/operational/ICU/development/hotspots/code/C3S_evaluator/c3sdl]] 
+
+	def read_config(self):
+		"""
+		Read and parse the config file (config.yml). 
+		The following keys are read:
+		- DATA_PATH: path where processed data will be stored. Default value is the execution dir. 
+		"""
+		try:
+			file = open(r'config.yml')
+			documents = yaml.full_load(file)
+			# DATA PATH
+			read_path = documents.get('DATA_PATH')
+			if read_path is None:
+				warnings.warn('DATA_PATH not found in Config.yml, using local directory')
+				self.DATA_DIR = ""
+			else:
+				self.DATA_DIR = read_path
+
+		except FileNotFoundError:
+			warnings.warn('Config.yml not found, using default settings')
+			self.DATA_DIR = ""
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

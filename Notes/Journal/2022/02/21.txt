@@ -1,0 +1,68 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-21T10:38:05+13:00
+
+====== Monday 21 Feb 2022 ======
+
+==== Marine Heat Waves ====
+
+@heatwaves @MHW @MHWs 
+
+code / notebook for the detection of Marine Heat Waves around NZ 
+
+[[./research/Marine_Heat_Waves/MHW/marineHeatWaves/docs/MHWs_NZ.ipynb]] 
+[[./research/Marine_Heat_Waves/notebooks/MHWs_NZ.ipynb]] 
+
+--------------------
+
+===== SOCCO SA =====
+
+@SA 
+
+→ Jonathan Lilly 
+
+http://www.jmlilly.net/courses.html 
+
+https://github.com/jonathanlilly/time-series 
+
+and also: [[/home/nicolasf/Jupyter_notebooks/time-series]] 
+
+Isabelle Giddy 
+
+
+https://github.com/isgiddy?tab=repositories 
+https://github.com/isgiddy/ocean-pytools
+https://github.com/isgiddy/giddy-2020-roammiz 
+
+Glidertools 
+
+https://github.com/isgiddy/GliderTools
+https://github.com/GliderToolsCommunity/GliderTools 
+
+Luke Gregor 
+
+https://zenodo.org/record/4077351
+https://github.com/lukegre 
+
+Dr Tommy Ryan-Keogh 
+https://twitter.com/tjryankeogh 
+
+Katye Altieri  
+https://katyealtieri.com/
+
+
+--------------------
+
+==== flatten a list itertools ====
+
+>>> from itertools import chain
+>>> list(chain(*list_of_menuitems))
+
+
+
+
+
+
+
+
+

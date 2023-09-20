@@ -1,0 +1,83 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-10T10:01:52+12:00
+
+====== Tuesday 10 May 2022 ======
+
+==== py3grads ====
+
+@grads @python @xarray 
+
+for reading GRADS / grads binary files 
+
+see https://github.com/meridionaljet/py3grads 
+
+see also the extension: https://github.com/tmiyama/py3gradsx 
+
+which allows to export to xarray dataarrays 
+
+--------------------
+
+==== wind maps animations ====
+
+see: http://iprc.soest.hawaii.edu/people/miyama.php 
+
+{{~/Pictures/wind.gif}}
+
+--------------------
+
+==== Wavelets in Python ====
+
+@wavelets @python 
+
+See notebook and module in 
+
+[[/home/nicolasf/Jupyter_notebooks/wavelets]] 
+
+notebook that runs: wavelet.ipynb 
+
+--------------------
+
+==== compound extremes ====
+
+see discussion with Alan Tan 
+
+SSIF project on compound extremes has been accepted, see project proposal in  [[~/research/compound_extremes/resources/]]
+
+@TODO before the end of the FY 
+
+**1) Identify a set of compound extreme weather events that could be characterized and modelled in both observations and regional climate simulations** 
+
+Utilising the framework and typology developed by [2], we will first establish a list of compound extreme weather events suitable for analysis in both observational and climate change regional simulation datasets available at NIWA.  
+
+Output: Summary report on the datasets and identified set of compound extreme weather events. 
+
+compound in time ? i.e. sequences of events such as heatwaves defined as sequences of N days or more with tmean above the climatological 90th percentile 
+
+**2) Analyse the properties of these compound extreme weather events in the observational dataset(s).**  
+
+Based on observational datasets such as the Virtual Climate Station Network (VCSN) and / or  station data, we will identify, extract and derive the characteristics (seasonality, variability, **connections to circulation regimes**) of the compound extreme weather events identified above. These analyses will establish a baseline climatology and ground truth for the development of statistical models (based e.g. on dynamic Bayesian networks) able to model and simulate these types of multivariate events.  
+
+Output: Summary report on the properties of selected compound extreme weather events in the observational datasets 
+
+[2] Zscheischler, J., and Coauthors, 2020: A typology of compound weather and climate events. Nat Rev Earth Environ, 1, 333–347, https://doi.org/10.1038/s43017-020-0060-z.
+
+re. the connection to weather regimes: 
+
+//I did some work on circulation regimes (daily recurrent circulation patterns) and worked on some network representation of the transition probabilities between the regimes (i.e each circulation regime is a node, and the edges are proportional to the transition probabilities) could that be tied in any way to bayesian networks ? each type of compound extremes can possibly related to these circulation regimes//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

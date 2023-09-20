@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-23T10:52:58+12:00
+
+====== Wednesday 23 Sep 2020 ======
+
+==== APCC GAUS MME for the SCO ====
+
+notebook and function complete, see: 
+
+**get_APCC_calculate_prob_TForecasts.ipynb** 
+and 
+**src/download_APCC.py** 
+
+in [[~/operational/NCC_ops/SCO_copernicus/notebooks]] 
+
+==== Meeting with Warrick Johnston, Jochen and Kameron ====
+
+talked about the HUB leader role, the newsletter (seems like a good idea to him) etc 
+
+==== Assisted Glen Reeves with some Python code ====
+
+{{./screenshot_2020-09-23-164207.png}}

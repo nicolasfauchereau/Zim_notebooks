@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-16T11:51:18+13:00
+
+====== ICU new products ======
+Created Thursday 16 January 2020
+
+Meeting with Doug today 11:00 AM 
+
+summary: 
+
+1. Calculate TRMM climatological (2002 - 2018) deciles for each 3 months seasonal averages (JFM, FMA, ... , DJF)
+2. In realtime, calculate past 3 months averages, then decile it falls under (< 40th percentile = alert category 1, < 10th percentile = alert category 2) 
+3. get the anomalies forecast for the next 3 months period from the CDS (5 GCMs: ECMWF, UKMO, METEO_FRANCE, DWD, CMCC)
+

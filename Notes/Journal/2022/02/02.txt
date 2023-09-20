@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-02T10:39:02+13:00
+
+====== Wednesday 02 Feb 2022 ======
+
+==== World's EEZs as polygons ====
+
+see https://www.marineregions.org/downloads.php 
+
+choose the 0 to 360 degrees version, and after unzipping, choose the World_EEZ_v11_20191118_HR_0_360/eez_v11_0_360.shp file 
+
+{{./screenshot_2022-02-02-104043.png}}
+
+
+--------------------
+
+==== calculating area weighted averages of SST inside NZ's EEZ ====
+
+see [[/home/nicolasf/research/NZ_SST_EEZ/notebooks/ERSST_NZ_SST_average.ipynb]] 
+
+
+--------------------
+
+==== Climate Commons ====
+
+https://www.mpi.govt.nz/funding-rural-support/environment-and-natural-resources/environment-and-climate-change-research/ 
+
+

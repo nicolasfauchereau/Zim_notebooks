@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-27T11:33:20+13:00
+
+====== Wednesday 27 Oct 2021 ======
+
+==== ICU: recalculate the tercile probabilities for the hindcasts (1993 - 2016) ====
+
+@ICU 
+
+see: 
+
+→  calculate_C3S_GCMs_hindcast_tercile_probabilities.ipynb 
+
+which calculates the tercile probabilities for each month 
+
+

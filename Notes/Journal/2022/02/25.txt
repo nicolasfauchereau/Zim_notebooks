@@ -1,0 +1,84 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-25T11:15:05+13:00
+
+====== Friday 25 Feb 2022 ======
+
+==== CMIP6 ML meeting with Neelesh and Peter ====
+
+To use the jupyter platform on NIWA (there is also one on NeSI). Use the following link:
+
+https://jupyter.maui.niwa.co.nz/
+
+
+
+
+Create a conda environment and install modules:
+
+conda create --name myenv python=3.9
+
+conda activate myenv
+
+# Install some modules (e.g. xarray, pandas and tensorflow to begin with).
+
+pip install -r requirements.txt
+
+ 
+
+Create your Jupyter Kernel:
+
+cd ~./local/share/jupyter/kernels (relative to your home directory)
+
+mkdir -p custom_kernel
+
+ 
+
+Copy my kernel to your folder
+
+cp -r /nesi/project/niwa03360/jupyter/nellys_env ./custom_kernel
+
+ 
+
+Modify wrapper.sh, so that the exec command executes your environment.
+
+ 
+
+Modify kernel.json, so that it reads the wrapper.sh from the correct directory
+
+--------------------
+
+===== climate jobs =====
+
+{{./screenshot_2022-02-25-135742.png}}
+
+pangeo job board 
+
+also: https://discourse.pangeo.io/c/news/jobs/14 
+
+--------------------
+
+==== Project Pythia ====
+
+@Python 
+
+http://projectpythia.org/gallery.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

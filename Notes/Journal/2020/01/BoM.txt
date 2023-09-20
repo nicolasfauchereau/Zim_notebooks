@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-31T16:40:38+13:00
+
+====== BoM ======
+Created Friday 31 January 2020
+
+[[BoM]] 
+
+* Since we last spoke, I've been very involved in developing the new postprocessing pipeline for ACCESS-S1. This has dominated my time for the last two years. 
+
+* I've also for the last year been thrown headfirst into the ML strategy space at BoM. At the moment I am mostly trying to get away from this talking, and find some time to do some actual doing! There have been great advantages to this year though - I have made some great international connections including Alberto Arribas and Sam Adams from the UK Met Office Informatics Lab, Richard Loft, Sue-Ellen Haupt and David Gagne from NCAR, and others. It's with this group that the idea of a virtual collaboration space for ML development in marine/weather/climate science was formed. Alberto is keen to host such a space, and as Sam now works with him I feel confident this will progress. We imagine this including code sharing and running facilities, hosted benchmark datasets with example code using them, and some form of forum or chat functionality to enable more community-building.  
+
+* I have started work on using ML for vegetation prediction, with the ultimate aim to see how much better vegetation would improve our forecasts (especially forecasts of extremes on multi-week timescales). 
+
+* I am still tied up with the ACCESS-S1 postprocessing pipeline, but hopefully will have some more free time for innovation and collaboration by mid-2020. I'm really excited by the idea of collaboration with you and your soon-to-be trained NN! It'll be awesome to see how it would go with ACCESS-S1 data, with and without some form of transfer learning. 
+
+
+Other stuff happening at the Bureau I mentioned is:
+
+
+* We have a DataSci CoP, which was the ML CoP but had broadened its scope. I'm one of three unofficial leaders of this CoP. I'll talk to my co-unofficial leaders Justin and Katie about whether it would be possible to bring people from NIWA into the fold, and if so, how we might overcome our technological mis-alignments. 
+
+* I mentioned Justin Freeman (justin.freeman@bom.gov.au) - he and I are partners in crime pushing the ML agenda here at BoM. He has also been working on a thing he calls Content Search. It uses a pre-trained CNN (in his paper draft it's Inception V3 I think), but grabs the feature vectors just before the classification layer. He runs a full reanalysis/hindcast etc through this to get a set of feature vectors. He then passes another date through it to get the feature vector, and uses a measure like cosine distance to find the most similar vector in the larger set. This could in theory be used to find analogue events, boost ensemble sizes, and (my favorite), identify extreme events in upcoming forecasts.
+
+* I mentioned the NWP postprocessing team, and Gary Weymouth (gary.weymouth@bom.gov.au) from this team. He is also very interested in doing ML, especially for gridded calibration/downscaling. He and I have been working to build stronger links between the Multi-week/Seasonal psotprocessing and NWP postprocessing teams. His team are going to be adopting Improver - the UK Met Office's new postprocessing pipeline - for NWP and nowcasting here. Improver has a lot of similar design principles behind it as our new pipeliene that I led the development of. We are keen to move towards running our pipeline through Improver, and myself, Gary and Debbie see this as a good way to move towards generating seamless forecast products. These seamless products are something that a our users have been asking for. 
+
+
+Please let me know if I mentioned anything or anyone else in our chat that I've forgotten - I was talking a lot...
+
+
+I'll talk to Justin about getting a preprint of his paper sent to you, and will talk to the DataSci CoP about us virtually crossing the Tasman. I'm very much looking froward to hearing how you go getting funding for a visit... fingers crossed!
+
+
+Also, yes I know Francois! We had a joint session planned at AMOS 2020 (but none us could go so we abandoned it...). He's also probably done more at the Bureau with Pangeo than anyone else... I shall say hi to him for you next time I see him :)
+
+
+Cheers,
+Cat

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-09T09:55:48+13:00
+
+====== Wednesday 09 Nov 2022 ======
+
+==== NZDI code on cliops ====
+
+cliops-1.hpcf.niwa.co.nz 
+
+in [[~/fauchereaun/NZDI]] 
+
+from Errol, regarding the login / password to transfer files to ftp.niwa.local 
+
+"""
+Hi Nico
+
+The production user we use for the media grids (lftp under cliex@cliops) is “zmediatrain” with “ZvDJzNMS01” – I suggest you use this rather than your own. This was setup for us by Nava back in 2016’ish.
+
+Cheers Errol
+""" 
+
+--------------------

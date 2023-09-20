@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-27T09:11:31+13:00
+
+====== Thursday 27 Feb 2020 ======
+
+@HUB 
+
+Cambpell Gardiner: comms teams for the T&I HUB 
+
+Dawn McLean:  
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+@HUB 
+
+discussion with Valerio about sample analytics 
+
+concerns that a lot of valuable data is sitting in some old project drives, not documented, no metadata, not searchable, etc 
+
+when setting up a project, is there any requirements related to making the data generated / used as part of the project searchable ?
+
+maybe adopt the framework used at https://github.com/equinor/data-science-template 
+
+data folder has different sub-folders: 
+
+├── data
+│   ├── interim_[desc]       <- Interim files - give these folders whatever name makes sense.
+│   ├── processed            <- The final, canonical data sets for modeling.
+│   ├── raw                  <- The original, immutable data dump.
+│   ├── temp                 <- Temporary files.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+@DL @ML @EO 
+
+check 
+
+https://github.com/akashpalrecha/Deep-Into-PyTorch-Modules
+
+https://github.com/akashpalrecha/drought-watch
+
+

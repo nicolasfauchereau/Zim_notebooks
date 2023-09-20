@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-06T09:41:23+13:00
+
+====== Monday 06 Feb 2023 ======
+
+==== Symmetric extremal dependency index ====
+
+see https://github.com/WFRT/verif/blob/master/verif/metric.py 
+
+class **Sedi(Contingency)**:
+	name = "Symmetric extremal dependency index"
+	description = "Symmetric extremal dependency index"
+	perfect_score = 1
+	orientation = 1
+	reference = Edi.reference
+
+	def compute_from_abcd(self, a, b, c, d):
+		N = a + b + c + d
+		if b + d == 0 or a + c == 0:
+			return np.nan
+		F = b / 1.0 / (b + d)
+		H = a / 1.0 / (a + c)
+		if F == 0 or F == 1 or H == 0 or H == 1:
+			return np.nan
+		denom = np.log(F) + np.log(H) + np.log(1 - F) + np.log(1 - H)
+		if denom == 0:
+			return np.nan
+		num = np.log(F) - np.log(H) - np.log(1 - F) + np.log(1 - H)
+		return num / denom
+
+	def label(self, variable):
+		return "SEDI"

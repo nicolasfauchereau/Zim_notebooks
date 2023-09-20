@@ -1,0 +1,105 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-15T08:33:06+12:00
+
+====== Tuesday 15 Sep 2020 ======
+
+==== Smart Ideas ideas: ====
+
+
+[ ] Try the ML algorithms with the leadtime 0 forecasts instead 
+[ ] Try to simply take the probabilities from the GCMs and feed them into a meta-model 
+
+==== Problem with netcdf data downloads from the CDS ====
+
+The calculation of the anomalies WRT to either the 1993 - 2016 or the 1981 - 2010 climatology, from the netcdf files downloaded from the CDS (ECMWF 1981 - 2019) showed completely unrealistic patterns, and investigations showed that the 'time' variable was almost certainly wrong, e.g. the data for 2019-12 (initial time) seemed to indicate that it was actually from 2008 ! 
+
+I have now rewritten the download notebook
+
+**download_ECMWF_1981_T2M.ipynb** 
+
+in [[~/research/Smart_Ideas/code/exporters/CDS]] 
+
+The data is now downloaded for all steps (leadtimes) at a time, in [[/media/nicolasf/END19101/data/GCMs/downloads/ECMWF/T2M]] 
+
+Note that: 
+
+1) when reading, will need to set a variable "init_time" to hold the initialisation time, can be taken from the filename or the first item in the 'time' variable 
+2) the number of members (initially 'number' variable) is not the same at the beginning (25 members) and at the end (51 members) so will need to choose 25 members 
+3) check the consistency of the other dimensions at read time 
+
+see function **preprocess_ECMWF_nc.py** in [[/home/nicolasf/research/Smart_Ideas/code/ml4seas/GCM]] which does all that + rename variables etc ... 
+
+one can then call: 
+
+dset_all = xr.open_mfdataset(lfiles, concat_dim='init_time', preprocess=**preprocess_ECMWF_nc**, parallel=True) 
+
+
+ **download times**: if one estimate ~ 20 minutes for one year, for the 39 years from 1981 to 2019, that means ~ 13 hours download time for one variable .... 
+
+==== AUTOTS: Model Selection for Multiple Time Series ====
+
+https://github.com/winedarksea/AutoTS 
+
+Simple package for comparing and **predicting** with open-source time series implementations. 
+
+see examples in 
+
+see also https://github.com/MaxBenChrist/awesome_time_series_in_python  for a repository of useful tools, libraries and frameworks for working with time-series 
+
+The models implemented are: 
+
+['ZeroesNaive', 'LastValueNaive', 'AverageValueNaive', 'GLS', 'GLM', 'ETS', 'ARIMA', '**FBProphet**', 'RollingRegression', 'GluonTS', 'SeasonalNaive', 'UnobservedComponents', 'VARMAX', 'VECM', 'DynamicFactor', 'TSFreshRegressor', 'MotifSimulation', 'WindowRegression', 'VAR', '**TensorflowSTS**', '**TFPRegression**', 'ComponentAnalysis']
+
+--------------------
+
+==== Machine Learning Models explainability / interpretability ====
+
+
+**Understanding the role of individual units in a deep neural network**
+
+https://www.pnas.org/content/early/2020/08/31/1907375117 
+
+**Interpretability of any model (including deep learning models) based on Shapley Values** 
+
+https://github.com/slundberg/shap !!! 
+
+--------------------
+
+==== Using repeated stratified k-fold in autogluon ====
+
+see AutoGLUON_ensembling.ipynb in [[~/research/Smart_Ideas/code/models/classification/autoML/AUTOGLUON]] 
+
+--------------------
+
+==== Try ludwig for automated machine learning ====
+
+first try using the Titanic dataset, in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/LUDWIG]] 
+
+with at the command line: 
+
+`ludwig experiment --data_csv ./data/train.csv --model_definition_file model_definition.yaml`
+
+first will need to create a `model_definition.yaml` file describing the type of each column, something that can be done using the `yaml` module, which allows to output a dictionnary to a yaml 
+
+--------------------
+
+==== Calinski-Harabaz Index for determining the ideal number of clusters in k-means ====
+
+see   https://github.com/mycarta/Force-2020-Machine-Learning-competition_predict-lithology-EDA/blob/master/GMM_clustering_of_spatial_location.ipynb  
+
+The score is defined as ratio between the within-cluster dispersion and the between-cluster dispersion. 
+
+it is available as part of scikit-learn 
+
+see documentation https://scikit-learn.org/stable/modules/clustering.html#calinski-harabasz-index 
+
+
+
+
+
+
+
+

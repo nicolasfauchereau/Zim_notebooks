@@ -1,0 +1,144 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-22T08:42:17+13:00
+
+====== Wednesday 22 Jan 2020 ======
+
+[ ] Write the BAMS report on Convergence Zones in the Pacific
+
+
+
+
+[x] re-organize the directories on END19101 
+
+partly done 
+
+[*] meeting re. data scientist hire @ 1:30
+
+see documents sent by Petra and Jonathan which include the interview schedule and the 
+
+
+[*] ==== create notebook for downloads of ERA5 monthly reanalysis  ====
+
+
+	see in [[/home/nicolasf/research/Smart_Ideas/code/exporters/ERA5/notebooks]]
+	
+	note: conversion of precip from m.s-1 to mm.day-1: 
+	
+	=== for the seasonal forecasts from the CDS:  ===
+	
+	# convert Total precipitation rate from m / s to mm / day
+	tp_seasonal_ar_mm = tp_seasonal_ar * 86400000 
+
+	see in https://github.com/jwagemann/seasonal_forecasts/blob/master/Workflow_seasonal_fc_processing.ipynb 
+
+	
+	=== for the ERA interim (and ERA 5) reanalysis  ===
+	
+	dataset_mm = dataset * 1000 
+	
+	
+	
+== =================================================================================================================================================== ==
+
+CDS pre-processing 
+
+
+== =================================================================================================================================================== ==
+
+====== GPM - IMERG dataset ======
+
+see 
+
+https://pmm.nasa.gov/data-access/downloads/gpm
+
+https://disc.gsfc.nasa.gov/information/tools?title=OPeNDAP%20and%20GDS 
+
+and 
+
+https://docserver.gesdisc.eosdis.nasa.gov/public/project/GPM/TMPA-to-IMERG_transition.pdf 
+
+The TRMM-TMPA dataset is no longer updated ... need to transfer all ICU processes to IMERG now .. 
+
+The data seems to be available through this portal: 
+
+https://disc.gsfc.nasa.gov/datasets?keywords=imerg&page=1 
+
+see in particular 
+
+https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDL_06/summary?keywords=imerg 
+
+https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGHHE_06/summary
+
+The archive seems to be available here: 
+
+https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGDL.06/ 
+
+and can be downloaded seemingly without issues ... 
+
+see doc at https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGHHE_06/summary 
+
+"
+The Integrated Multi-satellitE Retrievals for GPM (IMERG) is the unified U.S. algorithm that provides the multi-satellite precipitation product for the U.S. GPM team.
+
+Minor Version 06B is the current version of the data set. Older versions will no longer be available and have been superseded by Version 06B.
+
+The precipitation estimates from the various precipitation-relevant satellite passive microwave (PMW) sensors comprising the GPM constellation are computed using the 2017 version of the Goddard Profiling Algorithm (GPROF2017), then gridded, intercalibrated to the GPM Combined Ku Radar-Radiometer Algorithm (CORRA) product, and merged into half-hourly 0.1°x0.1° (roughly 10x10 km) fields. Note that CORRA is adjusted to the monthly Global Precipitation Climatology Project (GPCP) Satellite-Gauge (SG) product over high-latitude ocean and tropical land to correct known biases.
+
+The half-hourly intercalibrated merged PMW estimates are then input to both the Climate Prediction Center (CPC) Morphing-Kalman Filter (CMORPH-KF) Lagrangian time interpolation scheme and the Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks Cloud Classification System (PERSIANN-CCS) re-calibration scheme. In parallel, CPC assembles the zenith-angle-corrected, intercalibrated merged geo-IR fields and forwards them to PPS for input to the PERSIANN-CCS algorithm (supported by an asynchronous re-calibration cycle) which are then input to the CMORPH-KF morphing (quasi-Lagrangian time interpolation) scheme.
+The CMORPH-KF morphing (supported by an asynchronous KF weights updating cycle) uses the PMW and IR estimates to create half-hourly estimates. The motion vectors for the morphing are computed by maximizing the pattern correlation of successive hours of the vertically integrated vapor (TQV) provided by the Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2) and Goddard Earth Observing System model Version 5 (GEOS-5) Forward Processing (FP) for the post-real-time (Final) Run and the near-real-time (Early and Late) Runs, respectively. The KF uses the morphed data as the “forecast” and the IR estimates as the “observations”, with weighting that depends on the time interval(s) away from the microwave overpass time. The IR becomes important after about ±90 minutes away from the overpass time.
+
+**The IMERG system is run twice in near-real time:**
+
+"**Early**" multi-satellite product ~4 hr after observation time using only forward morphing and
+"**Late**" multi-satellite product ~14 hr after observation time, using both forward and backward morphing
+and once after the monthly gauge analysis is received:
+
+**"Final", satellite-gauge product ~3.5 months after the observation month, using both forward and backward morphing and including monthly gauge analyses.**
+
+**NOTE: to use to derive climatology ???** 
+
+Currently, the near-real-time Early and Late half-hourly estimates have no concluding calibration, while in the post-real-time Final Run the multi-satellite half-hourly estimates are adjusted so that they sum to the Final Run monthly satellite-gauge combination. In all cases the output contains multiple fields that provide information on the input data, selected intermediate fields, and estimation quality. In general, the complete calibrated precipitation, precipitationCal, is the data field of choice for most users.
+
+Briefly describing the Early Run, the input precipitation estimates computed from the various satellite passive microwave sensors are intercalibrated to the CORRA product (because it is presumed to be the best snapshot TRMM/GPM estimate after adjustment to the monthly GPCP SG), then "forward morphed" and combined with microwave precipitation-calibrated geo-IR fields to provide half-hourly precipitation estimates on a 0.1°x0.1° (roughly 10x10 km) grid over the globe. Precipitation phase is computed using analyses of surface temperature, humidity, and pressure. The current period of record is June 2000 to the present (delayed by about 4 hours).
+"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+

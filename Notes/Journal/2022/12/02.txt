@@ -1,0 +1,71 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-02T10:38:09+13:00
+
+====== Friday 02 Dec 2022 ======
+
+==== CSV to markdown converter ====
+
+@ICU @SCO 
+
+see https://www.convertcsv.com/csv-to-markdown.htm 
+
+see also 
+
+https://github.com/astanin/python-tabulate 
+
+can export pandas dataframe to markdown: 
+
+df_latest.to_markdown('./table.md', tablefmt="html")  
+
+--------------------
+
+==== CMIP6 downscaling 52 quantiles ====
+
+@MBIE @CMIP6 @downscaling
+
+training: downscale_xclim_ACCESS-CM2_CCAM_to_VCSN_cross_validation_train.ipynb 
+
+evaluation: downscale_xclim_ACCESS-CM2_CCAM_to_VCSN_cross_validation_adjust.ipynb 
+
+Note that in downscale_xclim_ACCESS-CM2_CCAM_to_VCSN_cross_validation_adjust.ipynb, if we set up local dask cluster, it fails 
+
+Maybe try with other parameters 
+
+--------------------
+
+==== CMIP6 downscaling: an hybrid quantile mapping and machine learning approach ====
+
+@MBIE @CMIP6 @downscaling
+
+premise 1: EQM is completely deterministic: the calibration procedure always yields the same exact adjustment factors 
+
+idea: 
+
+1) calibrate BCSD on ERA5 CCAM run 
+
+2) adjust ACCESS-CM2 CCAM run historical period 
+
+3) each time-series has now a remaining bias (what is the distribution of the bias ?)   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

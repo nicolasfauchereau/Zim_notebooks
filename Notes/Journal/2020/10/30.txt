@@ -1,0 +1,353 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-30T09:36:37+13:00
+
+====== Friday 30 Oct 2020 ======
+
+==== experiments wity PYCARET version 2.2.0 ====
+
+see e.g. AutoML/PYCARET/notebooks/Apple_and_Pears_observational_indices.ipynb  
+
+some bugs: 
+
+models() return an error if called before setup 
+
+
+models(type='ensemble') does not work, should return the following 
+
+{{./screenshot_2020-10-30-094009.png}}
+
+but this works ... 
+
+ensembled_models = compare_models(include = ['rf', 'ada', 'gbc', 'et', 'xgboost', 'lightgbm', 'catboost'], fold = 3) 
+
+--------------------
+
+==== some more help on AUTOGLUON ====
+
+https://towardsdatascience.com/building-state-of-art-machine-learning-models-with-autogluon-9f19f61048fb 
+
+and local copy 
+
+can also cite: 
+
+Erickson, N., J. Mueller, A. Shirkov, H. Zhang, P. Larroy, M. Li, and A. Smola, 2020: AutoGluon-Tabular: Robust and Accurate AutoML for Structured Data. arXiv:2003.06505 [cs, stat],.
+
+We introduce AutoGluon-Tabular, an open-source AutoML framework that requires only a single line of Python to train highly accurate machine learning models on an unprocessed tabular dataset such as a CSV file. Unlike existing AutoML frameworks that primarily focus on model/hyperparameter selection, AutoGluon-Tabular succeeds by ensembling multiple models and stacking them in multiple layers. Experiments reveal that our multi-layer combination of many models offers better use of allocated training time than seeking out the best. A second contribution is an extensive evaluation of public and commercial AutoML platforms including TPOT, H2O, AutoWEKA, auto-sklearn, AutoGluon, and Google AutoML Tables. **Tests on a suite of 50 classification and regression tasks from Kaggle and the OpenML AutoML Benchmark reveal that AutoGluon is faster, more robust, and much more accurate. We find that AutoGluon often even outperforms the best-in-hindsight combination of all of its competitors. In two popular Kaggle competitions, AutoGluon beat 99% of the participating data scientists after merely 4h of training on the raw data.** 
+
+see also this repo: 
+
+https://github.com/Innixma/autogluon-benchmarking
+
+which provides benchmarking utilities for AUTOGLUON, and could be leveraged to try different configurations and also try different AutoML frameworks 
+
+it is cloned in 
+
+**/home/nicolasf/research/Smart_Ideas/resources/repos_libraries**
+
+for a work in progress re. the evaluation of current AutoML frameworks, see 
+
+https://github.com/Innixma/automlbenchmark
+
+
+
+
+--------------------
+
+==== some more help on PYCARET ====
+
+https://towardsdatascience.com/pycaret-2-2-is-here-whats-new-ad7612ca63b
+
+and local copy in resources 
+
+--------------------
+
+==== write up for the application cases, structure ====
+
+**1) reminder about what this project is about** 
+
+2) benchmark, what is the accuracy for precipitation and temperature from: 
+
+	→ the seasonal climate outlook (for the region) 
+	→ the GCMs themselves 
+	
+**3) methodology** 
+
+approach #1
+
+	→ derive time-series of precipitation and temperature for the area / point of interest (from the VCSN)
+	→ derive climatological terciles, quintiles, and candidate aggregated seasonal variables 
+	→ terciles: below, near-normal, above 
+	→ quintiles: well-below, below, near-normal, above, well-above 
+	→ all the above can be provided with the actual values (above = above //N// mm rainfall for the season for example) 
+	→ test many so called "classical" algorithms 
+	→ feed data from GCMs and also observational datasets and indices 
+	
+approach #2 (on going) 
+
+	→ use so-called "deep learning" approaches
+	→ deep learning = deep neural networks 
+	→ try and predict 'directly' the seasonal anomalies in temperature and precipitation on the VCSN grid (11491 grid points !) 
+	
+**3) how does machine learning work (in very general terms)** 
+
+Machine Learning algorithms are computer programs that - in a nutschell - 'learn' some kind of relationship between a 
+set of predictors (called 'features' in ML parlance) and some target variable (predictand) 
+
+in order to learn, it needs to be trained on data, ideally many observations ("instances" in Machine Learning) where you 
+have values both for the predictor or set of predictors and for the target variable: The more data, the better 
+
+One problem / question though is how you evaluate fairly the performance of these models ? ideally, you want to evaluate the performance on data 
+that the algorithm has not seen yet: you cannot evaluate this performance using the data it has been trained on
+
+The general strategy is to divide the dataset into a training set and a test set, the algorithms are trained onto the training set, and evaluated on the test set 
+
+but the performance can vary, depending on the exact slipt between the training and test set 
+
+so usually you use cross-validation, where you repeat this several times: taking a random sample from the dataset as the training set, and the remaining instances as the test set, several times. 
+
+when splitting, you need to ensure, that the class target is approximately equally represented, you don't want to end up with for example a training set that mostly include wet years (can happen by chance), as the resulting trained model will likely to be poor at predicting drought
+
+You also need to avoid what is called overfitting: you measure the performance on the training data and on the test data, if the performance is excellent on the training data but bad on the test data, that's called overfitting, in short the models has learned the noise in the data, and is not capable of what we call "generalisation" 
+
+In this particular case, the target variable consists in either running seasonal anomalies or categories, so one also needs to account for the fact that one instance contains 2/3 of the information of the next one (DJF, JFM, JFMA ...) so the split needs to be done in such a way so that for example NDJ 2020 and DJF 2020 are not respectively in the training and test sets. One solution is simply to randomize completely the instances, but it actually does not solve completely the issue
+
+a better solution is to select successively 3 non-overlapping subsets of the data (see pseudo-code below) and use for example Leave One Out cross validation 
+
+implemented in 
+
+
+**4) several Machine Learning algorithms tested (and more on the way)** 
+
+there are many many machine learning algorithms available, and there's something that' called the 
+"no free lunch theorem" which basically states that for any given machine learning task, there is no way to know beforehand 
+what model / algorithm will give the best results 
+
+so you have to **try and compare as many models as possible**, there's no guarantee that "this" model will give better results than
+"that" model ... 
+
+but we paid special attention to what are called **ensemble models**, because although there is the 'no free lunch theorem', they have been shown to 
+come out on top in many machine learning competitions (example, kaggle, where people or institution post their problem and data, people and teams compete, and the ones that get the best results on a hold out set get a reward ...) 
+
+In short, //ensembling// consists in using the 'wisdom of the crowd' effect, different strategies: 
+
+//bagging//: train several (usually the same type of) models on different subsets of the data, then aggregate their predictions 
+
+//boosting//: use models in succession, with a each succesive steps models being trained on the instances that the previous didnt classify well 
+
+//stacking//: feed the predictions of several models into a 'meta-model' 
+
+we can also simply //blend the models//: all the models provide probability estimates (20% below, 30% normal, 50% above) and we can just take the majority vote, or average the class probabilities 
+
+list from AUTOGLUON (obtained by calling `predictor.get_model_names()`) 
+
+'RandomForestClassifierGini_STACKER_l0',
+ 'RandomForestClassifierEntr_STACKER_l0',
+ 'ExtraTreesClassifierGini_STACKER_l0',
+ 'ExtraTreesClassifierEntr_STACKER_l0',
+ 'KNeighborsClassifierUnif_STACKER_l0',
+ 'KNeighborsClassifierDist_STACKER_l0',
+ 'LightGBMClassifier_STACKER_l0',
+ 'CatboostClassifier_STACKER_l0',
+ 'NeuralNetClassifier_STACKER_l0',
+ 'LightGBMClassifierCustom_STACKER_l0',
+ 'weighted_ensemble_k0_l1',
+ 'RandomForestClassifierGini_FULL_STACKER_l0',
+ 'RandomForestClassifierEntr_FULL_STACKER_l0',
+ 'ExtraTreesClassifierGini_FULL_STACKER_l0',
+ 'ExtraTreesClassifierEntr_FULL_STACKER_l0',
+ 'KNeighborsClassifierUnif_FULL_STACKER_l0',
+ 'KNeighborsClassifierDist_FULL_STACKER_l0',
+ 'LightGBMClassifier_FULL_STACKER_l0',
+ 'CatboostClassifier_FULL_STACKER_l0',
+ 'NeuralNetClassifier_FULL_STACKER_l0',
+ 'LightGBMClassifierCustom_FULL_STACKER_l0',
+ 'weighted_ensemble_FULL_k0_l1'
+
+
+list from PYCARET 
+
+lr 		Logistic Regression 					sklearn.linear_model._logistic.LogisticRegression 	
+knn 		K Neighbors Classifier 				sklearn.neighbors._classification.KNeighborsCl...
+nb 		Naive Bayes 						sklearn.naive_bayes.GaussianNB 	
+dt 		Decision Tree Classifier 				sklearn.tree._classes.DecisionTreeClassifier 	
+svm 	SVM - Linear Kernel 				sklearn.linear_model._stochastic_gradient.SGDC... 	
+rbfsvm 	SVM - Radial Kernel 				sklearn.svm._classes.SVC 	False
+gpc 		Gaussian Process Classifier 			sklearn.gaussian_process._gpc.GaussianProcessC... 	
+mlp 		MLP Classifier 						pycaret.internal.tunable.TunableMLPClassifier 	
+ridge 	Ridge Classifier 					sklearn.linear_model._ridge.RidgeClassifier 	
+rf 		**Random Forest Classifier** 			sklearn.ensemble._forest.RandomForestClassifier 	
+qda 		Quadratic Discriminant Analysis 		sklearn.discriminant_analysis.QuadraticDiscrim... 
+ada 		**Ada Boost Classifier** 				sklearn.ensemble._weight_boosting.AdaBoostClas... 	
+gbc 		**Gradient Boosting Classifier** 		sklearn.ensemble._gb.GradientBoostingClassifier 	
+lda 		Linear Discriminant Analysis 			sklearn.discriminant_analysis.LinearDiscrimina... 	
+et 		Extra Trees Classifier 				sklearn.ensemble._forest.ExtraTreesClassifier 	
+xgboost 	**Extreme Gradient Boosting** 		xgboost.sklearn.XGBClassifier 	
+lightgbm 	**Light Gradient Boosting Machine** 	lightgbm.sklearn.LGBMClassifier 	
+catboost 	**CatBoost Classifier** 				catboost.core.CatBoostClassifier 	
+
+
++ 
+
+**ngboost**: https://github.com/stanfordmlgroup/ngboost Natural Gradient Boosting for Probabilistic Prediction 
+
+
+**5) experiments conducted** 
+
+
+→ using //GCM outputs//: Sea Surface Temperatures, 2 Meters temperature (for Temperature), Precipitation (for rainfall as a target), and Z500 (circulation)
+→ using //observed SSTs//, realtime, lagged 1 month, i.e. for the prediction of let's say precipitation for the period December - February, we use features derived from observed seasonal SSTs up to and including October, to mimic what we would be able to do in an operational setting, including versions where we also take into account the 'history' / recent evolution of Sea Surface Temperature anomalies, up to 6 months in the past
+→ for both GCM and SST fields, selected and tested several domains, with the assumption that maybe what's been observed or what is forecast in the Atlantic ocean is not extremely relevant to New Zealand 
+→ another set of experiments used what we call 'indices' of large scale climate modes, includes: the NINO3.4 SST index (ENSO), the Indian Ocean Dipole (IOD), the El Nino Modoki Index (EMI), and the Southern Annular Mode (SAM), similarly, lagged one month, also included versions where we take into account the history / recent evolution 
+
+**6) results** 
+
+
+
+--------------------
+
+==== Latent Linear Adjustment Autoencoders v1.0: A novel method for estimating and emulating dynamic precipitation at high resolution ====
+
+
+1.Heinze-Deml, C., Sippel, S., Pendergrass, A. G., Lehner, F. & Meinshausen, N. Latent Linear Adjustment Autoencoders v1.0: A novel method for estimating and emulating dynamic precipitation at high resolution. https://gmd.copernicus.org/preprints/gmd-2020-275/ (2020) doi:10.5194/gmd-2020-275.
+
+
+paper: 
+
+https://gmd.copernicus.org/preprints/gmd-2020-275/ 
+
+code: 
+
+https://github.com/christinaheinze/latent-linear-adjustment-autoencoders 
+
+Abstract: 
+
+Abstract. A key challenge in climate science is to quantify the forced response in impact-relevant variables such as precipitation against the background of internal variability, both in models and observations. Dynamical adjustment techniques aim to remove unforced variability from a target variable by identifying patterns associated with circulation, thus effectively acting as a filter for dynamically-induced variability. The forced contributions are interpreted as the variation that is unexplained by circulation. However, dynamical adjustment of precipitation at local scales remains challenging because of large natural variability and the complex, nonlinear relationship between precipitation and circulation particularly in heterogeneous terrain. Building on variational autoencoders, we introduce a novel statistical model – the Latent Linear Adjustment Autoencoders v1.0 – that enables estimation of the contribution of a coarse-scale atmospheric circulation proxy to daily precipitation at high-resolution and in a spatially coherent manner. To predict circulation-induced precipitation, the Latent Linear Adjustment Autoencoders v1.0 combines a linear component, which models the relationship between circulation and the latent space of an autocoder, with the autoencoder's nonlinear decoder. The combination is achieved by imposing an additional penalty in the cost function that encourages linearity between the circulation field and the autoencoder's latent space, hence leveraging robustness advantages of linear models as well as the flexibility of deep neural networks. We show that our model predicts realistic daily winter precipitation fields at high resolution based on a 50-member ensemble of the Canadian Regional Climate Model at 12-km resolution over Europe, capturing for instance key orographic features and geographical gradients. Using the Latent Linear Adjustment Autoencoders v1.0 to remove the dynamic component of precipitation variability, forced thermodynamic components are expected to remains in the residual, which enables the uncovering of forced precipitation patterns of change from just a few ensemble members. **We extend this to quantify the forced pattern of change conditional on specific circulation regimes. In addition, we briefly illustrate one of multiple possible further applications of the method: a weather generator that emulates climate model simulations of regional precipitation at high resolution by bootstrapping circulation patterns. Other potential applications include addressing detection&attribution at sub-continental scales, statistical downscaling and transfer learning between models and observations to exploit the typically much larger sample size in models compared to observations.**
+
+--------------------
+
+==== AUTOGLUON experiments using SST obs, and no PCA ====
+
+**AutoML/AUTOGLUON/notebooks/Apple_and_Pears_SSTs_obs_noPCA.ipynb** 
+
+comparison of algorithms, when fed observed SSTs, and with no PCA applied (i.e. all the grid points are considered as features) 
+
+performance
+
+NeuralNetClassifier_STACKER_l0   **0.636166**
+
+
+	**model  	score_val  	 pred_time_val   fit_time  	pred_time_val_marginal  fit_time_marginal  stack_level  can_infer**
+0 	**NeuralNetClassifier_STACKER_l0 		0.636166** 	2.996629 	171.168789 	2.996629 	171.168789 	0 	True
+1 	weighted_ensemble_k0_l1 				0.636166 	2.997180 	171.463465 	0.000551 	0.294676 	1 	True
+2 	CatboostClassifier_STACKER_l0 			0.618736 	74.016366 	878.099976 	74.016366 	878.099976 	0 	True
+3 	LightGBMClassifier_STACKER_l0 			0.601307 	103.298776 	771.665745 	103.298776 	771.665745 	0 	True
+4 	ExtraTreesClassifierEntr_STACKER_l0 		0.594771 	56.864419 	59.633743 	56.864419 	59.633743 	0 	True
+5 	RandomForestClassifierEntr_STACKER_l0 	0.594771 	140.501895 	139.010289 	140.501895 	139.010289 	0 	True
+6 	RandomForestClassifierGini_STACKER_l0 	0.592593 	56.994731 	61.223238 	56.994731 	61.223238 	0 	True
+7 	LightGBMClassifierCustom_STACKER_l0 		0.588235 	79.047823 	4303.493489 	79.047823 	4303.493489 	0 	True
+8 	ExtraTreesClassifierGini_STACKER_l0 		0.581699 	114.561372 	143.753370 	114.561372 	143.753370 	0 	True
+9 	KNeighborsClassifierDist_STACKER_l0 		0.566449 	182.407472 	192.822488 	182.407472 	192.822488 	0 	True
+10 	KNeighborsClassifierUnif_STACKER_l0 		0.479303 	114.885334 	116.529471 	114.885334 	116.529471 	0 	True
+
+
+--------------------
+
+=== Barnes et al multiple linear regression ===
+
+see 
+
+1.Barnes, E. A. et al. Indicator patterns of forced change learned by an artificial neural network. J. Adv. Model. Earth Syst. (2020) doi:10.1029/2020MS002195.
+
+
+{{./screenshot_2020-10-30-121147.png?width=700}}
+
+ 
+To do the equivalent: Multiple Linear Regression with L2 regularisation in scikit-learn, need to use the **Ridge Regression** 
+
+see documentation: 
+
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+
+Note that This estimator **has built-in support for multi-variate regression (i.e., when y is a 2d-array of shape (n_samples, n_targets)).**
+
+try: 
+
+→ univariate regression using SST (field, not PC) 
+
+→ univariate regression using lagged SSTs (again, field, not PCs) 
+
+→ multi-variate regression using SST (field, not PC) 
+
+→ multi-variate  regression using lagged SSTs (again, field, not PCs) 
+
+see **Apple_and_Pears_SSTs_obs_noPCA.ipynb** notebook in 
+
+/home/nicolasf/research/Smart_Ideas/code/models/application_cases/regression/Apple_and_Pears/RidgeRegression/notebooks
+
+using Leave One Out cross validation might lead to a strong overestimation of the performance of the regression model, because the target seasons 
+are overlapping NDJ, DJF, JFM etc so each time the model is trained 
+
+note that because the seasons are overlapping, the model is trained each time with a target that contains 2/3rd of the information of the next target 
+
+choosing wisely to NOT include overlapping seasons lead to a rapid drop in correlation :-( 
+
+--------------------
+
+==== PYCARET experiments with (lagged) climate modes indices ====
+
+climate modes listed above, lagged in time to account for the past 6 months evolution 
+
+see: 
+
+**AutoML/PYCARET/notebooks/Apple_and_Pears_observational_indices.ipynb**
+
+== for TMEAN_N: ==
+
+**comparison of all models** (with turbo = True) 
+
+{{./screenshot_2020-10-30-131913.png?width=700}}
+
+**comparison of all models (with turbo = False) **
+
+{{./screenshot_2020-10-30-132646.png?width=700}}
+
+Blend the top models 
+
+{{./screenshot_2020-10-30-133530.png?width=700}}
+
+
+compare only the **ensemble** models 
+
+{{./screenshot_2020-10-30-132059.png?width=700}}
+
+best model (Gaussian Process classifier) 
+{{./screenshot_2020-10-30-133706.png}}
+
+tune the best model does not improve the performance really 
+
+== for RAIN_BC: ==
+
+comparison of all models (with turbo = False)  
+
+{{./screenshot_2020-10-30-135127.png?width=700}}
+
+blend the best models 
+
+{{./screenshot_2020-10-30-135519.png?width=700}}
+
+compare the ensemble models 
+
+{{./screenshot_2020-10-30-135612.png?width=700}}
+
+tune best model 
+
+{{./screenshot_2020-10-30-135941.png}}
+
+
+
+
+
+
+
+

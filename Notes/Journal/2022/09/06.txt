@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-06T08:56:54+12:00
+
+====== Tuesday 06 Sep 2022 ======
+
+==== VCSN updating ====
+
+@VCSN 
+
+To update the VCSN datasets, now see in 
+
+**make_VCSN_grid_netcdf.ipynb** 
+
+in directory [[~/operational/VCSN/notebooks]] 

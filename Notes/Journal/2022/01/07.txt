@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-07T09:24:42+13:00
+
+====== Friday 07 Jan 2022 ======
+
+==== Extreme precipitation of the Waikato region, New Zealand ====
+
+https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/joc.2189
+
+→ redo the analysis 
+→ use the introduction: "The Waikato is an economically important region of New Zealand that is dependant on a reliable source of precipitation for agriculture and hydroelectric power generation, but is also prone to flooding"
+
+see also: **Predictability of Heavy Precipitation in the Waikato River Basin of New Zealand** 
+
+
+
+
+"""the Waikato River basin is an important
+agricultural region that also sustains a hydro-electrical
+power generation scheme. The hydro-scheme consists of
+9 dams and generates 13% of the country’s total power. In
+the past this river basin has experienced a number of se-
+rious flooding episodes"""
+
+references: 
+
+Dravitzki, S., and J. McGregor, 2011: Extreme precipitation of the Waikato region, New Zealand: EXTREME PRECIPITATION OF THE WAIKATO REGION, NEW ZEALAND. Int. J. Climatol., 31, 1803–1812, https://doi.org/10.1002/joc.2189.
+
+Dravitzki, S., and J. McGregor, 2011: Predictability of Heavy Precipitation in the Waikato River Basin of New Zealand. Monthly Weather Review, 139, 2184–2197, https://doi.org/10.1175/2010MWR3137.1.
+
+
+--------------------
+
+==== swimming holes ====
+
+https://www.theswimguide.org/beach/9511?fbclid=IwAR2ASYCwaf0Usk6A_atThlwN618NwmTwRzMoZNi7Zkkr5b4S9GS5j02M8tw
+
+https://www.google.com/maps/dir/32+Rothesay+Place,+Dinsdale,+Hamilton+3204,+New+Zealand/Lake+Puketirini,+Huntly/@-37.6506371,175.0659164,57066m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x6d6d2229408d148b:0xab60311ed170a5ae!2m2!1d175.2374298!2d-37.7934265!1m5!1m1!1s0x6d6d385b070fdd8f:0x2e3aef47b1267e8f!2m2!1d175.1414542!2d-37.5668829!3e0
+
+--------------------
+
+==== ICU: ACC and RMSE for deterministic forecasts ====
+
+@ICU 
+
+The dataframes (see screenshots below) are saved in the folder: 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/verification/outputs_paper]]
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-18T08:50:39+12:00
+
+====== Tuesday 18 Aug 2020 ======
+
+=== Meeting SI sector engagement ===
+
+Chris, Andrew, Ben 
+
+**context:** 
+
+Contract extended to March 2021 
+
+Busy with ML aspect, I have recently conducted more experiments with Convolutional Auto-encoders, and I think that work can be the base for a system where instead of forecasting regional categorical time-series, we can forecast seasonal rainfall or temperature anomalies directly at the VCSN grid (which has implications for the NZDI prediction project). I am Bringing Neelesh in as well as Raghav, who has worked with Convolutional Neural Networks, and we've got now a BsC at the Waikato Uni dept of computing and mathematical sciences who will work on one technique (CNNs with partial convolutions, as in the paper "AI reconstructs climate information) 
+
+With my new position, leaves me no time really to deal with the **Sector Engagement,** and I am bad at it anyway ... 
+
+A few things hanging from before lockdown: 
+
+1) re-engage with HB regional council + Apple and Pears 
+2) engagement with Bragato Institute + Innovation Vineyards 
+3) engagement with Watercare 
+
+rekindle the engagement with GWRC (Alex Pezza) 
+
+The application cases results will be realistic available in a good shape ~ **end of October**, so planning workshops around end of November would be ideal, so that's something that we should I guess sort out as soon as possible
+
+Maybe 
+
+1 in Auckland with Watercare ? 
+2 Wellington region 
+3 HB with regional council and apple and pears 
+5 Bragato research institute ?  
+
+Survey re. use of seasonal climate forecasts, different scenarios (40, 50, 60 % accuracy, what does that mean for the farmers ? collaborate with Landcare (Ben Wiercinsky) 
+
+**Chris 30 → 80 to 100 **
+**Andrew 75 → 200 **
+**Ben 40 → 80** 
+
+=== Meeting Neelesh and Raghav (Deep Learning for Seasonal Climate forecasting) ===
+
+Some ideas:
+
+1. use ERA5 as the outputs instead of VCSN (for testing the approach)
+2. create repository for all the DL code: done at https://github.com/nicolasfauchereau/DL4SEAS 
+3. create a MS Teams ? 
+4. Wide and Deep architectures, see https://github.com/ageron/handson-ml2/blob/master/10_neural_nets_with_keras.ipynb for example, see https://github.com/nicolasfauchereau/DL4SEAS/blob/master/wide_and_deep/notebooks/wide_and_deep_example.ipynb 
+
+
+=== Meeting with Campbell ===
+
+Around the development of a newsletter 
+
+1) Email Newsletter (Outlook theming ?), apparently the CAH 'Memo' email is quite a success 
+
+2) mix bottom up (what's been happening on the hubs, what has been shared, what projects and ideas have been discussed) and 'top down' views from the T&I hubs science advisory group, reflecting on the activities and current trends in their respective platforms / disciplines. 
+
+1) have **Warrick Johnston** say a few words in every newsletter, give the sense to people that there is a direction / that this is led from the top, give the newsletter a voice 
+
+2) include examples of how people use these technologies around NIWA 
+	i) code from Kameron around using ML to classify weather from images 
+	ii) my example, using auto-encoders to learn latent representation of large-scale climate fields 
+
+3) Advertise the Data Science Journal Club, promote the adoption of this model (journal club across the other hubs) 
+
+4) Data Science Journal club, have external people / invited speakers talk during the journal clubs 
+
+5) Campbell is currently developping a communication plan for T&I, with specific deliverables, follow up on this when it's ready 
+
+
+
+
+
+
+
+
+
+
+
+
+

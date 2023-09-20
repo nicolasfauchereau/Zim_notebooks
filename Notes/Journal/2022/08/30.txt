@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-30T08:11:23+12:00
+
+====== Tuesday 30 Aug 2022 ======
+
+==== On the suitability of deep convolutional neural networks for continental-wide downscaling of climate change projections. Clim Dyn 57, 2941–2951 ====
+
+
+Baño-Medina, J., Manzanas, R., Gutiérrez, J.M., 2021. On the suitability of deep convolutional neural networks for continental-wide downscaling of climate change projections. Clim Dyn 57, 2941–2951. https://doi.org/10.1007/s00382-021-05847-0
+
+https://github.com/SantanderMetGroup/DeepDownscaling
+
+see also other papers at: 
+
+https://github.com/SantanderMetGroup/DeepDownscaling#readme
+
+--------------------
+
+==== Easy IPCC Part 1: Multi-Model Datatree ====
+
+@MBIE 
+
+see https://medium.com/pangeo/easy-ipcc-part-1-multi-model-datatree-469b87cf9114 
+
+and: [[~/research/CMIP6_downscaling/resources/Easy IPCC Part 1_ Multi-Model Datatree _ by Tom Nicholas _ pangeo _ Aug, 2022 _ Medium (30_08_2022 8_28_59 am).html|Easy IPCC Part 1: Multi-Model Datatree]]
+
+--------------------
+
+==== CMIP6 outputs (host GCMs) ====
+
+/nesi/project/niwa02916/synda_home/data/CMIP6/ 
+
+--------------------
+
+==== Augmented VCSN ====
+
+**/nesi/project/niwa00018/VCSN_data/augmented_VCSN**
+

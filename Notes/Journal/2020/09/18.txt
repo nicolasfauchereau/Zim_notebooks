@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-18T08:54:12+12:00
+
+====== Friday 18 Sep 2020 ======
+
+==== All ECMWf PRECIP files now download, processing ====
+
+see **process_ECMWF_nc_downloads.ipynb** in [[~/research/Smart_Ideas/code/processors/CDS/notebooks]] 
+
+including converting rainfall to total mm ... 
+

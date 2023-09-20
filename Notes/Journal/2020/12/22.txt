@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-22T09:37:34+13:00
+
+====== Tuesday 22 Dec 2020 ======
+
+==== Mail from anamolous.behaviour@gmail.com about adapting cycling count notebook to use with http://neuralprophet.com/ ====
+
+NeuralProphet installed in environment "ML" 
+
+
+--------------------
+
+==== Alex Raichev, cycling and stuff ====
+
+https://raichev.net/pages/works.html
+
+for the data from MRCagney (hourly cycling count data updated every month) 
+
+https://awcc.mrcagney.works/ 
+

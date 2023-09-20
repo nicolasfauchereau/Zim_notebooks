@@ -1,0 +1,107 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-19T08:46:00+12:00
+
+====== Tuesday 19 Sep 2023 ======
+
+Spatial planning of urban communities via deep reinforcement learning
+
+https://www.nature.com/articles/s43588-023-00503-5 
+
+State spaces for agriculture: A meta-systematic design automation framework” by Bryan Runck, Adam Streed, Diane R Wang, Patrick M Ewing, Michael B Kantar Barath Raghavan, 16 March 2023, PNAS Nexus.
+DOI: 10.1093/pnasnexus/pgad084 
+
+https://scitechdaily.com/computational-agroecology-the-future-of-farming/ 
+
+see also:  Application of Computational Intelligence Methods in Agricultural Soil–Machine Interaction: A Review  
+
+--------------------
+==== ClimatePython ====
+
+see in [[~/repos]] 
+
+https://github.com/zmlabe/ClimatePython/tree/master
+
+Zachary Labe: https://zacklabe.com/methods-and-open-software/ 
+
+--------------------
+==== The next generation of scenarios for climate change research and assessment ====
+
+https://www.nature.com/articles/nature08823 
+
+
+--------------------
+==== DAMOCLES: UNDERSTANDING AND MODELING COMPOUND CLIMATE AND WEATHER EVENTS ====
+
+European project 
+
+http://damocles.compoundevents.org/
+
+see publications: http://damocles.compoundevents.org/publications.php 
+
+
+--------------------
+==== WMO "United in Science report" ====
+
+https://library.wmo.int/records/item/68235-united-in-science-2023
+
+
+
+
+{{~/Pictures/Screenshot from 2023-09-19 15-21-13.png}}
+
+
+--------------------
+==== Vegetation anomalies caused by antecedent precipitation in most of the world ====
+
+**@idea do the same for NZ** 
+
+ C Papagiannopoulou1, D G Miralles2,4, W A Dorigo3, N E C Verhoest2, M Depoorter2 and W Waegeman1 
+
+https://iopscience.iop.org/article/10.1088/1748-9326/aa7145 
+
+Quantifying environmental controls on vegetation is critical to predict the net effect of climate change on global ecosystems and the subsequent feedback on climate. **Following a non-linear Granger causality framework based on a random forest predictive model**, we exploit the current wealth of multi-decadal satellite data records to uncover the main drivers of monthly vegetation variability at the global scale. Results indicate that water availability is the most dominant factor driving vegetation globally: about 61% of the vegetated surface was primarily water-limited during 1981–2010. This included semiarid climates but also transitional ecoregions. Intra-annually, temperature controls Northern Hemisphere deciduous forests during the growing season, while antecedent precipitation largely dominates vegetation dynamics during the senescence period. The uncovered dependency of global vegetation on water availability is substantially larger than previously reported. This is owed to the ability of the framework to (1) disentangle the co-linearities between radiation/temperature and precipitation, and (2) quantify non-linear impacts of climate on vegetation. Our results reveal a prolonged effect of precipitation anomalies in dry regions: due to the long memory of soil moisture and the cumulative, non-linear, response of vegetation, water-limited regions show sensitivity to the values of precipitation occurring three months earlier. Meanwhile, the impacts of temperature and radiation anomalies are more immediate and dissipate shortly, pointing to a higher resilience of vegetation to these anomalies. Despite being infrequent by definition, hydro-climatic extremes are responsible for up to 10% of the vegetation variability during the 1981–2010 period in certain areas, particularly in water-limited ecosystems. Our approach is a first step towards a quantitative comparison of the resistance and resilience signature of different ecosystems, and can be used to benchmark Earth system models in their representations of past vegetation sensitivity to changes in climate.
+
+data and code: https://sat-ex.ugent.be/ or (better): https://zenodo.org/record/575033 and https://github.com/h-cel/ClimateVegetationDynamics_GrangerCausality.git 
+
+Climate models predict an aggravation of droughts, extreme precipitation events and heatwaves as we progress into the future.
+
+However, the recent Intergovernmental Panel of Climate Change (IPCC) AR5-report remains inconclusive on this matter, revealing large discrepancies in the model projections of these extremes. These uncertainties obstruct the adequate long-term management and societal adaptation.
+
+Recent advances in satellite Earth observation – with the development of consistent global historical records of crucial environmental and climatic variables – provide new means to start unravelling the processes driving long-term changes in climate extremes, and understanding the impact of these changes on terrestrial ecosystems. In addition, these datasets offer an observational benchmark to evaluate the skill of climate models at representing climatic extremes and vegetation dynamics.
+
+SAT–EX raises with the goals of revealing how droughts, heatwaves and extreme rain events have changed in frequency and intensity over the past three decades, to uncover the causes behind these changes and the consequences for terrestrial vegetation. The ability of our current IPCC climate models to estimate these processes will be evaluated by comparison to novel satellite-based data records.
+
+In the long run, SAT–EX findings will advance towards the timely forecasting of climate extremes, provide valuable insights about the management of water resources during extreme events, help characterize global terrestrial carbon budgets, and reduce the uncertainty in long-term model predictions of climate extremes and global vegetation dynamics. 
+
+see also: 
+
+**A non-linear Granger-causality framework to investigate climate–vegetation dynamics** 
+
+https://zenodo.org/record/575033
+
+--------------------
+==== Outsize Influence of Central American Orography on Global Climate ====
+
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020AV000343 
+
+Global Climate Models (GCMs) exhibit substantial biases in their simulation of tropical climate. One particularly problematic bias exists in GCMs' simulation of the tropical rainband known as the Intertropical Convergence Zone (ITCZ). Much of the precipitation on Earth falls within the ITCZ, which plays a key role in setting Earth's temperature by affecting global energy transports, and partially dictates dynamics of the largest interannual mode of climate variability: The El Niño-Southern Oscillation (ENSO). Most GCMs fail to simulate the mean state of the ITCZ correctly, often exhibiting a “double ITCZ bias,” with rainbands both north and south rather than just north of the equator. These tropical mean state biases limit confidence in climate models' simulation of projected future and paleoclimate states, and reduce the utility of these models for understanding present climate dynamics. Adjusting GCM parameterizations of cloud processes and atmospheric convection can reduce tropical biases, as can artificially correcting sea surface temperatures through modifications to air-sea fluxes (i.e., “flux adjustment”). Here, we argue that a significant portion of these rainfall and circulation biases are rooted in orographic height being biased low due to assumptions made in fitting observed orography onto GCM grids. We demonstrate that making different, and physically defensible, assumptions that raise the orographic height significantly improves model simulation of climatological features such as the ITCZ and North American rainfall as well as the simulation of ENSO. These findings suggest a simple, physically based, and computationally inexpensive method that can improve climate models and projections of future climate.
+
+code: https://github.com/janewbaldwin/HiTopo/tree/v1.0.0 
+
+--------------------
+==== Baldwin et al 2019 "Temporally Compound Heat Waves and Global Warming: An Emerging Hazard." ====
+
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018EF000989 
+
+code: https://github.com/janewbaldwin/Compound-Heat-Waves 
+
+
+
+
+
+
+
+
+
+

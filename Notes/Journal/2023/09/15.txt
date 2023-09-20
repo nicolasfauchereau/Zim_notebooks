@@ -1,0 +1,163 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-15T09:25:23+12:00
+
+====== Friday 15 Sep 2023 ======
+
+==== Processing a 250 TB dataset with Coiled, Dask, and Xarray ====
+
+https://blog.coiled.io/blog/coiled-xarray.html
+
+--------------------
+==== data for development + World Resources Institute ====
+
+climate action and the state of open data 
+https://www.d4d.net/news/climate-action-and-the-state-of-open-data/
+
+ClimActor, harmonized transnational data on climate network participation by city and regional governments
+https://www.nature.com/articles/s41597-020-00682-0#Abs1 
+
+State of Open data report 
+https://stateofopendata.od4d.net/ 
+
+Global data barometer New Zealand
+https://globaldatabarometer.org/country/new-zealand/ 
+
+provide evidence and links to data to justify the score over the different categories, eg.: 
+
+"""
+**Main question**
+
+To what extent is emissions information available as open data?
+
+**Overall justification of the indicator**
+
+New Zealand's Greenhouse Gas Inventory is produced each year as part of New Zealand's obligations under the United Nations Framework Convention on Climate Change (UNFCCC) and the Kyoto Protocol. The inventory is the key source of evidence on New Zealand's greenhouse gas emissions trends. New Zealand's inventory data are used for both international and domestic reporting(1). The Inventory measures New Zealand's progress against obligations under the United Nations Framework Convention on Climate Change (UNFCCC) and the Kyoto Protocol. The Inventory adheres to the UNFCCC reporting guidelines and the international methodology guidelines set out by the Intergovernmental Panel on Climate Change (IPCC). The Inventory is the official source of New Zealand's emissions and removals data and is reported annually to the UNFCCC. It is also the basis by which progress towards targets is determined. Data is available from 1990, in line with international reporting requirements. Emissions and removals projections are also produced and reported every two years(2). The Inventory contains information about sectors (Agriculture, Energy, Industrial Processes and Product Use (IPPU), Waste, Land Use, Land-Use Change and Forestry (LULUCF) and Other (Tokelau), as well as Land Use, Land-Use Change and Forestry under the Kyoto Protocol (KP-LULUCF)(3). It contains detailed information on sources of greenhouse gas emissions and details of land use effects on emissions(4). Since the Climate Change Response (Zero Carbon) Amendment Act 2019 came into force, however, NZ has also begun tracking progress against our domestic targets(5). New Zealand's Interactive Emissions Tracker summarises the data from the Inventory(6) 1. NZ Ministry for the Environment. May 2021. New Zealand's Greenhouse Gas Inventory 1990-2019. https://environment.govt.nz/publications/new-zealands-greenhouse-gas-inventory-1990-2019/ 2. NZ StatsNZ. 2020. Approaches to measuring New Zealand's greenhouse gas emissions. https://www.stats.govt.nz/methods/approaches-to-measuring-new-zealands-greenhouse-gas-emissions 3. NZ Ministry for the Environment. 2021. Te whakarāpopototanga tuihono o Te Rārangi Haurehu Kati Mahana a Aotearoa 1990–2019: New Zealand's Greenhouse Gas Inventory Snapshot 1990–2019. https://environment.govt.nz/publications/new-zealands-greenhouse-gas-inventory-1990-2019-snapshot/ 4. NZ Ministry for the Environment. 2021. About New Zealand's greenhouse gas inventory. https://environment.govt.nz/facts-and-science/climate-change/measuring-greenhouse-gas-emissions/about-new-zealands-greenhouse-gas-inventory/ 5. NZ Ministry for the Environment. 2021. New Zealand's projected greenhouse gas emissions to 2050. https://environment.govt.nz/what-government-is-doing/areas-of-work/climate-change/emissions-reduction-targets/new-zealands-projected-greenhouse-gas-emissions-to-2050/ 6. NZ Ministry for the Environment. 2021. New Zealand's Interactive Emissions Tracker. https://emissionstracker.mfe.govt.nz/#NrAMBoEYF12TwCIByBTALo2wBM4eiQCc2AHEltEA Additional Sources NZ Ministry for the Environment. May 2021. New Zealand's Greenhouse Gas Inventory 1990-2019. Chapter 12: Information on accounting of the Kyoto Protocol units, p491-497. https://environment.govt.nz/publications/new-zealands-greenhouse-gas-inventory-1990-2019/
+Main sources of evidence
+
+NZ Ministry for the Environment. May 2021. New Zealand's Greenhouse Gas Inventory 1990-2019
+https://environment.govt.nz/publications/new-zealands-greenhouse-gas-inventory-1990-2019/
+
+NZ StatsNZ. 2020. Approaches to measuring New Zealand's greenhouse gas emissions
+https://globaldatabarometer.org/interactive/NZ%20StatsNZ.%202020.%20Approaches%20to%20meahttps://www.stats.govt.nz/methods/approaches-to-measuring-new-zealands-greenhouse-gas-emissions
+
+NZ Ministry for the Environment. 2021. About New Zealand's greenhouse gas inventory.
+https://environment.govt.nz/facts-and-science/climate-change/measuring-greenhouse-gas-emissions/about-new-zealands-greenhouse-gas-inventory/
+
+NZ Ministry for the Environment. 2021. New Zealand’s projected greenhouse gas emissions to 2050
+https://environment.govt.nz/what-government-is-doing/areas-of-work/climate-change/emissions-reduction-targets/new-zealands-projected-greenhouse-gas-emissions-to-2050/
+
+NZ Ministry for the Environment. 2021. New Zealand's Interactive Emissions Tracker
+https://emissionstracker.mfe.govt.nz/#NrAMBoEYF12TwCIByBTALo2wBM4eiQCc2AHEltEA
+
+"""
+
+--------------------
+==== Energy storage solutions to decarbonize electricity through enhanced capacity expansion modelling ====
+
+https://www.nature.com/articles/s41560-023-01340-6 
+
+To meet ambitious global decarbonization goals, electricity system planning and operations will change fundamentally. With increasing reliance on variable renewable energy resources, energy storage is likely to play a critical accompanying role to help balance generation and consumption patterns. As grid planners, non-profit organizations, non-governmental organizations, policy makers, regulators and other key stakeholders commonly use capacity expansion modelling to inform energy policy and investment decisions, it is crucial that these processes capture the value of energy storage in energy-system decarbonization. Here we conduct an extensive review of literature on the representation of energy storage in capacity expansion modelling. We identify challenges related to enhancing modelling capabilities to inform decarbonization policies and electricity system investments, and to improve societal outcomes throughout the clean energy transition. We further identify corresponding research activities that can help overcome these challenges and conclude by highlighting tangible real-world outcomes that will result from pursuing these research activities.
+
+
+--------------------
+==== EU-27 ecological footprint was primarily driven by food consumption and exceeded regional biocapacity from 2004 to 2014 ====
+
+ Nature Food 
+
+https://www.nature.com/articles/s43016-023-00843-5 
+
+
+The European Union (EU) plans to decarbonize the region by 2050. As highlighted by the Green Deal and Farm to Fork Strategy, food systems are essential for this transition. Here we investigate the resource dependence and carbon emissions of the EU-27’s food systems from 2004 to 2014 via an ecological footprint (EF)-extended multi-regional input–output approach, accounting for demand and supply (including trade), and considering multiple externalities. Food contributes towards almost a third of the region’s EF, and appropriates over half of its biocapacity. Average reliance on biocapacity within national borders decreased, while reliance on intra-EU biocapacity increased; yet a quarter of the biocapacity for food consumption originates from non-EU countries. Despite a reduction in both total EF and food EF over the study period, EU-27 residents demand more from nature than the region’s ecosystems can regenerate—highlighting the need for new or strengthened food and trade policies to enable a transformation to sustainable EU food systems.
+
+--------------------
+==== An ecological network approach for detecting and validating influential organisms for rice growth ====
+
+→ https://elifesciences.org/articles/87202 
+
+--------------------
+==== change terminator window size ====
+
+@linux 
+
+https://blog.programster.org/terminator-change-default-window-size 
+
+{{{code: lang="python3" linenumbers="False"
+vim $HOME/.config/terminator/config
+
+[global_config]
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      size = 1000, 600
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    cursor_color = "#aaaaaa"
+    font = Ubuntu Mono Bold 10
+    use_system_font = False
+}}}
+
+--------------------
+==== dominance analysis package in Python ====
+
+https://github.com/dominance-analysis/dominance-analysis
+
+Yefee/AMCV: Code for Tropical Atlantic multidecadal variability dominated by external forcing
+
+https://zenodo.org/record/8098355 
+
+for the paper: 
+
+Tropical Atlantic multidecadal variability is dominated by external forcing
+
+https://www.nature.com/articles/s41586-023-06489-4 
+
+--------------------
+==== Downloading the NASAS-NEX-CMIP6 data ====
+
+@NASA @CMIP6  
+
+== cmip6d 1.1 ==
+
+https://github.com/jonathanqv/cmip6d
+
+== access through the planetary computer ==
+
+ https://github.com/microsoft/PlanetaryComputerExamples/blob/main/datasets/nasa-nex-gddp-cmip6/nasa-nex-gddp-cmip6-example.ipynb 
+
+--------------------
+==== methane emissions report from Beef and Lamb comissioned by the farmers ... ====
+
+https://beeflambnz.com/knowledge-hub/PDF/full-report-agriculture-emissions-and-warming-aotearoa-new-zealand-2050-insights
+
+--------------------
+==== A Solarpunk Manifesto: Turning Imaginary into Reality ====
+
+https://www.mdpi.com/2409-9287/8/4/73#:~:text=As%20an%20anarchist%20community%2C%20solarpunk,human%20and%20non%2Dhuman%20flourish 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

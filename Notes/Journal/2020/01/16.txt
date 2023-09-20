@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-16T10:25:11+13:00
+
+====== Thursday 16 Jan 2020 ======
+
+carrying on with the download of the forecasts 2017 - 2019 from the CDS, see [[Journal:2019:12:18 data downloads]] 
+
+carrying on with the processing of the hindcasts (YYYY → 2016) and forecasts (2017 - 2019), see 
+
+[[Journal:2019:12:19 data processing]] 
+
+and 
+
+2020:updates on data processing 
+
+------ 
+
+small notebook useful for renaming files using the pathlib library: [[~/research/Smart_Ideas/code/utils/rename.ipynb]] 

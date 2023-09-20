@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-01T08:37:12+13:00
+
+====== Tuesday 01 Dec 2020 ======
+
+==== Notebook from Neelesh ====
+
+see **New_Notebook_for_rainml.ipynb** in [[~/research/Smart_Ideas/code/rainml/notebooks]] 
+
+
+--------------------
+
+==== climateai.com's SeasonalBench ====
+
+see talk from **Max Cody Evans** at the AGU Fall meeting
+
+https://agu.confex.com/agu/fm20/meetingapp.cgi/Paper/742936 
+
+Climate forecasting at seasonal timescales is essential for improving the productivity of agriculture, energy, and water resources management. Several studies have demonstrated the potential that machine learning offers for revolutionising seasonal forecasting. However, the progress is limited by the ability and ease of comparison between different approaches and methodologies. The climatology period of reference and its calculation methodology varies between implementation, and the ground truth used for comparison (using different reanalysis products such as NCEP/NCAR or ERA5) can influence the results. Additionally, different metrics of comparison (e.g. Root Mean Square Error, R2, or Kling-Gupta Efficiency) and variables and locations of interest (e.g. the Nino 3.4 index and Oceanic Nino Index) provide sufficient degrees of freedom that the final results of each experiment are not commensurable.Following on the footsteps of WeatherBench, we implement a similar groundwork for seasonal forecasting. SeasonalBench creates a standard pipeline that allows for rapid evaluation of seasonal forecasting models in an easy-to-use python library. It not only sets a standard for a preferred baseline but also allows for convenient transformation of results to all historically used baselines and methods of comparison. The library includes data downloading scripts, standard data preprocessing scripts around temporal and spatial resolutions, standard climatology calculation methodology, multiple metrics of comparison in the order of priority, sets of ground truth baselines as well as an ensemble of ground truth baselines for an optimal ground truth and standard pre-calculated baselines for major climate oscillations. Using this dataset, we evaluate the ability of neural networks, regression-based models, dynamical models, and a combination of the three to forecast seasonal climate.
+
+--------------------
+use 

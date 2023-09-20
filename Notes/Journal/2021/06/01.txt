@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-01T10:20:14+12:00
+
+====== Tuesday 01 Jun 2021 ======
+
+==== Emergency Department ====
+
+@ED  
+
+updated notebook with extracted time-series for subset of the symptoms identified as having seasonal pattern: 
+
+**NF_20210525_read_welly_cluster.ipynb**
+
+notebook with first attempt at modelling: 
+
+**NF_20210601_modelling.ipynb**
+
+--------------------
+
+==== Peter Buchanan Science Team Leader/Capability Leader Systematics ====
+
+@fungi 
+
+https://www.landcareresearch.co.nz/about-us/our-people/peter-buchanan
+
+https://www.auckland.ac.nz/en/science/our-research/jgs-biodiversity-and-biosecurity/our-research/fungal-systematics-and-ecology.html 
+
+Bevan Weir 
+
+https://unidirectory.auckland.ac.nz/people/profile/m-padamsee
+
+--------------------
+
+==== Open Source Geoprocessing Tutorial ====
+
+@spatial @DL 
+
+https://github.com/patrickcgray/open-geo-tutorial/
+
+includes: 
+
+→ Chapter 6: Using Neural Networks for Classification and Land Cover Mapping  
+→ Chapter 7: Download Imagery from Google Earth Engine for Time Series Analysis 

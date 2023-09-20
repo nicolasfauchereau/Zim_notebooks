@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-07T12:30:07+13:00
+
+====== pre processed ======
+Created Friday 07 February 2020
+
+===== CDS =====
+
+==== hindcasts ====
+
+[*] ECMWF 
+	[*] T2M
+	[*] PRECIP 
+
+[ ] UKMO
+	[ ] T2M
+	[ ] PRECIP 
+
+[ ] METEO_FRANCE
+	[ ] T2M
+	[ ] PRECIP 
+
+[ ] DWD
+	[ ] T2M
+	[ ] PRECIP 
+
+[ ] CMCC
+	[ ] T2M
+	[ ] PRECIP 
+
+
+==== forecasts ====
+
+[ ] ECMWF 
+	[ ] T2M
+	[ ] cdPRECIP 
+
+[ ] UKMO
+	[ ] T2M
+	[ ] PRECIP 
+
+[ ] METEO_FRANCE
+	[ ] T2M
+	[ ] PRECIP 
+
+[ ] DWD
+	[ ] T2M
+	[ ] PRECIP 
+
+[ ] CMCC
+	[ ] T2M
+	[ ] PRECIP 
+
+===== JMA =====
+
+==== hindcasts ====
+
+ T2M 
+[ ] PRECIP
+
+==== forecasts ====
+
+[ ] T2M
+[ ] PRECIP
+
+===== IRI =====
+
+==== hindcasts ====
+
+[ ] CanSIPSv2
+[ ] NCEP_CFSv2
+[ ] NASA_GEOSS2S
+[ ] CanCM4i
+[ ] GEM_NEMO
+
+==== forecasts ====
+
+[ ] CanSIPSv2
+[ ] NCEP_CFSv2
+[ ] NASA_GEOSS2S
+[ ] CanCM4i
+[ ] GEM_NEMO
+
+
+

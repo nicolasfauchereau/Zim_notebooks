@@ -1,0 +1,68 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-24T09:57:52+13:00
+
+====== Thursday 24 Feb 2022 ======
+
+==== The self sufficient backyard ====
+
+@sufficiency 
+
+https://selfsufficient-backyard.com/my-book/
+
+--------------------
+
+==== NESI / HPC login ====
+
+@NESI @HPC @CMIP @CMIP6 @downscaling @MBIE 
+
+=== NESI details ===
+
+https://my.nesi.org.nz 
+
+login: fauchereaun
+pass: Adya.......... 
+
+== HPC nodes ==
+
+ssh -Y fauchereaun@w-nwp01.maui.niwa.co.nz 
+pass: Alh....6644!
+
+note that ssh -Y fauchereaun@w-clim01.maui.niwa.co.nz does not work with the same password 
+
+== projects ==
+
+**niwa00018**: lead Abha Sood, Project Title "Regional Modelling - Atmospheric"
+**niwa02916**: lead Stephen Stuart, Project Title "CMIP6 data"
+
+== directories ==
+
+/nesi/project/niwa00018
+/nesi/project/niwa02916 
+
+[[/nesi/project/niwa02916/niwa02916/synda_home/data/CMIP6/ScenarioMIP/]]
+
+
+--------------------
+
+==== PERSIANN dataset ====
+
+https://chrsdata.eng.uci.edu/ 
+
+
+The current operational PERSIANN (Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks) system developed by the Center for Hydrometeorology and Remote Sensing (CHRS) at the University of California, Irvine (UCI) uses neural network function classification/approximation procedures to compute an estimate of rainfall rate at each 0.25° x 0.25° pixel of the infrared brightness temperature image provided by geostationary satellites. An adaptive training feature facilitates updating of the network parameters whenever independent estimates of rainfall are available. The PERSIANN system was based on geostationary infrared imagery and later extended to include the use of both infrared and daytime visible imagery. The PERSIANN algorithm used here is based on the geostationary longwave infrared imagery to generate global rainfall. Rainfall product covers 60°S to 60°N globally. Further reading.
+
+
+
+https://mygeoblog.com/2016/10/13/working-with-persiann/
+
+see also: https://github.com/danielbwright/RainyDay2 
+
+
+RainyDay is a framework for generating large numbers of realistic extreme rainfall scenarios based on relatively short records of remotely-sensed precipitation fields. It is founded on a statistical resampling concept known as stochastic storm transposition (SST). These rainfall scenarios can then be used to examine the extreme rainfall statistics for a user-specified region, or to drive a hazard model (usually a hydrologic model, but the method produces output that would also be useful for landslide models).
+
+
+
+
+
+

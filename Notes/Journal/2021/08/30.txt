@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-30T16:41:28+12:00
+
+====== Monday 30 Aug 2021 ======
+
+==== Fitting extreme value distribution to xarray ====
+
+@ICU @Python 
+
+see XCLIM: 
+
+https://xclim.readthedocs.io/en/stable/notebooks/frequency_analysis.html 

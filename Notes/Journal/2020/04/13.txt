@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-13T09:59:42+12:00
+
+====== Monday 13 Apr 2020 ======
+
+@TODO 
+
+== tidying up code for KNN experiments: ==
+
+== ---------------- ==
+
+	- train once / test once, standardization per GCM, use all 11 GCMs
+	- train once / test once, standardization per GCM, use all 11 GCms and keep all members of the ensemble  
+	- shuffled train and test indices for all of the above 
+	- stratified k-fold cross validation 
+	- "retrain every month" simulation experiments 
+
+
+== Saving all forecasts and hindcasts in csv, flattened ==
+
+== Finishing the list of channels and domain experts for the T&I HUB ==
+
+
+
+
+== Calculate quintiles from VCSN for 6 regions, 15 regions and territorial authorities ==
+
+@DONE 
+
+see: 
+
++ calculates_6_regions_quintiles_from_grid.ipynb
++ calculates_15_regions_quintiles_from_grid.ipynb
++ calculates_territorial_authorities_quintiles_from_grid.ipynb
+
+in [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN]]
+
+
+ 
+
+

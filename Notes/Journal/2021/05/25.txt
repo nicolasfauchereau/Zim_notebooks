@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-25T09:18:09+12:00
+
+====== Tuesday 25 May 2021 ======
+
+==== Network libraries in Python ====
+
+@networks @graph 
+
+→ DyNetx - Dynamic Network library https://dynetx.readthedocs.io/en/latest/ 
+→ https://arxiv.org/abs/2005.07496 Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey 
+→ https://towardsdatascience.com/visualizing-networks-in-python-d70f4cbeb259 Visualizing Networks in Python 
+→ https://python-louvain.readthedocs.io/en/latest/ Community detection for NetworkX’s documentation 
+→ plot weighted graph: https://networkx.org/documentation/stable/auto_examples/drawing/plot_weighted_graph.html 
+→ Fast unfolding of communities in large networks: https://arxiv.org/abs/0803.0476 
+
+a documentation on network analysis: https://journals.ametsoc.org/view/journals/clim/aop/JCLI-D-20-0877.1/JCLI-D-20-0877.1.xml  
+
+Multi-directed graphs in networkx
+
+**# Directed Multi-Graph**
+DM = nx.MultiDiGraph()
+DM.add_edge('B','A')
+DM.add_edge('B','C')
+# Check
+DM.is_multigraph()
+# True
+
+--------------------
+
+==== Open Source Geoprocessing Tutorial ====
+
+@geo @geospatial @GIS 
+
+https://github.com/patrickcgray/open-geo-tutorial/ 
+
+--------------------
+
+==== Movie plot ====
+
+Movie plot idea: A greedy, violent alien species lands on earth, starts digging fossil carbon buried millions of years ago, knowingly messes with the natural carbon cycle, uses sophisticated brainwashing techniques to sell it as inevitable and embarks in massive scale social engineering projects to make humans more and more dependent, destroys entire ecosystems and poisons millions of people, perverts or straight up overthrows democracies across the globe, buys politicians, silences and threatens human scientists raising the alarm ... crazy to think humans would not revolt right ? ... right ?? 
+
+
+
+
+
+
+
+
+
+

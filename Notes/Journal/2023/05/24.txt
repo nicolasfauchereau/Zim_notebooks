@@ -1,0 +1,80 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-24T08:51:04+12:00
+
+====== Wednesday 24 May 2023 ======
+
+=== calibration ===
+
+__scripts:__ 
+
+**BDSD_calibrate.py**
+
+does the calibration over the whole common period between CCAM and VCSN (1972 - 2014) 
+
+**BDSD_calibrate_crossvalidation.py** 
+
+does the calibration using the 'YOLO' approach: i.e. the calibration file (zarr) with year '1972' contains the transfer functions derived over all the other years (1973-2014), etc 
+
+__output files: __
+
+in [[/media/nicolasf/END19101/research/CMIP6_downscaling/outputs/calibration/${model}]]
+
+for the YOLO approach, the (zarr) files have this pattern 
+
+**QMds_{model}_CCAM_historical_{varname}_BCSD_QM_adjusted_calibration_cross_validated_LOO_{year}_52quantiles_monthgrouper.zarr** 
+
+for the calibration files derived over the whole common period, the files have this pattern 
+
+**QMds_{model}_CCAM_historical_{varname}_BCSD_QM_adjusted_calibration_1972_2014_52quantiles_monthgrouper.zarr**
+
+=== adjustment ===
+
+__scripts:__ 
+
+**BCSD_adjust_historical_crossvalidation.py**
+
+does the adjustment of the CCAM runs over the historical period (1972 - 2014). As we cannot adjust over the period we calibrated on, it uses this 'YOLO' approach, i.e. each year is adjusted in turn, using the transfer functions derived over all the remaining years, i.e. 1972 is adjusted using the transfer functions derived over 1973-2014 (contained illln the zarr file **QMds_{model}_CCAM_historical_{varname}_BCSD_QM_adjusted_calibration_cross_validated_LOO_1972_52quantiles_monthgrouper.zarr) **
+
+**BCSD_adjust_scenario.py**
+
+does the adjustment of the CCAM runs over the scenarios ssp126, ssp245, ssp370 (periods 2015 - 2099) 
+
+it uses the calibration information derived over the whole common period between CCAM and VCSN, contained in the files: 
+
+**QMds_{model}_CCAM_historical_{varname}_BCSD_QM_adjusted_calibration_1972_2014_52quantiles_monthgrouper.zarryes **
+
+--------------------
+
+==== downscaling in JULIA ====
+
+@PwC @CMIP6 @downscaling 
+
+https://github.com/jhardenberg/RainFARM.jl 
+
+Terzago, S., Palazzi, E., and von Hardenberg, J. (2018). Stochastic downscaling of precipitation in complex orography: a simple method to reproduce a realistic fine-scale climatology, Nat. Hazards Earth Syst. Sci., 18, 2825-2840, doi: https://doi.org/10.5194/nhess-18-2825-2018
+
+D’Onofrio, D., Palazzi, E., von Hardenberg, J., Provenzale, a., & Calmanti, S. (2014). Stochastic Rainfall Downscaling of Climate Models. Journal of Hydrometeorology, 15(2), 830–843. doi: https://doi.org/10.1175/JHM-D-13-096.1
+
+Rebora, N., Ferraris, L., von Hardenberg, J., & Provenzale, A. (2006). RainFARM: Rainfall Downscaling by a Filtered Autoregressive Model. Journal of Hydrometeorology, 7(4), 724–738. doi: https://doi.org/10.1175/JHM517.1
+
+https://jhardenberg.github.io/RainFARM.jl/dev/
+
+see also: https://datascientyst.com/pandas-vs-julia-comparison-cheat-sheet/ 
+
+--------------------
+
+==== In years after El Niño, global economy loses trillions ====
+
+	Researchers report that the financial toll of the climate pattern known as El Niño can persist for several years and cost trillions in lost income worldwide. The study, which is among the first to evaluate the long-term costs of El Niño, found that the 1982 and 1997 events led to $4.1 trillion and $5.7 trillion in lost income in the five years following them. With El Niño projected to return this year, the researchers project that global economic losses for the 21st century will amount to $84 trillion as climate change potentially amplifies the events' frequency and strength. 
+
+The researchers estimate that the El Niño predicted for 2023 alone could hold the global economy back by as much as $3 trillion by 2029.
+
+When it comes to climate change, world leaders and the public rightfully focus on the unabated rise in the global average temperature, Mankin said. "But if you're estimating the costs of global warming without considering El Niño, then you are dramatically underestimating the costs of global warming."
+
+"Our welfare is affected by our global economy, and our global economy is tied to the climate," Mankin said. "When you ask how costly climate change is, you can start by asking how costly climate variation is. We're showing here that such variation, as embodied in El Niño, is incredibly costly and stagnates growth for years, which led us to cost estimates that are orders of magnitudes larger than previous ones."
+
+https://www.science.org/doi/10.1126/science.adf2983
+
+
+

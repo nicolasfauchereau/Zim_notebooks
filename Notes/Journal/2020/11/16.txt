@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-16T09:44:18+13:00
+
+====== Monday 16 Nov 2020 ======
+
+==== calculation of the accuracy if applying the SCO forecasts to the Innovation Vineyards location ====
+
+see notebooks in  [[~/research/Smart_Ideas/code/targets/analysis]] 
+
+preliminary results for Innovation Vineyard in Blemheim 
+
+{{./screenshot_2020-11-16-151549.png}}
+
+much better for than the SCO for rainfall, with the exception of May-June, the minimum accuracy using Machine Learning is pretty much consistently above the accuracy derived from the SCO
+
+bit of a mixed bag for temperature, temperature by definition is much more spatially coherent than rainfall, hence the SCO forecasts for the NSI might be more representative of the location of the Innovation Vineyards near Blenhiem 
+
+--------------------
+
+==== Processing ERA5 data with Dask & AWS Fargate ====
+
+https://nbviewer.jupyter.org/github/zflamig/dask-era5/blob/main/notebook/era5_fargate_dask.ipynb
+
+
+--------------------
+
+==== registry of open data on AWS ====
+
+https://registry.opendata.aws/ 
+
+
+
+
+
+
+
+
+
+
+
+
+

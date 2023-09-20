@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-22T09:31:37+12:00
+
+====== Monday 22 Aug 2022 ======
+
+Rajendra Prasad UNESCO → Tuvalu project 
+
+@ICU 
+
+--------------------
+
+==== xMIP: pre-processing of CMIP6 data ====
+
+https://github.com/jbusecke/xMIP
+
+
+see https://github.com/jbusecke/xMIP/blob/main/docs/tutorial.ipynb 
+
+
+--------------------
+
+==== A small utility for generating ND array pyramids using Xarray and Zarr. ====
+
+
+https://github.com/carbonplan/ndpyramid

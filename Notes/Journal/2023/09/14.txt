@@ -1,0 +1,109 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-14T09:24:11+12:00
+
+====== Thursday 14 Sep 2023 ======
+
+==== statistical review of world's energy data ====
+ 
+https://www.energyinst.org/statistical-review
+
+--------------------
+==== carbonplan / extreme heat article ====
+
+code: https://github.com/carbonplan/extreme-heat 
+
+explainer: https://carbonplan.org/research/extreme-heat-explainer 
+
+The code (https://github.com/carbonplan/extreme-heat/tree/main) contains several interesting tidbits: 
+
+environment: https://github.com/carbonplan/extreme-heat/tree/main/envs uses CMIP6_downscaling pinned version 
+
+accessing the NASA-NEX-CMIP6 data: https://github.com/carbonplan/extreme-heat/blob/main/notebooks/utils.py 
+
+copied into [[/home/nicolasf/PwC/jupiter/src]] 
+
+
+The Washington post paper has been downloaded and is available in [[./Five billion people will face extreme heat at least a month each year by 2050 - Washington Post (14_09_2023 4_36_40 pm).html]]
+
+See **Luke Parsons** from The Nature Conservancy: https://www.nature.org/en-us/about-us/who-we-are/our-people/luke-parsons/ 
+
+→ https://sites.google.com/site/lukeaparsons/
+→ https://scholar.google.com/citations?user=l6NNV3UAAAAJ&hl=en 
+
+--------------------
+==== examples for using pooch retrieve for climate indices ====
+
+pooch python: https://github.com/fatiando/pooch 
+
+
+
+@CPP 
+
+Record low Antarctic sea ice coverage indicates a new sea ice state
+
+https://www.nature.com/articles/s43247-023-00961-9
+
+CODE:
+
+ https://github.com/edoddridge/2023-sea-ice-regime for supplementary Figures 1 and 4, e.g. 
+
+{{~/Pictures/Screenshot from 2023-09-14 17-09-55.png?height=500}}
+
+e.g.
+
+{{{code: lang="python3" linenumbers="False"
+fname_pdo = pooch.retrieve(
+    url="https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.pdo.dat",
+    known_hash=None,
+)
+}}}
+
+
+and 
+
+https://github.com/ariaanp/2023-sea-ice-regime 
+
+changepoint analysis in R: 
+
+https://github.com/ariaanp/2023-sea-ice-regime/blob/main/Calc_SIE_changepoints.R 
+
+
+{{{code: lang="r" linenumbers="True"
+
+#############################################
+### Step change analysis 1 :: Changepoint ###
+#############################################
+
+library(changepoint)
+
+si.cpt <- cpt.mean(seaice$Anomaly, penalty = "BIC",method = "PELT")  # fit cpt.mean
+plot(si.cpt, cpt.col="blue")
+print(si.cpt)
+print(si.cpt@cpts) 
+
+# output >> breakpoints at 346 = 2007.625 and 454 = 2016.625 
+
+#############################################
+### Step change analysis 2 :: Strucchange ###
+#############################################
+
+library(strucchange)
+
+si.sc <- strucchange::breakpoints(Anomaly ~ 1, h = 0.15, data = seaice) # fit "breakpoints"
+print(si.sc$breakpoints)
+summary(si.sc)
+plot(si.sc)
+
+# output >> breakpoints at 178 = 1993.625, 349 = 2007.875 and 454 = 2016.625 
+# output >> if forced to select two breakpoints, breakpoints at 346 = 2007.625 and 454 = 2016.625 
+}}}
+
+
+
+
+
+
+
+
+

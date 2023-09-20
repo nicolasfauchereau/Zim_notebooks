@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-11T11:13:13+13:00
+
+====== downloads ======
+Created Tuesday 11 February 2020
+
+===== IRI =====
+
+in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/GCMs/downloads/hindcasts/IRI]]	
+
+for y in $(seq 1981 2016); do echo "year $y: $(ll *_${y}*.nc | wc -l)"; done 
+
+==== CanSIPSv2 ====
+
+[*] T2M
+[*] PRECIP 
+[*] SST
+[*] Z500
+
+==== NCEP_CFSv2 ====
+
+[*] T2M
+[*] PRECIP 
+[*] SST
+[x] Z500: not available 
+
+==== NASA_GEOSS2S ====
+
+[*] T2M year 1981 = 11 months 
+[*] PRECIP 1981 = 11 months 
+[*] SST
+[*] Z500
+
+==== CanCM4i ====
+
+[*] T2M
+[*] PRECIP 
+[*] SST
+[*] Z500
+
+==== GEM_NEMO ====
+
+[*] T2M
+[*] PRECIP 
+[*] SST
+[*] Z500
+
+
+

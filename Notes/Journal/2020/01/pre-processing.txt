@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-21T16:19:47+13:00
+
+====== pre-processing ======
+Created Tuesday 21 January 2020
+
+**+ pre-processing:** 
+
+1. read each grib file
+2. test if number of steps == 5, if not dropna 
+3. re-attribute vector variable for step range(1, 5 + 1) 
+4. rename all variables and dimensions: ;
+	a. {'latitude':'lat', 'longitude':'lon','number':'member'} | variables PRECIP, T2M, SST, Z500, Z850
+5. flip latitudes
+6. get rid of extraneous dimensions / variables 

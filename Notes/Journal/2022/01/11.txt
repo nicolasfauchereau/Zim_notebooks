@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-11T09:30:02+13:00
+
+====== Tuesday 11 Jan 2022 ======
+
+==== WRs and extremes ====
+
+@CPP 
+
+Neelesh's classification on NCEP 
+
+{{./screenshot_2022-01-11-093030.png?height=500}}{{./screenshot_2022-01-11-112511.png?height=500}}
+
+remapping of the cluster labels to the ones corresponding to the classification done by Neelesh 
+
+see **remap_cluster_labels_NCEP_ERA5.ipynb** in 
+
+[[/home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper]]
+
+| cluster number | new order | label |
+|:---------------|:----------|:------|
+| 1              | 9         | H     |
+| 2              | 4         | HSE   |
+| 3              | 5         | LNE   |
+| 4              | 1         | LSE   |
+| 5              | 3         | LSW   |
+| 6              | 8         | LNW   |
+| 7              | 6         | L     |
+| 8              | 2         | HSE   |
+| 9              | 7         | HW    |
+
+
+as well as 
+
+→ **composites_HGT_and_UV_NCEP.ipynb** 
+→ **composites_HGT_and_UV_ERA5.ipynb** 
+
+for the new composite figures 
+
+confusion matrix: see **remap_cluster_labels_NCEP_ERA5.ipynb** 
+
+
+--------------------
+
+==== ICU: validation of the quartile forecasts ====
+
+@ICU 
+
+see: 
+
+**drive_admin_GCMs_evaluation.ipynb**
+
+and 
+
+**GCMs_admin_hindcast_climatologies_and_probabilities.ipynb**
+
+in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_forecast_table_validation]] 
+
+NOTE: always use the conda environment "ICU" as there are some issues with regionmask / shapely with "climetlab"
+
+--------------------
+
+==== CPP: WRs in NCEP and ERA5 ====
+
+confusion matrix (expressed in percentage of days in ERA5 with matching cluster in NCEP) 
+
+see notebook: **remap_cluster_labels_NCEP_ERA5_make_confusion_matrix.ipynb**
+
+{{./screenshot_2022-01-12-141540.png}}
+
+in outputs, dataframe with cluster numbers in ERA5 and NCEP: **cluster_numbers_ERA5_NCEP_labelled.csv	**

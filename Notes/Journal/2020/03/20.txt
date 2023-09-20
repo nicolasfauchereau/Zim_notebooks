@@ -1,0 +1,81 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-20T08:23:51+13:00
+
+====== Friday 20 Mar 2020 ======
+
+=== Climate indices from daily VCSN using xclim ===
+
+@TODO 
+
+see also: https://github.com/Ouranosinc/xclim-benchmark 
+
+@SI @VCSN @XCLIM 
+
+1) update VCSN daily datasets
+2) calculates some indices from daily VCSN using xclim 
+3) how to derive indices from regions ? 
+
+! note that the [[https://xclim.readthedocs.io/en/stable/api.html#module-xclim.subset|xclim.subset]] subpackage allows the creation of masks, see 
+
+{{{code: lang="python" linenumbers="True"
+>>> from xclim import subset
+>>> import xarray as xr
+>>> import geopandas as gpd
+>>> ds = xr.open_dataset('example.nc')
+>>> polys = gpd.read_file('regions.json')
+Get a mask from all polygons in 'regions.json'
+>>> mask = subset.create_mask(x_dim=ds.lon, y_dim=ds.lat, poly=polys)
+>>> ds = ds.assign_coords(regions=mask)
+Operations can be applied to each regions with  `groupby`. Ex:
+>>> ds = ds.groupby('regions').mean()
+Extra step to retrieve the names of those polygons stored in the "id" column
+>>> region_names = xr.DataArray(polys.id, dims=('regions',)))
+>>> ds = ds.assign_coords(regions_names=region_names)
+}}}
+
+
+see also 
+
+xclim.subset.subset_shape 
+
+! only available in the dev version of xclim, and not working yet ... 
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+=== check Ben's validation notebooks ===
+
+@TODO
+
+see in [[/home/nicolasf/research/Smart_Ideas/code/GCM-validations/notebooks/Bens]] 
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+=== PCA and other dimensionality reduction methods on pandas dataframes ===
+
+https://github.com/firmai/pandasvault#principal-component
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+=== correction on the NZ 6 regions and rainfall fields ===
+
+The crs was not set to **epsg 4326**, re-run all calculation of the 6 regions indices with this **nz_regions = nz_regions.to_crs(epsg=4326)** first
+
+also a mask variable has been added into the rainfall monthly and the daily datasets, using
+
+{{{code: lang="python" linenumbers="True"
+if VAR_NAME == 'Rain_bc': 
+    mask = xr.where(dset['agent'] > 0, 1, np.nan) 
+    dset['mask'] = mask
+    dset[VAR_NAME] = dset[VAR_NAME] * dset['mask']
+}}}
+
+
+
+
+
+
+
+
+
+

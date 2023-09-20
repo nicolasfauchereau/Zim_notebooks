@@ -1,0 +1,106 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-20T09:11:12+12:00
+
+====== Tuesday 20 Apr 2021 ======
+
+==== WMO LRF data exchange website ====
+
+login: niwaben 
+password: Marineheatwave123* 
+
+see [[~/operational/read_WMO_LRF.ipynb]] but in a nutschell: 
+
+→ not all variables available for all years for the hindcast period 
+→ 2.5 deg resolution only 
+→ only seasonal (not monthly) values available 
+
+--------------------
+calculation of tercile, deciles and percentiles categories time-series for all NZ regions 
+
+see: 
+
+CDS/version_2/calculate_monthly_and_seasonal_hindcast_climatology_region_mask_NZ_regions.ipynb 
+
+outputs are in 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/outputs]] 
+
+e.g.
+
+**→ ts_monthly_percentile_categories_ECMWF_precip_ESI.nc**
+**→ ts_monthly_percentile_categories_percent_ECMWF_precip_ESI.nc**
+**→ ts_monthly_percentile_most_likely_category_ECMWF_precip_ESI.nc**
+
+
+respectively the categories for each member, the probability for each category, and the most likely category 
+
+--------------------
+
+==== SCO accuracy on the VCSN derived regional time-series ====
+
+varname = 'RAIN' 
+period = 'seasonal' (3 months) 
+no tolerance
+			NNI 			WNI 		ENI 			NSI 			WSI 		ESI
+2017-2019 	0.437500 	0.375000 	0.395833 	0.284722 	0.333333 	0.305556
+
+varname = 'TMEAN' 
+period = 'seasonal' (3 months) 
+no tolerance
+			NNI 			WNI 		ENI 			NSI 			WSI 		ESI
+2017-2019 	0.423611 	0.312500 	0.319444 	0.263889 	0.277778 	0.263889 
+
+--------------------
+
+==== ERSST on OpenDAP ====
+
+you can access the ersst v5 dataset (https://www.ncdc.noaa.gov/data-access/marineocean-data/extended-reconstructed-sea-surface-temperature-ersst-v5) on OpenDAP like so: 
+
+url = "http://www.esrl.noaa.gov/psd/thredds/dodsC/Datasets/noaa.ersst.v5/sst.mnmean.nc"	
+# drop an unnecessary variable which complicates some operations
+ds = xr.open_dataset(url, drop_variables=["time_bnds"])
+# will take a minute or two to complete
+ds = ds.sel(time=slice("1993", "2018")).load()
+ds
+
+--------------------
+
+==== ERSST on google cloud ====
+
+see https://github.com/xarray-contrib/xarray-tutorial/blob/master/scipy-tutorial/03_computation_with_xarray.ipynb 
+
+import gcsfs
+
+fs = gcsfs.GCSFileSystem(token="anon")
+ds = xr.open_zarr(
+	fs.get_mapper("gs://pangeo-noaa-ncei/noaa.ersst.v5.zarr"), consolidated=True
+).load()
+ds
+
+
+
+
+--------------------
+
+==== detrend an xarray DataArray ====
+
+
+def detrend_dim(da, dim, deg=1):
+	# detrend along a single dimension
+	p = da.polyfit(dim=dim, deg=deg)
+#     fit = xr.polyval(dim, p.polyfit_coefficients)
+	fit = xr.polyval(da[dim], p.polyfit_coefficients)
+	return da - fit
+
+
+
+
+
+
+
+
+
+
+
+

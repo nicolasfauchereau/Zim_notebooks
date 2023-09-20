@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-02T10:15:57+13:00
+
+====== Tuesday 02 Mar 2021 ======
+
+==== Drew weather regimes: ====
+
+discussion on "secondary" classification / clustering 
+
+on Teams: 
+
+"""so basically clustering done first using Euclidean Distance, after determining optimal number of clusters using Affinity Propagation, then within each cluster (all days belonging to a cluster) using multivariate (i.e. including surface variables such as precip and temp) and multi-metrics  -- Manhattan and other distances -- including those who can deal with categorical values, so we can include discretised (tercile or decile based) versions of the surface variables .... """
+
+**Questions to ask Neelesh:** 
+ 
+
+what reanalysis product he has used for the clustering (ERA5, NCEP2 ?)
+	
+what variable / level (Z1000 ?, Z850 ?) 
+
+what geographical domain (bounds in latitude and longitude) 
+
+what period the clustering has been done over (1979 - 2019 ? other ?)
+
+what preprocessing applied: 
+
+	daily 'raw' values or daily anomalies WRT to seasonal cycle ? 
+	detrended or not ?
+	Any other preprocessing (interpolation on another grid, etc)
+
+What dimensionality reduction technique has been used, and the details: I assume he used PCA first, how many PCs or % of variance explained was kept ?
+
+--------------------
+
+==== Geopandas 0.9.0 out ====
+
+changelog https://geopandas.readthedocs.io/en/stable/docs/changelog.html
+
+**geopandas.read_file** will now also automatically recognize zipped files
+The **dissolve()** method now allows dissolving by no column (by=None) to create a union of all geometries 
+The **GeoDataFrame.explode()** method now allows exploding based on a non-geometry column
+
+--------------------
+
+==== ICU development / hotspots ====
+
+easy water stress: mask regions where past N months < 40% and forecast also < 40% 
+
+--------------------
+
+==== remote climate data with INTAKE ====
+
+see examples: 
+
+https://github.com/aaronspring/remote_climate_data
+
+https://github.com/pangeo-data/pangeo-datastor
+
+list of INTAKE plugins: https://intake.readthedocs.io/en/latest/plugin-directory.html 
+
+example: 
+
+import intake
+cat = intake.open_catalog('https://raw.githubusercontent.com/aaronspring/remote_climate_data/master/master.yaml')
+
+cat.walk() 
+
+HadCRUT4 = cat.atmosphere.HadCRUT4.to_dask()
+
+--------------------
+
+==== PYFOREST ====
+
+import all Python data science libraries in one line of code 
+
+see: https://towardsdatascience.com/import-all-python-libraries-in-one-line-of-code-86e54f6f0108 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

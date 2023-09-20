@@ -1,0 +1,179 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-27T08:47:05+13:00
+
+====== Monday 27 Mar 2023 ======
+
+==== ClimateLearn: A machine-learning approach for climate prediction using network measures ====
+
+@CMIP6 @downscaling 
+
+https://aditya-grover.github.io/blog/2023/climate-learn/ 
+
+https://github.com/aditya-grover/climate-learn
+
+cloned into [[~/research/CMIP6_downscaling/repos]] 
+
+e.g. for downscaling: 
+
+https://uaf-snap.org/how-do-we-do-it/downscaling/
+
+https://github.com/aditya-grover/climate-learn/blob/main/notebooks/2-Model_Training_Evaluation.ipynb 
+
+--------------------
+
+==== Deriving climatologies for MSWEP ====
+
+@MSWEP @ICU @UNESCO 
+
+**1) all the nogauge files are in** 
+ 
+[[/media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past_nogauge/Daily]] 
+
+2) The script **process_nogauge.sh** is in the same folder, this is the content
+
+{{{code: lang="python3" linenumbers="True"
+#!/usr/bin/bash 
+
+for y in {2017..2020}; do cdo mergetime ${y}???.nc /home/nicolasf/data/MSWEP/merged_${y}.nc; /home/nicolasf/data/MSWEP/compress.py /home/nicolasf/data/MSWEP/merged_${y}.nc; done
+}}}
+
+
+it calls **compress.py**, which is in the folder [[/home/nicolasf/data/MSWEP/]] 
+
+
+{{{code: lang="python3" linenumbers="True"
+#!/home/nicolasf/mambaforge/envs/ICU_ops/bin/python
+
+import sys
+import os
+import pathlib
+import xarray as xr
+import shutil
+
+fname = sys.argv[1]
+
+fname = pathlib.Path(fname)
+
+name = fname.name
+dpath = fname.parent
+
+varname = 'precipitation'
+
+encoding={varname:{'zlib':True, 'shuffle':True, 'complevel':9}}
+
+dset = xr.open_dataset(fname)
+
+dset.to_netcdf(dpath.joinpath(name.replace('.nc','') + '_comp.nc'), encoding=encoding, format='NETCDF4'll)
+
+os.remove(str(fname))
+
+print(f"processed {fname}")
+}}}
+
+
+3) **the files merged_????_comp.nc are then copied in /media/nicolasf/END19101/ICU/data/MSWEP/Daily/merged_comp** 
+
+4) **then for each year, we split them into subdomains:** 
+
+{{{code: lang="python3" linenumbers="True"
+
+for y in {1979..2020}; do cdo distgrid,5,5 merged_${y}_comp.nc obase_${y}_; done
+}}}
+
+
+which are mvim oved to the folder [[/media/nicolasf/END19101/ICU/data/MSWEP/Daily/merged_comp/obase]] 
+
+5) we can then use: **process_split_obase_files.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/MSWEP]] 
+
+to load each subset, calculate the rolling accumulations, selects dates corresponding to each day of the year, calculate the climatologies, and save to disk using the pattern 
+
+obase_000??_DOY_???_climatology_average_??days.nc
+
+in [[/media/nicolasf/END19101/ICU/data/MSWEP/Daily/merged_comp/obase/climatologies]] 
+
+Then 
+
+**6) we should be able to collate the grid using** 
+
+{{{code: lang="python3" linenumbers="True"
+for DOY in {001..365}; do 
+	echo $DOY; 
+	cdo collgrid obase_000??_DOY_${DOY}_climatology_average_30days.nc DOY_${DOY}_climatology_average_30days.nc
+done
+}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+==== Pyleoclim ====
+
+for time-series analysis 
+
+http://linked.earth/PyleoTutorials/notebooks/L1_filtering_and_detrending.html# 
+
+e.g. detrending using EMD: 
+
+ts_emd = ts_d18O.detrend(method='emd')
+
+Lanczos filter
+
+ts_low = ts_d18O.interp().filter(method='lanczos',cutoff_scale=80)
+
+datetime to decimal year
+
+dates = nino34['time'].values
+years = dates.astype('datetime64[Y]').astype(int) + 1970
+months = dates.astype('datetime64[M]').astype(int) % 12 + 1
+decimal_year = years + months/12.0
+
+
+http://linked.earth/PyleoTutorials/intro.html
+
+https://github.com/LinkedEarth/PaleoBooks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

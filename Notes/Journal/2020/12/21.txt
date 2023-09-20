@@ -1,0 +1,124 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-21T08:27:45+13:00
+
+====== Monday 21 Dec 2020 ======
+
+==== flow-forecast: Deep learning for time series forecasting ====
+
+https://github.com/AIStream-Peelout/flow-forecast
+
+and 
+
+https://flow-forecast.atlassian.net/wiki/spaces/FF/overview
+
+the tutorials are at https://github.com/AIStream-Peelout/flow-forecast/wiki/Training-models 
+
+see also 
+
+CDSA: Cross-Dimensional Self-Attention for Multivariate, Geo-tagged Time Series Imputation 
+
+https://arxiv.org/abs/1905.09904 
+
+and implementation (in TF 2.1.0):   https://github.com/Gabriel-Macias/cdsa_imputation 
+
+other possible methodologies and implementations: 
+
+https://chandlerzuo.github.io/blog/2017/11/darnn
+
+--------------------
+
+==== Temporal Pattern Attention for Multivariate Time Series Forecasting ====
+
+https://arxiv.org/abs/1809.04206
+
+code: https://github.com/gantheory/TPA-LSTM 
+
+
+--------------------
+
+==== A PyTorch Example to Use RNN for Financial Prediction ====
+
+The model I have implemented is proposed by the paper A Dual-Stage Attention-Based Recurrent Neural Network for Time Series Prediction. The Dual-Stage Attention-Based RNN (a.k.a. DA-RNN) model belongs to the general class of Nonlinear Autoregressive Exogenous (NARX) models, which predict the current value of a time series based on historical values of this series plus the historical values of multiple exogenous time series. A linear counterpart of a NARX model is the ARMA model with exogenous factors.
+
+https://chandlerzuo.github.io/blog/2017/11/darnn 
+
+The DA-RNN model, on the high level, includes two LSTM networks with attention mechanism. **The first LSTM network encodes information among historical exogenous data,** and its attention mechanism performs feature selection to select the most important exogenous factors. Based on the output of the first LSTM network, **the second LSTM network further combines the information from exogenous data with the historical target time series**. The attention mechanism in the second network performs feature selection in the time domain, i.e., it applies weights to information at different historical time points. **The final prediction, therefore, is based on feature selection in both the dimension of exogenous factors and time**. Unlike classical feature selection in statistical models, DA-RNN selects features dynamically. In other words, the weights on factors and time points are changing across time. One inaccurate analogy, perhaps, is a regression model with ARMA errors, with time-varying coefficients for both the exogenous factors and the ARMA terms.
+
+The original code is linked into the blog post (+ utility functions at https://github.com/chandlerzuo/chandlerzuo.github.io/tree/master/codes/da_rnn), but there is an implementation more recent at https://github.com/Seanny123/da-rnn 
+
+
+--------------------
+
+==== FireTS: A python multi-variate time series prediction library working with sklearn ====
+
+implements **NARX models** 
+
+https://github.com/jxx123/fireTS 
+
+cloned into `repo_libraries` in `resources` of Smart Ideas 
+
+
+--------------------
+
+==== Compression, search, interpolation, and clustering of images using machine learning ====
+
+Embeddings in machine learning provide a way to create a concise, lower-dimensional representation of complex, unstructured data. Embeddings are commonly employed in natural language processing to represent words or sentences as numbers.
+
+first article: **how to take weather forecast images and create TensorFlow records out of them to make them ready for machine learning.** 
+
+https://towardsdatascience.com/how-to-convert-binary-files-into-tensorflow-records-3150d7236341
+
+second article: **How to create a concise image representation using machine learning** 
+
+https://towardsdatascience.com/how-to-create-a-concise-image-representation-using-machine-learning-20156c1e0c19 
+
+third article: **Compression, search, interpolation, and clustering of images using machine learning**
+
+https://towardsdatascience.com/compression-search-interpolation-and-clustering-of-images-using-machine-learning-eb65fcf0abbb
+
+recording of talk on youtube: https://www.youtube.com/watch?v=4TRxxkGRlAs&feature=emb_logo 
+
+--------------------
+
+==== Artificial Intelligence applications in Weather and Climate ====
+
+wikidot: 
+
+http://aiwc.wikidot.com/
+
+login: nicolas.fauchereau@niwa.co.nz 
+pass: alh..........
+
+--------------------
+
+==== Kite code completion extension for Jupyterlab ====
+
+
+https://help.kite.com/article/143-how-to-install-the-jupyterlab-plugin
+
+pip install jupyter-kite
+jupyter labextension install "@kiteco/jupyterlab-kite"
+
+Note that you need `nodejs` which can be installed via `conda` 
+
+--------------------
+
+==== sktime and sktime-dl (deep learning) ====
+
+**sktime**:  A unified framework for machine learning with time series  
+
+https://github.com/alan-turing-institute/sktime
+
+
+
+**sktime-dl:**  sktime companion package for deep learning based on TensorFlow 
+
+
+https://github.com/sktime/sktime-dl
+
+
+
+
+
+

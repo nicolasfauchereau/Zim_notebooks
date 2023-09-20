@@ -1,0 +1,80 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-29T08:50:03+13:00
+
+====== Thursday 29 Oct 2020 ======
+
+==== Try lagged PCs instead of lagged initial features (grid points) ====
+
+using parameters: 
+
+application = 'Apple_and_Pears'
+varname = 'RAIN_BC'
+stat = 'mean'
+num_quantiles = 3
+target_type = f'cat{num_quantiles}'
+step = 4
+lag_sst = True
+max_lag = 6
+detrend_sst = False
+
+accuracy                   		0.423942
+accuracy_score             		0.423942
+balanced_accuracy_score    	0.420478
+matthews_corrcoef          	0.135287
+
+so much less than using the lagged initial features themselves, which yields, with the exact same parameters 
+
+accuracy                   		**0.603512**
+accuracy_score             		0.603512
+balanced_accuracy_score   	0.602869
+matthews_corrcoef          	0.406421
+
+Try another domain for the SSTs (extended to all longitudes, and from 60S to 60N) leads to accuracy drop instead of accuracy gain, with 
+
+accuracy                   		0.559639
+accuracy_score            		0.559639
+balanced_accuracy_score    	0.557959
+matthews_corrcoef          	0.342301
+
+Another local domain yields: 
+
+accuracy                   		0.551058
+accuracy_score             		0.551058
+balanced_accuracy_score    	0.548196
+matthews_corrcoef          	0.327994
+
+--------------------
+
+==== update PYCARET to version 2 ====
+
+OK, in environment pycaret 
+
+release notes: https://github.com/pycaret/pycaret/releases 
+
+latest documentation: https://pycaret.readthedocs.io/en/latest/  
+
+--------------------
+
+==== Spatial interpolation in Python using tobler ====
+
+https://medium.com/spatial-data-science/spatial-interpolation-with-python-a60b52f16cbb 
+
+https://github.com/pysal/tobler 
+
+can do model-based interpolation using **regression approaches that incorporates auxiliary data**  
+
+--------------------
+
+==== install geographic data science stack ====
+
+see https://gdsl-ul.github.io/soft_install/ 
+
+
+
+
+
+
+
+
+

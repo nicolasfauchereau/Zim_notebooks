@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-04T12:37:35+12:00
+
+====== Tuesday 04 Apr 2023 ======
+
+==== Quarto ====
+
+https://quarto.org/ 
+
+
+==== ClimAlign: Unsupervised statistical downscaling of climate variables via normalizing flows ====
+
+
+https://github.com/bgroenks96/generative-downscaling 
+
+does with the paper
+
+https://arxiv.org/abs/2008.04679
+
+ClimAlign: Unsupervised statistical downscaling of climate variables via normalizing flows 
+
+https://github.com/ArcticSnow/TopoPyScale
+
+--------------------
+https://github.com/bgroenks96/pyclimdex
+
+example of using BCSD inc. QDM 
+
+
+https://github.com/ClimateImpactLab/downscaleCMIP6/blob/master/notebooks/qdm_validation/xclim_qdm_diagnostics.ipynb 
+
+QLAD 
+
+ 
+https://github.com/ClimateImpactLab/downscaleCMIP6/blob/master/notebooks/qplad_validation/prototype_analog_method_scaling.ipynb 
+
+from xclim.sdba.adjustment import AnalogQuantilePreservingDownscaling, QuantileDeltaMapping
+
+see https://github.com/ClimateImpactLab/xclim/blob/add_analog_downscaling/xclim/sdba/adjustment.py 
+
+git clone https://github.com/ClimateImpactLab/xclim.git 
+
+git fetch --all 
+
+git branch -r
+
+git pull --all
+
+git branch -a 
+
+

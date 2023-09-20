@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-28T08:56:48+13:00
+
+====== Monday 28 Sep 2020 ======
+
+==== ICU hotspot, GCMs + observations ====
+
+1. saves the GCM anomalies in [[/home/nicolasf/operational/ICU/development/hotspots/outputs/GCM_ensembles]] with 
+pattern **GCM_ensemble_anomalies_YYYY-MM.nc** 
+
+2. calculate the 28, 29, 30 (done already) and 31 days running cumultaive values from the GPM IMERG 
+
+cdo --timestat_date last runsum,28 GPM_IMERG_daily.v06.2001.2019_precipitationCal.nc GPM_IMERG_daily.v06.2001.2019_precipitationCal_28d_runsum.nc 
+
+see full notebook to calculate the probability for each 
+
+--------------------
+
+==== Vectorization of scipy percentile ====
+
+see examples of `**xr.apply_ufunc**`: 
+
+https://stackoverflow.com/questions/53769509/xarray-apply-ufunc-to-get-the-min-and-max-for-every-variable
+http://xarray.pydata.org/en/stable/examples/apply_ufunc_vectorize_1d.html s
+
+--------------------
+
+==== Efficient Atmospheric Analogue Selection with Xarray and Dask | SciPy 2019 | Tyler Wixstrom ====
+
+https://www.youtube.com/watch?v=gdHiGsGUh3o 
+
+see also: https://github.com/tjwixtrom/adaptive_WRF 
+
+--------------------
+
+==== SCRAPBOX: Python for Climatology, Oceanography and Atmospheric Science ====
+
+A collection of code examples etc: 
+
+https://scrapbox.io/pycoaj/
+
+--------------------
+
+==== Freeze the Discriminator: a Simple Baseline for Fine-Tuning GANs ====
+
+https://arxiv.org/pdf/2002.10964.pdf 
+
+--------------------
+
+==== review of `Machine learning-based climate time series anomaly detection using convolutional neural networks ` ====
+
+see on Scholastica: https://app.scholasticahq.com/journals/weather-and-climate/manuscripts/1129249-machine-learning-based-climate-time-series-anomaly-detection-using-convolutional-neural-networks 
+
+--------------------
+
+==== colorcet: Collection of perceptually accurate colormaps ====
+
+https://colorcet.holoviz.org/getting_started/index.html 
+
+see examples of colormaps: 
+
+https://colorcet.holoviz.org/user_guide/index.html 
+
+

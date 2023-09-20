@@ -1,0 +1,113 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-11T08:42:33+13:00
+
+====== Thursday 11 Mar 2021 ======
+
+==== Space for Planet Earth competition 10 AM ====
+
+see email from Emeline Paat-Dahlstrom
+
+see also documents: 
+
+→ [[~/Documents/spaceco/Challenge Topic Examples.pdf]]
+→ [[~/Documents/spaceco/Space for Planet Earth 2021 gen sm.pdf]]
+→ [[~/Documents/spaceco/Space for Planet Earth Challenge.pdf]]
+
+**Ideas**: 
+
+→ drought tracking 
+→ kNDVI ? 
+
+--------------------
+
+==== Structural Time Series modeling in TensorFlow Probability ====
+
+https://blog.tensorflow.org/2019/03/structural-time-series-modeling-in.html
+
+full notebook 
+
+https://github.com/tensorflow/probability/blob/master/tensorflow_probability/examples/jupyter_notebooks/Structural_Time_Series_Modeling_Case_Studies_Atmospheric_CO2_and_Electricity_Demand.ipynb
+
+essentially doing the same thing as prophet or neuralprophet
+
+see below, for a forecast of eletricity demand: 
+{{./screenshot_2021-03-11-104534.png}}
+
+
+can add covariates (here temperature) and inspect the different components 
+ 
+
+{{./screenshot_2021-03-11-104456.png}}
+
+could be used for the Auckland Cycling work ? 
+
+--------------------
+
+==== kNDVI ====
+
+code: see supplement S10 in  https://advances.sciencemag.org/content/suppl/2021/02/22/7.9.eabc7447.DC1/abc7447_SM.pdf
+
+import numpy as np
+sigma = 1.0
+knr = np.exp(-(xn-xr)**2/(2*sigma**2))
+kndvi = (1-knr)/(1+knr
+
+--------------------
+
+==== Using dask to parallelize plotting (!) ====
+
+see on the Pangeo discourse: 
+
+https://discourse.pangeo.io/t/using-dask-to-parallelize-plotting/1179
+
+--------------------
+
+==== How hard will the robots make us work? ====
+
+https://www.theverge.com/2020/2/27/21155254/automation-robots-unemployment-jobs-vs-human-google-amazon
+
+capitalism + Machine Learning = dystopia 
+
+--------------------
+
+==== New notebook to generate CSV files from processed GCM and target (6 regions) data ====
+
+@SI 
+
+see **make_GCM_and_targets_csv.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks]] 
+
+--------------------
+
+==== data classes articles ====
+
+
+https://betterprogramming.pub/6-alternatives-to-classes-in-python-6ecb7206377
+
+--------------------
+
+==== ALLEN CORAL ATLAS ====
+
+https://allencoralatlas.org/atlas/#12.99/-19.1323/-178.5608 
+
+see also 
+
+https://allencoralatlas.org/blog/
+
+can extract all bunch of information for regions, including bathymetry, example with Fulaga 
+
+see **Fulaga.ipynb** in [[~/operational/ICU/ICU_marine/ALLEN_CORAL_ATLAS]] for examples of reading the data 
+
+--------------------
+
+==== TODO: process Z850 ====
+
+see [[/media/nicolasf/END19101/data/GCMs/processed/CDS/]] 
+
+
+
+
+
+
+
+

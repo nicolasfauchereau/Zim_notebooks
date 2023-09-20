@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-01T16:32:50+12:00
+
+====== Friday 01 Sep 2023 ======
+
+==== geocomputations with Python ====
+
+@geo 
+
+https://py.geocompx.org/ 
+
+--------------------
+
+==== Using Deep Learning to Predict The ⛈️ Weather and 🌍 Climate risk ====
+
+https://techandeco.medium.com/using-deep-learning-to-predict-the-%EF%B8%8F-weather-and-climate-risk-f7900f8cab4

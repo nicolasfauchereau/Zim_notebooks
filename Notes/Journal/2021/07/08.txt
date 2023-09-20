@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-08T15:16:47+12:00
+
+====== Thursday 08 Jul 2021 ======
+
+===== ATS 655 - Objective Analysis - Course Material from Elisabeth Barnes =====
+
+includes examples of the applications of NNs to climate data, including  LRP, saliency maps: 
+
+https://github.com/eabarnes1010/ats655-coursematerial
+
+and cloned into [[/home/nicolasf/research/NN_climate]] 
+
+for XAI: some additional references: from https://github.com/eabarnes1010/ats655-coursematerial/blob/master/jupyter_notebooks/ann_ENSO_example.ipynb 
+
+Within Geoscience: Interpretable Neural Networks for Geoscience: Toms, Benjamin A., Elizabeth A. Barnes, and Imme Ebert-Uphoff. “Physically interpretable neural networks for the geosciences: Applications to earth system variability”, https://arxiv.org/abs/1912.01752.
+
+Within Geoscience: McGovern, A., Lagerquist, R., Gagne, D. J., Jergensen, G. E., Elmore, K. L., Home-yer, C. R., & Smith, T.(2019).Making the black box more transparent:Understanding the physical implications of machine learning.Bulletin of theAmerican Meteorological Society.
+
+Within Geoscience: Gagne, D. J., Haupt, S. E., Nychka, D. W., & Thompson, G. (2019). Interpretable deep learning for spatial analysis of severe hailstorms. Monthly Weather Re-view,147(8), 2827–2845.
+
+Computer Science Paper: Olah, C., Mordvintsev, A., & Schubert, L. (2017). Feature visualization. Distill, 2(11).
+
+Computer Science Paper: Simonyan, K., Vedaldi, A., & Zisserman, A.(2013).Deep inside convolutionalnetworks: Visualising image classification models and saliency maps.arXivpreprint arXiv:1312.6034.
+
+Computer Science Paper: Yosinski, J., Clune, J., Nguyen, A., Fuchs, T., & Lipson, H. (2015). Understandingneural networks through deep visualization.arXiv preprint arXiv:1506.06579.
+Layerwise Relevance Propagation
+
+Within Geoscience: Interpretable Neural Networks for Geoscience: Toms, Benjamin A., Elizabeth A. Barnes, and Imme Ebert-Uphoff. “: Applications to earth system variability”, https://arxiv.org/abs/1912.01752.
+
+Fundamental Theory: Bach, S., Binder, A., Montavon, G., Klauschen, F., M ̈uller, K.-R., & Samek, W.(2015).On pixel-wise explanations for non-linear classifier decisions by layer-wise relevance propagation.PloS one,10(7), e0130140.
+
+Fundamental Theory: Montavon, G., Lapuschkin, S., Binder, A., Samek, W., & M ̈uller, K.-R. (2017). Ex-plaining nonlinear classification decisions with deep taylor decomposition.Pat-tern Recognition,65, 211–222.
+General Interpretability
+
+Intro to Feature Visualization: Olah, C., et al. “Feature Visualization.” Distill, 2017, https://distill.pub/2017/feature-visualization/.
+
+Book on Explainable AI: W Samek, G Montavon, A Vedaldi, LK Hansen, KR Müller (Eds.) Explainable AI: Interpreting, Explaining and Visualizing Deep Learning, Springer LNCS 11700, 2019
+
+GRIMME: the Great Rebel Insurgency of the MME 
+
+

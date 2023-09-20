@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-09T15:27:04+13:00
+
+====== Thursday 09 Jan 2020 ======
+
+CACV reporting 
+
+see in [[/home/nicolasf/Documents/CACV_review]] for the pricing models for the diffent years of the project ... need to ask Ramona about year 2016 - 2017 as not in the project drive ... 
+
+Data Scientist Notebook for Paleo test ... 
+
+see in [[/home/nicolasf/Desktop/data_scientist_test/notebooks]]
+
+
+

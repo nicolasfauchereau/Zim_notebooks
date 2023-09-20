@@ -1,0 +1,82 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-31T09:51:53+12:00
+
+====== Monday 31 May 2021 ======
+
+==== ZESPRI ====
+
+email: 
+
+and a belated thank you from me as well Abdul, very useful, below a couple of comments / replies to your questions, in green:
+
+aggregates over arbitrary period (i.e. between 2 dates):
+
+[FB] Nic – are you proposing that your analysis will explore ranges here using some machine learning technique or are you wanting to have guidance on what would be useful in terms of these aggregates?
+
+The latter, right now the framework developed for brix and DM prediction, using GAMs, does not really allow for a "throw everything at the wall and see what sticks" 🙂 approach, so domain insights were really needed ...
+
+ - number of days above / below fixed threshold (e.g. number of days above 25oC, number of frost days, dry days, wet days, etc) – AJ_Yes
+
+[FB] two thresholds that have been proposed in the literature are **time below 7 degC and below 10 degC,** but would be interesting to explore if these are sensible thresholds
+
+Thanks, that's easy to do
+
+- number of days above / below seasonally dependent **quantile** threshold (i.e. number of days with Tmax > seasonally dependent 90th percentile) – AJ_No of days with Tmax or Tmin possibly but not sure what 90th percentile would look for temp or other weather data? May be I am taking it wrong?
+
+[FB] if it is a machine learning approach then throwing any of these in would be OK
+
+The 90th (or any other percentile) is calculated for each day of the year (with a parametrized "buffer" around each day): This allows for seasonally dependent quantile thresholds (i.e. the 90th percentile for let's say Tmax will be obviously higher during the summer than during the winter !) ... once this climatology has been established, then - for example - the days exceeding the 90th percentile threshold are extracted, so this can tell you how 'unusual' the frequency of these is compared to the expected number of 'hot' days, it's complementary to an approach considering only exceedances over a fixed threshold (e.g. number of days with Tmax exceeding 25oC)
+
+- number of *sequences* of events where climate variable was above / below fixed or seasonally dependent quantile threshold for more than N consecutive days (e.g. cold spells frequency, heat waves frequency) – AJ_possibly yes and could show some seasonal differences explained in fruit data
+
+[FB] I really like this idea – it could help pick out where there is a seasonal variation from previous years
+
+
+sounds good, ditto also below (number of days part of these sequences). Only thing is that I need to define the minimum number of days to define a sequence, if you have some studies that show anything related to let's say known effects on kiwifruits of (for example) heat waves lasting more than N days, let me know, if not I'll derive something sensible
+
+- number of days that are part of such sequences, (e.g. "cold spell days": the number of days that are part of cold spell events, defined as a sequence of N consecutive days with Tmin or Tmean below threshold) – AJ_Yes
+
+[FB]
+
+ 
+
+see above
+
+
+- growing degree days: Sum of degree-days over a threshold temperature. AJ_ possibly yes. Would you be having diff threshold for GA and HW?
+
+ 
+
+- threshold exceedance dates and lengths of periods (in days) separating these exceedances:
+
+[FB] these are also interesting ideas.  I can’t think of how we would easily define this.  For example a frost (or really cool) event during flowering can have a major impact.  But flowering varies regionally (and also is impacted by agronomic practices and whether bud burst spays have been applied).  I guess we could give you some guidance on windows of time when critical events are happening. I am thinking here (AJ and SGG) of bud bust, flowering, time to canopy fill, first 60 days of fruit growth.  What do you think?
+
+ 
+
+In the Smart Monitored Orchards dataset we have got the date of full bloom for each season and orchard, so should we just use this ? maybe see how many days below the Tmin 10th percentile, and Tmin < 0, within a few days around the date of full bloom ?
+
+
+- first day / last day of period when a variable is above / below a given threshold for N consecutive days – AJ_yes
+
+ 
+
+- number of days separating the above, e.g. frost season length (number of days between the first occurrence of at least N consecutive days with Tmin below 0oC and the first occurrence of at least N consecutive days with Tmin above 0oC) or growing season length (based on mean temperature **above** threshold) AJ_YEs
+
+Will focus on frost and cool days (Tmin below 10th percentile) then
+
+--------------------
+cg-json: xarray in JSON 
+
+see 
+
+
+
+
+
+
+
+
+
+
+

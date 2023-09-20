@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-15T16:55:14+12:00
+
+====== Monday 15 Jun 2020 ======
+
+==== ICU "Hotspot" analysis ====
+
+xarray / dask issues with computation time  ... see 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/notebooks/read_GPM_export_daskdataframe.ipynb]] 
+
+possibility to use CDO to 
+
+merge time 
+
+cdo mergetime air1981.nc air1982.nc air1983.nc air_all_time_series.nc
+
+1) calculate the running sum 
+
+see
+
+https://code.mpimet.mpg.de/projects/cdo/embedded/index.html#x1-4200002.8.14
+
+2) calculate the percentiles, see: 
+
+**cdo timpctl,99**  
+
+https://code.mpimet.mpg.de/boards/1/topics/73 
+
+https://code.mpimet.mpg.de/projects/cdo/embedded/index.html#x1-4370002.8.17 

@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-06T14:19:18+12:00
+
+====== Wednesday 06 Sep 2023 ======
+
+Lecture notes of the Environmental Science master unit ENVI5809 - Environmental Simulation Modelling, taught to 2nd semester students at the University of Sydney.
+
+https://tristansalles.github.io/EnviReef/welcome.html
+
+https://opus.nci.org.au/display/Help/examples-thredds
+

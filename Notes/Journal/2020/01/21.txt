@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-21T13:15:53+13:00
+
+====== Tuesday 21 Jan 2020 ======
+
+To change fonts size etc in jupyter lab 
+
+go to settings / advanced setting editor then copy the contents of "System Defaults" on the left pane to the "User Preferences" pane on the right, and change the font size etc ... the font family needs to be quoted, e.g. "Fira Code" 
+
+== ======================================================================================================================================================== ==
+
+finalized interview material for the data scientist position 
+
+see in [[~/Documents.]]

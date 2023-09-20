@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-29T09:35:31+13:00
+
+====== Monday 29 Mar 2021 ======
+
+==== function definitions for the validation (ICU hotspots) ====
+
+1) get_GCM 
+
+get one GCM, a subset, or the MME, calculate the anomalies (optional), calculate the ensemble mean (optional) 
+
+2) validate point  
+
+get_radius(lon, lat, radius, radius_units =) 
+
+NOTE: 
+
+To convert to meters for the buffer radius, use the World Mercator projection (**EPSG:3395**) 
+
+see function **utils.make_point_buffer_gdf(lon, lat)**
+
+
+--------------------
+
+==== Other stuff to do re. ICU hotpots ====
+
+3) check the transitivity of quantiles calculations 
+
+
+
+
+

@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-22T11:58:40+13:00
+
+====== Thursday 22 Oct 2020 ======
+
+==== Registration Smart Ideas ====
+
+see
+
+--------------------
+
+==== processing of SST (ERSST and OISST) ====
+
+see 
+
+
+→ [[~/research/Smart_Ideas/code/exporters/OISST/notebooks/]] for **NOAA_OISSTv2_hires.ipynb** download notebook 
+
+→ [[~/research/Smart_Ideas/code/exporters/ERSST/notebooks/]] for **NOAA_ERSSTv5.ipynb** download notebook 
+
+--------------------
+
+==== meeting with dong and Eibe ====
+
+Zoom meeting 2PM to 3PM 
+
+== regionalisation of VCSN seasonal temp and rainfall anomalies ==
+
+PCA → clustering @TODO 
+
+== SST observational (OISST or ERSST) as inputs ==
+
+derive seasonal anomalies of SST from ERSST and OISST, and include a lag ?  @TODO 
+
+== Target variables ==
+
+send to Dong the code used to calculates the regional time-series of tercile categories and anomalies from the VCSN → @DONE 
+
+--------------------
+
+==== detrend xarrays ====
+
+def detrend_dim(da, dim, deg=1):
+	# detrend along a single dimension
+	p = da.polyfit(dim=dim, deg=deg)
+	fit = xr.polyval(dim, p.polyfit_coefficients)
+	return da - fit
+
+def detrend(da, dims, deg=1):
+	# detrend along multiple dimensions
+	# only valid for linear detrending (deg=1)
+	da_detrended = da
+	for dim in dims:
+		da_detrended = detrend_dim(da_detrended, dim, deg=deg)
+	return da_detrended

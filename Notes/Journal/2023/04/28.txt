@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-28T09:12:42+12:00
+
+====== Friday 28 Apr 2023 ======
+
+
+https://www.pwc.com/us/en/services/esg/esg-technology.html
+
+
+https://www.youtube.com/watch?v=H0fp1PwzXak 
+
+write 
+
+Darren 
+Ben 
+Jonn Marra and all 
+
+
+https://ouranosinc.github.io/pavics-sdi/index.html
+
+https://ouranosinc.github.io/pavics-sdi/processes/bias_correction.html 
+
+Kernel Density Distribution Mapping Bias Correction  
+
+https://github.com/bgroenks96/generative-downscaling
+
+SBCK (Statistical Bias Correction Kit): https://github.com/yrobink/SBCK 
+
+personal verification Ltd" 

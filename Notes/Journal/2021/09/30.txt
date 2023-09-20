@@ -1,0 +1,53 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-30T09:23:29+13:00
+
+====== Thursday 30 Sep 2021 ======
+
+@TODO 
+
+[*] timesheets 
+[*] update plots for the ICU bulletin
+	[*] monthly probabilities 
+	[*] seasonal probabilities
+	[*] monthly hotspot (one month ahead)
+	[ ] seasonal hotspot (one season ahead)
+[*] blurb for MBIE (see email from J. Pineda-Verhoogh Mon 27/09/2021 12:24 PM) 
+[ ] start writing code to derive probabilistic tercile tables from realtime forecasts
+	Process: 
+	1. read the latest forecast files for ONE GCM 
+	2. derive the sub_regional values (using land sea mask, obtained using `//geo.mask_dataset(dset, shape, coastline_buffer=15)//`)
+	3. reads the corresponding hindcast climatologies: in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin/climatologies]]
+	4. calculate the bin number for each member in the ensemble for the GCM
+	5. calculate the tercile probability as proportion of bin number 
+
+
+--------------------
+
+==== precipitation nowcasting using Generative Models ====
+
+See paper: https://www.nature.com/articles/s41586-021-03854-z 
+
+they use https://pysteps.github.io/ for evaluation of short-term ensemble prediction systems. 
+
+
+Precipitation downscaling with **RainFARM**: 
+
+https://pysteps.readthedocs.io/en/latest/auto_examples/rainfarm_downscale.html#sphx-glr-auto-examples-rainfarm-downscale-py
+Rebora, N., L. Ferraris, J. von Hardenberg, and A. Provenzale, 2006: RainFARM: Rainfall Downscaling by a Filtered Autoregressive Model. Journal of Hydrometeorology, 7, 724–738, https://doi.org/10.1175/JHM517.1.
+
+see review article for nowcasting of precipitation: A review of radar-based nowcasting of precipitation and applicable machine learning techniques 
+
+Prudden, R., S. Adams, D. Kangin, N. Robinson, S. Ravuri, S. Mohamed, and A. Arribas, 2020: A review of radar-based nowcasting of precipitation and applicable machine learning techniques. arXiv:2005.04988 [physics, stat],.
+ 
+
+
+
+
+
+
+
+
+
+
+

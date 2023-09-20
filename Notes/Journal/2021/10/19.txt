@@ -1,0 +1,188 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-19T10:42:37+13:00
+
+====== Tuesday 19 Oct 2021 ======
+
+ICU: map of the probability for the most likely tercile category 
+
+
+{{./screenshot_2021-10-19-104326.png}}
+
+see: 
+
+{{./screenshot_2021-10-19-130309.png?width=700}}
+
+and **notebook 4_map_MME_probabilistic_tercile_forecast.ipynb** 
+
+--------------------
+
+==== paper of interest by K. McKinnon: The inherent uncertainty of precipitation variability, trends, and extremes due to internal variability, with implications for Western US water resources ====
+
+see https://journals.ametsoc.org/view/journals/clim/aop/JCLI-D-21-0251.1/JCLI-D-21-0251.1.xml 
+
+and associated code: https://github.com/karenamckinnon/observational_large_ensemble 
+
+see also, simple code to rasterize a list of geometries and fill values 
+
+
+import xarray as xr
+from rasterio import features
+from affine import Affine
+import numpy as np
+
+def transform_from_latlon(lat, lon):
+	lat = np.asarray(lat)
+	lon = np.asarray(lon)
+	trans = Affine.translation(lon[0], lat[0])
+	scale = Affine.scale(lon[1] - lon[0], lat[1] - lat[0])
+	return trans * scale
+
+
+def rasterize(shapes, coords, fill=np.nan, **kwargs):
+	"""Rasterize a list of (geometry, fill_value) tuples onto the given
+	xray coordinates. This only works for 1d latitude and longitude
+	arrays.
+	"""
+	transform = transform_from_latlon(coords['lat'], coords['lon'])
+	out_shape = (len(coords['lat']), len(coords['lon']))
+	raster = features.rasterize(shapes, out_shape=out_shape,
+								fill=fill, transform=transform,
+								dtype=float, **kwargs)
+	return xr.DataArray(raster, coords=coords, dims=('lat', 'lon'))
+
+--------------------
+
+==== ICU: processing of the C3S forecasts and derivation of the new products ====
+
+in order: 
+
+→ //1_download_rolling_hindcasts.ipynb //(rename to : **1_download_C3S_rolling_hindcasts.ipynb**) downloads the hindcasts for a corresponding months for all C3S GCMs, uses dask delayed to execute the download in parallel 
+→ //2_download_latest_C3S_forecasts.ipynb//: download the latest, realtime forecasts from the CDS for all C3S GCMs, uses dask delayed to execute the download in parallel  
+→ 3: //drive_GCM_hindcast_climatology_ops.ipynb// (rename to : **3_drive_C3S_GCMs_hindcast_climatologies_ops.ipynb**)  uses papermill to execute //GCMs_hindcast_climatology_ops.ipynb// (rename to **C3S_GCMs_hindcast_climatologies_ops.ipynb)**, whih calculates the monthly AND seasonal tercile, decile and percentile climatologies, derive the empirical quantiles, Not the parametrized quantiles ... one can pass a list of lags to calclulate the climatololgies for all months / seasons 
+
+NOTE: to calculates the **parametrized** version of the climatological quantiles (terciles, deciles, percentiles) use C3S/drive_GCMs_hindcast_climatology_parametrized.ipynb 
+
+→ 4: //3_calculate_MME_probabilities.ipynb// (rename to **4_calculate_C3S_MME_forecast_probabilities.ipynb**) to calculate the forecast probabilities for the latest forecasts from the C3S 
+
+→ 5: maps of the terciles, deciles and percentiles (probability of rainfall being below the 25th percentile) 
+
+	- C3S/4_map_MME_probabilistic_tercile_forecast.ipynb (rename to **5_map_MME_probabilistic_tercile_forecast.ipynb**) 
+	- C3S/4_map_MME_probabilistic_decile_forecast.ipynb (rename to **5_map_MME_probabilistic_decile_forecast.ipynb**) 
+	- C3S/4_map_MME_probabilistic_percentile_forecast.ipynb (rename to **5_map_MME_probabilistic_25th_percentile_forecast.ipynb**) 
+	
+→ 6: map the ICU "Water Stress Outlook": C3S///5_map_hotspots_experiments.ipynb// (rename to **6_map_ICU_Water_Stress_Outlook.ipynb**) 
+
+== New Island Climate Update quantile probabilistic forecast table for the admin boundaries: ==
+
+@TODO: move all the notebooks in the folder [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_forecast_table]]    
+
+currently: 
+
+in the folder **ICU_validation** 
+
+→ //GCMs_admin_hindcast_climatologies_and_probabilities.ipynb// (rename to **ICU_forecast_table_GCMs_admin_hindcast_climatologies_and_probabilities.ipynb**): calculates the climatologies (parametrized or empirical) for the sub-regional time-series of precpitation anmounts for the admin areas, and calculate the percentile bins: This notebook is driven by drive_admin_GCMs_evaluation.ipynb (rename to **drive_GCMs_admin_hindcast_climatologies_and_probabilities.ipynb**
+
+in the folder **C3S** 
+
+**→ for the realtime forecasts**: see 
+
+→ **drive_make_tercile_probs_table.ipynb**, which drives C3S/make_tercile_probs_table.ipynb, which, for each GCM, reads the forecasts, then reads the climatologies, which are all in the folder [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin/climatologies]] 
+
+then 
+
+→ drive_make_tercile_probs_table_MME.ipynb drives make_tercile_probs_table_MME.ipynb, which takes the individual forecasts from the GCMs and then calculates the MME probabilities 
+
+do not forget to move the "operational' hindcast climatologies for all the GCMs from the operational folder to to the original (archive) folder 
+
+i.e. every month the hindcasts are saved in [[/media/nicolasf/END19101/ICU/data/CDS/operational/hindcasts]] but need to be copied in [[/media/nicolasf/END19101/ICU/data/CDS]] in the corresponding GCM folder (containing the archived hindcasts) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+one can then use: Compile_MME_forecast_table.ipynb 
+
+to compile the forecast table 
+
+@TODO : Note that currently the sub-regional climatologies are parametrized (using the Gamma distribution), I need to redo all that using the empirical quantiles 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+→ make tercile probabiliy table for the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-20T11:34:39+12:00
+
+====== Monday 20 Sep 2021 ======
+
+==== ICU downloads ====
+
+@ICU 
+
+→ 1_download_rolling_hindcasts.ipynb 
+→ 2_download_latest_C3S_forecasts.ipynb 
+→ GCMs_hindcast_climatology_ops.ipynb: calculates the climatologies from the hindcasts 
+→ 3_calculate_MME_probabilities.ipynb 
+→ 4_map_MME_probabilistic_forecast.ipynb
+
+

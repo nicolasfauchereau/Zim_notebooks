@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-05T08:41:37+13:00
+
+====== Thursday 05 Nov 2020 ======
+
+==== NeuralHydrology ====
+
+https://github.com/neuralhydrology/neuralhydrology
+
+ Python library to train neural networks with a strong focus on hydrological applications. 
+
+--------------------
+
+==== KTRAIN ====
+
+ktrain is a Python library that makes deep learning and AI more accessible and easier to apply
+
+source: https://github.com/amaiya/ktrain 
+
+and cloned locally in 
+
+[[/home/nicolasf/research/Smart_Ideas/resources/repos_libraries/ktrain]] 
+
+see for tabular predictions: 
+
+https://nbviewer.jupyter.org/github/amaiya/ktrain/blob/master/tutorials/tutorial-08-tabular_classification_and_regression.ipynb
+
+experiments (Apple and Pears) using KTRAIN for classification and regression in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/application_cases/classification/Apple_and_Pears/KTRAIN/notebooks]] 
+
+not great, but maybe regression could be pushed further 
+
+--------------------
+
+==== SRFLOW ====
+
+Learning the Super-Resolution Space with Normalizing Flow  
+
+https://github.com/andreas128/SRFlow 
+

@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-25T09:42:33+12:00
+
+====== Wednesday 25 Aug 2021 ======
+
+==== Data Science team Weekly stand up ====
+
+jupyter.maui.niwa.co.nz  
+
+can you build your own kernel on Maui ? 
+
+containers available
+
+singularity 
+
+not kunernetes 
+
+--------------------
+
+==== Validation of SCOPIC and POAMA ====
+
+@ICU 
+
+see: 
+
+https://www.cawcr.gov.au/technical-reports/CTR_067.pdf
+
+Seasonal Forecast Verification in the Pacific using a  coupled model POAMA and the statistical model  SCOPIC
+

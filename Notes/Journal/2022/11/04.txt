@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-04T09:20:36+13:00
+
+====== Friday 04 Nov 2022 ======
+
+==== SHAP (SHapley Additive exPlanations) ====
+
+https://shap.readthedocs.io/en/latest/index.html 
+
+SHAP (SHapley Additive exPlanations) is a game theoretic approach to explain the output of any machine learning model. It connects optimal credit allocation with local explanations using the classic Shapley values from game theory and their related extensions (see papers for details and citations).
+
+Explainable AI for Trees: From Local Explanations to Global Understanding
+
+https://github.com/suinleelab/treeexplainer-study 
+
+
+--------------------
+
+==== Kling-Gupta efficiency ====
+
+see https://github.com/thibhlln/hydroeval 
+
+An evaluator for streamflow time series in Python: **hydroeval** is an open-source evaluator of goodness of fit between simulated and observed streamflow time series in Python.  
+
+--------------------
+
+==== Deep Learning for Downscaling, new papers ====
+
+Quesada-Chacón, D., K. Barfus, and C. Bernhofer, 2022: Repeatable high-resolution statistical downscaling through deep learning. Geosci. Model Dev., 15, 7353–7370, https://doi.org/10.5194/gmd-15-7353-2022.
+
+Wang, F., D. Tian, and M. Carroll, 2022: Customized Deep Learning for Precipitation Bias Correction and Downscaling. Geosci. Model Dev. https://gmd.copernicus.org/preprints/gmd-2022-213/
+
+→ Quesada-Chacón et al: https://github.com/dquesadacr/Rep_SDDL (it's in R)
+
+→ Wang et al: https://osf.io/wsy8m (python / Keras / tensorflow) also downloaded in [[/home/nicolasf/research/CMIP6_downscaling/repos/Wang_customized_deep_learning]] 

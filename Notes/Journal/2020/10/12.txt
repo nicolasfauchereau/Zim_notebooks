@@ -1,0 +1,153 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-12T08:51:59+13:00
+
+====== Monday 12 Oct 2020 ======
+
+==== finish calculating the quantiles for all application cases ====
+
+outputs: 
+
+in [[~/research/Smart_Ideas/outputs/targets/application_cases/Apple_and_Pears/SEASONAL/]] then {variable name} 
+
+filename = **f"Seasonal_{varname}_{stat}_anomalies_and_Q{num_quantiles}_categories.csv"** 
+
+== Apple and Pears ==
+
+**Rainfall** 
+
+[*] Seasonal_RAIN_BC_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_RAIN_BC_sum_anomalies_and_Q3_categories.csv
+
+**Temperature** 
+
+[*] Seasonal_TMEAN_N_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_TMAX_N_mean_anomalies_and_Q3_categories.csv
+[*] Seasonal_TMAX_N_max_anomalies_and_Q3_categories.csv 
+[*] Seasonal_TMIN_N_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_TMIN_N_min_anomalies_and_Q3_categories.csv 
+
+**Soil**
+
+ **moisture**
+
+ 
+
+[*] Seasonal_SOILM_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_SOILM_min_anomalies_and_Q3_categories.csv 
+[*] Seasonal_SOILM_max_anomalies_and_Q3_categories.csv
+
+
+== Watercare ==
+
+**Rainfall **
+
+[*] Seasonal_RAIN_BC_mean_anomalies_and_Q3_categories.csv
+[*] Seasonal_RAIN_BC_sum_anomalies_and_Q3_categories.csv 
+
+**Temperature**  
+
+[*] Seasonal_TMEAN_N_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_TMEAN_N_min_anomalies_and_Q3_categories.csv
+[*] Seasonal_TMEAN_N_max_anomalies_and_Q3_categories.csv 
+
+[*] Seasonal_TMAX_N_mean_anomalies_and_Q3_categories.csv
+[*] Seasonal_TMAX_N_min_anomalies_and_Q3_categories.csv
+[*] Seasonal_TMAX_N_max_anomalies_and_Q3_categories.csv
+
+[*] Seasonal_TMIN_N_mean_anomalies_and_Q3_categories.csv
+[*] Seasonal_TMIN_N_min_anomalies_and_Q3_categories.csv
+[*] Seasonal_TMIN_N_max_anomalies_and_Q3_categories.csv
+
+**Soil moisture** 
+
+[*] Seasonal_SOILM_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_SOILM_min_anomalies_and_Q3_categories.csv 
+[*] Seasonal_SOILM_max_anomalies_and_Q3_categories.csv
+
+Note, for Watercare,  between the Hunuas and the Waitakere, there's an ~ 70% match between the categories calculated for each time series ... ~ 76% for mean rainfall, 73% for mean temperatures, ~ 70% for mean soil moisture 
+
+== Innovation Vineyards ==
+
+**Rainfall** 
+
+[*] Seasonal_RAIN_BC_mean_anomalies_and_Q3_categories.csv
+
+**Temperature**
+
+[*] Seasonal_TMEAN_N_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_TMIN_N_mean_anomalies_and_Q3_categories.csv 
+[*] Seasonal_TMAX_N_mean_anomalies_and_Q3_categories.csv 
+ 
+Soil moisture 
+
+[*] Seasonal_SOILM_mean_anomalies_and_Q3_categories.csv
+
+--------------------
+
+==== Experiments with application cases target time series ====
+
+see in [[~/research/Smart_Ideas/code/models/application_cases/AutoML]] 
+
+Note that for operationalisation, it would be better to **retrain every month**, would increase the scores ... would also sort the potential issue of information leakage
+every month the whole processing pipeline would be retrained over the updated training set : 
+
+1) standard scaler 
+2) PCA 
+3) Blender or Tuned model 
+
+then applied to the coming month
+
+for initial experiments using PYCARET, see **models/application_cases/AutoML/PYCARET/notebooks/Apple_and_Pears_concat.ipynb** 
+
+for description of the approaches (boosting, blending, stacking, etc) see 
+
+https://github.com/pycaret/pycaret/blob/master/tutorials/Binary%20Classification%20Tutorial%20Level%20Intermediate%20-%20CLF102.ipynb
+
+**Blending** 
+
+Blending is another common technique for ensembling that can be used in PyCaret. It uses predictions from multiple models to generate a final set of predictions using voting / majority consensus from all of the models passed in the estimator_list parameter. If no list is passed, PyCaret uses all of the models available in the model library by default. The method parameter can be used to define the type of voting. When set to hard, it uses labels for majority rule voting. When set to soft it uses the sum of predicted probabilities instead of the label. Let's see an example below:
+
+**Stacking** 
+
+Stacking is another popular technique for ensembling but is less commonly implemented due to practical difficulties. Stacking is an ensemble learning technique that combines multiple models via a meta-model. Another way to think about stacking is that multiple models are trained to predict the outcome and a meta-model is created that uses the predictions from those models as an input along with the original features. The implementation of stack_models() is based on Wolpert, D. H. (1992b). Stacked generalization (Read More).
+
+see
+
+https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205 
+
+for a good overview of bagging, boosting, stacking and blending 
+
+
+--------------------
+
+==== critical zone science ====
+
+see: https://eos.org/wp-content/uploads/2020/09/EOS_OCT20.pdf 
+
+Critical Zone is the zone extending from the top of the forest canopy to the bottom of the root zone, i.e. the biological interface between the atmosphere and the lithosphere (rocks) 
+
+see [[~/Documents/EOS_OCT20.pdf]]
+
+for a collection of articles 
+
+
+--------------------
+
+==== New example in moving pandas, Stop Hotspot Detection ====
+
+https://github.com/anitagraser/movingpandas-examples/blob/main/notebooks/99-stop-hotspots.ipynb 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

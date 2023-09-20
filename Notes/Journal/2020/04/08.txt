@@ -1,0 +1,61 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-08T10:38:17+12:00
+
+====== Wednesday 08 Apr 2020 ======
+
+=== baseline accuracy and R scores from the models ===
+
+see [[/home/nicolasf/research/Smart_Ideas/code/models/baselines]] 
+
+
+**baseline_evaluation.ipynb**: baseline accuracy and R for each model (note that CanCM4i missing) 
+**baseline_evaluation_majority_vote.ipynb**: baseline accuracy for the majority vote (most common category accross models) 
+
+**Baseline_GCM_scores_TMEAN.xlsx**: contains these scores for each model, for TMEAN 
+**Baseline_GCM_scores_RAIN.xlsx**: same as above but for RAIN 
+
+Email sent to group today: 
+
+"""
+//Hi all//
+
+//I just attached the 'baseline' GCM forecasts scores (accuracy and Pearson's R), these are calculated by deriving the tercile categories from each GCM for each of the 6 regions: more specifically I calculate the regional seasonal averages for t2m and precip in the model, derive the categories using the seasonally dependent tercile values (from the model), and the seasonal anomalies, then compare to the observed (derived from VCSN) time-series, the accuracy is the true hit rate (no 5% tolerance), and the correlation is simply the correlation between the GCM and observed anomalies.//
+
+//Note that one model is missing (CanCM4i, from the IRI data library)cd .in//
+// due to some corrupted data it seems when I transferred from the project drive to my local machine, will fix that later but I don't expect the scores to be crazy different from the other models.//
+
+//The scores are all calculated over the hindcast period (excluding years 2017 to 2019) ... I'll also update later with the 'forecast' years (used as the test set) but again I don't expect scores to move that much at all ...//
+
+//each excel file has 2 sheets: one for the accuracy, one for the Pearson's correlation coefficient//
+
+//you'll see that the baseline accuracy is roughly around 0.5 for temperature, and 0.3 (bouh !) for rainfall, meaning that the ML approaches so far clearly outperform the GCMs alone//
+"""
+
+== TMEAN: ACCURACY ==
+
+{{./pasted_image003.png?width=800}}
+
+no instance where the GCMs only reach an accuracy above 0.52 
+
+== RAIN: ACCURACY ==
+
+{{./pasted_image004.png?width=800}}
+
+maximum accuracy is ~ 0.41 (NNI, UKMO), most do only slightly better than climatology (> 0.33) and some do worse (accuracy score < 0.33). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

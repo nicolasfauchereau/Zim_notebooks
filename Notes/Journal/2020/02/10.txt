@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-10T09:32:36+13:00
+
+====== Monday 10 Feb 2020 ======
+
+continuation of GCM data processing 
+
+[[07:processed]] 
+
+idea: to generate a large number of instance, calculate the averages of N randomly selected ensemble members ... 
+
+also: one file per GCM / member (or partial ensemble average) for all period 1993 - 2016 
+
+== =========================================================================================================================== ==
+
+=== Neighbourhood Components Analysis ===
+
+see: 
+
+https://www.cs.toronto.edu/~hinton/absps/nca.pdf 
+
+and 
+
+https://github.com/kevinzakka/nca (cloned into [[/home/nicolasf/research/Smart_Ideas/resources/repos_libraries/nca]])
+
+== =========================================================================================================================== ==
+ 
+kernel died in processing of PRECIP / ECMWF 
+

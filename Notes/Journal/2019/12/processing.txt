@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-18T14:20:45+13:00
+
+====== processing ======
+Created Wednesday 18 December 2019
+
+===== CDS (ECMWF, UKMO, METEO_FRANCE, DWD, CMCC) =====
+--------------------------------------------
+
++ download: 1 file per month
+	+ hindcasts: 1993 - 2016 → training set 
+	+ forecasts: 2017 - 2019-12 → testing set 
+	
+**+ pre-processing:** 
+
+1. read each grib file
+2. test if number of steps == 5, if not dropna 
+3. re-attribute vector variable for step range(1, 5 + 1) 
+4. rename all variables and dimensions: ;
+	a. {'latitude':'lat', 'longitude':'lon','number':'member'} | variables PRECIP, T2M, SST, Z500, Z850
+5. flip latitudes
+6. get rid of extraneous dimensions / variables 
+7. regrid 2.5 x 2.5 (/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/target_grid) 
+8. for both native and regridded fields: add 'forecast_valid_time' variable 
+9. save in netcdf → native grid → regridded 
+
+**+ processing:** 
+
+1. take the //regridded// dataset (read all files for each month independantly)
+2. ~~calculate the ensemble mean:~~ do not calculate the ensemble mean, we can keep all members at this point
+3. calculate the seasonal (3 months) //averages// over the `step` dimension
+4. select step 3,4,5
+5. calculate a leadtime (step) dependent climatology 
+	note that this can be done independantly for each month ... see point 1 above
+6. saves the climatology in netcdf 
+7. calculates the anomalies
+8. saves in netcdf: //one file per month//
+
+
+
+
+

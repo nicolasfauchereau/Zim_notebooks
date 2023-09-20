@@ -1,0 +1,68 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-30T09:10:55+12:00
+
+====== Friday 30 Jul 2021 ======
+
+==== fundamental of dask course: ====
+
+@Python 
+
+https://training.talkpython.fm/courses/details/fundamentals-of-dask-getting-up-to-speed 
+
+repository: https://github.com/coiled/talkpython-fundamentals-of-dask , cloned in [[/home/nicolasf/Jupyter_notebooks/talkpython-fundamentals-of-dask]] 
+
+--------------------
+
+==== Python packaging ====
+
+@Python 
+
+see https://git.niwa.local/data-analytics-toolbox/hydro_algorithms for an example of a very simple python package, that can be used for e.g. the ICU water watch 
+
+--------------------
+
+==== PYTHON CLIDB ====
+
+@Python 
+
+see  [[/home/nicolasf/sources/python_clidb]] 
+
+cx_Oracle is installed in the environment "climetlab" 
+
+example run notebook: **examples/precip.ipynb** in [[/home/nicolasf/sources/python_clidb/examples]] 
+
+--------------------
+
+==== ICU: now includes virtual stations extraction and plotting ====
+
+@ICU @Python 
+
+see new notebook: 
+
+https://github.com/nicolasfauchereau/ICU_Water_Watch/blob/main/notebooks/GPM/GPM-IMERG_processing.ipynb 
+
+--------------------
+
+==== seasonal cycle ====
+
+@Python 
+
+calculation of the **seasonal cycle** filtered with harmonics 
+
+see 
+
+seasonal_cycle_filtering.ipynb in [[/home/nicolasf/research/NN_climate/ats655-coursematerial/jupyter_notebooks]] 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-02T15:07:33+12:00
+
+====== Friday 02 Jul 2021 ======
+
+repository: https://github.com/nicolasfauchereau/SeasonalBench 
+pre

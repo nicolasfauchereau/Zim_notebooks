@@ -1,0 +1,131 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-04T09:31:34+12:00
+
+====== Friday 04 Jun 2021 ======
+
+==== The autofeat Python Library for Automated Feature Engineering and Selection ====
+
+@ML @autoML 
+
+paper: https://arxiv.org/abs/1901.07329 
+
+code: https://github.com/cod3licious/autofeat 
+
+video: https://www.youtube.com/watch?v=4-4pKPv9lJ4 
+
+--------------------
+
+==== SAINT: Improved Neural Networks for Tabular Datavia Row Attention and Contrastive Pre-Training ====
+
+https://arxiv.org/pdf/2106.01342.pdf
+
+
+Tabular data underpins numerous high-impact applications of machine learning from fraud detection to genomics and healthcare. Classical approaches to solving tabular problems, such as gradient boosting and random forests, are widely used by practitioners. However, recent deep learning methods have achieved a degree of performance competitive with popular techniques. We devise a hybrid deep learning approach to solving tabular data problems. Our method, SAINT, performs attention over both rows and columns, and it includes an enhanced embedding method. We also study a new contrastive self-supervised pre-training method for use when labels are scarce. SAINT consistently improves performance over previous deep learning methods, **and it even outperforms gradient boosting methods, including XGBoost, CatBoost, and LightGBM, on average over a variety of benchmark tasks.** 
+
+Keep an eye out for code https://twitter.com/gowthami_s
+
+--------------------
+
+==== redownload of the C3S hindcasts ====
+
+see: 
+
+→ https://confluence.ecmwf.int/display/CKB/Description+of+the+C3S+seasonal+multi-system
+
+The use of the "system" keyword to match real-time forecasts with their relevant hindcasts is a critical element for a correct use of the C3S seasonal forecast data.
+
+{{./screenshot_2021-06-04-142902.png}}
+
+For the UKMO, the hindcasts are generated "on-the-fly" so theoretically we should download and process the hindcast data for the corresponding forecast month each month, see 
+
+{{./screenshot_2021-06-04-143253.png}}
+
+**After March 2021**
+
+With the start of operations of MetOffice GloSea6 forecasting system, a new numeric labelling paradigm has been introduced with two main aims: on one hand, to keep the incremental labelling when needed, and on the other hand, make more transparent and user-friendly the mapping between different versions of the forecasting system and that 'system' keyword.
+
+Essentially, the value of the 'system' keyword for hindcast data produced on-the-fly (and their related real-time forecasts) would be assigned with the following approach: a three-digit number with the first digit being the version of the forecasting system; the second digit will be assigned to those changes in the forecasting system constituting minor revisions; and finally the last digit will start in 0 and will be updated incrementally each year if a new hindcast is going to be produced with the same version of the forecasting system (i.e. when the first two digits have not changed).
+
+{{./screenshot_2021-06-04-143332.png}}
+
+
+for example, systems to specify in the downloads 
+
+→ ECMWF: 5 
+→ UKMO: 600 **(to be downloaded each month)** 
+→ METEO_FRANCE: 7 
+→ DWD: 21 **(to be downloaded each month)**  
+→ CMCC: 35 **(to be downloaded each month)**  
+→ NCEP: 2 
+→ JMA: 2 **(to be downloaded each month)** 
+→ ECC: 2 **(to be downloaded each month)** 
+
+--------------------
+
+==== cdstoolbox stats functions ====
+
+see: https://cds.climate.copernicus.eu/toolbox/doc/stats.html 
+
+e.g. https://cds.climate.copernicus.eu/toolbox/doc/stats.html#cdstoolbox.stats.ttest 
+
+one powerful feature in some of the functions is the ability to apply these functions on groups 
+
+def linear_regression(
+		x: xr.DataArray,
+		y: xr.DataArray,
+		dim: str = 'time',
+		group: str = None,
+) -> T.List[xr.DataArray]:
+	""" Perform a linear least-square regression between variables defined in x and y along a specified dimension.
+
+	 The linear regression is performed between variables defined in **x** and **y** aligned along the dimension
+	 **dim**. Optionally, data objects **x** and **y** can be grouped according to **group** before
+	 computation. The linear least-square regression method is defined `here
+	 <http://mathworld.wolfram.com/LeastSquaresFitting.html>`_.
+
+	Args:
+		x (data object): Input data containing the **x** variable.
+		y (data object): Input data containing the **y** variable.
+		dim (str, optional): Dimension along which to align input variables. Default is 'time'.
+		group (str, optional): Grouping variable (e.g. to group time data in months, use 'time.month') into which **x**
+			and **y** need to be grouped before computation. Default is None.
+
+	Returns:
+		list: A list of two data objects containing the slope and the intercept coefficients of the linear regression.
+
+	Examples:
+		Compute the linear regression between input variables aligned along the 'time' dimension:
+
+		>>> [slope, intercept] = ct.stat.linear_regression(data_1, data_2)
+
+		If not 'time', you can specify the dimension to align data along, as follows:
+
+		>>> [slope, intercept] = ct.stat.linear_regression(data_1, data_2, dim='lon')
+
+		To perform the regression on a monthly basis:
+
+		>>> [slope, intercept] = ct.stat.linear_regression(data_1, data_2, group='time.month')
+	"""
+	if group is None:
+		slope = cov(x, y, dim) / x.var(dim=dim)
+		intercept = y.mean(dim=dim) - slope * x.mean(dim=dim)
+	else:
+		x_grouped = util._groupby(x, group)
+		y_grouped = util._groupby(x, group)
+		slope = cov(x, y, dim=dim, group=group) / x_grouped.var(dim=dim)
+		intercept = y_grouped.mean(dim=dim) - slope * x_grouped.mean(dim=dim)
+
+	return [slope, intercept]
+
+
+
+
+
+
+
+
+
+
+
+

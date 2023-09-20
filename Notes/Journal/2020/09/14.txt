@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-14T09:00:19+12:00
+
+====== Monday 14 Sep 2020 ======
+
+==== xskillscore update ====
+
+updated to version 0.0.17, see changelog https://xskillscore.readthedocs.io/en/latest/changelog.html#xskillscore-v0-0-17-2020-09-06 
+
+refers to this website for the definition of several verification metrics 
+
+https://www.cawcr.gov.au/projects/verification/ 
+
+==== Network Analysis ====
+
+https://ericmjl.github.io/Network-Analysis-Made-Simple/learn-more/ 
+
+check with the recent(ish) efforts in climate networks 
+
+==== Smart Ideas concept note workshop ====
+
+some useful tips: 
+
+* indicate how the research is transformational: transform the way we provide weather and climate data 
+* provide sentences to say how you adress the investment signals, e.g. " we will leverage wider investment ....", "we will give effect to VM ..." 
+* positioning: 
+	* increased demand for actionable information, needs to be probabilistic in nature 
+	* align with international efforts to build bridges between the ML and environmental science communities 
+	* align with investments in super computing facilities 
+	* align with efforts in data rescue (Drew) 
+ 
+
+=== Carry on stock take of already downloaded and processed GCM data ===
+
+for the processing of the ECMWF netcdf downloads, see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks/process_ECMWF_nc_downloads.ipynb]] 
+ 
+
+

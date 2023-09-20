@@ -1,0 +1,105 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-29T13:35:41+13:00
+
+====== Tuesday 29 Nov 2022 ======
+
+==== IPSL Global Downscaled dataset ====
+
+see Noël, T., H. Loukos, D. Defrance, M. Vrac, and G. Levavasseur, 2022: Extending the global high-resolution downscaled projections dataset to include CMIP6 projections at increased resolution coherent with the ERA5-Land reanalysis. Data in Brief, 45, 108669, https://doi.org/10.1016/j.dib.2022.108669.
+ 
+The downscaling method applied is the Quantile mapping-based method (QM) called the “Cumulative Distribution Function transform” (CDF-t) method [6–10]. 
+
+The precipitation variable is downscaled with a specific version of CDF-t referred to as “Singularity Stochastic Removal” (SSR) which considers rainfall occurrence and intensity challenges [11].
+
+
+The variables are downscaled at a daily resolution over the 19512100 period using 1981-2010 as calibration period
+
+[6] P. Michelangeli, M. Vrac, H. Loukos, Probabilistic downscaling approaches: application to wind cumulative distribution functions, Geophys. Res. Lett. 36 (2009) L11708, doi:10.1029/2009GL038401. 
+
+[7] M. Vrac, P. Drobinski, A. Merlo, M. Herrmann, C. Lavaysse, L. Li, S. Somot, Dynamical and statistical downscaling of the French Mediterranean climate: uncertainty assessment, Nat. Hazards Earth Syst. Sci. 12 (2012) 2769–2784, doi:10.5194/nhess-12- 2769-2012. 
+
+[8] R. Vautard, T. Noël, L. Li, M. Vrac, E. Martin, P. Dandin, J. Cattiaux, S. Joussaume, Climate variability and trends in downscaled high-resolution simulations and projections over Metropolitan France, Clim. Dyn. 41 (2013) 1419–1437, doi:10.10 07/s00382-012- 1621- 8. 
+
+[9] A.M. Famien, S. Janicot, A. Delfin Ochou, M. Vrac, D. Defrance, B. Sultan, T. Noël, A bias-corrected CMIP5 dataset for Africa using the CDF-t method - a contribution to agricultural impact studies, Earth Syst. Dyn. 9 (2018) 313–338, doi:10.5194/esd- 9-313- 2018. 
+
+[10] B. Bartók, I. Tobin, R. Vautard, M. Vrac, X. Jin, G. Levavasseur, S. Denvil, L. Dubus, S. Parey, P.A . Michelangeli, A. Troccoli, Y.M. Saint-Drenan, A climate projection dataset tailored for the European energy sector, Clim. Serv. 16 (2019) 100138, doi:10.1016/j.cliser.2019.100138.
+
+[11] M. Vrac, T. Noël, R. Vautard, Bias correction of precipitation through singularity stochastic removal: Because occurrences matter, J. Geophys. Res. 121 (2016) 5237–5258, doi:10.1002/2015JD024511.
+
+data access: https://esgf-node.ipsl.upmc.fr/projects/cmip6-adjust/ 
+
+then go to search, and just select 'IPSL' as the Institution ID and 'bias adjustment' 
+
+see WGET scripts in **IPSL-CMIP6-adjust** in [[~/research/CMIP6_downscaling/Global_Downscaled_Datasets]] 
+
+--------------------
+setting up a dask cluster
+
+- local: 
+
+dask.config.set({
+	"distributed.worker.memory.target": False,   
+	"distributed.worker.memory.spill": False
+})
+
+client = Client(n_workers = 5, threads_per_worker = 1, processes = True)
+
+
+
+
+- slurm cluster 
+
+import dask
+from dask.distributed import Client
+from dask import delayed, compute
+from dask_jobqueue import SLURMCluster
+
+from dask.diagnostics import ProgressBar
+
+# Slurm cluster if we need it; can be more beefy!
+# cluster = SLURMCluster(
+#     cores=24,
+#     processes=6,
+#     memory="500GB",
+#     account="niwa00004",
+#     queue="nesi_prepost",
+#     job_extra_directives=['--hint=multithread']
+# )
+
+
+climo_slice_buffer = slice('1990-10-31', '2020-12-31')
+
+rain_groupby =  rain_bc.convert_calendar('noleap').sel(time = climo_slice_buffer).rolling(time = 60).sum().groupby('time.dayofyear') 
+
+rain_60day = rain_groupby.mean()
+
+SPI_params_60day = rain_groupby.map(calibrate_SPI)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

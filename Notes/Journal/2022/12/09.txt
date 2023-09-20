@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-09T08:06:23+13:00
+
+====== Friday 09 Dec 2022 ======
+
+==== Time series forecasting with PyTorch ====
+
+@timeseries 
+
+https://github.com/jdb78/pytorch-forecasting 
+
+The documentation provides a comparison of available models.
+
+	Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting which outperforms DeepAR by Amazon by 36-69% in benchmarks
+	N-BEATS: Neural basis expansion analysis for interpretable time series forecasting which has (if used as ensemble) outperformed all other methods including ensembles of traditional statical methods in the M4 competition. The M4 competition is arguably the most important benchmark for univariate time series forecasting.
+	N-HiTS: Neural Hierarchical Interpolation for Time Series Forecasting which supports covariates and has consistently beaten N-BEATS. It is also particularly well-suited for long-horizon forecasting.
+	DeepAR: Probabilistic forecasting with autoregressive recurrent networks which is the one of the most popular forecasting algorithms and is often used as a baseline
+	Simple standard networks for baselining: LSTM and GRU networks as well as a MLP on the decoder
+	A baseline model that always predicts the latest known value
+
+--------------------
+
+==== Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting (AAAI'21 Best Paper) ====
+
+@timeseries 
+
+https://github.com/zhouhaoyi/Informer2020 

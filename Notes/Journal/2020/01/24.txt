@@ -1,0 +1,79 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-24T08:57:02+13:00
+
+====== Friday 24 Jan 2020 ======
+
+==== Transition from TRMM/TMPA to GPM/IMERG for the ICU processes ====
+
+dealing with different resolutions: 
+
+TRMM/TMPA: lon = 1440 ; lat = 480 ;
+
+GPM/IMERG: lon = 3600 ; lat = 1800 ;    
+
+variables to keep in the dataset (besides the dimension variables): 
+
+
+**precipitationCal**: "Daily accumulated precipitation (combined microwave-IR) estimate" → closest it seems to TRMM 
+HQprecipitation: "Daily accumulated High Quality precipitation from all available MW sources"
+
+1) 
+
+2) interp 
+
+3) transpose to time lat lon 
+
+4) roll the coordinates to go from -180 → 180 to 0 → 360
+
+e.g. 
+
+ds_rolled = ds.assign_coords(lon=(ds.lon % 360)).roll(lon=(ds.dims['lon'] // 2), roll_coords=True) 
+
+**example usage:** 
+
+python get_daily_GPM_IMERG_netcdf.py -o ../extended_SP -lonW 125 -lonE 240 -latN 25 -latS -50 -s 20191231 -e 20200120
+
+The download is very slow ... hopefully will be finished by Monday 27/01/20 
+
+
+== ================================================================================================================================ ==
+
+=== Smart Ideas: validations ===
+
+**CLIMPRED**: is an xarray wrapper for analysis of ensemble forecast models for climate prediction. 
+
+https://climpred.readthedocs.io/en/stable/: see in particular: 
+
++ https://climpred.readthedocs.io/en/stable/examples.html#monthly-and-seasonal 
+and 
++ https://climpred.readthedocs.io/en/stable/examples/monseas/monthly-enso-subx-example.html uses the NMME
+
+To use climpred one needs to use a consistent naming convention, see the section on setting your dataset: 
+
+**Prediction ensembles** are expected at the minimum to contain dimensions `**init`** and `**lead**`. **init** is the initialization dimension, that relays the time steps at which the ensemble was initialized. **init** must be of type int, **pd.DatetimeIndex**, or **xr.cftimeIndex**. If init is of type int, it is assumed to be annual data. A user warning is issues when this assumption is made. **lead** is the **lead** time of the forecasts from initialization. The units for the lead dimension must be specified in as an attribute. Valid options are **years, seasons, months, weeks, pentads, days**. Another crucial dimension is **member**, which holds the various ensemble members. Any additional dimensions will be passed through climpred without issue: these could be things like lat, lon, depth, etc.
+
+**Verification products** are expected to contain the **time dimension at the minimum**. For best use of climpred, their time dimension should cover the full length of init from the accompanying prediction ensemble, if possible. The time dimension must be of type **int, pd.DatetimeIndex or xr.cftimeIndex**. time dimension of type int is assumed to be annual data. A user warning is issued when this assumption is made. These products can also include additional dimensions, such as lat, lon, depth, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xarray_utils

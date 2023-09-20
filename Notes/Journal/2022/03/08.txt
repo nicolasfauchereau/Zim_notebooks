@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-08T09:24:27+13:00
+
+====== Tuesday 08 Mar 2022 ======
+
+==== Pelorus sound SST forecast ====
+
+Project in the pipes with Neelesh 
+
+Ideas: 
+
+develop a `detrend` class as a custom transformer in scikit-learn, which fits a linear model (against e.g. decimal year) and removes the trend 
+
+see https://towardsdatascience.com/pipelines-custom-transformers-in-scikit-learn-the-step-by-step-guide-with-python-code-4a7d9b068156
+
+--------------------
+
+==== Auckland Cycling ====
+
+Notebooks and data on Work Mac in talks_seminars 
+
+--------------------
+
+==== Mertz institute ====
+
+@Mertz 
+
+→ Directory of Intentional Communities: https://www.ic.org/ 
+→ appropedia: https://www.appropedia.org/ 
+→ mother earth news: https://www.motherearthnews.com/ 
+

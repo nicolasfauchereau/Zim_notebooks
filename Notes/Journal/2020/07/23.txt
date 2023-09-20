@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-23T08:39:06+12:00
+
+====== Thursday 23 Jul 2020 ======
+
+@TODO 
+
+[ ] write Nari / Scion 
+[ ] climate twitter / regenerative agriculture → Troy Baisden, see also https://pureadvantage.org/news/2020/04/30/insight-into-regenerative-agriculture-in-new-zealand-the-good-the-bad-and-the-opportunity/ for a comprehensive review and motivation 
+[ ] re-tweet ADH (book) 
+
+
+==== Notes on random numbers: ====
+
+If the random seed is not reset, different numbers appear with every invocation:
+
+>>> np.random.rand(4)
+array([0.83209492, 0.10917076, 0.15798519, 0.99356723])
+>>> np.random.rand(4)
+array([0.46183001, 0.7523687 , 0.96599624, 0.32349079])
+
+np.random.seed(0) makes the random number predictable:
+
+**>>> np.random.seed(0)**
+>>> np.random.rand(4)
+array([0.5488135 , 0.71518937, 0.60276338, 0.54488318])
+>>> np.random.seed(0)
+>>> np.random.rand(4)
+array([0.5488135 , 0.71518937, 0.60276338, 0.54488318])
+
+With the seed reset (every time), the same set of numbers will appear every time. So the project should keep output stable across different runs.
+
+== Dragon's Den registration ==
+
+Ideas registered with Jeanne Wissing 
+
+
+1)
+
+**Title: Building an electronic health monitor for Aotearoa / New Zealand's physical environment** 
+
+Description: We propose to develop new, innovative metrics based on realtime datasets, with spatial and temporal scales determined objectively using pattern recognition techniques, and serve them on an interactive dashboard, to monitor the "vital signs" of our physical environment (climate, atmosphere, hydrosphere) and help recognize trends, convergence of pressures and potential tipping points.
+
+Event: Hamilton, 7 August, in person
+
+2) 
+
+**Title: Machine Learning for data augmentation of climate and weather datasets**
+
+Description: We propose to leverage recent developments in Machine Learning (variational auto-encoders, generative models, transfer learning, image inpainting, ...) to 'augment' our climate and weather datasets. We define 'augmentation' as the the process by which existing datasets are enhanced: datasets with missing values infilled, short datasets extended back in time, coarse resolution datasets downscaled to higher resolutions, large ensemble created from small ensembles, etc.
+
+Event: Hamilton, 7 August, in person 
+
+let me know if you need anything else
+
+Cheers
+
+Nico 

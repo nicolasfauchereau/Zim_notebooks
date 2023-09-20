@@ -1,0 +1,83 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-26T08:45:31+13:00
+
+====== Friday 26 Nov 2021 ======
+
+Composite of SWH anommalies for the 9  ERA5 circulation regimes
+
+@ERA5 @SWH @CPP  
+
+see in [[/home/nicolasf/research/WRs_and_waves/notebooks]] 
+
+**read_ERA_SWH.ipynb** 
+
+**NOTE**: re-downloading the whole dataset, and calculating the daily SWH maxima from the hourly values, see 
+
+download_ERA_SWH.ipynb
+
+--------------------
+
+==== ICU validation paper ====
+
+→ deterministic validation: ACC 
+→ probabilistic validation: calculate quartile probabilities, see 
+	- C3S/calculate_C3S_GCMs_hindcast_quartile_probabilities.ipynb
+	- C3S/drive_calculate_C3S_GCMs_hindcast_quartile_probabilities.ipynb to run it from papermill 
+	
+The quartile probabilities are saved in 
+
+**/media/nicolasf/END19101/ICU/data/CDS/${GCM}/quartile_probs/TPRATE** 
+
+[*] ECMWF
+[*] METEO_FRANCE
+[*] UKMO 
+[*] CMCC 
+[*] DWD 
+[*] NCEP 
+[*] JMA 
+
+--------------------
+
+===== Graph Neural Networks in Tensorflow =====
+
+@ML @DL @network @graph @GNN 
+
+see: 
+
+https://github.com/tensorflow/gnn
+
+Not been able to install it however 
+
+--------------------
+
+==== Idea for climate networks ====
+
+@network @graph 
+
+Before widepread droughts, how do characteristics of the local / regional climate networks change (betweeness, etc): i.e. can we detect signals in the properties of the climate 
+networks themselves prior to significant, impactful climate events 
+
+see library pyunicorn: https://github.com/pik-copan/pyunicorn 
+
+installed in environment `graph` 
+
+examples in [[/home/nicolasf/sources/pyunicorn/examples/tutorials]] 
+
+→ climate_network.ipynb works ! 
+
+**NOTE**: see: https://gist.github.com/kuchaale/0d3c713d0b00783f2b2a0474a6396cc8 to add a cyclic point to an xarray dataset 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

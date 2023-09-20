@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-06T09:29:27+13:00
+
+====== Wednesday 06 Oct 2021 ======
+
+==== ICU New Bulletin  template ====
+
+see 
+
+Hi Nico. Maybe catch up tomorrow morning. I'm trying to create the new ICU from Tristans October 1. A couple of thigs:
+
+On page 2 the rainfall amounts and number of dry days show very similar patterns. I think we do the same as we've done for the drought indices and pick one (rainfall amounts) and do for 90 days / 30 days. That would allow us to talk about recent conditions as well as the longer 90 days situation. Will need to think of a new scale for the 30 day plot.
+
+So we would have: TOP: Last 90 days cumulative rainfall ( mm), and BOTTOM: Last 30 days cumulative rainfall ( mm).
+
+Page 3: Need to correct legend titles: "Early Action Rainfall ( EAR) Watch alert levels (90 day cumulative rainfall) / ( 30 day cumulative rainfall)
+
+Page 4: Need to correct legend title: "Standard Precipitation Index (SPI) / (90 day cumulative rainfall) / (30 day cumulative rainfall)
+
+Page 5: Need to correct legend title: "US Drought Monitor / (90 day cumulative rainfall) / (30 day cumulative rainfall)
+
+Page 6: Will get back to you on probabilistic plots
+
+Page 6/7: Bottom plots. Need legend title: [Month] Water Stress Outlook / Seasonal Water Stress Outlook. Reduce size of legend text to be consistent with other plots.

@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-04T11:27:38+13:00
+
+====== Wednesday 04 Nov 2020 ======
+
+==== installed auto-sklearn ====
+
+see 
+
+and paper https://arxiv.org/pdf/2007.04074.pdf 
+
+Feurer, M., K. Eggensperger, S. Falkner, M. Lindauer, and F. Hutter, 2020: Auto-Sklearn 2.0: The Next Generation. arXiv:2007.04074 [cs, stat],.
+
+--------------------
+
+==== Ran AUTOGLUON for Innovation Vineyards ====

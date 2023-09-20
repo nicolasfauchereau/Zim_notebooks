@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-06T08:38:34+13:00
+
+====== Friday 06 Mar 2020 ======
+
+[[Journal:2020:03:05|05/03/20]]
+
+Forecasts DOWNLOADS available, and pre-processing status: 
+
+=== CDS ===
+
+[*] ECMWF 
+	[*] T2M downloaded in local, and pre-processed, available from 2018-01 
+	[*] PRECIP downloaded in local, and pre-processed 
+[*] UKMO 
+	[*] T2M downloaded in local, remote but cant be read .. trying conversion with NCL: OK, see **pre-process_CDS_UKMO_converted_forecasts_2017_2019.ipynb**
+	[*] PRECIP downloaded in local, remote but cant be read .. trying conversion with NCL: OK, see **pre-process_CDS_UKMO_converted_forecasts_2017_2019.ipynb**
+[*] METEO_FRANCE 
+	[*] T2M downloaded in local, and pre-processed 
+	[*] PRECIP: from 2018-10, switch to version 6 from version 5, downloaded in local and pre-processed 
+[*] CMCC 
+	[*] T2M downloaded in local and pre-processed 
+	[*] PRECIP downloaded in local and pre-processed 
+[*] DWD
+	[*] T2M downloaded in local, and pre-processed
+	[*] PRECIP downloaded in local, and pre-processed
+
+=== JMA ===
+
+[*] JMA
+	[*] T2M downloaded in local, NOT pre-processed 
+	[*] PRECIP downloaded in local, NOT pre-processed
+
+=== IRI ===
+
+[*] NCEP_CFSv2
+	[*] T2M downloaded in remote AND local, NOT pre-processed 
+	[*] PRECIP downloaded in remote AND local, NOT pre-processed 
+[*] CanSIPSv2
+	[*] T2M downloaded in remote AND local, NOT pre-processed 
+	[*] PRECIP downloaded in remote AND local, NOT pre-processed 
+[*] NASA_GEOSS2S
+	[*] T2M downloaded in remote AND local, NOT pre-processed 
+	[*] PRECIP downloaded in remote AND local, NOT pre-processed 
+[*] CanCM4i
+	[*] T2M downloaded in remote AND local, NOT pre-processed 
+	[*] PRECIP downloaded in remote AND local, NOT pre-processed
+[*] GEM_NEMO
+	[*] T2M downloaded in remote AND local, NOT pre-processed 
+	[*] PRECIP downloaded in remote AND local, NOT pre-processed 
+
+
+
+
+

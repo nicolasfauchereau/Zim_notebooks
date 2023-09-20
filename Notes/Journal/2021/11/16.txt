@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-16T09:53:20+13:00
+
+====== Tuesday 16 Nov 2021 ======
+
+==== NZDI ====
+
+@NZDI 
+
+The NZDI script runs on cliops 
+
+see for a copy in [[~/operational/NZDI]]  
+
+--------------------
+
+==== Comparison between AP and clustering on NCEP and ERA5 Z1000 over 1979 - 2019 ====
+
+@CPP @WR 
+
+see 
+
+→ **do_AP_and_kmeans_NCEP1_Z1000_1979_2019.ipynb** for NCEP 
+→ **Weather_and_Climate_paper/do_AP_and_kmeans_ERA5_Z1000_1979_2019.ipynb** for ERA5 
+
+In both cases, with random seed set to zero, the number of extracted clusters is 9 
+
+the PPT is at: 
+
+https://niwa-my.sharepoint.com/:p:/r/personal/nicolas_fauchereau_niwa_co_nz/Documents/mapping_extreme_circulation_regimes.pptx?d=w20f75f21c2b54e9eb170aed2505289fd&csf=1&web=1&e=ZyEovv
+
+
+
+
+
+

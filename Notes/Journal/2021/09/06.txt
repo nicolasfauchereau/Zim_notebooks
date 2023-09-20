@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-06T11:28:34+12:00
+
+====== Monday 06 Sep 2021 ======
+
+@TODO  
+
+== 1) Summary concept note for Smart Ideas (deadline 13 September) ==
+
+https://niwa-my.sharepoint.com/:w:/r/personal/nicolas_fauchereau_niwa_co_nz/_layouts/15/Doc.aspx?sourcedoc=%7B0C5B280C-AC72-4FAD-88D7-87D3CF3EC69B%7D&file=FY21-22 SI Summary Template.docx&action=default&mobileredirect=true s
+
+== 2) continue working on the ICU paper ==
+
+
+== 3) Weather regimes and extremes paper (to be submitted to Weather and Climate) ==
+
+"mapping precipitation and temperature extremes to circulation regimes in Aotearoa New Zealand" 
+
+== 4) reply to Ben re weather regime paper ==
+
+- check the results I get with NCEP vs ERA5 
+- NCEP = Z1000, ERA5 = Z850
+- if ERA5 results not consistent, use NCEP, justification is dataset used in Kidon 2000 
+
+--------------------
+
+==== subsidiary types by Neelesh ====
+
+@CPP @WR 
+
+see [[~/research/CPP/WRs/outputs/subsidiary_types_Neelesh.csv]] 
+
+see notebook: **read_primary_and_subsidiary_types_Neelesh.ipynb**  in [[/home/nicolasf/research/CPP/WRs/notebooks]] 
+

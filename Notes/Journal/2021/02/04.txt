@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-04T11:59:17+13:00
+
+====== Thursday 04 Feb 2021 ======
+
+==== TAIAO docs ====
+
+https://jacobmontiel.github.io/taiao-docs/ 
+
+a set of interesting notebooks in there: 
+
+→ https://jacobmontiel.github.io/taiao-docs/Notebooks/Himawari8/ Himawari8 AWS data connector 
+→ https://jacobmontiel.github.io/taiao-docs/Notebooks/metocean-obs-api-connector/ MetOcean Solutions Observation API connector¶, includes an example of using a LSTM for essentially bias correction 
+→ connection to the MOANA THREDDS server: https://jacobmontiel.github.io/taiao-docs/Notebooks/Moana-thredds-server-connector/ 
+
+
+--------------------
+
+==== RIVER: Online machine learning in Python ====
+
+bike-sharing forecasting: https://riverml.xyz/latest/examples/bike-sharing-forecasting/ 
+time-series model: https://riverml.xyz/latest/examples/building-a-simple-time-series-model/ 
+
+--------------------
+
+==== convert netcdf to geojson and shapefiles ====
+
+see: **convert_netcdf_to_shapefile_geojson.ipynb** in [[/home/nicolasf/operational/netcdf_to_geojson/notebooks]] ll
+
+--------------------
+
+@TODO 
+
+Write a function that gets the list of paths (pathlib) returned by download_CDS.py. and write to disk ... 

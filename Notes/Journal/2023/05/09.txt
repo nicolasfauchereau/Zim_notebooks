@@ -1,0 +1,109 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-09T09:12:19+12:00
+
+====== Tuesday 09 May 2023 ======
+
+==== Tiny microbes could brew big benefits for green biomanufacturing ====
+
+https://www.sciencedaily.com/releases/2023/05/230508114008.htm
+
+Huang, J., and Coauthors, 2023: Complete integration of carbene-transfer chemistry into biosynthesis. Nature, https://doi.org/10.1038/s41586-023-06027-2.
+ 
+
+==== Increased heat risk in wet climate induced by urban humid heat. ====
+
+Zhang, K., C. Cao, H. Chu, L. Zhao, J. Zhao, and X. Lee, 2023: Increased heat risk in wet climate induced by urban humid heat. Nature, https://doi.org/10.1038/s41586-023-05911-1.
+
+Python code: https://figshare.com/articles/dataset/Increased_heat_risk_in_wet_climate_induced_by_urban_humid_heat/21430371/1 
+
+and downloaded in [[/home/nicolasf/research/heat_risk/]] 
+
+--------------------
+
+==== Climate-related prudential regulation tools in the context of sustainable and responsible investment: a systematic review ====
+
+@PwC 
+
+https://www.tandfonline.com/doi/epdf/10.1080/14693062.2023.2179587?needAccess=true&role=button 
+
+--------------------
+
+==== Climate change and human behaviour ! ====
+
+@PwC 
+
+https://www.nature.com/collections/icdbhbbibg 
+
+Designing insurance for climate change
+
+file:///home/nicolasf/Downloads/s41558-022-01514-2.pdf 
+
+--------------------
+
+==== Climate Policy ====
+
+@PwC 
+
+https://www.tandfonline.com/journals/tcpo20
+
+--------------------
+
+==== Assessing the climate change exposure of foreign direct investment ====
+
+@PwC 
+
+Li, X., and K. P. Gallagher, 2022: Assessing the climate change exposure of foreign direct investment. Nat Commun, 13, 1451, https://doi.org/10.1038/s41467-022-28975-5.
+
+--------------------
+@PwC 
+
+==== Focus: Water risks in the private sector ====
+
+https://www.nature.com/collections/thwkqwknsl
+
+--------------------
+
+==== Economics at Nature Research ====
+
+@PwC 
+
+https://www.nature.com/collections/cfigjibcbg 
+
+e.g. 
+
+‘Climate value at risk’ of global financial assets
+
+
+--------------------
+
+==== Focus: ENSO under change ====
+
+@PwC 
+
+https://www.nature.com/collections/ljmwkghnst 
+
+
+--------------------
+https://scitechdaily.com/shapeshifting-structures-can-buildings-evolve-like-organisms/
+
+
+--------------------
+
+==== Value At Risk (VAR) ====
+
+https://web.archive.org/web/20170706074507/http://www.derivativesstrategy.com/magazine/archive/1997/0497fea2.asp 
+
+--------------------
+
+==== Get Nassim Taleb's books ====
+
+--------------------
+ 
+
+https://vargaszeppetello.weebly.com/ 
+
+
+
+
+

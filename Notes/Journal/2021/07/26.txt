@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-26T08:58:18+12:00
+
+====== Monday 26 Jul 2021 ======
+
+==== Z850 downloads from the CDS ====
+
+
+[*] ECMWF
+[*] UKMO 
+[*] METEO_FRANCE 
+[*] DWD 
+[*] CMCC 
+[*] NCEP 
+[>] JMA 
+[x] ECCC 
+
+
+--------------------
+
+==== PLANNING: ====
+
+see in the one.drive 
+
+
+--------------------
+
+==== Paper in climate services ====
+
+Open-data and open-source software for the development and validation of Multi-Model Ensemble seasonal forecasts for the southwest Pacific region". N. Fauchereau, D. Ramsay, A. Lorrey, B. Noll , to be submitted to //Climate Services//. 
+
+See examples: 
+
+Cofiño, A. S., and Coauthors, 2018: The ECOMS User Data Gateway: Towards seasonal forecast data provision and research reproducibility in the era of Climate Services. Climate Services, 9, 33–43, https://doi.org/10.1016/j.cliser.2017.07.001.
+
+Cowan, T., R. Stone, M. C. Wheeler, and M. Griffiths, 2020: Improving the seasonal prediction of Northern Australian rainfall onset to help with grazing management decisions. Climate Services, 19, 100182, https://doi.org/10.1016/j.cliser.2020.100182.
+
+
+

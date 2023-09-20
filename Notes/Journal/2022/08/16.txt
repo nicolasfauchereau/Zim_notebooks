@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-16T09:13:19+12:00
+
+====== Tuesday 16 Aug 2022 ======
+
+==== Jupyter and black formatter ====
+
+mamba install -c conda-forge jupyterlab_code_formatter black isort
+
+or
+
+conda install -c conda-forge jupyterlab_code_formatter black isort

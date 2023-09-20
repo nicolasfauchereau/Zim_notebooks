@@ -1,0 +1,128 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-08T15:26:56+12:00
+
+====== Thursday 08 Apr 2021 ======
+
+==== APCC CLIKS data: ====
+
+https://cliks.apcc21.org/dataset/model 
+
+see user manual at https://cliks.apcc21.org/manual/manual_en.pdf, also downloaded in [[/home/nicolasf/operational/ICU/development/hotspots/resources]] 
+
+see script for download, in e.g. [[/media/nicolasf/END19101/ICU/data/CDS/KMA/TPRATE]] (KMA_GLOSEA5GC2_v2020_download_hindcast.sh) 
+
+login : **dreamshot**
+pass: **niwaw3ath3r**
+
+or 
+
+login : **nicolasf**
+pass: **+love4ks**
+
+**API key**: 634918ad-7ef4-54b5-a4e9-caba6f943512
+
+**Expired Date**: 2022-04-12
+
+see also: 
+
+→ http://clik.apcc21.org/ : downscaling 
+
+→ http://clikp.sprep.org/ : downscaling 
+
+=== KMA → OK ===
+
+hindcast as of 2020: 		GLOSEA5GC2  
+forecasts : 				GLOSEA5GC2
+
+**NOTE: need to select hindcasts as of 2020, then **ALSO** as of 2021 (then choose the most recent, it seems the difference is 0), but even so, the archive is NOT complete, eg. for several of the most recent years, some months are missing **
+
+1993 = 12 months avail.
+1994 = 12 months avail.
+1995 = 12 months avail.
+1996 = 12 months avail.
+1997 = 12 months avail.
+1998 = 12 months avail.
+1999 = 12 months avail.
+2000 = 12 months avail.
+2001 = 12 months avail.
+2002 = 12 months avail.
+2003 = 12 months avail.
+2004 = 12 months avail.
+2005 = 12 months avail.
+2006 = 12 months avail.
+2007 = 12 months avail.
+2008 = 12 months avail.
+2009 = 12 months avail.
+2010 = 12 months avail.
+2011 = 9 months avail.
+2012 = 9 months avail.
+2013 = 9 months avail.
+2014 = 9 months avail.
+2015 = 9 months avail.
+2016 = 9 months avail.
+
+=== NASA → OK ===
+
+Hindcast as of 2019: 		GEOS-S2S-2.1  
+Forecast: 				GEOS-S2S-2.1 
+
+--> all downloaded OK and converted / subsetted / harmonized 
+
+NOTE: fix the mid-month index problem !!
+
+
+~~PNU → NOT OK, ignore~~
+
+~~Hindcast as of 2019: 		CGCMv1.1  ~~
+~~Forecast: 				only CGCMv2.0  possible~~ 
+
+=== MSC → OK ===
+
+Hindcast as of **2020**: 		CANSIPSv2  
+Forecast: 				CANSIPSv2 possible 
+
+--> all downloaded OK and converted / subsetted / harmonized
+
+=== MGO → OK ===
+
+Hindcast as of **2020**: 		MGOAM-2 
+Forecast: 				MGOAM-2 
+
+
+
+=== HMC → OK ===
+
+Hindcast as of **2019**: 		SL-AV
+Forecast: 				SL-AV
+
+~~CWB → NOT OK as forecast only updated in realtime for model version TCWB1Tv1.1~~
+
+Hindcast as of **2019**: 		GFST119
+Forecast: 				TCWB1Tv1.1
+
+=== BoM → OK ===
+
+Hindcast as of 2020 		ACCESS_S1
+Forecast 					ACCESS_S1
+
+**NOTE: NOT OK as it seems it only goes 2 months in the future ?? indeed **
+
+{{./screenshot_2021-04-13-123847.png?width=700}}
+
+
+=== BCC → OK ===
+
+Hindcast as of 2019 		CSM1.1M
+Forecast					CSM1.1M
+
+=== APCC → OK ===
+
+Hindcast as of 2020 		SCOPS
+Forecast 					SCOPS 
+
+
+
+
+
+

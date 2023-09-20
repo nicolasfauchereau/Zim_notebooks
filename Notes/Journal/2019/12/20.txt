@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-20T08:50:47+13:00
+
+====== Friday 20 Dec 2019 ======
+
+[[https://www.climate.ai/|ClimateAI:]]
+
+Interpretable Seasonal Forecasting: Machine Learning and Dynamical Models: https://www.climate.ai/post/interpretable-seasonal-forecasting-machine-learning-and-dynamical-models
+
+A Very Brief History of Seasonal Climate Forecasting for Agriculture: https://www.climate.ai/post/a-very-brief-history-of-seasonal-climate-forecasting-for-agriculture
+
+paper on El Nino forecasting: https://www.climatechange.ai/CameraReadySubmissions%202-119/119/CameraReadySubmission/Forecasting_El_Nino_with_Convolutional_and_Recurrent_Neural_Networks(1).pdf 

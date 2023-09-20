@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-22T09:08:57+13:00
+
+====== Monday 22 Mar 2021 ======
+
+==== Neural Network Attribution Methods for Problems in Geoscience: A Novel Synthetic Benchmark Dataset ====
+
+https://arxiv.org/abs/2103.10005 
+
+--------------------
+
+==== Miniforge as an alternative to Anaconda / Miniconda ? ====
+
+see https://github.com/conda-forge/miniforge 
+
+
+This repository holds a minimal installer for Conda specific to conda-forge. It is comparable to Miniconda, but with:
+
+	conda-forge set as the default channel
+	an emphasis on supporting various CPU architectures
+	optional support for PyPy in place of standard Python (aka "CPython")
+	optional support for Mamba in place of Conda
+
+--------------------
+
+==== Rotated Spectral Principal Component Analysis (rsPCA) for Identifying Dynamical Modes of Variability in Climate Systems ====
+
+Guilloteau, C., A. Mamalakis, L. Vulis, P. V. V. Le, T. T. Georgiou, and E. Foufoula-Georgiou, 2021: Rotated Spectral Principal Component Analysis (rsPCA) for Identifying Dynamical Modes of Variability in Climate Systems. Journal of Climate, 34, 715–736, https://doi.org/10.1175/JCLI-D-20-0266.1.
+
+--------------------
+
+==== Graph-Guided Regularized Regression of Pacific Ocean Climate Variables to Increase Predictive Skill of Southwestern U.S. Winter Precipitation ====
+
+Stevens, A., R. Willett, A. Mamalakis, E. Foufoula-Georgiou, A. Tejedor, J. T. Randerson, P. Smyth, and S. Wright, 2021: Graph-Guided Regularized Regression of Pacific Ocean Climate Variables to Increase Predictive Skill of Southwestern U.S. Winter Precipitation. Journal of Climate, 34, 737–754, https://doi.org/10.1175/JCLI-D-20-0079.1.
+
+**code**: https://github.com/Willett-Group/gtv_forecasting 
+
+cloned into [[~/research/Smart_Ideas/resources/repos_application_cases]]  	
+
+see also correction: https://github.com/Willett-Group/gtv_forecasting/blob/master/paper/swus_gtv_correction.pdf 
+
+**NOTE:** results can be reproduced, see in ~/research/Smart_Ideas/resources/repos_application_cases/gtv_forecasting/paper/corrected_paper_figures.ipynb 
+
+
+
+--------------------
+
+==== Sub-Seasonal Climate Forecasting via Machine Learning: Challenges, Analysis, and Advances ====
+
+https://arxiv.org/abs/2006.07972
+
+He, S., X. Li, T. DelSole, P. Ravikumar, and A. Banerjee, 2020: Sub-Seasonal Climate Forecasting via Machine Learning: Challenges, Analysis, and Advances. arXiv:2006.07972 [cs, stat],.
+
+
+code: https://github.com/Willett-Group/SSF 
+
+cloned into [[~/research/Smart_Ideas/resources/repos_application_cases]]   
+
+--------------------
+
+==== A Multivariate Probabilistic Framework for Tracking the Intertropical Convergence Zone: Analysis of Recent Climatology and Past Trends ====
+
+
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL079865
+
+{{./screenshot_2021-03-22-121204.png?width=600}}
+
+
+southward trend in ITCZ location 
+
+
+
+

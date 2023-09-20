@@ -1,0 +1,82 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-15T12:02:08+12:00
+
+====== Monday 15 May 2023 ======
+
+==== BiasAdjustCXX v1.8 ====
+
+@CMIP6 @PwC 
+
+https://github.com/btschwertfeger/BiasAdjustCXX 
+
+Schwertfeger, B. T., G. Lohmann, and H. Lipskoch, 2023: Introduction of the BiasAdjustCXX command-line tool for the application of fast and efficient bias corrections in climatic research. SoftwareX, 22, 101379, https://doi.org/10.1016/j.softx.2023.101379.
+ 
+https://github.com/btschwertfeger/BiasAdjustCXX-Performance-Testhttps://github.com/btschwertfeger/BiasAdjustCXX-Performance-Test 
+
+also see **python-cmethods** 
+
+https://zenodo.org/record/7652756#.ZF6123YZEbQ 
+
+and https://github.com/btschwertfeger/python-cmethods 
+
+__NOTE: install from the clone of the repo with__ 
+
+pip install -e . 
+
+see in [[/home/nicolasf/research/CMIP6_downscaling/repos/python-cmethods]] 
+
+notably notebook **examples.ipynb** in [[/home/nicolasf/research/CMIP6_downscaling/repos/python-cmethods/examples]] 
+
+**idea for CMIP6 / CCAM downscaling: derive transfer functions individually for each Circulation Regime ?** 
+
+
+--------------------
+
+==== Bias-adjustment examples with xclim ====
+
+@CMIP6 @xclim @PwC 
+
+https://earthcube2021.github.io/ec21_book/notebooks/ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html#bias-adjustment 
+
+see also: 
+
+--------------------
+
+==== Machine Learning Guided Weather Analogs ====
+
+https://earthcube2021.github.io/ec21_book/notebooks/ec21_hu_etal/README.html 
+
+https://weiming-hu.github.io/AnalogsEnsemble/ 
+
+https://earthcube2021.github.io/ec21_book/notebooks/ec21_hu_etal/WH_01_Spatio-Temporal_Deep_Analogs_2021.html 
+
+--------------------
+
+==== Frequency-domain analysis of large datasets ====
+
+https://earthcube2021.github.io/ec21_book/notebooks/ec21_martin_etal/README.html 
+
+https://earthcube2021.github.io/ec21_book/notebooks/ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html 
+
+
+	Rechunk the data. We begin by rechunking the CESM sea surface temperature (SST) output from global, daily snapshots to chunks in space and 5-year chunks in time. This step is accomplished using the package **rechunker**.
+
+	Fourier analysis. Next we compute the power spectrum of SST using the package **xrft**, which nicely integrates with Xarray and Dask. Within xrft, we are also able to easily apply detrending and windowing functions to our data, and also account for the fact that our data are real (with no imaginary components).
+
+	Visualize the data. Last, we average over various frequency bands to show the spatial distribution of the SST power spectrum as global maps.
+
+--------------------
+
+==== Automated Machine Learning for Earth Science via AutoGluon ====
+
+https://earthcube2021.github.io/ec21_book/notebooks/ec21_shi_etal/README.html 
+
+https://github.com/autogluon/autogluon 
+
+https://earthcube2021.github.io/ec21_book/notebooks/ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.html 
+
+
+
+
+

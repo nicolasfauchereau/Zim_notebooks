@@ -1,0 +1,69 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-20T10:27:14+12:00
+
+====== Thursday 20 Aug 2020 ======
+
+==== Meeting Jeff Zais ====
+
+
+
+==== NZDI forecasting ====
+
+→ SMACC report available at: 
+
+https://teams.microsoft.com/l/file/9372FA46-EB67-47AC-A81B-B9AF8EBA8D5A?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&fileType=pdf&objectUrl=https%3A%2F%2Fniwa.sharepoint.com%2Fsites%2FDroughtForecasting%2FShared%20Documents%2FGeneral%2FSLMACC_NZDI_Report_26Jun20.pdf&baseUrl=https%3A%2F%2Fniwa.sharepoint.com%2Fsites%2FDroughtForecasting&serviceName=teams&threadId=19:09153ee8528c483c99567feca1c01645@thread.tacv2&groupId=590757fb-63b4-4442-b72e-f5892fe01516 
+
+→ Ask Abha to post the slides on Teams 
+
+==== PANGEO and Machine Learning ====
+
+https://paper.dropbox.com/doc/Meeting-notes-Machine-Learning-WG-9UUgyywF9jmIMXXbmZTyJ 
+
+=== AI4ESS Summer School Hackathon 2020 ===
+
+**ML for seasonal forecasting** 
+
+https://github.com/NCAR/ai4ess-hackathon-2020
+
+https://github.com/NCAR/ai4ess-hackathon-2020/blob/master/notebooks/seasonal_forecasting.ipynb
+
+https://sites.google.com/lbl.gov/dl4sci2019/agenda?authuser=0 
+
+=== Deep learning for Science ===
+
+https://dl4sci-school.lbl.gov/agenda
+
+https://github.com/theevann/dl4sci-pytorch-webinar
+
+Working with xarray and pytorch: 
+
+https://discuss.pytorch.org/t/deadlock-with-dataloader-and-xarray-dask/9387 
+
+=== Working with gitlab (git.niwa.local) ===
+
+need to change configuration to not verify SSL, with this command 
+
+git config --global http.sslverify false
+
+see error before reported in https://stackoverflow.com/questions/21181231/server-certificate-verification-failed-cafile-etc-ssl-certs-ca-certificates-c 
+
+==== WARNING ====
+
+Something is wrong with the seasonal anomalies from VCSN ... now fixed, it seemed to be linked to the compression 
+
+==== Noah Brenowitz ====
+
+https://www.noahbrenowitz.com/#publications 
+
+https://github.com/nbren12/gnl 
+
+https://sklearn-xarray.readthedocs.io/en/latest/ 
+
+
+
+
+
+
+
+

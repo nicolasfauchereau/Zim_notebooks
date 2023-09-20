@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-01T10:19:17+13:00
+
+====== Thursday 01 Oct 2020 ======
+
+--------------------
+
+==== SCION soil microbiome and climate ====
+
+see: https://www.scionresearch.com/about-us/about-scion/corporate-publications/scion-connections/scion-connections-2/scion-connections-issue-37,-september-2020/forest-microbiomes-small-actors-play-a-big-part 
+
+contacts: 
+
+simeon.smaill@scionresearch.com or steve.a.wakelin@scionresearch.com 
+
+--------------------
+
+==== Smart Ideas application cases ====
+
+== Apple and Pears ==
+
+selected a region (defined by bounding box), calculated min, max, mean and sum of the daily values for all extracted parameters from VCSN over the domain 
+
+== Innovation Vineyards ==
+
+selected a point () and extracted daily values for  all extracted parameters from VCSN 
+
+== Watercare ==
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/Watercare/notebooks/]]**read_shapefile_Watercare.ipynb**  
+
+uses regionmask to calculate time series for the Hunuas and Waitakere catchments
+
+The outputs are stored in [[/home/nicolasf/research/Smart_Ideas/outputs/targets/application_cases/Watercare]] 
+
+The comparison with indices previously calculated using Salem (notebook named **Watercare/notebooks/Extract_HUNUA_WAITAKERE.ipynb**) show maximum differences between time-series of 4.0000000012696546e-05 (i.e. **negligible**) 
+
+
+
+--------------------
+
+==== Image similarity measures / metrics in Python ====
+
+https://github.com/up42/image-similarity-measures 
+
+Implementation of eight evaluation metrics to access the similarity between two images. The eight metrics are as follows:
+
+ * <i><a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">**Root mean square error (RMSE)**</a></i>,
+ * <i><a href="https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio">**Peak signal-to-noise ratio (PSNR)**</a></i>,
+ * <i><a href="https://en.wikipedia.org/wiki/Structural_similarity">**Structural Similarity Index (SSIM)**</a></i>,
+ * <i><a href="https://www4.comp.polyu.edu.hk/~cslzhang/IQA/TIP_IQA_FSIM.pdf">**Feature-based similarity index (FSIM)**</a></i>,
+ * <i><a href="https://www.tandfonline.com/doi/full/10.1080/22797254.2019.1628617">**Information theoretic-based Statistic Similarity Measure (ISSM)**</a></i>,
+ * <i><a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271618302636">**Signal to reconstruction error ratio (SRE)**</a></i>,
+ * <i><a href="https://ntrs.nasa.gov/citations/19940012238">**Spectral angle mapper (SAM)**</a></i>, and
+ * <i><a href="https://ece.uwaterloo.ca/~z70wang/publications/quality_2c.pdf">**Universal image quality index (UIQ)**</a></i>
+
+
+
+

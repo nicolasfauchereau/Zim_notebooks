@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-18T09:03:13+13:00
+
+====== Tuesday 18 Jan 2022 ======
+
+Neelesh's github **nram812** 
+
+https://piakocatchmentforum.co.nz/
+
+--------------------
+
+==== Māori keybord in linux ====
+
+@Māori 
+
+1) install the Maori keyboard: 
+
+settings / hardware / keyboard / layouts 
+
+Then add **Māori** keyboard 
+
+2) set up the rightalt key to be the compose key: 
+
+in layouts, select `Options...` at the bottom right, then scroll down to "Position of compose key" 
+
+{{./screenshot_2022-01-18-114124.png}}
+
+and select `Right Alt` 
+
+The Māori keyboard can be activated on the right of the task bar (click the flag and choose Māori): 
+
+{{./screenshot_2022-01-18-114401.png}}
+
+
+--------------------
+
+
+
+
+

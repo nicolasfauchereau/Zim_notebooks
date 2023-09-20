@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-05T15:22:23+12:00
+
+====== Tuesday 05 Sep 2023 ======
+
+==== **Anthropogenic fingerprints in daily precipitation revealed by deep learning** ====
+
+@ML 
+
+https://www.nature.com/articles/s41586-023-06474-x 
+
+code: TensorFlow (https://www.tensorflow.org) libraries were used to formulate a climate-change-detection model using a CNN. The codes for generating the detection model and plotting the figures were downloaded from https://doi.org/10.5281/zenodo.8107114. 
+
+
+--------------------
+
+==== Multi-task machine learning improves multi-seasonal prediction of the Indian Ocean Dipole ====
+
+@ML  
+
+https://www.nature.com/articles/s41467-022-35412-0 
+
+--------------------

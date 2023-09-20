@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-17T09:53:22+13:00
+
+====== Monday 17 Feb 2020 ======
+
+@SI GCM processing
+
+run_process_CDS_hindcasts_per_month.sh in [[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks]] failed 
+
+
+@TAIAO
+
+WeatherBench: A benchmark dataset for data-driven weather forecasting
+
+https://arxiv.org/abs/2002.00469
+
+and file:///home/nicolasf/research/Smart_Ideas/resources/papers/Weather_Benc_2002.00469.pdf 
+
+~~-----------------------------------------------------------------------------------------------------------------------------------------~~
+
+==== TRMM to GPM / IMERG transition ====
+
+Cron jobs on 192.168.174.81 (dendro) 
+
+[[/Users/nicolasf/data/TRMM/daily/scripts/run_get_daily_TRMM_TMPA_netcdf.py]] 
+
+~~-----------------------------------------------------------------------------------------------------------------------------------------~~
+
+==== NZ data science slack channel ====
+
+https://app.slack.com/client/TBLNGP23V/CBLRJKT0A
+
+
+

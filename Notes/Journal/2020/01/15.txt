@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-15T15:55:22+13:00
+
+====== Wednesday 15 Jan 2020 ======
+
+check units for precip and temperatures for all models
+
+see 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/check_GCMs_precip_temp_units.ipynb]]
+
+e.g. for PRECIP SEASONAL ANOMALIES:
+
+min: -2.4363200168409094e-07, max: 5.342375857253501e-07 for [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/UKMO]]	
+min: -2.4624881689305766e-07, max: 3.4235443990837666e-07 for [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/CMCC]]	
+min: -2.3366939672087028e-07, max: 2.973571611164516e-07 for [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/DWD]]	
+min: **-14.175396446655702, max: 19.344705901099772** for [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/JMA]]	
+no file available for precip in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/GEM_NEMO]]	
+no file available for precip in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/CanSIPSv2]]	
+no file available for precip in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/CanCM4i]]	
+no file available for precip in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/NASA-GEOSS2S]]	
+min: -2.064492150566366e-07, max: 3.1183978421722713e-07 for [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/ECMWF]]	
+min: **-6.107615035944036e-07, max: 7.187750270531978e-07** for [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/METEO_FRANCE]]  
+
+JMA not the same units apparently 

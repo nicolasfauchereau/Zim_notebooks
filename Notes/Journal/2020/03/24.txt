@@ -1,0 +1,87 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-24T07:51:32+13:00
+
+====== Tuesday 24 Mar 2020 ======
+
+=== extraction of regional anomalies from GCM ===
+
+**CDS:**
+	all done ..
+**IRI:** 
+	**+ NCEP_CFSv2** all done 
+	**+ CanCM4i**: ! the hindcasts actually include the period 2017 to 2019: move the years 2017 to 2019 to the forecast folder
+	+ **CanSIPSv2**: all done
+	+ **GEM_NEMO**: all done
+	+ **NASA_GEOSS2S**: all done (note that needed to add a fix to get rid of the extra 'Z' dimension)
+**JMA:** 
+
+NOTE: the dimension 'step' is not in the input file as there are no (consistently over the period) leadtimes beyond 3 months ... similarly there are no ensemble members 
+
+ALSO NOTE: the JMA outputs need to be i**nterpolated onto a finer grid (1 X 1)**, or else doesnt work ...
+	
+	**JMA:** T2M AND PRECIP: something VERY wrong at the end of the period ! 
+	
+
+{{./screenshot_2020-03-25-151907.png}}
+
+
+The discontinuity is in the first few months of 2015
+
+maybe the values are actually 3 months averages instead of monthly values ...
+
+seems like now on https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2_Hind/monthly 
+
+is available until end of 2019 (2019-12-27) 
+
+The ongoing forecasts are available at:  https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2/3-mon/GPV/202003/
+
+@TODO 
+
+=== Redownload and reprocess everything: hindcasts + first part of the forecasts from ===
+
+https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2_Hind/monthly  
+
+=== then ongoing forecasts from ===
+
+https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2/3-mon/GPV/
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+------ 
+	
+@TODO extract the GCM grid points for the whole of NZ = melt the geometries, do this on a common HIGH RES GRID, not the interpolated grid of JMA, JMA will then be excluded from the analysis 
+
+Note that depending on the model's resolution and grid, one might need to extend the margin to 2 degrees when selecting the subset with salem, e.g. with CanCM4i
+
+{{{code: lang="python" linenumbers="True"
+region = dset.salem.subset(shape=shape, margin=2)
+}}}
+
+
+The output (netcdf file) contains only grid points intersecting or inside the NZ multipolygon, and is exported for each GCM and Variable in 
+
+[[/home/nicolasf/research/Smart_Ideas/outputs/targets/GCMs/NZ_shape_grid.]]
+
+see notebook: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/GCM/]]calculates_nz_grid_from_GCM.ipynb 
+
+for the processing ... 
+
+
+
+
+

@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-02T12:43:25+12:00
+
+====== Monday 02 May 2022 ======
+
+==== ICU: finished first draft of the ICU paper ====
+
+@ICU 
+
+see: https://niwa-my.sharepoint.com/:w:/g/personal/nicolas_fauchereau_niwa_co_nz/EYYPWRPyZBJPt5CXL2lCC-oBz3g1fPabd-jMm47wwYSp8g?e=eabKe3 
+
+--------------------
+
+==== 20CR reanalysis dataset for the extending the study on circulation regimes to early 20th century ====
+
+@WR 
+
+see data: https://portal.nersc.gov/project/20C_Reanalysis//
+
+
+--------------------
+
+==== Weather and Climate paper (mapping extremes in precipitation and temperature to circulation regimes in Aotearoa New Zealand) ====
+
+@WR 
+
+see: 	https://niwa-my.sharepoint.com/:w:/g/personal/nicolas_fauchereau_niwa_co_nz/EVcxo2IrcbhCjU064b_ymLkB5v-IFDPSl-jbrcq9UmP5Rg?e=RDfwCW 
+
+for the creation of the 90th percentile climatologies: 
+
+in 	[[/home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper]] 
+
+**read_VCSN_calc_quantile_climatologies_construct.ipynb** 
+
+problem with the seasonal distribution of the clusters frequency, it doesnt match with what Neelesh shows, moreover, his classification (see csv file **primary_types_Neelesh.csv**) does not show the seasonality that he shows in the paper 
+
+see notebook **analyse_clusters_ERA5.ipynb** 
+
+
+
+--------------------
+
+
+

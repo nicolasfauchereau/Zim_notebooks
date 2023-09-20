@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-22T15:10:24+13:00
+
+====== Thursday 22 Dec 2022 ======
+
+==== SCO processing to scripts ====
+
+see in  
+
+
+== C3S_calc_GCM_forecast_time_series.py ==
+
+
+for GCM in ECMWF UKMO METEO_FRANCE DWD CMCC NCEP JMA ECCC_CanCM4i ECCC_GEM5_NEMO; do 
+	./C3S_calc_GCM_forecast_time_series.py --varname tprate --period monthly --gcm ${GCM}; 
+done
+
+== compile_meta_ensemble.py ==
+
+./compile_meta_ensemble.py --init 2022 12 --varname t2m --period seasonal
+
+== C3S_make_MME_forecast_and_validate.py ==
+
+for region in NNI WNI ENI NSI WSI ESI; do
+	./C3S_make_MME_forecast_and_validate.py --varname precip --period seasonal --region ${region}; 
+done 
+

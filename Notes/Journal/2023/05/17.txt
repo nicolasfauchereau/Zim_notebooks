@@ -1,0 +1,151 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-17T08:41:04+12:00
+
+====== Wednesday 17 May 2023 ======
+
+Frontiers in Climate 
+
+https://www.frontiersin.org/journals/climate/
+
+Climate Risk Management 
+
+https://www.frontiersin.org/journals/climate/sections/climate-risk-management#about?utm_source=fweb&utm_medium=nblog&utm_campaign=cco%20-jl-fclim-services-risk
+
+examples: 
+
+ A Tipping Multiverse Framework: Assessing Tipping Points across Sub-Systems in a Social-Ecological System under Change  Volume 5 - 2023 | doi: 10.3389/fclim.2023.1145942 
+
+ Insights into climate and economics:  Volume 5 - 2023 | doi: 10.3389/fclim.2023.1202645  
+
+ Decision making for transformative change: Exploring systemic uncertainty and deep leverage points in methods for Decision Making Under Deep Uncertainty  Volume 5 - 2023 | doi: 10.3389/fclim.2023.1129378 
+
+ **Research advancements for Impact Chain based Climate Risk and Vulnerability Assessments  Volume 5 - 2023 | doi: 10.3389/fclim.2023.1095631** 
+
+As the climate crisis continues to worsen, there is an increasing demand for scientific evidence from **Climate Risk and Vulnerability Assessments (CRVA)**. We present 12 methodological advancements to the **Impact Chain-based CRVA (IC-based CRVA) framework**, which combines participatory and data-driven approaches to identify and measure climate risks in complex socio-ecological systems. The advancements improve the framework along five axes, including the existing workflow, stakeholder engagement, uncertainty management, socio-economic scenario modeling, and transboundary climate risk examination. Eleven case studies were conducted and evaluated to produce these advancements. Our paper addresses two key research questions: a) How can the IC-based CRVA framework be methodologically advanced to produce more accurate and insightful results? and b) How effectively can the framework be applied in research and policy domains that it was not initially designed for? We propose methodological advancements to capture dynamics between risk factors, to resolve contradictory worldviews, and to maintain consistency between Impact Chains across policy scales. We suggest using scenario-planning techniques and integrating uncertainties via Probability Density Functions and Reverse Geometric Aggregation. Our research examines the applicability of IC-based CRVAs to address transboundary climate risks and integrating macro-economic models to reflect possible future socio-economic exposure. Our findings demonstrate that the modular structure of IC-based CRVA allows for the integration of various methodological advancements, and further advancements are possible to better assess complex climate risks and improve adaptation decision-making. 
+
+
+--------------------
+
+==== System for the Triage of Risks from Environmental and Socio-Economic Stressors. ====
+
+@PwC 
+
+Schlosser, C. A., and Coauthors, 2023: Assessing compounding risks across multiple systems and sectors: a socio-environmental systems risk-triage approach. Front. Clim., 5, 1100600, https://doi.org/10.3389/fclim.2023.1100600.
+
+
+https://phys.org/news/2023-05-tool-hot-compounding-environmental-economic.html
+
+https://est.mit.edu/
+
+https://globalchange.mit.edu/ 
+
+https://globalchange.mit.edu/research/research-tools/risk-analysis
+
+--------------------
+
+==== CCAM land sea mask ====
+
+ccam_12km_NZ_Invariant.nc
+
+see in **BCSD_adjust.ipynb** 
+
+{{./screenshot_2023-05-17-103248.png?width=500}}
+
+{{./screenshot_2023-05-17-103414.png?width=700}}
+
+
+--------------------
+
+==== password resets etc ====
+
+Nvidia developer 
+Nicolas.Fauchereau@gmail.com
+5h2#Mk)Ku]5$cmb
+
+gmail
+2023Crf300LSakyamuni 
+
+NicolasF#0810 
+
+--------------------
+Nature is changing as land abandonment increases
+https://www.sciencedaily.com/releases/2023/05/230511164449.htm
+
+--------------------
+
+==== calibration done over 1972 - 2014 historical ====
+
+@CMIP6 @PwC 
+
+tasmin 
+
+[*] ACCESS-CM2 
+[*] NorESM2-MM
+[*] EC-Earth3
+[*] GFDL-ESM4
+[*] NZESM: see issue (now fixed) related to 360_days calendar of the model 
+[*] AWI-CM-1-1-MR
+
+tasmax 
+
+[*] ACCESS-CM2 
+[*] NorESM2-MM
+[*] EC-Earth3
+[*] GFDL-ESM4
+[*] NZESM
+[*] AWI-CM-1-1-MR
+
+pr 
+
+[*] ACCESS-CM2 
+[*] NorESM2-MM
+[*] EC-Earth3
+[*] GFDL-ESM4
+[*] NZESM
+[*] AWI-CM-1-1-MR
+
+see: 
+ 
+https://docs.xarray.dev/https://docs.xarray.dev/en/stable/generated/xarray.Dataset.convert_calendar.html
+
+for an explanation of the mapping between 360_day calendar and gregorian (or no_leap) calendar 
+
+--------------------
+
+==== NZTA:  National Resilience Programme Business Case ====
+
+@PwC 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

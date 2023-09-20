@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-18T12:31:02+13:00
+
+====== autoML and Hyperparameters optimization ======
+Created Wednesday 18 December 2019
+
+===== AutoML libraries =====
+
++ Auto-sklearn:  https://automl.github.io/auto-sklearn/master/
++ TPOT: https://epistasislab.github.io/tpot/
+
+are more **autoML libraries**, but do actually provide hyper-parameters tuning capabilities. 
+
+Note that it is a bit hard to install auto-sklearn ... some error messages are generated during the installation, See instructions for installing in an Anaconda environment at: 
+
+https://automl.github.io/auto-sklearn/master/installation.html#installing-auto-sklearn 
+
+**auto-sklearn** has been installed in the 'ML' conda environment, tests are currently (as of 10/10/2020) being run, in notebook: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML]]
+
+on the MNIST dataset ... 
+
+It yields an accuracy score of 0.99 on the test dataset. see 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/test_auto-sklearn_MNIST.ipynb]]
+
+The TPOT library is tested as well in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/test_TPOT_MNIST.ipynb]]
+
+should also yield comparable accuracy scores if we belive what's on their website ... note that it seems to take forever to train 
+
+===== hyperparameters optimization libraries: =====
+
+
++ https://github.com/hyperopt/hyperopt
++ http://maxpumperla.com/hyperas/
++ https://github.com/keras-team/keras-tuner
++ https://scikit-optimize.github.io/ : Bayesian Optimization
++ https://github.com/rsteca/sklearn-deap : Evolutionary Optimization (Genetic Algorithms)
++ https://github.com/optuna/optuna
++ https://github.com/HunterMcGushion/hyperparameter_hunter
++ https://github.com/Neuraxio/Neuraxle
++ **Optuna** https://optuna.org/ (grid and random search, tree of Parzen estimators, CMAES)
++ **BoTorch** https://botorch.org/ (Bayesian optimization)
++ **HpBandSter** https://github.com/automl/HpBandSter (mixture of HyperBand and Bayesian optimization)
++ **Nevergrad** https://github.com/facebookresearch/nevergrad (bandit algorithms, population-based optimizers, evolution strategies)
++ **Ray-tune** https://github.com/ray-project/ray/tree/master/python/ray/tune (Bayesian, Hyperband, relies on other toolkits) this one is part of the Ray ecosystem (https://docs.ray.io/en/latest/index.html) which seems like a very nice platform for distributed training and to serve/swap models in production (digression: check the ScipyCon 2020 video https://www.youtube.com/watch?v=XIu8ZF7RSkw for a nice overview)
++ **sherpa**: https://github.com/sherpa-ai/sherpa and https://arxiv.org/abs/2005.04048 
+
+and AUTOGLUON: https://autogluon.mxnet.io/index.html# 
+and PYCARET 
+
+see [[https://teams.microsoft.com/l/message/19:bc38bfabe50340b58a0cec6de446415f@thread.tacv2/1598433389824?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&groupId=582cda94-a824-44da-a90a-d2c77e9e21ee&parentMessageId=1598433389824&teamName=T%26I%20Analytics%20%26%20Modelling%20Hub&channelName=Machine%20Learning%20and%20AI&createdTime=1598433389824|threFad]] on Teams 
+
+
+

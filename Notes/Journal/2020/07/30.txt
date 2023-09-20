@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-30T09:08:49+12:00
+
+====== Thursday 30 Jul 2020 ======
+
+===== XCLIM and PYCLIMDEX =====
+
+Libraries to calculate indices from an xarray dataset / dataarray 
+
+see: 
+
+https://github.com/Ouranosinc/xclim and https://github.com/bgroenks96/pyclimdex 
+
+cloned locally in [[~/research/GWRC_2121]] 
+
+Indices calculated in **XCLIM**: 
+
+https://xclim.readthedocs.io/en/stable/indicators.html 
+
+indices calculated in **PYCLIMDEX** 
+
+**Temperature**
+
+	Annual frost days
+	Annual tropical nights
+	Annual icing days
+	Annual summer days
+	Monthly max daily max temp (TXx)
+	Monthly min daily max temp (TXn)
+	Monthly max daily min temp (TNx)
+	Monthly min daily min temp (TNx)
+	Daily temperature range (DTR)
+
+**Precipitation**
+
+	Monthly 1-day precip (Rx1day)
+	Monthly 5-day precip (Rx5day)
+	Annual 10mm precip days
+	Annual 20mm precip days
+	Annual n mm precip days
+	Total precipitation (variable time period)
+	Simple intensity index (SDII)
+	Consecutive dry days (CDD)
+	Consecutive wet days (CWD)
+
+
+
+
+

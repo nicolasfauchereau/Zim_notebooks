@@ -1,0 +1,93 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-21T09:26:09+12:00
+
+
+
+====== Wednesday 21 Sep 2022 ======
+
+==== Matplotlib mdates formatter ====
+
+**dates / date formatting in matplotlib** 
+
+import matplotlib.dates as mdates
+
+fig, ax = plt.subplots(figsize=(6, 4))
+
+for l, g in df.groupby("Name"):
+	ax.plot(g["Date"], g["Close"], label=l)
+
+ax.xaxis.set_major_formatter(
+	mdates.DateFormatter("%b-%y")
+)
+ax.tick_params(axis='x', rotation=30)
+
+ax.set_title("Stock prices (2015 - 2017)")
+ax.set_ylabel("Close")
+ax.set_xlabel("Date")
+ax.legend(title="Name")
+
+{{./screenshot_2022-09-21-092631.png}}
+
+--------------------
+
+==== Regional climate model emulator based on deep learning: concept and first evaluation of a novel hybrid downscaling approach ====
+
+@MBIE @downscaling 
+
+paper: https://link.springer.com/article/10.1007/s00382-022-06343-9
+
+code: https://github.com/antoinedoury/RCM-Emulator 
+
+see reference also for an intercomparison of SD techniques: Gutiérrez, J.M., Maraun, D., Widmann, M., Huth, R., Hertig, E., Benestad, R., Roessler, O., Wibig, J., Wilcke, R., Kotlarski, S., San Martín, D., Herrera, S., Bedia, J., Casanueva, A., Manzanas, R., Iturbide, M., Vrac, M., Dubrovsky, M., Ribalaygua, J., Pórtoles, J., Räty, O., Räisänen, J., Hingray, B., Raynaud, D., Casado, M.J., Ramos, P., Zerenner, T., Turco, M., Bosshard, T., Štěpánek, P., Bartholy, J., Pongracz, R., Keller, D.E., Fischer, A.M., Cardoso, R.M., Soares, P.M.M., Czernecki, B., Pagé, C., 2019. **An intercomparison of a large ensemble of statistical downscaling methods over Europe: Results from the VALUE perfect predictor cross-validation experiment**. Int J Climatol 39, 3750–3785. https://doi.org/10.1002/joc.5462
+ 
+
+--------------------
+
+==== pandas value_counts in groupby ====
+
+see example in **make_Kidson_Types.ipynb** in [[/home/nicolasf/research/PICT_notebooks/notebooks/make_datasets]] 
+
+e.g. what is the most frequent daily cluster as a function of the "original" KTs using James archive sent to the Kidson Types interest group 
+
+**df_KT_labels.groupby('KT')['cluster'].value_counts().unstack()**
+
+--------------------
+
+==== SCO: calculate the hindcast probabilities time-series for tmean and precip ====
+
+@SCO 
+
+see **calc_GCM_hindcast_climatologies_and_time_series.ipynb** 
+
+~ all calculated already for tprate in [[~/operational/seasonal_forecasting/outputs/ICU_districts/hindcast_categories]] 
+
+need to calculate them for **t2m** 
+
+t2m are in [[/media/nicolasf/END19101/ICU/data/CDS/operational/hindcasts/]]
+
+The time-series of VCSN 6 regions are in [[~/operational/SCO/outputs/VCSN/time_series]] 
+
+--------------------
+
+==== Precision Horticulture / MBIE Science Excellence section, MBIE bid by Drew ====
+
+see: 
+
+https://niwa-my.sharepoint.com/:w:/g/personal/nicolas_fauchereau_niwa_co_nz/EXe4BIl83vZKh9ZvV8vLA8EBxnprPIkm_I4QCmdVTMC9rQ?e=e0zh6F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

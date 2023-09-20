@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-08T08:27:23+13:00
+
+====== Thursday 08 Dec 2022 ======
+
+==== bloky artifacts when using month grouper : ====
+
+@MBIE @downscaling @xclim 
+
+
+{{./screenshot_2022-12-08-082735.png}}
+
+Problem occurs for 2007 and is probably related to the map_blocks parallelisation of xarray, leading to the values being improperly saved ... 
+
+fixed that in **downscale_xclim_ACCESS-CM2_CCAM_to_VCSN_cross_validation_train_month_grouper.ipynb** 
+
+{{./screenshot_2022-12-08-084147.png}}
+
+
+--------------------
+
+==== SCO: code for the generation of the APCC, ACCESS-S and NMME forecasts ====
+
+@SCO 
+
+see in [[/home/nicolasf/operational/NCC_ops/SCO_copernicus]] 
+
+and [[/home/nicolasf/operational/seasonal_forecasting/notebooks/SCO/from_Ben]] 
+
+--------------------
+
+==== auto activate conda environment when cd into a directory: ====
+
+add this to .bashrc or .zshrc: 
+
+export CONDACONFIGDIR=""
+cd() { builtin cd "$@" && 
+if [ -f $PWD/.conda_config ]; then
+	export CONDACONFIGDIR=$PWD
+	conda activate $(cat .conda_config)
+elif [ "$CONDACONFIGDIR" ]; then
+	if [[ $PWD != *"$CONDACONFIGDIR"* ]]; then
+	export CONDACONFIGDIR=""
+	conda deactivate
+	fi
+fi }
+
+
+then create a **.conda_config** file into each directory, with the name of the conda / mamba environment (and nothing else) on the first line ... 
+
+see  https://github.com/vallops99/Conda-autoactivate-env 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

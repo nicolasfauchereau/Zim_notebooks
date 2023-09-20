@@ -1,0 +1,61 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-05T11:09:42+13:00
+
+====== Tuesday 05 Oct 2021 ======
+
+==== PICT / paleopy new versions and improvements ====
+
+@PICT @paleo @paleopy 
+
+discusssion with Drew, @TODO 
+
+== Datasets ==
+
+add **datasets**, see for notebooks to create datasets in 
+
+[[/home/nicolasf/research/paleopy/notebooks/make_datasets]] 
+
+[ ] add PET VCSN to list of datasets
+[ ] add PET earth temperature 
+[ ] update Kidson Types ? use the latest from James Renwick, updated to December 2020, see in [[/home/nicolasf/data/Kidson]] 
+[ ] Add the new classification scheme (9 clusters) from Neelesh 
+[ ] add ERA5 version of all the NCEP1 variables ?
+[ ] update all datasets to 2020
+	[ ] VCSN Tmean monthly 
+	[ ] VCSN rain monthly 
+	[ ] ERSST SST monthly 
+	[ ] GPCP rain monthly 
+	[ ] NCEP1 hgt 1000 monthly 
+	[ ] NCEP1 hgt 850 monthly
+	[ ] NCEP1 hgt 200 monthly
+	[ ] NCEP1 Omega 500 monthly
+	[ ] NCEP1 UWND 1000 monthly
+	[ ] NCEP1 UWND 850 monthly
+	[ ] NCEP1 UWND 200 monthly
+	[ ] NCEP1 VWND 1000 monthly
+	[ ] NCEP1 VWND 850 monthly
+	[ ] NCEP1 VWND 200 monthly
+	[ ] NCEP TMEAN (T2M) monthly 
+	[ ] AWAP Tmean monthly 
+	[ ] AWAP Rain monthly 
+
+== Indices ==
+
+[ ] Trenberth Indices, calculated from MSLP from NCEP and ERA5, M1 and Z1 in priority 
+[ ] Zonal Wave 3 index, see https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2004GL020365 
+	Raphael, M. N., 2004: A zonal wave 3 index for the Southern Hemisphere: ZONAL WAVE 3 INDEX. Geophys. Res. Lett., 31, https://doi.org/10.1029/2004GL020365.
+[ ] PSA or IPO ? decadal though ..... 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+

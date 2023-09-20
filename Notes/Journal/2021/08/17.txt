@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-17T09:18:22+12:00
+
+====== Tuesday 17 Aug 2021 ======
+
+==== Job at the UNSW ====
+
+The ARC Centre of Excellence for Climate Extremes has a 3-year position opening for a RSE / support person.
+It’s to support researchers in using climate models and performing climate analyses.
+
+We are flexible on the work location so we could possibly work with someone in NZ. 
+
+The job will report to me, please feel free to ask questions.
+
+Contact:  <cccarouge@gmail.com> 
+
+https://external-careers.jobs.unsw.edu.au/cw/en/job/502738/cms-specialist 
+
+http://climate-cms.wikis.unsw.edu.au/Home
+
+--------------------
+extremes 
+
+Mapping <> to shape, location and scale parameters 
+
+non-linear methods 
+
+interactions 

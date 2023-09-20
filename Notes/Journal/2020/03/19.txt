@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-19T15:59:16+13:00
+
+====== Thursday 19 Mar 2020 ======
+
+=== calculation of return periods for drought (or floods) ===
+
+uses sns.distplot, get the density estimate, then calculate the probability
+
+e.g. in 
+
+f, ax = plt.subplots() 
+plot = sns.distplot(data_rm_summers.loc[:,['Waitakere']].dropna(), ax=ax, kde=False, fit =stats.gamma)
+ax.axvline(last_season, 0, 1, color='r') 
+
+line = plot.lines[0]
+x = line.get_xdata()
+y = line.get_ydata()
+diff_x = abs(x[0] - x[1])
+vals = scipy.integrate.simps(y[x < last_season], x[x < last_season], dx=diff_x)
+# vals = y[x < last_season].sum() * diff_x
+return_period = 1.0 / vals
+

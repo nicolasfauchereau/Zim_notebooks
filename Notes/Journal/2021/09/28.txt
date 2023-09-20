@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-28T10:29:27+13:00
+
+====== Tuesday 28 Sep 2021 ======
+
+==== CRU dataset ====
+
+for examples of SPI calculation in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/SPI_examples/Climate_Indices]] 
+
+https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.05/cruts.2103051243.v4.05/pre/
+
+example notebook
+
+**Climate_Indices/NC_spi_pandas.ipyn**b 
+
+--------------------
+
+===== ICU SPI =====
+
+@SPI @ICU  
+
+see: **calculates_GPM-IMERG_accumulations_SPI.ipynb in **
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/GPM]] 

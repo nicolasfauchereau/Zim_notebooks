@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-19T11:32:30+13:00
+
+====== Wednesday 19 Oct 2022 ======
+
+==== Conservative Region Aggregation with Xarray, Geopandas, and Sparse ====
+
+https://discourse.pangeo.io/t/conservative-region-aggregation-with-xarray-geopandas-and-sparse/2715
+
+https://code.usgs.gov/wma/nhgf/toolsteam/gdptools 
+
+see notebook [[~/Jupyter_notebooks/region_aggregation_geopandas.ipynb]] 
+
+see also xagg: https://xagg.readthedocs.io/en/latest/intro.html 
+
+import xarray as xr
+import geopandas as gpd
+
+# Gridded data file (netcdf/climate data)
+ds = xr.open_dataset('file.nc')
+
+# Shapefile
+gdf = gpd.open_dataset('file.shp')
+
+import xagg as xa
+
+# Get overlap between pixels and polygons
+weightmap = xa.pixel_overlaps(ds,gdf)
+
+# Aggregate data in [ds] onto polygons
+aggregated = xa.aggregate(ds,weightmap)
+
+# aggregated can now be converted into an xarray dataset (using aggregated.to_dataset()),
+# or a geopandas geodataframe (using aggregated.to_dataframe()), or directly exported
+# to netcdf, csv, or shp files using aggregated.to_csv()/.to_netcdf()/.to_shp()
+
+--------------------
+
+==== Print output to terminal when (e.g.) running a notebook via papermill ====
+
+@jupyter @notebook @papermill
+
+terminal_output = open('/dev/stdout', 'w')
+
+print('this will show up in the terminal', file=terminal_output)
+
+--------------------
+
+==== SCO code / seasonal climate forecasting ====
+
+
+
+
+
+
+
+
+
+
+
+
+

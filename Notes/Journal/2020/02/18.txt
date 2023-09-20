@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-18T08:46:55+13:00
+
+====== Tuesday 18 Feb 2020 ======
+
+some reading: 
+
+=== A benchmark dataset for data-driven weather forecasting ===
+
+https://github.com/pangeo-data/WeatherBench 
+
+and paper at: 
+
+https://arxiv.org/abs/2002.00469 and file:///home/nicolasf/research/Smart_Ideas/resources/papers/Weather_Benc_2002.00469.pdf 
+
+uses ERA5, an implement a simple 2D convolution filter with periodic padding along the longitude dimension 
+
+=== Neural networks for post-processing ensemble weather forecasts ===
+
+paper at: 
+
+https://arxiv.org/abs/1805.09091 and file:///home/nicolasf/research/Smart_Ideas/resources/papers/1805.09091.pdf 
+
+code at: 
+
+https://github.com/slerch/ppnn by Stephan Rasp
+
+see also his github page at: https://raspstephan.github.io/ 
+
+==== HV PLOT ====
+
+{{./screenshot_2020-02-18-100923.png?width=900}}
+
+=== AI4ENVIRONMENT ===
+
+see 
+
+http://ai4environment.io/ 
+
+site started by https://raspstephan.github.io/ 
+
+=== Satellite remote sensing and Machine Learning ===
+
+Seamless retrievals of chlorophyll-a from Sentinel-2 (MSI) and Sentinel-3 (OLCI) in inland and coastal waters: A machine-learning approach
+
+https://www.sciencedirect.com/science/article/pii/S0034425719306248 
+
+=== OceanSPY: A Python package to facilitate ocean model data analysis and visualization ===
+
+https://oceanspy.readthedocs.io/en/latest/index.html
+
+=== Deep learning of dynamical attractors from time series measurements ===
+
+https://arxiv.org/abs/2002.05909 and file:///home/nicolasf/research/Smart_Ideas/resources/papers/2002.05909.pdf 
+
+code at https://github.com/williamgilpin/fnn 
+
+
+
+
+
+
+
+
+
+
+
+
+

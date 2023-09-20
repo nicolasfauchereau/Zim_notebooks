@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-22T11:10:59+12:00
+
+====== Saturday 22 Aug 2020 ======
+
+=== Use recurrent Neural Networks ? ===
+
+The target is conditionned on the N fields coming before (sequences) 
+
+also 
+
+https://xarray-contrib.github.io/xarray-tutorial/oceanhackweek-2020/xarray-oceanhackweek20.html#The-scientific-python-/-pangeo-ecosystem:-demo 
+
+--------------------
+
+==== Compare adhesion to Benfords' law in GCMs and observational datasets ====
+
+
+
+
+
+
+--------------------
+
+==== AMS 2020 ML course ====
+
+has a section on model interpretation (including saliency maps) 
+
+see 
+
+https://github.com/alburke/ams-2020-ml-python-course/tree/master/Advanced_Topics_In_Machine_Learning/ML_Model_Interpretation 
+

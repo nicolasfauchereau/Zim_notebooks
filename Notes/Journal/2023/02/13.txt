@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-13T09:35:27+13:00
+
+====== Monday 13 Feb 2023 ======
+
+==== SST forecasting paper ====
+
+updated figures regarding validation of point locations MME forecasts 
+
+see https://niwa-my.sharepoint.com/:p:/g/personal/nicolas_fauchereau_niwa_co_nz/EXlBzwen525Pv6bS26wXuwABh1A9YlRMWhuBMgoxgihfMA?e=hyJfUZ 
+
+for PPT and 
+
+**SST_obs_correlations.ipynb** notebook in [[/home/nicolasf/operational/SST_forecasting/notebooks]] 
+
+Some notes: 
+
+For automatically aligning (for example) the location name relative to a location point on a (cartopy) map: 
+
+{{{code: lang="python3" linenumbers="True"
+    axes = fg.axs.flat
+
+    for j, ax in enumerate(axes):
+        
+        platecarree_transform = ccrs.PlateCarree()._as_mpl_transform(ax)
+        text_transform = offset_copy(platecarree_transform, units='dots', x=-20)
+        
+        ax.coastlines(resolution="10m")
+        
+        ax.set_title(f"{location}, lead {j+1}")
+        
+        ax.set_title(f"{j+1} months lead")
+        
+        ax.plot(point_locations.loc[location,'lon'], point_locations.loc[location,'lat'], transform=ccrs.PlateCarree(), marker='o')
+        
+        ax.text(point_locations.loc[location,'lon'], point_locations.loc[location,'lat'], location,
+            verticalalignment='center', horizontalalignment='right',
+            transform=text_transform,
+            bbox=dict(facecolor='white', alpha=0.7, boxstyle='round'))
+}}}
+
+
+{{./screenshot_2023-02-13-152558.png}}
+
+For putting some annotations in bold in a (seaborn) heatmap
+
+1) create a boolean mask first (corresponding to the values in the dataframe / numpy 2D array) 
+
+{{{code: lang="python3" linenumbers="True"
+f, ax = plt.subplots(figsize=(10, 6))
+
+sns.heatmap(
+    Rs_df,
+    ax=ax,
+    mask=~mask,
+    annot_kws={"style": "italic",  "size":10},
+    linewidth=0.5,
+    annot=True,
+    cmap="coolwarm",
+    fmt="+.2f",
+    center=0, 
+    cbar=False
+)
+
+sns.heatmap(
+    Rs_df,
+    ax=ax,
+    mask=mask,
+    annot_kws={"weight": "bold", "size":12, "color":'k'},
+    linewidth=0.5,
+    annot=True,
+    cbar=False,
+    cmap="coolwarm",
+    fmt="+.2f",
+    center=0
+)
+
+}}}
+
+
+{{./screenshot_2023-02-13-152742.png}}?
+
+
+
+

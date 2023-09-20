@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-17T16:21:22+13:00
+
+====== docs ======
+Created Friday 17 January 2020
+
+==== Project Drawdown review ====
+
+https://drawdown.org/sites/default/files/pdfs/Drawdown_Review_2020-Mar-2.pdf 
+
+[[/home/nicolasf/Documents/solarpunk/resources/Drawdown_Review_2020-Mar-2.pdf]] 
+
+

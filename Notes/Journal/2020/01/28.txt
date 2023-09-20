@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-28T11:40:42+13:00
+
+====== Tuesday 28 Jan 2020 ======
+
+* installed proplot, see https://proplot.readthedocs.io/en/latest/ easy-to-use matplotlib wrapper for making beautiful, publication-quality graphics
+* replied to Nadia Nitsche regarding https://www.waternz.org.nz/ModellingSymposium, suggested NIWA work on hydro modelling at https://niwa.co.nz/climate/research-projects/river-flow-forecasting and Celine.Cattoen-Gilbert@niwa.co.nz  
+* cover letter for T&I Hub leader position 
+* Neelesh's report 
+* some more analyses for Drew's insolation over the past 21k 

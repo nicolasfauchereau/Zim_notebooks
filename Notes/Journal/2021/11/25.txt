@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-25T10:36:47+13:00
+
+====== Thursday 25 Nov 2021 ======
+
+==== ERA5 dataset on pangeo in the cloud ====
+
+
+see https://catalog.pangeo.io/browse/master/atmosphere/era5_hourly_reanalysis_single_levels_sa/ 
+
+https://catalog.pangeo.io/browse/master/atmosphere/trmm_3b42rt/ 
+
+from intake import open_catalog
+cat = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml")
+ds = cat['era5_hourly_reanalysis_single_levels_sa'].to_dask()
+display(ds)
+
+all these are not working 
+
+--------------------
+
+==== view CSV files at the command line ====
+
+@csv @CSV 
+
+see: 
+
+https://www.visidata.org/install/ 
+
+then: 
+
+$ vd csvile.csv 
+
+--------------------
+
+

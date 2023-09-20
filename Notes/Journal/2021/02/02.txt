@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-02T14:15:25+13:00
+
+====== Tuesday 02 Feb 2021 ======
+
+==== updated NOAA OISST coastal SST time-series notebook ====
+
+**SST_OISST_index_coastal_Time_Series_mean_daily_1981_2010_climo.ipynb** 
+
+Now allows to choose either 1981 - 2010 or 1991 - 2020 climatology ... 
+
+see in [[/home/nicolasf/research/CPP/indices/notebooks/NZ_coastal_SSTs]] 

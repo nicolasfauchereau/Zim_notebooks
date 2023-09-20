@@ -1,0 +1,103 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-03T10:36:12+12:00
+
+====== Monday 03 Apr 2023 ======
+
+
+==== rotated pole grid stuff ====
+
+{{./screenshot_2023-04-03-103625.png}}
+
+
+--------------------
+
+==== extraction of MSWEP ====
+
+**domain: domains['C3S_download'] = [100, 240, -50, 30]** 
+
+**step 1: extract domain (and roll longitudes) + compress**
+
+{{{code: lang="python3" linenumbers="True"
+utdir='/media/nicolasf/END19101/ICU/data/MSWEP/Daily/subsets_nogauge/SP'
+
+for f in *.nc; do cdo sellonlatbox,100,240,-50,30 ${f} ${outdir}/${f}; /home/nicolasf/data/MSWEP/compress.py ${outdir}/${f}; done
+}}}
+
+
+**step 2:** **use CDO to create one file per year** (in $outdir)
+
+for y in {1979..2020}; do cdo mergetime ${y}???.nc merged_${y}.nc; [[/home/nicolasf/data/MSWEP/compress.py]] merged_${y}.nc; done 
+
+**step 3:** **use CDO to merge all the times in one file** 
+
+cdo mergetime merged_????_comp.nc [[/home/nicolasf/data/MSWEP/merged_1979_2020.nc]]
+
+step 4: compress 
+
+use read_merged_and_compress.py 
+
+step 4: delete the 29 of Feb 
+
+code for **read_merged_and_compress.py**
+
+ 
+
+{{{code: lang="python3" linenumbers="True"
+# %% 
+import os
+import xarray as xr
+# %%
+dset = xr.open_dataset('./merged_1979_2020.nc') 
+
+#%% 
+varname  = 'precipitation'
+
+# %%
+dims = dset[varname].dims
+
+#%% 
+chunks = {}
+for k in dims:
+    chunks[k] = dset.dims[k] 
+
+# %%
+chunks['time'] = 1
+
+#%% 
+chunks = tuple(chunks.values())
+
+# %%
+encodings = {'precipitation':{'zlib':True, 'shuffle':True, 'complevel':9, 'chunksizes':chunks}}
+
+# %%
+dset.to_netcdf('./merged_1979_2020_chunked.nc', encoding=encodings, format='NETCDF4')
+
+#%% 
+dset.close() 
+
+#%% 
+os.remove('./merged_1979_2020.nc')
+}}}
+
+
+
+
+
+
+
+
+--------------------
+https://aeon.co/essays/what-hunter-gatherers-demonstrate-about-work-and-satisfaction 
+
+
+
+
+
+
+
+
+
+
+
+

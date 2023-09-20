@@ -1,0 +1,53 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-10T11:36:24+13:00
+
+====== Thursday 10 Dec 2020 ======
+
+==== connection to cd  using Python ====
+
+**1) install cx_Oracle python package using pip** 
+
+see https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#installation 
+
+command 
+
+$ python -m pip install cx_Oracle --upgrade
+
+**2) install the Oracle client libraries for linux** 
+
+download https://download.oracle.com/otn_software/linux/instantclient/211000/instantclient-basic-linux.x64-21.1.0.0.0.zip 
+
+and uncompress in **~/oracle**
+
+3) update LD_LIBRARY_PATH 
+
+$ sudo vi **/etc/ld.so.conf.d/oracle.conf**
+
+add 
+
+[[/home/nicolasf/oracle/instantclient_21_1]]
+
+to the file 
+
+then run 
+
+**$ sudo ldconfig**
+
+now in the environment '**clidb**' where the cx_Oracle python package has been installed, one can create a connection to the database 
+
+>> import cx_Oracle
+>> cx_Oracle.init_oracle_client()
+>> dsn_tns = cx_Oracle.makedsn('clidb.niwa.local', '1521', service_name='clidb')
+>> conn = cx_Oracle.connect(user=r'ops$RAMPALN', password='shrimp-5buckler-desktop', dsn=dsn_tns)
+
+Neelesh's code on git.niwa.local → cloned in [[/home/nicolasf/operational/ZESPRI/code/python_clidb]] 
+
+--------------------
+
+
+
+
+
+
+

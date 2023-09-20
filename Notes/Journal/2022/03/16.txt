@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-16T14:02:24+13:00
+
+====== Wednesday 16 Mar 2022 ======
+
+==== CMIP6 data on the Google Cloud ====
+
+variable list: 
+
+https://pcmdi.llnl.gov/mips/cmip3/variableList.html 
+
+
+

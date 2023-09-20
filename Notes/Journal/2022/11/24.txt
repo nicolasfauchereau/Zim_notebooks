@@ -1,0 +1,79 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-24T09:06:46+13:00
+
+====== Thursday 24 Nov 2022 ======
+
+==== Melia et al 2015 method for statistical bias correction ====
+
+see: 
+
+Melia, N., S. Dean, H. G. Pearce, L. Harrington, D. J. Frame, and T. Strand, 2022: Aotearoa New Zealand’s 21st‐Century Wildfire Climate. Earth’s Future, 10, https://doi.org/10.1029/2022EF002853.
+
+and supplementary material: 
+
+**/home/nicolasf/Documents/papers/downscaling/2022ef002853-sup-0001-supporting information si-s01.pdf** 
+
+Melia, N., K. Haines, and E. Hawkins, 2015: Improved Arctic sea ice thickness projections using bias-corrected CMIP5 simulations. The Cryosphere, 9, 2237–2251, https://doi.org/10.5194/tc-9-2237-2015.
+
+Notes: 
+
+We have deliberately chosen not to try and correct the simulated ice loss trend to that which PIOMAS depicts 
+
+different methods tested: 
+
+**Additive correction**: 
+
+Corrects the time mean by subtracting the difference between the historical model ensemble-mean time mean, 〈Mh〉, and observation time mean, Oh, from each of the model ensemble members, M.
+
+{{./screenshot_2022-11-24-091510.png}}
+
+**Multiplicative correction:** 
+
+the ratio of the observed time mean and model ensemble-mean time mean, Oh/〈Mh〉, is multiplied as a factor to the model ensemble members, M, then the corrected thickness is as follows.
+
+{{./screenshot_2022-11-24-093118.png}}
+**Mean multiplicative correction: **
+
+{{./screenshot_2022-11-24-093354.png}}
+
+**Mean and variance correction**
+
+To incorporate the variance correction, the mean multiplicative correction (Eq. 3) is first de-trended, the variance correction applied, and the trend re-applied. This creates the Mean And VaRIance Correction (MAVRIC), shown in Eq. (4).
+
+
+{{./screenshot_2022-11-24-093511.png}}
+
+--------------------
+
+==== The distinct problems of physical inconsistency and of multivariate bias involved in the statistical adjustment of climate simulations. Intl Journal of Climatology ====
+
+Alavoine, M., and P. Grenier, 2022: The distinct problems of physical inconsistency and of multivariate bias involved in the statistical adjustment of climate simulations. Intl Journal of Climatology, joc.7878, https://doi.org/10.1002/joc.7878.
+
+compares 18 different methods for Bias Correction
+
+see in particular their table 3 summarizing the results of the comparison 
+
+{{./screenshot_2022-11-24-161342.png}}
+ 
+
+Note that it cites: 
+
+Robin, Y., M. Vrac, **P. Naveau, and P. Yiou**, 2019: Multivariate stochastic bias corrections with optimal transport. Hydrol. Earth Syst. Sci., 23, 773–786, https://doi.org/10.5194/hess-23-773-2019.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

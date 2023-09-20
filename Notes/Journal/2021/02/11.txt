@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-11T08:50:09+13:00
+
+====== Thursday 11 Feb 2021 ======
+
+==== ICU presentation ====
+
+Trip down memory lane, to put the recent developments in the context of what we developed for the ICU along the years, because I think there could be opportunities for more synergies between the Bureau and us ...  
+
+Familiar with the ICU, regional outlook bulletin for the Pacific 
+
+In November 2014, we built on this idea of identifying Island groups at risk of drought (potential water stress), based on the past 6 months rainfall anomalies, and the next 3 months seasonal forecasts, applying some heuristic 
+
+Initially the monitoring used the NASA TRMM product, for each Island group, I derived climatological quintiles (for land grid points only), and the realtime data, , was then classified in 5 categories (well below, below, near normal, above, well above) for the past 6 calendar months in realtime 
+
+the tercile probabilistic outlook was based on the then METPI (Multi-model Ensemble Tool for the Pacific Islandsc) which made use of seasonal forecast products (charts) 
+
+and we (Doug) developed a formula to derive a 'potential water stress' level based on the combination of the past 6 month category and the next 3 month most likely outcome according to METPI 
+
+**ICU Water Watch** 
+
+In 2016, on the back of the 2015 - 2016 El Nino, Kasis Inape got in touch to see if I could help him with rainfall monitoring for PNG, developed (on my spare time): 
+
+http://pngnws.github.io/RainfallMonitoring/ 
+
+towards the end 2018, we started developping the new ICU outlook based on GCM data from the CDS (Copernicus Data Store), this was made operational in **January 2019** 
+
+large ensemble
+
+5 models, ~ 260 members 
+
+Now 7 models (NCEP CFSv2 and then JMA) ~ 479 members 
+
+ECMWF            	51
+UKMO             	62
+METEO_FRANCE     	51
+CMCC             	50
+DWD              	50
+//NCEP            		124//
+//JMA              		91//
+
+**paper in preparation (to be submitted ~ April 2021):** 
+Sum
+//Open data and open-source software for the development and validation of multi-model objective probabilistic seasonal climate forecasts in the Pacific region//
+N. Fauchereau, Lorrey A.M, Ramsay D., Noll B. 
+
+
+validation against several precipitation products: CMAP + MSWEP 2.
+
+Early in 2020, following discussions with regional agencies, we started to plan the development a more refined product, that could identify potential hotspots within the Pacific region, based on the same idea of combining past rainfall anomalies (over different accumulation periods, from 30 days to a year) and the multi-model ensemble forecasts ... it coincided with the decommission of TRMM-TMPA
+
+
+--------------------
+
+==== PrecipGAN: Merging Microwave and Infrared Data for Satellite Precipitation Estimation using Generative Adversarial Network ====
+
+
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020GL092032
+
+
+
+
+
+

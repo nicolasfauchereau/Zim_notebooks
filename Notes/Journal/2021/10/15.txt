@@ -1,0 +1,132 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-15T09:40:57+13:00
+
+====== Friday 15 Oct 2021 ======
+
+==== ICU draft PPT ====
+
+@ICU 
+
+
+Page 1: Need to great better graphics for the two dials (without the see-through background stuff) - will talk to Ben about that
+
+Page 6: Change title of first legend to " October Forecast Decile Precipitation"
+
+Page 6: Bottom plot - legend boxes same size on similar to boxes in other plot and move boxes/text further right towards margin
+
+Pge 7: Change title of first legend to " October to December Forecast Decile Precipitation" (wrap in to two lines if need be)
+
+Page 7: Bottom plot same as above
+
+Page 8: Need to change legend titles: "October Probability of rainfall < 25th Percentile" and "October to December Probabilty of Rainfall <2th Percentile: (wrap over 2 lines if need be)
+
+Page 9: Need to update description to add in Page 8 and new plots in Page 9. (Doug to do)
+
+
+--------------------
+
+==== differences between tercile probabilities derived from empirical VS parametrized climatological terciles ====
+
+@ICU 
+
+see: **3_calculate_MME_probabilities_parametrized_climatologies.ipynb**
+
+The differences are particularly marked for the middle tercile, 
+
+{{./screenshot_2021-10-15-133009.png}}
+
+{{./screenshot_2021-10-15-133038.png}}
+
+The conclusion is that the "official" ECMWF forecasts are closer to the forecasts derived using the *empirical* climatological terciles
+than the *parametrized* climatological terciles
+
+below are the "official" forecasts for OND 202, from ECMWF
+
+{{./screenshot_2021-10-15-151745.png?width=1250}} 
+
+
+which can be found at 
+
+https://climate.copernicus.eu/charts/c3s_seasonal/
+
+
+and then the *empirical* terciles derived probabilities 
+
+{{./screenshot_2021-10-15-151914.png?width=1250}}
+
+Then the *parametrized* terciles derived probabilities 
+
+{{./screenshot_2021-10-15-152005.png?width=1250}}
+
+
+The new code for making improved maps is in 
+
+**3_calculate_MME_probabilities_parametrized_climatologies.ipynb**
+
+and needs to be moved into a function, or functions (if needed for decile probabilistic forecast)
+
+
+
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-17T09:19:43+13:00
+
+====== Monday 17 Jan 2022 ======
+
+===== Intercomparison of annual precipitation indices and extremes over global land areas from in situ, space-based and reanalysis products =====
+
+@ICU 
+
+Alexander, L. V., M. Bador, R. Roca, S. Contractor, M. G. Donat, and P. L. Nguyen, 2020: Intercomparison of annual precipitation indices and extremes over global land areas from in situ, space-based and reanalysis products. Environ. Res. Lett., 15, 055002, https://doi.org/10.1088/1748-9326/ab79e2.
+ 
+--------------------
+
+==== WRs, CPP ====
+
+@CPP 
+
+Unique regimes for Tmean_n >= 90th percentile 
+
+https://www.stuff.co.nz/environment/climate-news/127432079/it-totally-resonates-kiwi-climate-experts-react-to-the-number-one-movie-dont-look-up?fbclid=IwAR1Sv5Amy7q3xaJgh-_OkpFUs0EAyykqlpiH9B3yWvm9uNaSta7dsPbjdyA
+
+https://www.nzherald.co.nz/nz/climate-change-conference-2021-open-letter-to-new-zealanders-we-all-need-to-act-now-on-climate-change/BKZ4NW5DRW6JYNNGWR6YU6BQVA/?fbclid=IwAR0oNFOkcrQceUDiuI8DYUIbIq5aMHD3e3UPSXLqyjUdDTCad2D19oXmLeM 
+
+
+--------------------
+
+==== In the ocean space: CC ====
+
+→ https://www.farout.org.nz
+
+→ https://bluecradle.org/

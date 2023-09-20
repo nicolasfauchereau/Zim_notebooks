@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-20T13:58:43+12:00
+
+====== Thursday 20 Apr 2023 ======
+
+https://www.cpc.ncep.noaa.gov/data/indices/ersst5.nino.mth.91-20.ascii 

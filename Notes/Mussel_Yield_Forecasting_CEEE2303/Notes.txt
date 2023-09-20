@@ -1,0 +1,112 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-26T09:54:23+12:00
+
+====== Notes ======
+Created Friday 26 August 2022
+
+--------------------
+
+==== Marine Heatwaves Forecasts ====
+
+https://psl.noaa.gov/marine-heatwaves/ 
+
+
+--------------------
+
+==== SST validation paper ====
+
+→ Powerpoint in 2 weeks
+→ paper in draft form ~ January 2023
+
+rough structure: 
+
+	- deterministic 
+	- probabilistic (focus on MHWs ?) 
+	- control by ENSOs 
+	- sub-regional focus (Marlborough sounds) 
+
+
+
+C3S MME ~ 560 m, 9 GCMs 
+
+1993-2016 
+2017 - now 
+
+--------------------
+
+==== email from Neelesh January 2023 ====
+
+Hi Nico,
+
+ 
+
+Sorry it took me a while to get to this. Here’s what I wrote down from our meeting (in order of importance). Let me know what you think?
+
+ 
+
+Methods:
+1. Datasets (OISSTA, CDS, ERSST), feel free to copy content from your ICU paper.
+
+2. Validation metrics (e.g. RMSE, correlation, binary accuracy for marine heatwaves)
+
+3. Stratification by season.
+
+ 
+
+Results:
+1. MME spatial plot for a given lead time (e.g. 3 months) to illustrate the spatial variability in model skill. Maybe subplots to also show the poorer skill in the JJA period.
+
+2.
+
+a. MME correlation plot – but again stratified for different seasons. Two plots come to mind. This would paint a “New Zealand wide” measure of accuracy.
+Make sure you also have persistence in your plots too? What do you think. You could probably write a bit of a story here.
+
+b. Stratify the accuracy as a function of ENSO phase?
+
+ 
+
+3. Site Specific plots of the model skill at various locations, ranking the different GCMs for different seasons.
+It would be nice to compare it to persistence also. This plot might show that some GCMs are more skilful in some areas than others.
+
+Locations (approx.)
+
+	Pelorus Sound: 41.1628° S, 173.8632° E
+	Golden Bay: 40.6548° S, 172.8210° E
+	Coromandel: 36.7587° S, 175.4981° E
+	Opotikii: 38.0123° S, 177.2871° E
+
+3. Marine heatwave accuracy for all 8 GCMs
+
+a. Evaluate the skill of the 9 GCMs (on average for New Zealand) – binary accuracy score across all grid points in New Zealand. Evaluate this as a function of lead-time and season (see example plot below).
+
+b. If the skill of the MME is far greater – only use the MME when making a plot.
+
+c. Evaluate the skill of the marine heatwave accuracy for the 4 locations (show a similar plot to that of the above).
+
+d. Probabilistic accuracies (we might not have time to do this right not) – look at evaluation metrics (e.g. CRPS) on xskillscore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-03T17:37:52+12:00
+
+====== Monday 03 Aug 2020 ======
+
+===== A detailed example of how to use data generators with Keras =====
+
+see 
+
+https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly 
+
+see also 
+
+https://www.tensorflow.org/guide/data 
+
+===== example CNN which compiled and ran =====
+
+https://github.com/nicolasfauchereau/ML4seas/blob/master/models/CNN/example_CNN.ipynb 
+
+For the equivalent in PyTorch 
+
+https://stanford.edu/~shervine/blog/pytorch-how-to-generate-data-parallel

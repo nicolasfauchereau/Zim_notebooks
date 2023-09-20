@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-03T15:36:08+12:00
+
+====== Tuesday 03 May 2022 ======
+
+==== SST forecast validation around NZ at monthly and seasonal time-scales ====
+
+@ICU 
+
+see notebook: **verification_deterministic_sst.ipynb** in 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/verification]] 
+
+--------------------
+

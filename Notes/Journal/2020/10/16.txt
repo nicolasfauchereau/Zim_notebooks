@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-16T13:09:42+13:00
+
+====== Friday 16 Oct 2020 ======
+
+==== Updated tigramite ====
+
+@network @networks 
+
+graph networks in climate science ... used to detect teleconnection patterns etc .. 
+
+with more examples and tutorials 
+
+see also 
+
+Runge, J., and Coauthors, 2019: Inferring causation from time series in Earth system sciences. Nat Commun, 10, 2553, https://doi.org/10.1038/s41467-019-10105-3.
+ 
+Runge, J., and Coauthors, 2015: Identifying causal gateways and mediators in complex spatio-temporal systems. Nat Commun, 6, 8502, https://doi.org/10.1038/ncomms9502.
+
+Kawale, J., and Coauthors, 2013: A graph-based approach to find teleconnections in climate data: A Graph-Based Approach to Find Teleconnections in Climate Data. Statistical Analy Data Mining, 6, 158–179, https://doi.org/10.1002/sam.11181.
+ 
+Liess, S., and Coauthors, 2014: Different Modes of Variability over the Tasman Sea: Implications for Regional Climate*. Journal of Climate, 27, 8466–8486, https://doi.org/10.1175/JCLI-D-13-00713.1.
+ 
+--------------------
+

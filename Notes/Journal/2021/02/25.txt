@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-25T09:28:13+13:00
+
+====== Thursday 25 Feb 2021 ======
+
+==== split lines in cells in Jupyter ====
+
+CONTROL + SHIFT + - (minus at the main keyboard, not the numpad) 
+
+--------------------
+
+==== tips and tricks for the Jupyter Notebook ====
+
+https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
+
+--------------------
+
+Precipitation Forecasting using Compound Poisson Time Series 
+
+High-resolution Probabilistic Precipitation Prediction for use in Climate Simulations: https://arxiv.org/abs/2012.09821
+
+Code: https://github.com/shermanlo77/cptimeseries 
+
+--------------------
+
+=== GEFS Ensemble Forecasts ===
+
+https://github.com/vgensini/gefs_v12_example/blob/master/GEFS_v12_eample.ipynb 

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-23T11:49:42+13:00
+
+====== Thursday 23 Mar 2023 ======
+
+==== Calculating Climatologies and Anomalies with Xarray and Dask: ====
+
+https://gist.github.com/rabernat/30e7b747f0e3583b5b776e4093266114 
+
+https://flox.readthedocs.io/en/latest/user-stories/climatology.html 
+
+https://flox.readthedocs.io/en/latest/user-stories/climatology-hourly.html 
+
+dask performance report ! 
+
+from distributed import performance_report 
+
+client = Client(memory_limit="2 GiB", threads_per_worker=1, n_workers=4)
+client.cluster
+
+with performance_report("hourly-climatology.html"):
+	hourly.compute()

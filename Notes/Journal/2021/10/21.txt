@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-21T11:33:32+13:00
+
+====== Thursday 21 Oct 2021 ======
+
+==== PICOF presentations are available at: ====
+
+https://www.pacificmet.net/picof-9
+
+look into that because the theme is energy, and there are several institutions which might be worth looking into in terms of potential jobs 
+
+see e.g. 
+
+→ SPC 
+→ Moerk Water Solutions Asia-Pasific Pty Ltd (Barbara Brezger)-
+→ Blue Planet Foundation (Melissa Miyashiro-Incoming Executive Director) 
+
+--------------------
+
+==== GFS Reforecast Downloader ====
+
+@Python 
+
+GFS Reforecast V2 Grib File Downloader
+
+see https://github.com/retostauffer/PyGFSV2 
+
+--------------------
+
+

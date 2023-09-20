@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-22T09:28:50+12:00
+
+====== Tuesday 22 Jun 2021 ======
+
+==== Kats: One stop shop for time series analysis in Python ====
+
+@ED 
+
+https://facebookresearch.github.io/Kats/
+
+--------------------
+
+==== processing IRI DL subseasonal to seasonal forecasts ====
+
+see 
+
+https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/data_access/IRIDL.ipynb 
+
+
+ ds = xr.open_dataset('https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/.reforecast/.control/.2m_above_ground/.2t/dods',
+					 chunks='auto', decode_times=False)
+
+ # calendar '360' not recognized, but '360_day'
+if ds.hdate.attrs['calendar'] == '360':
+	ds.hdate.attrs['calendar'] = '360_day'
+
+ds = xr.decode_cf(ds).rename({'X':'longitude', 'Y':'latitude', 'S':'forecast_time', 'LA': 'lead_time', '2t':'t2m'})
+ds['t2m']
+
+--------------------
+
+pycaret experiments 
+
+see 
+
+Extra Tree classifier seems to obtain ~ 0.4545 accuracy on test set (2017 - 2019) even though this is Not the best model according to compare_models() 
+
+more complex models do not lead to better outcomes
+
+
+
+

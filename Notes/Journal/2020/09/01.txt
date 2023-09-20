@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-31T16:37:15+12:00
+
+====== Tuesday 01 Sep 2020 ======
+
+==== TODO ====
+
+[ ] write Prof. Holland  
+[ ] get in touch with people at SCION 
+
+==== Write a custom scikit-learn transformer ====
+
+e.g. to implement a detrend function ? 
+
+see: 
+
+https://machinelearningmastery.com/create-custom-data-transforms-for-scikit-learn/ 
+
+and (using Class inheritance) 
+
+https://towardsdatascience.com/custom-transformers-and-ml-data-pipelines-with-python-20ea2a7adb65 
+https://towardsdatascience.com/pipelines-custom-transformers-in-scikit-learn-the-step-by-step-guide-with-python-code-4a7d9b068156 
+
+see utils/num_months.py ... can be useful to build the regressor ? 
+

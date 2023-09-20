@@ -1,0 +1,92 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-08T10:36:08+12:00
+
+====== Wednesday 08 Jul 2020 ======
+
+====== Start of the 2020 - 2021 FY ======
+
+==== Python-related stuff ====
+
+**Steve Wilcox**, regional manager Wellington, visit to Lauder, request for Alex Geddes re. Python resources 
+
+**Jade Maggs**, Group Manager for NIWA Fisheries Data Services, request for Python training. 
+
+==== T&I HUb ====
+
+**Jenni  Gadd:** request to join the visualisation and delivery HUB, bring into project for developing an interactive dashboard for climate and environmental metrics for Aotearoa / NZ 
+
+**Simon Woodward,** mathematical modeller and data scientist, up for a chat 9:30 July 9 
+
+**Dana Briscoe**: include in interactive realtime dashboard, see below: 
+
+==== Monitoring the vital signs of our environment ====
+
+//These are some thoughts related to a potential Smart Ideas bid, around the development of a multivatiate, multi-sectorial, interactive dashnoard for climate, ocean and environmental metrics for Aotearoa / NZ// 
+
+**Motivation**
+--------------------
+
+NZ's climate is variable, changing, has a great impact on activoties, economies, enviropnments
+
+physical environment is also changing, subject to increased pressures, from climate change and human activities 
+
+Sources of realtime / up to date information are scattered, also limited in scope, with metrics generally univariate, based on simple indices, 
+
+//data science, network theories, systems approach// 
+
+Equivalent of a hospital monitor, moniotoring the vital signs of our regional environment, identifying trends, potential conflicts, cascades, tipping points 
+
+spatial statistics, 
+
+e.g. 
+
+→ proportion of specific **eco-regions** in drought, areas in drought, extremes, etc 
+→ rainfall over land, freshwater fluxes over the ocean (E/P) using satellite remote sensing 
+→ ocean heatwaves tracking around NZ 
+→ primary productivity in the EEZ
+→ air quality tracking across regional centres 
+→ CO2 and other gases (Lauder) 
+→ water quality
+
+Maybe the concept of eco-regions / bio-regions need to be emphasized 
+
+
+NIWA custodian of our physical environment data 
+
+--------------------
+
+==== ML Python libraries ====
+
+=== mvtsdata_toolkit: A python toolkit to facilitate working with multivariate time series datasets. ===
+
+https://bitbucket.org/gsudmlab/mvtsdata_toolkit/src/master/ 
+
+and 
+
+https://www.sciencedirect.com/science/article/pii/S2352711020300157?via%3Dihub 
+
+also locally cloned in [[/home/nicolasf/research/Smart_Ideas/resources/repos_libraries/mvtsdata_toolkit]] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+

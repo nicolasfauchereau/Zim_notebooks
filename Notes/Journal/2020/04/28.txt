@@ -1,0 +1,114 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-28T11:32:11+12:00
+
+====== Tuesday 28 Apr 2020 ======
+
+==== write up on the learnings from the experiments ====
+
+1) baseline accuracy: 
+	Baselines from the GCM themselves: regional time-series of 2 meters temperatures and surfaced precipitation from the GCMs. 
+	Baseline accuracy from the NIWA Seasonal Climate Outlook (SCO) available from 1999
+	cross validation (10 fold cross validation) 
+	completely independent test set 2017 - 2019 
+	several geograophical domains tested, from global () to local 
+	→ tested using simple KNN approaches, comparison of the scores obtained using different domains leads to the choice of an extenbded regional domain including the Indian Ocean and the Pacific Ocean. extends from 70S to 60N
+	
+@TODO 
+
+test whether the inclusion of observed time-series of key climate indices (NINO3.4, SAM) makes any difference 
+
+-------------------------------------------------------------------------------------------------------------------
+
+==== Ensembling (or blending): ====
+
+some notes on ensemble learning 
+
+=== Bagging ===
+
+The different models receive equal weight, combine learners of the **same type** 
+
+
+=== Boosting ===
+
+=== Stacking ===
+
+to combine DIFFERENt learners: metalearning, the meta learner combines the outputs of the level 0 learners, usually a simple tree-based algorithm is used 
+
+-------------------------------------------------------------------------------------------------------------------
+
+==== PyCARET experiments ====
+
+Different strategies are trialled after a first comparison of the different learners has been done (18 different models) 
+
+1) select and then tune the best (according to cross validated accuracy score) model. Once tuned, retrain over the whole training set using the selected set of hyperparamaters, then evaluate on the test set (2017 - 2019) using the accuracy and then the 'SCO' accuracy, which includes a tolerance of 5% on the 
+
+2) 'blend' all the learners, using a stacking strategy 
+
+3) blend only the N 'best' models, with N being determined empirically (from 2 to 5). Note that NOT all models can be included, only those who have a `.predict_proba()` method, Seems to exclude `catboost`.  
+
+4) this strategy is first applied training with each GCM independantly, then using ALL the GCM outputs together, in essence 'artificially' increasing the number of instances the learners can learn from 
+
+When training with only one GCM at a time, the best learner is usually `Light Gradient Boosting Machine	`, while when training with ALL the GCMs forecasts as instances, the best learner is usually a KNN. 
+
+
+Once the best strategy has been selected (tuning, blending) then do not forget to [[https://pycaret.org/classification/|finalise]] the model before applying to the test set 
+
+once the best strategy has been determined, save the model ...
+
+
+== Tuning ==
+
+On tuning, one can select ensemble = True, and method either 'bagging' or 'stacking'
+
+this usually leads to better performance (a few percentage points) 
+
+== Blend all ==
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+==== Predictive Power Score (PPS) ====
+
+see https://github.com/8080labs/ppscore and in [[/home/nicolasf/research/Smart_Ideas/resources/repos_libraries/ppscore]] 
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+@TODO 
+
+- pre-process and process **SSTs** and Z500 for the models that are available
+
+		Note that the **Z500 downloaded** (grib files, not processed) data is only available on the project drive for now 
+ 
+- look at the differences in the performance for the GCMs for which the hindcast / training period is short 
+(CDS GCMs, all starting in 1993) and the ones (IRI, JMA) for which more instances are available. 
+- look at the difference in performance between the GCMs if the same (small) period is used for training (1993 - 2016). 
+- try combining e.g. Z850 and SST for predictors 
+- determine what is the best model and compare the accuracy scores for each GCM as well as for training done with extended instance set (all GCMs together) 
+- save the models to disk 
+- start an excel file recording the results of the different experiments and models 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

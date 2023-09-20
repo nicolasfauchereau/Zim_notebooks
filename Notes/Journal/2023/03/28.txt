@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-28T10:06:02+13:00
+
+====== Tuesday 28 Mar 2023 ======
+
+from the obase file, for each subdomain 
+
+1) mergetime 
+
+2) del 29 feb 
+
+3) runsum 
+
+4) select date=
+
+5) timmean = average 
+
+6) read with xarray, calculate quantiles 
+
+--------------------
+
+==== Pacific rim team Samoa Health ====
+
+In team climate services under Pacific Rim 
+

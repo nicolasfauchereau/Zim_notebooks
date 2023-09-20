@@ -1,0 +1,287 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-18T08:48:52+13:00
+
+====== Wednesday 18 Dec 2019 ======
+
+========================================================================================================================================================
+
+===== Climate Data Store GCMs (ECMWF, UKMO, METEO_FRANCE, DWD and CMCC) =====
+
+===== rewrite the CDS download script: =====
+
+
+	+ accept year and month and variable as positional arguments 
+	+ dpath is hardcoded (Change ?)
+	+ multithreading over the 5 GCMs (pool of 5 workers): 
+		```
+		p = Pool(workers)
+		p.map(fetch_hindcast, list(range(workers)))
+		```
+	see: [[~/research/Smart_Ideas/code/exporters/CDS/CDS_download_hindcasts_1993_2016_year_multiprocessing_year_month.py]]
+
+	for downloading the hindcasts 
+	
+	and [[/home/nicolasf/research/Smart_Ideas/code/exporters/CDS/CDS_download_forecasts_2017_2019_year_multiprocessing_year_month.py]] 
+	
+	for downloading the forecasts post 2017 ...
+
+
+fsdkjlkj
+
+==== download T2M: downloading, on 19 December up to 2013-10 (UKMO, MF, DWD, CMCC, ECMWF) ====
+
+ 
+	[*] restart from 2013-01: log in lauch_log.txt (/home/nicolasf/research/Smart_Ideas/code/exporters/CDS) 
+		[*] ECMWF: ok all 12 months per year downloaded in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/ECMWF/T2M]]
+		[*] UKMO: years 1993 to 2006 only include 11 months: missing all Januarys
+						
+						NOTE: one can download the missing files using the CDS download form, but there are some issues with READING the files using xarray
+						
+						The **solution** seems to be to specify the **longitude of the first grid point in degree to be 0.5 (to match all other files)**: 
+						
+						e.g.
+						
+						dset_01 = xr.open_dataset(f'/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/UKMO/{var_name}/UKMO_system_12_13_14_{var_name}_1994_01.grib', engine='cfgrib', \
+											   **backend_kwargs={"indexpath":"", 'filter_by_keys':{'longitudeOfFirstGridPointInDegrees': 0.5}**
+											**}**)
+						
+						Note that despite the error: 
+						
+						ECCODES ERROR   :  Unable to find template localDefinition from grib1/local.98.12.def 
+						
+						The dataset is indeed opened 
+						
+						see in notebook [[/home/nicolasf/research/Smart_Ideas/code/pre-processors/notebooks/CDS/fix_UKMO_Missing_Januarys_forecasts.ipynb]] 
+						
+						NOTE: [[/home/nicolasf/research/Smart_Ideas/code/pre-processors/notebooks/CDS/fix_UKMO_Missing_Januarys_forecasts.ipynb]] re-downloading the Januarys foprecasts 
+						from 1994 to 2006 included: it seems that it's OK NOT TO SPECIFY THE SYSTEM, e.g. request API call looks like: 
+				
+{{{code: lang="python" linenumbers="True"
+c.retrieve(
+'seasonal-monthly-single-levels',
+{
+'originating_centre': 'ukmo',
+'variable': '2m_temperature',
+'product_type': 'monthly_mean',
+'year': str(year),
+'month': '01',
+'leadtime_month': [
+'2', '3', '4',
+'5', '6',
+],
+'format': 'grib',
+},
+f'/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/UKMO/T2M/UKMO_system_12_13_14_T2M~year~_01.grib')
+}}}
+
+
+	NOTE: missing files downloaded now, see [[/home/nicolasf/research/Smart_Ideas/code/pre-processors/notebooks/CDS/download_UKMO_missing_Januarys.ipynb]] 
+
+	[*] METEO_FRANCE ok all 12 months per year downloaded in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/METEO_FRANCE/T2M]]
+
+	[*] DWD 2008 only has 11 months: August 2008 is missing
+
+					NOTE: fixed today 20 December 2019, re-downloaded from the CDS using the form, can be read as usual using xarray and cfgrib
+					
+	[*] CMCC ok all 12 months per year downloaded in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/CMCC/T2M]]
+
+==== download PRECIP ====
+
+	[*] ECMWF: ok all 12 months per year downloaded in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/ECMWF/PRECIP]]
+	[*] UKMO: **1993 has only 11 months**: January missing, all other years apparently OK
+	[*] METEO_FRANCE: ok all 12 months per year downloaded in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/METEO_FRANCE/PRECIP]]
+	[*] DWD: ok all 12 months per year downloaded in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/DWD/PRECIP]] 
+	[*] CMCC: ok all 12 months per year downloaded in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/CMCC/PRECIP]] 
+
+==== download Z500 ====
+
+	[*] download Z500: downloading on the 20th of December, see [[/home/nicolasf/research/Smart_Ideas/code/exporters/CDS/launch_log_Z500.txt]] 
+		update: all files (one file per month) downloaded in **/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/{GCM}/Z500**
+
+
+==== download SST ====
+
+	[*] download SST launched on 14 January: done on 15 January: all CDS models downloaded, 1993 - 2016
+
+==== CDS FORECASTS for the period 2017 - 2019 ====
+
+**ECMWF:** 
+
+[*] T2M: [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/ECMWF/2017_2019/T2M]] in netcdf, all months to **2019 - 11**
+[*] PRECIP: [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/ECMWF/2017_2019/PRECIP]] in netcdf, all months to **2019 - 11**
+[*] SST: [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/ECMWF/2017_2019/SST]] in netcdf, all months to **2019 - 11** 
+[*] Z500: [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/ECMWF/2017_2019/Z500]] in netcdf, all months to **2019 - 11** 
+
+**UKMO: **
+
+[*] T2M: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/UKMO/2017_2019/T2M]] in netcdf but only from **2017 - 09**
+[*] PRECIP: [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/UKMO/2017_2019/PRECIP]] in netcdf but only from **2017 - 09**
+[*] SST: [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/UKMO/2017_2019/SST]] in netcdf but only from **2017 - 09**
+[x] Z500: not available yet ... 
+
+**METEO_FRANCE**
+
+[*] T2M: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/METEO_FRANCE/2017_2019/T2M]] in **GRIB: to convert and save in NC folder, only goes to 2019-09 included with system 6, but system 7 takes over from 2019-10 **
+[*] PRECIP: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/METEO_FRANCE/2017_2019/PRECIP]] for all months, system 6 to 2019-09, then system 7
+[*] SST: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/METEO_FRANCE/2017_2019/SST]] for all months, system 6 to 2019-09, then system 7
+[*] Z500 in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/METEO_FRANCE/2017_2019/Z500]] for all months, system 6 to 2019-09, then system 7
+
+**DWD** 
+
+[*] T2M: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/DWD/2017_2019/T2M]] in **netcdf**, all months to **2019 - 11, in GRIB in **[[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/DWD/2017_2019/T2M]]
+[*] PRECIP: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/DWD/2017_2019/PRECIP]] in **netcdf**, all months to **2019 - 11, in grib in **[[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/DWD/2017_2019/PRECIP]]
+[x] SST: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/DWD/2017_2019/PRECIP]] in **netcdf**, all months to **2019 - 11, TODO download in grib **
+[*] Z500: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/NC/DWD/2017_2019/Z500]] in **netcdf**, all months to **2019 - 11** 
+
+**CMCC: BIG PROBLEM: hindcasts only contain 6 months of data, need a re-download from the start, re-download in progress **[[Journal:2020:01:20|20/01/20]]
+
+[*] T2M: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/CMCC/2017_2019/T2M]] from 2018 - 11 
+[*] PRECIP: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/CMCC/2017_2019/PRECIP]] from 2018-11 
+[*] SST:  in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/CMCC/2017_2019/SST]] from 2018-11 
+[*] Z500:  in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/CMCC/2017_2019/Z500]] from 2018-11 
+
+=================================================================================================================================================================
+
+===== IRI Data Library (CanSIPSv2, GEM_NEMO, CanCM4i, NASA_GEOSS2S, NCEP_CFSv2) =====
+
+all notebooks / codes in 
+
+in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/hindcasts/IRI]]	
+
+=== CanSIPSv2 ===
+
+	hindcasts 1981-1 to **2018-12** then forecasts from **2019-08 to present**: //2019-01 to 2019-07 missing// 
+
+	TODO: 
+	
+	[*] rename CFSv2 -> CanSIPSv2 in filenames, see in [[/home/nicolasf/research/Smart_Ideas/code/pre-processors/notebooks/]] 
+	[*] download Z500 for 1981 to 2018-12
+	[*] SST missing for 1981 to 2018 -> downloaded to 1983-03 → downloaded to 1993-02 -> **downloading from 1993-03** (done on 13 January 2020)
+
+	[*] update to the hincasts post 2019-08
+		[*] PRECIP
+		[*] T2M
+		[*] SST
+		[*] Z500
+
+=== GEM_NEMO ===
+
+	hindcasts 1981-1 to **2018-12** (Z500 ok, PRECIP ok, T2M ok, SST ok), then forecasts from 2019-8 to present: //2019-01 to 2019-07 missing// 
+	
+	[*] update to the hincasts post 2019-08 from the forecasts datastream
+		[*] PRECIP
+		[*] T2M
+		[*] SST
+		[*] Z500
+
+=== CanCM4i ===
+
+	hindcasts 1981-1 to **2018-12** (Z500 ok, PRECIP ok, T2M ok, SST ok), then forecasts from **2019-08 to present**: //2019-01 to 2019-07 missing//
+	
+	[*] update hindcasts for period post 2018-12 from the forecasts datastream
+		[*] PRECIP
+		[*] T2M
+		[*] SST
+		[*] Z500
+
+=== NASA_GEOSS2S ===
+
+	hindcasts 1981-2 to **2017-01** (Z500 ok, PRECIP ok, T2M ok, SST ok), then forecasts from **2017-11 to present**: //2017-02 to 2017-10 missing// 
+
+	[*] rename from CFSv2 to NASA_GEOSS2S in filenames
+		[*] Z500
+		[*] SST
+		[*] T2M
+		[*] PRECIP	`
+
+	[*] update hindcasts for period post 2017-11 from the forecasts datastream
+		[*] Z500 -> downloading
+		[*] SST
+		[*] T2M 
+		[*] PRECIP 
+
+=== NCEP_CFSv2 ===
+
+	hindcasts 1982-1 to **2011-03** (Z500 ok, PRECIP ok, SST ok) then 'forecast' from 2011-04 to present (NO MISSING MONTHS)
+	
+	[*] T2M: download from 1993-09 to 2011-03
+	[*] T2M: download from 1982-01 to 1993-08 → downloaded to 1984-10
+	[*] T2M: download from 1984-11 to 1993-08
+
+	[*] update hindcasts for period post 2011-03 from the forecasts datastream
+		[*] PRECIP → downloaded: 2011-04 to 2019-12
+		[*] T2M → downloading 2011-04 to 2019-12: downloaded to 2014-01 → restart download from 2014-01, now completed
+		[*] SST: failed, stopped in 2014-10 → restarted from 2014-11, now completed
+
+=================================================================================================================================================================
+
+===== JMA (Japan Meteorological Agency) =====
+
+see https://ds.data.jma.go.jp/tcc/tcc/gpv/model/4mE/4mE_ens.html 
+
+==== hindcasts (1979 - 2014) ====
+
+the hindcasts are to be downloaded from https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2_Hind/monthly/ 
+
+==== 'old' JMA forecasts (2010 to 2015-05) ====
+
+the forecasts from the 'old version of the JMA from **2014-01 to 2015-05** are in 
+
+https://ds.data.jma.go.jp/tcc/tcc/gpv/model/4mE/GPV/
+
+==== 'new' forecasts (2015-06 - 2019) ====
+
+the updated forecasts (realtime) forecasts from the new version of the JMA from **2015-06** to present are in 
+
+https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2/3-mon/GPV/
+
+in all cases the **authentication** is with 
+
+**login**: newzealand1
+**password**: nzl2016met
+
+The code to download the hindcasts (to 2014) is in [[/home/nicolasf/research/Smart_Ideas/code/exporters/JMA/JMA_download_with_wget_authentication.ipynb]] 
+
+The 'old' and 'new' forecasts (covering January 2015 to December 2019) can be just downloaded 'manually' from the URL above 
+
+the 'codes' for the variable names are: 
+
+dict_vars['surf_Prr'] = 'PRECIP'
+dict_vars['surf_Pss'] = 'SST'
+dict_vars['h2_Ptt'] = 'T2M'
+dict_vars['p500_Phh'] = 'Z500'
+dict_vars['p200_Phh'] = 'Z200'
+
+[*] T2M: 1979 - 2014 in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/hindcasts/JMA/T2M]] 
+[*] PRECIP: 1979 - 2014 in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/hindcasts/JMA/PRECIP]]
+[*] SST: 1979 - 2014 in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/hindcasts/JMA/SST]]
+[*] Z500: 1979 - 2014 in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/hindcasts/JMA/Z500]]
+[*] Z200: 1979 - 2014 in [[/home/nicolasf/drives/auck_projects/END19101/Working/data/hindcasts/JMA/Z200]]
+
+updates for 2015 - 2019: 
+
+[*] T2M: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/JMA/T2M]] 
+[*] PRECIP: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/JMA/PRECIP]]
+[*] SST: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/JMA/SST]] 
+[*] Z500: in [[/home/nicolasf/research/Smart_Ideas/data/GCMs/GRIB/JMA/Z500]] 
+[x] Z200: not avaible for the period post 2014 on the forecasts URLs (see above) apparently ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

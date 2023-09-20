@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-11T15:18:14+13:00
+
+====== Tuesday 11 Oct 2022 ======
+
+==== accessing the CESM-LENS data ====
+
+see https://www.cesm.ucar.edu/projects/community-projects/LENS/CESM1-LENS_Access.pdf 
+
+https://www.cesm.ucar.edu/projects/community-projects/LENS/data-sets.html 
+
+{{./screenshot_2022-10-11-152026.png}}
+
+
+

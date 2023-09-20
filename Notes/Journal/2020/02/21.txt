@@ -1,0 +1,123 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-21T08:48:02+13:00
+
+====== Friday 21 Feb 2020 ======
+
+=== NIWA T&I playground ===
+
+@HUB 
+
+* Have a funding mechanism allowing small teams - ideally across science center - to investigate the potential applications of new technologies (gear, sensors, methods, libraries, etc) 
+* Small proposal put together by team, needs to be an easy template, and no need for 'polished' proposal (bullet points ok) 
+* The HUB acts as a safe "playground" where all material is shared between members of the team, version controlled, and interactions recorded (chats on MS teams ?)
+* No 'reporting' to do, but after the project is finished, all material (specs documents, blueprints, videos, images, codes, notebooks and also maybe record of interactions) are made available NIWA - wide 
+* No "output" reporting 
+* should be bottom up, but T&I team can suggest 'challenges' and teams can submit proposals 
+
+
+* code of conduct ? 
+
+=== NIWA T&I resources ===
+
+* training resources 
+* MOOCs 
+* tutorials 
+* Newsletters etc 
+
+=== NIWA T&I newsletter ===
+
+* monthly (?) T&I HUB newsletter summarizing innovative NIWA activities in the 5 areas and collating resources of interest 
+
+
+=== Climate Change AI: ===
+
+https://appliedmldays.org/tracks 
+
+see in particular: 
+
+https://appliedmldays.org/tracks/ai-climate-change
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+=== Work for Drew on time-series extraction from oe2.t2m.nc simulation ===
+
+file in = oe2.t2m.nc 
+
+see [[/home/nicolasf/Documents/data_scientist_position/notebooks/OET2M.ipynb]] 
+
+extraction of 38S / 175E 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== Work for Drew VCSN (Lauren Vargo UVW) ===
+
+@VCSN 
+
+Daily values: March 2017 through April 2019 
+
+TMin, Tmax, Rain, Srad for the period January 2013 to December 2019 
+
+see for new operational notebook to convert .dat VCSN files in [[/home/nicolasf/drives/well_groups/CLIMATE/vcsn_data]] to gridded NETCDF 
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== Enabling high-performance cloud computing for Earth science modeling on over a thousand cores: application to the GEOS-Chem atmospheric chemistry model ===
+
+@CLOUD @HPC @HUB 
+
+https://eartharxiv.org/g9etd/ 
+
+https://journals.ametsoc.org/doi/full/10.1175/BAMS-D-18-0243.1
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== EVs ===
+
+Kameron talking to CEO of EV company today ... opportunity in that space ? 
+
+http://evtalk.co.nz/ 
+
+also http://evtalk.co.nz/chargesmart-is-all-about-smart-charging/ 
+
+
+
+Earth Observation at NIWA 
+
+https://one.niwa.co.nz/display/~schimela/Earth+Observation+at+NIWA 
+
+and 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

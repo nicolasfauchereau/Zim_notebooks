@@ -1,0 +1,83 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-30T08:39:32+13:00
+
+====== Tuesday 30 Mar 2021 ======
+
+==== Climate as complex networks ====
+
+https://en.wikipedia.org/wiki/Climate_as_complex_networks 
+
+includes a nice list of references
+
+--------------------
+
+==== ICU hotspot: added functions in utils: ====
+
+def **get_one_GCM**(dpath='/media/nicolasf/END19101/ICU/data/CDS/', GCM='ECMWF', varname='tprate', start_year=1993, end_year=2016, anomalies=True, ensemble_mean=True, climatology=[1993, 2016], mask=None): 
+
+→ get one GCM 
+
+def **get_GCMs**(dpath='/media/nicolasf/END19101/ICU/data/CDS/', GCM='ECMWF', varname='tprate', start_year=1993, end_year=2016, anomalies=True, ensemble_mean=True, climatology=[1993, 2016], mask=None)
+
+→ get many GCMS 
+
+def **gpd_from_domain**(lonmin=None, lonmax=None, latmin=None, latmax=None, crs='4326'): 
+	"""
+	creates a geopandas dataframe with a rectangular domain geometry from 
+	min and max longitudes and latitudes
+
+	can be called using gpd_from_domain(*[lonmin, lonmax, latmin, latmax])
+    
+	can be passed to get_one_GCM() or get_GCMs() as a `mask` keyword argument
+
+--------------------
+
+==== dowhy:  Python library for causal inference that supports explicit modeling and testing of causal assumptions. ====
+
+https://github.com/microsoft/dowhy 
+
+--------------------
+
+==== rio-stac ====
+
+rasterion + spatio-temporal asset catalog 
+
+https://developmentseed.org/rio-stac/
+
+--------------------
+
+==== test new functions ====
+
+see test_new_functions.ipynb in validation, now uses climpred.HindcastEnsemble() consistently to derive correlation maps and ACC 
+
+**with GPCP** **as verif dataset, MME **
+
+
+{{./screenshot_2021-03-30-164349.png}}
+
+**with CMAP** **as verif dataset, MME **
+
+{{./screenshot_2021-03-30-164652.png}}
+
+**with CMAP as verif dataset, ECMWF**
+
+{{./screenshot_2021-03-30-165124.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

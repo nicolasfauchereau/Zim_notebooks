@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-11T08:18:50+12:00
+
+====== Wednesday 11 Aug 2021 ======
+
+==== List of jupyter extensions ====
+
+@jupyter @python 
+
+https://jupyterlab-contrib.github.io/extensions.html
+
+installed in env "climetlab": 
+
+→ https://github.com/martinRenou/jupyterlab-unfold (pip install jupyterlab-unfold) 
+→ https://github.com/jupyterlab/jupyter-renderers/tree/master/packages/geojson-extension (pip install jupyterlab-geojson) 
+→ https://github.com/AllanChain/jupyterlab-theme-solarized-dark (pip install jupyterlab_theme_solarized_dark)
+→ https://github.com/dask/dask-labextension (pip install dask-labextension)
+
+--------------------
+
+==== PAM ( Primary Acquired Melanosis ) ====
+
+@PAM @eyes 
+
+https://bjo.bmj.com/content/86/2/244: Dramatic regression of conjunctival and corneal acquired melanosis with topical mitomycin C 
+
+https://www.sciencedirect.com/science/article/abs/pii/S1529183906001515?via%3Dihub
+
+https://www.willseye.org/disease_condition/conjunctival-primary-acquired-melanosis/
+
+https://pubmed.ncbi.nlm.nih.gov/23084146/: 
+Pigmented conjunctival lesions primarily include melanoma, nevus, primary acquired melanosis (PAM), and complexion-associated melanosis. The incidence of conjunctival malignant melanoma (CMM) has significantly increased in the USA and Europe over the years, and it carries a very serious risk for metastasis and melanoma-related death. Conjunctival melanoma can arise de novo or from precursor lesions, nevus, and PAM. PAM is histologically separated into two distinct forms: PAM with atypia and without atypia. PAM with severe atypia progresses to malignant melanoma in up to 50% of cases and PAM without atypia virtually never progresses. Nevus is a benign melanocytic tumor that only rarely undergoes malignant transformation. Complexion-associated melanosis is frequently seen in more darkly pigmented individuals and does not progress to melanoma, although it can become very large. A detailed literature review on the various pigmented conjunctival lesions together with a schematic approach to diagnosis and management is presented. 
+
+https://www.aao.org/eyenet/article/conjunctival-pigmented-lesions-diagnosis-managemen
+
+
+
+
+
+
+

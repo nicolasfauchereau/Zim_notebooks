@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-05T09:44:17+12:00
+
+====== Friday 05 Aug 2022 ======
+
+Work on the products based on the OISST dataset 
+
+init = nzens.attrs['forecast_reference_time']
+init_str = pd.to_datetime(init).tz_localize('UTC').strftime('%H %Z %a %d/%m/%y')
+
+
+

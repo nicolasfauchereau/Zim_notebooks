@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-02T09:33:29+13:00
+
+====== Wednesday 02 Nov 2022 ======
+
+mamba install "pint<0.20"

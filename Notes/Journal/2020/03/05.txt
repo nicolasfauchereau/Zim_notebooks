@@ -1,0 +1,128 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-05T11:11:18+13:00
+
+====== Thursday 05 Mar 2020 ======
+
+checking the presence of the climatology files in the hindcasts folder: 
+
+=== CDS ===
+
+[*] ECMWF 
+	[*] T2M 
+	[*] PRECIP
+[*] UKMO 
+	[*] T2M 
+	[*] PRECIP 
+[*] METEO_FRANCE
+	[*] T2M
+	[*] PRECIP 
+[*] DWD 
+	[*] T2M
+	[*] PRECIP 
+[*] CMCC 
+	[*] T2M
+	[*] PRECIP 
+
+=== IRI ===
+
+[*] NCEP_CFSv2
+	[*] T2M copying 
+	[*] PRECIP
+[*] CanSIPSv2
+	[*] T2M 
+	[*] PRECIP 
+[*] NASA_GEOSS2S
+	[*] T2M
+	[*] PRECIP 
+[*] CanCM4i
+	[*] T2M
+	[*] PRECIP 
+[*] GEM_NEMO
+	[*] T2M
+	[*] PRECIP 
+
+=== JMA ===
+
+[*] JMA 
+	[*] T2M
+	[*] PRECIP 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== calculation and plot of the latest monthly NCEP SLP anomaly (for watercare report) ===
+
+@NCC 
+
+see in [[/home/nicolasf/operational/NCC_ops/]]make_NCEP_MSLP_anomaly.ipynb
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== process the GCM forecasts ===
+
+@SI @GCM 
+
+== problems with ==
+
+[*] METEO_FRANCE T2M 2017 - 09 fixed 
+[ ] METEO_FRANCE T2M 2017 - 10 to 
+[ ] redownload METEO_FRANCE T2M 2018 - 10 as well 
+
+pre-processed OK 
+
+[*] ECMWF T2M 
+[*] ECMWF PRECIP 
+[ ] UKMO T2M: downloads missing for forecasts 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== TF GPU on deuce.cms.waikato.ac.nz ===
+
+@SI @GPU 
+
+(tf_gpu) nfauchereau@deuce:~$ nvidia-smi
+Thu Mar  5 16:13:51 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 430.50       Driver Version: 430.50       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 208...  Off  | 00000000:03:00.0 Off |                  N/A |
+| 33%   64C    P0    88W / 250W |      0MiB / 11019MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  GeForce RTX 208...  Off  | 00000000:04:00.0 Off |                  N/A |
+| 23%   65C    P0     1W / 250W |      0MiB / 11019MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+to install a working TensorFlow (2) GPU environment, simply 
+
+conda create --name tf_gpu tensorflow-gpu
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

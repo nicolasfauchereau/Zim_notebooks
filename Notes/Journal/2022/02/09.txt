@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-09T09:09:16+13:00
+
+====== Wednesday 09 Feb 2022 ======
+
+==== Anthropogenic influence on extreme precipitation over global land areas seen in multiple observational datasets ====
+
+Madakumbura, G. D., C. W. Thackeray, J. Norris, N. Goldenson, and A. Hall, 2021: Anthropogenic influence on extreme precipitation over global land areas seen in multiple observational datasets. Nat Commun, 12, 3944, https://doi.org/10.1038/s41467-021-24262-x.
+
+code: https://figshare.com/articles/journal_contribution/Codes_used_in_the_study_Anthropogenic_influence_on_extreme_precipitation_over_global_land_areas_seen_in_multiple_observational_datasets_/14479659 
+
+and downloaded in 
+
+[[/home/nicolasf/research/precipitation_extremes]] 
+
+--------------------
+
+==== Solarpunk station ====
+
+@solarpunk 
+
+https://solarpunkstation.com/ 
+
+podcasts: 
+
+→ https://gimletmedia.com/shows/howtosaveaplanet
+→ https://www.hottakepod.com/ 
+→ https://david-bollier.simplecast.com/ Frontiers of Commoning 
+
+**Lean Logic: A Dictionary for the Future and How to Survive It**, by David Fleming (https://en.wikipedia.org/wiki/David_Fleming_(writer) 
+
+→ https://warmregardspodcast.com/episodes
+
+→ https://solarpunkstation.com/2021/10/28/podcasts-for-the-planet/ 
+
+--------------------
+
+==== ICU: moving all GPM-IMERG data from local drive to END19101 ====
+
+and also, moving large files from .nc to .zarr 
+
+--------------------
+
+==== read NCEP data into an xarray dataset straight from the FTP / HTTPS URL ====
+
+import urllib.request
+import io
+import xarray as xr
+
+url = 'https://downloads.psl.noaa.gov/Datasets/ncep.reanalysis2.derived/surface/pres.sfc.mon.mean.nc'
+
+req = urllib.request.Request(url)
+
+with urllib.request.urlopen(req) as resp:
+	dset = xr.open_dataset(io.BytesIO(resp.read()))
+
+for the calculation of the SAM index as EOF: **make_SAM_monthly_EOF_NCEP1.ipynb** in [[/home/nicolasf/research/GWRC_report/notebooks/climate_drivers]] 
+
+
+
+
+
+
+

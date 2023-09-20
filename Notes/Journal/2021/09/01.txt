@@ -1,0 +1,217 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-01T10:29:28+12:00
+
+====== Wednesday 01 Sep 2021 ======
+
+==== Smart Ideas workshop ====
+
+Novelty 
+
+Not being done across time-scales 
+
+Not only about uncertainty quantificiation 
+
+It's about the identification of windows of opportunity 
+
+It can direcly be related 
+
+"If given the green light, we will engage with Iwi entitites engaged in horticulture .. ZESPRI will be our in here"  
+
+**propspectrive title:** 
+
+Aligning sights / 
+
+windows of opportunities for skillful forecasts and end-user uptake 
+windows of opportunities for skillful forecasts and end-user uptake  
+
+economic target portfolio advantageous as MBIE is trying to increase portfoloio 
+
+We can actually indicate (somewhat) quantify economic benefits 
+
+MBIE would like to diversify econmic away from Primary Sector: e.g. IT, Energy ? 
+
+Energy ???
+
+Need to show that this is challenging 
+
+Leverage domestic and international research and investments 
+
+**Our hypothesis is that the usefulness of forecasts is hampered by the current practices anbd the lack of connection with end-user practices ... reframing delivery and consumption  of forecasts in terms of windows of opportunities will transform** 
+
+This will be challenging both scientieically and from a user engement perspective, but we have the team, and we can leverage nascent reserafgh 
+
+As a smart ideas we will focus can provide a blueprint f
+
+This project is a stretch because it goes beyond just a scientific project, it entails ultimately a challenge 
+
+
+risks because it goes 'against the grain': it challenges the current way forecasts are perceived, used, and how decisions are made (or not) based on forecasts 
+
+VM: cultural aspect, our hypothesis is that cultural bacground (Pakeha and Maori) with respect to relate to environmental variability and the perception and expectiations of forecast service smight be relevant to the transformation of practices that is the ultyimate goal of this project. 
+
+
+== Impacts, benefits for NZ ==
+
+main benefit needs to be stated explicitely 
+
+ZESPRI 
+
+currently, what is the scale of the kiwifruit industry 
+
+orchard management: what are the costs of interventions that are directly influenced by decisions based on assumptions about what the future will look like ?  
+
+what are the **key** identifiable decisions directly influenced by weather and climate forecasts  
+
+also right now there are weather forecasts ... and seasonal forecasts, but piecemeal efforts in the subseasonal scale (make sure of that) 
+
+Note that benefit cannmot be fully expressed in $ terms: there is a cultural benefit in nudging end users towards a better appreciation of cliimate variability and predictability variability, promote more of a dialogue and awareness of how the climate system operates . 
+
+what additional benefit 
+
+benefit in job creation ?
+
+benefit in communication to the general public after extension to other end-users ... 
+
+scale: estimates of scale (if econmic benefit) expressed in $ terms or at least attempts to estimate, see 
+
+what is the scale of the benefit in $ anount, per year 
+
+Darbyshire, R., and Coauthors, 2020: Insights into the value of seasonal climate forecasts to agriculture. Aust J Agric Resour Econ, 64, 1034–1058, https://doi.org/10.1111/1467-8489.12389.
+
+seasonal scale, but applicability to other scales, from weather to subseasonal 
+
+3 years is minium, will be fast paced project, can get started relatively fast .. can leverage preliminary reserch currently undertaken at NIWA based on the GEFS subseasonal forecast and the MJO (Fauchereau et al 2018) that can provide a leg up / blueprint 
+
+
+==== VM ====
+
+https://www.maorikiwifruitgrowers.com/
+
+MANA WHAKAHAERE | Influence, Leadership, Leverage, Decision Making
+
+== Team ==
+
+say something like our team has 150 years of collective experience ... 
+
+
+
+--------------------
+
+==== visualising CSV files with visidata ====
+
+@csv 
+
+see: https://github.com/saulpw/visidata 
+
+
+$ vd <input> 
+
+--------------------
+
+==== changes in El Nino in response to global warming on long timescales ====
+
+see: 
+
+→ https://www.nature.com/articles/s41558-021-01099-2 
+
+Callahan, C. W., C. Chen, M. Rugenstein, J. Bloch-Johnson, S. Yang, and E. J. Moyer, 2021: Robust decrease in El Niño/Southern Oscillation amplitude under long-term warming. Nat. Clim. Chang., https://doi.org/10.1038/s41558-021-01099-2.
+
+
+→ https://www.nature.com/articles/s43017-021-00199-z 
+
+code: https://github.com/ccallahan45/Callahan-et-al_NCC_2021/ 
+
+includes code to derive ENSO indices
+
+
+see also: 
+
+def find_linear_trend(data):
+	# time x lat x lon data
+	# first a wrapper function to just
+	# get the single linear trend coefficient
+	# from np.polyfit
+	def linear_trend_coef(x, y):
+		pf = np.polyfit(x, y, 1)
+		return xr.DataArray(pf[0])
+	# create dummy array of time values (from 1 to length of the data)
+	# for each lat/lon point
+	timevals = xr.DataArray(np.arange(1,len(data.time)+1,1),
+						coords=[data.time],dims=["time"])
+	timevals = timevals.expand_dims(lat=data.lat,lon=data.lon)
+	# apply linear_trend_coef
+	# to "timevals" and "data"
+	# at each grid point
+	linear_trend = xr.apply_ufunc(linear_trend_coef,timevals,data,
+							vectorize=True,input_core_dims="time"],["time")
+	return(linear_trend)
+
+def find_linear_trend_pvalue(data):
+	# time x lat x lon data
+	# first a wrapper function to just
+	# get the p-value on the linear trend
+	# from stats.linregress
+	def linear_pval(x, y):
+		slope, intercept, rvalue, pvalue, se = stats.linregress(x,y)
+		return(pvalue)
+	# create dummy array of time values (from 1 to length of the data)
+	# for each lat/lon point
+	timevals = xr.DataArray(np.arange(1,len(data.time)+1,1),
+						coords=[data.time],dims=["time"])
+	timevals = timevals.expand_dims(lat=data.lat,lon=data.lon)
+	# apply linear_pval
+	# to "timevals" and "data"
+	# at each grid point
+	linear_p = xr.apply_ufunc(linear_pval,timevals,data,
+							vectorize=True,input_core_dims="time"],["time")
+	return(linear_p)
+
+--------------------
+
+==== Drought interest group meeting ====
+
+round table 
+
+Daihi: pasture growth index 
+
+**Energy Drought** (hydro + wind + solar): Christian Zammit + paleo. Get back to him ... identifying 
+
+
+--------------------
+
+==== Alone season 8 ====
+
+https://www.outdoorlife.com/gear/clothing-that-won-alone/?fbclid=IwAR2JW03f6hd89jG1pjtAJ0bwhXBaVkrGvT0ifrsZI6PNY4yNVtkReT4roSM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

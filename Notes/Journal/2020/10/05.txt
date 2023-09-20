@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-05T10:59:22+13:00
+
+====== Monday 05 Oct 2020 ======
+
+=== rewrote WMO essential notebook for Ben Noll (CDFP ??) ===
+
+see in  **~/operational/WMO_essentials** 
+
+[[~/operational/WMO_essential/notebooks/get_WMO_essential.html]]
+

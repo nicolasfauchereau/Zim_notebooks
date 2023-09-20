@@ -1,0 +1,104 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-25T16:59:23+12:00
+
+====== Tuesday 25 Apr 2023 ======
+
+
+==== ETCCDI indices using the CDO python 'bindings' ====
+
+https://github.com/Peter-Gibson/climate/blob/CLIMATE-937/examples/ETCCDI_precip.py 
+
+https://github.com/AusClimateService/indices
+
+uses ICCLIM, which is already what I am using, see ICCLIM in https://icclim.readthedocs.io/en/stable/index.html 
+
+see also: 
+
+https://github.com/AusClimateService/indices/blob/main/run_icclim.py 
+
+and 
+
+https://github.com/AusClimateService/indices 
+
+
+--------------------
+
+==== CMIP6, processing of the EC-Earth3 - CCAM downscaled data ====
+
+see: EC-Earth3_CCAM_to_VCSN/notebooks/evaluate_EC-Earth3_BCSD_outputs_from_merged_dset_v2.ipynb 
+
+Maybe change the chunking of the dataset, might be the solution for speed up
+
+right now the merged dataset is 
+
+merged_dset = merged_dset.chunk(dict(time=-1, lat=10, lon=10)) 
+
+could increase the size of the chunks along the lat and lon dimensions 
+
+--------------------
+
+==== spatial selection ====
+
+https://github.com/AusClimateService/model-evaluation/blob/master/report_EOFY22/spatial_selection.py
+
+see also other functions and notebooks in https://github.com/AusClimateService/model-evaluation/tree/master/report_EOFY22 
+
+--------------------
+
+==== added value analysis ====
+
+https://github.com/AusClimateService/added-value-evaluation
+
+
+https://github.com/AusClimateService/added-value-evaluation/blob/main/added-value.ipynb 
+
+
+--------------------
+
+==== climate change risk analysis ====
+
+
+→ https://www.brightest.io/climate-risk-assessment-management 
+
+→ https://www.charteredaccountantsanz.com/news-and-analysis/news/what-are-climate-related-risks-and-why-should-you-know-about-them 
+
+→ https://www.tcfdhub.org/ 
+
+→ https://www.tcfdhub.org/scenario-analysis/ 
+
+→ https://assets.bbhub.io/company/sites/60/2022/10/2022-TCFD-Status-Report.pdf 
+
+→ https://www.pwc.co.nz/services/consulting/sustainability/identifying-your-climate-change-risks-and-opportunities.html 
+
+→ https://chapmantripp.com/trends-insights/managing-climate-risk-in-new-zealand-in-2020/ 
+
+**Download and print:** 
+
+→ https://www.mpi.govt.nz/dmsdocument/48871-Understanding-Business-Climate-Change-Risk-using-the-TCFD-Process 
+
+→ https://www.tcfdhub.org/Downloads/pdfs/E06 - Climate related risks and opportunities.pdf 
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5938638/pdf/rsta20170307.pdf
+
+→ https://www.qld.gov.au/__data/assets/pdf_file/0026/132398/ccrmt-businesses-full.pdf 
+
+→ file:///home/nicolasf/Downloads/CRA_1day_Oct10.pdf 
+
+→ https://chapmantripp.com/media/zynfua4g/managing-climate-risk-in-new-zealand-nov2020.pdf 
+
+→ https://quantis.com/bridging-the-gap-between-climate-risk-and-corporate-resilience/ 
+
+**Watch** 
+
+→ https://www.youtube.com/watch?v=cNXdzyo7KQY 
+
+→ https://www.youtube.com/watch?v=OhZBOToDIf0 
+
+→ https://www.youtube.com/watch?v=XE1sZRiAnzU 
+
+
+
+
+
+**Physical** / Material and **transition** risk 

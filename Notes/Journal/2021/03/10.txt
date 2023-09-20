@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-10T10:38:10+13:00
+
+====== Wednesday 10 Mar 2021 ======
+
+==== ICU hotspots ====
+
+scripts now for the download of fields (**1_download_CDS_monthly_raw_data_ICU_version_2.py**) and for the calculation of the ensemble probabilities for the 
+hindcast period (**calculate_ensemble_probabilities_for_hindcast_terciles.py**) in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CDS/version_2]] 
+

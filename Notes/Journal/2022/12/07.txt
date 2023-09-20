@@ -1,0 +1,53 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-07T13:34:36+13:00
+
+====== Wednesday 07 Dec 2022 ======
+
+Issue with using group = 'time.month' (window = 3) in the downscaling of ACCESS  
+
+Inf are generated over regions of high elevation 
+
+see e.g. in 2004 
+
+These images below contain the monthly means for 2004 (downscaled ACCESS-CM2_CCAM to VCSN)
+
+{{./screenshot_2022-12-07-133602.png}}
+
+
+see in **downscale_one_grid_point.ipynb** 
+
+The solution is to filter and only keep the finite values, then multiply by the mask 
+
+arr = arr.where(np.isfinite(arr), 0.0) * mask
+
+see in downscale_xclim_ACCESS-CM2_CCAM_to_VCSN_cross_validation_adjust_month_grouper.ipynb 
+
+also: 
+
+using 
+
+scen = QM.adjust(dset_ccam_adjustment, extrapolation="constant", interp="linear")
+
+generates different values than
+
+scen = QM.adjust(dset_ccam_adjustment, extrapolation="constant", interp="nearest")
+
+{{./screenshot_2022-12-07-164349.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

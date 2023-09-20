@@ -1,0 +1,132 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-25T10:34:35+12:00
+
+====== Friday 25 Jun 2021 ======
+
+Smart Ideas 
+
+results from PYCARET experiements, with GCM (forecast) SSTs as inputs in tabular form 
+
+== NNI ==
+
+**NNI, cat_3,  cross validation over 1993 - 2016** 
+
+{{./screenshot_2021-06-25-115711.png}}
+
+**test period (2017 - 2019)** 
+
+{{./screenshot_2021-06-25-115806.png}}
+
+with blend of the best 3: 
+
+{{./screenshot_2021-06-25-122952.png}}
+
+
+== ENI ==
+
+ENI, cat_3, rain,  cross validation over 1993 - 2016 
+
+{{./screenshot_2021-06-25-103539.png}}
+
+test period (2017 - 2019) 
+
+{{./screenshot_2021-06-25-104119.png}}
+
+--------------------
+
+==== Geoscience Australia collection of notebooks on Geospatial Data Analysis ====
+
+@geo @jupyter @geospatial 
+
+https://github.com/GeoscienceAustralia/dea-notebooks/
+
+and in [[~/Jupyter_notebooks/Geospatial_Python/dea-notebooks]] 
+
+lots of functions to e.g. create a dask cluster 
+
+see 
+
+https://github.com/GeoscienceAustralia/dea-notebooks/tree/develop/Tools
+
+which also include some functions to convert a geopandas dataframe to xarray, perform 2D (nearest) interpolation on xarray dataarray, etc 
+
+also https://github.com/GeoscienceAustralia/dea-notebooks/blob/develop/Tools/dea_tools/climate.py includes a function to download ERA5 daily 
+
+
+--------------------
+
+==== DASK down under ====
+
+@dask @geo @geospatial 
+
+https://blog.dask.org/2021/06/25/dask-down-under
+
+--------------------
+
+==== xarray.core.rolling.DataArrayRolling.construct ====
+
+@extremes @heatwaves @MHW 
+
+Convert a rolling object to xr.DataArray, where the window dimension is stacked as a new dimension
+
+http://xarray.pydata.org/en/stable/generated/xarray.core.rolling.DataArrayRolling.construct.html
+
+see application to the calculation of seasonally dependent quantile climatologies: 
+
+**read_VCSN_calc_quantile_climatologies_construct.ipynb** in [[/home/nicolasf/research/CPP/WRs/notebooks]] 
+
+
+--------------------
+
+===== marine heatwave with xarray =====
+
+@extremes @heatwaves @MHW 
+
+https://github.com/oceanhackweek/ohw20-proj-marine-heat-waves/ 
+
+see also: 
+
+https://github.com/ScottWales/training/tree/master/xarray%2Bdask
+
+https://github.com/ScottWales/training/blob/master/xarray%2Bdask/2a-time-and-splitting-answered.ipynb
+
+to avoid calculating the percentile directly we can assume the data is normally distributed, with mean = mean for the day of the year, and std = std for the day of the year, and calculate the percentile value 
+
+see 
+
+https://github.com/ScottWales/training/blob/master/xarray%2Bdask/2b-time-3d-answered.ipynb 
+
+mean = tasmax_15day.groupby('time.dayofyear').mean('time')
+std = tasmax_15day.groupby('time.dayofyear').std('time')
+
+import scipy.stats
+
+with ProgressBar():
+	tasmax_p90 = scipy.stats.norm.ppf(0.9, loc = mean, scale=std)
+
+lots of resources here, see e.g. https://github.com/ScottWales/training/blob/master/bigdata/era5_threshold.py 
+
+
+--------------------
+
+==== hatching with cartopy ====
+
+@matplotlib @cartopy @plotting 
+
+
+{{./screenshot_2021-06-25-144849.png}}
+
+--------------------
+
+==== downloads module for the Smart Ideas: ====
+
+@SI 
+
+pilfer:  [[/home/nicolasf/research/CPP/indices/notebooks/Downloads]] for downloading ERSST 
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-09T09:23:00+13:00
+
+====== Tuesday 09 Feb 2021 ======
+
+--------------------
+
+==== GFS data on THREDDS ====
+
+see: https://tds.scigw.unidata.ucar.edu/thredds/idd/forecastModels.html 
+
+--------------------
+
+==== Wave Watch III global ====
+
+https://tds.scigw.unidata.ucar.edu/thredds/catalog/grib/NCEP/WW3/Global/catalog.html
+
+--------------------
+
+==== SPI in Python ====
+
+For the ICU: 
+
+https://pypi.org/project/climate-indices/
+
+--------------------
+
+==== ASCAT and SM2RAIN ====
+
+→ data: https://zenodo.org/record/4507133 
+
+→ code (algorithm for the calculation of rainfall from soil moisture) : https://zenodo.org/record/2203560 
+
+→ code (reader): https://zenodo.org/record/3451685 + https://github.com/IRPIhydrology/SM2RAIN_ASCAT_reader/tree/1 

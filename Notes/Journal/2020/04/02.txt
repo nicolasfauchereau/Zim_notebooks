@@ -1,0 +1,122 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-02T10:24:30+13:00
+
+====== Thursday 02 Apr 2020 ======
+
+------------------------------------------------------------------------------------------------------
+
+[[Journal:2020:04:01|01/04/20]]
+
+------------------------------------------------------------------------------------------------------
+
+=== Experiments with the https://autogluon.mxnet.io/index.html framework for automated machine Learning ===
+
+== installation ==
+
+pip install --upgrade mxnet
+pip install autogluon 
+
+== github repo ==
+
+https://github.com/awslabs/autogluon
+
+== Paper ==
+
+https://arxiv.org/pdf/2003.06505.pdf: "**AutoGluon-Tabular: Robust and Accurate AutoML for Structured Data**"
+
+Note that this paper also provides a **comparison with some popular autoML frameworks**, such as Auto-WEKA, Auto-sklearn, TPOT, H2O, GCP-Tables ... 
+
+== Usage for Tabular data ==
+
+import autogluon as ag
+from autogluon import TabularPrediction as task
+
+# training stage
+
+train_data = task.Dataset(file_path='https://autogluon.s3.amazonaws.com/datasets/Inc/train.csv')
+
+or 
+
+train_data = task.Dataset(existing pandas Dataframe in memory)
+
+# label of the column containing the class variable in `train_data` 
+label_column = 'y' 
+
+# output directory, where the models and their parameters will be saved during the experiment 
+# there will be an HTML file in there containing a bokeh plot summarizing the different algorithms results 
+output_dir = './auto_gluon_exp' 
+
+predictor = task.fit(train_data=train_data, label=label_column, output_directory=dir)
+
+# test stage 
+
+test_data = task.Dataset(file_path='https://autogluon.s3.amazonaws.com/datasets/Inc/test.csv')
+
+y_test = test_data[label_column]  # values to predict
+
+test_data_nolab = test_data.drop(labels=[label_column],axis=1) # delete label column to prove we're not cheating
+
+Note that unsure how to deal with information leakage when using a PCA to perform dimensionality reduction 
+
+Not sure AutoGLUON can be put easily into a pipeline ? does have a 'fit' method 
+
+The documentation does not say whether a dimensionality reduction step is included in the model building 
+
+maybe use the more advanced options, which allows to specify the training and the tuning data, 
+
+e.g see 
+
+```
+hp_tune = True  # whether or not to do hyperparameter optimization
+
+nn_options = { # specifies non-default hyperparameter values for neural network models
+	'num_epochs': 10, # number of training epochs (controls training time of NN models)
+	'learning_rate': ag.space.Real(1e-4, 1e-2, default=5e-4, log=True), # learning rate used in training (real-valued hyperparameter searched on log-scale)
+	'activation': ag.space.Categorical('relu', 'softrelu', 'tanh'), # activation function used in NN (categorical hyperparameter, default = first entry)
+	'layers': ag.space.Categorical([100],[1000],[200,100],[300,200,100]),
+	  # Each choice for categorical hyperparameter 'layers' corresponds to list of sizes for each NN layer to use
+	'dropout_prob': ag.space.Real(0.0, 0.5, default=0.1), # dropout probability (real-valued hyperparameter)
+}
+
+gbm_options = { # specifies non-default hyperparameter values for lightGBM gradient boosted trees
+	'num_boost_round': 100, # number of boosting rounds (controls training time of GBM models)
+	'num_leaves': ag.space.Int(lower=26, upper=66, default=36), # number of leaves in trees (integer hyperparameter)
+}
+
+hyperparameters = {'NN': nn_options, 'GBM': gbm_options}  # hyperparameters of each model type
+# If one of these keys is missing from hyperparameters dict, then no models of that type are trained.
+
+time_limits = 2*60  # train various models for ~2 min
+num_trials = 5  # try at most 3 different hyperparameter configurations for each type of model
+search_strategy = 'skopt'  # to tune hyperparameters using SKopt Bayesian optimization routine
+output_directory = 'agModels-predictOccupation'  # folder where to store trained models
+
+predictor = task.fit(train_data=**train_data**, tuning_data=**val_data**, label=label_column,
+					 output_directory=output_directory, time_limits=time_limits, num_trials=num_trials,
+					 hyperparameter_tune=hp_tune, hyperparameters=hyperparameters,
+					 search_strategy=search_strategy)
+```
+
+so basically
+
+1) use stratifield k - fold (e.g. 10 folds)
+2) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

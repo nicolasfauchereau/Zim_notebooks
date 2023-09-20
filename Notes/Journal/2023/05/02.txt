@@ -1,0 +1,261 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-02T08:13:01+12:00
+
+====== Tuesday 02 May 2023 ======
+
+==== CMIP6 Chapter 11 ====
+
+https://github.com/mathause/Chapter-11
+
+==== work life balance ====
+
+https://www.sciencedaily.com/releases/2023/04/230412131136.htm
+
+--------------------
+
+==== Reprocessing of the CCAM runs using UTC-based averaging ====
+
+see file:///home/nicolasf/NIWA/CMIP6/Updated%20national%20climate%20projections%20for%20Aotearoa%20New%20Zealand%20_%20NIWA%20(1_05_2023%2010_40_12%20am).html 
+
+@CMIP6 @Downscaling 
+
+=== NZ_surf_domain ===
+
+== Historical ==
+
+	**→ ERA5_c192**
+	
+	[*] pr
+	[*] tas
+	[*] tasmin 
+	[*] tasmax
+
+	**→ ACCESS-CM2**
+	
+	[*] pr
+	[*] tas
+	[*] tasmin 
+	[*] tasmax
+
+	**→ NorESM2-MM**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ EC-Earth3**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+	
+	**→ GFDL-ESM4**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ AWI-CM-1-1MR**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ NZESM** 
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ MPI-ESM1-2-HR** == NOT DONE
+
+	[x] pr
+	[x] tas 
+	[x] tasmin
+	[x] tasmax
+
+	**→ CNRM-CM6-1 (only historical for now is available)** 
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+
+→ all copied in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6]] 
+
+== ssp126 ==
+
+
+	**→ ACCESS-CM2**
+	
+	[*] pr
+	[*] tas
+	[*] tasmin 
+	[*] tasmax
+
+	**→ NorESM2-MM**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ EC-Earth3**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+	
+	**→ GFDL-ESM4 → issue = Run not completed as of 5 May 2023**
+
+	[x] pr
+	[x] tas 
+	[x] tasmin
+	[x] tasmax
+
+	**→ AWI-CM-1-1MR**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ MPI-ESM1-2-HR** == NOT DONE 
+
+	[ ] pr
+	[ ] tas 
+	[ ] tasmin
+	[ ] tasmax
+
+→ all copied in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6]]
+
+== ssp245 ==
+
+
+	**→ ACCESS-CM2**
+	
+	[*] pr
+	[*] tas
+	[*] tasmin 
+	[*] tasmax
+
+	**→ NorESM2-MM**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ EC-Earth3**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+	
+	**→ GFDL-ESM4**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ AWI-CM-1-1MR**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ MPI-ESM1-2-HR** == NOT DONE
+
+	[ ] pr
+	[ ] tas 
+	[ ] tasmin
+	[ ] tasmax
+
+→ all copied in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6]] 
+
+== ssp370 ==
+
+
+	**→ ACCESS-CM2**
+	
+	[*] pr
+	[*] tas
+	[*] tasmin 
+	[*] tasmax
+
+	**→ NorESM2-MM**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ EC-Earth3**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+	
+	**→ GFDL-ESM4**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ AWI-CM-1-1MR**
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+	**→ MPI-ESM1-2-HR == NOT DONE**
+
+	[x] pr
+	[x] tas 
+	[x] tasmin
+	[x] tasmax
+
+	**→ NZESM** (only future scenario available is SSP 3-7.0)
+
+	[*] pr
+	[*] tas 
+	[*] tasmin
+	[*] tasmax
+
+→ all copied in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6]] 
+
+--------------------
+
+==== Climate Insights from ClimSystems ====
+
+@PwC 
+
+https://www.climateinsights.global/demo 
+
+https://www.scoop.co.nz/stories/SC2008/S00026/game-changing-cloud-based-climate-physical-asset-risk-and-ranking-product-released.htm 
+
+https://www.climsystems.com/c3.orporate
+
+https://www.climsystems.com/corporate/insights
+
+
+
+
+
+
+
+

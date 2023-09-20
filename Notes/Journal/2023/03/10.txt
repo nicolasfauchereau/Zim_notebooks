@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-10T12:07:35+13:00
+
+====== Friday 10 Mar 2023 ======
+
+==== ClimateLearn for climate prediction and downscaling ====
+
+https://aditya-grover.github.io/blog/2023/climate-learn/ 
+
+--------------------
+
+==== CDO for the calculation of the ETCCDI indices ====
+
+@MBIE @CMIP6 @downscaling 
+
+[[/nesi/project/niwa00018/gibsonp/scripts/CDO/CCAM_run_compare/CMIP6_hist_compare/pr_variables/compare_runs_PR.sh]] 

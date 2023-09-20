@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-24T14:20:00+13:00
+
+
+
+====== Thursday 24 Mar 2022 ======
+
+==== Extreme Value Analysis using Python ====
+
+@EVA 
+
+see https://www.linkedin.com/pulse/beginners-guide-carry-out-extreme-value-analysis-2-chonghua-yin/ 
+
+and examples in [[~/research/EVA]] 
+
+see also packages: 
+
+→ https://georgebv.github.io/pyextremes/ 
+
+→ https://xclim.readthedocs.io/en/stable/notebooks/frequency_analysis.html 
+
+and https://github.com/georgebv/pyextremes-notebooks for examples of use for the pyextremes library 

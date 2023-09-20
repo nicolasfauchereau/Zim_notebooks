@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-21T14:19:44+12:00
+
+====== Wednesday 21 Jul 2021 ======
+
+MJO composite maps for Ben 
+
+@MJO @xarray 
+
+see in [[~/operational/MJO_composite_maps]] 
+
+previous maps are in 
+
+[[/home/nicolasf/drives/auck_scratch/nollbe/MJO_from_Ben]] 
+
+--------------------
+
+==== Emergency Department ====
+
+see Alice's message:
+
+{{./screenshot_2021-07-21-151648.png}}
+
+see: https://www.icd10data.com/ICD10CM/Codes 
+
+which means we can use the diagnoses codes to get at the groups that Alice's refers to above 
+
+
+
+

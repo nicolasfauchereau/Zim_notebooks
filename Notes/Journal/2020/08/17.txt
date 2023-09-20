@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-17T11:11:11+12:00
+
+====== Monday 17 Aug 2020 ======
+
+==== Generative models for time-series ====
+
+[ @GAN  @Autoencoders ] 
+
+see: 
+
+https://www.topbots.com/generating-synthetic-sequential-data-using-gans/
+
+and also the library **DoppelGANger** 
+
+https://github.com/fjxmlzn/DoppelGANger 
+
+and cloned locally in [[~/research/Smart_Ideas/resources/repos_libraries]] 
+
+paper 
+
+Lin, Z., A. Jain, C. Wang, G. Fanti, and V. Sekar, 2019: Generating High-fidelity, Synthetic Time Series Datasets with DoppelGANger. arXiv:1909.13403 [cs, stat],.
+ 
+
+==== Scalable Covariance Approximations for Environmental and Climate Data ====
+
+@geospatial @kriging 
+
+https://usclivar.org/working-groups/data-science-working-group-webinar-series 
+
+Date: August 17, 2020
+
+Presenter: Matthias Katzfuss (Texas A&M University)
+
+Talk title: Scalable Covariance Approximations for Environmental and Climate Data
+
+Abstract: Dense covariance or kernel matrices arise frequently in geospatial analysis, machine learning, and simulation of systems governed by partial differential equations. Many standard algorithms involving such kernel matrices are computationally infeasible for large datasets. We consider a sparse approximation to the Cholesky factor of the inverse kernel matrix. The approximation can be written in closed form and computed in parallel, and it includes many popular existing approximations as special cases. We discuss extensions and applications to spatial modeling and prediction (i.e., kriging), analysis of computer experiments, statistical emulation of climate models, and data assimilation.
+
+--------------------
+
+==== S2S forecasting using large ensembles of data-driven global weather prediction models ====
+
+https://www.youtube.com/watch?v=Yk0eSNs7nbs&feature=youtu.be
+
+use projection on a cubed sphere to avoid singularities at the pole 
+
+see paper: 
+
+Weyn, J. A., D. R. Durran, and R. Caruana, 2020: Improving data-driven global weather prediction using deep convolutional neural networks on a cubed sphere. Meteorology,.
+
+application gh repo 
+
+https://github.com/jweyn/DLWP 
+
+and 
+
+https://github.com/jweyn/DLWP-CS 
+
+which includes amazing tutorials ... 
+
+the latter requires the library 
+
+https://anaconda.org/conda-forge/tempest-remap 
+
++ gh repo https://github.com/ClimateGlobalChange/tempestremap 
+
+
+
+
+
+

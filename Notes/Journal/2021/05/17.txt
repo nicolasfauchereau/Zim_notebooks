@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-17T10:24:15+12:00
+
+====== Monday 17 May 2021 ======
+
+==== ICU GCM processing ====
+
+calculation of the climatological quantiles (terciles, deciles and quantiles [0.02, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+
+see **calculate_hindcast_climatology_JMA_ECCC.ipynb** 
+
+now uses the `map` method to calculate the terciles, 
+

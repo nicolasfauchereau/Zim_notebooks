@@ -1,0 +1,93 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-20T09:24:40+12:00
+
+====== Wednesday 20 Sep 2023 ======
+
+==== How I Used Python and Folium to Visualize My Outdoor Activities ====
+
+https://hackernoon.com/how-i-used-python-and-folium-to-visualize-my-outdoor-activities 
+
+see in  [[/run/media/nicolasf/Data/data/personal/tracks]] for examples of GPX files (riding tracks) 
+
+Jupyter notebook to reproduce the outputs: https://github.com/lkrimphove/JupyterNotebooks/blob/main/OutdoorActivities/OutdoorActivities.ipynb 
+
+requirements: 
+
+gpxpy
+folium
+pandas
+numpy
+haversine
+plotly
+
+--------------------
+==== Blog with Nikola and Jupyter Notebooks ====
+
+https://jiaweizhuang.github.io/blog/nikola-guide/
+
+https://paulomarconi.github.io/blog/Nikola-guide/ 
+
+https://notes.mikejarrett.ca/optimizing-your-nikola-blog-for-jupyter-notebooks/ 
+
+
+--------------------
+==== Comprehensive evidence implies a higher social cost of CO2 ====
+
+https://www.nature.com/articles/s41586-022-05224-9
+
+code (Julia): https://zenodo.org/record/6932028 
+
+
+--------------------
+==== TeslaKit ====
+
+e.g. MJO: https://github.com/teslakit/teslakit/blob/master/teslakit/mjo.py 
+
+
+--------------------
+==== PCCM by James Potemra ====
+
+https://github.com/jpotemra/PCCM/blob/main/Chapter%206%3A%20Ocean%20Temperature/make_pccm_plots.ipynb
+ 
+shifting -180 to 180 to 0 to 360 
+
+{{{code: lang="python3" linenumbers="False"
+ogr2ogr -s_srs EPSG:4326 -t_srs "+proj=longlat +ellps=WGS84 +pm=-180 +datum=WGS84 +no_defs" .Pacific_Island_EEZ_shifted.shp Pacific_Island_EEZ.shp
+}}}
+
+--------------------
+==== Slides and webinar recording on the NZ Emission Trading Scheme (ETS) ====
+
+https://drive.google.com/file/d/1uRfiYwHUviSepCWE8WihqUtzbZvxgUhM/view?usp=sharing
+ 
+--------------------
+==== git authentication ====
+
+@git 
+
+
+https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed
+
+replace password by git token when signing in: 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 
+
+then run 
+
+$ git config --global credential.helper cache
+
+
+--------------------
+==== A Theory on the Future of the Rebound Effect in a Resource-Constrained World ====
+
+https://www.frontiersin.org/articles/10.3389/fenrg.2018.00081/full
+
+
+--------------------
+
+
+
+
+
+
+
+

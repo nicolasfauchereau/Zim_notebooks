@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-01T10:44:53+12:00
+
+====== Journal ======
+Created Monday 01 August 2022
+
+==== Meeting MBIE Endeavour with Drew ====
+
+Hi Andrew & Nico,
+
+Here are the notes from our meeting – feel free to add to these:
+
+Action Points:
+
+	Drew to send us the internal proposal so that we have a bit more context.
+	Nico & Neelesh to set up initial meeting, and discuss relevant literature to the proposal preferably by the end of the month.
+	Chat with Chen Wang (DS at NIWA), for relevant literature on sensor placement.
+
+
+Research / Discussion Points:
+
+	Leveraging AI/ ML for optimal placement of sensors, are there particular locations where we can position our Tier 1 sensors, so that they best capture variability in a given region.
+	Development of an optimization problem (e.g. for K number of sensors and X dollars per sensor, what is the best positioning of the sensors)
+	Leveraging re-enforcement learning, optimization research and other clustering algorithms to determine the optimal placement of sensors (similar to point 1). Positioning of Tier 2 sensors over a short fixed period.
+	Using AI/ML to re-calibrate Tier 2 sensors, that they have similar quality to Tier 1 sensors. 
+
+Cheers,
+
+Neelesh. 
+

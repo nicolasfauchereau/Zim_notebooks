@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-12T11:20:51+13:00
+
+====== Monday 12 Dec 2022 ======
+
+SCO: ACCESS, APCC and 
+
+
+https://pysteps.readthedocs.io/en/latest/pysteps_reference/verification.html
+
+https://pysteps.readthedocs.io/en/latest/pysteps_reference/verification.html#pysteps-verification-probscores  
+

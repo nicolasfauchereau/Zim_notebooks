@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-17T08:53:37+12:00
+
+====== Tuesday 17 May 2022 ======
+
+==== CMIP5 downscaled data location ====
+
+@CMIP6 @CMIP @MBIE @downscaling 
+
+[Yesterday 11:38] Neelesh Rampal
+but anyways here is where the data is located: '/scale_wlg_persistent/filesets/project/niwa00018/share/um45/rcm/cmip/cmip5'
+ heart 1
+
+[Yesterday 11:38] Neelesh Rampal
+
+Here is the repo to extract data: https://git.niwa.local/rampaln/extract-cmip5-data/-/tree/main, I did a client report or something 
+
+--------------------
+
+===== compound extremes =====
+
+@extremes 
+
+**dry runs:** 
+
+recoded_sequences_Rain_bc_detrended_False_dry_runs_sequ_1.nc
+l_starts_sequences_Rain_bc_detrended_False_dry_runs_sequ_1.npy
+l_ends_sequences_Rain_bc_detrended_False_dry_runs_sequ_1.npy
+
+**Tmin above 95th percentile:**
+
+recoded_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.nc
+l_starts_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.npy
+l_ends_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.npy
+l_durations_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.npy
+
+**Tmin above 90th percentile:**
+
+recoded_sequences_Tmin_n_detrended_False_90_percentile_sequ_1.nc
+l_starts_sequences_Tmin_n_detrended_False_90_percentile_sequ_1.npy
+l_ends_sequences_Tmin_n_detrended_False_90_percentile_sequ_1.npy
+l_durations_sequences_Tmin_n_detrended_False_90_percentile_sequ_1.npy
+
+**Tmax above 95th percentile:** 
+
+recoded_sequences_Tmax_n_detrended_False_95_percentile_sequ_1.nc
+l_starts_sequences_Tmax_n_detrended_False_95_percentile_sequ_1.npy
+l_ends_sequences_Tmax_n_detrended_False_95_percentile_sequ_1.npy
+l_durations_sequences_Tmax_n_detrended_False_95_percentile_sequ_1.npy 
+
+**Tmax above 90th percentile:** 
+
+recoded_sequences_Tmax_n_detrended_False_90_percentile_sequ_1.nc
+l_starts_sequences_Tmax_n_detrended_False_90_percentile_sequ_1.npy
+l_ends_sequences_Tmax_n_detrended_False_90_percentile_sequ_1.npy
+l_durations_sequences_Tmax_n_detrended_False_90_percentile_sequ_1.npy I l	
+
+wet spells: Rain_bc (threshold 0.01 mm/day) aove the 90th percentile
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

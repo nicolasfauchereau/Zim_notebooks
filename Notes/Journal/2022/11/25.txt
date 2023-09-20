@@ -1,0 +1,76 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-25T08:20:27+13:00
+
+====== Friday 25 Nov 2022 ======
+
+SCO realtime validation 
+
+check on the operational hindcasts downloads in [[/media/nicolasf/END19101/ICU/data/CDS/operational/hindcasts/]] 
+
+see check_complete_hindcasts.py in [[~/operational/seasonal_forecasting/notebooks/SCO]] 
+
+[*] ECMWF 
+	[*] TPRATE
+	[*] T2M 
+
+[*] UKMO 
+	[*] TPRATE
+	[x] T2M missing files for month 01 and 02 ... 
+
+[*] METEO_FRANCE 
+	[*] TPRATE
+	[*] T2M 
+
+[*] DWD 
+	[*] TPRATE
+	[*] T2M 
+
+[*] CMCC 
+	[*] TPRATE
+	[*] T2M 
+
+[*] NCEP 
+	[*] TPRATE
+	[*] T2M 
+
+[*] JMA 
+	[*] TPRATE
+	[*] T2M 
+[*] ECCC_CanCM4i 
+	[*] TPRATE
+	[*] T2M 
+
+[*] ECCC_GEM5_NEMO 
+	[*] TPRATE
+	[*] T2M 
+
+--------------------
+
+==== ICU development meeting ====
+
+**tasks:** 
+
+[ ] process the MSWEP 2.8.0 dataset 
+[ ] calibrate (on the fly ?) BCSD mapping C3S hindcasts → MSWEP (note: will keep all members of the ensemble for each GCM, evaluation will be through cross-validation and / or on the forecast period 2017 - 2022 
+[ ] develop SPI and other drought indices across the real-time monitoring / forecast divide 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

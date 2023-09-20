@@ -1,0 +1,93 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-13T13:35:07+13:00
+
+====== Friday 13 Nov 2020 ======
+
+==== to read: Sub-seasonal to seasonal prediction of rainfall extremes in Australia ====
+
+https://rmets.onlinelibrary.wiley.com/doi/epdf/10.1002/qj.3789 
+
+--------------------
+
+==== script to loop over random states, shuffle the (Seasonal) dataframe with features and target, then use autogluon to do ensembling ====
+
+see 
+
+**Innovation_Vineyards_SSTs_obs_noPCA_seasonal.ipynb** for the original notebook in
+
+and on **deuce.cms.waikato.ac.nz** 
+
+**Innovation_Vineyards_SSTs_obs_noPCA_seasonal.py** in [[/local/home/nfauchereau/code/models/Innovation_Vineyards]] 
+
+for the presentation, provide the seasonal distribution of the accuracy 
+
+== for temperature, derived from the SCO forecasts: ==
+
+1     0.600000
+2     0.600000
+3     0.450000
+4     0.500000
+5     0.700000
+6     0.500000
+7     0.761905
+8     0.666667
+9     0.523810
+10    0.761905
+11    0.571429
+12    0.523810
+
+compared to ML
+
+1     0.657895
+2     0.631579
+3     0.657895
+4     0.526316
+5     0.684211
+6     0.578947
+7     0.657895
+8     0.684211
+9     0.605263
+10    0.641026
+11    0.666667
+12    0.717949
+
+== for rainfall, derived from the SCO forecasts: ==
+
+1     0.450000
+2     0.450000
+3     0.450000
+4     0.400000
+5     0.450000
+6     0.450000
+7     0.619048
+8     0.380952
+9     0.285714
+10    0.380952
+11    0.476190
+12    0.333333
+
+compared to ML
+
+1 	0.657895
+2 	0.473684
+3 	0.500000
+4 	0.552632
+5 	0.736842
+6 	0.578947
+7 	0.578947
+8 	0.552632
+9 	0.657895
+10 	0.589744
+11 	0.641026
+12 	0.512821
+
+
+
+
+
+
+
+
+
+

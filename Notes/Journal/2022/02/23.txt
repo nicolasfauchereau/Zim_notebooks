@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-23T10:41:17+13:00
+
+====== Wednesday 23 Feb 2022 ======
+
+==== TSFEL: An intuitive library to extract features from time series ====
+
+@ML @timeseries
+
+https://github.com/fraunhoferportugal/tsfel
+
+
+--------------------
+
+==== South Polar Stereo with boundary circle ====
+
+@cartopy 
+
+see **calculate_South_Pacific_Blocking_scikit-learn.ipynb** 
+
+f, ax = plt.subplots(subplot_kw=dict(projection=ccrs.SouthPolarStereo(central_longitude=220)))
+(trend.isel(time=-1) - trend.isel(time=0)).plot(ax=ax, transform=ccrs.PlateCarree())
+ax.coastlines()
+ax.set_title(f"trend {first_year} - {last_year}")
+
+**ax.set_extent([0, 360, *domain[2:]], ccrs.PlateCarree())**
+
+**theta = np.linspace(0, 2*np.pi, 100)**
+**center, radius = [0.5, 0.5], 0.5**
+**verts = np.vstack([np.sin(theta), np.cos(theta)]).T**
+**circle = mpath.Path(verts * radius + center)**
+
+**ax.set_boundary(circle, transform=ax.transAxes)**
+
+--------------------
+
+===== S2S AI challenge =====
+
+@ML @DL 
+
+see https://s2s-ai-challenge.github.io/ 
+
+connected on linkedin with https://www.linkedin.com/in/jordan-gierschendorf-989aa761/?msgControlName=reply_to_sender&msgConversationId=2-MTJlNTc1MTYtYWM1Ni00YTRiLTg1NWQtNjQxZTEyODBjYzBkXzAxMw%3D%3D&msgOverlay=true 
+
+Jordan Gierschendorf 1st degree connection 1st
+Data Scientist at CRIM (Computer Research Institute of Montreal)
+
+who is on the leaderboard of the challenge 
+
+--------------------
+
+==== Anomalib ====
+
+@anomaly @DL 
+
+
+ An anomaly detection library comprising state-of-the-art algorithms and features such as experiment management, hyper-parameter optimization, and edge inference. 
+
+https://github.com/openvinotoolkit/anomalib
+
+https://openvinotoolkit.github.io/anomalib/
+
+
+
+
+

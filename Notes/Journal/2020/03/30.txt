@@ -1,0 +1,165 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-30T14:10:21+13:00
+
+====== for yMonday 30 Mar 2020 ======
+
+=== WSL new code ===
+
+The extract_GEFS_ops_make_collage.ipynb notebook create the image below {{~/operational/Watercare/notebooks/WSL_15d_forecasts_from_2020-03-29-19-00.png?width=1000}}
+
+**see email sent to Petra and JM on this day:** 
+
+"""
+Hi JM, Petra
+
+The code, as well as a CSV file collating the previous + supplementary locations are on github in
+
+https://github.com/nicolasfauchereau/Watercare_15d/tree/master/notebooks
+
+The notebook is called:
+
+extract_GEFS_ops_make_collage.ipynb
+
+The csv file is called:
+
+WSL20200330_locations.csv
+
+the file created has file pattern:
+
+WSL_15d_forecasts_from_YYYY-MM-DD-HH-MM.png 
+"""
+
+--------------------
+
+=== Extraction of the Hunuas and Waitakere ranges daily climate variables and monthly anomalies ===
+
+@SI @VCSN 
+
+see notebook 
+
+Extract_HUNUA_WAITAKERE.ipynb
+
+in [[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/notebooks]] 
+
+variables extracted: 
+
+'Rain_bc'
+'Tmin_N'
+'Tmax_N'
+'Tmean_N'
+'SoilM'
+'Wind'
+'Rad'
+
+csv files in the same folder as the notebook, e.g. 
+
+Waitakere_ranges_Tmin_N_indices_daily.csv holds the daily Tmin_N values for the Waitakere ranges catchment, the structure of the csv file is
+
++ **time**: datetime 
++ **INTERSECT**: indice from the grid points contained inside **OR** intersecting with the Waitakere Geometry 
++ **IN**: indice from the grid points **ONLY contained** inside the Waitakere Geometry 
+
+--------------------
+
+=== Extraction of GCM grid for NZ for super-resolution ML experiments ===
+
+@SI @GCM 
+
+notebook: 
+
+**calculates_nz_grid_from_GCMs.ipynb** 
+
+outputs (PRECIP and T2M): 
+
+**HOME / 'research' / 'Smart_Ideas' / 'outputs' / 'targets' / 'GCMs' / 'NZ_shape_grid' / GCM / var_name** 
+
+So far, GCMs processed: 
+
+* **ECMWF**
+* **UKMO**
+* **METEO_FRANCE**
+* **DWD**
+* **CMCC **
+
+* **NCEP_CFSv2**
+* **CanCM4i**
+* **CanSIPSv2**
+* **GEM_NEMO **
+* **NASA_GEOSS2S**
+
+* **JMA**
+
+Some diagnostics in the same notebook show that the correlation between ensemble members is modest for T2M (e.g. for the whole of NZ average, correlation between members vary between ~ 0.25 and 0.5 
+
+for PRECIP the correlation is extremely low ... varies between ~ -0.1 and 0.2
+
+Hence it is clear that the GCMs fail to represent consistent regional precipitation anomalies, even at the national level 
+
+
+
+--------------------
+
+=== Extraction of regional (6 regions) time-series of monthly + seasonal precipitation and temperatures from the VCSN ===
+
+@SI @VCSN 
+
+notebook: 
+
+calculates_6_regions_terciles_from_grid.ipynb 
+
+in [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN]] 
+
+outputs: 
+
+**HOME / 'research' / 'Smart_Ideas' / 'outputs' / 'targets' / 'NZ_regions' / 'NZ_6_regions'**
+
+* Rain_bc → RAIN → processed OK
+* Tmean_N [(Tmin_N + Tmax_N) / 2.] → TMEAN → processed OK
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

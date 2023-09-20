@@ -1,0 +1,75 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-11T11:07:46+13:00
+
+====== Wednesday 11 Nov 2020 ======
+
+==== re-calculation of the targets quintiles and terciles ====
+
+using salem: see **calculates_6_regions_terciles_from_grid_salem.ipynb**
+using regionmask: see **calculates_6_regions_percentiles_from_grid_regionmask.ipynb** 
+
+== quintiles ==
+
+[*] RAIN
+[*] TMEAN
+[*] SOILM
+
+== terciles ==
+
+[*] RAIN
+[*] TMEAN
+[*] SOILM
+
+--------------------
+
+==== re-calculation of the CSV files holding the ensembles and the targets ====
+
+see: **prepare_all_GCMs_to_csv.ipynb** 
+
+[*] rain and precip, 3 categories
+[*] tmean and t2m, 3 categories
+[*] rain and precip, 5 categories
+[ ] tmean and t2m, 5 categories
+
+--------------------
+
+==== update of AUTOGLUON ====
+
+autogluon-0.0.14 now available, installed in environment `autogluon` via 
+
+python3 -m pip install --upgrade "mxnet<2.0.0" 
+python3 -m pip install --upgrade autogluon
+
+--------------------
+
+==== Generative models for data augmentation ====
+
+pulled off the bid for this year, todo for next year's bid:
+
+→ involve international institutions (climate informatics, Stephan Rasp, new trustworthy AI institute ?) 
+→ involve the PANGEO community ? 
+→ think about application cases, VCSN yes but for what 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

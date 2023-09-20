@@ -1,0 +1,46 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-19T08:39:22+13:00
+
+====== Monday 19 Oct 2020 ======
+
+==== ICU hotpot analysis ====
+
+create maps for PICOF7 
+
+1) update the GPM IMERG data to 16 
+2) update the rainfall forecasts from the CDS 
+3) update the maps of rainfall anomalies and the decile maps: see **GPM_IMERG/calculate_and_map_percentile_of_score.ipynb** 
+
+
+--------------------
+
+==== correlation between 6 regions's time-series and GCM fields ====
+
+→ seasonally stratified 
+→ lead time dependent 
+
+--------------------
+
+==== carry on the download of the SSTs from ECMWF ====
+
+see **download_ECMWF_1981_SST.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/exporters/CDS]] 
+
+--------------------
+
+==== Climetlab installation ====
+
+see environment `**climetlab**` 
+
+see  
+
+→ https://github.com/ecmwf/climetlab 
+→ https://climetlab.readthedocs.io/en/latest/
+
+see also, in the **ECMWf organisation on github** 
+
+→ https://github.com/ecmwf/magics-python ! nice visualisation library 
+
+https://github.com/ecmwf/notebook-examples/tree/master/visualisation for examples 
+
+→ https://github.com/ecmwf/notebook-examples for example in data processing and visualisation 

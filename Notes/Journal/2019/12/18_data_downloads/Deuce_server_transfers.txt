@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-14T10:23:56+13:00
+
+====== Deuce server transfers ======
+Created Tuesday 14 January 2020
+
+===== data transfered on `deuce.cms.waikato.ac.nz`: =====
+
+	+ train/NC: 
+		+ X
+			+ ECMWF
+				+ T2M: seasonal anomalies interp 1993 - 2016
+				+ PRECIP: seasonal anomalies interp 1993 - 2016      
+				+ Z500: seasonal anomalies interp 1993 - 2016 
+				
+			+ 
+	
+	+ test/NC

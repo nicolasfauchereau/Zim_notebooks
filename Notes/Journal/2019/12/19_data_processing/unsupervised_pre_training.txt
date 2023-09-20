@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-16T15:11:40+13:00
+
+====== unsupervised pre training ======
+Created Thursday 16 January 2020
+
+===== ideas around UNSUPERVISED PRE-TRAINING =====
+
+We have a relatively small independent **labelled** dataset, but we can access **a large dataset of unlabelled instances**: i.e T2M, PRECIP and Z500 fields coming from e.g. long-term reanalyses or CMIP models ... **possibility to first used unsupervised pre-training** (see p 349 in Hands-On ML2, https://github.com/ageron/handson-ml2)
+
+

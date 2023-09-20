@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-06T14:45:48+13:00
+
+====== Wednesday 06 Jan 2021 ======
+
+==== CLIDB for cycling data ====
+
+see [[/home/nicolasf/research/Auckland_cycling_2019/code/get_cycling_data.py]] 
+
+--------------------
+
+==== hourly data modelling ====
+
+see in **prepare_hourly_Tamaki_drive_data.ipynb** 

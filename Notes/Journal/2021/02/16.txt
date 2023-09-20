@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-16T09:48:04+13:00
+
+====== Tuesday 16 Feb 2021 ======
+
+==== GeoPython, human mobility data etc ... ====
+
+post on the joint climate and air quality group team: 
+
+[09:46] Nicolas Fauchereau
+
+**GeoPython conference 2021 and some stuff relevant to our discussions**
+
+Hi everyone
+
+Just wanted to point you to the schedule for the upcoming 2021 GeoPython conference: https://2021.geopython.net/schedule.html 
+
+where I spotted a few talks that might be relevant: 
+
+	→ Miguel Alvarez
+	Predicting Traffic Accident Hotspots with Spatial Data Science	
+	
+	→ Vishnu Prasad J S, Ujaval Gandhi
+	Travel Time Prediction for Urban Travel using Uber Movement and OpenStreetMap
+	
+	→ Ye Hong
+	Trackintel: An open-source python library for human mobility modeling and analysis 
+	
+The latter points to this library: https://github.com/mie-lab/trackintel which could be useful to analyse mobility patterns (also relevant is https://anitagraser.github.io/movingpandas/, an earlier library for handling movement data) 
+
+The ticket for the conference is about 200NZD, and gives access to the video recordings of the talks, which I could not find online for the last year's conference, so I guess they are not actually available if you don't register, which is a bummer ... 
+
+Nico 
+
+--------------------
+l

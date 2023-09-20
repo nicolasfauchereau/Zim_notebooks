@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-19T10:32:11+12:00
+
+====== Wednesday 19 May 2021 ======
+
+==== insert image in matplotlib plot (e.g. watermark) ====
+
+@plot 
+
+see 
+
+[[/home/nicolasf/research/CPP/Neelesh/cpp-indices/plot-style/plot_style.py]] 
+
+--------------------
+
+==== cascaded_unions for dissolving polygons or multipolygons ====
+
+@geo 
+
+when trying to run the `dissolve` method on the EEZs (`EEZs/ICU_geometries0_360_EEZ.shp`) I get a strange error: 
+
+TopologyException: side location conflict at 141.21928299999999 13.074546999999979
+TopologyException: side location conflict at 141.21928299999999 13.074546999999979
+
+....
+
+ValueError: No Shapely geometry can be created from null value
+
+**The solution** is to use shapely.ops import cascaded_union instead to do the dissolving 
+
+see 
+
+def **dissolve**(*geoms, buffer=0.05):
+    
+	"""
+	to use instead of calling the geopandas method `dissolve` which fails on 
+	the EEZs shapefile with some weird error, usage
+    
+	>> EEZs = gpd.read_file('.....shapefiles/EEZs/ICU_geometries0_360_EEZ.shp') 
+	>> geoms = EEZs.geometry.values
+	>> EEZs_merged = dissolve(*geoms)
+	>> EEZs_merged_gdf = gpd.GeoDataFrame({'geometry':[EEZs_merged]}, crs="EPSG:4326")
+	>> EEZs_merged_gdf.index = ['EEZ'] 
+	>> EEZs_merged_gdf.to_file('.....shapefiles/EEZs/ICU_geometries0_360_EEZ_merged.shp')
+	"""
+    
+	from shapely.ops import cascaded_union
+    
+	return cascaded_union([
+		geom.buffer(buffer) if geom.is_valid else geom.buffer(buffer) for geom in geoms
+	])
+
+and **create_dissolved_EEZs.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/GPM]] 
+
+--------------------
+

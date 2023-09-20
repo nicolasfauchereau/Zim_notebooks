@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-04T09:27:49+12:00
+
+====== Planning ======
+Created Thursday 04 August 2022
+
+@planning 
+
+Last FY, the relationships between occurrences of extreme rainfall and temperature in Aotearoa New Zealand (NZ) and regional atmospheric circulation regimes were clarified (Fauchereau et al, 2022) using VCSN and both the ERA5 and NCEP/NCAR reanalysis products. This FY, we are first planning to confirm the broad mapping between extremes and circulation regimes using daily station data instead of the VCSN. Then we will investigate how the occupation statistics of circulation regimes (frequency, persistence, preferred transition paths, ...) are affected in the CMIP5 simulations, the regional simulations already realized at NIWA (Sood, 2014) as well as the more recent CMIP6 simulations."
+
+[ ] mapping between extremes and circulation regimes using daily station data instead of the VCSN 
+
+see
+
+https://github.com/nicolasfauchereau/climate_data_analytics/blob/main/notebooks/Pandas_NZ_station_data.ipynb
+
+temp: https://data.mfe.govt.nz/table/105056-daily-temperature-1909-2019/ 
+rainfall: https://data.mfe.govt.nz/table/105055-rainfall-1960-2019/ 
+
+locally saved in [[/media/nicolasf/END19101/data/NZ_station_data/]] 
+
+[ ] occupation statistics of circulation regimes (frequency, persistence, preferred transition paths, ...) are affected in the CMIP5 simulations, the regional simulations already realized at NIWA (Sood, 2014) as well as the more recent CMIP6 simulations 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-08T13:36:58+13:00
+
+====== Tuesday 08 Feb 2022 ======
+
+[*] sent PPT () to Daihi and Abha 
+
+
+--------------------
+
+==== Angelique Pendergrass' codes: ====
+
+== → rain-metrics-python,  Python code to calculate the distribution of rain and metrics described in Pendergrass and Deser 2017 ==
+
+https://github.com/apendergrass/rain-metrics-python 
+
+**references** 
+
+Pendergrass, A. G., and D. L. Hartmann, 2014: Two Modes of Change of the Distribution of Rain*. Journal of Climate, 27, 8357–8371, https://doi.org/10.1175/JCLI-D-14-00182.1.
+
+Pendergrass, A. G., and D. L. Hartmann, 2014: Changes in the Distribution of Rain Frequency and Intensity in Response to Global Warming*. Journal of Climate, 27, 8372–8383, https://doi.org/10.1175/JCLI-D-14-00183.1.
+
+Pendergrass, A. G., D. B. Coleman, C. Deser, F. Lehner, N. Rosenbloom, and I. R. Simpson, 2019: Nonlinear Response of Extreme Precipitation to Warming in CESM1. Geophys. Res. Lett., 46, 10551–10560, https://doi.org/10.1029/2019GL084826.
+
+Pendergrass, A. G., and C. Deser, 2017: Climatological Characteristics of Typical Daily Precipitation. J. Climate, 30, 5985–6003, https://doi.org/10.1175/JCLI-D-16-0684.1.
+
+Pendergrass, A. G., R. Knutti, F. Lehner, C. Deser, and B. M. Sanderson, 2017: Precipitation variability increases in a warmer climate. Sci Rep, 7, 17966, https://doi.org/10.1038/s41598-017-17966-y.
+
+== → unevenprecip:  Python code to diagnose the unevenness of precipitation ==
+
+https://github.com/apendergrass/unevenprecip 
+
+**references** 
+
+Pendergrass, A. G., and R. Knutti, 2018: The Uneven Nature of Daily Precipitation and Its Change. Geophys. Res. Lett., 45, https://doi.org/10.1029/2018GL080298.
+
+--------------------
+
+==== comparison between NCEP and ERA5 circulation regimes ====
+
+see **remap_cluster_labels_NCEP_ERA5.ipynb **
+
+for the confusion matrix 
+
+
+ 
+
+
+

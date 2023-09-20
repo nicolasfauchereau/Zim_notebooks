@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-18T08:11:24+12:00
+
+====== Tuesday 18 Apr 2023 ======
+
+==== Problem using requests in OISST pipeline ====
+
+warning message below: 
+
+./update_OISST.py --domain NZ --year 2023
+
+**/home/nicolasf/mambaforge/envs/OISST/lib/python3.8/site-packages/requests/__init__.py:109: RequestsDependencyWarning: urllib3 (1.26.11) or chardet (None)/charset_normalizer (3.1.0) doesn't match a supported version!**
+
+
+solved by `mamba update -c conda-forge requests urllib3` 
+
+
+
+--------------------

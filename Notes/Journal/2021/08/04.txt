@@ -1,0 +1,180 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-04T08:47:22+12:00
+
+====== Wednesday 04 Aug 2021 ======
+
+==== Intensity-duration-frequency curves at the global scale ====
+
+Courty, L. G., R. L. Wilby, J. K. Hillier, and L. J. Slater, 2019: Intensity-duration-frequency curves at the global scale. Environ. Res. Lett., 14, 084045, https://doi.org/10.1088/1748-9326/ab370a.
+
+code: https://github.com/lrntct/pxr 
+
+see in particular: https://github.com/lrntct/pxr/blob/master/dl_era5.py to download the ERA5 dataset 
+
+dataset: https://zenodo.org/record/3351812 
+
+--------------------
+
+==== Smart Ideas workshop ====
+
+~ 150 hours for the Concept Note 
+~ 150 hours for the full proposal 
+
+--------------------
+
+==== Smart Ideas workshop ====
+
+== Science Excellence: ideas ==
+
+proposal will advance global understanding of what controls skill of ocean / atmosphere forecasts at different time-scales ... 
+
+NZ particularly suited because by the virtue of its location and oceanic environment it is a challenging environment / focus 
+
+need to leverage some review papers (windows + ensemble) and show this is at the forefront of research questions globally and reflection on end-users needs (windows of opportunity) and 
+
+moreover, will leverage emerging methods interpretable machine learning for the climate sciences, which use neural networks for the purpose of identifying signals 
+
+science goal: identify windows of opportunities (when and where, for what time horizon) and change the way environmental forecasts are consumed ... better understand the culture of end-users of environmental forecast (what type of decisions they make when and why, in what context) and how that can align with windows of opportunities 
+
+goal is to develop a methodology / framework which thus can be applied to different groups of end-users in order to nudge end-users to different way to consume forecasts, which is more of a dialogue (nature: when these windows open, culture 
+
+example of papers: 
+
+https://journals.ametsoc.org/view/journals/bams/101/5/bams-d-19-0300.1.xml  Recent Progress and Future Prospects of Subseasonal and Seasonal Climate Predictions
+ 
+
+== risks ==
+
+risks: mainly engagement with end-users, cultural inertia, Matauranga 
+
+need to identify a end-user group which is already at the forefront of innovation, which is already embracing new technologies, new ways of doing things, which is ready to change, which has embraced change ... 
+
+this is challenging, 
+
+but ZESPRI: ? innovation vineyards, data science team, also, orchard management is suited to the application of systems framework that we propose to use in this project to identify opportunities to align opened windows of opportunity for skillful forecasts and decision context 
+
+tight collaboration with their data science team 
+
+DOC ??? 
+
+== alignment ==
+
+context of the research 
+
+leveraging current research investments ? HPCF, NIWA NZENS ... GEFS (subseasonal), C3S (seasonal) ... this research project will leverage all these 
+
+leveraging recent methodological advances in XAI 
+
+=== Team ===
+
+Neelesh, Kameron ?  
+Trevor, Stuart 
+coms: excellent team in Auckland (Chris, Ben, Nava ...) 
+
+== VM ==
+
+??? 
+
+traditional calendar ? 
+
+a central 
+
+incorporation of Matauranga in the science excellence 
+
+ENSO impacts: how Matauranga views variability ? how was this knowlege incorporated in the traditional, environmental cues forecasting that Maori did ? how did that articulate with the traditional calendars .... was there a concept of windows of opportinties, what concept - if any - of time-scales was integrated ... 
+
+opportunity to advance science ? 
+
+what methodologies 
+
+== Team ==
+
+what internationals ?
+
+describe the skill set needed FIRST, then demonstrate how the team and its management will provide these skills 
+
+XAI team ? 
+
+AI institute ? 
+
+Overseas collaboration necessary ... 
+
+== Impact ==
+
+Delivered from behavior changes from end users 
+
+tuned to current natural climate conditions 
+
+immediate impact: take from 
+
+Mariotti, A., and Coauthors, 2020: Windows of Opportunity for Skillful Forecasts Subseasonal to Seasonal and Beyond. Bulletin of the American Meteorological Society, 101, E608–E625, https://doi.org/10.1175/BAMS-D-18-0326.1.
+
+
+Gains could be obtained by increasingly developing
+prediction tools and metrics that strategically target these specific windows of opportunity. Across
+the globe, reevaluating forecasts in this manner could find value in forecasts previously discarded
+as not skillful. Users’ expectations for prediction skill could be more adequately met, as they are
+better aware of when and where to expect skill and if the prediction is actionable. Given that
+there is still untapped potential, in terms of process understanding and prediction methodologies,
+it is safe to expect that in the future forecast opportunities will expand. Process research and the
+development of innovative methodologies will aid such progress.
+
+
+
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+
+
+
+
+
+
+

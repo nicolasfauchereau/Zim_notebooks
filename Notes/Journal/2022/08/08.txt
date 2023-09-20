@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-08T15:30:23+12:00
+
+====== Monday 08 Aug 2022 ======
+
+==== OISST processing ====
+
+for converting / interpolating between calendars, see: 
+
+https://docs.xarray.dev/en/stable/generated/xarray.Dataset.convert_calendar.html
+
+https://docs.xarray.dev/en/stable/generated/xarray.Dataset.interp_calendar.html#xarray.Dataset.interp_calendar 
+
+example: removing leap days: 
+
+**dset = dset.convert_calendar('noleap')** 
+
+init = nzens.attrs['forecast_reference_time']
+init_str = pd.to_datetime(init).tz_localize('UTC').strftime('%H %Z %a %d/%m/%y')
+
+

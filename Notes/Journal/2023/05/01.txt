@@ -1,0 +1,98 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-01T11:07:24+12:00
+
+====== Monday 01 May 2023 ======
+ 
+
+===== Python package for accessing and downloading CMIP6 database =====
+
+https://github.com/TaufiqHassan/acccmip6
+
+--------------------
+
+==== ALSO: Synda ====
+
+Synda is a command line tool to search and download files from the Earth System Grid Federation (ESGF) archive. Synda is a useful tool if you need to download Climate Model Intercomparison Project Phase 6 (CMIP6) data in particular. Synda supports different download protocols (e.g. HTTPS) and can download files in parallel.
+
+https://support.nesi.org.nz/hc/en-gb/articles/360001208256-Synda
+
+conda install -c IPSL synda 
+
+--------------------
+
+==== CMIP6 ====
+
+https://esgf-node.llnl.gov/search/cmip6/
+
+https://docs.google.com/document/d/1h0r8RZr_f3-8egBMMh7aqLwy3snpD6_MrDz1q8n5XUk/edit
+
+https://github.com/WCRP-CMIP/CMIP6_CVs
+
+https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html
+
+--------------------
+
+==== Tackling Climate Change with Time Series Analysis and Forecasting ====
+
+@PwC 
+
+https://github.com/vcerqueira/tsa4climate 
+
+--------------------
+
+=== NZ_domain ===
+
+Note: 
+
+TAS is hourly 
+
+TASMIN and TASMAX is daily, e.g. 196002 contains 28 values
+
+
+```
+**see message on Teams** 
+
+//Hi Neelesh Rampal, Peter Gibson and everyone ... I am about to start crunching BCSD on daily surface temperature and wanted to check something with you: just to be clear I need to do tas, tasmin and tasmax ? if so something bugs me and I just want to make sure: //
+
+//tasmin and tasmax are daily values: are they aligned to UTC or the VCSN (NZ) time ? if not should I not then, rather than using these variables 'as is' calculate tasmin and tasmax from the original hourly tas values like so: //
+
+//tasmax = tasmax.resample(time = '1D', base = 21) //
+
+//i.e. with reference to https://one.niwa.co.nz/display/CLIDB/VCSN+Times+and+Field+Descriptions //
+
+//please advise 🙂// 
+
+//Thanks Peter Gibson, in my case it might not be as important as with Neelesh's case (I am matching distribution to distribution) ... actually now that I think about it doing what I suggest might mess things up quite a bit as it would mess up the model (CCAM)'s diurnal cycle ... but just want to have your guys' views before I crank the wheel //
+
+//and now that I really think about it, with the exception of the ERA5 forced CCAM run, instead of calculating daily precipitation as //
+
+//1)//
+
+//        dset = dset.resample(time ='1D', base = 21).mean()//
+//        dset[varname] = dset[varname] * (3600 * 24)//
+
+//It might be worth doing just ... //
+
+//2)//
+
+//        dset = dset.resample(time ='1D').mean()//
+//        dset[varname] = dset[varname] * (3600 * 24)//
+
+//so far I have been doing 1) ... it also could have messed up CCAM's diurnal cycle ... if 2) is preferable to 1) it is not a train smash, I can redo the calibration etc ... it will just take a bit of time, but could be better ...// 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-27T10:25:46+12:00
+
+====== Monday 27 Apr 2020 ======
+
+@TODO 
+
+- Write Eibe re. availability of training and test data on Deuce 
+- create channels, and tabs "Key Experts", "Key Activities", "T&I Hubs leads and experts", "Events" 
+
+	the Key activities can be taken from the projects (see in [[/home/nicolasf/HUB/Admin/NIWA_org/pages_on_one.niwa]]) cd
+	
+	
+- organise codes related to the PYCARET and the AUTOGLUON experiments, and start write-up, notably listing all 
+the models / algorithms that have been used. See page 17 in HOML2 (instance-based vs model-based learning) 
+→ convention is that we are going to name the algorithms "learners", and distinguish between instance based and model based learning. 
+
+
+
+

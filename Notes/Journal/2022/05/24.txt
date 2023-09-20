@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-24T12:23:11+12:00
+
+====== Tuesday 24 May 2022 ======
+
+==== Downscaled / bias corrected CMIP6 dataset from Climate Impact Lab ====
+
+@CMIP6 @CMIP @downscaling 
+
+
+[11:55] Nicolas FauchereauDownscaled / bias corrected CMIP6 dataset from Climate Impact Lab (Microsoft’s Planetary Computer)
+	https://impactlab.org/news-insights/introducing-our-new-global-downscaled-projections-for-climate-impacts-research/ 
+
+apparently they used 2 methods, the one of Cannon et al 2015 that I alluded to in my presentation on the xclim package, and a new method they developed called "Quantile-Preserving Localized-Analog Downscaling (QPLAD)" (publication in prep apparently) 
+
+It only provides precip + min and max temp 
+
+Note that you need access to the MS planetary computer to get the data 
+<https://teams.microsoft.com/l/message/19:9ZuXb4kyZkx8RSkHOSVxa3TXy8lEWES-LjIbEMD0MX01@thread.tacv2/1653350140886?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&amp;groupId=134a77ea-8cf7-4f92-92b6-01b36c846bb0&amp;parentMessageId=1653350140886&amp;teamName=SP- BSP22301 MBIE Downscaling Group&amp;channelName=General&amp;createdTime=1653350140886>
+
+codes: 
+
+https://github.com/ClimateImpactLab/dodola 
+
+https://github.com/ClimateImpactLab/downscaleCMIP6 
+
+https://climate-toolbox.readthedocs.io/en/latest/index.html 
+
+https://github.com/ClimateImpactLab/PlanetaryComputerExamples 
+
+see also: **NASA NEX-GDDP-CMIP6**  
+
+https://www.nasa.gov/nex/gddp 
+
+https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6 

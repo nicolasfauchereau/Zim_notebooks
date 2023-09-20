@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-23T10:01:58+12:00
+
+====== Thursday 23 Sep 2021 ======
+
+==== Smart Ideas ====
+
+@funding @windows 
+
+potential funding for windows of opportunity work: https://www.mpi.govt.nz/funding-rural-support/sustainable-food-fibre-futures/sff-futures-co-investment-requirements/ 
+
+--------------------
+
+==== xarray-spatial ====
+
+
+https://xarray-spatial.org/
+
+
+--------------------
+
+==== Microsoft Planetary Computer - Talk Python Live Stream ====
+
+https://www.youtube.com/watch?v=Ow8igbLT5KQ
+
+environment: https://raw.githubusercontent.com/microsoft/planetary-computer-containers/main/python/environment.yml 
+
+copied in [[/home/nicolasf/conda_envs]] (planetary.yml) 
+

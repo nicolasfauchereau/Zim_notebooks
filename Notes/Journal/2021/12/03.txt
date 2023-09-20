@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-03T09:45:24+13:00
+
+====== Friday 03 Dec 2021 ======
+
+==== ICU: calculation of true positives, true negatives, precision and recall for the quartile probabilistic forecasts ====
+
+@ICU 
+
+see in notebooks
+
+verification/validation_quartiles_probabilistic_forecasts.ipynb
+
+calculates the 
+
+and 
+
+verification/metrics.ipynb (from Neelesh)
+
+→ verification/calculate_observed_quantile_categories.ipynb calculates the observed categories for a verification dataset and saves in zarr format in 
+
+	[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs]] 
+→ 

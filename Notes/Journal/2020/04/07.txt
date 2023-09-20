@@ -1,0 +1,396 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-07T09:34:55+12:00
+
+====== Tuesday 07 Apr 2020 ======
+
+=== continue experiments with AUTOGLUON ===
+
+using PCs derived from the GCMs instead of the whole grid ... keeping 90% of variance 
+
+NOTE: something weird in the PCs derived from ECMWF T2M for 2018-01 and 2018-02 
+
+example for first PC on the test set 
+
+{{./screenshot_2020-04-07-094133.png?width=500}}
+
+but does actually seem to correspond to some brief period of La Nina like pattern ... (at least in the forecast) 
+
+{{./screenshot_2020-04-07-100230.png?width=500}}
+
+**NOTE**: tried **kernel PCA** but it fails with ARPACK error ...
+
+NOTE: the implementation of kernel PCA by Sebastian Rashka, available as part of the mlxtend libray, seem to NOT FAIL, however the API is significantly different from the sklearn API, e.g. the components (PCs) are obtained after fitting by calling: 
+
+The results using PCA dimensionality reduction are not consistently better than when letting AUTOGLUON do the features engineering itself 
+
+=== domains definition ===
+
+domain_def = {}
+domain_def['local'] = [150, 200, -50, -10]
+domain_def['regional'] = [90, 300, -65, 50]
+**domain_def['ext_regional'] = [70, 300, -70, 60]**
+domain_def['global'] = [0, 360, -70, 70]
+domain_def['tropics'] = [0, 360, -40, 40]
+
+Now seeing whether PCs derived from the global domain make any difference in terms of overall (cross validated) accuracy as well as SCO accuracy over the test set (last 3 years). 
+
+=== Experiments with PCs derived from different geographical domains ===
+
+== global ==
+
+→ the accuracy (on the test set) GOES DOWN when deriving the PCs from the GLOBAL field compared to the REGIONAL field, but the cross-validated accuracy from the predictor leaderboard stay about the same, except for rainfall
+
+e.g. 
+
+for ECMWF, T2M, PCs on global field: SCO ACC on the test set = 0.5
+
+leaderboard: weighted_ensemble_k0_l1	0.666667	0.361728	0.000925	1
+
+for ECMWF, RAIN, PCs on global field: SCO ACC on the test set = 0.27
+
+leaderboard: weighted_ensemble_k0_l1	0.561404	0.348782	0.000815	1
+
+So generally speaking, it seems that the choice of a GLOBAL domain does not improve things 
+
+== tropics ==
+
+e.g. 
+
+for **ECMWF, T2M, PCs on tropics field:** SCO ACC on the test set = 0.69
+
+leaderboard: weighted_ensemble_k0_l1	0.659649	0.383945	0.000782	1
+
+for **ECMWF, RAIN, PCs on tropics field**: SCO ACC on the test set = 0.6111
+
+leaderboard: weighted_ensemble_k0_l1	0.592982	0.332607	0.000770	1
+
+== local ==
+
+e.g. 
+
+for **ECMWF, T2M, PCs on tropics field:** SCO ACC on the test set = 0.77
+
+leaderboard: weighted_ensemble_k0_l1	0.600000	0.404614	0.000810	1
+
+for **ECMWF, RAIN, PCs on tropics field**: SCO ACC on the test set = 0.33
+
+leaderboard: weighted_ensemble_k0_l1	0.508772	0.316729	0.000764	1
+
+== regional ==
+
+e.g. 
+
+for **ECMWF, T2M, PCs on tropics field:** SCO ACC on the test set = **0.75**
+
+leaderboard: weighted_ensemble_k0_l1 0.631579	0.389056	0.000797	1
+
+for **ECMWF, RAIN, PCs on tropics field**: SCO ACC on the test set = **0.61**
+
+leaderboard: weighted_ensemble_k0_l1	0.557895	0.353269	0.000941	1
+
+
+== ext_regional ==
+
+e.g. 
+
+for **ECMWF, T2M, PCs on tropics field:** SCO ACC on the test set = **0.86**
+
+leaderboard: weighted_ensemble_k0_l1	**0.666667**	0.391695	0.000829	1
+
+for **ECMWF, RAIN, PCs on tropics field**: SCO ACC on the test set = **0.52**
+
+leaderboard: weighted_ensemble_k0_l1	**0.543860**	0.318680	0.000762	1
+
+----
+
+but (t2m, ECMWF): 
+WNI: 0.44, and leaderboard: 0.64
+ENI: 0.75, and leaderboard: 0.67
+NSI: 0.61, and leaderboard: 0.64
+WSI: 0.69, and leaderboard: 0.65
+ESI: 0.66, and leaderboard: 0.58
+
+=== BASELINE EVALUATIONS ===
+
+see **baseline_evaluation.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/models/baselines/notebooks]]
+
+simply compare the regional time-series to the observed time-series 
+
+=== T2M / TMEAN ===
+
+Metrics for GCM UKMO:
+
+accuracy for NNI TMEAN for regional TS derived from UKMO = 0.41, Pearson's R = +0.38
+accuracy for WNI TMEAN for regional TS derived from UKMO = 0.42, Pearson's R = +0.37
+accuracy for ENI TMEAN for regional TS derived from UKMO = 0.41, Pearson's R = +0.30
+accuracy for NSI TMEAN for regional TS derived from UKMO = 0.46, Pearson's R = +0.35
+accuracy for WSI TMEAN for regional TS derived from UKMO = 0.42, Pearson's R = +0.33
+accuracy for ESI TMEAN for regional TS derived from UKMO = 0.40, Pearson's R = +0.25
+
+--------------------
+
+Metrics for GCM ECMWF:
+
+accuracy for NNI TMEAN for regional TS derived from ECMWF = 0.46, Pearson's R = +0.41
+accuracy for WNI TMEAN for regional TS derived from ECMWF = 0.44, Pearson's R = +0.41
+accuracy for ENI TMEAN for regional TS derived from ECMWF = 0.48, Pearson's R = +0.33
+accuracy for NSI TMEAN for regional TS derived from ECMWF = 0.51, Pearson's R = +0.40
+accuracy for WSI TMEAN for regional TS derived from ECMWF = 0.49, Pearson's R = +0.35
+accuracy for ESI TMEAN for regional TS derived from ECMWF = 0.41, Pearson's R = +0.26
+
+--------------------
+
+Metrics for GCM METEO_FRANCE:
+
+accuracy for NNI TMEAN for regional TS derived from METEO_FRANCE = 0.48, Pearson's R = +0.38
+accuracy for WNI TMEAN for regional TS derived from METEO_FRANCE = 0.45, Pearson's R = +0.35
+accuracy for ENI TMEAN for regional TS derived from METEO_FRANCE = 0.45, Pearson's R = +0.31
+accuracy for NSI TMEAN for regional TS derived from METEO_FRANCE = 0.51, Pearson's R = +0.37
+accuracy for WSI TMEAN for regional TS derived from METEO_FRANCE = 0.47, Pearson's R = +0.31
+accuracy for ESI TMEAN for regional TS derived from METEO_FRANCE = 0.45, Pearson's R = +0.23
+
+--------------------
+
+Metrics for GCM DWD:
+
+accuracy for NNI TMEAN for regional TS derived from DWD = 0.46, Pearson's R = +0.35
+accuracy for WNI TMEAN for regional TS derived from DWD = 0.45, Pearson's R = +0.31
+accuracy for ENI TMEAN for regional TS derived from DWD = 0.47, Pearson's R = +0.27
+accuracy for NSI TMEAN for regional TS derived from DWD = 0.52, Pearson's R = +0.34
+accuracy for WSI TMEAN for regional TS derived from DWD = 0.46, Pearson's R = +0.30
+accuracy for ESI TMEAN for regional TS derived from DWD = 0.38, Pearson's R = +0.19
+
+--------------------
+
+Metrics for GCM CMCC:
+
+accuracy for NNI TMEAN for regional TS derived from CMCC = 0.51, Pearson's R = +0.43
+accuracy for WNI TMEAN for regional TS derived from CMCC = 0.51, Pearson's R = +0.42
+accuracy for ENI TMEAN for regional TS derived from CMCC = 0.51, Pearson's R = +0.37
+accuracy for NSI TMEAN for regional TS derived from CMCC = 0.51, Pearson's R = +0.38
+accuracy for WSI TMEAN for regional TS derived from CMCC = 0.51, Pearson's R = +0.37
+accuracy for ESI TMEAN for regional TS derived from CMCC = 0.44, Pearson's R = +0.26
+
+--------------------
+
+Metrics for GCM NCEP_CFSv2:
+
+accuracy for NNI TMEAN for regional TS derived from NCEP_CFSv2 = 0.52, Pearson's R = +0.52
+accuracy for WNI TMEAN for regional TS derived from NCEP_CFSv2 = 0.51, Pearson's R = +0.51
+accuracy for ENI TMEAN for regional TS derived from NCEP_CFSv2 = 0.49, Pearson's R = +0.42
+accuracy for NSI TMEAN for regional TS derived from NCEP_CFSv2 = 0.52, Pearson's R = +0.47
+accuracy for WSI TMEAN for regional TS derived from NCEP_CFSv2 = 0.47, Pearson's R = +0.44
+accuracy for ESI TMEAN for regional TS derived from NCEP_CFSv2 = 0.45, Pearson's R = +0.37
+
+--------------------
+
+Metrics for GCM CanSIPSv2:
+
+accuracy for NNI TMEAN for regional TS derived from CanSIPSv2 = 0.48, Pearson's R = +0.50
+accuracy for WNI TMEAN for regional TS derived from CanSIPSv2 = 0.47, Pearson's R = +0.48
+accuracy for ENI TMEAN for regional TS derived from CanSIPSv2 = 0.47, Pearson's R = +0.37
+accuracy for NSI TMEAN for regional TS derived from CanSIPSv2 = 0.50, Pearson's R = +0.47
+accuracy for WSI TMEAN for regional TS derived from CanSIPSv2 = 0.45, Pearson's R = +0.42
+accuracy for ESI TMEAN for regional TS derived from CanSIPSv2 = 0.42, Pearson's R = +0.31
+
+--------------------
+
+Metrics for GCM GEM_NEMO:
+
+accuracy for NNI TMEAN for regional TS derived from GEM_NEMO = 0.47, Pearson's R = +0.49
+accuracy for WNI TMEAN for regional TS derived from GEM_NEMO = 0.47, Pearson's R = +0.46
+accuracy for ENI TMEAN for regional TS derived from GEM_NEMO = 0.45, Pearson's R = +0.36
+accuracy for NSI TMEAN for regional TS derived from GEM_NEMO = 0.47, Pearson's R = +0.45
+accuracy for WSI TMEAN for regional TS derived from GEM_NEMO = 0.46, Pearson's R = +0.42
+accuracy for ESI TMEAN for regional TS derived from GEM_NEMO = 0.43, Pearson's R = +0.32
+
+--------------------
+
+Metrics for GCM NASA_GEOSS2S:
+
+accuracy for NNI TMEAN for regional TS derived from NASA_GEOSS2S = 0.45, Pearson's R = +0.44
+accuracy for WNI TMEAN for regional TS derived from NASA_GEOSS2S = 0.45, Pearson's R = +0.40
+accuracy for ENI TMEAN for regional TS derived from NASA_GEOSS2S = 0.44, Pearson's R = +0.31
+accuracy for NSI TMEAN for regional TS derived from NASA_GEOSS2S = 0.45, Pearson's R = +0.40
+accuracy for WSI TMEAN for regional TS derived from NASA_GEOSS2S = 0.41, Pearson's R = +0.35
+accuracy for ESI TMEAN for regional TS derived from NASA_GEOSS2S = 0.40, Pearson's R = +0.26
+
+--------------------
+
+Metrics for GCM JMA:
+
+accuracy for NNI TMEAN for regional TS derived from JMA = 0.50, Pearson's R = +0.48
+accuracy for WNI TMEAN for regional TS derived from JMA = 0.48, Pearson's R = +0.45
+accuracy for ENI TMEAN for regional TS derived from JMA = 0.46, Pearson's R = +0.37
+accuracy for NSI TMEAN for regional TS derived from JMA = 0.49, Pearson's R = +0.42
+accuracy for WSI TMEAN for regional TS derived from JMA = 0.43, Pearson's R = +0.36
+accuracy for ESI TMEAN for regional TS derived from JMA = 0.42, Pearson's R = +0.27
+
+=== PRECIP / RAIN ===
+
+Metrics for GCM UKMO:
+
+accuracy for NNI RAIN for regional TS derived from UKMO = 0.41, Pearson's R = +0.20
+accuracy for WNI RAIN for regional TS derived from UKMO = 0.33, Pearson's R = +0.11
+accuracy for ENI RAIN for regional TS derived from UKMO = 0.34, Pearson's R = +0.20
+accuracy for NSI RAIN for regional TS derived from UKMO = 0.33, Pearson's R = +0.03
+accuracy for WSI RAIN for regional TS derived from UKMO = 0.36, Pearson's R = +0.15
+accuracy for ESI RAIN for regional TS derived from UKMO = 0.29, Pearson's R = -0.09
+
+--------------------
+
+Metrics for GCM ECMWF:
+
+accuracy for NNI RAIN for regional TS derived from ECMWF = 0.40, Pearson's R = +0.11
+accuracy for WNI RAIN for regional TS derived from ECMWF = 0.29, Pearson's R = +0.01
+accuracy for ENI RAIN for regional TS derived from ECMWF = 0.34, Pearson's R = +0.10
+accuracy for NSI RAIN for regional TS derived from ECMWF = 0.31, Pearson's R = -0.07
+accuracy for WSI RAIN for regional TS derived from ECMWF = 0.35, Pearson's R = +0.18
+accuracy for ESI RAIN for regional TS derived from ECMWF = 0.27, Pearson's R = -0.14
+
+--------------------
+
+Metrics for GCM METEO_FRANCE:
+
+accuracy for NNI RAIN for regional TS derived from METEO_FRANCE = 0.34, Pearson's R = +0.08
+accuracy for WNI RAIN for regional TS derived from METEO_FRANCE = 0.28, Pearson's R = -0.00
+accuracy for ENI RAIN for regional TS derived from METEO_FRANCE = 0.37, Pearson's R = +0.23
+accuracy for NSI RAIN for regional TS derived from METEO_FRANCE = 0.32, Pearson's R = -0.01
+accuracy for WSI RAIN for regional TS derived from METEO_FRANCE = 0.38, Pearson's R = +0.21
+accuracy for ESI RAIN for regional TS derived from METEO_FRANCE = 0.28, Pearson's R = -0.07
+
+--------------------
+
+Metrics for GCM DWD:
+
+accuracy for NNI RAIN for regional TS derived from DWD = 0.38, Pearson's R = +0.18
+accuracy for WNI RAIN for regional TS derived from DWD = 0.34, Pearson's R = +0.07
+accuracy for ENI RAIN for regional TS derived from DWD = 0.36, Pearson's R = +0.10
+accuracy for NSI RAIN for regional TS derived from DWD = 0.31, Pearson's R = +0.04
+accuracy for WSI RAIN for regional TS derived from DWD = 0.38, Pearson's R = +0.25
+accuracy for ESI RAIN for regional TS derived from DWD = 0.30, Pearson's R = -0.11
+
+--------------------
+
+Metrics for GCM CMCC:
+
+accuracy for NNI RAIN for regional TS derived from CMCC = 0.40, Pearson's R = +0.18
+accuracy for WNI RAIN for regional TS derived from CMCC = 0.30, Pearson's R = +0.03
+accuracy for ENI RAIN for regional TS derived from CMCC = 0.35, Pearson's R = +0.18
+accuracy for NSI RAIN for regional TS derived from CMCC = 0.36, Pearson's R = -0.04
+accuracy for WSI RAIN for regional TS derived from CMCC = 0.36, Pearson's R = +0.14
+accuracy for ESI RAIN for regional TS derived from CMCC = 0.26, Pearson's R = -0.17
+
+--------------------
+
+Metrics for GCM NCEP_CFSv2:
+
+accuracy for NNI RAIN for regional TS derived from NCEP_CFSv2 = 0.36, Pearson's R = +0.18
+accuracy for WNI RAIN for regional TS derived from NCEP_CFSv2 = 0.35, Pearson's R = +0.08
+accuracy for ENI RAIN for regional TS derived from NCEP_CFSv2 = 0.35, Pearson's R = +0.11
+accuracy for NSI RAIN for regional TS derived from NCEP_CFSv2 = 0.33, Pearson's R = +0.06
+accuracy for WSI RAIN for regional TS derived from NCEP_CFSv2 = 0.39, Pearson's R = +0.17
+accuracy for ESI RAIN for regional TS derived from NCEP_CFSv2 = 0.31, Pearson's R = -0.07
+
+--------------------
+
+Metrics for GCM CanSIPSv2:
+
+accuracy for NNI RAIN for regional TS derived from CanSIPSv2 = 0.37, Pearson's R = +0.18
+accuracy for WNI RAIN for regional TS derived from CanSIPSv2 = 0.34, Pearson's R = +0.07
+accuracy for ENI RAIN for regional TS derived from CanSIPSv2 = 0.38, Pearson's R = +0.16
+accuracy for NSI RAIN for regional TS derived from CanSIPSv2 = 0.38, Pearson's R = +0.04
+accuracy for WSI RAIN for regional TS derived from CanSIPSv2 = 0.36, Pearson's R = +0.11
+accuracy for ESI RAIN for regional TS derived from CanSIPSv2 = 0.34, Pearson's R = -0.06
+
+--------------------
+
+Metrics for GCM GEM_NEMO:
+
+accuracy for NNI RAIN for regional TS derived from GEM_NEMO = 0.36, Pearson's R = +0.10
+accuracy for WNI RAIN for regional TS derived from GEM_NEMO = 0.33, Pearson's R = +0.03
+accuracy for ENI RAIN for regional TS derived from GEM_NEMO = 0.38, Pearson's R = +0.07
+accuracy for NSI RAIN for regional TS derived from GEM_NEMO = 0.33, Pearson's R = +0.06
+accuracy for WSI RAIN for regional TS derived from GEM_NEMO = 0.36, Pearson's R = +0.16
+accuracy for ESI RAIN for regional TS derived from GEM_NEMO = 0.33, Pearson's R = -0.03
+
+--------------------
+
+Metrics for GCM NASA_GEOSS2S:
+
+accuracy for NNI RAIN for regional TS derived from NASA_GEOSS2S = 0.38, Pearson's R = +0.16
+accuracy for WNI RAIN for regional TS derived from NASA_GEOSS2S = 0.37, Pearson's R = +0.05
+accuracy for ENI RAIN for regional TS derived from NASA_GEOSS2S = 0.37, Pearson's R = +0.17
+accuracy for NSI RAIN for regional TS derived from NASA_GEOSS2S = 0.36, Pearson's R = +0.07
+accuracy for WSI RAIN for regional TS derived from NASA_GEOSS2S = 0.34, Pearson's R = +0.10
+accuracy for ESI RAIN for regional TS derived from NASA_GEOSS2S = 0.35, Pearson's R = -0.02
+
+--------------------
+
+Metrics for GCM JMA:
+
+accuracy for NNI RAIN for regional TS derived from JMA = 0.35, Pearson's R = +0.11
+accuracy for WNI RAIN for regional TS derived from JMA = 0.34, Pearson's R = +0.08
+accuracy for ENI RAIN for regional TS derived from JMA = 0.31, Pearson's R = +0.01
+accuracy for NSI RAIN for regional TS derived from JMA = 0.35, Pearson's R = +0.07
+accuracy for WSI RAIN for regional TS derived from JMA = 0.35, Pearson's R = +0.00
+accuracy for ESI RAIN for regional TS derived from JMA = 0.30, Pearson's R = -0.00
+
+
+This is the baseline against we wish to compare 
+
+NOTE that it doesnt include the FORECAST period (2017 - 2019) as these need to be recalculated for the GCMs
+
+@TODO 
+
+calculate the accuracy taking the majority vote between all the models → DONE, see **baseline_evaluation_majority_vote.ipynb **in [[/home/nicolasf/research/Smart_Ideas/code/models/baselines]] 
+
+majority vote accuracy for temperature 
+
+{'NNI': 0.5, 'WNI': 0.49, 'ENI': 0.5, 'NSI': 0.49, 'WSI': 0.46, 'ESI': 0.42} 
+
+majority vote for rainfall
+
+{'NNI': 0.38, 'WNI': 0.31, 'ENI': 0.34, 'NSI': 0.33, 'WSI': 0.38, 'ESI': 0.28} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

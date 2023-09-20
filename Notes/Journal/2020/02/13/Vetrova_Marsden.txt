@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-14T13:52:55+13:00
+
+====== Vetrova Marsden ======
+Created Friday 14 February 2020
+
+General Motivation: take it again from the first paragraph, with climate change being recognized as the most important challenge facing humanity in this century
+
+
+Specific motivation for ML in climate science: The climate community is assembling and dealing with ever increasing larger and larger datasets, from satellite remote sensing monitoring changes in climate and environments in response to climate change, to simulations of past and future climate to better understand the planet's sensitivity to increases in greenhouse gases and explore possible futures in response to different emission scenarios and help us steer mitigation and adaptation strategies.
+
+
+This increasing amount of data clearly places now climate science in the "big data" domain. With this came the recognition that Machine Learning and Data Mining approaches could help gain insights, and improve predictions at all time-scales from weather to seasonal to decadal (decades in the future)
+
+
+But still barriers to adoption: 1) applications of approaches developed in the context of image processing / classification not necessarily adapted to peculiar topology of the earth (sphere). 2) Also climate datasets usually are multi-variate, multidimensional datasets varying through time, with complex dependencies across time-scales, and teleconnections (dependencies across the spatial dimension): this make climate datasets particularly challenging as many assumptions in ML can be violated (e.g. the simplest one: non-stationarity as climate is changing). 3) despite recognition of the potential for ML / DM approaches, there is still also 'institutional' resistance due to the perception of ML algorithms as being 'black boxes'.
+
+
+Therefore the need for the development of novel interpretable ML approaches suited to large-scale climate datasets. 

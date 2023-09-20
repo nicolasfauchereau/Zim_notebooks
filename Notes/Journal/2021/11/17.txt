@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-17T10:38:19+13:00
+
+====== Wednesday 17 Nov 2021 ======
+
+==== Visual Studio Code for Python ====
+
+@Python 
+
+https://realpython.com/advanced-visual-studio-code-python/
+
+--------------------
+
+==== shift a map by 180 degrees (geopandas) ====
+
+@Python @geopandas 
+
+see 
+
+
+https://coderedirect.com/questions/452532/is-it-possible-to-shift-a-geopandas-world-map-on-the-x-axis-longitude 
+
+and 
+
+https://stackoverflow.com/questions/64004110/is-it-possible-to-shift-a-geopandas-world-map-on-the-x-axis-longitude
+
+--------------------
+
+==== geotiff with xarray ====
+
+
+import rioxarray
+import xarray
+
+xds = xarray.open_rasterio("myfile.tif")
+wgs84_xds = xds.rio.reproject("EPSG:4326")
+wgs84_xds.rio.to_raster("myfile_wgs84.tif")
+see also: 
+
+https://github.com/geoxarray/geoxarray
+
+https://github.com/BodenmillerGroup/xtiff
+

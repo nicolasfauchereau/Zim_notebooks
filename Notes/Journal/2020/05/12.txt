@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-12T14:49:12+12:00
+
+====== Tuesday 12 May 2020 ======
+
+==== pandas trick to offset an index to END OF MONTH ====
+
+soi.index + pd.offsets.MonthEnd(0)  
+
+==== Wetland mapping ====
+
+Potential project with Neale Hudson and Sanjay Wadwha 
+
+RFP by MFE 
+
+resources: 
+
+https://www.waikatoregion.govt.nz/assets/WRC/WRC-2019/tr201621.pdf 
+
+2019-02-14 ESIP Tech Dive: "Cloud Native Satellite Data Analysis with Pangeo": Scott Henderson
+
+https://www.youtube.com/watch?v=yQon6Wh-lN4
+
+=== deep learning on satellite imagery: ===
+
+https://github.com/robmarkcole/satellite-image-deep-learning

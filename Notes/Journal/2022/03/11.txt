@@ -1,0 +1,69 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-11T09:40:02+13:00
+
+====== Friday 11 Mar 2022 ======
+
+==== wind velocity animation using ipyleaflet and geemap ====
+
+@Python 
+
+see **velocity_animation_geemap.ipynb** in ~/Jupyter_notebooks  + the resulting map (cd
+
+and https://geemap.org/notebooks/netcdf/ 
+
+--------------------
+
+==== ICU validation paper ====
+
+@ICU 
+
+figures list 
+
+- example SPI ? 
+- domain for the calculations of the ACC ? 
+
+
+
+add mean annual rainfall from ERA5 and the sub-regional shapes ? 
+
+
+
+- ACC monthly then seasonal 
+
+focus now on seasonal 
+
+- R maps, seasonal 
+
+{{./screenshot_2022-03-11-153814.png}}
+
+
+- R maps per initial month, seasonal target 
+{{./screenshot_2022-03-11-153852.png}}
+
+
+- seasonal ACC variability ?
+- ENSO phases 
+
+- probabilistic forecasts: terciles and probability for rainfall being below the 25th percentile  
+
+--------------------
+
+==== Donnees meteo-France ====
+
+@EVA 
+
+https://publitheque.meteo.fr/okapi/accueil/okapiWebPubli/index.jsp
+
+login: Nicolas.Fauchereau@niwa.co.nz 
+password: 1F3g!$Jd 
+
+
+
+
+
+
+
+
+
+

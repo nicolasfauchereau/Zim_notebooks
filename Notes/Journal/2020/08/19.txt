@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-19T15:51:22+12:00
+
+====== Wednesday 19 Aug 2020 ======
+
+Notebook illustrating the use of a Convolutional AE on climate data 
+
+see:
+
+https://github.com/nicolasfauchereau/DL4SEAS/tree/master/CNN/notebooks 
+
+NOTE: Freeing GPU memory
+
+at the command line: 
+
+**nvidia-smi**
+
+will return something like 
+
+{{./screenshot_2020-08-19-155518.png}}
+
+
+Then kill the PID with 
+
+**sudo kill -9 PID**
+
+
+
+
+

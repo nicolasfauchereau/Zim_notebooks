@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-28T09:10:19+12:00
+
+====== Friday 28 Aug 2020 ======
+
+==== Access and subset the IRI datasets (seasonal climate forecasts from the models: ====
+
+dict_urls = {}
+dict_urls['NCEP-CFSv2'] = 'http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.NCEP-CFSv2/.FORECAST/.PENTAD_SAMPLES/.MONTHLY'
+dict_urls['CanCM4i'] = 'http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CanCM4i/.FORECAST/.MONTHLY'
+dict_urls['NASA-GEOSS2S'] = 'http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.NASA-GEOSS2S/.FORECAST/.MONTHLY'
+dict_urls['GEM-NEMO'] = 'http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.GEM-NEMO/.FORECAST/.MONTHLY'
+dict_urls['CanSIPSv2'] = 'http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CanSIPSv2/.FORECAST/.MONTHLY'
+
+Alternative sources of information: 
+
+ftp://ftp.cpc.ncep.noaa.gov/NMME/prob/ holds the tercile probabilities / real time 
+
+The files named (e.g.) tmpsfc.202008.prob.**adj**.mon.nc are masked over the continents 
+
+see also 
+
+https://www.cpc.ncep.noaa.gov/products/NMME/data.html 
+
+==== Jupyter notebook splitting cells ====
+
+**CTRL **+** SHIFT **+** -** 
+
+
+==== Japan Meteorological Agency (JMA) ====
+
+re-download the hindcasts from: https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2_Hind/monthly/ 
+
+They now go from 1979 to 2019 
+
+
+

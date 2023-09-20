@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-07T09:00:08+13:00
+
+====== Monday 07 Mar 2022 ======
+
+@TODO 
+
+[*] write Alex Peltier and Victoire Laurent, see email response: 
+[*] Watercare report review 
+[>] Virtual seminar on 9 March: Climate change attribution of extreme weather events and their economic impacts, https://www.wgtn.ac.nz/cedcc/news-and-events/our-news/virtual-seminar-on-9-march-climate-change-attribution-of-extreme-weather-events-and-their-economic-impacts 
+[*] Raghav: 500m VCSN ? yes for rainfall, apparently on cliops, path: `/home/srinivasanr/VCSN_ChristianZ/500clidbonly/Output` 
+
+	to do the transfer from cliops to [[/media/nicolasf/END19101/data/VCSN/500m/RAIN]] 
+	
+	```
+	rsync -a -essh fauchereaun@cliops-1.hpcf.niwa.co.nz:/home/srinivasanr/VCSN_ChristianZ/500clidbonly/Output/ ./.
+	```
+
+--------------------
+
+==== latest validation data from the SCO ====
+
+
+{{./screenshot_2022-03-07-092120.png}}
+
+{{./screenshot_2022-03-07-092141.png}}
+
+
+

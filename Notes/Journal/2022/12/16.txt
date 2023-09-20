@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-16T08:53:00+13:00
+
+====== Friday 16 Dec 2022 ======
+
+==== UPDATE on the APCC forecasts availability ====
+
+December 2022, the forecasts for JFM 2023 are made available on the 16th of December ... 
+
+scripts: 
+
+**Monthly forecasts:** 
+
+wget ${certificate_option} https://download.apcc21.org/MME/3-MON/FORECAST/GAUS/JAN/2023/prec.nc -O 3-MON_FORECAST_GAUS_JAN_2023_prec.nc
+
+**Seasonal forecasts:** 
+
+wget ${certificate_option} https://download.apcc21.org/MME/3-MON/FORECAST/GAUS/JAN/JFM/2023/prec.nc -O 3-MON_FORECAST_GAUS_JAN_JFM_2023_prec.nc
+
+--------------------
+
+==== to install the seasonal_forecasting library ====
+
+cd [[/home/nicolasf/operational/seasonal_forecasting/src]]
+
+python -m pip install .
+
+
+
+
+
+
+
+
+
+

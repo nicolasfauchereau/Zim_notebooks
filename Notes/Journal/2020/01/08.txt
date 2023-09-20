@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-08T15:16:27+13:00
+
+====== Wednesday 08 Jan 2020 ======
+
++ finalised the SCO
++ reviwed and modified the watercare report written by Maria Augutis 
+
+Working on the ICU 
+
+The ICU templates are in [[/home/nicolasf/operational/ICU/ops/templates]] 
+
+The ICU files for JFM 2020 are in [[/home/nicolasf/operational/ICU/ops/bulletin/JFM_2020]] 
+
+Sharepoint link to the ICU PPT: 
+
+https://niwa-my.sharepoint.com/:f:/r/personal/nicolas_fauchereau_niwa_co_nz/Documents/ICU_JFM_2020?csf=1&e=Rnosek
+
+
+
+
+
+

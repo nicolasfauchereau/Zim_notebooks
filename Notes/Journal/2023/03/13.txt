@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-13T09:36:31+13:00
+
+====== Monday 13 Mar 2023 ======
+
+==== AWAP ====
+
+https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/metadata/f6475_9317_5747_6204 
+
+
+--------------------
+
+==== updating OISST monthly ====
+
+see **update_OISST.ipynb** in [[/home/nicolasf/operational/SST_forecasting/notebooks]] 
+
+The *monthly* OISST v2 HIGH RESOLUTION product can be found at: 
+
+https://downloads.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/
+
+and downloaded in [[/media/nicolasf/END19101/data/OISST/monthly]] 
+
+wget
+
+
+

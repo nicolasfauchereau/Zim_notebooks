@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-23T09:04:18+13:00
+
+====== Monday 23 Nov 2020 ======
+
+@TODO 
+
+→ register MetSoc (60$ remote attendance) : done 
+→ run WSI and ESI x

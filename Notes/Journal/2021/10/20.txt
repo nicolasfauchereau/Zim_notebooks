@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-20T13:38:32+13:00
+
+====== Wednesday 20 Oct 2021 ======
+
+Smart Ideas proposal
+
+Investment signals to be found on page 10 of https://www.mbie.govt.nz/assets/endeavour-fund-investment-plan-2022-2024.pdf 
+
+
+
+--------------------
+Geospatial data analysis with geopandas and shapely 
+
+see 
+
+https://www.learndatasci.com/tutorials/geospatial-data-python-geopandas-shapely/
+
+also downloaded as with SingleFile 
+
+
+

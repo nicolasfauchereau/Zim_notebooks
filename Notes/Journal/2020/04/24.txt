@@ -1,0 +1,79 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-24T10:17:28+12:00
+
+====== Friday 24 Apr 2020 ======
+
+=== NESI webinar ===
+
+see 
+
+https://niwa-my.sharepoint.com/:w:/g/personal/wolfgang_hayek_niwa_co_nz/EZCe45qW7ytJm856I9FXmwcBkW1bpV4QK6dXXJ92p8-ZJw
+
+for Doc compiling questions and answers 
+
+=== Some articles of interest regarding water crisis and the cost of climate change ===
+
+cost of climate change (Suzanne Rozier NIWA): https://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=12326761 
+
+Water crisis current (April 2020): https://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=12327274 
+
+=== Experiments with PYCARET continued (see also 23/04/20) ===
+
+these are the options that I considered for ensembling using PyCARET 
+
+1) train all models (18 MODELS !) over each GCM independantly, then aggregate the majority votes @TODO   
+2) train over all GCMs then: 
+	- tune the best model 
+	- Blend all models, using a soft voting, for all the algorithms that can provide probability estimates 
+	- Blend only the best N models out of the 18, maybe based on a ranking threshold  
+
+Generally speaking, given computationally limited resources: 
+**i)** more instances (GCMs, and / or members in the ensemble) is better.
+**ii)** with increasing training set / number of instances, instance-based algorithms such as KNN, rise in the leaderboard, sometimes being the most performant model (using cross validation) compared to model-based algos
+**iii)** ensembling methods give small but significant performance improvements. Blending different models leads to performance improvements, but generally speaking it is better to select the best N algorithms then blending ALL algorithms available. 
+**iv)** tuning (e.g. the best model) does NOT generally compete with ensembling methods 
+
+== TMEAN, ALL GCMs ==
+
+== NNI ==
+
+
+== WNI ==
+
+Blend: KNN, MLP, ET
+
+	Accuracy	AUC	Recall	Prec.	F1	Kappa
+0	0.7849	0.0	0.7794	0.7854	0.7841	0.6733
+1	0.7814	0.0	0.7774	0.7812	0.7812	0.6695
+2	0.8208	0.0	0.8193	0.8201	0.8187	0.7280
+3	0.7957	0.0	0.7892	0.7940	0.7943	0.6901
+4	0.7742	0.0	0.7669	0.7716	0.7720	0.6572
+5	0.7778	0.0	0.7756	0.7772	0.7759	0.6645
+6	0.8208	0.0	0.8175	0.8196	0.8200	0.7289
+7	0.8309	0.0	0.8253	0.8313	0.8311	0.7442
+8	0.8201	0.0	0.8188	0.8190	0.8163	0.7275
+9	0.7950	0.0	0.7914	0.7944	0.7946	0.6898
+Mean	**0.8002**	0.0	0.7961	0.7994	0.7988	0.6973
+SD	0.0200	0.0	0.0208	0.0202	0.0200	0.0303
+
+SCO ACC **0.49**
+
+== ENI ==
+ 
+
+== NSI ==
+ 
+
+== WSI ==
+
+== ESI ==
+
+ 
+
+=== Some Random ideas ===
+
++ Germany solar PV increased due to diminishing pollution 
++ Prediction of WHEN electricity is likely to come from renewables: i.e. see tmrow.com. Enable individual and organizations so that the electricty intensive applications are timed when the electricity is likely to come from 
+renewables (real time, now casting, forecasting). 
+

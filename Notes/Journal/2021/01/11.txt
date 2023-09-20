@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-11T09:19:22+13:00
+
+====== Monday 11 Jan 2021 ======
+
+@TODO week 11 January 
+
+→ notebook for Matthew Skiffington illustrating the reading and mnipulation of VCSN data 
+→ catch up on deep learning ? cancelled ...
+→ ZESPRI: put in place the framework for the climate data extraction (take VCSN instead of ClidB, too much pain ... )
+→ catch up with Geoff Kaine on paper 
+→ map out the general structure of a proposal on aligning windows of opportunity for weather and climate forecasting and decision context 
+→ Auckland cycling and weather ? 
+→ BAMS state of the climate report (see in [[/home/nicolasf/operational/BAMS_SOTC_2020/notebooks]] 
+											+ **calculate_CMORPH_monthly_from_daily.ipynb**: calculate monthly averages and anomalies 
+											+ plot_monthly_maps.ipynb
+											
+→ ICU rainfall 
+→ ICU Marine 
+

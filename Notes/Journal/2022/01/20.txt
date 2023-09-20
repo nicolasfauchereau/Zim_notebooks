@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-20T08:44:53+13:00
+
+====== Thursday 20 Jan 2022 ======
+
+Reorganise the outputs for the ICU forecast table 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/admin]]
+
+→ operational 
+→ validation 
+
+in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_forecast_table]] 
+
+are the code for the derivation of the **operational** forecast table 
+
+in 
+
+--------------------
+
+==== CMORPH dataset for the BAMS State of the Climate report 2021 ====
+
+The dataset can be found at 
+
+
+https://ftp.cpc.ncep.noaa.gov/precip/global_CMORPH/
+
+in grads binary format 
+
+see: https://github.com/miniufo/xgrads 
+

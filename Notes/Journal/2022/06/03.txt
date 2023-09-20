@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-06-03T11:47:41+12:00
+
+====== Friday 03 Jun 2022 ======
+
+==== Training material from the Uni of Cantabria ====
+
+@ICU 
+
+https://niwa.sharepoint.com/sites/PacificRimTeam/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=GEyWJr&CT=1654211166255&OR=OWA%2DNT&CID=37f889d9%2D6abb%2Ddbba%2D3bc8%2Dcb1e4ef3e0db&FolderCTID=0x01200034D3CF7561C4A044A077C19D8C689096&id=%2Fsites%2FPacificRimTeam%2FShared%20Documents%2FRiskScape%2FPREP%2DMH%20Forecasting&viewid=8db132ba%2Dea92%2D4fa2%2D84c5%2D3f8bdebebba4
+
+https://github.com/teslakit/teslakit 

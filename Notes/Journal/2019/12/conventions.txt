@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-21T10:33:35+13:00
+
+====== conventions ======
+Created Saturday 21 December 2019
+
+==== conventions used for filenames, patterns, dimensions and variable names ====
+
+filenames
+
+
+dimensions 
+
+lat
+lon
+time
+step
+forecast_valid_time
+

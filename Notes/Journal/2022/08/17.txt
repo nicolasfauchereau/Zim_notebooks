@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-17T09:29:45+12:00
+
+====== Wednesday 17 Aug 2022 ======
+
+Ali Ahmadalipour: @hydroclimali
+
+https://www.linkedin.com/pulse/running-list-200-companies-hiring-geospatial-roles-ali-ahmadalipour/ 
+
+see for a tutorial on climate data analysis
+
+https://colab.research.google.com/drive/1B7gFBSr0eoZ5IbsA0lY8q3XL8n-3BOn4#scrollTo=jAEi56Yh2sh9 
+
+start_date_NMME = pd.to_datetime(datetime.date(1960,1,1))
+time_new = [start_date_NMME + pd.DateOffset(months = x) for x in ds.time.values]
+ds = ds.assign_coords(time = time_new)
+if 'Z' in ds.dims:
+	ds = ds.squeeze(dim = 'Z').drop('Z')
+
+--------------------
+
+==== Code for compound extremes MHWs and Ocean Acidity ====
+
+see paper: 
+
+Burger, F.A., 2022. Compound marine heatwaves and ocean acidity extremes. Nature Communications 12.
+
+code: https://zenodo.org/record/6655451 and archive downloaded in 
+
+[[/home/nicolasf/operational/OISST_indices]] 
+
+--------------------
+
+==== Archetypal Analysis ====
+
+paper: https://journals.ametsoc.org/view/journals/aies/aop/AIES-D-21-0007.1/AIES-D-21-0007.1.xml 
+
+code: https://github.com/aleixalcacer/archetypes
+
+and see **Archetypal_Analysis_SST_anomalies.ipynb** in [[~/Jupyter_notebooks]] 
+
+see implementations in Appendix A of the paper, e.g. 
+
+[1] Keller S.M., Samarin M., Wieser M., Roth V. (2019) Deep Archetypal Analysis. In: Fink G., Frintrop S., Jiang X. (eds) Pattern Recognition. DAGM GCPR 2019. Lecture Notes in Computer Science, vol 11824. Springer, Cham, with implementation: https://github.com/bmda-unibas/DeepArchetypeAnalysis 
+
+
+
+
+
+
+
+
+
+
+
+

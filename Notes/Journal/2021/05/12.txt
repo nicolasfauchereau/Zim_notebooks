@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-12T11:20:30+12:00
+
+====== Wednesday 12 May 2021 ======
+
+==== accessing ERA5 daily aggregates on the GEE (Google Earth Engine) ====
+
+see: 
+
+https://github.com/giswqs/earthengine-py-notebooks 
+
+downloaded the repo in 
+
+[[/home/nicolasf/jupyter_notebooks/earthengine-py-notebooks]] 
+
+--------------------
+
+==== ICU CDS ====
+
+
+--------------------
+
+==== calculation of new climatologies for GPM-IMERG ====
+
+2001 - 2020 instead of 2001 - 2019 
+
+see 
+
+**calculates_GPM-IMERG_climatologies.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/GPM]] 

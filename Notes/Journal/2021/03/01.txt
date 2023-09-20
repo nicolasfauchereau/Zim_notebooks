@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-01T09:28:23+13:00
+
+====== Monday 01 Mar 2021 ======
+
+==== libraries, frameworks, tutorials, exemples, papers ====
+
+→ **Feature-based time-series analysis**, paper https://arxiv.org/abs/1709.08055 
+
+"""
+This work presents an introduction to feature-based time-series analysis. The time series as a data type is first described, along with an overview of the interdisciplinary time-series analysis literature. I then summarize the range of feature-based representations for time series that have been developed to aid interpretable insights into time-series structure. Particular emphasis is given to emerging research that facilitates wide comparison of feature-based representations that allow us to understand the properties of a time-series dataset that make it suited to a particular feature-based representation or analysis algorithm. The future of time-series analysis is likely to embrace approaches that exploit machine learning methods to partially automate human learning to aid understanding of the complex dynamical patterns in the time series we measure from the world. 
+"""	
+
+→ **identifying time-series motifs:** 
+
+//on Teams (Climate and Environmental Applications, clustering channel)// 
+
+Hi Andrew Lorrey and Neelesh Rampal, re. the third paper based on the revised clustering over NZ (the one on predictability, broadly speaking)  In addition of the investigation of persistence, transitions, preferred transition paths based on the latter, I am keen to potentially use the method described in e.g. this paper (https://www.cc.gatech.edu/~isbell/reading/papers/p493-chiu.pdf) which identify approximate repeated sequences in time-series, even in the presence of noise ... in this case the time-series would be the one of discrete cluster labels ... what do you think ?
+
+Apparently one implementation is https://github.com/ksanjeevan/ts-motif-detection  
+
+see also: https://github.com/microprediction/mkalgo 

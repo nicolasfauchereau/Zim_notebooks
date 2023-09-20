@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-05T12:00:58+12:00
+
+====== Saturday 05 Sep 2020 ======
+
+==== CDS data available prior to 1993 !!! ====
+
+see 
+
+https://github.com/esowc/UNSEEN-open/blob/master/Initial_data_download.ipynb
+
+grib_params = {'engine':'cfgrib', 'backend_kwargs':{'indexpath':''}}
+
+NesSI Hackaton 
+
+==== How to use sample weights in scikit learn ====
+
+https://stackoverflow.com/questions/17609900/scikit-learn-role-of-weights-in-ridge-regression 
+
+==== Roshni Biswas ====
+
+wildfire forecasting with AI 
+
+https://www.roshnibiswas.tech/research-software
+
+https://github.com/esowc/wildfire-forecasting 

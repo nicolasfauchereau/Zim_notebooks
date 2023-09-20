@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-06-07T10:46:26+12:00
+
+====== Wednesday 07 Jun 2023 ======
+
+==== Potential for surprising heat and drought events in wheat-producing regions of USA and China ====
+
+@PwC @EVA @extremes
+
+Coughlan De Perez, E., H. Ganapathi, G. I. T. Masukwedza, T. Griffin, and T. Kelder, 2023: Potential for surprising heat and drought events in wheat-producing regions of USA and China. npj Clim Atmos Sci, 6, 56, https://doi.org/10.1038/s41612-023-00361-y.
+
+uses the **unseen** methodology, see 
+
+https://unseen-open.readthedocs.io/en/latest/ 
+
+An open, reproducible and transferable workflow to assess and anticipate climate extremes beyond the observed record. 
+
+An open workflow for the study of unseen  weather  extremes 
+
+https://eartharxiv.org/repository/view/2681/ 
+
++ 
+
+https://www.nature.com/articles/s41612-020-00149-4 
+
+see also the code for the paper in Nature above (Using UNSEEN trends to detect decadal changes in 100-year precipitation extremes) 
+
+https://github.com/timokelder/UNSEEN-trends 
+
+--------------------
+
+==== PICT email ====
+
+Hi Drew
+
+So I have made quite a few changes to the PICT notebooks, as well as the underlying paleopy library, in short: 
+
+1) I have included a notebook called `read_one_proxy_from_JSON.ipynb` which illustrates how to read proxy information from a JSON file, pass this to the analogs class to make composite maps, and also create composite anomalies for the climate modes indices, the classifications etc. 
+2) I want to stress that in all cases you need to be **very careful** about the **period** you use to derive the analog years from, as it will determine what datasets, indices and classifications you can or cannot use as they are not (and cannot be) all defined over the same period. As an exemple currently the Neelesh et al 2022 classification is actually only defined for the period 1979-2021, as I used my own results, from the classification performed on ERA5 high resolution. If Neelesh can provide me with a csv file with the cluster numbers and associated labels (LSE, LNW, etc) for each day from 1948 to 2021, I can fix this ... in the meantime there's an easy temporary fix that is illustrated in the notebook `read_one_proxy_from_JSON.ipynb`, in short you can just update the list of analog years to make sure no year lies beyond the available period 
+3) I have updated the SOI, NINO3.4, SAM, IOD index, and added the CEI and also the El Nino Modoki index to the suite of the climate modes indices you can use 
+4) I have reorganised the `datasets` folder in the `notebooks` folder, they now contain many more notebooks, which are the ones necessary to later on update the gridded datasets, as well as calculate the indices, and derive the Monte-Carlo simulations for the classifications necessary to derive the significance. This is for whoever takes over the development of PICT / paleopy 
+
+So what do you need to do on your side ? 
+
+1) first, on your machine delete the folder `Indices` in the `datasets` folder , then download the 'fresh' one from my one drive, from URL {}
+2) delete your PICT_notebooks folder in your home directory, and download the 'fresh' one from my github repository, at https://github.com/nicolasfauchereau/PICT_notebooks. As usual, use the green 'code' button on the top right, download as a ZIP file, uncompress, rename to 'PICT_notebooks' and copy in your home folder 
+3) In the terminal, navigate to `PICT_notebooks` (`cd PICT_notebooks`) then navigate in the `src` directory (`cd  src`). You need to be in `/Users/lorreyam/PICT_notebooks/src`, you can always check where you are in the terminal by typing `pwd` then `enter` 
+4) activate your PICT python environment, by running `conda activate PICT` at the command line. Once done you should see `(PICT)` at the beginning of your prompt line in the terminal 
+5) run `pip install -e .`, which will install the new version of paleopy 
+6) navigate back to `PICT_notebooks` then `notebooks`, at the terminal again `cd [[../notebooks`]] should do, again run `pwd`, you should now be in `/Users/lorreyam/PICT_notebooks/notebooks` 
+7) launch Jupyter lab (`jupyter lab` at the command line) and start playing around :-) 
+
+I will now take a full break until the 22 of June, between my medical stuff and the rush of the past few weeks, I need to disconnect for a while, but from that date I will try and help if I can ... if you have some issues and Tristan or Neelesh are around, I am sure they will be able to help ... I am not disappearing, but right now need to total break, hope that's OK 
+
+Cheers and talk soon(ish) ! 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

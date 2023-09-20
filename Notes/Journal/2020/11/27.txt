@@ -1,0 +1,216 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-27T08:01:56+13:00
+
+====== Friday 27 Nov 2020 ======
+
+==== new version of umap-learn ====
+
+see https://github.com/lmcinnes/umap 
+
+pip install --pre umap-learn
+
+--------------------
+@TODO 
+
+
+1) try climpred for leadtime dependent climate indices evaluation 
+
+see https://github.com/bradyrx/climpred_workshop 
+
+do that first for SSTs 
+
+
+2) send stuff to Albert Bifet and Matthew Skiffington 
+
+3) develop functions to calculate the SST-based indices (NINO3.4, IOD, SPSD) in the GCMs and the observations (ERSST) 
+
+4) develop functions to calculate the MSLP-based indices (SAM, M1, Z1) 
+
+		→ make sure the indices calculated from the GCM are also exported in NetCDF in a format compatible with climpred (with 'init','lead' 
+
+5) start working on the **structure of the final report to MBIE**, due in August 2021, should include 
+
+	→ data sources 
+		- Target variables
+			- 6 regions 
+			- application cases
+			- gridded VCSN   
+		- Predictors based on observational datasets 
+		- reanalysis dataset  
+		- General Circulation Models for seasonal climate forecasts 
+
+	→ data processing pipelines 
+		- downloads and pre-processing of external datasets 
+		- pre-processing of internal dataset (VCSN) 
+		- homogeneisation of metadata (dimensions, coordinates, variables) 
+		- interpolation on a common grid
+		- derivinmg the target variables 
+	
+	→ accuracy baselines and GCM validation for target variables over Aotearoa New Zealand 
+	
+		- first step is to establish baselines 
+			- SCO accuracy needed a re-appraisal, and recalculation of accuracy using the same target variables (regional averages) 
+	
+	
+	→ general validation of the GCM seasonal forecasts over the Southern Hemisphere 
+		- use climpred, xskillscore (+ xlim to calculate other indices?) 
+		- fields validations 
+		- seasonal cycle 
+		- 
+	
+	→ Machine Learning: an introduction 
+	
+	→ training, validation, testing: challenges for the application of ML to seasonal climate forecasting 
+	
+		because learners are trained on instances, the performance of these learners cannot be evaluated over the same instances that have been used for training 
+
+		several challenges: 
+		
+			- seasonal overlapping values 
+			- non independance of features (gridded) 
+			- relative short period for training / validation / testing 
+			
+		several strategies 
+		
+			- cross-validation 
+			- challenges with cross-validation: ensuring class representation → stratified k-fold cross validation 
+			- "simulating" an operational system
+				we simulated an operational system, where the models are retrained every month, with the availability of observational and / or GCM data, more specifically, for target season to be predicted S0 (e.g. December - January - February 2021), the training set is defined as straddling period the beginning of the dataset to S0 - N months, the validation set (over which the models are tuned and - when applicable - the ensemble strategies evaluated is defined as straddling the period from S0 - N months to S0 - X months 
+				
+				so in this case the independent test period is NDJ 2017 to OND 2019, and this will be compared to the - re-appraised - accuracy from the SCO over the same period.
+				
+	→ **approaches, algorithms and implementations** 
+	
+	section devoted to the general approaches, the specific algorithms and their implementations 
+	
+	classification, regression and dimensionality reduction are the 3 main categories of Machine Learning that are directly relevant to this project 
+	
+	classification aims at predicting a discrete label 
+	regression a value 
+	dimensionality reduction, as the name implies, is aimed 
+	
+	a sub-category - related to dimensionality reduction - includes methods aimed at selecting features: see Feature Selection Subspace Ensemble 
+	
+	wide variety of algorithms for both regression and classification, from instance-based to model-based algorithms. Instances based include K-NN, conceptually similar to analog methods. Model based algorithms learn a mapping between features and target
+	
+	No free lunch theorem, for our study, means no algorithm is guaranteed to give best results 
+	
+	Ensemble learning 
+	
+	deep learning 
+
+
+	→ end-user engagements: context, pathways and barriers for the adoption of seasonal climate forecasts 
+	
+		- retrospective of the end-user engagements that have taken place 
+		- application cases 
+		- learnings: Geoff Kaines: The decision context for seasonal climate forecasts 
+		- seasonal, sub-seasonal and long-range climate forecasts and decision making 
+		
+		
+		
+--------------------
+
+==== How to Develop a Feature Selection Subspace Ensemble in Python ====
+
+see 
+
+https://machinelearningmastery.com/feature-selection-subspace-ensemble-in-python/ 
+
+and downloaded locally in the `resources` folder 
+
+--------------------
+
+==== something very wrong for the SSTs from ECMWF (monthly or seasonal anomalies) for month = 7, year 2001, at all lead times ====
+
+see for example in  **climpred_ECMWF_ERSST.ipynb **in [[/home/nicolasf/research/Smart_Ideas/code/GCM-validations/notebooks]] 
+
+{{./screenshot_2020-11-27-142541.png}}
+
+for **2001 07**, the field looked like this: 
+
+{{./screenshot_2020-11-27-142951.png?width=700}}
+
+clearly something VERY wrong for this month, 
+
+The data is bogus for all lead times, the data is crap in the original downloaded data in /media/nicolasf/END19101/data/GCMs/downloads/ECMWF/SST/CDS_ECMWF_SST_2001_07.nc
+
+see 
+
+{{./screenshot_2020-11-27-143359.png?width=700}}
+
+
+re-downloaded now ... but doesnt solve the issue, this is still crap ... 
+
+trying in grib now, maybe this is due to the netcdf conversion 
+
+update: it looks like indeed this is due to the netcdf conversion 
+
+solution: replace the data in the xr.dataset by the data coming from the grib file  ... and save again in netcdf 
+
+done
+
+need to redo the processing 
+
+--------------------
+
+==== list of Machine Learning videos ====
+
+list of machine learning videos watched during the ML seminars 
+
+https://www.notion.so/3de68760f487436eaba86cc428eb7b18?v=228cda6da9c348ba857aafdf7114e608
+
+for example: 
+
+→ Downscaling and Uncertainty: https://www.youtube.com/watch?v=YvmtwUJHj2k 
+	slides https://www.slideserve.com/keola/downscaling-and-uncertainty-hayley-fowler-newcastle-university-uk-linda-o-mearns-ncar
+
+
+→ Atmospheric Science - Automated regression-based statistical downscaling of climate models: https://www.youtube.com/watch?v=WestOzeC12k 
+
+
+→ Exascale Deep Learning for Climate Analytics: https://www.youtube.com/watch?v=e0QK5glozC8
+	slides https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9412-exascale-deep-learning-for-climate-analytics.pdf
+
+--------------------
+
+==== example access to the NMME models, as in climpred ====
+
+def decode_cf(ds, time_var):
+	"""Decodes time dimension to CFTime standards."""
+	if ds[time_var].attrs['calendar'] == '360':
+		ds[time_var].attrs['calendar'] = '360_day'
+	ds = xr.decode_cf(ds, decode_times=True)
+	return ds
+
+url = 'http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/NCEP-CFSv2/.HINDCAST/.MONTHLY/.sst/dods'
+fcstds = xr.open_dataset(url, decode_times=False, chunks={'S': 1, 'L': 12})
+fcstds = decode_cf(fcstds, 'S')
+fcstds
+
+also
+
+fcstds['L'] = (fcstds['L'] - 0.5).astype(np.int)
+
+move the leadtime to be an integer 
+
+@TODO 
+
+intergrate this into the exporters for the IRI models 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

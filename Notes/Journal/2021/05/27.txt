@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-27T09:52:42+12:00
+
+====== Thursday 27 May 2021 ======
+
+@fungi 
+
+https://controlledmold.com/ 
+
+--------------------
+
+==== ICU Water Watch ====
+
+@ICU @PRAS2101 @C3S @CDS 
+
+== C3S processing (operational) ==
+
+1) download the latest forecasts for all GCMs 
+
+see: 
+
+
+== C3S: calculation of the climatological quantiles from hindcast datasets for each GCM ==
+
+see 
+
+
+--------------------
+
+==== tsai - A state-of-the-art deep learning library for time series and sequential data ====
+
+@ML @DL @timeseries 
+
+https://timeseriesai.github.io/tsai/ 
+
+--------------------
+
+==== Tsmoothie - A python library for time-series smoothing and outlier detection ====
+
+https://github.com/cerlymarco/tsmoothie
+
+can be applied to xarray dataset ? 
+
+
+--------------------
+
+[[/home/nicolasf/drives/ham_projects/END19101/Working/deep_downscaling_with_transfer_learning]] 
+
+Train_bias_correction.ipynb: Pacific 
+
+sst_to_precipitation_for_classification_best_notebook.pynb 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

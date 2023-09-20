@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-04T16:28:36+12:00
+
+====== Wednesday 04 May 2022 ======
+
+==== Read and summarized / questioned Abha's paper: ====
+
+@downscaling @MBIE 
+
+Improved Bias Corrected and Downscaled Regional Climate Model Data for Climate Impact Studies: Validation and Assessment for New Zealand  
+
+see document 
+
+https://niwa-my.sharepoint.com/:w:/r/personal/nicolas_fauchereau_niwa_co_nz/Documents/Documents/MBIE_downscaling/NZ_bias_correction_downscaling.docx?d=w1bd50b4db7b3448f83294747607040fc&csf=1&web=1&e=qntwn7 
+
+--------------------
+
+==== Sasha List for emergency solar setup. ====
+
+see https://docs.google.com/document/d/1kxCUyrkmy39quZ8HfjTolQRg2HnWBG0GVTI-mo1QX5I/edit 

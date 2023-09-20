@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-11T17:21:44+12:00
+
+====== Monday 11 May 2020 ======
+
+==== Target variables for the Smart Ideas ====
+
+problem when comparing the categories derived from the gridded VCSN to the categories present 
+in the `probs.lst` file calculated from CLIOPS: while the match is over 80% for rainfall, it is sometimes 
+as low as 50% for temperatures 
+
+Problem could be related to the choice of the temperature variables in the VCSN, i.e. Tmax_N and Tmin_N instead of Tmax and Tmin 
+
+Tmax_N and Tmin_N are calculated according to the Norton method: This differs from TMax [[/]] Tmin in that this method uses the maximum temperature at the station reduced to mean sea level by a standard lapse rate (adjusted slightly for each season) before the interpolation. Following interpolation, the maximum temperature at the grid point is adjusted to the grid_point elevation using the standard lapse rate.
+
+Update: apparently the choice of Tmin or Tmax for the calculation of TMean, instead of Tmax_N and Tmin_N, does not make much of a difference 
+
+Also I have checked that we don't have huge mismatch: i.e. tercile 1 for the probs.lst and tercile 3 for the VCSN-derived categories (or vice versa): this never happens except for 
+
+North of the South Island (NSI): 16 occurences where the category derived from VCSN is 3 (Above) but the category in probs.lst is 1 (below)
+
+West of the South Island (WSI): 10 occurences where the category derived from VCSN is 3 (Above) but the category in probs.lst is 1 (below)
+
+In other words, in the WSI and the NSI, //probs.lst// tends to seriously underestimate the warming trend, which is confirmed by the fact that the scores get worse when one selects the period post 2010 compared to prior to 2010.
+
+  
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-28T11:29:27+13:00
+
+====== Wednesday 28 Oct 2020 ======
+
+==== RAINML ====
+
+monthly seasonal rainfall prediction using the M1 and Z1 indices 
+
+see
+
+[[/home/nicolasf/research/Smart_Ideas/code/rainml]] 
+
+see also 
+
+**DeepCNN_seasonal.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/models/application_cases/classification/Apple_and_Pears/CNN/notebooks]] 
+
+--------------------
+
+==== comparison of predictability of (e.g.) Apple and Pears with observed (lagged) versus simulated (seasonal climate forecast) SSTs ====
+
+the 2 notebooks: 
+
+1. **Apple_and_Pears_SSTs_obs.ipynb** → using observed SSTs at 4 months lead times → cross validated accuracy is ~ 0.6 
+2. **Apple_and_Pears_SSTs_sim.ipynb** → using simulated SSTs at 3 months lead times → cross validated accuracy is ~ 0.5 
+3. Apple_and_Pears_SSTs_obs_tuned.ipynb → using observed SSTs at 4 months lead times + hyperparameters tuning as from https://auto.gluon.ai/stable/tutorials/tabular_prediction/tabular-indepth.html → cross validated accuracy is 
+
+in [[/home/nicolasf/research/Smart_Ideas/code/models/application_cases/classification/Apple_and_Pears/AutoML/AUTOGLUON/notebooks]] 
+
+== some results, for prediction of RAIN_BC variable ==
+
+using independent test data (post 2016) 
+
+**using observed SST, with 4 months leadtime:** 
+
+accuracy                   		0.566288
+accuracy_score             		0.566288
+balanced_accuracy_score   	0.564693
+matthews_corrcoef          	0.349932
+
+**using observed SST, with 4 months leadtime, and with period restricted to post 1981:** 
+
+accuracy                   		0.582975
+accuracy_score             		0.582975
+balanced_accuracy_score    	0.582143
+matthews_corrcoef         		0.375497
+
+so it goes UP (not down) when restricting the period to match the one at which the GCM forecasts are available 
+
+**using observed SST, with 4 months leadtime, period restricted to post 1981, and staggered SST data up to 6 months:** 
+
+accuracy                   		**0.603512**
+accuracy_score             		0.603512
+balanced_accuracy_score    	0.602869
+matthews_corrcoef          	0.406421
+
+so it goes UP also when including lagged time-series, even if a PCA is performed as part of the pipeline on the staggered data 
+
+**using observed SST, with 4 months leadtime, period restricted to post 1981, staggered SST data up to 6 months, and detrend:** 
+
+accuracy                   		0.590112
+accuracy_score             		0.590112
+balanced_accuracy_score    	0.588673
+matthews_corrcoef         	 	0.388115
+
+**using observed SST, with 4 months leadtime, period restricted to post 1981, and staggered SST data up to 3 months:** 
+
+accuracy                   		0.615895
+accuracy_score            	 	0.615895
+balanced_accuracy_score    	0.613064
+matthews_corrcoef          	0.424992
+
+so it goes UP also when including lagged time-series, even if a PCA is performed as part of the pipeline on the staggered data 
+
+
+**using observed SST, with 3 months leadtime (i.e. last month would have to be estimated from other sources), and with period restricted to post 1981:**  
+
+accuracy                   		0.579217
+accuracy_score             		0.579217
+balanced_accuracy_score    	0.577861
+matthews_corrcoef          	0.371787
+
+**using simulated SST, with 1 month leadtime (forecasts issued at month 0 for season spanning months +1 to +3)** 
+
+
+
+
+
+
+--------------------
+
+==== ORBIT:  Bayesian time series modeling and inference ====
+
+URL: https://github.com/uber/orbit 
+
+cloned into [[/home/nicolasf/research/Smart_Ideas/resources/repos_libraries/orbit]] 
+
+paper: https://arxiv.org/abs/2004.08492 
+
+Ng, E., Z. Wang, H. Chen, S. Yang, and S. Smyl, Orbit: Probabilistic Forecast with Exponential Smoothing. 6.
+ 
+

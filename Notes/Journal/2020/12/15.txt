@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-15T11:17:29+13:00
+
+====== Tuesday 15 Dec 2020 ======
+
+
+==== discussion with Drew about his project for the wine industry ====
+
+tentative titles 
+
+resilience to weather and climate extremes in the wine indutstry: capturing knowledge 
+
+past, present and future 
+
+future-proofing the wine industry 
+
+some ideas 
+
+→ capturing the experience of 
+→ citizen science 
+→ pool resources 
+
+it's really about knowledge and experience of weather and climate extremes in the industry is captured, linked, leveraged 
+
+
+
+- parallel with efforts to capture indigeneous knowledge: work with anthropologists, would be a quite an innovative approach 
+
+→ interface weather and climate models (physical and statistical) with models ("hard" models such as phenological models or pest and disease models, but also conceptual models) 
+
+MS Teams message on this day: 
+
+"""
+Thanks for the chat Andrew Lorrey, I think your ideas are really exciting, what struck me is how innovative that could be in terms of developing a platform allowing the institutional, experiential, knowledge / learnings of weather and climate extremes to be captured and leveraged to inform decisions: both in terms in digging in past experience (the 'old timers' via citizen science systems) and in terms of putting in place a system where learnings from events, responses and impacts are assessed compared to 'counterfactuals' / controls ... you could really point the parallels with initiatives dedicated to capture 'indigeneous' knowledge, see that almost from an anthropological point of view, etc ... could be really transformational, improve resilience to weather and climate extremes and 'future-proof' the industry by developing this kind of system ...  
+"""

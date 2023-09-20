@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-29T09:37:32+13:00
+
+====== Tuesday 29 Sep 2020 ======
+
+==== Analog forecasts for the SCO ====
+
+Discussion with Ben on Teams, he uses velocity potential (at 200 hPa) to derive 'manual' analogs for the SCO forecasting, extracting analog to CDS forecasts in the ERA5 reanalysis data 
+
+very easy to extract this automatically ... 
+
+--------------------
+
+==== ICU hotspots ====
+
+some products to develop 
+
+1) select grid points with observed percentile value below a given threshold (50 %) and indicate (using the forecast percentile) what is the **tendency for next month** (getting drier ? getting wetter ?) 
+2) think about how to go about merging different accumulation periods 
+3) map the most likely percentile value (mode? use np.digitize?)
+
+--------------------
+
+==== Car booking ====
+
+Ford Mondeo GQM 2016 from Friday evening to Thursday morning 
+
+--------------------
+
+==== Example of applying `xr.apply_ufunc` ====
+
+def _mode(*args, **kwargs):
+	import scipy
+	vals = scipy.stats.mode(*args, **kwargs)
+	# only return the mode (discard the count)
+	return vals[0].squeeze()
+
+
+def mode(obj, dim=None):
+	# note: apply always moves core dimensions to the end
+	# usually axis is simply -1 but scipy's mode function doesn't seem to like that
+	# this means that this version will only work for DataArray's (not Datasets)
+	import xarray as xr
+	assert isinstance(obj, xr.DataArray)
+	axis = obj.ndim - 1
+	return xr.apply_ufunc(_mode, obj,
+						  input_core_dims=dim,
+						  kwargs={'axis': axis})
+
+--------------------
+
+==== GeoHackWeek ====
+
+https://github.com/geohackweek 
+
+{{./screenshot_2020-09-29-154843.png?width=800}}
+{{./screenshot_2020-09-29-155329.png?width=800}}
+
+
+
+
+
+
+

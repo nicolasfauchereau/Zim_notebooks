@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-01T10:00:20+13:00
+
+====== Friday 01 Oct 2021 ======
+
+==== Julia for climate ? ====
+
+@julia 
+
+→  https://www.nature.com/articles/d41586-019-02310-3 Julia: come for the syntax, stay for the speed 
+
+→ https://juliaclimate.github.io/ClimateTools.jl/stable/ ClimateTools.jl is a collection of commonly-used tools in Climate science (include interpolation, bias correction, etc) 
+
+→ https://arxiv.org/abs/2109.09973: Julia for Biolin ogists ]

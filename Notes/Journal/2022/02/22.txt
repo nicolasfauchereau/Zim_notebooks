@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-22T11:40:50+13:00
+
+====== Tuesday 22 Feb 2022 ======
+
+==== CMIP6 on github ====
+
+@CMIP 
+
+https://github.com/topics/cmip6
+
+--------------------
+
+===== extraction of sequences =====
+
+@extremes 
+
+see in [[/home/nicolasf/research/CPP/indices/notebooks/Pacific_Blocking]] 
+
+→ **calculate_South_Pacific_Blocking.ipyn**b
+
+**extract_sequences** function in **src.py** 
+
+gives this kind of results: 
+
+{{~/Desktop/Screenshot from 2022-02-22 10-18-31.png}}
+
+--------------------
+
+==== Hands on ML with Scikit-Learn, Keras and Tensorflow 3rd edition ====
+
+see https://github.com/ageron/handson-ml3 and in [[~/sources/homl3]]
+
+--------------------
+
+==== Spectrum: a Spectral Analysis Library in Python ====
+
+https://pyspectrum.readthedocs.io/en/latest/ 
+
+--------------------
+
+===== bin statistics =====
+
+see DistributionalAnalysis-Python.ipynb in [[/home/nicolasf/Jupyter_notebooks/time-series/labs]] 
+
+{{./screenshot_2022-02-22-171126.png?width=700}}
+
+{{./screenshot_2022-02-22-171152.png?width=700}}

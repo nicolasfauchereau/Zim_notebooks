@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-25T14:39:34+13:00
+
+====== Monday 25 Oct 2021 ======
+
+==== ICU: recalculate the terciles probabilities over the hindcast period for validation ====
+
+@ICU 
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CDS/version_2]] 
+
+calculate_ensemble_probabilities_for_hindcast_terciles.ipynb 
+
+or **calculate_ensemble_probabilities_for_hindcast_terciles.py **
+
+the climatologies are in 
+
+[[/media/nicolasf/END19101/ICU/data/CDS/CLIMATOLOGY]] 
+
+for monthly and seasonal values 
+
+@TODO 
+
+→ move this to the current folder with the notebooks (C3S) and calculate the complete climatologies for JMA and ECCC
+→ check all the notebook used to calculate the verification scores, and move them in a separate folder for the generation of the figures for the paper 
+
+→ list of figures:
+
+1) situation map, with box for the domain(s) and the admin boundaries (for the calculation of the admin tercile table) 
+2) ACC as a function of leadtime 
+3) variability in ACC for leadtime 1 
+4) ACC as a function of leadtime and initial month
+4) correlation maps 
+5) accuracy of tercile probabilistic forecasts (maps) 
+6) ??? accuracy of probability below / above median ? 
+6) accuracy of tercile probabilistic forecasts for selected sub-regional entities 
+
+7) GPM IMERG climatology 
+8) example of EAR Watch map 
+9) example of ICU Water Stress outlook map 
+
+
+--------------------
+
+
+
+
+

@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-30T11:44:46+12:00
+
+====== Tuesday 30 Jun 2020 ======
+
+=== Unsupervised Learning for climate applications ===
+
+Includes SOM and linear and non-linear auto-encoders:
+
+https://colab.research.google.com/drive/1pkPYYWYrO5q7IT2rNeJyMRkgbAOxKdQS#offline=true&sandboxMode=true 
+
+and 
+
+[[~/research/Smart_Ideas/resources/ml_advanced_short_course_unsupervised.ipynb]] 
+
+

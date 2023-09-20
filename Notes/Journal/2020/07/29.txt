@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-29T09:30:53+12:00
+
+====== Wednesday 29 Jul 2020 ======
+
+===== Course on Deep Generative models =====
+
+covers Normalizing Flows, Variational Auto-encoders, etc 
+
+https://deepgenerativemodels.github.io/ 
+
+clones in [[/home/nicolasf/research/Smart_Ideas/resources/books_and_tutorials/DeepGenerativeModels]] 
+
+===== ClimAlign: Deep Generative Models for Climate Variables Downscaling =====
+
+see: 
+
+https://www.youtube.com/watch?v=Q_3VkgJk0zA&feature=youtu.be
+
+code is available at: 
+
+https://github.com/bgroenks96/generative-downscaling 
+
+based on some early work done by the Meteorology Santander Group, with several related papers and implementations (in R !) at 
+
+https://github.com/SantanderMetGroup/DeepDownscaling/ 
+
+papers 
+
+
+
+
+contact Brian Groenke: https://sites.google.com/view/bgroenke/ 
+
+and cloned locally in [[/home/nicolasf/research/Smart_Ideas/resources/repos_application_cases/generative-downscaling]] 
+
+MS Thesis is avaailable at https://search.proquest.com/openview/716b86a33eb0f7a609be1dfa7f0bae8b/1/advanced and copied locally 
+
+Downscaling_normalising_flows.pdf (extract) in resources/papers  
+
+NOTE: cool trick in the code to replace values below threshold by random values from a given distribution 
+
+prcp = xr.where(prcp < 1.0, np.random.uniform(0.0, 1.0, size=(prcp.Time.size, prcp.lat.size, prcp.lon.size)), prcp) 
+
+see also 
+
+https://github.com/bgroenks96/normalizing-flows 
+
+for more on Normalizing Flows 
+
+see also https://github.com/bgroenks96/cmip-embeddings  Cross-model embedding for CMIP data  
+
+===== PYCLIMDEX =====
+
+Implementation of **Climdex indices** in Python/xarray/dask  
+
+see https://github.com/bgroenks96/pyclimdex 
+
+pyclimdex currently supports the following indices for temperature and precipitation respectively:
+
+**Temperature**
+
+	Annual frost days
+	Annual tropical nights
+	Annual icing days
+	Annual summer days
+	Monthly max daily max temp (TXx)
+	Monthly min daily max temp (TXn)
+	Monthly max daily min temp (TNx)
+	Monthly min daily min temp (TNx)
+	Daily temperature range (DTR)
+
+**Precipitation**
+
+	Monthly 1-day precip (Rx1day)
+	Monthly 5-day precip (Rx5day)
+	Annual 10mm precip days
+	Annual 20mm precip days
+	Annual n mm precip days
+	Total precipitation (variable time period)
+	Simple intensity index (SDII)
+	Consecutive dry days (CDD)
+	Consecutive wet days (CWD)
+
+

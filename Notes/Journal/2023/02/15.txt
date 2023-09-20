@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-15T12:53:23+13:00
+
+====== Wednesday 15 Feb 2023 ======
+
+==== MSWEP processing ====
+
+@ICU @MSWEP 
+
+OK FUCK ! 
+
+calling **rclone** to update MSWEP280 just deletes all the climatologies previously saved in 
+
+[[/media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily]] 
+
+so need to re-run everything ! 
+

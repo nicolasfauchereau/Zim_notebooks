@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-18T09:46:27+12:00
+
+====== Wednesday 18 Aug 2021 ======
+
+==== NIWA VPN ====
+
+@VPN 
+
+see email: 
+
+https://outlook.office.com/mail/id/AAMkAGQyNTRkOTY2LTY2ZTAtNDIxMS1iMTM3LTdjZTYzMzYyNDdmZgBGAAAAAAA72QX96aKuR7KFZAy6bbtaBwDkCOwa56iSQ7B63dAd8Q1rAAAAVmCnAABqY5UDv5xfS5WuEc%2B2HrA5AACz%2B4RqAAA%3D
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse/extra/usr/lib/x86_64-linux-gnu/
+
+and you can now run the pulse secure UI with: 
+
+[[/usr/local/pulse/pulseUi]]
+
+--------------------
+
+==== ICU: modified the code in so that it reflects the operational paths ====
+
+@ICU 
+
+
+
+
+
+

@@ -1,0 +1,269 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-29T09:59:40+12:00
+
+====== Wednesday 29 Apr 2020 ======
+
+=== Eibe's email regarding the organisation of the CSV files on Deuce: ===
+
+"""
+Very cool! BTW: The SSD on deuce has been set up more reasonably now so that there is actually a /Scratch folder with a useful amount of space! It appears to have been misconfigured when it was first set up. (As a thank you to the student who has pointed this out to me when he noticed this on the other 2-GPU machine we have, I have given him access to deuce, but I can get him to stop using deuce when any of you need it. :-)
+
+I had a quick look at the non-standardised rainfall training and test data. There are possibly a couple of issues:
+
+* Overlap in training and test data for CanCM4i.
+
+**This is now fixed, I have removed the overlapping data, the training data for CanCM4i now ends up in 2017-03-31 like all the other GCMs ... **
+
+* Missing periods (gaps) in the test data.
+
+* The training data has the first three months of 2017. We should probably delete the last two of those when we run experiments so that there is absolutely no leakage between the target values in the training data and the test data?
+
+**The last date of the training data is 2017-03-31, which corresponds to the January - March 2017 average**
+
+**The earliest date of the tesing data is 2017-04-30, which corresponds to the February - April 2017 period, so there is indeed some leakage from the training to the test set.** 
+
+What follows is the output of some Linux commands on the data.
+
+The amount of training data is quite different for the different models:
+
+cut -f 4931 -d ',' < /downscaling/CSV/TRAIN/GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv | uniq -c
+	  1  185.0)"
+	288 ECMWF
+	287 UKMO
+	288 METEO_FRANCE
+	288 DWD
+	288 CMCC
+	420 NCEP_CFSv2
+	458 CanCM4i
+	432 GEM_NEMO
+	431 NASA_GEOSS2S
+	432 CanSIPSv2
+	456 JMA
+
+Starting dates in the training data:
+
+for model in `cut -f 4931 -d ',' < /downscaling/CSV/TRAIN/GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv | uniq | tail -11 | xargs`; do cut -f 1,4931 -d ',' < /downscaling/CSV/TRAIN/GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv | grep $model |  head -n 1; done
+1993-04-30,ECMWF
+1993-05-31,UKMO
+1993-04-30,METEO_FRANCE
+1993-04-30,DWD
+1993-04-30,CMCC
+1982-04-30,NCEP_CFSv2
+1981-04-30,CanCM4i
+1981-04-30,GEM_NEMO
+1981-05-31,NASA_GEOSS2S
+1981-04-30,CanSIPSv2
+1979-04-30,JMA
+
+It looks like the first season of 2017 is included in the training data (i.e., they do not all end in 2016 as you have said). See:
+
+cut -f 1,4931 -d ',' < /downscaling/CSV/TRAIN/GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv
+...
+2017-01-31,JMA
+2017-02-28,JMA
+2017-03-31,JMA
+
+and
+
+cut -f 1,4931 -d ',' < /downscaling/CSV/TRAIN/GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv | grep "2017-03-31"
+2017-03-31,ECMWF
+2017-03-31,UKMO
+2017-03-31,METEO_FRANCE
+2017-03-31,DWD
+2017-03-31,CMCC
+2017-03-31,NCEP_CFSv2
+2017-03-31,CanCM4i
+2017-03-31,GEM_NEMO
+2017-03-31,NASA_GEOSS2S
+2017-03-31,CanSIPSv2
+2017-03-31,JMA
+
+That seems fine though in because there does not appear to be overlap with the test data, see below.
+
+However, one of models (CanCM4i) has entries also the way up to December 2019 in the training data and this clearly overlaps with the test data:
+
+cut -f 1,4931 -d ',' < /downscaling/CSV/TRAIN/GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv | grep "2019-12-31"
+2019-12-31,CanCM4i
+
+Here are the stats for the test data:
+
+cut -f 4931 -d ',' < /downscaling/CSV/TEST/GCMs_and_targets_cat3_and_anomalies_RAIN_test_set.csv | uniq -c
+	  1  185.0)"
+	 33 ECMWF
+	 25 UKMO
+	 33 METEO_FRANCE
+	 33 DWD
+	 11 CMCC
+	 33 NCEP_CFSv2
+	 26 CanCM4i
+	 26 GEM_NEMO
+	 24 NASA_GEOSS2S
+	 26 CanSIPSv2
+	 33 JMA
+
+It looks like the test data has April 2017 as the earliest month:
+
+cut -f 1,4931 -d ',' < /downscaling/CSV/TEST/GCMs_and_targets_cat3_and_anomalies_RAIN_test_set.csv | grep "2017-03-31"
+cut -f 1,4931 -d ',' < /downscaling/CSV/TEST/GCMs_and_targets_cat3_and_anomalies_RAIN_test_set.csv | grep "2017-04-30"
+2017-04-30,ECMWF
+2017-04-30,METEO_FRANCE
+2017-04-30,DWD
+2017-04-30,NCEP_CFSv2
+2017-04-30,CanCM4i
+2017-04-30,GEM_NEMO
+2017-04-30,NASA_GEOSS2S
+2017-04-30,CanSIPSv2
+2017-04-30,JMA
+
+Some gaps I noticed in the test data (don’t know if they are intentional?):
+
+2019-03-31,CanCM4i
+2019-11-30,CanCM4i
+
+2019-03-31,GEM_NEMO
+2019-11-30,GEM_NEMO
+
+2017-04-30,NASA_GEOSS2S
+2018-02-28,NASA_GEOSS2S
+
+2019-03-31,CanSIPSv2
+2019-11-30,CanSIPSv2
+
+Starting dates in the test data:
+
+for model in `cut -f 4931 -d ',' < /downscaling/CSV/TEST/GCMs_and_targets_cat3_and_anomalies_RAIN_test_set.csv | uniq | tail -11 | xargs`; do cut -f 1,4931 -d ',' < /downscaling/CSV/TEST/GCMs_and_targets_cat3_and_anomalies_RAIN_test_set.csv | grep $model |  head -n 1; done
+2017-04-30,ECMWF
+2017-12-31,UKMO
+2017-04-30,METEO_FRANCE
+2017-04-30,DWD
+2019-02-28,CMCC
+2017-04-30,NCEP_CFSv2
+2017-04-30,CanCM4i
+2017-04-30,GEM_NEMO
+2017-04-30,NASA_GEOSS2S
+2017-04-30,CanSIPSv2
+2017-04-30,JMA
+
+Cheers,
+Eibe
+
+"""
+
+------------------------------------------------------------------------------------------------------------------
+
+===== Stocktake of the classification experiments on the NZ 6 regions' TMEAN and RAIN with AUTOGLUON and PYCARET =====
+
+see new version of the AUTOGLUON experiments in notebook **AutoGLUON.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/AUTOGLUON]] 
+
+==== AUTOGLUON models available: ====
+
+weighted_ensemble_k0_l1
+NeuralNetClassifier_STACKER_l0
+CatboostClassifier_STACKER_l0
+LightGBMClassifier_STACKER_l0
+ExtraTreesClassifierGini_STACKER_l0
+RandomForestClassifierGini_STACKER_l0
+ExtraTreesClassifierEntr_STACKER_l0
+LightGBMClassifierCustom_STACKER_l0
+KNeighborsClassifierDist_STACKER_l0
+RandomForestClassifierEntr_STACKER_l0
+KNeighborsClassifierUnif_STACKER_l0
+
+AutoGLUON can (if auto_stack is set to True during training) automatically utilize **bagging** and **multi-layer stack ensembling** to boost predictive accuracy. Set this = True if you are willing to tolerate longer training times in order to maximize predictive accuracy
+
+Tuning is set by setting **auto_stack**=False, **hyperparameter_tune**=True, but it is simply prohibitively expensive to run at least on a single machine 
+
+**Note, the parameters that can be set for each model are listed below:**
+    
++ NN: `autogluon/utils/tabular/ml/models/tabular_nn/hyperparameters/parameters.py`
+	Note: certain hyperparameter settings may cause these neural networks to train much slower.
+    
++ GBM: `autogluon/utils/tabular/ml/models/lgb/hyperparameters/parameters.py`
+	 See also the lightGBM docs: https://lightgbm.readthedocs.io/en/latest/Parameters.html
+     
++ CAT: `autogluon/utils/tabular/ml/models/catboost/hyperparameters/parameters.py`
+	 See also the CatBoost docs: https://catboost.ai/docs/concepts/parameter-tuning.html
+     
++ RF: See sklearn documentation: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+	Note: Hyperparameter tuning is disabled for this model.
+	Note: 'criterion' parameter will be overriden. Both 'gini' and 'entropy' are used automatically, training two models. 
+    
++ XT: See sklearn documentation: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesClassifier.html
+	Note: Hyperparameter tuning is disabled for this model.
+	Note: 'criterion' parameter will be overriden. Both 'gini' and 'entropy' are used automatically, training two models.
+    
++ KNN: See sklearn documentation: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+	Note: Hyperparameter tuning is disabled for this model.
+	Note: 'weights' parameter will be overriden. Both 'distance' and 'uniform' are used automatically, training two models.
+
+Hyperparamers for: 
+    
+Hyperparamers for:
+
+NN:
+https://github.com/awslabs/autogluon/blob/master/autogluon/utils/tabular/ml/models/tabular_nn/hyperparameters/parameters.py
+
+and:
+
+/home/nicolasf/research/Smart_Ideas/resources/AutoML/AUTOGLUON/NN.html
+
+GBM
+https://github.com/awslabs/autogluon/blob/master/autogluon/utils/tabular/ml/models/lgb/hyperparameters/parameters.py
+
+and
+
+/home/nicolasf/research/Smart_Ideas/resources/AutoML/AUTOGLUON/GBM.html
+
+CAT
+https://github.com/awslabs/autogluon/blob/master/autogluon/utils/tabular/ml/models/catboost/hyperparameters/parameters.py
+
+and
+
+/home/nicolasf/research/Smart_Ideas/resources/AutoML/AUTOGLUON/CAT.html
+
+------------------------------------------------------------------------------------------------------------------
+
+==== Image classification with AutoGluon ====
+
+@TODO: use AUTOGLUON image classification method
+
+see: https://autogluon.mxnet.io/tutorials/image_classification/kaggle.html 
+
+see [[/home/nicolasf/research/Smart_Ideas/code/processors/create_RGB_images.ipynb]] to create and save images as RGB 
+
+we need to create 3 different folders, (class_1, class_2, class_3), eg. for tercile classification for the NNI 
+
+**terciles_NNI/train**
+	├── Below
+	├── Normal
+	├── Above
+**terciles_NNI/test**
+	├── Below
+	├── Normal
+	├── Above
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

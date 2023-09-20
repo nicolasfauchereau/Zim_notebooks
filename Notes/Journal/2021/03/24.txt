@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-24T11:01:05+13:00
+
+====== Wednesday 24 Mar 2021 ======
+
+==== categories for the ICU "drought watch" ====
+
+below some considerations, potential percentiles used to define drought categories 
+
+**US Drought monitor percentiles**
+
+{{./screenshot_2021-03-24-110112.png}}
+
+**Regional "EAR" Watch (UNOCHA ?)** 
+
+{{./screenshot_2021-03-24-110320.png}}
+
+--------------------
+
+==== Validation ====
+
+**see articles on why MMEs are better** 
+
+Hagedorn, R., F. J. Doblas-Reyes, and T. N. Palmer, 2005: The rationale behind the success of multi-model ensembles in seasonal forecasting - I. Basic concept. Tellus A, 57, 219–233, https://doi.org/10.1111/j.1600-0870.2005.00103.x.
+
+Kim, G., and Coauthors, 2016: Global and regional skill of the seasonal predictions by WMO Lead Centre for Long-Range Forecast Multi-Model Ensemble: GLOBAL AND REGIONAL SKILL OF THE SEASONAL PREDICTIONS BY WMO LC-LRFMME. Int. J. Climatol., 36, 1657–1675, https://doi.org/10.1002/joc.4449.
+
+--------------------
+
+==== Using a clustering approach for downscaling monthly forecasts ====
+
+
+1) Z850 + SST monthly 1981 - 2016 hindcast period (ECMWF) 
+2) PCA + clustering, keep N clusters, treat (init, member, step) as observations and (lat, lon) as features, or (alternative) (init, member) as observations and (step, lat, lon) as features prior to PCA and clustering 
+
+3) calculate composite rainfall and temp anomalies for each cluster archetype 
+4)  take forecast
+5) attribute each member to cluster 
+
+--------------------
+
+==== quantile 0 == minimum ====
+
+see **calculate_hindcast_climatology.ipynb** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

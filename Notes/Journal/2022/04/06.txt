@@ -1,0 +1,126 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-04-06T09:04:07+12:00
+
+====== Wednesday 06 Apr 2022 ======
+
+==== Geospatial stuff, lidar etc ====
+
+see Rose Pearson (NIWA) repos: 
+
+https://github.com/rosepearson/lidar_example 
+
+https://github.com/rosepearson/GeoFabrics 
+
+--------------------
+
+==== ICU forecast table validation ====
+
+→ **GCMs_admin_hindcast_climatologies_and_probabilities.ipynb** calculate quantile climatologies for each admin area and GCM, and validate against reanalysis 
+
+The probabilities for each of the quantile categories are saved in netcdf, from the xarray dataset `quantiles_category_percent` 
+
+in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/admin/validation\/hindcast_categories]] 
+
+e.g. hindcast_categories/**empirical_tercile_categories_probabilities_hindcast_ECMWF_seasonal_Nauru_Nauru.nc** 
+
+also saved in netcdf in 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/admin/validation/hindcast_categories]] with filename 
+
+empirical_tercile_categories_probabilities_hindcast_ECMWF_seasonal_Nauru_Nauru.csv 
+
+{{./screenshot_2022-04-06-094532.png}}
+
+
+it also combines the probabilities with the observed categories, and it's all saved in: 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/admin/validation/hindcast_categories]]  
+
+--------------------
+
+==== make admin landsea masks ====
+
+@ICU 
+
+→ see `mask_dataset` function
+
+note that the GCM dataset is first subsetted, with a domain buffer of 1 degree around the bounds of the geometry, then 
+interpolated 5X, then the mask is derived 
+
+In the mask dataset, include the bounds 
+
+The land sea masks (in netcdf) are saved in 
+
+/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/admin/lsmasks
+
+the netcdf files contain the bounds, so first subset the GCMs, then interp (5X) then multiply by the mask 
+
+csv with the list of *sanitized* country names then admin areas: 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/admin/list_countries_admin.csv]] 
+
+
+
+--------------------
+
+==== Python for Climate Data Analysis: A Tutorial + Code ====
+
+see https://www.linkedin.com/pulse/python-climate-data-analysis-tutorial-code-ali-ahmadalipour/ 
+
+https://colab.research.google.com/drive/1B7gFBSr0eoZ5IbsA0lY8q3XL8n-3BOn4
+
+--------------------
+
+==== example of building a ANN to predict forecast fires using climate data: ====
+
+Calfire_ANN.py 
+
+in [[~/Jupyter_notebooks/.]] 
+
+--------------------
+
+==== Tutorial geospatial climate data analysis ====
+
+https://www.linkedin.com/pulse/python-climate-data-analysis-tutorial-code-ali-ahmadalipour/ 
+
+https://colab.research.google.com/drive/1B7gFBSr0eoZ5IbsA0lY8q3XL8n-3BOn4#scrollTo=3XXxuS7LieOO 
+
+
+Tutorial_Python_Geospatial.ipynb in [[~/Jupyter_notebooks/.]] 
+
+How to create an animation given a bunch of pngs: 
+
+@animation 
+
+{{./screenshot_2022-04-06-151459.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

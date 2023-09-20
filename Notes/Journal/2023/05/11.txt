@@ -1,0 +1,546 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-11T08:01:31+12:00
+
+====== Thursday 11 May 2023 ======
+
+
+==== Nature & biodiversity: Creating a nature positive future ====
+
+@PwC 
+
+https://www.pwc.com/gx/en/issues/esg/nature-and-biodiversity.html 
+
+https://www.pwc.com/gx/en/issues/esg/nature-and-biodiversity/closing-the-nature-investment-gap.html 
+
+https://www.pwc.com/gx/en/issues/esg.html
+
+--------------------
+
+==== tidbits ====
+
+@PwC 
+
+sustainablity is basically foresight + the willingness to endure in the future 
+
+feedback loop between business willing to finance low carbon and policy making 
+
+https://strategybusiness.pwc.com/business-risk-see-share-sort/p/1?utm_campaign=sbpwc-digital004Feb23&utm_medium=sbsite&utm_source=editorial 
+
+https://www.pwc.com/gx/en/issues/reinventing-the-future/take-on-tomorrow/climate-change-incentives-podcast-episode.html?WT.mc_id=CT11-PL1000-DM2-TR2-LS4-ND30-TTA9-CN_gx-fy23-xlos-sb-take-on-tomorrow-podcast-sb-blog#transcript 
+
+--------------------
+
+==== MBIE downscaling: VCSN to zarr ====
+
+@Downscaling @CMIP6 @MBIE 
+
+in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/VCSN_Kupe/VCSN_Rain_Council/regrid]] 
+
+VCSN_Rainbc5k_2020:         
+longitude = 243 ;
+latitude = 260 ;
+
+in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/VCSN_Kupe/tmaxn]] 
+
+VCSN_Tmaxn5k_2020: 
+longitude = 243 ;
+latitude = 260 ;
+
+in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/VCSN_Kupe/tminn]] 
+
+VCSN_Tn5k_2020: 
+longitude = 243 ;
+latitude = 260 ;
+
+--------------------
+
+==== download CMIP6 ====
+
+@CMIP6 @PwC 
+
+== EC-Earth3 historical ==
+
+**pr**
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for year in {1959..2014}
+do
+
+	echo getting the following year: ${year}
+	wget http://esg-dn2.nsc.liu.se/thredds/fileServer/esg_dataroot1/cmip6data/CMIP6/CMIP/EC-Earth-Consortium/EC-Earth3/historical/r1i1p1f1/day/pr/gr/v20200310/pr_day_EC-Earth3_historical_r1i1p1f1_gr_${year}0101-${year}1231.nc
+
+done
+
+#!/bin/bash
+
+**tasmin**
+
+for year in {1959..2014}
+do
+
+	echo getting the following year: ${year}
+	wget http://esg-dn2.nsc.liu.se/thredds/fileServer/esg_dataroot1/cmip6data/CMIP6/CMIP/EC-Earth-Consortium/EC-Earth3/historical/r1i1p1f1/day/tasmin/gr/v20200310/tasmin_day_EC-Earth3_historical_r1i1p1f1_gr_${year}0101-${year}1231.nc
+
+done
+
+**tasmax**
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for year in {1959..2014}
+do
+
+	echo getting the following year: ${year}
+	wget http://esg-dn2.nsc.liu.se/thredds/fileServer/esg_dataroot1/cmip6data/CMIP6/CMIP/EC-Earth-Consortium/EC-Earth3/historical/r1i1p1f1/day/tasmax/gr/v20200310/tasmax_day_EC-Earth3_historical_r1i1p1f1_gr_${year}0101-${year}1231.nc
+
+done
+
+**merge** 
+
+# this is to merge and tidy files for NCL 
+# this is just for a downscaling animation comparison
+
+module load CDO
+
+year=1960
+mon_s=1      # first month is missing from CCAM
+mon_e=8
+
+idir=/nesi/project/niwa00018/gibsonp/dload_data/CMIP6/manual_download/EC-Earth3/historical/r1i1p1f1/
+
+var=pr
+pr_file=${idir}/${var}/${var}_day_EC-Earth3_historical_r1i1p1f1_gr_19600101-19601231.nc
+var=psl
+psl_file=${idir}/${var}/daymean_psl_6hrPlevPt_EC-Earth3_historical_r1i1p1f1_gr_196001010000-196012311800.nc
+
+# tidy
+# note the domain is to broadly match CCAM
+cdo -L -del29feb -sellonlatbox,160,186,-28,-55 -mulc,86400 -selyear,$year -selmon,${mon_s}/${mon_e} $pr_file EC-Earth3_pr_day_196001.nc
+cdo -L -del29feb -sellonlatbox,160,186,-28,-55 -selyear,$year -selmon,${mon_s}/${mon_e} $psl_file EC-Earth3_psl_day_196001.nc
+
+**tas**
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for year in {1980..2014}
+do
+	echo getting the following year: ${year}
+	wget http://esg-dn2.nsc.liu.se/thredds/fileServer/esg_dataroot1/cmip6data/CMIP6/CMIP/EC-Earth-Consortium/EC-Earth3/historical/r1i1p1f1/day/tas/gr/v20200310/tas_day_EC-Earth3_historical_r1i1p1f1_gr_${year}0101-${year}1231.nc
+
+done
+
+**psl (6 hourly initially)**
+
+for year in {1960..1961}
+do
+	echo getting the following year: ${year}
+	wget http://esg-dn2.nsc.liu.se/thredds/fileServer/esg_dataroot1/cmip6data/CMIP6/CMIP/EC-Earth-Consortium/EC-Earth3/historical/r1i1p1f1/6hrPlevPt/psl/gr/v20200310/psl_6hrPlevPt_EC-Earth3_historical_r1i1p1f1_gr_${year}01010000-${year}12311800.nc
+done
+
+**list of variables**
+
+drwxr-sr-x 2 gibsonp niwa00018 32768 Sep  1  2022 tasmin
+drwxr-sr-x 2 gibsonp niwa00018 32768 Sep  1  2022 tasmax
+drwxr-sr-x 2 gibsonp niwa00018 32768 Sep 21  2022 pr
+drwxr-sr-x 2 gibsonp niwa00018  4096 Sep 21  2022 tas
+drwxr-sr-x 2 gibsonp niwa00018 32768 Sep 21  2022 ua
+drwxr-sr-x 2 gibsonp niwa00018 32768 Oct 21  2022 sic
+drwxr-sr-x 2 gibsonp niwa00018 32768 Oct 24  2022 tos
+drwxr-sr-x 3 gibsonp niwa00018 32768 Oct 24  2022 psl
+drwxr-sr-x 2 gibsonp niwa00018  4096 Oct 24  2022 merge
+
+== EC-Earth3 SSP370 ==
+
+**tas** 
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for year in {2015..2100}
+do
+	echo getting the following year: ${year}
+	wget http://esg-dn2.nsc.liu.se/thredds/fileServer/esg_dataroot1/cmip6data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp370/r1i1p1f1/Amon/tas/gr/v20200310/tas_Amon_EC-Earth3_ssp370_r1i1p1f1_gr_${year}01-${year}12.nc
+done
+
+
+== ACCESS-CM2 historical ==
+
+**pr**
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/pr/gn/v20210607/pr_day_ACCESS-CM2_historical_r4i1p1f1_gn_19500101-19991231.nc
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/pr/gn/v20210607/pr_day_ACCESS-CM2_historical_r4i1p1f1_gn_20000101-20141231.nc
+
+**tasmin** 
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/tasmin/gn/v20210607/tasmin_day_ACCESS-CM2_historical_r4i1p1f1_gn_19500101-19991231.nc
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/tasmin/gn/v20210607/tasmin_day_ACCESS-CM2_historical_r4i1p1f1_gn_20000101-20141231.nc
+
+**tasmax** 
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/tasmax/gn/v20210607/tasmax_day_ACCESS-CM2_historical_r4i1p1f1_gn_19500101-19991231.nc
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/tasmax/gn/v20210607/tasmax_day_ACCESS-CM2_historical_r4i1p1f1_gn_20000101-20141231.nc
+
+**tas** 
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/tas/gn/v20210607/tas_day_ACCESS-CM2_historical_r4i1p1f1_gn_19500101-19991231.nc
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/day/tas/gn/v20210607/tas_day_ACCESS-CM2_historical_r4i1p1f1_gn_20000101-20141231.nc
+
+**psl (6 hourly)** 
+
+# get daily psl chunk
+
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/6hrPlevPt/psl/gn/v20210607/psl_6hrPlevPt_ACCESS-CM2_historical_r4i1p1f1_gn_198001010600-199001010000.nc
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/6hrPlevPt/psl/gn/v20210607/psl_6hrPlevPt_ACCESS-CM2_historical_r4i1p1f1_gn_199001010600-200001010000.nc
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/6hrPlevPt/psl/gn/v20210607/psl_6hrPlevPt_ACCESS-CM2_historical_r4i1p1f1_gn_200001010600-201001010000.nc
+wget http://esgf.nci.org.au/thredds/fileServer/master/CMIP6/CMIP/CSIRO-ARCCSS/ACCESS-CM2/historical/r4i1p1f1/6hrPlevPt/psl/gn/v20210607/psl_6hrPlevPt_ACCESS-CM2_historical_r4i1p1f1_gn_201001010600-201501010000.nc
+
+== NorESM2-MM historical ==
+
+**pr** 
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for decade in {200..200}
+do
+	echo getting the following decade: ${decade}0
+#    wget --continue http://noresg.nird.sigma2.no/thredds/fileServer/esg_dataroot/cmor/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/pr/gn/v20191108/pr_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+
+	# changed to new host node - more stable (same version)
+	wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/pr/gn/v20191108/pr_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+
+done
+
+# last file
+
+wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/pr/gn/v20191108/pr_day_NorESM2-MM_historical_r1i1p1f1_gn_20100101-20141231.nc
+
+**tasmin** 
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for decade in {196..201}
+do
+	echo getting the following decade: ${decade}0
+	wget --continue http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/tasmin/gn/v20191108/tasmin_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+done
+
+wget --continue http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/tasmin/gn/v20191108/tasmin_day_NorESM2-MM_historical_r1i1p1f1_gn_20100101-20141231.nc
+
+**tasmax** 
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for decade in {200..201}
+do
+	echo getting the following decade: ${decade}0
+	#wget --continue http://noresg.nird.sigma2.no/thredds/fileServer/esg_dataroot/cmor/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/tasmax/gn/v20191108/tasmax_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+	wget --continue http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/tasmax/gn/v20191108/tasmax_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+
+done
+
+wget --continue http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/tasmax/gn/v20191108/tasmax_day_NorESM2-MM_historical_r1i1p1f1_gn_20100101-20141231.nc
+
+**tas** 
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for decade in {195..200}
+do
+	echo getting the following decade: ${decade}0
+	#wget --continue http://noresg.nird.sigma2.no/thredds/fileServer/esg_dataroot/cmor/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/psl/gn/v20191108/psl_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+
+	# changed to new host node - more stable (same version)
+	wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/tas/gn/v20191108/tas_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+
+done
+
+# last file
+
+wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/tas/gn/v20191108/tas_day_NorESM2-MM_historical_r1i1p1f1_gn_20100101-20141231.nc
+
+**psl (daily)** 
+
+#!/bin/bash
+
+# needs to run on wclim01
+# screen -S EC_hus
+
+for decade in {195..199}
+do
+	echo getting the following decade: ${decade}0
+	#wget --continue http://noresg.nird.sigma2.no/thredds/fileServer/esg_dataroot/cmor/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/psl/gn/v20191108/psl_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+
+	# changed to new host node - more stable (same version)
+	wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/psl/gn/v20191108/psl_day_NorESM2-MM_historical_r1i1p1f1_gn_${decade}00101-${decade}91231.nc
+
+done
+
+# last file
+
+wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/day/psl/gn/v20191108/psl_day_NorESM2-MM_historical_r1i1p1f1_gn_20100101-20141231.nc
+
+**psl (6hrly)**
+
+#!/bin/bash
+
+wget https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/6hrPlevPt/psl/gn/v20191108/psl_6hrPlevPt_NorESM2-MM_historical_r1i1p1f1_gn_198001010300-198912312100.nc
+wget https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/6hrPlevPt/psl/gn/v20191108/psl_6hrPlevPt_NorESM2-MM_historical_r1i1p1f1_gn_199001010300-199912312100.nc
+wget https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/6hrPlevPt/psl/gn/v20191108/psl_6hrPlevPt_NorESM2-MM_historical_r1i1p1f1_gn_200001010300-200912312100.nc
+wget https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/NCC/NorESM2-MM/historical/r1i1p1f1/6hrPlevPt/psl/gn/v20191108/psl_6hrPlevPt_NorESM2-MM_historical_r1i1p1f1_gn_201001010300-201412312100.nc
+
+== NorESM2-MM SSP370 ==
+
+**pr** 
+
+#!/bin/bash
+
+# needs to run on virtual
+# screen -S EC_hus
+
+wget --continue http://noresg.nird.sigma2.no/thredds/fileServer/esg_dataroot/cmor/CMIP6/ScenarioMIP/NCC/NorESM2-MM/ssp370/r1i1p1f1/day/pr/gn/v20191108/pr_day_NorESM2-MM_ssp370_r1i1p1f1_gn_20910101-21001231.nc
+
+**tas** 
+
+#!/bin/bash
+
+var=tas
+
+# first
+wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/ScenarioMIP/NCC/NorESM2-MM/ssp370/r1i1p1f1/day/${var}/gn/v20191108/${var}_day_NorESM2-MM_ssp370_r1i1p1f1_gn_20150101-20201231.nc
+
+for decade in {202..210}
+do
+	echo getting the following decade: ${decade}0
+	decade2=`expr $decade + 1`
+
+	wget http://esgf-data3.diasjp.net/thredds/fileServer/esg_dataroot/CMIP6/ScenarioMIP/NCC/NorESM2-MM/ssp370/r1i1p1f1/day/${var}/gn/v20191108/${var}_day_NorESM2-MM_ssp370_r1i1p1f1_gn_${decade}10101-${decade2}01231.nc
+    
+done 
+
+== GFDL-ESM4 historical ==
+
+**pr** 
+
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/pr/gr1/v20190726/pr_day_GFDL-ESM4_historical_r1i1p1f1_gr1_19700101-19891231.nc
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/pr/gr1/v20190726/pr_day_GFDL-ESM4_historical_r1i1p1f1_gr1_19900101-20091231.nc
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/pr/gr1/v20190726/pr_day_GFDL-ESM4_historical_r1i1p1f1_gr1_20100101-20141231.nc
+
+tasmin 
+
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/tasmin/gr1/v20190726/tasmin_day_GFDL-ESM4_historical_r1i1p1f1_gr1_19700101-19891231.nc
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/tasmin/gr1/v20190726/tasmin_day_GFDL-ESM4_historical_r1i1p1f1_gr1_19900101-20091231.nc
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/tasmin/gr1/v20190726/tasmin_day_GFDL-ESM4_historical_r1i1p1f1_gr1_20100101-20141231.nc
+
+tasmax 
+
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/tasmax/gr1/v20190726/tasmax_day_GFDL-ESM4_historical_r1i1p1f1_gr1_19700101-19891231.nc
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/tasmax/gr1/v20190726/tasmax_day_GFDL-ESM4_historical_r1i1p1f1_gr1_19900101-20091231.nc
+wget http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/day/tasmax/gr1/v20190726/tasmax_day_GFDL-ESM4_historical_r1i1p1f1_gr1_20100101-20141231.nc
+q
+tas 
+
+wget --no-check-certificate https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/Amon/tas/gr1/v20190726/tas_Amon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc
+
+psl 
+
+wget --no-check-certificate https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/historical/r1i1p1f1/Amon/psl/gr1/v20190726/psl_Amon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc
+
+== GFDL-ESM4 SSP370 ==
+
+tas 
+
+wget http://aims3.llnl.gov/thredds/fileServer/css03_data/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp370/r1i1p1f1/Amon/tas/gr1/v20180701/tas_Amon_GFDL-ESM4_ssp370_r1i1p1f1_gr1_201501-210012.nc
+
+
+== NZESM ==
+
+In this case, copied from Jonny directory on Maui:
+
+historical:
+rsync -ravP login.maui.niwa.co.nz://nesi/project/niwa00013/williamsjh/ccam/extracted-data/merged-data/bl658-{1979..2015}-pr* .
+rsync -ravP login.maui.niwa.co.nz://nesi/project/niwa00013/williamsjh/ccam/extracted-data/merged-data/bl658-{1979..2015}-psl* .
+rsync -ravP login.maui.niwa.co.nz://nesi/project/niwa00013/williamsjh/ccam/extracted-data/merged-data/bl658-{1979..2015}-ua* .
+
+ssp370:
+rsync -ravP login.maui.niwa.co.nz://nesi/project/niwa00013/williamsjh/ccam/extracted-data/merged-data/bp908-{2015..2099}-pr.nc
+
+NOTE for the CC signal work, we can also just copy from our processed CCAM files:
+rsync -ravP login.maui.niwa.co.nz:/nesi/project/niwa00018/gibsonp/run_ccam/pre_processing/prep_CMIP6/nudging/NZESM/historical/wdir/C52CCAM_NZESM_historical_* .
+
+
+== AWI-CM-1-1-MR historical ==
+
+pr 
+
+for y in {1980..2015}; do
+
+		wget http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/AWI/AWI-CM-1-1-MR/historical/r1i1p1f1/3hr/pr/gn/v20181218/pr_3hr_AWI-CM-1-1-MR_historical_r1i1p1f1_gn_${y}01010130-${y}12312230.nc
+
+done
+
+tasmin 
+
+for y in {1970..1979}; do
+		echo $y
+		wget http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/AWI/AWI-CM-1-1-MR/historical/r1i1p1f1/day/tasmin/gn/v20181218/tasmin_day_AWI-CM-1-1-MR_historical_r1i1p1f1_gn_${y}0101-${y}1231.nc
+done
+
+tasmax 
+
+for y in {1970..1980}; do
+		echo $y
+		wget http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/AWI/AWI-CM-1-1-MR/historical/r1i1p1f1/day/tasmax/gn/v20181218/tasmax_day_AWI-CM-1-1-MR_historical_r1i1p1f1_gn_${y}0101-${y}1231.nc
+done
+
+tas 
+
+for y in {1970..2015}; do
+		echo $y
+		wget http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/AWI/AWI-CM-1-1-MR/historical/r1i1p1f1/day/tas/gn/v20181218/tas_day_AWI-CM-1-1-MR_historical_r1i1p1f1_gn_${y}0101-${y}1231.nc
+done
+
+== AWI-CM-1-1-MR SSP370 ==
+
+for y in {2015..2100}; do
+		echo $y
+		wget http://esgf3.dkrz.de/thredds/fileServer/cmip6/ScenarioMIP/AWI/AWI-CM-1-1-MR/ssp370/r1i1p1f1/Amon/tas/gn/v20190529/tas_Amon_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn_${y}01-${y}12.nc
+done
+
+
+--------------------
+
+==== CMIP6 filenames and directory structure explained ====
+
+@CMIP6 @MBIE @PwC 
+
+https://help.ceda.ac.uk/article/4801-cmip6-data 
+
+https://pcmdi.llnl.gov/CMIP6/Guide/modelers.html
+
+--------------------
+
+
+https://github.com/udit1408/cmip6_downscaling/blob/master/12_pr.ipynb 
+
+
+https://github.com/udit1408/cmip6_downscaling/blob/master/13_tmin.ipynb 
+
+
+https://github.com/TaufiqHassan/acccmip6 
+
+--------------------
+
+==== ACCCCMIP6: search and download the CMIP6 database ====
+
+@CMIP6 @PwC 
+
+https://github.com/TaufiqHassan/acccmip6 
+
+e.g.: search for all the CMIP6 common realizations between historical and ssp370 for tas, daily 
+
+acccmip6 -o S -m ACCESS-CM2 -v tas,pr -f day -e historical,ssp370 -time yes -cr
+
+--------------------
+
+==== Coupled Model Intercomparison Project Phase 6 (CMIP6) Experimental Design and Organization ====
+
+@CMIP6 @PwC 
+
+special issue or Geoscientific Model Development (GMD) 
+
+https://gmd.copernicus.org/articles/special_issue590.html 
+
+--------------------
+
+==== pyESDv1.0.1: An open-source Python framework for empirical-statistical downscaling of climate information ====
+
+https://gmd.copernicus.org/preprints/gmd-2023-67/gmd-2023-67.pdf 
+
+https://github.com/Dan-Boat/PyESD 
+
+see also: 
+
+https://github.com/Dan-Boat/pyClimat 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

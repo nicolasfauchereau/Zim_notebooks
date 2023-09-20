@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-11T14:26:51+12:00
+
+====== Friday 11 Sep 2020 ======
+
+check [[Journal:2020:09:10|10/09/20]] 
+
+for several entries related to Friday 11 September 
+
+--------------------
+
+Check downloads, preprocessing and processing for the SI GCMs 
+
+see 
+
+[[/home/nicolasf/research/Smart_Ideas/code/checks]] 
+
+also use YAML files to store dictionnaries, e.g. notebook `make_yaml.ipynb` 
+
+{{./screenshot_2020-09-11-142958.png}}
+
+
+==== GEFS version 12 data, for possible subseasonal (15 days to one month) downscaling ====
+
+Note that GEFS version 12 is available on AWS, see 
+
+https://registry.opendata.aws/tag/meteorological/
+
+https://registry.opendata.aws/noaa-gefs-reforecast/#usageexamples 
+
+and in particular https://github.com/vgensini/gefs_v12_example/blob/master/GEFS_v12_eample.ipynb 
+as well as https://mogismog.github.io/retro-diss-part-3.html#retro-diss-part-3 
+
+and https://github.com/mogismog/redissertation/blob/master/redissertation/process_reforecast_data.py 
+
+check in particular the parallel processing of the download: 
+
+from joblib import Parallel, delayed
+
+
+	# TODO: Should this be async and not parallelized?
+	_ = Parallel(n_jobs=n_jobs, verbose=25)(
+		delayed(download_and_process_grib)(
+			f,
+			latitude_bounds,
+			longitude_bounds,
+			forecast_days_bounds,
+			local_save_dir,
+			pressure_levels,
+		)
+		for f in globbed_list
+	)
+
+
+These are downloaded in [[/home/nicolasf/operational/GEFS/reforecast_on_AWS]] 
+
+Note that some members apparently go out to 35 days 
+
+https://noaa-gefs-retrospective.s3.amazonaws.com/index.html 
+
+grid resolution is 0.25 deg. out to 10 days, 0.5 deg beyond 10 days 
+
+suggested that we could use neural networks to do the downscaling, and if so you can 'pretrain' the NN models on e.g. the reanalyses (which are longer, i.e. a product such as ERA5). We could try getting some co-funding from T&I, as there's an aspect related to training the models to automatically extract informational, non-linear features from weather forecasts fields, this part is generalisable to other applications
+
+see the chat room "GEFSv12" 
+

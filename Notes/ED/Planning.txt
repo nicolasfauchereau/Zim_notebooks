@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-08T12:06:00+12:00
+
+====== Planning ======
+Created Monday 08 August 2022
+
+Extract and compile dataset on extreme weather events in NZ from weather station observation and daily climate maps data.  
+
+Submit draft paper on work on Wellington ED data analysis to selected journal publication 
+
+Report on the findings from correlating and analysing ED data from NZ DHBs with extreme weather events and environmental conditions. 

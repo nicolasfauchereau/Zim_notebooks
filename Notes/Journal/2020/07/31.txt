@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-31T10:57:43+12:00
+
+====== Friday 31 Jul 2020 ======
+
+===== Compression of VCSN netcdf =====
+
+see in **compress_netcdf.ipynb** in [[/home/nicolasf/operational/VCSN/notebooks]] 
+
+added options to save netcdf variables in float32 instead of float64 and using zlib compression 
+
+@Ideas 
+
+== Normalizing each fold (in stratidied k-fold) by the multimodel / multiensemble Mu and Sigma. ==
+
+The variability in the ensemble will ensure variance in the fields is conserved (i,e ensemble / GCM hot biased will presumably still be hot biased) 
+
+== Other ideas ==
+
+* Use the regional (6 regions) forecasts from the different GCMs as the features in structured classification or regression
+* Use a mix of features derived from the GCMs and observational features (indices) as inputs 
+* Use "Wide and Deep" architecture to mix 2D inputs (e.g. fed to CNNS) and 'structured' features (e.g. climate indices), see paper: https://arxiv.org/abs/1606.07792 
+
+===== CNN: use the examples in WeatherBench ! =====
+
+https://github.com/pangeo-data/WeatherBench/blob/master/notebooks/3-cnn-example.ipynb 
+
+===== Also have a look at DEEPSD =====
+
+https://github.com/tjvandal/deepsd 
+
+

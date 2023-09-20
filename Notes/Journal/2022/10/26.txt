@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-26T09:08:18+13:00
+
+====== Wednesday 26 Oct 2022 ======
+
+==== visualizing JSON files at the command line with Python ====
+
+python -m json.tool --sort-keys --json-lines < data.jsonl
+
+--------------------
+

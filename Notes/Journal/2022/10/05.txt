@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-05T12:36:09+13:00
+
+====== Wednesday 05 Oct 2022 ======
+
+==== Climate Impact Lab Global Downscaled Projections for Climate Impacts Research ====
+
+log onto MS Planetary Computer Hub 
+
+see email 
+
+"""
+Welcome to the Planetary Computer preview!
+
+Your account request was recently approved and you now have access to all of the resources of the Planetary Computer.
+
+Next steps:
+
+1. To access the Planetary Computer resources, Nicolas.Fauchereau@niwa.co.nz needs to be associated with a Microsoft Account. You'll be prompted to create one when you first log in, if necessary.
+
+2. Launch a server on the Planetary Computer Hub to access a compute environment hosted on Azure near our datasets. 
+
+You can start getting familiar with the Planetary Computer by checking out the Data Catalog and documentation. The Data Catalog has example Python notebooks for several of our datasets, which can be launched directly in the Hub, and is a great starting point for using all of the features of the service. Finally, the Developer Portal lets you manage your API keys for requesting data outside of the Hub.
+
+During this preview period, we are actively seeking feedback on features, workflows, and issues you may encounter during usage. Please be sure to read our Terms of Use. If you have questions regarding your account, or wish to close your account, please email planetarycomputer@microsoft.com.
+
+Thank you for your interest in the Planetary Computer, and for agreeing to help test and improve the service.
+
+-Dan, and the rest of the Planetary Computer team
+
+
+"""
+
+
+https://aus01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fplanetarycomputer.microsoft.com%2Fcompute&data=04%7C01%7CNicolas.Fauchereau%40niwa.co.nz%7Ce7e0d587fe7e48ab887d08d95b7ea112%7C41caed736a0c468aba499ff6aafd1c77%7C0%7C1%7C637641421750965899%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0&sdata=Faw46v2avoplhZBCn3XfA5%2FyoGVlASYwsvkacbOPMmM%3D&reserved=0
+
+https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/datasets/cil-gdpcir/cil-gdpcir-example.ipynb 

@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-16T10:16:54+12:00
+
+====== Monday 16 May 2022 ======
+
+==== Tuvalu IWRM project ====
+
+@ICU @Tuvalu 
+
+gap in the subseasonal scale, solutions: 
+
+→ GEFS (out to 35 days) 
+→ MSWX: global 3-hourly 0.1° bias-corrected meteorological data including near real-time updates and forecast ensembles
+→ ECMWF 
+
+--------------------
+
+===== compound extremes =====
+
+@extremes cdwea 
+
+see **recode_VCSN_time_series_heatwaves.ipynb**
+ 
+save netcdf files with the recoded time series, e.g. 
+
+**recoded_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.n**c 
+
+for sequences of daily T_min over the 95th percentile (no detrend applied) 
+
+- **l_starts_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.npy**: for each grid point (11491 'agents') the indices of the starts of the sequences (a sequence here is being defined as at least 1 day) 
+- **l_ends_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.npy**: for each grid point (11491 'agents') the indices of the ends of the sequences (a sequence here is being defined as at least 1 day) 
+- **l_durations_sequences_Tmin_n_detrended_False_95_percentile_sequ_1.npy:** for each grid point (11491 'agents') the duration of each sequence (a sequence here is being defined as at least 1 day) 
+
+

@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-24T11:50:51+13:00
+
+====== Wednesday 24 Nov 2021 ======
+
+==== Digits classification ====
+
+@ML @DL 
+
+see 
+
+https://www.kaggle.com/c/digit-recognizer/code
+
+lots of examples including using CNNs 
+
+see https://www.kaggle.com/phanttan/cnn-keras-99-accuracy 
+
+
+
+--------------------
+
+==== New version of xclim ====
+
+@EVA 
+
+- xclim   0.29.0  pyhd8ed1ab_0  installed                    
++ xclim   0.31.0  pyhd8ed1ab_0  conda-forge/noarch     405 KB
+

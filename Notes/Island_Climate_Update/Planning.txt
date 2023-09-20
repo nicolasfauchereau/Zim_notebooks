@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-04T09:22:24+12:00
+
+====== Planning ======
+Created Thursday 04 August 2022
+
+@planning
+
+See Document attached, and mail from Doug Ramsay (Pacific Centre contract - quick chat) 
+
+Develop new science that underpins the products and information delivered through the Island Climate Update, with a focus on: 
+
+[ ] Improving calculation of drought indices from satellite and real-time multi-source weighted ensemble prediction (MSWEP) products
+[ ] Statistical and machine-learning bias correction for downscaling global climate model forecasts
+[ ] Further developing of probabilistic seasonal drought indices forecasts and development of new forecast products focussing on: 
+	[ ] 1) agricultural drought and 
+	[ ] 2) marine heat wave forecasts for the Pacific region.
+[ ] Produce at least one journal science paper from this work. 
+
+
+
+
+

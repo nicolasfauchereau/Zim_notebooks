@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-25T08:47:54+13:00
+
+====== Wednesday 25 Mar 2020 ======
+
+=== extraction of grids for super-resolution ML experiments ===
+
+Extract the GCM grid points for the whole of NZ = melt the geometries, do this on a common HIGH RES GRID, not the interpolated grid of JMA, JMA will then be excluded from the analysis 
+
+Note that depending on the model's resolution and grid, one might need to extend the margin to 2 degrees when selecting the subset with salem, e.g. with CanCM4i
+
+{{{code: lang="python" linenumbers="True"
+region = dset.salem.subset(shape=shape, margin=2)
+}}}
+
+
+The output (netcdf file) contains only grid points intersecting or inside the NZ multipolygon, and is exported for each GCM and Variable in 
+
+[[/home/nicolasf/research/Smart_Ideas/outputs/targets/GCMs/NZ_shape_grid.]]
+
+Note that ALL the ensemble members are kept, as it could be useful to augment the number of instance for super-resolution models ... 
+
+Note that the time dimension is already shifted 3 months in the future so corresponds to the actual 'forecast valid time', with the usual convention that the month is the last month of the 3 months period (e.g. month 3 → March → January - March). 
+
+tracking: 
+
+[ ] CDS 
+	[ ] ECMWF 
+		[ ] T2M
+		[ ] PRECIP 
+	[ ] UKMO
+		[ ] T2M
+		[ ] PRECIP 
+	[ ] METEO_FRANCE
+		[ ] T2M
+		[ ] PRECIP 
+	[ ] CMCC
+		[ ] T2M
+		[ ] PRECIP
+	[ ] DWD
+		[ ] T2M
+		[ ] PRECIP 
+
+[ ] IRI
+	[ ] NCEP_CFSv2
+		[ ] T2M
+		[ ] PRECIP 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\
+
+
+
+
+
+
+

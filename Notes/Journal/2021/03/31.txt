@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-31T10:06:08+13:00
+
+====== Wednesday 31 Mar 2021 ======
+
+==== ARC COE for Climate Extremes: Computational Modelling Systems Training Resources ====
+
+https://github.com/coecms-training 
+
+--------------------
+
+==== CLEX CMS Blog | CMS provides programming and data support to researchers at CLEX, the ARC Centre of Excellence for Climate Extremes ====
+
+https://climate-cms.org/
+
+--------------------
+
+==== tweeting ICU hotspots ====
+
+1) 
+
+Kia Ora twitter, I thought I would share here some climate services development (AT)NIWA colleagues (inc. Doug Ramsay, (AT)Nollbe (AT)DLorrey and I have been doing for the Pacific region. Threads follows.  Disclaimer first: all that follows is in the "early prototype" stage, and will definitely evolve in the next few weeks. 
+
+2) 
+
+One of the goal of what we have been doing is to provide a regional overview of areas in the Pacific at risk of water stress. We are using the freely available NASA GPM IMERG data for realtime rainfall monitoring and the monthly and seasonal climate forecasts made available on the CDS to look at how the conditions might evolve over the next 5 months  
+
+3) 
+
+First the monitoring bit: using GPM-IMERG, we can look at e.g. at the last N days (here 90) rainfall accumulation, and indicate in what percentile range it falls. Below are categories inspired by the "EAR" (Early Action Rainfall) percentile thresholds used by many Pacific countries
+
+[EAR map]
+
+4) 
+
+Now the forecast bit:  Using 6 General Circulation Models (GCMs), namely ECMWF, UKMO, Meteo-France, DWD, CMCC and NCEP, each containing a number of 'members' (i.e. possible trajectories for the future climate) we can derive e.g. the probability that rainfall, over the next 3 or 5 months, will be below a given percentile threshold, below is an illustration with the 25th percentile, the area contoured indicates high probability (> 50% chance).  
+
+[map probabilities]
+
+5) 
+
+We can then combine the 2 streams of information: 1) what the conditions are right now, and 2) what the future might hold (next 5 months forecasts), to highlight regions at risk of  water stress. A set of conditional statements are used to do so, e.g. below areas are highlighted that are currently dry (as per the past 90 days) AND have a high likelihood of  remaining dry over the next 5 months. 
+
+6) 
+
+All this development is done in Python, and relies heavily on a number of libraries such as numpy, scipy, matplotlib, pandas, geopandas, xarray, etc ... all code will be open-sourced in the near future, so watch this space. 
+
+7) 
+
+Validation of the GCMs forecasts (individual models, as well as all of them together, the so-called "Multi-Model Ensemble", or MME) is in progress, so far the various diagnostics indicates the clear value of using a MME approach vs a single model, example below is the Anomaly Correlation Coefficient (or ACC, i.e. indicating how close the forecast patterns are to the observed ones, in the Tropical Pacific region). 
+
+[ACC figure here]
+
+8) Do not hesitate to get in touch ((AT)nfauchereau) for more details, and feedback welcome ... 
+
+
+
+
+
+
+

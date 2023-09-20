@@ -1,0 +1,203 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-08T09:02:44+13:00
+
+====== Friday 08 Oct 2021 ======
+
+==== ICU validation ====
+
+@TODO 
+
+[ ] carry on with the ICU validation paper: choose figures 
+	[>] calculate the GRIDDED parametrized climatologies for each GCM, for terciles, deciles, percentiles
+
+**NOTE:** done for seasonal, remains to be done for the monthly forecasts, see below for the notebooks
+
+see **GCMs_hindcast_climatology_parametrized.ipynb**, driven by papermill (**drive_GCMs_hindcast_climatology_parametrized.ipynb**) in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/C3S]] 
+
+This create netcdf files containing the climatologies, all months are in one file, see e.g.: 
+
+[[/media/nicolasf/END19101/ICU/data/CDS/CLIMATOLOGY/ECMWF]]
+
+→ ECMWF_seasonal_precip_parametrized_tercile_climatology.netcdf
+→ ECMWF_seasonal_precip_parametrized_decile_climatology.netcdf
+→ ECMWF_seasonal_precip_parametrized_percentile_climatology.netcdf 
+
+Note that this is different from the the code in **GCMs_hindcast_climatology_ops_parametrized.ipynb** (executed by **drive_GCMs_hindcast_climatology_ops_parametrized.ipynb**) which is geared towards processing the '**operational**' hindcasts, i.e. the ones that are updated every month 
+
+The next step is to generate the quantile probabilities for each year and month, using these parametrized climatological quantiles 
+
+One can do that by taking the notebook **3_calculate_MME_probabilities.ipynb**
+
+the files (one file per month) containing the probabilities will be saved in 
+
+[[/media/nicolasf/END19101/ICU/data/CDS/{GCM}/{quantile}_probs/{TPRATE}]]
+
+with names e.g. **parametrized_UKMO_terciles_probs_2016-12.nc**
+
+along with the original ones **UKMO_terciles_probs_2016-12.nc** which have been derived using the empirical quantiles 
+
+After discussion with Doug, might be worth generating maps of the lowest percentile bin that reaches cumulative probability of 50% (see below) 
+
+The code for doing that from the individual GCM probabilities is in **4_map_MME_probabilistic_forecast.ipynb**, in a commented cell 
+
+{{./screenshot_2021-10-08-155717.png?width=700}}
+
+
+code below 
+
+```
+### calculates the ensemble mean 
+
+dset = probs.mean('GCM')
+
+### make sure the probabilities sum to 100 over the decile dimension 
+
+dset.sum('decile').squeeze().sel(step=3)['precip'].plot()
+
+### calculates the cumulative probabilities over the decile dimension 
+
+cum_probs = dset.cumsum('decile', keep_attrs=True)
+
+cum_probs['decile'] = cum_probs['decile'] + 1
+
+cum_probs.sel(decile=1).squeeze().sel(step=3)['precip'].plot(vmin=50)
+
+cum_probs.sel(decile=2).squeeze().sel(step=3)['precip'].plot(vmin=50)
+
+cum_probs.sel(decile=3).squeeze().sel(step=3)['precip'].plot(vmin=50)
+
+cum_probs = cum_probs.where(cum_probs['precip'] >= 50)
+
+f, ax = plt.subplots(subplot_kw=dict(projection=ccrs.PlateCarree(central_longitude=180)), figsize=(14,8))
+
+cum_probs.idxmin('decile').squeeze().sel(step=3)['precip'].plot.contourf(ax=ax, levels=np.arange(0, 11), transform=ccrs.PlateCarree(), \
+																   cbar_kwargs={'shrink':0.7, 'boundaries':np.arange(11), 'drawedges':True})
+ax.coastlines()
+
+ax.set_title('')
+```
+
+--------------------
+
+==== @TODO general ====
+
+
+[ ] ED notebooks to tidy, selects figures, start working on the paper 
+[ ] paleopy / PICT: gather the notebooks for the updating of the datasets to 2020 (download and preprocessing)
+[ ] Weather Regimes from Neelesh → to dataset for paleopy 
+[*] Weather Regimes from Neelesh → start putting together structure for predictabilty (see above)
+
+
+--------------------
+
+==== Predictability paper for WRs, rough outline ====
+
+@CPP @WR  
+
+1) methodology to derive the WRs (taken from Neelesh's paper) 
+2) statistics, notably persistence
+3) Graph network view of the transitions, preferred transition paths, discussion of the implications in terms of predictability
+4) associated extremes in precipitation ?? used to choose a subset of the regimes which we'll focus on
+5) choose the clusters / WRs which are associated with precipitation extremes ? extract all sequences where these clusters persisted for more than N days 
+6) precursors of these episodes : look into circulation and for example SHUM and SST anomalies at large scale (extend to the tropics) 
+
+So that was for the daily time scale, we can also look at the predictability at the monthly or seasonal time-scale, i.e. years / month or seasons where 
+the frequency of some particular WRs is especially high / low → then composites with lags in various observational and reanalyses fields
+
+Other aspects of predictability that could be covered ? 
+
+→ use climate networks ? see: 
+
+Stevens, A., R. Willett, A. Mamalakis, E. Foufoula-Georgiou, A. Tejedor, J. T. Randerson, P. Smyth, and S. Wright, 2021: Graph-Guided Regularized Regression of Pacific Ocean Climate Variables to Increase Predictive Skill of Southwestern U.S. Winter Precipitation. Journal of Climate, 34, 737–754, https://doi.org/10.1175/JCLI-D-20-0079.1.
+
+Cachay, S. R., E. Erickson, A. F. C. Bucker, E. Pokropek, W. Potosnak, S. Bire, S. Osei, and B. Lütjens, 2021: The World as a Graph: Improving El Ni\~no Forecasts with Graph Neural Networks. arXiv:2104.05089 [physics, stat],.
+
+Kawale, J., and Coauthors, 2013: A graph-based approach to find teleconnections in climate data: A Graph-Based Approach to Find Teleconnections in Climate Data. Statistical Analy Data Mining, 6, 158–179, https://doi.org/10.1002/sam.11181.
+
+i.e. we can look globall at the lagged correlations between the time-series of monthly / seasonal WR frequencies and e.g. SST. The edges of the graphs are weighted according to the correlation coefficients integrated over the lag dimension 
+
+We could also look at Neural Networks, trying to predict the time-series of DAILY cluster number (that's a classification problem) from daily SST fields ??
+
+Use **XAI techniques to try and identify the regions leading to predictability** 
+
+Use as a template the paper from Toms et al:
+
+Toms, B. A., K. Kashinath, Prabhat, and D. Yang, 2020: Testing the Reliability of Interpretable Neural Networks in Geoscience Using the Madden-Julian Oscillation. Climate and Earth System Modeling,.
+ 
+They describe the Neural Network Design in section 2.2: 
+
+THey "//address any overfitting by applying L2-regularization to the weights connecting the input layer to the first layer of hidden nodes, which forces the network to focus its attention on broader spatial patterns within the inputs//." 
+
+as for CNNs, they "//tested the accuracy of convolutional neural networks (CNNs) for our particular problem, and found that the fully connected networks were both more accurate and interpretable than their CNN counterparts when L2 regularization is applied to the first layer of hidden nodes//"
+
+All data used in this study and **an example script for training a neural network and generating the LRP heatmaps and optimal input fields is available** at the following DOI: https://doi.org/10.5281/zenodo.3968896
+
+relies on the package **innvestigate**
+
+https://github.com/albermax/innvestigate
+
+which is cloned in the folder [[/home/nicolasf/research/CPP/WRs/XAI]] 
+
+and installed in the environment **tf2**
+
+The reference for the package innvestigate is: 
+
+Alber, M., Lapuschkin, S., Seegerer, P., Hägele, M., Schütt, K. T., Montavon, G., Samek, W., Müller, K. R., Dähne, S., & Kindermans, P. J. (2019). iNNvestigate neural networks! Journal of Machine Learning Research, 20.
+
+A good explanation of Layerwise Relevance Propagation can be found at: https://towardsdatascience.com/indepth-layer-wise-relevance-propagation-340f95deb1ea 
+
+There's also a book chapter that can be used as reference: https://link.springer.com/chapter/10.1007/978-3-030-28954-6_10 
+
+An associated tutorial can be found at: 
+
+https://link.springer.com/chapter/10.1007/978-3-030-28954-6_10 
+
+which uses numpy 
+
+There's also another project which might be useful, see: 
+
+https://github.com/VigneshSrinivasan10/interprettensor
+
+which is a "Slim TF wrapper to compute LRP" 
+
+This is also cloned into the same directory in the CPP/WRs/XAI folder 
+
+But does not seem to run with TF version 2 and above 
+
+currently creating a TF1 environment using mamba 
+
+
+--------------------
+
+==== xfilter: https://github.com/dcherian/xfilter ====
+
+@Python @python @xarray 
+
+Simple wrapping for scipy's Butterworth filter and scipy.filtfilt, for xarray objects 
+
+see also: Multitaper Spectral Estimation in Python: https://krischer.github.io/mtspec/ 
+
+Z-score BIAS CORRECTION 
+
+see: https://gallery.pangeo.io/repos/NCAR/notebook-gallery/notebooks/Run-Anywhere/Bias-Correction/bias_correction.html 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

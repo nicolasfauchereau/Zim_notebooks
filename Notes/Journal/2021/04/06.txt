@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-06T11:54:12+12:00
+
+====== Tuesday 06 Apr 2021 ======
+
+
+multiple conditions on xarray dataarrays 
+
+see https://gist.github.com/TomTom101/25e0e76f11a5da57523a60fb280005c1 
+
+import xarray as xr
+import numpy as np
+import operator
+
+airtemps = xr.tutorial.load_dataset('air_temperature')
+airtemps = airtemps.sel(time=slice('2013-01-01', '2013-12-31'))
+airtemps['air'] = airtemps.air - 273.15
+
+air_day = airtemps.resample('1D', 'time', how='mean')
+meets_condition = (air_day.air > 22) & (air_day.air < 30)
+warm_days = meets_condition.resample('M', dim='time', how='sum')
+
+
+not_cold = ('air',  operator.ge, 23)
+not_hot  = ('air',  operator.le, 30)
+
+variable, operator_fn, value = not_cold
+meets_condition = operator_fn(air_day[variable], value)
+warm_but_possibly_hot_days = meets_condition.resample('M', dim='time', how='sum')
+
+comfy_warm = [not_cold, not_hot]
+    
+all_maps = [fn(air_day[var], val) for var, fn, val in comfy_warm]
+(all_maps[0] & all_maps[1]).resample('M', dim='time', how='sum')

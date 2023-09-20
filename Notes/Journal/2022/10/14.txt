@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-14T07:53:43+13:00
+
+====== Friday 14 Oct 2022 ======
+
+==== Statistically bias-corrected and downscaled climate models underestimate the adverse effects of extreme heat on U.S. maize yields ====
+
+https://www.nature.com/articles/s43247-021-00266-9 
+
+Lafferty, D. C., R. L. Sriver, I. Haqiqi, T. W. Hertel, K. Keller, and R. E. Nicholas, 2021: Statistically bias-corrected and downscaled climate models underestimate the adverse effects of extreme heat on U.S. maize yields. Commun Earth Environ, 2, 196, https://doi.org/10.1038/s43247-021-00266-9.
+ 
+code: https://zenodo.org/record/5143434 
+
+and downloaded in [[/home/nicolasf/research/CMIP6_downscaling/repos/david0811-BCSD_CornYields_UQ-aa50240]] 
+
+--------------------
+
+

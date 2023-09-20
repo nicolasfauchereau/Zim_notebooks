@@ -1,0 +1,93 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-13T08:58:34+13:00
+
+====== Tuesday 13 Oct 2020 ======
+
+==== glue together the GCMs and the application cases anomalies and category timeseries ====
+
+see in 
+
+[[~/research/Smart_Ideas/code/engineer/notebooks]]
+
+**prepare_GCMs_to_CSV_application_cases.ipynb** 
+
+
+--------------------
+
+==== Try ExtraTrees classifier on the Apple and Pears categorical data ====
+
+see: 
+
+**Apple_and_Pears_tree_based_classifiers.ipynb**
+**Apple_and_Pears_tree_based_classifiers_retrain.ipynb ⇒** retraining yields good scores (87% accuracy !) with evaluation starting NDJ 2016 
+
+e.g. training is done using:
+
+→  data up to JAS 2015 and evaluating on NDJ 2016 
+→  data up to ASO 2015 and evaluating on DJF 2016 
+→ data up to SON 2015 and evaluating on JFM 2016 
+
+
+different classifiers accuracry score calculated over the predictions from 2016-01 to 2019-12 
+
+KNN                           		0.562500
+**SVC                           	   0.958333**
+NuSVC                        		0.645833
+DecisionTreeClassifier        	0.562500
+**RandomForestClassifier     0.875000**
+AdaBoostClassifier            	0.645833
+GradientBoostingClassifier    	0.645833
+**ExtraTreesClassifier          0.875000**
+
+One can then avarege the class probability across the different classifiers, if done, the accuracy score for the majority vote between the different classifiers is **0.77** 
+
+in [[~/research/Smart_Ideas/code/models/application_cases/classification/Apple_and_Pears/ExtraTrees/notebooks]] 
+
+→ uses the ensemble mean 
+→ uses repeated stratified k-fold cross validation 
+→ try and write one version with monthly re-training 
+
+--------------------
+
+==== move all the CSVs joining GCMs and target variables ====
+
+in 
+
+**/home/nicolasf/research/Smart_Ideas/outputs/targets/application_cases/{application}/Join_GCM_targets**
+
+--------------------
+
+==== concatenate Z500 and target variables for the application case ====
+
+check that the Z500 variable has been processed, see: 
+
+**process_ECMWF_nc_downloads.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks]] 
+
+all seasonal and monthly anomalies should be saved in the folder
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

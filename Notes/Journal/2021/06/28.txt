@@ -1,0 +1,46 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-28T12:53:15+12:00
+
+====== Monday 28 Jun 2021 ======
+
+==== Mockseries:  Easy and intuitive generation of synthetic timeseries for Python. ====
+
+@timeseries @ML 
+
+https://github.com/cyrilou242/mockseries
+
+--------------------
+
+==== StellarGraph - Machine Learning on Graphs ====
+
+https://github.com/stellargraph/stellargraph
+
+https://stellargraph.readthedocs.io
+
+--------------------
+
+==== boostime:  The Tidymodels Extension for Time Series Boosting Models ====
+
+
+https://github.com/AlbertoAlmuinha/boostime
+
+Use lightGBM, catboost, XGboost on the residuals to a prophet or ARIMA model 
+
+--------------------
+
+==== PYCARET experiments with Temperature ====
+
+For temperature 
+
+NNI, test period, extra-tree classifier obtains **0.81** accuracy on test set using forecast SSTs 3 months ahead 
+
+predictability is defined as the accuracy of an set of ML al
+
+experiments comparing the predictability of regional rainfall and temperature derived from regional scale forecast or observed SST tend to show greater predictability from forecast (i.e. GCM) than observed (past) SSTs. 
+
+In all experiments, the leader board favors ensemble methods, such as catboost, xgboost, lightgbm and extratrees (extremely randomized trees) ,
+
+also included is a categorical variable corresponding to the last month of the forecast period 
+
+

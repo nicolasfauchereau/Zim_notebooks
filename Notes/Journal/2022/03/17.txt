@@ -1,0 +1,134 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-17T09:51:25+13:00
+
+====== Thursday 17 Mar 2022 ======
+
+==== Forecasting Global Weather with Graph Neural Networks ====
+
+@GNN 
+
+Keisler, R., 2022: Forecasting Global Weather with Graph Neural Networks. arXiv:2202.07575 [physics],.
+ 
+--------------------
+
+==== Multimodel Forecasting of Precipitation at SubseasonalTimescales Over the Southwest Tropical Pacific ====
+
+Specq, D., L. Batté, M. Déqué, and C. Ardilouze, 2020: Multimodel Forecasting of Precipitation at Subseasonal Timescales Over the Southwest Tropical Pacific. Earth and Space Science, 7, https://doi.org/10.1029/2019EA001003.
+
+--------------------
+
+==== Using Artificial Neural Networks for Generating Probabilistic Subseasonal Precipitation Forecasts over California ====
+
+Scheuerer, M., M. B. Switanek, R. P. Worsnop, and T. M. Hamill, 2020: Using Artificial Neural Networks for Generating Probabilistic Subseasonal Precipitation Forecasts over California. Monthly Weather Review, 148, 3489–3506, https://doi.org/10.1175/MWR-D-20-0096.1.
+
+--------------------
+
+==== Ensemble model output statistics ====
+
+EMOS (Ensemble model output statistics (EMOS) is a statistical tool for post-processing forecast ensembles of weather variables obtained from multiple runs of numerical weather prediction models in order to produce calibrated predictive probability density functions (PDFs).
+
+--------------------
+
+==== [S2S Webinar Series] S2S AI Challenge (26 Jan. 14:00 UTC) ====
+
+Title: **Submissions to the s2s-ai-challenge beating climatology**
+
+Speaker: **Top 5 submissions teams**
+
+Date & Time: Wednesday, January 26, 2022, 14:00pm UTC 
+
+Abstract 
+
+The five submissions beating week 3-4 / week 5-6 2-metre temperature and total precipitation climatology will present their approaches in 10’ talks each. Afterwards, there will be 8’ Q&A each and a final 10’ discussion, so the event will last 2h.
+
+Speakers
+
+- Damien Specq; CNRM/Meteo-France
+
+- Nina Horat, Sebastian Lerch, Julian Quinting, Daniel Steinfeld, Pavel Zwerschke; KIT-ETH-UBern
+
+- Shanglin Zhou, Adam Bienkowski; UConn
+
+- Sergi Bech, Llorenç Lledó, Lluís Palma, Carlos Gomez, Andrea Manrique; BSC
+
+- Bertrand Denis, David Landry, Jordan Gierschendorf, Arlan Dirkson; CRIM
+
+Please find their submissions via https://s2s-ai-challenge.github.io/#leaderboard. Review comments are posted as gitlab issues.
+
+Recording
+
+Webex meeting recording: (S2S Monthly Webinar_Jan.2022) S2S AI Challenge-20220126 1401-1
+Password: **iMghPgf7**
+Recording link: https://apcc.webex.com/apcc/ldr.php?RCID=5eebf4148bdc7476590474b1f5beb1db 
+
+--------------------
+
+==== MAELSTROM dissemination workshop (28 March) and Machine Learning Workshop (29 March - 1 April) ====
+
+https://events.ecmwf.int/event/294/timetable/
+
+
+
+--------------------
+
+==== Jawls ====
+
+Common facial exercises that may help improve jowls include:
+
+→ Yawning and opening the mouth as far as possible, then closing it very slowly without letting the teeth touch.
+→ Puckering the lips outwards. This exercise works best when done lying down, and by using the fingers to draw the sides of the mouth downwards.
+→ Blowing the cheeks up as far as comfortable.
+→ Chewing with the head tilted slightly up.
+→ Grinning as widely as comfortable then slowly tilting the head up and down.
+→ Putting the lower lip on the top lip and tilting the head up.
+→ Lying down flat, curling the neck in towards the chest with the tongue pressing on the roof of the mouth.
+→ Humming with the tongue pressed against the roof of the mouth.
+→ Saying the sounds “o” followed by “e,” using more force than usual and exaggerating mouth movements.
+
+--------------------
+
+==== MAELSTROM downscaling code ====
+
+see MAELSTROM project: https://www.maelstrom-eurohpc.eu/index.php
+
+https://www.maelstrom-eurohpc.eu/products-ml-apps 
+
+https://git.ecmwf.int/projects/MLFET/repos/maelstrom-downscaling-ap5/browse
+
+Downscaling of 2m temperature from IFS HRES with a U-Net 
+
+
+https://git.ecmwf.int/projects/MLFET/repos/maelstrom-downscaling-ap5/browse/notebooks/demo_downscaling_dataset.ipynb
+
+reference ? 
+
+Sha, Y., D. J. Gagne II, G. West, and R. Stull, 2020: Deep-Learning-Based Gridded Downscaling of Surface Meteorological Variables in Complex Terrain. Part I: Daily Maximum and Minimum 2-m Temperature. Journal of Applied Meteorology and Climatology, 59, 2057–2073, https://doi.org/10.1175/JAMC-D-20-0057.1.
+
+--------------------
+
+==== All the submission for the S2S-AI challenge can be found here: ====
+
+
+https://s2s-ai-challenge.github.io/#leaderboard 
+
+some of the projects are cloned in 
+
+[[/home/nicolasf/research/S2S_AI]] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

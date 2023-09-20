@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-03T10:58:17+12:00
+
+====== Tuesday 03 Aug 2021 ======
+
+==== ZESPRI projetc code: ZES21301/2122 ====
+
+@ZESPRI
+
+--------------------
+
+==== Getting around BoM's restrictions to access URLs directly ====
+
+see: 
+
+{{./screenshot_2021-08-03-142434.png}}
+
+
+--------------------
+
+==== Temperature emergence at decision-relevant scales ====
+
+Harrington, L. J., 2021: Temperature emergence at decision-relevant scales. Environ. Res. Lett., https://doi.org/10.1088/1748-9326/ac19dc.
+
+--------------------
+
+==== Assignment: Frost damage in late winter and spring in a changing climate¶ ====
+
+https://github.com/steidani/climate/tree/master/copernicus_frost
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-21T10:28:48+13:00
+
+====== Friday 18 Mar 2022 ======
+
+==== list of CPP indices ====
+
+@CPP 
+
+Done and sent to Neelesh for operationalisation, or already in his hands
+
+SP Blocking index
+
+NZ coastal regions
+
+Ross sea sector synoptic weather types
+
+Done, need to clean up before sending to Neelesh
+
+SW Pacific weather regimes
+
+South Pacific Subtropical Dipole
+
+In development, but easy, 100% doable in April
+
+PSA (I actually think I have the code somewhere already)
+
+ZW3 index
+
+--------------------
+
+

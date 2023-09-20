@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-17T08:43:36+13:00
+
+====== Friday 17 Feb 2023 ======
+
+==== NoteSH: fully functional sticky notes App in your Terminal! ====
+
+https://github.com/Cvaniak/NoteSH 
+
+
+==== Restaurants options: ====
+
+- Babaganush 379-381 Grey Street, Hamilton East, Hamilton 3216
+- Saigon Noon 103 Alexandra Street, Hamilton Central, Hamilton 3204 
+- Iguana Street Bar & Restaurant 203 Victoria Street, Hamilton Central, Hamilton 3204
+- The chilli house: Hamilton: 237 Victoria Street,
+- Vietnamese Kitchen Casabella Ln, Hamilton 3204
+**- Penang Street Food: 941A Victoria St Hamilton 3204 **
+**- Kampong: 264 Victoria Street, Hamilton Central, Hamilton 3204**
+
+--------------------
+
+==== MSWEP processing ====
+
+
+
+
+

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-13T15:22:52+12:00
+
+====== Friday 13 Aug 2021 ======
+
+Dragon's Den 
+
+The goal is to detect, explain, then align windows of opportunities for skillful weather to seasonal forecasts to the practices of end users of these forecasts 
+
+In a nutshell, the skill of the various forecast systems that we use in NZ (NIWA), from the NZCSM/NZENS, to the GEFS based subseasonal forecasts, to the seasonal forecasts (SCO) varies in time and space ... this variabilty is assumed NOT to be random .. and the current understanding is that this variation in skill might be modulated by the ocean -atmosphere conditions at the initial time of the numerical models, with a major role played by the climate modes 
+
+So that opens the opportunity to detect and exploit "windows of opportunities" times when the forecasts are expeceted to be skillfull beyond, when the signal exceeds the noise 
+
+On the other hand, we gained a better understanding of what controls the adoption utilisatrion of forecasts by end used ... formalisex in a frameork developed within the systems thoery, where decisions are viewed as being influenced by the type of controls that end user can implement (error control etc) 
+

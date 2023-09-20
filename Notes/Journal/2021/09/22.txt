@@ -1,0 +1,161 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-22T09:17:07+12:00
+
+====== Wednesday 22 Sep 2021 ======
+
+===== ICU validation notebooks =====
+
+@ICU 
+
+in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_validation]] 
+
+→ **GCMs_admin_hindcast_climatologies_and_probabilities.ipynb**: calculate the monthly or seasonal leadtime dependent climatotological terciles for each GCM and admin shape. It uses a Gamma distribution to derive the parametrized quantiles (see function `calc_parametrized_quantiles`). It then, for each month or season, digitize each member depending on the percentile bin it falls into, and calculate the probability of each percentile bin / category as the proportion of members falling into each catergory. We then end up with a table: 
+
+If one wants to re-run but calculating the empirical (rather than parametrized) quantiles, one needs to uncomment the line: 
+
+**# clim_p = dset_sub['precip'].groupby(dset_sub.time.dt.month).apply(C3S.calc_percentiles, **{'percentiles':dict_quantiles[quantiles]})**
+
+
+{{./screenshot_2021-09-22-092347.png}}
+
+which runs from 1993 to 2016 included (the first level being the leadtime)
+
+This table is saved in: 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin]] with filename (e.g.) 
+
+**French_Polynesia_Leeward-Society_Islands_seasonal_CMCC_tercile_probs.csv** 
+
+It then evaluates the probabilistic forecasts against ERA5 (using a simple measure of accuracy) by comparing with the observed category, also derived for each admin shape using the  `calc_parametrized_quantiles` function. 
+
+A table is first created, which merges the quantiles probabilities and the observed (tercile) categories:
+
+{{./screenshot_2021-09-22-104229.png}}
+
+This table is also saved in: 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin]] with filename (e.g.) 
+
+**French_Polynesia_Leeward-Society_Islands_seasonal_CMCC_tercile_probs_and_obs.csv** 
+
+The validation is then done for each time-step (using pd.offsets.MonthBegin() to make sure the seasons or months are aligned) 
+
+The outcome (accuracy score for each admin shape, GCM) looks like: 
+
+{{./screenshot_2021-09-22-104440.png}}
+
+and is saved in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin]]  with filename (e.g.): 
+
+**validation_French_Polynesia_Leeward-Society_Islands_seasonal_ECMWF_tercile.csv** 
+
+The notebook **GCMs_admin_hindcast_climatologies_and_probabilities.ipynb  **is parametrized for papermill, with parameters (e.g.):
+
+provider = 'CDS'
+varname = 'tprate'
+period = 'seasonal'
+GCM = 'ECMWF'
+quantiles = 'tercile'
+country = "Nauru"
+admin = "Nauru"  
+
+and then run by **drive_admin_GCMs_evaluation.ipynb** which loops over the countries, their admin shapes, and the GCMs 
+
+@TODO :  re-run these and save the climatological quantiles for each GCM and country + admin shape → @DONE 
+
+The climatologies should be saved in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin/climatologies]] 
+
+with filenames 
+
+**"parametrized_{quantiles}_{varname}_{period}_{GCM}_{utils.sanitize_name(country)}_{utils.sanitize_name(admin)}.nc"**
+
+
+→ **C3S_MME_ICU_admin_validation.ipynb** performs the validation of the individual GCMs (therefore being a duplicate of some of the code in **GCMs_admin_hindcast_climatologies_and_probabilities.ipynb) **and the MME (with the exception of JMA and ECCC, for which the archive is not complete) 
+
+The validation files for the MME are saved in outputs/ICU_validation/admin (as before), with filename (e.g.): 
+
+**validation_French_Polynesia_Leeward-Society_Islands_seasonal_MME_tercile.csv** 
+
+it also saves a barplot of the validation score (accuracy) for each GCM as well as the MME, in **figures/ICU_validation/ **with filenames (e.g.) 
+
+**French_Polynesia_Leeward-Society_Islands_seasonal_ECMWF_tercile_probs.png**
+**French_Polynesia_Leeward-Society_Islands_seasonal_MME_tercile_probs.png** 
+
+it is parametrized for papermill, with parameters (e.g.): 
+
+country = "Marshall Islands"
+admin = "Northern Marshall Islands"
+
+and then run by **drive_admin_MME_evaluation.ipynb**, which loops over the country + admin shape and execute **C3S_MME_ICU_admin_validation.ipynb** via the papermill API 
+
+→ **compile_ICU_admin_validation_scores.ipynb** then simply compiles the validation scores, by reading all the **validation_*_seasonal_MME_tercile.csv** files. 
+
+A table with the compiled validation scores for each country + admin are then saved in a csv file, in outputs/ICU_validation/admin, with name 
+
+**ACC_ICU_admin_boundaries_parametrized_terciles.csv**
+
+a version also contains the ID number for each country + shape, which is used by Doug to create GIS maps, it is called: 
+
+**ACC_ICU_admin_boundaries_parametrized_terciles_with_ID.csv** 
+
+Note that it also does a comparison with a previous iteration of the MME validation, where the climatological terciles were derived empirically (both for the GCMs and the ERA5 dataset), the file containing the validation scores derived using this previous method is called: 
+
+**ACC_ICU_admin_boundaries_empirical_terciles.csv**
+
+similarly, a version with ID number (for GIS mapping) is created, called **ACC_ICU_admin_boundaries_empirical_terciles_with_ID.csv** 
+
+and the difference between the 2 (parametrized minus empirical) validation scores is saved in  **ACC_ICU_admin_boundaries_difference_parametrized_minus_empirical_terciles_with_ID.csv**
+
+
+NOTE: the administrative boundary plot (see below) is in **figures/ICU_validation/administrative_boundaries.png** 
+
+{{./screenshot_2021-09-22-151044.png}}
+
+
+--------------------
+
+==== CYLC ====
+
+cylc documentation: 
+
+https://cylc.github.io/cylc-doc/nightly/html/tutorial/index.html
+
+check also the discussion with Hilary Oliver in Teams 
+
+--------------------
+
+==== Smart Ideas summary concept note ideas ====
+
+see in Meehl, G. A., and Coauthors, 2021: Initialized Earth System prediction from subseasonal to decadal timescales. Nat Rev Earth Environ, https://doi.org/10.1038/s43017-021-00155-x.
+ 
+for an explanation of the initialisation methodology: 
+
+"""
+The process of bringing the
+model components into close correspondence with that
+observed state is termed initialization, and predictions
+that are started from such observed states are referred
+to as initialized predictions.
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

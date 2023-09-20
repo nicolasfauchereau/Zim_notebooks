@@ -1,0 +1,61 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-01T09:14:33+13:00
+
+====== Wednesday 01 Apr 2020 ======
+
+=== fix on the GPM-IMERG download for the ICU ===
+
+see emails from Ben dated 1 April 
+
+The script 
+
+[[/home/nicolasf/operational/ICU/ops/data/GPM_IMERG/daily/scripts/get_daily_GPM_IMERG_netcdf.py]]
+ 
+runs OK, and see 
+
+[[/home/nicolasf/operational/ICU/ops/data/GPM_IMERG/daily/scripts/read_GPM_IMERG.ipynb]] 
+
+for an example of reading and mapping a GPM-IMERG file 
+
+----------------------------------------------------------------------------------------
+
+=== KNN classification ===
+
+in [[/home/nicolasf/research/Smart_Ideas/code/models/classification/KNN/KNN.ipynb]] 
+
+it seems that, for temperatures 
+
+- choosing just one neighbor is better than choosing a larger number ... 
+- choosing the Manhattan distance (p = 1) results in better scores (0.7 accuracy for the NNI)
+
+@TODO 
+
+- make sure there is no data leakage, by putting the EOF step inside a scikit-learn pipeline
+- calculate some skill scores instead of just the accuracy score ... 
+- fix problem with **inconsistent number of ensemble members** in the METEO_FRANCE forecasts for T2M (25 in the hindcast period, 51 in the forecast period...)
+- fix problem with UKMO (inconsistent number of members)
+- use a consistent number of members for all GCMs (e.g. 25) 
+- CMCC: extra 'month' dimension to be removed in the forecasts 
+
+! often times the forecast period has more members than the hindcast period, therefore need to 
+restrict the number of members in the ensemble in the forecast to the number of members in the hindcast 
+
+see in utils
+
+get_GCM_outputs.py 
+
+which 
+ 
+
+
+
+
+
+
+
+
+
+
+
+

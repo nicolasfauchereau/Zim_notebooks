@@ -1,0 +1,106 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-08T10:11:39+13:00
+
+====== Tuesday 08 Dec 2020 ======
+
+==== sent email to Christo around the idea of linking windows of opportunities for subseasonal to seasonal forecasts to users decision making ====
+
+**email:** 
+
+Good morning everyone
+
+Geoff Kaine (cced) sent me yesterday the latest version of a draft paper he is working on, which I found immensely useful to effectively understand the decision making context for the use of seasonal climate forecasts. It is focus on farm systems and seasonal forecast, but it actually goes beyond this, as this conceptual framework is really useful for any kind of environmental prediction product, including weather, subseasonal forecasts, long range forecasts and to some extent climate change scenarios ...
+
+I have attached it to this mail, because I really think it's an important read, but obviously as it is in draft form please keep it for yourself ...
+
+I also have recently read this paper: https://journals.ametsoc.org/bams/article/101/5/E608/345558/Windows-of-Opportunity-for-Skillful-Forecasts
+
+and have started to think how we could link this idea of "windows of opportunities" for skillful weather to seasonal and beyond forecasts to end-users decision making processes, understood within the framework that Geoff laid out, and that it would make a really good Smart Idea proposal: the way I see it, it could be a 3 years programme, with background research on identifying first these windows of opportunities for NZ, and parallel an effort in the social sciences and economy to promote the adoption of this new way of looking at forecasts in end-users communities, i.e. as in the BAMS paper:
+
+At the outset, it is a question of culture. Recognizing that a forecast tool has scientific standing and practical value even if it provides information only when the opportunity arises is not customary. On the user side, both forecast centers and forecast users are accustomed to expecting forecasts on time, all the time. Adapting to an approach that provides probabilistic forecasts with information only in certain conditions requires a significant mindset shift...
+
+--------------------
+
+==== NeurIPS 2020 Workshop Tackling Climate Change with Machine Learning ====
+
+all talks, papers listed at 
+
+https://www.climatechange.ai/events/neurips2020 
+
+== to send to Alex Geddes: ==
+
+→ https://www.climatechange.ai/papers/neurips2020/55 Short-term PV output prediction using convolutional neural network: learning from an imbalanced sky images dataset via sampling and data augmentation 
+→ https://www.climatechange.ai/papers/neurips2020/6 Short-Term Solar Irradiance Forecasting Using Calibrated Probabilistic Models 
+→ https://www.climatechange.ai/papers/neurips2020/8 A Temporally Consistent Image-based Sun Tracking Algorithm for Solar Energy Forecasting Applications 
+→ https://www.climatechange.ai/papers/neurips2020/14 Short-term prediction of photovoltaic power generation using Gaussian process regression 
+
+== for my own interest ==
+
+→ https://www.climatechange.ai/papers/neurips2020/74 Long-Range Seasonal Forecasting of 2m-Temperature with Machine Learning
+→ https://www.climatechange.ai/papers/neurips2020/70 Towards Data-Driven Physics-Informed Global Precipitation Forecasting from Satellite Imagery  
+→ https://www.climatechange.ai/papers/neurips2020/86 Graph Neural Networks for Improved El Niño Forecasting 
+→ https://www.climatechange.ai/papers/neurips2020/7 Deep Learning for Climate Model Output Statistics → **to send to Trevor** 
+→ https://www.climatechange.ai/papers/neurips2020/10 Learning the distribution of extreme precipitation from atmospheric general circulation model variables 
+→ https://www.climatechange.ai/papers/neurips2020/12 Spatio-Temporal Learning for Feature Extraction inTime-Series Images  
+→ https://www.climatechange.ai/papers/neurips2020/18 Quantitative Assessment of Drought Impacts Using XGBoost based on the Drought Impact Reporter 
+→ https://www.climatechange.ai/papers/neurips2020/35 Accurate river level predictions using a Wavenet-like model → **to send to MS** 
+→ https://www.climatechange.ai/papers/neurips2020/38 RainBench: Enabling Data-Driven Precipitation Forecasting on a Global Scale → see also **PyRain** (https://github.com/FrontierDevelopmentLab/PyRain)
+→ https://www.climatechange.ai/papers/neurips2020/43 FlowDB: A new large scale river flow, flash flood, and precipitation dataset → **to send to MS **
+→ https://www.climatechange.ai/papers/neurips2020/68 Understanding global fire regimes using Artificial Intelligence → to send to Scion guy 
+→ https://www.climatechange.ai/papers/neurips2020/57 Machine Learning for Glacier Monitoring in the Hindu Kush Himalaya **→ to send to Drew** 
+→ https://www.climatechange.ai/papers/neurips2020/48 EarthNet2021: A novel large-scale dataset and challenge for forecasting localized climate impacts 
+
+--------------------
+
+==== Method: Canonical Correlation Forests ====
+
+see Tom Rainforth and Frank Wood. Canonical correlation forests.arXiv preprint arXiv:1507.05444,2015.
+
+https://arxiv.org/pdf/1507.05444.pdf 
+
+and original code (Matlab :-() 
+
+https://github.com/twgr/ccfs
+
+Python implementations
+
+→ Scikit-Learn-Contrib compatible implementation of the Canonical Correlation Forest algorithm  
+
+https://github.com/fmaguire/Canonical-Correlation-Forest → seems to be only a template for creating a scikit-learn compatible estimator 
+
+→  **Canonical Correlation Forests (CCFs)**  
+
+https://github.com/plai-group/ccfs-python → probably most up to date 
+
+→ oo_trees (object-oriented variants of decision tree / ensemble classification algorithms) 
+
+https://pypi.org/project/oo_trees/
+
+--------------------
+
+
+==== Frontier Development Lab ====
+
+Artificial Intelligence Accelerator in Space initiated by NASA Ames and the SETI Institute and private partners http://frontierdevelopmentlab.org
+
+
+Authors of **PyRain** (https://github.com/FrontierDevelopmentLab/PyRain)
+
+https://github.com/FrontierDevelopmentLab
+
+and 
+
+https://gitlab.com/frontierdevelopmentlab 
+
+--------------------
+
+
+
+
+
+
+
+
+
+

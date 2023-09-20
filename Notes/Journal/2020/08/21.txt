@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-21T09:10:06+12:00
+
+====== Friday 21 Aug 2020 ======
+
+==== Discussion with David Johnson ====
+
+d.johnson@oceanum.science
+
+Zarr access patterns matter a lot in performance, use 
+
+https://rechunker.readthedocs.io 
+
+to perform efficient chunking 
+
+e.g. worth having 2 copies of the datasets in zarr using different chunking depending on the application (e.g. calculating average over time ? average over space) 
+
+**Idea**: Use **variational autoencoders** instead of straight auto-encoders to clump the features in latent space 
+
+--------------------
+
+==== Revisiting all AutoML approaches ====
+
+== 1) Pycaret ==
+
+compare 18 different models: 
+
+see below, obtained by 
+
+**from pycaret.classification import ***
+**df_models = models()** 
+
+
+				**Name 						Reference 							Turbo**
+**ID** 			
+lr 		Logistic Regression 			sklearn.linear_model.LogisticRegression 	True
+knn 		K Neighbors Classifier 			sklearn.neighbors.KNeighborsClassifier 	True
+nb 		Naive Bayes 					sklearn.naive_bayes.GaussianNB 			True
+dt 		Decision Tree Classifier 			sklearn.tree.DecisionTreeClassifier 		True
+svm 	SVM - Linear Kernel 			sklearn.linear_model.SGDClassifier 		True
+rbfsvm 	SVM - Radial Kernel 			sklearn.svm.SVC 						False
+gpc 		Gaussian Process Classifier 		sklearn.gaussian_process.GPC 			False
+mlp 		MLP Classifier 				sklearn.neural_network.MLPClassifier 		False
+ridge 	Ridge Classifier 				sklearn.linear_model.RidgeClassifier 		True
+rf 		Random Forest Classifier 		sklearn.ensemble.RandomForestClassifier 	True
+qda 		Quadratic Discriminant Analysis 	sklearn.discriminant_analysis.QDA 		True
+ada 		Ada Boost Classifier 			sklearn.ensemble.AdaBoostClassifier 		True
+gbc 		Gradient Boosting Classifier 		sklearn.ensemble.GradientBoostingClassifier True
+lda 		Linear Discriminant Analysis 		sklearn.discriminant_analysis.LDA 			True
+et 		Extra Trees Classifier 			sklearn.ensemble.ExtraTreesClassifier 		True
+xgboost 	Extreme Gradient Boosting 		xgboost.readthedocs.io 					True
+lightgbm 	Light Gradient Boosting Machine 	github.com/microsoft/LightGBM 			True
+catboost 	CatBoost Classifier 			catboost.ai 							True
+
+see in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/PYCARET]] 
+
+big change in API from version 2, see new notebook **pycaret_v2.ipynb ** 
+
+Now allow to log onto **MLFlow** 
+
+see https://pycaret.org/mlflow/  
+
+The notebooks are now saved automatically using 
+
+{{./screenshot_2020-08-21-172841.png}}
+
+
+
+

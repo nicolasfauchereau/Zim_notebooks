@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-04T09:30:52+13:00
+
+====== Wednesday 04 Mar 2020 ======
+
+=== Meeting on ML for Probabilistic weather forecasting ===
+ 
+[[/home/nicolasf/HUB/projects/Smart_Ideas/ML_prob_weather_forecasts/meeting_4_March_2020/Workshop_ML_Prob_Weather]] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+=== PyTorch Variational Autoencorders ===
+
+@SI @ML @AE @DIMENSIONALITY_REDUCTION
+
+A Collection of Variational Autoencoders (VAE) in PyTorch.
+
+https://github.com/AntixK/PyTorch-VAE 
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+=== SpatioTemporal Asset Catalogs (STAC) ===
+
+@BIGDATA 
+
+https://medium.com/pangeo/introducing-intake-stac-2c988d8e1d30
+
+https://intake-stac.readthedocs.io/en/latest/
+
+Introducing Intake-stac: We think this tool will make it much easier to explore SpatioTemporal Asset Catalogs (STAC) and enable interactive data analysis and visualization in a Python environment.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+=== GPU-as-a-Service on KubeFlow: Fast, Scalable and Efficient ML ===
+
+https://towardsdatascience.com/gpu-as-a-service-on-kubeflow-fast-scalable-and-efficient-ml-c5783b95d192
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

@@ -1,0 +1,144 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-26T09:26:09+12:00
+
+====== Monday 26 Apr 2021 ======
+
+==== Relative NINO SST indice: ====
+
+see 
+
+https://iopscience.iop.org/article/10.1088/1748-9326/abe9ed/meta
+
+ constructed by simply subtracting the contemporaneous mean 20◦S–20◦N  SST  anomalies and rescaling 
+
+--------------------
+
+==== VCSN processing ====
+
+→ **Script**: [[/home/nicolasf/operational/VCSN/notebooks/make_VCSN_grid_netcdf.py]] 
+
+$ ./make_VCSN_grid_netcdf.py --help
+usage: make_VCSN_grid_netcdf.py [-h] [-d DPATH] [-t TMP_PATH] [-y YEAR_TO_PROCESS] [-v VARNAME] [-o OPATH] [-m MONTHLY]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DPATH, --dpath DPATH
+						the path where to find the ZIP files, REQUIRED
+  -t TMP_PATH, --tmp_path TMP_PATH
+						the temporary folder where to unzip the .dat files
+  -y YEAR_TO_PROCESS, --year YEAR_TO_PROCESS
+						the year or years (separated by a `,`) to process
+  -v VARNAME, --varname VARNAME
+						the variable to process, valid names are: MSLP, PET, Rain, RH, SoilM, ETmp, Rad, TMax, Tmin, VP, Wind, Rain_bc, Tmax_N, Tmin_N, see:
+						https://one.niwa.co.nz/display/CLIDB/VCSN+Times+and+Field+Descriptions for more info.
+  -o OPATH, --opath OPATH
+						the path where to save the netcdf files
+  -m MONTHLY, --monthly MONTHLY
+						whether to calculate the monthly accumulation (if rainfall) or average (if anything else), default 0 (False)
+
+→ **Environment file**: [[/home/nicolasf/operational/VCSN/notebooks/VCSN.yml]] 
+
+→ **Read VCSN daily files and calculates daily anomalies, with respect to a rolling N days (default: 5) average climatology:** [[/home/nicolasf/operational/VCSN/notebooks/read_VCSN_daily.ipynb]] 
+
+--------------------
+
+==== ICU operationalisation ====
+
+== 1) update the GPM-IMERG files ==
+
+see **update_GPM_IMERG.py** in [[~/operational/ICU/ops/data/GPM_IMERG/daily/scripts]] 
+
+
+**./update_GPM_IMERG.py --help**                                                                 
+usage: update_GPM_IMERG.py [-h] [-d DPATH] [-p PROXY] [-lonW LON_MIN] [-lonE LON_MAX] [-latS LAT_MIN]
+						   [-latN LAT_MAX] [-i INTERP]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DPATH, --dpath DPATH
+						the path where to find AND save the netcdf files, REQUIRED
+  -p PROXY, --proxy PROXY
+						the proxy settings (url:port), default is None (no proxy)
+  -lonW LON_MIN, --lon_min LON_MIN
+						westernmost longitude for the domain to extract, default is 125.
+  -lonE LON_MAX, --lon_max LON_MAX
+						eastermost longitude for the domain to extract, default is 240.
+  -latS LAT_MIN, --lat_min LAT_MIN
+						southermost latitude for the domain to extract, default is -50.
+  -latN LAT_MAX, --lat_max LAT_MAX
+						northermost latitude for the domain to extract, default is 25.
+  -i INTERP, --interp INTERP
+						whether to interpolate on the TRMM grid, default is 1 (True)
+
+== 2) calculates and plots maps based on the percentiles of score ==
+
+see initial notebook: **calculate_and_map_percentile_of_score.ipynb** 
+
+**arguments** 
+
+--dpath (where to find the realtime GPM IMERG files, also contains the climatologies (GPM_IMERG_daily.v06.2001.2019_precipitationCal_{ndays}d_runsum)) 
+--ndays 
+--lag (lag to realtime, default 1) 
+--shapes: folder where to find the shapefiles (must contain one folder named 'EEZs', and one folder named 'Coastlines' 
+--opath: folder where to save the outputs
+--fpath: folder where to find the figures 
+
+if script in folder 'scripts' 
+
+there needs to be a 'data' folder in the directory containing script, so directory structure must be 
+
+GPM_IMERG: 
+	→ scripts 
+	→ src
+		→ hotspots
+	→ data 
+		→ shapefiles 
+			→ EEZs 
+			→ Coastlines
+		→ GPM_IMERG
+			→ daily 
+	→ outputs 
+	→ figures
+	
+== How to call the script ( ==
+**example**
+
+== ): ==
+
+
+./calculate_and_map_GPM_IMERG_percentile_of_score.py --dpath /home/nicolasf/operational/ICU/ops/data/GPM_IMERG/daily/extended_SP --ndays 60 --lag 2 --dpath_shapes /home/nicolasf/operational/ICU/development/hotspots/data/shapefiles --opath=/home/nicolasf/operational/ICU/development/hotspots/outputs/GPM_IMERG --fpath /home/nicolasf/operational/ICU/development/hotspots/figures/GPM_IMERG
+
+
+--------------------
+
+==== MFDFA: Multifractal Detrended Fluctuation Analysis in Python ====
+
+→ code: https://github.com/LRydin/MFDFA 
+
+includes an implementation of the Empirical Mode Decomposition (EMD)
+
+→ paper: https://t.co/hBg2Fc5d7M?amp=1 
+
+Miloş, L. R., C. Haţiegan, M. C. Miloş, F. M. Barna, and C. Boțoc, 2020: Multifractal Detrended Fluctuation Analysis (MF-DFA) of Stock Market Indexes. Empirical Evidence from Seven Central and Eastern European Markets. Sustainability, 12, 535, https://doi.org/10.3390/su12020535.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

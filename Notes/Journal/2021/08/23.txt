@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-23T11:42:04+12:00
+
+====== Monday 23 Aug 2021 ======
+
+==== Bias correction with climpred ====
+
+@SI @ICU 
+
+see 
+
+
+https://github.com/pangeo-data/climpred/blob/stable/docs/source/bias_removal.ipynb
+
+and 
+
+https://github.com/pankajkarman/bias_correction 

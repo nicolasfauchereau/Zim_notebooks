@@ -1,0 +1,82 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-31T09:21:48+13:00
+
+====== Friday 31 Jan 2020 ======
+
+==== continues to copy GCM data to project drive ====
+
+see [[Journal:2020:01:30|30/01/20]]
+
+=== clipping a netcdf file / xarray DataArray using a set of shapefiles: ===
+
+see: 
+
+https://github.com/jwagemann/seasonal_forecasts/blob/master/Workflow_seasonal_fc_processing.ipynb 
+
+code below for the function 
+
+{{{code: lang="python" linenumbers="True"
+#Function provided by Stephan Hoyer
+from rasterio import features
+
+from affine import Affine
+def transform_from_latlon(lat, lon):
+    lat = np.asarray(lat)
+    lon = np.asarray(lon)
+    trans = Affine.translation(lon[0], lat[0])
+    scale = Affine.scale(lon[1] - lon[0], lat[1] - lat[0])
+    return trans * scale
+
+def rasterize(shapes, coords, latitude='latitude', longitude='longitude',
+              fill=np.nan, **kwargs):
+    """Rasterize a list of (geometry, fill_value) tuples onto the given
+    xray coordinates. This only works for 1d latitude and longitude
+    arrays.
+    """
+    transform = transform_from_latlon(coords[latitude], coords[longitude])
+    out_shape = (len(coords[latitude]), len(coords[longitude]))
+    #requires the features library from rasterio
+    raster = features.rasterize(shapes, out_shape=out_shape,
+                                fill=fill, transform=transform,dtype=float, **kwargs)
+    spatial_coords = {latitude: coords[latitude], longitude: coords[longitude]}
+    return xr.DataArray(raster, coords=spatial_coords, dims=(latitude, longitude))
+
+}}}
+
+
+and 
+
+{{{code: lang="python" linenumbers="True"
+
+
+%%time
+#Sessonal forecast anomalies
+shapes = zip(gdf.geometry, range(len(gdf)))
+tp_seasonal_anomalies_mm['countries'] = rasterize(shapes, tp_seasonal_anomalies_mm.coords, longitude='longitude', latitude='latitude')
+
+
+}}}
+
+
+=== Continues to process the ERA5 dataset for validation: monthly and seasonal climatologies and anomalies: ===
+
+see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/ERA5/notebooks/read_ERA_calculate_anomalies.ipynb]] 
+
+[*] T2M monthly and seasonal climatologies and anomalies 
+[*] PRECIP monthly and seasonal climatologies and anomalies 
+[ ] SST 
+[ ] Z500
+[ ] Z200
+
+
+
+
+
+
+
+
+
+

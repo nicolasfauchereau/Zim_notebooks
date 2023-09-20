@@ -1,0 +1,61 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-12T10:50:47+12:00
+
+====== Thursday 12 Aug 2021 ======
+
+==== Paper: open data and open-source software for the development of climate services and climate forecasts in the Pacific region. ====
+
+@ICU 
+
+Open data and open source software 
+
+Introduction 
+
+Climate change adaptation, 
+
+Availability of forecasts and outlooks at different scales 
+
+monthly to seasonal forecasts 
+
+One model that has been successful is open data and open source software 
+
+demonstrated 
+
+We argue in this paper that the promise / potential of monthly and seasonal forecasts can be truly be realises when the information can be incoporated in larger climate services systems, i.e. when monthly / seasonal forecasts become one element in larger climate intelligence systems. 
+
+We give the example here of a simple system which combines near realtime satellite rainfall estimates and monthly to seasonal ensemble probabilistic forecasts, based on simple heuristics, and developed with the goal to highlight regions at potential for water stress in the Pacific region. This system (The Island Climate "Water Watch") is inspired by and extends the "Early Rainfall Action" (EAR) watches implemented by various Pacific Islands National Meteorological Services (PI-NMSs) and some regional organisations. 
+
+
+--------------------
+
+==== Graph Neural Networks for climate prediction ====
+
+@graph @DL @NN @GNN 
+
+
+→ The World as a Graph: Improving El Niño Forecasts with Graph Neural Networks: https://arxiv.org/abs/2104.05089 
+→ Graph-Guided Regularized Regression of Pacific Ocean Climate Variables to Increase Predictive Skill of Southwestern U.S. Winter Precipitation: https://journals.ametsoc.org/view/journals/clim/34/2/JCLI-D-20-0079.1.xml 
+
+for a collection of (general) papers on GNN, 
+
+https://github.com/chaitjo/awesome-efficient-gnn 
+
+for GNN in Tensorflow / Keras, see: 
+
+https://github.com/danielegrattarola/spektral
+
+which seems extremely well suited for the representation and model building 
+
+see paper on Spektral: https://arxiv.org/abs/2006.12138 
+
+--------------------
+
+
+
+
+
+
+
+
+

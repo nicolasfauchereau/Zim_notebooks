@@ -1,0 +1,87 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-24T09:55:40+12:00
+
+====== Friday 24 Jul 2020 ======
+
+===== Marine Heat Waves =====
+
+see: 
+
+https://www.nature.com/articles/s41467-019-10206-z: A global assessment of marine heatwaves and their drivers 
+
+https://www.researchgate.net/publication/289571997_A_hierarchical_approach_to_defining_marine_heatwaves: A hierarchical approach to defining marine heatwaves 
+
+code: 
+
+https://github.com/ecjoliver/marineHeatWaves
+
+https://github.com/ecjoliver/Global_MHW_Trends
+ 
+--------------------
+
+===== Eddy Tracking =====
+
+https://github.com/ecjoliver/eddyTracking
+
+--------------------
+
+===== Storm Tracking =====
+
+
+Automated detection and tracking of atmospheric storms (cyclones) and high-pressure systems (anticyclones), given a series of mean sea level pressure maps. Developed as an adaptation of similar mesoscale ocean eddy tracking code and with modifications based on collaboration with Rebekah Cavanagh (Dalhousie University).
+
+https://github.com/ecjoliver/stormTracking 
+
+cloned in [[/home/nicolasf/sources/stormTracking]] 
+
+with example data from 20CR in [[/home/nicolasf/sources/stormTracking/data]] 
+
+--------------------
+
+===== Deseason_harmonic: Deseasonalization of time series by fitting of harmonics: =====
+
+import numpy as np
+
+def deseason_harmonic(dat, K, L):
+	'''
+	deseasoned_data, season, beta = deseason_harmonic(dat, K, L)
+	
+	Subtracts the seasonal cycle (season) from the data (data). Season
+	is calculated by fitting K harmonics of the annual cycle (as well as the
+	mean) to the data. Assumes on year has L elements (i.e., 365 for daily data,
+	73 for pentad data, 52 for weekly data, etc.).
+	Outputs the deseasonalized data, the season, and the fitting parameters (beta)
+	
+	Written by Eric Oliver, Dalhousie University, 2007-2011
+	Adapted from original MATLAB script on 28 November 2012
+	'''
+
+#   ensure that mat is a matrix and a column vector
+	dat = np.mat(dat)
+	if dat.shape[1]!=0:
+		dat = dat.T
+
+#   length of time series and generate time vector
+	n = len(dat)
+	time = np.mat(np.arange(1,n+1)/(1.*L))
+
+#   set up mean and harmonics to fit data
+	P = np.mat(np.ones((n,1)))
+	for k in range(1,K+1):
+		P = np.concatenate((P, np.cos(k*2*np.pi*time.T)), 1)
+		P = np.concatenate((P, np.sin(k*2*np.pi*time.T)), 1)
+
+#   Remove seasonal cycle by harmonic regression
+	beta = (np.linalg.inv(P.T*P)*P.T)*dat
+	season = P*beta
+	dat_ds = dat - season
+
+	return dat_ds, season, beta
+
+
+
+
+
+
+

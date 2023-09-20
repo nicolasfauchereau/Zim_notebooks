@@ -1,0 +1,61 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-09T10:59:20+12:00
+
+====== Thursday 09 Jul 2020 ======
+
+==== Python Learning Path ====
+
+The landing page on one.niwa is: 
+
+https://niwa.sharepoint.com/sites/LearningM365/SitePages/Python.aspx?CT=1594249187911&OR=OWA-NT&CID=0a7f8f89-e728-ccab-23a9-d0983c205100 
+
+which should be editable 
+
+This will link to: 
+
+https://github.com/nicolasfauchereau/Python_learning_path 
+
+and the individual components will be linked to the relevant folder in the repository 
+
+
+{{./screenshot_2020-07-09-110155.png?width=900}}
+
+==== Climate Indices in Python ====
+
+see: 
+
+https://climate-indices.readthedocs.io/en/latest/ 
+
+his project contains Python implementations of various climate index algorithms which provide a geographical and temporal picture of the severity of precipitation and temperature anomalies useful for climate monitoring and research.
+
+The following indices are provided:
+
+* **SPI**, Standardized Precipitation Index, utilizing both gamma and Pearson Type III distributions
+* **SPEI**, Standardized Precipitation Evapotranspiration Index, utilizing both gamma and Pearson Type III distributions
+* **PET**, Potential Evapotranspiration, utilizing either Thornthwaite or Hargreaves equations
+* PDSI, Palmer Drought Severity Index
+* scPDSI, Self-calibrated Palmer Drought Severity Index
+* PHDI, Palmer Hydrological Drought Index
+* Z-Index, Palmer moisture anomaly index (Z-index)
+* PMDI, Palmer Modified Drought Index
+* PNP, Percentage of Normal Precipitation
+
+==== Clustering SW Pacific regimes ====
+
+paper, Figure 2, archetypes 
+
+{{./screenshot_2020-07-09-121749.png}}
+
+==== lazypredict ====
+
+https://github.com/shankarpandala/lazypredict
+
+{{./screenshot_2020-07-09-205010.png}}
+
+
+
+
+ 
+
+

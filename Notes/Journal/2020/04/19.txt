@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-19T11:57:14+12:00
+
+====== Sunday 19 Apr 2020 ======
+
+Article of interest: 
+
+=== The impact of the extratropics on ENSO diversity and predictability ===
+
+https://link.springer.com/epdf/10.1007/s00382-020-05232-3?author_access_token=2WTEiPIiPtYP09UlhDd7R_e4RwlQNchNByi7wbcMAY7XHd7XDo3GeBTJ-ffjm1JmIrFSMVAj_9T9pX9mwpOgcP51cy1hNKw6qOw0CNED9VWirDhusQsGf1skmuPSLGWQjbmNKU3k9Q8IwgOJ5kht1g%3D%3D
+
+They use the LASSO to prevent overfitting in a multiple regression problem 

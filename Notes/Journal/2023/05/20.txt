@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-20T14:22:36+12:00
+
+====== Saturday 20 May 2023 ======
+
+==== fix problem with XESMF not importing in mamba environment BCSD ====
+
+@CMIP6 @downscaling 
+
+export ESMFMKFILE=~/mambaforge/envs/BCSD/lib/esmf.mk 
+
+before launching the kernel 

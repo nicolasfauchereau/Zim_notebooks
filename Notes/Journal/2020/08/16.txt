@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-16T18:51:35+12:00
+
+====== Sunday 16 Aug 2020 ======
+
+==== look at rioxarray reprojection with spatial references defined by osgeo ====
+
+from osgeo import osr
+from osgeo import gdal
+
+# GOES-16 Spatial Reference System
+sourcePrj = osr.SpatialReference()
+sourcePrj.ImportFromProj4('+proj=geos +h=35786023.0 +a=6378137.0 +b=6356752.31414 +f=0.00335281068119356027489803406172 +lat_0=0.0 +lon_0=-89.5 +sweep=x +no_defs')
+
+then 
+
+sourcePrj.ExportToWkt() 
+
+?
+
+# Lat/lon WSG84 Spatial Reference System
+targetPrj = osr.SpatialReference()
+targetPrj.ImportFromProj4('+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs')
+
+in https://github.com/oceanhackweek/ohw20-proj-gapfree-sst/blob/master/remap.py 
+
+see also https://corteva.github.io/rioxarray/stable/rioxarray.html#rioxarray.rioxarray.RasterArray.interpolate_na 
+
+to interpolate missing data !

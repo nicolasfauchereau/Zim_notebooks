@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-11T09:54:07+12:00
+
+====== Wednesday 11 May 2022 ======
+
+==== Compound extremes project ====
+
+@extremes @CPP @compound 
+
+See various functions and methods in xclim, exemples of functions of interest: 
+
+→ https://xclim.readthedocs.io/en/stable/api.html#xclim.core.calendar.percentile_doy 
+
+Percentile value for each day of the year.
+
+Return the climatological percentile over a moving window around each day of the year. Different quantile estimators can be used by specifying alpha and beta according to specifications given by [HyndmanFan]. The default definition corresponds to method 8, which meets multiple desirable statistical properties for sample quantiles. Note that numpy.percentile corresponds to method 7, with alpha and beta set to 1.
+
+→ https://xclim.readthedocs.io/en/stable/api.html#xclim.core.calendar.resample_doy 
+
+Create a temporal DataArray where each day takes the value defined by the day-of-year. 
+
+i.e. to 'repeat' an xarray with DOY dimension onto the time dimension of another array (for comparisons) 
+
+→ https://xclim.readthedocs.io/en/stable/api.html#xclim.core.calendar.select_time 
+
+Select entries according to a time period.
+
+This conveniently improves xarray’s xarray.DataArray.where() and xarray.DataArray.sel() with fancier ways of indexing over time elements. In addition to the data da and argument drop, only one of season, month, doy_bounds or date_bounds may be passed.
+
+→ https://xclim.readthedocs.io/en/stable/indicators_api.html#xclim.indicators.atmos.cold_and_dry_days 
+
+calculation of the quantile climatologies: 
+
+see: 
+
+**read_VCSN_calc_quantile_climatologies_construct.ipynb** 
+
+in [[/home/nicolasf/research/compound_extremes/notebooks]] 
+
+Already done: 
+
+[*] climatological 90th percentile for temperature 
+climatology saved in [[../outputs/climatologies/Tmean_n_detrended_VCSN_clim_quantile_90_31d_window_unstack_dayofyear_construct.nc]] 
+[*] climatological 10th percentile for temperature
+climatology saved in [[../outputs/climatologies/Tmean_n_detrended_VCSN_clim_quantile_10_31d_window_unstack_dayofyear_construct.nc]]
+[*] climatological 90th percentile for rainfall (rain days only, >= 0.1 mm) 
+climatology saved in [[../outputs/climatologies/Rain_bc_VCSN_clim_quantile_90_31d_window_unstack_dayofyear_construct.nc]] 
+
+
+
+
+
+
+
+
+
+
+

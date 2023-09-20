@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-13T09:46:51+13:00
+
+====== Friday 13 Mar 2020 ======
+
+=== CNN and compositionality of the real world objects ===
+
+CNNs (and other deep learning methods) work because they can learn hierarchies of features, they work because the real world's objects are compositional: i.e. they can be thought as being assembled from 'parts' in a hierarchical way (face is assembled from ears, nose, eyes, etc) 
+
+The world is compositional or there is a God” [Jason Eisner]
+
+In climate science, when using deep learning to extract / identify features from climate fields, it is less clear we can thing about it like that 
+
+== ===================================================================================================================================================== ==
+
+==== notebooks for making basic weather maps from online data (GFS) ====
+
+https://github.com/mathewbarlow/weather_maps 
+
+and cloned locally in 'operational' 
+
+{{./screenshot_2020-03-13-152529.png?width=500}}
+
+interesting features: 
+
+1. Calculate vorticity and vorticity advection
+
+see also: 
+
+https://github.com/mathewbarlow/potential-vorticity 
+
+== ===================================================================================================================================================== ==
+ 
+
+=== HACKATHON ? ===
+
+http://govhack.bom.gov.au/
+
+NIWA data → NZ open data ? 
+
+see: https://data.gov.au/dataset/ds-nsw-f6b1069d-3fc4-4897-a550-d16e20c1a18d/details?q= 
+
+**Australian Gridded Solar Climatology Web Data Services**
+Climatologies are given for two radiation parameters: the global horizontal exposure, which is the total amount of solar energy falling on a horizontal surface over a time interval; and the direct normal exposure which is the total of the component of radiation from the sun’s disk on a plane perpendicular to the beam. Climatologies of daily exposure are given as an annual average and as a set of twelve monthly averages. Climatologies of the diurnal cycle are given as monthly averages of hourly exposures through the day. These data sets are derived from 23 years (1990 - 2012) of data from satellites operated by Japan Meteorological Agency and the US National Oceanographic & Atmospheric Administration. NEII
+
+How to organize a hackathon ?
+
+https://medium.com/selleo/how-did-i-organize-hackathon-in-my-company-8e0367349388 
+
+https://www.techrepublic.com/article/how-to-organize-a-hackathon-6-key-tips/
+
+open.nasa.gov/blog/2013/04/19/worlds-largest-hackathon/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

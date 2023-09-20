@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-19T16:03:01+13:00
+
+====== Friday 19 Nov 2021 ======
+
+==== discussion on compound extremes and the financial sector with Alan Tan ====
+
+see paper: 
+
+Zscheischler, J., and Coauthors, 2020: A typology of compound weather and climate events. Nat Rev Earth Environ, 1, 333–347, https://doi.org/10.1038/s43017-020-0060-z.
+
+--------------------
+
+==== SPI in the ICU ====
+
+@SPI @ICU 
+
+see in the map_SPI_Pacific and map_SPI functions in plot.py 
+
+
+

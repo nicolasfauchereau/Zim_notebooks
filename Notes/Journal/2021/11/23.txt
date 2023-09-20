@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-23T13:42:46+13:00
+
+====== Tuesday 23 Nov 2021 ======
+
+==== CPP: clustering on NCEP / NCAR for 1979 - 2019 redone ====
+
+@CPP 
+
+see: 
+
+in ~/research/CPP/WRs/notebooks/Weather_and_Climate_paper
+
+→ do_AP_and_kmeans_NCEP1_Z1000_1979_2019.ipynb for AP and kmeans 
+→ composites_HGT_and_UV_NCEP.ipynb for the composite anomalies for the archetypes 
+→ analyse_clusters_NCEP.ipynb to derive the statistics and the transition matrices 
+→ circulation_regimes_graphs_NCEP.ipynb to derive a graph representation of the NCEP regimes 
+→ 
+
+
+--------------------
+
+
+https://www.theguardian.com/commentisfree/2021/nov/18/moral-case-destroying-fossil-fuel-infrastructure

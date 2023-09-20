@@ -1,0 +1,64 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-18T08:48:24+12:00
+
+====== Friday 18 Jun 2021 ======
+
+Group Meeting 
+
+We finalised step 1 of the analyses for ZESPRI, and we just a workshop yesterday (Thursday) presenting the results to a group at ZESPRi including Dave Scullin (CIO), feedbacks are pretty positive at this point, with indications they would like to develop a commercial product. 
+
+Continued analyses on the Wellington Hospital daily admission (project): used cluster analysis to determine a cluster of symptoms which present a significant seasonal component, then modelled the daily variations using a Generalized Additive Model, accounting for different periodicities (weekly, seasonal), trends, and the effects of holidays, thten incorporated daily weather as extra-regressor, correlation model / obs over 2019 (test period) is about 0.57. Am catching up on Monday with Kameron Christopher and Stephen Fitzherbert for a brainstorm. 
+
+Finalised an array of analyses for project CDFP21 on circulation regimes and surface weather in New Zealand, see results compiled at 
+
+https://niwa-my.sharepoint.com/:p:/g/personal/nicolas_fauchereau_niwa_co_nz/EUDDRX5dk01Cl2wnXk-fw7EB8gOhxKwRucTT0H8XAHuYRA?e=lYR6hf
+
+Had video conference a couple of weeks ago with several people at NOAA and at the US National Weather Service, where I presented the methodology I developed to derive a Pacific 'drought watch' combining realtime satellite rainfall monitoring (GPM-IMERG) and the monthly and seasonal forecasts from the C3S Multi-model (ECMWF, UKMO, Meteo-France, DWD, CMCC, NCEP, JMA, ECCC), very well received: Richard Heim (NOAA) is very interested in working with us to the Global Drought Forecasting component of the Global Drought Information System (GDIS, see https://gdis-noaa.hub.arcgis.com/), will firm up plan mid-july 
+
+code is currently being made available at https://github.com/nicolasfauchereau/ICU_Water_Watch, presentation at https://niwa.sharepoint.com/:p:/s/PacificRimTeam/EQS-e0D6N91NmHu6FsO9nFwBQohb_Mlf9iFaDkBhIC7LxQ?e=vLsdwF 
+
+
+--------------------
+
+==== list of C3S GCMs: ====
+
+@SI 
+
+ECMWF, UKMO, Meteo-France, DWD, CMCC, NCEP, JMA, ECCC 
+
+
+
+--------------------
+
+==== Hot extremes have become drier in the  United States Southwest ====
+
+@extremes 
+
+relative humidity during HOT DAYS: see 
+
+https://www.nature.com/articles/s41558-021-01076-9.pdf 
+
+McKinnon, K. A., A. Poppick, and I. R. Simpson, 2021: Hot extremes have become drier in the United States Southwest. Nat. Clim. Chang., https://doi.org/10.1038/s41558-021-01076-9.
+
+code: 
+
+https://github.com/karenamckinnon/compound_extremes  Quantifying and explaining changes in Southwest hot, dry extremes  
+
+https://github.com/karenamckinnon/humidity_variability  Noncrossing quantile smoothing splines for temperature/dew point analysis  
+
+all saved in [[/home/nicolasf/research/CPP/WRs/Karen_McKinnon]] 
+
+Note: https://github.com/karenamckinnon/compound_extremes/blob/master/compound_extremes/utils.py has a function to fit seasonal cycle of daily data with specified number of Fourier bases.
+
+
+
+
+
+
+
+
+
+
+
+

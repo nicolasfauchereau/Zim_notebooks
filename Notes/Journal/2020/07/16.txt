@@ -1,0 +1,116 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-16T09:53:58+12:00
+
+====== Thursday 16 Jul 2020 ======
+
+==== Jupyterlab extensions ====
+
+a good list of extensions for Jupyterlab can be found at: 
+
+https://github.com/mauhai/awesome-jupyterlab
+
+it includes a few themes ... 
+
+see also another curated list: 
+
+https://github.com/markusschanta/awesome-jupyter
+
+==== Jupyter notebooks and IDEs ====
+
+A good overview of Jupyter notebook  / lab and IDEs can be found at: 
+
+https://pabloinsente.github.io/intro-jupyter-ide 
+
+including limitations of notebooks, and best practices 
+
+==== Issues with some months missing from some GCMs ====
+
+== CanCM4i ==
+
+CanCM4i = month of February all missing, which matches the issue raised by Eibe about the **T2M** fields missing, February initialisation would  correspond to MAM seasonal forecasts (month = 5) 
+
+in [[~/drives/ham_projects/END19101/Working/data/GCMs/processed/hindcasts/IRI/CanCM4i/T2M/]] 
+
+anomalies missing for all months of February, but climatology present in: 
+
+~/drives/ham_projects/END19101/Working/data/GCMs/processed/hindcasts/IRI/CanCM4i/**T2M**/CLIMATOLOGY
+
+use: **process_IRI_hindcasts_per_month.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/processors/IRI/notebooks]] 
+
+to reprocess everything 
+
+the anomalies, and interpolated anomalies, are saved in 
+
+[[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/hindcasts/IRI/CanCM4i/T2M]] 
+
+The function **get_GCM_outputs** (in [[/home/nicolasf/research/Smart_Ideas/code/ml4seas/GCM]] ) now tests for consistency of the time 
+index in the GCM dataset, compared to a pd.date_range, and prints out the potential months missing 
+
+== CMCC ==
+
+The interpolated and non interpolated **MONTHLY** anomalies are all present in 
+
+[[/home/nicolasf/drives/ham_projects/END19101/Working/data/GCMs/processed/hindcasts/CDS/CMCC/T2M]] 
+
+but the **SEASONAL**  anomalies are missing for several years 
+
+**solution**: read the monthly anomalies (native and interpolated), calculate the seasonal anomalies, and then save back to disk (local) 
+
+==== problem with XESMF ====
+
+it seems that esmpy is installed without the MPI bindings, which causes issues, 
+
+https://xesmf.readthedocs.io/en/latest/installation.html
+
+workaround is to test whether xesmf is available: 
+
+see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/ml4seas/GCM/regrid.py]] 
+
+for function, testing whether xesmf is available and defining the regrid function accordingly 
+
+it uses this bit of code: 
+
+import importlib.util
+
+package_name = 'xesmf'
+
+spec = importlib.util.find_spec(package_name)
+
+NOTE That an apparent solution to install xesmf, albeit in a separate environment is: 
+
+$ conda config --add channels conda-forge
+$ conda config --set channel_priority strict
+$ conda update -n base -c defaults conda
+$ conda create -n xesmf 
+$ conda activate xesmf
+$ conda install esmpy 
+$ conda install xesmf dask
+
+But it doesnt really seem to work if you try and install it in an existing environment (`climlab`) 
+
+==== LOGIN TO deuce.cms.waikato.ac.nz ====
+
+sorted by Clint Dilks, he just copied my public key (id_rsa.pub) on the server 
+
+see [[~/.ssh//id_rsa.pub]] on my local linux machine 
+
+Easy regridding with the scipy.ndimage.zoom function 
+
+see: https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.zoom.html 
+
+The array is zoomed using spline interpolation of the requested order. 
+
+
+
+
+
+
+
+ 
+
+
+
+

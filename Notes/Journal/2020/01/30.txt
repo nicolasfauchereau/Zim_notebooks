@@ -1,0 +1,204 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-30T08:37:01+13:00
+
+====== Thursday 30 Jan 2020 ======
+
+* Work on cleaning up GCMs downloads and directory structures 
+* Work on ERA5 monthly and seasonal climatology, seasonal climatology and anomalies 
+* interview Asimenia 2PM
+* clean up 'answers' to tests to send candidates [[/home/nicolasf/Documents/data_scientist_position/notebooks/test_NIWA.ipynb]]	
+
+For the TC frequencies from individual TC tracks, check this bit of code in 
+
+[[/home/nicolasf/research/Smart_Ideas/resources/books_and_tutorials/AMS_ML_course_meteorology/ams-ml-python-course/module_1/ML_Short_Course_Module_1_data_analysis_and_preproc.ipynb]] 
+
+and original repo: https://zenodo.org/record/3351654 and https://github.com/djgagne/ams-ml-python-course/tree/v1.1 
+
+{{{code: lang="python" linenumbers="True"
+proj = ccrs.LambertConformal()
+fig = plt.figure(figsize=(10, 6))
+ax = fig.add_subplot(1, 1, 1, projection=proj)
+countries = cfeature.NaturalEarthFeature("cultural", "admin_0_countries", "50m", facecolor="None", edgecolor="k")
+states = cfeature.NaturalEarthFeature("cultural", "admin_1_states_provinces", "50m", facecolor="None", edgecolor="k")
+ax.add_feature(countries)
+ax.add_feature(states)
+tor_idx = df["RVORT1_MAX-future_max"] > 0.005
+out_points = proj.transform_points(ccrs.PlateCarree(), 
+                            df.loc[tor_idx, "Centroid_Lon"].values, df.loc[tor_idx, "Centroid_Lat"].values)
+out = ax.hist2d(out_points[:, 0], out_points[:, 1], bins=(np.linspace(-2.5e6, 2.5e6, 30), 
+                                                          np.linspace(-1.5e6, 1.8e6, 30)), cmin=1)
+ax.set_extent([-2.5e6, 2.5e6, -1.5e6, 1.8e6], crs=proj)
+plt.colorbar(out[-1])
+plt.title("Tornadic Storm Spatial Frequency")
+}}}
+
+
+see also: 
+
+https://xhistogram.readthedocs.io/en/latest/
+
+TAG: @TC @ICU @TROPICAL_CYCLONE
+
+see also: 
+
+https://github.com/jsignell/lightning-tools/blob/master/00 Read Data.ipynb 
+
+for interpolation of point process data using 
+
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.histogram2d.html 
+
+
+
+== ======================================================================================================================================================= ==
+
+Notes on AMS ML short courses: some interesting modules (utils.py, performance_diagrams.py, roc_curves.py, etc) in 
+
+
+
+== ======================================================================================================================================================= ==
+
+===== Transfer of GCM data to project drive: =====
+
+==== CDS ====
+
+=== downloads / hindcasts: ===
+
+[[/home/nicolasf/drives/auck_projects/END19101/Working/data/GCMs/downloads/hindcasts/]]	
+
+code to count the number of files per year: 
+
+{{{code: lang="sh" linenumbers="True"
+for y in $(seq 1993 2016); do echo "${y}: $(ll *_${y}_??.grib | wc -l)" ; done
+}}}
+
+
+[*] ECMWF
+	[*] T2M: 288 months
+	[*] PRECIP: 288 months
+	[*] Z500: 288 months
+	[*] SST: 288 months
+
+[*] UKMO: 
+	[*] T2M: 287 months: January 1993 missing 
+	[*] PRECIP: 287 months: January 1993 missing 
+	[*] Z500: 287 months: January 1993 missing 
+	[*] SST
+
+[*] METEO_FRANCE: 
+	[*] T2M: OK on project drive by missing in local 
+	[*] PRECIP: 288 months
+	[*] Z500: 288 months
+	[*] SST: 288 months
+
+[*] DWD: 
+	[*] T2M: 11 months only in 2012: April 2012 missing, fixed now 31/01/20, 288 months present
+	[*] PRECIP: 288 months
+	[*] Z500: 288 months
+	[*] SST: 288 months
+
+[*] CMCC: 
+	[*] T2M: 288 months
+	[*] PRECIP: 288 months
+	[*] Z500: 288 months
+	[*] SST: 288 months
+
+=== JMA ===
+
+[*] JMA: note all the files are already processed
+	[*] T2M: 24 files per year from 1979 to 2014
+	[*] PRECIP: 288 months
+	[*] Z500: 288 months
+	[*] SST: 288 months
+
+=== IRI ===
+
+
+
+
+== ========================================================================================================================================= ==
+
+estimation of multimodel number of instances / initial features 
+
+Features
+
+73 (latitudes) * 144 (longitudes) = 10512
+2 variables common to all models (T2M and PRECIP) = 21024 features (max) 
+
+→ dimensionality reduction methods to apply 
+
+Instances (for the training set) 
+
+if common period is chosen to be 1993 - 2016 
+
+24 (years) * 12 (seasons per year) * 11 (models) = 3168 instances if only using the ensemble mean 
+
+if using all the members in the ensemble for each model 
+
+CDS 
+
+ECMWF
+UKMO 
+METEO_FRANCE 
+DWD
+CMCC 
+
+JMA 
+
+IRI
+
+targets 
+
+6 regions of NZ, initially temp and rainfall
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

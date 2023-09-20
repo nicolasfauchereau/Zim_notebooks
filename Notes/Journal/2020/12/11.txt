@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-11T09:18:49+13:00
+
+====== Friday 11 Dec 2020 ======
+
+==== calculate and save monthly climate indices ====
+
+see in [[/home/nicolasf/research/Smart_Ideas/code/climate_indices/notebooks/]] 
+
+observational: 
+
+[*] NINO3.4 → [[/media/nicolasf/END19101/data/climate_indices/observed/NINO34]] 
+[*] EMI → [[/media/nicolasf/END19101/data/climate_indices/observed/EMI]] 
+[*] SPSD → [[/media/nicolasf/END19101/data/climate_indices/observed/SPSD]] 
+[*] IOD → [[/media/nicolasf/END19101/data/climate_indices/observed/IOD]] 
+[*] SAM (NOAA) → [[/media/nicolasf/END19101/data/climate_indices/observed/SAM]] 
+[*] SAM (ERA5, 40S - 60S) → [[/media/nicolasf/END19101/data/climate_indices/observed/SAM_ERA5]] 
+[*] M1 (ERA5) → [[/media/nicolasf/END19101/data/climate_indices/observed/M1_ERA5]]
+[*] Z1 → (ERA5) → [[/media/nicolasf/END19101/data/climate_indices/observed/Z1_ERA5]] 
+
+
+--------------------
+
+==== Optimal Cluster Analysis for Objective Regionalization of Seasonal Precipitation ====
+
+Zhang, Y., S. Moges, and P. Block, 2016: Optimal Cluster Analysis for Objective Regionalization of Seasonal Precipitation in Regions of High Spatial–Temporal Variability: Application to Western Ethiopia. Journal of Climate, 29, 3697–3717, https://doi.org/10.1175/JCLI-D-15-0582.1.
+
+→ **do the same for NZ, publish in Weather and Climate** 
+
+--------------------
+
+==== CLIDB temp and rainfall daily data ====
+
+sent by Raghav, saved in [[/media/nicolasf/END19101/data/CLIDB]] 
+
+daily data, contains missing values, probably also outliers, etc 

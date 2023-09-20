@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-06T17:00:11+13:00
+
+====== Tuesday 06 Oct 2020 ======
+
+==== Coding sprint ====
+
+== NZCSM ensemble ==
+
+maximum accumulation along a dimension with **xarray.apply_ufunc** 
+
+{{./screenshot_2020-10-06-170055.png}}
+

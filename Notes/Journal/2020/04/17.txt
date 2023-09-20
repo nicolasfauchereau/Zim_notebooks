@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-17T10:16:01+12:00
+
+====== Friday 17 Apr 2020 ======
+
+=== Pacific RCC "ENSO tracker" ===
+
+see in [[~/operational/Pacific_RCC/notebooks]]
+
+=== saving the GCM fields and the targets in csv ===
+
+see: 
+
+prepare_all_GCMs_to_csv.ipynb 
+
+in: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/engineer/notebooks]] 
+
+outputs: 
+
+[[/home/nicolasf/research/Smart_Ideas/outputs]]
+
+-rw-rw-r-- 1 nicolasf nicolasf 372M Apr 17 15:33 GCMs_and_targets_cat3_and_anomalies_TMEAN_training_set.csv
+-rw-rw-r-- 1 nicolasf nicolasf  28M Apr 17 15:33 GCMs_and_targets_cat3_and_anomalies_TMEAN_test_set.csv
+-rw-rw-r-- 1 nicolasf nicolasf 369M Apr 17 15:33 GCMs_std_and_targets_cat3_and_anomalies_TMEAN_training_set.csv
+-rw-rw-r-- 1 nicolasf nicolasf  28M Apr 17 15:33 GCMs_std_and_targets_cat3_and_anomalies_TMEAN_test_set.csv
+-rw-rw-r-- 1 nicolasf nicolasf 405M Apr 17 16:06 GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv
+-rw-rw-r-- 1 nicolasf nicolasf  31M Apr 17 16:06 GCMs_and_targets_cat3_and_anomalies_RAIN_test_set.csv
+-rw-rw-r-- 1 nicolasf nicolasf 378M Apr 17 16:07 GCMs_std_and_targets_cat3_and_anomalies_RAIN_training_set.csv
+-rw-rw-r-- 1 nicolasf nicolasf  29M Apr 17 16:07 GCMs_std_and_targets_cat3_and_anomalies_RAIN_test_set.csv
+ 
+
+
+-rw-rw-r-- 1 nicolasf nicolasf 172M Apr 17 15:33 GCMs_and_targets_cat3_and_anomalies_TMEAN_training_set.parquet
+-rw-rw-r-- 1 nicolasf nicolasf  16M Apr 17 15:33 GCMs_and_targets_cat3_and_anomalies_TMEAN_test_set.parquet
+-rw-rw-r-- 1 nicolasf nicolasf 182M Apr 17 15:33 GCMs_std_and_targets_cat3_and_anomalies_TMEAN_training_set.parquet
+-rw-rw-r-- 1 nicolasf nicolasf  17M Apr 17 15:33 GCMs_std_and_targets_cat3_and_anomalies_TMEAN_test_set.parquet
+-rw-rw-r-- 1 nicolasf nicolasf 182M Apr 17 16:07 GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.parquet
+-rw-rw-r-- 1 nicolasf nicolasf  17M Apr 17 16:07 GCMs_and_targets_cat3_and_anomalies_RAIN_test_set.parquet
+-rw-rw-r-- 1 nicolasf nicolasf 186M Apr 17 16:07 GCMs_std_and_targets_cat3_and_anomalies_RAIN_training_set.parquet
+-rw-rw-r-- 1 nicolasf nicolasf  17M Apr 17 16:07 GCMs_std_and_targets_cat3_and_anomalies_RAIN_test_set.parquet
+
+
+
+
+
+

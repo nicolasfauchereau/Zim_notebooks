@@ -1,0 +1,203 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-26T08:56:02+13:00
+
+====== Thursday 26 Nov 2020 ======
+
+==== Unpacking tree-based models ====
+
+→ **features importance** 
+
+→ **permutation importance with multicolinear or correlated features** 
+
+when feeding e.g. the grid points (SST for example) to tree-based models, the features will be correlated: one approach to handling multicollinearity is by performing hierarchical clustering on the features’ Spearman rank-order correlations, picking a threshold, and keeping a single feature from each cluster.
+
+see, in scikit-learn doc: 
+
+https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html#permutation-importance-with-multicollinear-or-correlated-features
+
+see email sent to James Renwick today
+
+"""
+//Hi James//
+
+//Thanks ! I still need to do quite a bit of work to ensure these results are not overly optimistic, next step is to "simulate" what would happen in an operational setting, when the models are retrained every month, tuned over (let's say) the last 6 seasons, and predict the following 3 months tercile category, I expect there might be some surprises ... there has been quite a few papers lately in the ML space talking about 'model drift' in other applications, and that is something I think might also happen in this application, so still quite a way to go ....//
+
+//As for the "unpacking", there are a few avenues: for all tree-based models, you can get at the features importance, so for example for the experiments where I fed in the full (gridded) regional SST anomalies as features, each grid point will e.g. be associated with a value linked to its relative importance in making a prediction, this can be thought about a bit like a "non-linear correlation coefficient", and that could uncover some interesting spatio-temporal (i.e. seasonally-dependent) patterns, that would not necessarily diagnosed using classical regression or composite analysis ... note that there are some subtleties though as the features (grid-points) are not independent, but there are techniques to deal with this, based on e.g. features clustering//
+
+//For all deep learning models (which I didn't talk about, we - mostly colleagues at the uni of Waikato - are still working on it) a few techniques have been developed to better understand how the networks make the prediction, a good reference is https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019MS002002//
+"""
+
+--------------------
+
+==== rethink of the whole ML strategy ====
+
+== 1) re-calculate the variability (3 years window) of the SCO accuracy, based on the VCSN-derived tercile categories time-series, instead of the cliops-derived time-series ==
+
+	→ see in **compare_lst_to_terciles_time_series.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN]] 
+
+	we will then compare the accuracy calculated from the SCO (with VCSN obs) over the period 2017 - 2019 with a simulation thereof using Machine Learning models 
+	
+	these are held in the csv files 
+	
+	**f'./SCO_acc_variability_VCSN_obs_{var_name}_{region_name}_notolerance.csv'**
+	and 
+	**f'./SCO_acc_variability_VCSN_obs_{var_name}_{region_name}_tolerance.csv'**
+	
+	 in **/home/nicolasf/research/Smart_Ideas/code/targets/VCSN**
+
+	as an example, this is the accuracy for rainfall, derived using the SCO forecasts
+
+	most SCO forecasts, for rainfall especially, are NOT SHARP and we are hedging our bets, comparing the calculation of the SCO accuracy with tolerance of 5% and without tolerance, shows quite large difference, with a significant drop in accuracy when not allowing for this 5% tolerance 
+	
+	for example, this is the SCO rainfall outlooks accuracy, calculated over the past 3 years (2017 - 2019) for each region, when **NOT allowing for the tolerance**: 
+	
+	NNI     0.437500
+	WNI    0.375000
+	ENI     0.395833
+	NSI     0.284722
+	WSI    0.333333
+	ESI     0.305556
+	Name: 2017-2019, dtype: float64
+	
+	and this is the accuracy allowing for this tolerance 
+	
+	NNI     0.638889
+	WNI    0.541667
+	ENI     0.493056
+	NSI     0.430556
+	WSI    0.451389
+	ESI     0.458333
+	Name: 2017-2019, dtype: float64
+	
+	Note that the accuracy (global and variability) is quite different when calculated from CLIOPS directly, the picture below shows the accuracy variability, ending in 2019 for consistency, calculated using the observational cliops terciles categories, but still with NO TOLERANCE 
+	
+	{{./screenshot_2020-11-26-103306.png}}
+	
+	it still does not exceed 53% (for the east of the NI) for the past 3 years (period 2017-2019) 
+
+
+== 2) update the training / validation and testing strategy ==
+
+In order to "simulate" what would happen in a realistic setting: 
+
+1) the period 2017 - 2019 is set up initially as the completely independent test data 
+2) the models are trained over a training set excluding the last 6 (12) months of data, validated (hyperparameter tuning, model selection, ensemble selection etc) over the last 6 months, then a prediction is made for the next season (accounting for the overlapping season problem 
+3) the whole training / validation / test is then shifted one month chronologically, and the process is repeated 
+4) we then get test accuracy over 2017 - 2019
+
+see e.g. (as a first go): **AutoGLUON_ensembling_SSTs_obs_noPCA_seasonal_step_forward.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/AUTOGLUON]] 
+
+== 3) feature engineering ==
+
+revisit the possibility of building models with climate modes indices features in observations as well as in GCM forecast i.e.
+
+NINO3.4, IOD, SAM, SPSD **+ M1 and Z1** calculated from observational fields, with appropriate lags (up to N months in the past) 
+concatenated with future (forecast) indices calculated from the appropriate GCM fields, i.e. 
+
+SSTs for NINO3.4, IOD, SPSD 
+MSLP (?) for the SAM (60 - 40S anomalies) ? 
+MSLP for M1 and Z1
+
+M1 is the difference between MSLP (anomalies ?) in Hobart and the Chathams Islands, while Z1 is the difference between Auckland and Christchurch  
+
+M1: 
+
+→ Hobart: 42.8821° S, 147.3272° E 
+→ Chatham Island: 44.0058° S, 176.5401° W 
+
+Z1: 
+
+→ Auckland: 36.8483° S, 174.7625° E 
+→ Christchurch: 43.5320° S, 172.6397° E 
+
+Trenberth,  K.R.  (1976).  Fluctuations  and  trends  in  indices  of  the  Southern  Hemisphere  circulation. Quarterly Journal of the Royal Meteorological Society102: 65–107. 
+https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/qj.49710243106 
+
+
+--------------------
+
+==== xbatcher: Batch Generation from Xarray Datasets ====
+
+
+https://xbatcher.readthedocs.io/en/latest/ 
+
+
+Xbatcher is a small library for iterating xarray DataArrays in batches. The goal is to make it easy to feed xarray datasets to machine learning libraries such as Keras.
+
+--------------------
+
+==== tutorial materials from the PANGEO initiative ====
+
+see in  https://github.com/pangeo-data
+
+--------------------
+
+==== Awesome Open Atmospheric, Ocean, and Climate Science ====
+
+https://github.com/pangeo-data/awesome-open-climate-science
+
+
+--------------------
+
+==== talk by Tom Adams (MetService): Extracting interpretative value from ensembles through clustering ====
+
+→ Ensembles are **under-dispersed / under-dispersive**: ask for references, because that could potentially be an additional motivation for Generative Models fro ensemble augmentation 
+
+→ methodology super relevant to what we had in mind for the GEFS stuff 
+
+--------------------
+
+==== MARS (Multivariate Adaptative Regression Splines) ====
+
+Package py-earth  available at https://anaconda.org/conda-forge/sklearn-contrib-py-earth 
+
+works, see example notebook **example_MARS_py-earth.ipynb** 
+
+--------------------
+
+==== Thin plate smoothing splines ====
+
+see some implementations in Python, e.g. 
+
+https://github.com/cheind/py-thin-plate-spline/blob/master/TPS.ipynb 
+
+which uses PyTorch (!) 
+
+and https://gist.github.com/bgshih/e252ba7148590a381f9c for a simple example of Thin Plate Spline (TPS) transformation in Numpy.  
+
+and the package **RBF**:  "Python package containing tools for radial basis function (RBF) applications. Applications include interpolating scattered data and solving partial differential equations (PDEs) over irregular domains. "
+
+https://rbf.readthedocs.io/en/latest/index.html
+
+see in particular the example https://rbf.readthedocs.io/en/latest/interpolate.html  : "In this example we generate synthetic scattered data with added noise and then fit it with a smoothed RBF interpolant. **The interpolant in this example is equivalent to a thin plate spline.**" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

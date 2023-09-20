@@ -1,0 +1,77 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-02T09:33:50+12:00
+
+====== Friday 02 Sep 2022 ======
+
+==== To start working on the HPCF ====
+
+First use Maui, by connecting to https://jupyter.maui.niwa.co.nz 
+
+Module avail 
+
+module load cuDNN/8.1.1.33-CUDA-11.2.0  
+
+nvidia-smi 
+
+always do a: 
+
+I **module load Anaconda3/2020.02-GCC-7.1.0**
+
+before using conda to create, activate or install packages in conda environments   
+
+e.g. 
+
+conda create -n BCSD -c conda-forge Python=3.9 netcdf4 xarray dask xclim regionmask jupyterlab
+
+condarc files 
+
+cd .local/ 
+
+cd share/jupyter 
+
+[[/home/fauchereaun/.local/share/jupyter/kernels/gpu_env]]
+
+For level 
+
+[[/nesi/project/niwa00018/ML_downscaling_CCAM/era5_ccam]] 
+
+no precip in ERA5 CCAM 
+
+[[/nesi/project/niwa00018/ML_downscaling_CCAM/gpu_env]] 
+
+runs on KUPE 
+
+all data is 
+
+[[/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/historical/ERA5_c192/OUTPUT/NZ_domain]] 
+
+except precip, which is in 
+
+[[/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/historical/ERA5_c192/OUTPUT/NZ_surf_domain/201912>]] 
+
+On KUPE, look into 
+
+[[/nesi/project/niwa00018/rampaln/bashrc/]] 
+
+copy that bashrc on my home directory on kupe ... 
+
+hafs01
+kupe01
+kupe02 
+
+Parallel CDO: [[/nesi/project/niwa00018/rampaln/downscaling-application/CDO/subset_ccam_output.py]]
+
+see /nesi/project/niwa00018/rampaln
+
+for the processing scripts (aggregation, etc) 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-21T12:12:07+13:00
+
+====== Wednesday 21 Dec 2022 ======
+
+
+==== SCO processing ====
+
+
+{'dpath_historical': 'media/nicolasf/END19101/ICU/data/CDS',
+ 'dpath_operational': '/media/nicolasf/END19101/ICU/data/CDS/operational',
+ 'outputs_path': '/home/nicolasf/operational/seasonal_forecasting/outputs/NZ_6_regions',
+ 'lsmasks_path': '/home/nicolasf/operational/seasonal_forecasting/data/landsea_masks',
+ 'shapefiles_path': '/media/nicolasf/END19101/data/shapefiles/NZ_regions/NZ_6_regions/NZ_regions_corrected.shp',
+ 'dpath_vcsn_zip': '/home/nicolasf/drives/well_groups/CLIMATE/vcsn_data',
+ 'dpath_vcsn_netcdf': '/media/nicolasf/END19101/data/VCSN/daily',
+ 'dpath_vcsn_outputs': '/home/nicolasf/operational/seasonal_forecasting/outputs/VCSN'}
+
+see https://github.com/nicolasfauchereau/seasonal_forecasting/tree/main/scripts/SCO 

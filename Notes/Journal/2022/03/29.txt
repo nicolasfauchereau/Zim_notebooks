@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-29T16:42:26+13:00
+
+====== Tuesday 29 Mar 2022 ======
+
+==== Positional Encoder Graph Neural Networks for Geographic Data ====
+
+@graphs @networks @GNN 
+
+paper: 
+
+https://arxiv.org/abs/2111.10144
+
+Klemmer, K., N. Safir, and D. B. Neill, 2022: Positional Encoder Graph Neural Networks for Geographic Data. arXiv:2111.10144 [cs],.
+ 
+code: https://github.com/konstantinklemmer/pe-gnn 
+
+with google colab notebook: https://colab.research.google.com/github/konstantinklemmer/pe-gnn/blob/master/example.ipynb 
+

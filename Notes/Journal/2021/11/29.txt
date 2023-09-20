@@ -1,0 +1,89 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-29T09:50:28+13:00
+
+====== Monday 29 Nov 2021 ======
+
+--------------------
+
+==== TF-explain: explainable AI in Tensorflow ====
+
+@XAI @DL @ML 
+
+https://github.com/sicara/tf-explain
+
+--------------------
+
+==== Ideas for a project on complex networks in the climate system ====
+
+@graphs @networks 
+
+=== email Thursday, 8 July 2021 3:08 PM ===
+
+**complex networks and explainable AI for revisiting NZ's climate teleconnections** 
+
+Hi Drew
+
+As discussed, a few references related to what I alluded to for possible investigation, maybe next FY, as part of CPP. The general idea is to try and 'revisit' our understanding of teleconnections relevant to NZ's regional climate, using some techniques inspired by the field of complex (graph) networks and explainable AI (XAI) respectively:
+
+In short, complex networks encode relationships between time-series at different locations as a complex networks: each location (can be grid points for gridded data) is a node, and the edges encode the relationships between locations. It then opens the possibility to use a variety of techniques developed for the analysis complex networks (e.g. social networks) to uncover patterns and relationships ...
+
+A good, short introduction on the application of complex networks in the climate space is actually the corresponding wikipedia page:
+
+https://en.wikipedia.org/wiki/Climate_as_complex_networks
+
+some relevant references include:
+
+Kawale, J., and Coauthors, 2013: A graph-based approach to find teleconnections in climate data:. Statistical Analysis and Data Mining, 6, 158–179, https://doi.org/10.1002/sam.11181
+
+Liess, S., and Coauthors, 2014: Different Modes of Variability over the Tasman Sea: Implications for Regional Climate*. Journal of Climate, 27, 8466–8486, https://doi.org/10.1175/JCLI-D-13-00713.1
+
+Gregory, W., M. Tsamados, J. Stroeve, and P. Sollich, 2020: Regional September Sea Ice Forecasting with Complex Networks and Gaussian Processes. Weather and Forecasting, 35, 793–806, https://doi.org/10.1175/WAF-D-19-0107.1.
+
+The latter being used in a predictive setting
+
+There's also:
+
+Runge, J., and Coauthors, 2019: Inferring causation from time series in Earth system sciences. Nat Commun, 10, 2553, https://doi.org/10.1038/s41467-019-10105-3
+ 
+Runge, J., and Coauthors, 2015: Identifying causal gateways and mediators in complex spatio-temporal systems. Nat Commun, 6, 8502, https://doi.org/10.1038/ncomms9502.
+
+Explainable AI (XAI) uses a range of techniques to 'understand' the features and patterns that (generall) Neural Networks use to make predictions or model relationships, example of these techniques include Layerwise Relevance Propagation (LRP), some good examples of the application of such techniques in the recent literature, in the geoscience space, are:
+
+Toms, B. A., E. A. Barnes, and I. Ebert-Uphoff, 2020: Physically Interpretable Neural Networks for the Geosciences: Applications to Earth System Variability. arXiv:1912.01752 [physics, stat],. and submitted to the Journal of Advances in Modeling Earth Systems (JAMES) 
+
+Barnes, E. A., B. Toms, J. W. Hurrell, I. Ebert‐Uphoff, C. Anderson, and D. Anderson, 2020: Indicator patterns of forced change learned by an artificial neural network. J. Adv. Model. Earth Syst., https://doi.org/10.1029/2020MS002195.
+
+Toms, B. A., K. Kashinath, Prabhat, and D. Yang, 2020: Testing the Reliability of Interpretable Neural Networks in Geoscience Using the Madden-Julian Oscillation. Climate and Earth System Modeling,.
+
+All in all I think these approaches would allow a 'fresh view' of teleconnections between NZ's regional climate and large-scale climate variability / climate modes ... and I am pretty interested in exploring those, again, it might be best to plan this for next FY, I leave it to you to have a brief look at some of these references when you have a moment and tell me what you think
+
+cheers
+
+Nico 
+
+=== email Thu 8/07/2021 3:53 PM ===
+
+To: Peter and Neelesh  
+
+Good afternoon Peter and Neelesh,
+
+We had a chat with Drew this morning regarding his programme (Climate Present and Past) planning, and I suggested the below (probably for next FY). I am forwarding this email to you because if it eventually firms up in future tasks in CPP, I thought you could be interested 🙂 ... these are definitely topics of interest for me, but then again in order to develop these ideas they would need to be somehow included in a SSIF project (in CPP), or one would need to seek external funding ... in any case I wanted to include you in the discussion
+
+I am not forgetting the draft Smart Ideas EOI on windows of opportunity for skillful weather to seasonal forecasts, I just got sidetracked today !
+
+cheers
+
+Nico 
+
+=== Additional references: ===
+
+Cachay, S. R., E. Erickson, A. F. C. Bucker, E. Pokropek, W. Potosnak, S. Bire, S. Osei, and B. Lütjens, 2021: The World as a Graph: Improving El Ni\~no Forecasts with Graph Neural Networks. arXiv:2104.05089 [physics, stat],.
+
+
+
+
+
+
+
+

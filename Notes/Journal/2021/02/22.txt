@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-22T09:15:13+13:00
+
+====== Monday 22 Feb 2021 ======
+
+==== PYCARET 2.3.0 installed ====
+
+in `pycaret` environment 
+
+see; https://github.com/pycaret/pycaret/releases for changes 
+
+
+

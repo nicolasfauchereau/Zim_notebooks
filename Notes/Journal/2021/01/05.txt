@@ -1,0 +1,53 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-05T08:46:27+13:00
+
+====== Tuesday 05 Jan 2021 ======
+
+==== Auckland cycling and weather ====
+
+**1) prepare the cycling data, updating the MRCagney hourly data with the daily data downloaded** 
+
+see in [[/home/nicolasf/research/Auckland_cycling_2019/notebooks]] 
+
+→ **Auckland_cycling_2019/notebooks/prepare_daily_Tamaki_drive_data.ipynb**
+
+Take all the 'OLD' cycling data up to 2017, then add the updated data for the rest of 2018 and 2019-01
+
+The resulting **daily** data is in 
+
+[[/home/nicolasf/research/Auckland_cycling_2019/data/cycling/Tamaki_Drive_Daily_Total.csv]] 
+
+**2) prepare the weather data** 
+
+new data from Neelesh in S: drive, in drives/auck_scratch/fauchereaun/cycling_data/ contains multiple agents for each parameters 
+
+see **Auckland_cycling_2019/notebooks/prepare_weather_data.ipynb** for the selection and sanitization of the data, including the shift from UTC to NZST (UCT + 12:00)
+
+potential agents to consider are highlighted in bold 
+
+rain: **1962**, **22719**, 23976, 37852, 41228, 41351, 43711
+mean_temp: 1962, **22719**, 23976, **37852**, 39915, 41228, 41351, 43711
+sunshine: **22719**, **37852**, 41351, 43711
+surface wind: 1410, **1962**, 17355, **22719**, **23976**, **37852**, 39915, 41228, 41351, 43711, 44068
+RH: **1962**, **22719**, **23976**, **37852**, 39915, 41228, 41351, 43711
+
+see **Auckland_cycling_2019/notebooks/calculate_weather_stats_commute.ipynb** for the calculation of the averages over the daytime period (5AM to 22PM) 
+
+
+
+
+--------------------
+
+==== Function-Space Distributions over Kernels ====
+
+see post from Maxime: 
+
+A nice paper about a flexible kernel for GPs (Gaussian Processes). There is an interesting application to a precipitation prediction (using a multi-task GP) in 40 stations, see section 5.4 and supplemental figures 14-18.
+
+URL: https://arxiv.org/abs/1910.13565
+
+
+--------------------
+
+

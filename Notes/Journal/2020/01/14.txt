@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-14T13:07:19+13:00
+
+====== Tuesday 14 Jan 2020 ======
+
+work on the BAMS codes in the morning, finished all code, pushed to github at 
+
+https://github.com/nicolasfauchereau/BAMS_SOTC_2019
+
+**NOTE:** 
+
+==== MATPLOTLIB COLORMAPS ====
+
+for **diverging colormaps with center NOT AT ZERO**, Matplotlib version > 3.1 has introduced a new function called `**DivergingNorm**`
+
+to use: 
+
+vmin = 0
+vmax = 400 
+
+mid_point = 100 # e.g. if in % 
+
+from matplotlib import colors
+norm = colors.DivergingNorm(vmin=vmin, vcenter=mid_point, vmax=vmax) 
+
+then call e.g. ax.contourf(..., cmap=cmap, norm=norm)
+
+or 
+
+TwoSlopeNorm 
+
+[[~/Downloads/Beautiful custom colormaps with Matplotlib _ by Kerry Halupka _ Jul, 2020 _ Towards Data Science (2020-07-29 8_47_34 AM).html]]
+

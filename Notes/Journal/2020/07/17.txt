@@ -1,0 +1,654 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-17T06:35:12+12:00
+
+====== Friday 17 Jul 2020 ======
+
+--------------------
+
+@AutoML 
+
+===== AutoML =====
+
+== • Autogluon ==
+
+https://autogluon.mxnet.io 
+
+installed in environment **autogluon**
+
+source cloned in [[~/research/Smart_Ideas/resources/repos_libraries/autogluon]] 
+
+
+== • Pycaret ==
+
+https://pycaret.org/
+
+PyCaret is an open source low-code machine learning library in Python that aims to reduce the hypothesis to insights cycle time in a ML experiment. It enables data scientists to perform end-to-end experiments quickly and efficiently. In comparison with the other open source machine learning libraries, PyCaret is an alternate low-code library that can be used to perform complex machine learning tasks with only few lines of code. PyCaret is simple and easy to use. All the operations performed in PyCaret are automatically stored in a custom Pipeline that is fully orchestrated for deployment. PyCaret is essentially a Python wrapper around several machine learning libraries and frameworks such as scikit-learn, XGBoost, Microsoft LightGBM, spaCy and many more. 
+
+installed in separate environment **pycaret**
+
+source cloned in [[~/research/Smart_Ideas/resources/repos_libraries/pycaret]]	
+
+
+== • Pycobra ==
+
+https://github.com/bhargavvader/pycobra   
+
+**pycobra** is a python library for ensemble learning. It serves as a toolkit for regression and classification using these ensembled machines, and also for visualisation of the performance of the new machine and constituent machines. Here, when we say machine, we mean any predictor or machine learning object - it could be a LASSO regressor, or even a Neural Network. It is scikit-learn compatible and fits into the existing scikit-learn ecosystem.
+
+pycobra offers a python implementation of the **COBRA** algorithm introduced by **Biau et al. (2016)** for regression.
+
+Another algorithm implemented is the EWA (Exponentially Weighted Aggregate) aggregation technique (among several other references, you can check the paper by **Dalalyan and Tsybakov (2007).**
+
+Apart from these two regression aggregation algorithms, pycobra **implements a version of COBRA for classification**. This procedure has been introduced by **Mojirsheibani (1999).**
+
+references: 
+
+   - Guedj and B. Srinivasa Desikan (2018). Pycobra: A Python Toolbox for Ensemble Learning and Visualisation. Journal of Machine Learning Research, vol. 18 (190), 1--5.
+	- B. Guedj and B. Srinivasa Desikan (2020). Kernel-based ensemble learning in Python. Information, vol. 11(2).
+	- G. Biau, A. Fischer, B. Guedj and J. D. Malley (2016), COBRA: A combined regression strategy, Journal of Multivariate Analysis.
+	- M. Mojirsheibani (1999), Combining Classifiers via Discretization, Journal of the American Statistical Association.
+	- A. S. Dalalyan and A. B. Tsybakov (2007) Aggregation by exponential weighting and sharp oracle inequalities, Conference on Learning Theory.
+
+Installed in the environment `pycobra` 
+
+exemples in: 
+
+[[~/research/Smart_Ideas/resources/repos_libraries/pycobra/docs/notebooks]] 
+
+but so far does not seem to work very well at all ... 
+
+== • lazypredict ==
+
+https://lazypredict.readthedocs.io/en/latest/readme.html 
+
+Lazy Predict help build a lot of basic models without much code and helps understand which models works better without any parameter tuning, 
+
+Lazy classifier and regressors, to quickly compare 'out of the box' algorithms for regression and classification 
+
+list of **CLASSIFIERS**: 
+
+| Model                          
+|:-------------------------------
+| LinearSVC                      
+| SGDClassifier                  
+| MLPClassifier                  
+| Perceptron                     
+| LogisticRegression             
+| LogisticRegressionCV           
+| SVC                            
+| CalibratedClassifierCV         
+| PassiveAggressiveClassifier    
+
+| LabelPropagation :   Xiaojin Zhu and Zoubin Ghahramani. Learning from labeled and unlabeled data with label propagation. Technical Report CMU CALD-02-107, Carnegie Mellon University, 2002 http://pages.cs.wisc.edu/~jerryzhu/pub/CMU-CALD-02-107.pdf
+
+initially thought it would work, but doesnt, see ~/research/Smart_Ideas/code/models/classification/autoML/lazypredict/lazy_predict_test.ipynb
+
+| LabelSpreading                 
+| RandomForestClassifier         
+| GradientBoostingClassifier     
+
+see https://github.com/dmlc/xgboost/ 
+
+| QuadraticDiscriminantAnalysis  
+| HistGradientBoostingClassifier 
+| RidgeClassifierCV              
+| RidgeClassifier                
+| AdaBoostClassifier             
+| ExtraTreesClassifier           
+| KNeighborsClassifier           
+| BaggingClassifier              
+| BernoulliNB                    
+| LinearDiscriminantAnalysis     
+| GaussianNB                     
+| NuSVC                          
+| DecisionTreeClassifier         
+| NearestCentroid                
+| ExtraTreeClassifier            
+| CheckingClassifier             
+| DummyClassifier         
+
+→ 30 classifiers, including 'checkingclassifier' and dummy classifier 
+
+list of **REGRESSORS** implemented: 
+
+| Model                         
+|:------------------------------
+| SVR                           
+| RandomForestRegressor         
+| ExtraTreesRegressor           
+| AdaBoostRegressor             
+| NuSVR                         
+| GradientBoostingRegressor     
+| KNeighborsRegressor           
+| HistGradientBoostingRegressor 
+| BaggingRegressor              
+| MLPRegressor                  
+| HuberRegressor                
+| LinearSVR                     
+| RidgeCV                       
+| BayesianRidge                 
+| Ridge                         
+| LinearRegression              
+| TransformedTargetRegressor    
+| LassoCV                       
+| ElasticNetCV                  
+| LassoLarsCV                   
+| LassoLarsIC                   
+| LarsCV                        
+| Lars                          
+| SGDRegressor                  
+| RANSACRegressor               
+| ElasticNet                    
+| Lasso                         
+| OrthogonalMatchingPursuitCV   
+| ExtraTreeRegressor            
+| PassiveAggressiveRegressor    
+| GaussianProcessRegressor      
+| OrthogonalMatchingPursuit     
+| DecisionTreeRegressor         
+| DummyRegressor                
+| LassoLars                     
+| KernelRidge      
+
+→ 29 regressors ... 
+
+installed in environment `lazypredict` 
+
+Note that it relies on: 
+
+* tqdm 
+* xgboost 
+* lightgbm 
+* pytest
+
+which are not installed when installing from sources with `python setup.py install`
+
+basic example notebook (home made) is: 
+
+[[~/research/Smart_Ideas/resources/repos_libraries/lazypredict/notebooks/basics.ipynb]] 
+
+== • carefree-learn ==
+
+https://github.com/carefree0910/carefree-learn 
+
+**carefree-learn** is a minimal Automatic Machine Learning (AutoML) solution for tabular datasets based on PyTorch.
+
+Includes some **brand new techniques which may boost vanilla Neural Network (NN) performances on tabular datasets**, including:
+
+	**TreeDNN with Dynamic Soft Pruning,** which makes NN less sensitive to hyper-parameters.
+	**Deep Distribution Regression (DDR)**, which is capable of modeling the entire conditional distribution with one single NN model.
+
+
+NOTE: installed in environment `**carefree-learn**` by itself because issues were raised in the 'ML' environment 
+
+cloned in [[~/research/Smart_Ideas/resources/repos_libraries]] 
+
+installation notes: 
+
+
+exemple notebook (home made) in: 
+
+[[~/research/Smart_Ideas/resources/repos_libraries/carefree-learn/notebooks/basics.ipynb]]  
+
+Note that the FCNN (fully connected NNs ?) are running forever ... probably not doable ... 
+
+== • mljar-supervised ==
+
+**Working !** 
+
+https://github.com/mljar/mljar-supervised and https://mljar.com/ 
+
+implements: Ensemble Selection from Libraries of Models, Caruana et al, http://www.cs.cornell.edu/~alexn/papers/shotgun.icml04.revised.rev2.pdf 
+
+also installed in its separate environment **mljar** 
+
+repo cloned from https://github.com/mljar/mljar-supervised in [[~/research/Smart_Ideas/resources/repos_libraries]] 
+
+Note that it relies on another framework called 'openml', see https://github.com/openml/openml-python, also cloned in the same folder (resources/repos_libraries) and installed via pip with `pip install openml` 
+
+examples of mljar-supervised in 
+
+~/research/Smart_Ideas/resources/repos_libraries/mljar-supervised/examples/notebooks
+
+{{./screenshot_2020-07-17-102523.png}}
+
+== • LIBRA ==
+
+https://github.com/Palashio/libra 
+
+Fully automated machine learning in one-liners. 
+cond
+
+== • AutoKERAS ==
+
+**Working !** 
+
+see: https://github.com/keras-team/autokeras 
+
+for structured data (csv files, tabular data etc) see: 
+
+https://autokeras.com/tutorial/structured_data_classification/ 
+
+see examples for structured data (e.g. Titanic) in 
+
+and also look at https://autokeras.com/tutorial/structured_data_classification/ 
+
+installed in environment **autokeras** 
+
+
+== • DESLIB ==
+
+**working !** 
+
+see https://github.com/scikit-learn-contrib/DESlib 
+
+DESlib is an easy-to-use ensemble learning library focused on the implementation of the state-of-the-art techniques for dynamic classifier and ensemble selection. The library is is based on scikit-learn, using the same method signatures: fit, predict, predict_proba and score. All dynamic selection techniques were implemented according to the definitions from [1].
+
+**Dynamic Selection (DS)** refers to techniques in which the base classifiers are selected dynamically at test time, according to each new sample to be classified. Only the most competent, or an ensemble of the most competent classifiers is selected to predict the label of a specific test sample. The rationale for these techniques is that not every classifier in the pool is an expert in classifying all unknown samples, but rather each base classifier is an expert in a different local region of the feature space.
+
+DS is one of the most promising MCS approaches (Multiple Classifier Systems) due to an increasing number of empirical studies reporting superior performance over static combination methods. Such techniques have achieved better classification performance especially when dealing with small-sized and imbalanced datasets.
+
+
+Reference: Rafael M. O. Cruz, Luiz G. Hafemann, Robert Sabourin and George D. C. Cavalcanti DESlib: A Dynamic ensemble selection library in Python. arXiv preprint arXiv:1802.04967 (2018).
+
+installed in env **deslib**
+
+== • MLENS ==
+
+see http://ml-ensemble.com/ 
+
+and tutorial at http://ml-ensemble.com/info/tutorials/start.html 
+
+seems to be extremely powerful 
+
+installed in **mlens** environment 
+
+Working but example (mnist.py) [[~/research/Smart_Ideas/resources/repos_libraries/mlens]] not working with: 
+
+	estimator = ESTIMATORS[name]
+KeyError: 'BlendEnsemble'
+
+The library has not been under development since ~ November 2018 ... probably best to scrap it 
+
+== • IGEL ==
+
+see https://github.com/nidhaloff/igel 
+
+described as "a machine learning tool that allows to train, test and use models without writing code" 
+
+igel supported models 
+
+{{./screenshot_2020-10-09-153638.png}}
+
+== • AutoGOAL ==
+
+https://autogoal.github.io/ 
+
+see paper: 
+
+Estevez-Velarde, S., Y. Gutiérrez, Y. Almeida-Cruz, and A. Montoyo, 2021: General-purpose hierarchical optimisation of machine learning pipelines with grammatical evolution. Information Sciences, 543, 58–71, https://doi.org/10.1016/j.ins.2020.07.035.
+ 
+so uses also genetic programming .... 
+
+== • EvalML ==
+
+see https://pypi.org/project/evalml/
+
+include optimisation of pipelines (pre-processing), see also woodwork () 
+
+video: https://www.youtube.com/watch?v=94Yd_GaeOqM&feature=youtu.be 
+
+installed in environment **evalml** 
+
+
+--------------------
+
+
+===== HUB, computer vision, object detection =====
+
+idea: create a special channel on image processing (object detection, such as James Williams, etc), image segmentation, etc 
+
+see https://www.pyimagesearch.com/2020/07/13/r-cnn-object-detection-with-keras-tensorflow-and-deep-learning/ 
+
+also: 
+
+https://amitness.com/2020/07/semi-supervised-learning/ : A comparison of **Semi-supervised learning methods for Computer Vision**
+
+==========================================================================
+
+===== HUB, visualisation and delivery =====
+
+-> repost 
+
+https://github.com/JackMcKew/pandas_alive 
+
+for impressive animated visualisations in Python ... 
+
+==========================================================================
+
+===== HUB, satellite imagery deep learning =====
+
+https://github.com/robmarkcole/satellite-image-deep-learning
+
+https://github.com/zia207/Deep-Neural-Network-with-keras-Python-Satellite-Image-Classification 
+
+===== Re-generate the CSV files to upload to  Deuce =====
+
+see: [[/home/nicolasf/research/Smart_Ideas/code/engineer/notebooks/prepare_all_GCMs_to_csv.ipynb]] 
+
+@TODO 
+
+[ ] make sure to re-fit the standard scaler ... 
+[ ] implement a variable path 
+
+check on the dimensions of the different GCMs, and especially the matching of the time variable to a monotonous pandas 
+date range: 
+
+== hindcasts ==
+
+--------------------
+
+
+GCM ECMWF
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider CDS
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/ECMWF/T2M
+number of files in the archive: 288
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/ECMWF/T2M/ECMWF_T2M_seasonal_anomalies_interp_1993_01.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/ECMWF/T2M/ECMWF_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for ECMWF
+--------------------
+
+
+GCM UKMO
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider CDS
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/UKMO/T2M
+number of files in the archive: 287
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/UKMO/T2M/UKMO_T2M_seasonal_anomalies_interp_1993_02.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/UKMO/T2M/UKMO_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for UKMO
+--------------------
+
+
+GCM METEO_FRANCE
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider CDS
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/METEO_FRANCE/T2M
+number of files in the archive: 288
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/METEO_FRANCE/T2M/METEO_FRANCE_T2M_seasonal_anomalies_interp_1993_01.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/METEO_FRANCE/T2M/METEO_FRANCE_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for METEO_FRANCE
+--------------------
+
+
+GCM DWD
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider CDS
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/DWD/T2M
+number of files in the archive: 288
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/DWD/T2M/DWD_T2M_seasonal_anomalies_interp_1993_01.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/CDS/DWD/T2M/DWD_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for DWD
+--------------------
+
+
+GCM CMCC
+rpath set to /home/nicolasf/research/Smart_Ideas/data
+provider CDS
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/hindcasts/CDS/CMCC/T2M
+number of files in the archive: 288
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/hindcasts/CDS/CMCC/T2M/CMCC_T2M_seasonal_anomalies_interp_1993_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/hindcasts/CDS/CMCC/T2M/CMCC_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for CMCC
+--------------------
+
+
+GCM NCEP_CFSv2
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider IRI
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/NCEP_CFSv2/T2M
+number of files in the archive: 420
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/NCEP_CFSv2/T2M/NCEP_CFSv2_T2M_seasonal_anomalies_interp_1982_01.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/NCEP_CFSv2/T2M/NCEP_CFSv2_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for NCEP_CFSv2
+--------------------
+
+
+GCM CanCM4i
+rpath set to /home/nicolasf/research/Smart_Ideas/data
+provider IRI
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/hindcasts/IRI/CanCM4i/T2M
+number of files in the archive: 432
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/hindcasts/IRI/CanCM4i/T2M/CanCM4i_T2M_seasonal_anomalies_interp_1981_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/hindcasts/IRI/CanCM4i/T2M/CanCM4i_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for CanCM4i
+--------------------
+
+
+GCM GEM_NEMO
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider IRI
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/GEM_NEMO/T2M
+number of files in the archive: 432
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/GEM_NEMO/T2M/GEM_NEMO_T2M_seasonal_anomalies_interp_1981_01.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/GEM_NEMO/T2M/GEM_NEMO_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for GEM_NEMO
+--------------------
+
+
+GCM NASA_GEOSS2S
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider IRI
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/NASA_GEOSS2S/T2M
+number of files in the archive: 431
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/NASA_GEOSS2S/T2M/NASA_GEOSS2S_T2M_seasonal_anomalies_interp_1981_02.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/NASA_GEOSS2S/T2M/NASA_GEOSS2S_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for NASA_GEOSS2S
+--------------------
+
+
+GCM CanSIPSv2
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider IRI
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/CanSIPSv2/T2M
+number of files in the archive: 432
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/CanSIPSv2/T2M/CanSIPSv2_T2M_seasonal_anomalies_interp_1981_01.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/IRI/CanSIPSv2/T2M/CanSIPSv2_T2M_seasonal_anomalies_interp_2016_12.nc
+time coordinate matching for CanSIPSv2
+--------------------
+
+
+GCM JMA
+rpath set to /media/nicolasf/GDATA/END19101/Working/data
+provider JMA
+reading files from /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/JMA/JMA/T2M
+number of files in the archive: 456
+first file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/JMA/JMA/T2M/JMA_T2M_seasonal_anomalies_1979_01.nc
+last file is /media/nicolasf/GDATA/END19101/Working/data/GCMs/processed/hindcasts/JMA/JMA/T2M/JMA_T2M_seasonal_anomalies_2016_12.nc
+time coordinate matching for JMA
+
+== forecasts ==
+-----------------   getting ECMWF
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/ECMWF/T2M
+number of files in the archive: 36
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/ECMWF/T2M/ECMWF_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/ECMWF/T2M/ECMWF_T2M_seasonal_anomalies_interp_2019_12.nc
+
+-----------------   getting UKMO
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/UKMO/T2M
+number of files in the archive: 28
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/UKMO/T2M/UKMO_T2M_seasonal_anomalies_interp_2017_09.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/UKMO/T2M/UKMO_T2M_seasonal_anomalies_interp_2019_12.nc
+
+-----------------   getting METEO_FRANCE
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/METEO_FRANCE/T2M
+number of files in the archive: 36
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/METEO_FRANCE/T2M/METEO_FRANCE_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/METEO_FRANCE/T2M/METEO_FRANCE_T2M_seasonal_anomalies_interp_2019_12.nc
+
+-----------------   getting DWD
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/DWD/T2M
+number of files in the archive: 36
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/DWD/T2M/DWD_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/DWD/T2M/DWD_T2M_seasonal_anomalies_interp_2019_12.nc
+
+-----------------   getting CMCC
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/CMCC/T2M
+number of files in the archive: 14
+Something wrong with the number of files in the list for the forecasts period, the length is 14
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/CMCC/T2M/CMCC_T2M_seasonal_anomalies_interp_2018_11.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/CMCC/T2M/CMCC_T2M_seasonal_anomalies_interp_2019_12.nc
+
+-----------------   getting NCEP_CFSv2
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/NCEP_CFSv2/T2M
+number of files in the archive: 36
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/NCEP_CFSv2/T2M/NCEP_CFSv2_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/NCEP_CFSv2/T2M/NCEP_CFSv2_T2M_seasonal_anomalies_interp_2019_12.nc
+
+-----------------   getting CanCM4i
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/CanCM4i/T2M
+number of files in the archive: 29
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/CanCM4i/T2M/CanCM4i_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/CanCM4i/T2M/CanCM4i_T2M_seasonal_anomalies_interp_2019_12.nc
+
+WARNING: the length of the time index is 29, expected 36
+
+months missing for year 2017: 
+months missing for year 2018: 
+months missing for year 2019: 1, 2, 3, 4, 5, 6, 7
+
+-----------------   getting GEM_NEMO
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/GEM_NEMO/T2M
+number of files in the archive: 29
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/GEM_NEMO/T2M/GEM_NEMO_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/GEM_NEMO/T2M/GEM_NEMO_T2M_seasonal_anomalies_interp_2019_12.nc
+
+WARNING: the length of the time index is 29, expected 36
+
+months missing for year 2017: 
+months missing for year 2018: 
+months missing for year 2019: 1, 2, 3, 4, 5, 6, 7
+
+-----------------   getting NASA_GEOSS2S
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/NASA_GEOSS2S/T2M
+number of files in the archive: 27
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/NASA_GEOSS2S/T2M/NASA_GEOSS2S_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/NASA_GEOSS2S/T2M/NASA_GEOSS2S_T2M_seasonal_anomalies_interp_2019_12.nc
+
+WARNING: the length of the time index is 27, expected 36
+
+months missing for year 2017: 2, 3, 4, 5, 6, 7, 8, 9, 10
+months missing for year 2018: 
+months missing for year 2019: 
+
+-----------------   getting CanSIPSv2
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/CanSIPSv2/T2M
+number of files in the archive: 29
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/CanSIPSv2/T2M/CanSIPSv2_T2M_seasonal_anomalies_interp_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/IRI/CanSIPSv2/T2M/CanSIPSv2_T2M_seasonal_anomalies_interp_2019_12.nc
+
+WARNING: the length of the time index is 29, expected 36
+
+months missing for year 2017: 
+months missing for year 2018: 
+months missing for year 2019: 1, 2, 3, 4, 5, 6, 7
+
+-----------------   getting JMA
+reading files from /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/JMA/JMA/T2M
+number of files in the archive: 36
+first file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/JMA/JMA/T2M/JMA_T2M_seasonal_anomalies_2017_01.nc
+last file is /home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/JMA/JMA/T2M/JMA_T2M_seasonal_anomalies_2019_12.nc
+
+**CSV files merging features (T2M) and targets (TMEAN) saved in** 
+
+[[/home/nicolasf/research/Smart_Ideas/outputs/CSVs]] 
+
+Now copying onto deuce ... 
+
+nfauchereau@deuce.cms.waikato.ac.nz:/downscaling/CSV/TRAIN 
+
+and 
+
+nfauchereau@deuce.cms.waikato.ac.nz:/downscaling/CSV/TEST 
+
+Now retraining and evaluation the AutoML frameworks for CMCC and CanCM4i ... see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/AUTOGLUON/AutoGLUON_ensembling.ipynb]] 
+
+===== GENERALISATION of Python scripts =====
+
+== Using argparse ==
+
+example from https://github.com/philip-brohan/Yangtze_floods/blob/master/analyses/videos/v4.6.1_v_v4.6.7/video/plot_comparison.py 
+
+# Date to show
+import argparse
+parser = argparse.ArgumentParser()# 
+parser.add_argument("--year", help="Year",
+					type=int,required=True)
+parser.add_argument("--month", help="Integer month",
+					type=int,required=True)
+parser.add_argument("--day", help="Day of month",
+					type=int,required=True)
+parser.add_argument("--hour", help="Hour of day (0 to 23.99)",
+					type=float,required=True)
+args = parser.parse_args()
+
+
+te=datetime.datetime(args.year,args.month,args.day,
+					  int(args.hour),int(args.hour%1*60))
+
+
+== using environment variables ==
+
+1) set environment variable on the command line
+
+export dpath='home/nicolasf/operational' 
+
+2) in script 
+
+import os 
+dpath = os.getenv('dpath') 
+print(dpath) 
+
+===== ML4SEAS as a package =====
+
+see: 
+
+https://github.com/philip-brohan/Machine-Learning/tree/master/ML_Utilities 
+
+for an example of setup.py content 
+
+===== Identification of correlated regions in the GCM ensembles =====
+
+@idea 
+
+1) calculate the correlation and composite fields between the target time-series and each member of each ensemble / GCM 
+2) identify regions which are matching across members, as these will be the ones presenting the most stable relationships ... 
+3) probably a good idea to detrend ... \
+4) also possibility to use the **ppscore** library (ppscore - a Python implementation of the Predictive Power Score (PPS)), see 
+[[/home/nicolasf/research/Smart_Ideas/resources/repos_libraries/ppscore]] (beyond correlation) 
+
+The score is calculated on the test sets of a 4-fold crossvalidation (number is adjustable via ppscore.CV_ITERATIONS). For classification, stratifiedKFold is used. For regression, normal KFold. **Please note that this sampling might not be valid for time series data sets**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

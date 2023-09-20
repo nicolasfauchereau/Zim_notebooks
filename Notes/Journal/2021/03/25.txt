@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-25T16:05:56+13:00
+
+====== Thursday 25 Mar 2021 ======
+
+==== Geospatial Hackaton ====
+
+see 
+
+https://www.mbie.govt.nz/science-and-technology/science-and-innovation/international-opportunities/new-zealand-r-d/innovative-partnerships/takiwaehere-the-geospatial-hackathon/
+
+also lists a number of resources: 
+
+https://autogis-site.readthedocs.io/en/latest/index.html
+
+https://www.youtube.com/playlist?list=PLzREt6r1Nenlu-MBaxCRL2KZNk62n7o1g

@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-07T09:02:24+13:00
+
+====== Tuesday 07 Feb 2023 ======
+
+==== MBIE bid on precision horticulture by Drew ====
+
+mail from 2023/02/07 
+
+Guys
+
+Here are the critical steps in the MBIE within RA3 that I think you are involved in (NB - there are other steps that Nelly, Nico and Tristan will also be involved in)
+
+What I need to determine is when work can start on these, how long it will take, and the hours needed for each of you.
+The domain of analysis will be Marlborough, Hawkes Bay and Central Otago, with at least one test site (farm/paddock scale) definitely in all three areas, maybe more.
+
+3.4 - My understanding is that Nelly and Tristan will be directly working on CS3.4, but I need to understand who will be driving this step and the hours involved. Notably, need to understand how timings will fit with Nelly's PhD work 
+
+3.5 - Nico and Peter definitely (are there others?)
+
+3.6 - MOS/Transfer Learning - Nelly, is this you (and Tristan?) others? Trevor, will you be involved???
+
+3.7 - Trevor Carey-Smith , and he has listed Tristan and also a data scientist (is this Nelly?)
+
+3.8 - Nico (and others? Peter?) working with Michelle L'Heureux also
+
+Some important info:
+
+	The programme will start in October 2023 if we succeed
+	Augumented observations will likely be available from the end of the second year of the project
+	We need to have SOMETHING in terms of a NIWA35, seasonal forecast into the pipeline by end of the third year, but earlier would be good. doesn't have to be the newest product, can be existing....
+
+
+Please identify some work that can be at least started on in y1 and y2...
+what we don't want is for a massive slug to occur in y4 🙂
+
+
+FYI, Nico and Nelly- you both have some hours already in RA1 for years 1-3 and I'll chat with you both about that after this email.
+Trev, we understand you have a stack of hours for the NWP work in that timeframe too
+
+If you can let me know ideas on this issue by end of the day (sorry, tight deadlines) I'd appreciate it.
+
+cheers
+Drew
+
+**3.4 Subseasonal forecasts for horticulture** 
+
+Subseasonal forecasts (21-35 days) will be developed using deep learning that associates large-scale meteorology and sub-kilometer scale conditions using dense weather observations and low-cost sensors.  Links will be made between forcasted complex weather patterns at coarse spatial scales (including synoptic atmospheric pressure) to local weather outcomes at multiple orchard and vineyard test sites. Transfer learning approaches will be applied to train forecast models on a large observational dataset at an intermediate resolution (5km). This will be followed by fine-tuning on high-resolution observations collected from dense in situ observation networks in our study areas. To overcome challenges of resolving convective scale processes (<2km) smoothed out by deep learning approaches, we will apply deep generative models that have enhanced the resolution of rainfall forecasts. This step will also reevaluate historic significant rainfall events using radar and in situ weather station observations.  
+
+**3.5 Seasonal climate forecasts** 
+
+Localized, probabilistic seasonal forecasts (1 – 6 month) for horticulture will be produced to improve on the baseline performance of ensemble forecast systems [37] such as the Copernicus Climate Change Service (C3S) Multimodel Ensemble (MME) in use at NIWA[38].  Machine Learning models will be pre-trained on a large number of long-term realistic GCM simulations such as the CESM Large Ensemble [39] akin to prior work [40] to obtain regional and local scale information from spatially-coarse forecast model outputs. This step will gather existing data and leverage a variety of observational and reanalysis datasets. Storage and computation will be provided by the New Zealand e-science Institute (NeSI), and assistance offered by NeSI’s consultancy services will ensure operationalised data processing and delivery pipelines for forecasts will occur on the NeSI’s High Performance Computer.   
+
+**3.6 Spatial scaling and transfer functions for the seamless forecast** 
+
+This step will take derived regional and localised weather forecasts and climate outlooks that are calibrated to high-quality stations which span the entire temporal spectrum of available information and consider how they can be directly attached to vineyard- and orchard-specific sites (even in the absence of in situ stations being able to be used in future forecast model calibrations). It will utilise model output statistic corrections in addition to a range of AI approaches that will downscale forecast output spatial field information from native weather and climate forecast outputs to a local horticulture production level aggregated at a paddock scale (approximately 300m2). This step will also link directly to CS2.6 and will provide fundamental inputs required for digital horticulture systems models to forecast yields and risks. 
+
+**3.7 Ensembles and uncertainties for seamless forecasts** 
+
+Using high-resolution modelling from CS3.1 along with NIWA’s existing 4.4km resolution ensemble weather prediction system we will incorporate uncertainty information into the forecast fields required by precision horticulture models. To extract maximum benefit from these systems, the lower resolution uncertainty information from the ensemble prediction system needs to be used in conjunction with the fine spatial information from the high-resolution deterministic model. We will develop diagnostics and post-processing methodologies to provide both calibrated ensemble outputs and probabilistic products tailored to horticultural decision-making. In addition, we will leverage ML ensemble techniques [41] and Bayesian Model Averaging [42] to develop very large ensembles of probabilistic forecasts tuned and weighted to maximize forecast accuracy at the local scale.    
+
+**3.8 Validations and windows of opportunity** 
+
+Environmental forecast skill varies in space and time, and is notably influenced by initialization parameters [43] that relate to large-scale climate conditions determined by modes of variability such as the El Niño-Southern Oscillation [44], [45] and the Madden Julian Oscillation [46], [47]. This step will objectively identify ‘windows of opportunity’ for skillful localized forecasts at times when the ability of our seasonal forecast system is expected to exceed a baseline performance. We will then leverage this developed knowledge, along with an understanding of large-scale modes of variability and how they impact ANZ, to develop automated alerts for horticulture users when a predictable forecast window with high confidence is approaching. An emphasis on uncertainty estimates for seasonal forecasts, coupled with generating automated alert messages fed to the guidance platform will be undertaken in collaboration with expert input from NOAA colleagues. 

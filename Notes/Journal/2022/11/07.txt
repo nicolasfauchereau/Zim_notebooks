@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-07T14:45:53+13:00
+
+====== Monday 07 Nov 2022 ======
+
+==== Temporal Fusion Transformer: Time Series Forecasting with Deep Learning — Complete Tutorial ====
+
+https://towardsdatascience.com/temporal-fusion-transformer-time-series-forecasting-with-deep-learning-complete-tutorial-d32c1e51cd91
+
+downloaded into [[/home/nicolasf/Jupyter_notebooks/TFT_Energy_Demand_Forecasting.ipynb]] 
+
+see references: 
+
+Do We Really Need Deep Learning Models for Time Series Forecasting?
+
+https://arxiv.org/abs/2101.02118
+
+Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting
+
+https://arxiv.org/abs/1912.09363
+
+DeepAR: Probabilistic Forecasting with Autoregressive Recurrent Networks
+
+https://arxiv.org/abs/1704.04110?context=stat.ML 
+
+The model is also available in the Darts python library, which is based on the PyTorch Forecasting library. https://unit8co.github.io/darts/ 
+
+see also, for its implementation using Tensorflow 2
+
+https://github.com/greatwhiz/tft_tf2 
+
+cloned into: [[/home/nicolasf/sources/tft_tf2]] 
+
+--------------------
+
+==== calculation of indices in python ====
+
+see http://etccdi.pacificclimate.org/list_27_indices.shtml 
+
+Python implementations
+
+- https://github.com/bgroenks96/pyclimdex
+- https://icclim.readthedocs.io/en/stable/
+
+
+
+
+
+

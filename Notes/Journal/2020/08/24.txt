@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-24T10:53:21+12:00
+
+====== Monday 24 Aug 2020 ======
+
+==== Meeting with Jochen and Kameron (HUB catch up) ====
+
+see [[../../../../HUB/Meetings.txt]]
+
+
+

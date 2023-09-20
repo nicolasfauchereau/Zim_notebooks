@@ -1,0 +1,64 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-04T08:11:57+12:00
+
+====== Thursday 04 May 2023 ======
+
+==== QPLAD examples: ====
+
+@CMIP6 @Downscaling 
+
+https://programtalk.com/python-more-examples/dodola.services.train_qplad/ 
+https://programtalk.com/vs4/python/ClimateImpactLab/dodola/dodola/tests/test_services.py/ +
+
++
+
+https://github.com/ClimateImpactLab/downscaleCMIP6
+
+Discussions on the XCLIM (Ouranos original repo) of the choice of the number of quantiles and spatial downscaling (bs bias adjustment) 
+
+
+→ What's the difference in using more nquantiles? #1162 
+https://github.com/Ouranosinc/xclim/issues/1162
+
+→ [sdba] Default quantiles are dangerous #1015 
+https://github.com/Ouranosinc/xclim/issues/1015 
+
+→ Spatial downscaling with Xclim? #1150 
+https://github.com/Ouranosinc/xclim/issues/1150 
+
+--------------------
+
+==== DASK DEMOS ====
+
+[9:06 AM] Maxime Rio
+
+Hi hacky people , I can give a little tour of Dask-MPI tomorrow (~20 min max) , if some of you are interested in knowing more how to use this backend.
+
+https://github.com/nesi/dask_demos
+
+--------------------
+
+==== Zotero, add info manually for a pdf ====
+
+@zotero 
+
+1) right click on pdf in library 
+2) create parent item 
+3) select 'Manual Entry' 
+
+e.g.: 
+
+Bodeker, G., Cullen, N., Katurji, M., McDonald, A., Morgenstern, O., Noone, D., and Renwick, J., Revell, L. and Tait, A., 2022: Aotearoa New Zealand climate change projections guidance: Interpreting the latest IPCC WG1 report findings, Prepared for the Ministry for the Environment, Report number CR 501, 51p.
+
+
+
+
+
+
+
+
+
+
+
+

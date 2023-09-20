@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-17T10:34:09+13:00
+
+====== Thursday 17 Dec 2020 ======
+
+==== ZESPRI ====
+
+Notebook looking at the locations of the ZESPRI orchards: 
+
+https://git.niwa.co.nz/Maxime.Rio/zespri_poc_project/-/blob/master/Notebooks/20201216_NF_Orchards_locations.ipynb
+
+--------------------
+
+==== calculating the monthly VCSN anomalies and saving to disk ====
+
+see: 
+
+

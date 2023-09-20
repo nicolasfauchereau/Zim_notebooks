@@ -1,0 +1,98 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-19T08:08:55+12:00
+
+====== Wednesday 19 Apr 2023 ======
+
+==== SOMs applied to climate data ====
+
+https://github.com/carocamargo/minisom/tree/master/examples 
+
+https://github.com/carocamargo/minisom/blob/master/examples/SOM-spatiotemporal_climate_example.ipynb
+
+https://github.com/carocamargo/minisom/blob/master/examples/SOM-spatiotemporal_climate_example-Part_II.ipynb 
+
+https://github.com/carocamargo/Python-Packages-Tutorials/blob/main/SOM/MiniSom-spatiotemporal_climate_example.ipynb 
+
+https://storage.bodekerscientific.com/SOMposter.pdf
+
+
+--------------------
+
+==== Delta-Maps and networks ====
+
+@networks @graphs 
+
+
+https://github.com/FabriFalasca/py-dMaps 
+
+δ-MAPS is a method that identifies the semi-autonomous components (i.e., patterns) of a spatiotemporal climate field and studies their weighted and potentially lagged interactions. The components of the system are modeled as spatially contiguous (in physical space), possibly overlapping, homogeneous domains. To the best of our knowledge, δ-MAPS is the first method that can identify spatially contiguous and possibly overlapping clusters (i.e., domains). At a second step, δ-MAPS infers a directed and weighted network between the identified domains. Edge direction captures the temporal ordering of events while the weight associated to each edge captures the magnitude of interaction between domains.
+
+The framework can be used also as a preprocessing step for running causal algorithms on climate time series. Causal graph discovery often benefits from dimensionality reduction. Domains signals (i.e., time series) identified by δ-MAPS can then be fed to causal discovery algorithms (e.g., https://jakobrunge.github.io/tigramite/) to identify causal linkages.
+
+https://www.researchgate.net/publication/341107349_Spatiotemporal_complexity_and_time-dependent_networks_in_sea_surface_temperature_from_mid-_to_late_Holocene
+
+Julien Cretat is co-author !
+
+see list of publications: 
+
+I. Fountalis, C. Dovrolis, A. Bracco, B. Dilkina, and S. Keilholz.δ-MAPS from spatio-temporal data to a weighted and lagged network between functional domain.Appl. Netw. Sci., 3:21, 2018.
+
+Bracco, A.,Falasca,F., Nenes, A., Fountalis, I., and Dovrolis, C. (2018), Advancing climate science with Knowledge-Discovery through Data mining,NPJ Climate and Atmosph.Science,4, doi:10.1038/s41612-017-0006-4
+
+Falasca,F., Bracco, A., Nenes, A., and Fountalis, I. (2019). Dimensionality reduction and network inference for climate data usingδ-MAPS: Application to the CESM LargeEnsemble sea surface temperature. Journal of Advances in Modeling Earth Systems,11, 1479–1515. https://doi.org/10.1029/2019MS001654
+
+Falasca,F., Crétat, J., Braconnot, and Bracco, A. Spatiotemporal complexity and time-dependent networks in sea surface temperature from mid- to late Holocene. Eur. Phys. J.Plus 135:392 (2020). https://doi.org/10.1140/epjp/s13360-020-00403-x (free version here: https://www.researchgate.net/publication/341107349_Spatiotemporal_complexity_and_time-dependent_networks_in_sea_surface_temperature_from_mid-_to_late_Holocene)
+
+Novi, L., Bracco, A. & Falasca, F. Uncovering marine connectivity through sea surface temperature. Sci Rep 11, 8839 (2021). https://doi.org/10.1038/s41598-021-87711-z
+
+Falasca, F., Crétat, J., Bracco, A. et al. Climate change in the Indo-Pacific basin from mid- to late Holocene. Clim Dyn 59, 753–766 (2022). https://doi.org/10.1007/s00382-022-06153-z
+
+
+--------------------
+
+==== Build Elegant Web Apps Right From Jupyter Notebook with Mercury ====
+
+
+https://towardsdatascience.com/build-elegant-web-apps-right-from-jupyter-notebook-with-mercury-78d9ebcbbcaf 
+
+also: 
+
+[[~/Downloads/Build Elegant Web Apps Right From Jupyter Notebook with Mercury _ by Avi Chawla _ Apr, 2023 _ Towards Data Science (19_04_2023 1_08_31 pm).html]]
+
+and [[~/operational/Mercury_webapp/]] 
+
+--------------------
+
+==== Work on the processing of MSWEP ====
+
+@MSWEP 
+
+→ **recode_SP_domain_netcdfs.ipynb**: recode all the files in [[/media/nicolasf/END19101/ICU/data/MSWEP/Daily/subsets_nogauge/SP]]  so that they follow the convention 
+
+**MSWEP_Daily_YYYY-MM-DD.nc** 
+
+→ **extract_country_domains_MSWEP_NRT.ipynb**: extract the domains (Tokelau, Tuvalu, the Kiribati and the South Pacific [SP]) from the NRT files (in [[/media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/NRT/Daily/]]) and saves in [[/media/nicolasf/END19101/ICU/data/MSWEP/Daily/subsets_nogauge/]] 
+
+→ **extract_time-series.ipynb** extract time-series for point locations in MSWEP, see **UNESCO_and_IWRM/Stations_for_extractions.csv** 
+
+
+--------------------
+extract_time-series.ipynb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

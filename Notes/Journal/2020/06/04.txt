@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-04T11:13:50+12:00
+
+====== Thursday 04 Jun 2020 ======
+
+@TODO	 
+
+===== Smart Ideas =====
+
+=== Validations: ===
+
+[ ] revisit the notebooks and fix the errors preventing the use of xskillscore and climpred to derive the validation statistics 
+[ ] find solution for the validation of very large datasets + the ensemble for each GCM 
+[ ] derive a dictionnary mapping each variable to its units (once aggregated seasonally) and potential conversion parameters to allow direct comparison with the observational (ERA5) datasets 
+[ ] for rainfall and temperature, derive a version of VCSN on the same grid as the GCMs (xesmf or xarray interp) 
+
+=== Targets: ===
+
+[*] recalculate a version of the target 6 regions time-series, using the (assumed) methodology used for the derivation of the 'probs.lst' time-series, i.e. in each region, each pixel is classified, then the majority class is the class for the region and for the season 
+
+see notebook **calculates_6_regions_terciles_from_grid_cliops.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN]] 
+
+NOTE: need the development version of salem, see https://salem.readthedocs.io/en/v0.2.3/installing.html 
+
+pip install git+https://github.com/fmaussion/salem.git 
+
+probably because the format of the CRS in geopandas has recently changed 
+
+[*] compare (calculate the percent matching) the 'cliops' definition to the previous definition 
+
+for TMEAN, results (percent matching category) are: 
+
+NNI    0.677551
+ENI    0.693878
+WNI    0.702041
+NSI    0.736735
+WSI    0.775510
+ESI    0.963265
+
+for RAIN, results (percent matching category) are
+
+NNI    0.467347
+ENI    0.418367
+WNI    0.483673
+NSI    0.508163
+WSI    0.387755
+ESI    0.881633
+
+i.e. the match is much much worse 
+
+[*] recalculate the scores (SCO) using both the regional averages (as done before) and the above for the SCO
+
+These are not signifcantly different from the figures calculated using the first method (regional average THEN calculation of the tercile categories) 
+	
+
+=== Models ===
+
+[ ] start on the regression experiments 
+[ ] check that the csv files on deuce actually are the latest versions 
+
+
+
+===== CPP Indices =====
+
+[ ] go back to the Kidson Types, see in the MS Teams what actions need to be taken 
+
+===== Island Climate Update 'hotspot' =====
+
+
+
+ 
+
+

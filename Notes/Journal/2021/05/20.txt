@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-20T08:57:47+12:00
+
+====== Thursday 20 May 2021 ======
+
+==== RainBench: Towards Global Precipitation Forecasting from Satellite Imagery ====
+
+@END19101 
+
+paper: 
+
+https://arxiv.org/pdf/2012.09670.pdf
+
+article in spaceml: http://spaceml.org/repo/project/6025107d79c197001219c481 
+
+code: https://github.com/frontierdevelopmentlab/pyrain 
+
+
+--------------------
+
+==== CPP circulation regimes and extremes ====
+
+@CPP @CDFP2116 @CAOA2101 
+
+
+
+→ combining temperature and precipitation extremes prior to PCA + AP + clustering, see: **make_combined_Rain_bc_Tmean_n_extremes.ipynb** 
+
+→ PCA + AP + clustering on combined precip and temp extremes, see **cluster_combined_extremes.ipynb** 
+
+→ compound extremes: see **make_compound_extremes.ipynb** 
+
+in the variable compound_extremes
+
+code: 
+
+1 = dry and cold 
+2 = dry and hot 
+3 = wet and cold 
+4 = wet and hot 
+
+--------------------
+
+==== CliMAF: a Climate Model Assessment Framework ====
+
+rm

@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-15T08:01:20+12:00
+
+====== Friday 15 May 2020 ======
+
+@TODO
+
+- Apple and Pears email @SI 
+- emails to other stakeholders @SI 
+
+--- 
+
+- NZCSM ensembles fix issue with dates 
+- Pacific RCC plot 
+
+--- 
+
+- go back to platform managers and chief scientist regarding org of a meeting next week 
+- NZCSM data 
+
+
+
+

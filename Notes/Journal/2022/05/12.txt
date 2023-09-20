@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-12T12:29:15+12:00
+
+====== Thursday 12 May 2022 ======
+
+==== Bias correction and statistical downscaling using R ====
+
+@downscaling 
+
+https://github.com/SantanderMetGroup/downscaleR 
+
+see also: 
+
+https://github.com/SantanderMetGroup/climate4R 
+
+--------------------
+
+==== MBIE downscaling code ====
+
+@MBIE @downscaling
+
+BSP22301 / task 2122 

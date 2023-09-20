@@ -1,0 +1,76 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-14T09:26:28+12:00
+
+====== Tuesday 14 Jul 2020 ======
+
+==== NB_BLACK ====
+
+https://github.com/dnanhkhoa/nb_black 
+
+A simple extension for Jupyter Notebook and Jupyter Lab to beautify Python code automatically using Black. 
+
+https://black.readthedocs.io/en/stable/ 
+
+**%load_ext lab_black**
+
+in jupyter lab 
+
+**%load_ext nb_black** 
+
+in Jupyter notebooks 
+
+==== Download of the CDS forecasts / hindcasts ====
+
+seems to go better in the mornings 
+
+see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/exporters/CDS/download_CDS_monthly_means_ICU.py]] 
+
+==== Mounting the network drives using 'files' in Ubuntu 20.04 ====
+
+1) Open "FILES" 
+2) Choose "OTHER LOCATIONS" 
+3) at the bottom, choose 'Connect to Server', and enter server address, these are to be taken from the mount_drives.py scripts, and are summarized below: 
+
+* smb://aucwdfp01/users
+* smb://aucwdfp01/projects
+* smb://hamwfs03/projects
+* smb://welwfs07/scratch
+* smb://aucwdfp01/scratch
+* smb://welwfs07/groups
+* smb://aucwdfp01/groups
+* smb://aucwdfp01/archive
+
+Alternatively, on the command line: 
+
+**sudo mount -t cifs -o username=fauchereaun,password=<PASSWORD>,uid=1000,gid=1000 //aucwdfp01/scratch /home/nicolasf/drives/auck_scratch**
+
+Note that the **uid** and **gid** are given by the command id -u on the local (linux ubuntu) machine ... 
+
+==== Anomaly detection ====
+
+report in [[/home/nicolasf/research/anomaly_detection/report]] 
+
+check out the resources linked in the report, at: 
+
+https://github.com/yzhao062/anomaly-detection-resources 
+
+and saved locally in the 'resources' folder of the above ... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

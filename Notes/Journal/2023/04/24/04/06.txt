@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-06T11:34:57+12:00
+
+====== Thursday 06 Apr 2023 ======
+
+ 
+
+https://git.niwa.local/forecasting-services/packages/CMIP_downscaling/-/blob/main/notebooks/preprocess_ERA5.ipynb 

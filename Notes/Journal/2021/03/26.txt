@@ -1,0 +1,79 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-26T08:54:29+13:00
+
+====== Friday 26 Mar 2021 ======
+
+==== SPCZ position and variability validation ====
+
+Look into: 
+
+Beischer, T. A., P. Gregory, K. Dayal, J. R. Brown, A. N. Charles, W. X. D. Wang, and J. N. Brown, 2021: Scope for predicting seasonal variation of the SPCZ with ACCESS-S1. Clim Dyn, 56, 1519–1540, https://doi.org/10.1007/s00382-020-05550-6.
+
+
+see also 
+
+Schepen, A., T. Zhao, Q. J. Wang, and D. E. Robertson, 2018: A Bayesian modelling method for post-processing daily sub-seasonal to seasonal rainfall forecasts from global climate models and evaluation for 12 Australian catchments. Hydrology and Earth System Sciences, 22, 1615–1628, https://doi.org/10.5194/hess-22-1615-2018.
+
+King, A. D., D. Hudson, E. Lim, A. G. Marshall, H. H. Hendon, T. P. Lane, and O. Alves, 2020: Sub‐seasonal to seasonal prediction of rainfall extremes in Australia. Q.J.R. Meteorol. Soc., 146, 2228–2249, https://doi.org/10.1002/qj.3789.
+
+SPCZ axis 
+
+The axis of maximum SPCZ precipitation is defined as the location of maximum precipitation for each longitudinal coordinate from 155 ◦ E to 140 ◦ W , between 0 ◦ S to 30 ◦ S for values above 6 mm/day, and the mean SPCZ position as the average of these latitudinal coordinates, following Charles et al. (2014), Brown et al. (2011, 2012, 2013a) and Vincent et al. (2011) (note that Brown et al. (2011) did not use this 6 mm/day threshold criteria).
+
+The SPCZ slope metric is defined by the gradient of the line of best fit of these precipitation maximum points using least squares (Charles et al. 2014; Brown et al. 2011, 2012; Vincent et al. 2011), shown by the red line in Fig. 2a. Following Vincent et al. (2011) and Charles et al. (2014), latE and latW indices are defined as the average SPCZ lati- tude from 5 ◦ S to 30 ◦ S between 190 ◦ E and 210 ◦ E and 160 ◦ E and 180 ◦ E , respectively. LatE and latW positions are shown by the red dots (Fig. 2a) and are plotted at the central longitudinal point in their respective ranges. The shifts in latE and latW values over the 23 DJF seasons are shown by the red error bars. This Figure can be compared directly to Figure 1 in Charles et al. (2014).
+
+{{./screenshot_2021-03-26-153340.png}}
+
+
+--------------------
+
+==== PyWebIO ====
+
+Write interactive web app in script way. 
+
+https://github.com/wang0618/PyWebIO 
+
+--------------------
+
+==== added GPCP to the list of verification datasets ====
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/code/hotspot/verification.py]] 
+
+function **get_gpcp()** works the same as **get_mswep()**
+
+--------------------
+
+==== added the MME for the validation ====
+
+see e.g. validation/correlate_MSWEP_obs_grid_point_to_hindcasts.ipynb 
+
+{{./screenshot_2021-03-26-172435.png}}
+
+this is only for one location, but it seems to suggest one is better off using the MME, which is even better that the 'best 4' ensemble (UKMO, CMCC, ECMWF, MF) ensemble, especially at lead times 3 to 5 
+
+for the MME: 
+
+{{./screenshot_2021-03-26-174139.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

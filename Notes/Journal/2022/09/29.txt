@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-29T08:57:00+13:00
+
+====== Thursday 29 Sep 2022 ======
+
+==== CESM-LENS pangeo example ====
+
+[[/pangeo.io/dev/use_cases/climate-modeling/CESM-Large-Ensemble-Tracer-Budget-Example.html]]
+
+
+
+--------------------
+
+==== Predictability paper (Circulation Regimes) ====
+
+@CPP @WR 
+
+see Vautard: 
+
+Vautard, R. (1990). Multiple Weather Regimes over the North Atlantic: Analysis of Precursors and Successors, Monthly Weather Review, 118(10), 2056-2081. 
+
+Next, the **backward and forward memory times** of the different weather regimes are established. Evidence is brought that the atmosphere keeps its memory of regime occurrences into the medium range (10–20 days). Backward memory times are shorter (5–10 days), showing that the onsets of the regimes are rather sudden. Preferred precursor and successor patterns are identified as the maxima of the composite probability densities of the anomalies occurring before the onsets and after the breaks. Some transitions between regimes are quite smooth, while others consist of a dramatic change, within a couple of days, of the weather pattern. For instance, blocking is often preceeded by a positive anomaly in the mid-Atlantic together with a trough over Europe.
+
+--------------------
+
+==== integrate APCC + ACCESS + NMME forecasts into ICU ? ====
+
+@ICU 
+
+Only possible for the tercile probabilistic forecasts 
+
+see in [[/home/nicolasf/operational/NCC_ops/SCO_copernicus/notebooks]] 
+

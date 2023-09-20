@@ -1,0 +1,118 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-03T11:05:22+13:00
+
+====== Wednesday 03 Feb 2021 ======
+
+--------------------
+
+==== Predictability of NZ's seasonal climate from observed and simulated large-scale climate patterns / SST ====
+
+Where we compare the performance (accuracy for classification, MSE for regression for example) of exactly similar ML algorithms with inputs from global or near global (e.g.) near realtime observed SSTs (and potentially other fields) and simulated SSTs (similarly, potentially other fields) from seasonal climate forecast models. We then use ML interpretability methods to visualise and compare the features (grid points) importance / relevance in the observed and simulated fields ... 
+
+--------------------
+
+==== Spatial scale dependency of global seasonal climate predictability ====
+
+Where we take gridded, observed, global precipitation and temp fields, at different resolutions (10, 5, 2.5, 1, ¼, 1/10 of a degree) and analyse the rate of drop in predictability as the resolution goes from coarse to fine, will look at the influence of the spatial scale at which the target variables are aggregated on the predictability. As before the inputs (predictors) can come from both observed and simulated fields, and we can use ML interpretability for mapping the source of predictability … 
+
+Will need to investigate several general classes of models, from instance-based (KNN) to tree-based (random forest and the like) and kernel-based (SVM...) ... 
+
+--------------------
+
+==== Tracking of circulation anomalies (blocking, anticyclone and cyclones) over the NZ region, relationship with weather regimes and climate modes ====
+
+@Python 
+
+**Storm Tracking** 
+
+Where we use https://github.com/steidani/ConTrack to identify, track and derive characteristics (frequency, persistence, track features, etc) of various circulation features (blocking, cyclones, anticyclones) and relate their variability with weather regimes (synoptic time-scales) and climate modes: MJO (sub-seasonal) to interannual (ENSO, IOD, SAM, etc)   
+
+--------------------
+
+==== Machine Learning for Fluid Dynamics: Patterns ====
+
+https://www.youtube.com/watch?v=3fOXIbycAmc
+
+super cool at 11:00 min: refers to 
+
+→ **Robust Principal Component Analysis for Modal Decomposition of Corrupt Fluid Flows: **https://arxiv.org/abs/1905.07062 
+→ **Robust flow field reconstruction from limited measurements via sparse representation**: https://arxiv.org/abs/1810.06723 
+
+--------------------
+
+==== Data-driven discovery of coordinates and governing equations (Sindy Autoencoders) ====
+
+→ paper: https://arxiv.org/abs/1904.02107 
+→ code: https://github.com/kpchamp/SindyAutoencoders 
+
+--------------------
+
+==== Multiresolution Convolutional Autoencoders ====
+
+https://arxiv.org/pdf/2004.04946.pdf 
+
+applied to SSTs (OISST) super-resolution 
+
+--------------------
+
+==== re-download of GCM data from the CDS, in netcdf ====
+
+uses the functions **download_CDS, CDS_variables_available** in **ml4seas/downloaders** 
+
+see notebook: **test_download_CDS.ipynb** 
+
+6 GCMs, variables to maybe consider: t2m, tprate, mslp, sst, geopotential 500, geopotential 200, geopotential 850, specific humidity (8) = 48 days to download all ? 
+
+--------------------
+
+==== http://www.hillaryscannell.com/ocetrac/ track the spatiotemporal evolution of marine heatwaves globally ====
+
+
+**Ocetrac** is a python package origonally develped to track the spatiotemporal evolution of marine heatwaves globally. It leverages object-tracking with spatial and temporal connectivity 
+
+installed in the environment **ocetrac**
+
+cloned in [[~/sources]] 
+
+In the notebook 00_preprocess.ipynb there is a neat way to fit a model composed of the mean, **trend**, annual sine and cosine harmonics, & semi-annual sine and cosine harmonics 
+
+can be used to detrend, see code below: 
+
+
+## decimal year 
+
+years = pd.DatetimeIndex(mnsst.time.values).year
+months = pd.DatetimeIndex(mnsst.time.values).month
+dyr = []
+for i in enumerate(years):
+	I = i[1] + ((months[i[0]]-0.5)/12)
+	dyr.append(I)
+dyr = np.array(dyr)
+
+
+```
+# Our 6 coefficient model is composed of the mean, trend, annual sine and cosine harmonics, & semi-annual sine and cosine harmonics
+model = np.array([np.ones(len(dyr))] + [dyr-np.mean(dyr)] + [np.sin(2*np.pi*dyr)] + [np.cos(2*np.pi*dyr)] + [np.sin(4*np.pi*dyr)] + [np.cos(4*np.pi*dyr)])
+
+# Take the pseudo-inverse of model to 'solve' least-squares problem
+pmodel = np.linalg.pinv(model)
+
+# Convert model and pmodel to xaray DataArray
+model_da = xr.DataArray(model.T, dims=['time','coeff'], coords={'time':mnsst.time.values, 'coeff':np.arange(1,7,1)}) 
+pmodel_da = xr.DataArray(pmodel.T, dims=['coeff','time'], coords={'coeff':np.arange(1,7,1), 'time':mnsst.time.values})  
+
+# resulting coefficients of the model
+sst_mod = xr.DataArray(pmodel_da.dot(mnsst), dims=['coeff','lat','lon'], coords={'coeff':np.arange(1,7,1), 'lat':mnsst.lat.values, 'lon':mnsst.lon.values})  
+
+# Construction of the mean, trend, and seasonal cycle
+mean = xr.DataArray(model_da[:,0].dot(sst_mod[0,:,:]), dims=['time','lat','lon'], coords={'time':mnsst.time, 'lat':mnsst.lat.values, 'lon':mnsst.lon.values})   
+trend = xr.DataArray(model_da[:,1].dot(sst_mod[1,:,:]), dims=['time','lat','lon'], coords={'time':mnsst.time, 'lat':mnsst.lat.values, 'lon':mnsst.lon.values})    
+seas = xr.DataArray(model_da[:,2:].dot(sst_mod[2:,:,:]), dims=['time','lat','lon'], coords={'time':mnsst.time, 'lat':mnsst.lat.values, 'lon':mnsst.lon.values})
+```
+
+
+
+
+
+

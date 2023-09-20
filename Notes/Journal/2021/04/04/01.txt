@@ -1,0 +1,118 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-01T09:57:35+13:00
+
+====== Thursday 01 Apr 2021 ======
+
+==== Email to PICOF mailing list ====
+
+Kia Ora everyone
+
+To add to the discussion, I thought I would share some results if that's OK: as some of you know we have been, and continue to work on, validating the Multi-Model-Ensemble (MME) that we use for the Island Climate Update rainfall outlooks, this MME is comprised of the following GCMs: ECMWF, UKMO, Meteo-France, DWD, CMCC, NCEP (JMA will be added as soon as the hindcast data is complete ....)
+
+The slides attached show a very brief selection of figures, there's a paper in preparation that we hope to submit next month, and maybe we (Ben 🙂) could take a couple of minutes during his PICOF presentation to then share the conclusions more widely if that is deemed adequate ...
+
+In summary:
+
+ On slide 1) I included the ACC (Anomaly Correlation Coefficient, higher is better) and RMSE (Root Mean Square Error, lower is better) calculated for the monthly forecasts, over the Tropical Pacific region as a whole (25S - 25N,  140E - 140W, the domain is plotted for reference)
+
+One can see quite clearly that the MME (the mean of the all the GCMs ensembles) tends to validate better (higher ACC, lower RMSE) than even the best model(s), which seem to be - as Simon rightly pointed out - ECMWF and UKMO for the region. 
+
+ On slide 2) I have calculated the ACC for all the models and the MME as a function of the month of the initialisation (figures on the right): things to start become a bit more complex, but an interesting finding is that the MME tends to be better than the best model(s) especially for longer lead times and for the winter months: I think this is quite in keeping with what we would expect on theoretical grounds: i.e. an MME approach should be better at handling uncertainties, which are expected to increase with leadtime
+
+On slide 3) I am looking at a smaller domain (SW Pacific including Fiji, Tonga and Samoa, I am currently busy looking at several sub-regional domains): while the ACC goes down and the RMSE goes up (expected as the domain is smaller) the general pattern remains the same
+
+ All these conclusions hold when looking at seasonal instead of monthly accumulations
+
+ Note that ideally this study would need to be extended to include more GCMs (and will be over time), but we are limited by 2 main constraints here: first we made the choice at present to only use GCM data that is currently open-access, hence the choice of the Climate Data Store, and second this work is being conducted under our ICU activities which as you all know is no longer funded which limits the time I can spend on it to a few 10s of hours each year.  
+
+Cheers and wishing everyone a great easter ...
+
+--------------------
+
+==== twitter thread ====
+
+1) Kia ora from New Zealand! In this thread I will share some Pacific climate observation & prediction developments that I have been working on with my @niwa_nz colleagues from time to time over the last few years.
+
+[media: picture from the Pacific / from your boat]
+
+2) One important goal: provide an improved regional overview of potential water stress in the Pacific, building on the @ICU_NIWA Island Climate Update
+
+To do this, we leverage @nasa’s GPM (IMERG) for realtime rainfall monitoring in concert with monthly & seasonal climate forecasts from @CopernicusECMWF.
+
+[media: drought/dry picture from Pacific]
+
+3) First: realtime rainfall monitoring. 
+
+We can look at the last N days (here 90) rain accumulation & show what percentile range it falls in. The categories are inspired by the “EAR” (Early Action Rainfall) thresholds used by many Pacific countries. 
+
+[media: EAR map]
+
+4) Second: climate prediction. 
+
+We use 6 climate models [@ECMWF, @metoffice, @meteofrance, @DWD_presse, @NOAAClimate, CMCC] that have a total of more than 300 members (possible trajectories of future climate). 
+
+These indicate what the chance is for rainfall to be below a certain threshold.
+
+[media: some picture showing the infrastructure of CDS models or maybe Python code screenshot]
+
+5) Here is an example of rainfall prediction. The time, threshold, and confidence can modified easily.
+
+This shows the chance for rainfall to be below the 25th percentile. Contoured area indicates high probability (>50% chance).
+
+[media: map probabilities]
+
+6) Third: strategically stitch rainfall monitoring with climate prediction to highlight regions at risk of water stress.
+
+A set of conditional statements are used to highlight areas that are currently dry AND are forecast to remain dry over the next 5 months.
+
+[media: water stress prediction]
+
+7) Important: the predictive capability is enhanced by using a Multi-Model Ensemble (MME)! Skill metrics (here: Anomaly Correlation Coefficient) indicate the clear value of using an MME approach vs a single model. MME is better at handling uncertainties that increase with lead-time.
+
+[media: ACC figure]
+
+8) This development is Python-based and relies heavily on libraries such as numpy, scipy, matplotlib, pandas, geopandas, xarray & more.
+
+All code will be open-sourced in the near future.
+
+Watch this space!
+
+[media: something Python-y]
+
+9) Thanks to NIWA colleagues Doug Ramsay, @BenNollWeather, @DLorrey for their support in doing this work.
+
+Do not hesitate to get in touch for more details & feedback welcome...
+
+=== see unrolled: ===
+
+https://threadreaderapp.com/thread/1377383298280816643.html 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-04T10:42:19+12:00
+
+====== Tuesday 04 May 2021 ======
+
+==== sub-seasonal forecasts of Opportunity Identified by an Interpretable Neural Network ====
+
+Mayer, K. J., and E. A. Barnes, 2020: Subseasonal Forecasts of Opportunity Identified by an Interpretable Neural Network. Atmospheric Sciences,.
+
+see: https://www.essoar.org/pdfjs/10.1002/essoar.10505448.1 
+
+**see also** 
+
+Barnes, E. A., and R. J. Barnes, 2021: Controlled abstention neural networks for identifying skillful predictions for regression problems. arXiv:2104.08236 [physics],.
+
+Barnes, E. A., and R. J. Barnes, 2021: Controlled abstention neural networks for identifying skillful predictions for classification problems. arXiv:2104.08281 [physics],.
+
+--------------------
+
+==== Carlos Gómez-Gonzalez presentation: Deep learning-based downscaling of seasonal forecasts over the Iberian Peninsula ====
+
+see in [[/home/nicolasf/research/Smart_Ideas/resources]] EGU2021_DL_based_downscaling.pdf 
+
+--------------------
+
+==== enable FTP in Firefox again ====
+
+see 
+
+https://www.ghacks.net/2021/04/16/firefox-90-wont-handle-ftp-sites-anymore/
+
+{{./screenshot_2021-05-04-160821.png}}
+
+--------------------
+
+==== insert image (logo or other) in matplotlib plot ====
+
+# Imports
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+# read image file
+with mpl.cbook.get_sample_data(r"C:\path\to\file\image.png") as file:
+arr_image = plt.imread(file, format='png')
+
+# Draw image
+axin = ax.inset_axes([105,-145,40,40],transform=ax.transData)    # create new inset axes in data coordinates
+axin.imshow(arr_image)
+axin.axis('off')
+
+
+
+
+
+
+
+
+
+
+
+
+

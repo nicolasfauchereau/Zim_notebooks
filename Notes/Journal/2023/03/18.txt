@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-03T10:12:49+13:00
+
+====== Saturday 18 Mar 2023 ======
+
+==== News from the CDS ====
+
+https://confluence.ecmwf.int/display/CUSF/March+2023:+new+features+in+the+C3S+seasonal+forecast+component
+
+take-away: 
+
+1) the forecasts will now be available on the 10th of the month (6th for the ECMWF)
+2) brand new ocean variables as of this month, such as OHC 
+
+--------------------
+
+==== Deep Learning Tuning Playbook ====
+
+https://github.com/google-research/tuning_playbook 

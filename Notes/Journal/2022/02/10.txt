@@ -1,0 +1,92 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-10T10:29:47+13:00
+
+====== Thursday 10 Feb 2022 ======
+
+==== ICU mamba environment ====
+
+@ICU 
+
+To get the ICU environment to work, install the `ICU_ops` environment 
+
+**mamba env create -n ICU_ops -f ICU_ops.yaml**
+
+(note: to export the environment, run `**mamba env export -n ICU_ops > ICU_ops.yaml**` 
+
+For a good resource on mamba environments, see: 
+
+https://www.biostars.org/p/9461665/ 
+
+--------------------
+
+==== Social tipping processes towards climate action: A conceptual framework ====
+
+@graph @networks @network 
+
+https://www.sciencedirect.com/science/article/abs/pii/S0921800921003013?via%3Dihub 
+
+co-author is 
+
+https://www.pik-potsdam.de/members/donges/homepage
+
+Author of the pyunicorn package, see https://aip.scitation.org/doi/10.1063/1.4934554 and preprint at https://arxiv.org/pdf/1507.01571.pdf 
+
+**other papers of interest:** 
+
+Donges, J. F., R. V. Donner, M. H. Trauth, N. Marwan, H.-J. Schellnhuber, and J. Kurths, 2011: Nonlinear detection of paleoclimate-variability transitions possibly related to human evolution. Proceedings of the National Academy of Sciences, 108, 20422–20427, https://doi.org/10.1073/pnas.1117052108.
+
+Donges, J. F., and Coauthors, 2015: Unified functional network and nonlinear time series analysis for complex systems science: The pyunicorn package. Chaos, 25, 113101, https://doi.org/10.1063/1.4934554.
+
+Steffen, W., and Coauthors, 2018: Trajectories of the Earth System in the Anthropocene. Proc Natl Acad Sci USA, 115, 8252–8259, https://doi.org/10.1073/pnas.1810141115.
+
+Donges, J. F., W. Lucht, J. Heitzig, W. Barfuss, S. E. Cornell, S. J. Lade, and M. Schlüter, 2018: Taxonomies for structuring models for World-Earth system analysisof the Anthropocene: subsystems, their interactions and social-ecological feedback loops. Dynamics of the Earth system: concepts,.
+
+Otto, I. M., and Coauthors, 2020: Social tipping dynamics for stabilizing Earth’s climate by 2050. Proc Natl Acad Sci USA, 117, 2354–2365, https://doi.org/10.1073/pnas.1900577117.
+
+see also: 
+
+Identifiying crises through network connections
+
+https://www.pik-potsdam.de/en/news/latest-news/identifiying-crises-through-network-connections-nature-physics-publication
+
+and paper: https://www.nature.com/articles/s41567-019-0783-2 
+
+--------------------
+
+===== dask cluster =====
+
+@dask 
+
+from dask.distributed import Client
+import multiprocessing
+ncpu = multiprocessing.cpu_count()
+processes = False
+nworker = 2
+threads = ncpu // nworker
+print(
+	f"Number of CPUs: {ncpu}, number of threads: {threads}, number of workers: {nworker}, processes: {processes}",
+)
+client = Client(
+	processes=processes,
+	threads_per_worker=threads,
+	n_workers=nworker,
+	memory_limit="64GB",
+)
+client
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

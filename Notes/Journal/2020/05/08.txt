@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-08T09:35:41+12:00
+
+====== Friday 08 May 2020 ======
+
+@TODO 
+
+
+- @SI write back apple and pears 
+- @SI write back to all stakeholders ... confirm with Alan Grey first 
+
+- @CPP CPP indices: 
+	- SW Pacific regimes 
+	- Kidson Types 
+	→ asked whether it would be a better option to re-do the clustering using ERA5 
+	
+
+- @SI strategy for including observed fields and indices 
+- @SI recode AUTOGLUON and PYCARET experiments to include if possible categorical predictor target season
+
+- @HUB finish stocktake of CRIs and other institutions engage 
+
+==== ICLR Workshop on Tackling Climate Change using Machine Learning ====
+
+https://slideslive.com/iclr-2020/workshop-tackling-climate-change-with-ml
+
+==== New release of Scikit Learn (0.23 release candidate) now includes Poisson regression (GLM with Poisson Loss) ====
+
+see: 
+
+https://scikit-learn.org/0.23/auto_examples/release_highlights/plot_release_highlights_0_23_0.html
+
+will be useful for all attempts to forecast count data (e.g. number of days above given thresholds for example) 
+
+
+==== Pandas trick: groupby month and count frequency of (e.g.) weather regime ====
+
+example for the Kidson types, see [[/home/nicolasf/research/CPP/indices/notebooks/Kidson_types/composites_Kidson_types.ipynb]] 
+
+//KT_ts.groupby([KT_ts.index.month, 'type']).size().unstack(fill_value=0).T// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

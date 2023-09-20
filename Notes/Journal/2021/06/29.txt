@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-29T10:45:45+12:00
+
+====== Tuesday 29 Jun 2021 ======
+
+==== outputs ====
+
+@SI 
+
+**communications at conferences:** 
+
+Fauchereau, N., Lorrey AM, Frank, E. Noll, B, Brandolino, C: Machine Learning approaches to seasonal climate forecasting: New Zealand Meteorological Society Meeting, 25 - 27 November 2020, Christchurch, New Zealand. 
+
+Xu T., Frank E., Fauchereau N., Vetrova V., Begum F: Methodology for monthly-to-seasonal forecasting of regional climate conditions in New Zealand: a machine learning approach, weathering the storm, NZ hydrological society conference, 1 - 4 December 2020, Invercargill, New Zealand 
+
+Seasonal forecasts of New Zealand's local climate conditions with limited GCM inputs using Convolutional Neural Networks. ICML 2021 Workshop on Tackling Climate Change with Machine Learning (submisssion rejected)
+
+**papers submitted:** 
+
+Kaine, G, Wright, V and N. Fauchereau: The decision context for using seasonal climate forecasts, submitted (May 2021) to Systems Research and Behavioral Science
+
+papers in preparation: 
+
+Open-data and open-source software for the development and validation of Multi-Model Ensemble seasonal forecasts for the southwest Pacific region". N. Fauchereau, D. Ramsay, A. Lorrey, B. Noll​, to be submitted to Climate Services 
+
+Predictability of Aotearoa New Zealand's regional climate from observed and forecast regional sea-surface-temperatures 
+
+**Other outputs:** 
+
+Libraries and softwares: 
+
+ICU Water Watch 
+
+ML4SEAS: Machine Learning for seasonal climate forecasting experiments 
+
+Masters Thesis: Dong Huang, COMPX592 MsC, Mathematical and Computing Sciences, University of Waikato 
+
+Title: Statistical Climate Downscaling Using Machine Learning Approaches
+
+The project investigated deep learning techniques for seasonal downscaling of GCM forecasts using convolutional neural networks. Dong implemented very high-dimensional multi-target regression and classification, a cutting-edge technique called tensor regression, special-purpose loss functions, and image inpainting techniques for this project.
+
+Report from Wenrui Xu Forecasting New Zealand’s Local Climate Conditions using Convolutional Neural Networks on Global Circulation Models, Wenrui Xu, COMPX591 Final Report, March 25, 2020
+
+
+
+
+

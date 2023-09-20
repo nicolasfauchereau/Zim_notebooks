@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-19T12:41:35+12:00
+
+====== Thursday 19 Aug 2021 ======
+
+==== EPSG in meters ====
+
+@geo 
+
+EPSG:3857
+
+--------------------
+
+==== ICU validation ====
+
+figures: 
+
+outputs 
+
+GCM tercile climatologies for each country / Island Group 
+
+--------------------
+
+==== ZESPRI ====
+
+check climate data for KPINs: 
+
+6607 
+6020 
+
+

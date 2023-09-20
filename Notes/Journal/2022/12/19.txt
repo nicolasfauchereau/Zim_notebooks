@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-19T12:17:57+13:00
+
+====== Monday 19 Dec 2022 ======
+
+==== OISST inaccessible using the usual URL ====
+
+try: 
+
+https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/ 
+
+and 
+
+https://downloads.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/
+
+update: 
+
+Now implemented in https://github.com/nicolasfauchereau/OISST_indices/blob/main/src/OISST/OISST.py 
+
+using now: https://downloads.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/
+
+--------------------
+
+==== Standard Precipitation Index in xclim ====
+
+see https://xclim.readthedocs.io/en/latest/xclim.indices.html#xclim.indices._agro.standardized_precipitation_index 
+
+from datetime import datetime
+from xclim.indices import standardized_precipitation_index
+ds = xr.open_dataset(path_to_pr_file)
+pr = ds.pr
+pr_cal = pr.sel(time=slice(datetime(1990, 5, 1), datetime(1990, 8, 31)))
+spi_3 = standardized_precipitation_index(
+	pr, pr_cal, freq="MS", window=3, dist="gamma", method="ML"
+)  # Computing SPI-3 months using a gamma distribution for the fit
+

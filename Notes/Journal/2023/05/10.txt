@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-10T11:00:55+12:00
+
+====== Wednesday 10 May 2023 ======
+
+https://www.pwc.com/gx/en/issues/esg.html 
+
+==== Luke Harrington papers ====
+
+clsHarrington, L.J. Investigating differences between event-as-class and probability density-based attribution statements with emerging climate change. Climatic Change 141, 641–654 (2017). https://doi.org/10.1007/s10584-017-1906-3
+
+Investigating differences between event-as-class and probability density-based attribution statements with emerging climate change
+
+There is significant public and scientific interest in understanding whether and to what extent the severity and frequency of extreme events have increased in response to human influences on the climate system. As the science underpinning the field of event attribution continues to rapidly develop, there are growing expectations of faster and more accurate attribution statements to be delivered, even in the days to weeks after an extreme event occurs. As the research community looks to respond, a variety of approaches have been suggested, each with varying levels of conditioning to the observed state of the climate when the event of interest has occurred. One such approach to utilise unconditioned multi-model ensembles requires pre-computing estimates of the change in probability of occurrence for a wide range of possible ‘events’. In this study, we consider differences between event-as-class attribution statements with changes in the probability density of the distribution at the event threshold of interest. For the majority of extreme event attribution studies, it is likely that the two metrics are comparable once uncertainty estimates are considered. However, results show these two metrics can produce divergent answers from each other for moderate climatological anomalies if the present-day climate distribution experiences a substantial change in the underlying signal-to-noise ratio. As the emergent signals of climate change becomes increasingly clear, this study highlights the need for clear and explicit framing in the context of applying pre-computed attribution statements, particularly if attribution perspectives are to be included within the framework of future climate services.
+
+--------------------
+
+==== directory structure and size for the MSWEP ICU dataset ====
+
+→ NRT Daily (Global, as downloaded from the glo2ho ftp server): 6.4Gb 
+
+→ Past_nogauge (Global, as downloaded from the glo2ho ftp server): 49Gb
+ 
+(base) ╭─nicolasf@Dell-ML /media/nicolasf/END19101/ICU/data/MSWEP/Daily/subsets_nogauge 
+╰─$ **tree --du -h | grep G]**
+├── [1.3G]  Kiribati_Line_Islands
+├── [263G]  SP
+│   ├── [249G]  climatologies
+│   │   ├── [ 51G]  180days
+│   │   │   ├── [ 25G]  1991_2020
+│   │   │   │   └── [ 25G]  netcdf
+│   │   │   └── [ 25G]  1993_2016
+│   │   │       └── [ 25G]  netcdf
+│   │   ├── [ 47G]  30days
+│   │   │   ├── [ 24G]  1991_2020
+│   │   │   │   └── [ 24G]  netcdf
+│   │   │   └── [ 24G]  1993_2016
+│   │   │       └── [ 24G]  netcdf
+│   │   ├── [ 52G]  360days
+│   │   │   ├── [ 26G]  1991_2020
+│   │   │   │   └── [ 26G]  netcdf
+│   │   │   └── [ 26G]  1993_2016
+│   │   │       └── [ 26G]  netcdf
+│   │   ├── [ 49G]  60days
+│   │   │   ├── [ 24G]  1991_2020
+│   │   │   │   └── [ 24G]  netcdf
+│   │   │   └── [ 25G]  1993_2016
+│   │   │       └── [ 25G]  netcdf
+│   │   └── [ 50G]  90days
+│   │       ├── [ 25G]  1991_2020
+│   │       │   └── [ 25G]  netcdf
+│   │       └── [ 25G]  1993_2016
+│   │           └── [ 25G]  netcdf
+│   └── [1.2G]  outputs
+
+
+

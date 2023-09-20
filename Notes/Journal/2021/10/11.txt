@@ -1,0 +1,82 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-11T10:05:18+13:00
+
+====== Monday 11 Oct 2021 ======
+
+@TODO 
+
+[*] work on the Smart Ideas concept note and registration template 
+
+
+--------------------
+
+==== ICU, double checks on the calculation of the percentage of scores ====
+
+@ICU 
+
+See: 
+
+**calculates_GPM-IMERG_accumulations_climatologies.ipynb** 
+
+The anomaly map calculated "from scratch" in this notebook: 
+
+{{./screenshot_2021-10-11-150030.png?width=700}}
+
+are matching the anomalies calculated by running the **GPM_processing.py** script, see below 
+
+{{./screenshot_2021-10-11-150157.png?width=700}}
+
+and the difference in the percentiles of score calculated 'from scratch' and the percentilles of scores calculated by the **GPM_processing.py** script is zero 
+
+{{./screenshot_2021-10-11-150336.png}}
+
+--------------------
+
+==== ICU: map of the first decile bin for which the cumulative probability (which sums to 100 over the decile dimension) reaches 50% ====
+
+@ICU 
+
+color scheme 
+
+{{./screenshot_2021-10-11-151836.png}}
+
+Notebook for experiments regarding this: **4_map_MME_probabilistic_decile_forecast.ipynb**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-12-24T10:01:35+13:00
+
+====== Thursday 24 Dec 2020 ======
+
+==== Project LORAX ====
+
+"(A)I speaks for the trees": 
+
+Legal personhood has been granted to rivers etc 
+
+Guardians - indigeneous people - represent the interest of these legal persons 
+
+Can be assisted by Smart Monitoring, holistic 
+
+Can be scaled to other ecosystems and natural entities where human representation is not possible, too difficult ... transform data into 
+
+define range of parameters measuring environmental degradation, what are the limits, the boundaries, what are the non-linearities, 
+
+"Fantastic Fungi": Nature is intelligent and speaks a language, we need to understand this language ... 
+
+
+--------------------
+
+==== Auckland cycling and weather ====
+
+comparison between the 'old' data and the 'new' updated data, see **compare_cycling_data_old_updated.ipynb** in [[/home/nicolasf/research/Auckland_cycling_NeuralProphet/notebooks]] 
+
+shows that for 2017 there are some disprecancies between the 'old' and the 'new' data, the new data shows a large gap at the beginning of 2017 for Tamaki Drive EB, which is not present in the 'old' data, see below 
+
+{{./screenshot_2020-12-24-105326.png}}
+
+so the solution would be to replace the 'new' data by the old data for 2017 .... 
+
+for 2018, the correlation over the overlapping period is 1 for both Tamaki Drive EB and WB ....
+
+we can then update everything to include all data to **2019-01-30 21:00 **when the EWS 22719 was discontinued ... 
+
+NOTE: the data that Petra provided for Mangere EWS is definitely NOT the same as the data provided by Neelesh ... 
+
+see notebook **compare_old_and_new_data.ipynb** in [[/home/nicolasf/research/Auckland_cycling_2019/notebooks]]
+
+the difference between e.g. mean temperature can be huge ... ha ha i**t's because one is given in UTC, and the other in NZST** ... 
+
+add 12 hours to the time in the data Neelesh has extracted ! 
+
+see now in the folder '**/home/nicolasf/research/Auckland_cycling_2019/notebooks**' which will contain all the data (cycling and weather) updated to the January 2019 (but not after, as the wind data has some issues related to change of instruments) 
+
+== Solution for early next year: ==
+
+1) Take all the 'OLD' cycling data up to August 2018, then add the updated data for the rest of 2018 and 2019-01 
+2) Take the 'new' weather data, possibly investigating the possibility of using alternative agent numbers from the data recently extracted by Neelesh, and available in [[/home/nicolasf/drives/auck_scratch/fauchereaun/cycling_data]] 
+3) apply a positive timedelta of 12 hours to the new weather data ... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

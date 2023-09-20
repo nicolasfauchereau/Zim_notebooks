@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-02T10:21:12+13:00
+
+====== Monday 02 Mar 2020 ======
+
+=== VCSN processing ===
+
+@SI @VCSN 
+
+netcdf files with Monthly averages of Rain, Tmin and Tmax in 
+
+[[/home/nicolasf/operational/VCSN/data/NC]] 
+
+notebook: 
+
+
+[[/home/nicolasf/operational/VCSN/notebooks/process_VCSN_monthly_daily_ops.ipynb]] 
+
+
+--------------------
+
+=== Processing of forecasts ===
+
+@SI 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks/process_CDS_hindcasts_per_month_climatology.ipynb]] 
+
+calculates the missing climatologies for the CDS
+
+
+--------------------
+
+=== Jupyter kernel installation ===
+
+@JUPYTER 
+
+To install a jupyter kernel in an environment (exemple with the "analytics" environment: 
+10010131
+$ source activate analytics
+(climlab) $ pip install ipykernel
+(climlab) $ python -m ipykernel install --user --name analytics
+
+--------------------
+
+=== Pattern Recognition and Machine Learning ===
+
+By C Bishop 
+
+is available for free here: https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/ 
+
+and there is agithub repo implementing the examples from scratch in https://github.com/ctgk/PRML 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

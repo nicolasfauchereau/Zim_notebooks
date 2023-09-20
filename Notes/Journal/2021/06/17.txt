@@ -1,0 +1,90 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-17T08:57:34+12:00
+
+====== we'll be Thursday 17 Jun 2021 ======
+
+==== pytorch-widedeep, deep learning for tabular data IV: Deep Learning vs LightGBM ====
+
+@ML @DL @SI 
+
+https://towardsdatascience.com/pytorch-widedeep-deep-learning-for-tabular-data-iv-deep-learning-vs-lightgbm-cadcbf571eaf 
+
+code: https://github.com/jrzaurin/pytorch-widedeep 
+
+--------------------
+
+==== neural compression ====
+
+@ML @DL @SI 
+
+https://jmtomczak.github.io/blog/8/8_neural_compression.html
+
+--------------------
+
+==== notebooks, data and outputs for the CPP WR work ====
+
+@CPP @WR 
+
+**CPP notebooks** 
+
+== notebooks ==
+
+**in the folder `notebooks`: the numbers roughly correspond to the order of execution, but mostly are there for cross-reference** 
+
+**1)** **do_AP_and_kmeans_NCEP1_Z1000_1979_2020.ipynb: **do Affinity Propagation and clustering on Z1000 daily anomalies 
+
+**2)** **analyse_clusters.ipynb**: derive some climatological properties for the primary clusters defined in 1, such as seasonal frequency, transition probabilities and transition probabilities dependent on the regimes sequences minimum duration (with the latter being saved for use in graph analysis)
+ah 
+**3)** **circulation_regimes_graphs.ipynb:** graph network analysis of the primary circulation regimes, circulation regimes as nodes, transition probabilties as edges (see **2**) 
+
+**4) cluster_VCSN_anomalies.ipynb**: Do the secondary (subsidiary) clustering based on the spatio-temporal variability of daily temp and rainfall anomalies within each primary cluster / circulation regime
+
+**3)** **composite_cluster_VCSN_anomalies_ttest.ipynb**: Take the results of **4** and calculates and maps the composite anomalies in VCSN temperature and rainfall, including the Student t-test 
+
+**4) composites_HGT_and_UV.ipynb:** Take the results of **1** and **4**, calculate and plot the Z1000 and wind vector anomalies for the primary and subsidiary clusters, also calculates the average and std. of the wind direction for the North and the South Island for the subsidiary clusters to assist the labelling 
+
+**5)** **read_VCSN_calc_quantile_climatologies.ipynb:** read the VCSN, and calculate a seasonally dependent, smoothed climatology for selected quantile values (i.e. to later derive recoded  time-series where days exceeding or below given threshold are coded as 1, else 0, see e.g. **6** for application) 
+
+**6)** **read_VCSN_do_extremes_analysis_map_dominant_regime.ipynb**: map extremes exceedances to dominant (primary) circulation regime, uses the climatologies derived in 5.  
+
+**7)** **topo.ipynb:** plots NZ's topography (elevation) 
+
+There's also a folder called **`src`** which contains Python modules collating functions used by the various notebooks, note that some functions are there but not reflected in the notebooks, they are leftovers of various experimentations, but I didnt delete them as they still could be useful 
+
+== outputs ==
+
+**in the folder `outputs`** 
+
+- **Z1000_kmeans_anomalies_8_clusters_on_hgt_detrend_std_1979_2020.nc:** 
+
+netcdf files containing the results of the cluster analysis on detrended, standardized Z1000 from 1979 to 2020 (see noetbook **do_AP_and_kmeans_NCEP1_Z1000_1979_2020.ipynb)**, notable variables of interest contained in the dataset: 
+
+hgt: original, 'raw' HGT anomalies WRT to smoothed (5 days running average) climatology 
+hgt_detrend: detrended version of the above 
+hgt_detrend_std: standardized version of the above (i,done for the PCA + cluster analysis) 
+cluster: the cluster label for each day, over the time dimension (15341 days from 1979-1-1 to 2021-12-31) 
+
+**- subsidiary_clusters_from_main_cluster_N_VCSN_anomalies.nc:** 
+
+subsidiary clusters from cluster N, based on the clusters done on combined VCSN temp and rainfall anomalies (see notebook **cluster_VCSN_anomalies.ipynb) **
+
+- transition_probabilities_sequences.xlsx
+
+Excel file with the transition probabilities as a function of minimum sequence length for all the primary clusters, created by **analyse_clusters.ipynb,** used by **circulation_regimes_graphs.ipynb**
+
+- folder `**climatologies**`: 
+
+Includes the seasonal quantile climatologies (used for the analysis of extreme events), created by notebook **read_VCSN_calc_quantile_climatologies.ipynb** 
+
+
+
+
+
+
+
+
+
+
+
+

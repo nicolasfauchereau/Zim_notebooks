@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-04-08T10:37:37+12:00
+
+====== Friday 08 Apr 2022 ======
+
+==== calculate GCMs hindcast climatologies and probabilities for each administrative area ====
+
+@ICU 
+
+calc_GCM_hindcast_climatologies_and_verify.ipynb

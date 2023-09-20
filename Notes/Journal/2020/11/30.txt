@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-30T12:46:46+13:00
+
+====== Monday 30 Nov 2020 ======
+
+==== calculation of the MSLP based indices from ERA5 and the GCMs ====
+
+== 1) SAM ==
+
+from: https://psl.noaa.gov/data/20thC_Rean/timeseries/monthly/SAM/ 
+
+This version of the SAM is calculated using SLP from the 20CRV2c. (SAM) is defined as the difference of zonal mean sea level pressure between 40°S and 65°S. The zonal means at 40°S and 65°S are each calculated. Each month's zonal mean is standardized by the mean/standard deviation determined for the climatological time period (1981-2010). Then, the 65°S value is subtracted from the 40°S value for each month. 
+
+== 2) M1 and Z1 ==
+
+**M1:** 
+
+→ Hobart: 42.8821° S, 147.3272° E 
+→ Chatham Island: 44.0058° S, 176.5401° W 
+
+**Z1:** 
+
+→ Auckland: 36.8483° S, 174.7625° E 
+→ Christchurch: 43.5320° S, 172.6397° E 
+
+see: 
+
+see 
+
+→ **MSLP_indices_ERA5.ipynb** 
+→ **MSLP_indices_GCMs.ipynb**  
+
+in [[/home/nicolasf/research/Smart_Ideas/code/observational_indices/notebooks]]  
+
+
+--------------------
+
+==== checks on the downloaded ECMWF MSLP data ====
+
+see **check_downloads_makeplots.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/checks]] 
+
+the plots show that there are 25 members in the ensemble until 2016 - 12, then from 2017 - 01 there are 51 members in the ensemble 
+
+besides that there does not seem to be any problem with the data itself 
+
+--------------------
+
+==== validate the MSLP indices (SAM, M1, Z1) calculated from the ECMWF forecasts against observational (ERA5) indices ====
+
+see **climate_indices/notebooks/validate_MSLP_indices.ipynb** and also copied in ~/research/Smart_Ideas/code/GCM-validations/notebooks/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

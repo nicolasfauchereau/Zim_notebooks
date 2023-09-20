@@ -1,0 +1,55 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-14T08:45:57+12:00
+
+====== Friday 14 Aug 2020 ======
+
+==== Deep Generative Models using TensorFlow 2.0 ====
+
+Convolutional GAN (CGAN), Convolutional Variational Auto-encoders (CVAE), Deep Boltzman Machine (DBM),  Deep Belief Network (DBN), Restricted Boltzmann Machine (RBM)  
+
+see: 
+
+https://github.com/atreyasha/deep-generative-models
+
+and code cloned locally in 
+
+[[~/research/Smart_Ideas/resources/repos_libraries]] 
+
+--------------------
+
+==== Image Inpainting for downscaling ====
+
+Dong's email 2020-08-14: 
+
+It looks to me like that the method interp_like() just implicitly assumes the coordinates are Euclidean. Should I use the methods in xESMF when possible? In addition, intuitively a projection focusing on the zone of interest (the VCSN labeled area) while keeping-but-squashing the farther areas on the globe may produce a better input for training, in terms of both performance and data size. But there seems not to be such an existing method in the library.
+
+Deep Belief Networks for Supervised Classification and Regression 
+
+see https://mc.ai/applying-the-deep-belief-networkdbn-in-credit-card-fraud-detection/ 
+
+and library it depends on: https://github.com/albertbup/deep-belief-network 
+
+cloned in [[~/research/Smart_Ideas/resources/repos_libraries]]  
+
+--------------------
+
+==== Scalable Machine Learning with Dask-ML ====
+
+see https://nbviewer.jupyter.org/github/TomAugspurger/science-thursday/blob/master/scalable-ml.ipynb 
+
+good examples for `compose` function in scikit-learn 
+
+--------------------
+
+Move the convolutional Auto-encoder codes 
+
+everything is now in [[/home/nicolasf/research/Smart_Ideas/code/features-extractors/dimensionality_reduction/CONV_AE]]
+
+see e.g. 	
+
+Convolution_AE_wo_MaxPooling.py: convolutional AE without max pooling 
+
+Convolutional_AE.py: convolutional AE with max pooling layer
+
+

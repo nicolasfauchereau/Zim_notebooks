@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-09T14:14:48+12:00
+
+====== Friday 09 Sep 2022 ======
+
+==== ICU validation ====
+
+Paper () now reviewed and edited 
+
+!!! 
+
+validation of the tercile / quartile seasonal forecasts for the admin areas 
+
+Now see in: 
+
+[[/home/nicolasf/tmp/ICU]] 
+
+**gather_csvs.ipynb** 

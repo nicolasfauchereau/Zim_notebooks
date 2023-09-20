@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-07T15:09:50+13:00
+
+====== Wednesday 07 Oct 2020 ======
+
+--------------------
+
+==== Convert shapes (e.g. NZ coastlines) to rotated pole grid ====
+
+see: [[~/operational/NZ_shape_rotated_pole.html]] 
+
+in a nutshell: 
+
+{{./screenshot_2020-10-07-151144.png?width=700}}
+
+--------------------
+
+==== WMO essentials code and library ====
+
+see: 
+
+→ [[~/operational/WMO_essentials/notebooks/get_WMO_essential.ipynb]] 
+
+and 
+
+
+

@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-15T10:30:46+13:00
+
+====== Wednesday 15 Dec 2021 ======
+
+==== NESI repositories: https://github.com/orgs/nesi/repositories ====
+
+https://github.com/orgs/nesi/repositories
+
+lots of tutorials: 
+
+→ https://github.com/nesi/sklearn_tutorial 
+→ https://github.com/nesi/ml102_workshop 
+→ https://github.com/nesi/snakemake_workshop 
+
+--------------------
+
+==== ICU: C3S forecasts download, processing and mapping s ====
+
+1) download the hindcast data for each GCM for the current initial month: 
+
+
+C3S/1_download_C3S_rolling_hindcasts.ipynb 
+
+NOTE: make sure that the mapping between GCM name and system is correct, this mapping is defined by the dictionnary "dict_systems" on cell 14
+
+currently the mapping is: 
+
+dict_systems = OD(
+				ECMWF=5, # SEAS5, hindcast complete 
+				UKMO=600, # note: only for system 14 is hindcast complete
+				METEO_FRANCE=8, # note: only for system 7 is hindcast complete
+				DWD=21, # GCFS2.1, hindcast complete 
+				CMCC=35, # SPSv3.5, hindcast complete 
+				NCEP=2,# CFSv2, hindcast complete 
+				JMA=2, # CPS2, hindcast complete
+				ECCC_GEM_NEMO=2, # GEM-NEMO, hindcast incomplete
+				ECCC_CanCM4i=3, # CanCM4i, hindcast incomplete
+				)

@@ -1,0 +1,188 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-28T11:30:02+13:00
+
+====== Friday 28 Oct 2022 ======
+
+==== OISST realtime MHWs tracking and NZ indices ====
+
+implemented timeout decorator on the access to OISST v2 via OpenDAP, now reverts to requests / io if opendap fails to save to disk within 120 seconds 
+
+see [[/home/nicolasf/operational/OISST_indices/code]] 
+
+
+def timeout(timeout_secs: int):
+	import time
+	import signal
+	from functools import wraps
+
+	def wrapper(func):
+		@wraps(func)
+		def time_limited(*args, **kwargs):
+			# Register an handler for the timeout
+			def handler(signum, frame):
+				raise Exception(f"Timeout for function '{func.__name__}'")
+
+			# Register the signal function handler
+			signal.signal(signal.SIGALRM, handler)
+
+			# Define a timeout for your function
+			signal.alarm(timeout_secs)
+
+			result = None
+			try:
+				result = func(*args, **kwargs)
+			except Exception as exc:
+				raise exc
+			finally:
+				# disable the signal alarm
+				signal.alarm(0)
+
+			return result
+
+		return time_limited
+
+	return wrapper
+
+→ defines the decorator 
+
+@timeout(120)
+def download_dap(
+	url=None,
+	domain=[162.0, 180.0, -50.0, -30.0],
+	opath=None,
+):
+
+→ wraps it around the download_dap function 
+
+--------------------
+
+==== Drew's MBIE endeavour on precision horticulture ====
+
+== background and motivation ==
+
+the general background only, I am getting to the CSs now but I wanted to check with you whether you think I am on the right track or not, what follows is bullet point style, just the base ideas, note that it might be too 'blue sky' yet for an Endeavour, although I will try to connect this to specific products / tools:
+
+While weather forecasts are an initial conditions problem, for subseasonal (10 - 30 days) and more so seasonal (1 - 6 months) timescale, we have a mix of initial conditions and boundary conditions, with the latter becoming more important as time-scale increase
+
+in the extratropics, the atmosphere is only partly constrained by boundary conditions, resulting in the stochastic (unpredictable) component playing a much larger role, it is especially the case for precip, which is governed by both macro-scale dynamical processes in the atmosphere and complex (and poorly understood) micro-physical processes
+
+From a forecasting perspective, we can think about variability at subseasonal and seasonal time-scales as being constituted by both a predictable and an unpredictable component, with relative proportions varying in space and time, as well as being dependent on the spatial and timescales considered ... for example some spatial configurations (clusters ?) of rainfall and temperature of monthly or seasonally aggregated anomalies might be more predictable than others, some phenomena (dry spells, extreme rainfall, specific sequences of events) might be more predictable than others, and predictability is / may vary seasonally, as well as a function of the state of large-scale climate modes such as the MJO, ENSO, the SAM, etc ... \
+
+For this project, the challenge is therefore to identify these predictable components, develop methodologies that enable to characterise how these predictable components transfer to the scales of interest  (i.e. orchard, vineyards) and develop innovative tools that leverage these 'windows of opportunity' to derive skillful, actionable forecasts, including uncertainties and confidence estimates.
+
+In order to do so, this component of the programme will leverage large datasets, explainable AI methods for the identification of the predictable components and windows of opportunities, and innovative approaches in hybrid dynamical / statistical forecasting (adaptative bias correction). 
+
+This constitutes a departure from how improvements of climate forecasts are usually approached and communicated, which usually fails to identify - and focus on -   the predictable components,  and pays little attention to contextualise the confidence in the forecasts in light of the apportion between predictable and unpredictable components.
+
+note that there still will be a component akin to "spatio-temporal scaling of weather and climate prediction for vineyards and orchards" 
+
+[14:12] Nicolas Fauchereau
+but we focus on the predictable components at subseasonal and seasonal time-scale ... i.e. we develop 'tranfer functions' allowing to map the predictable components of climate variability over NZ to the variables of interest at orchard / vineyard scale 
+
+[14:13] Nicolas Fauchereau
+I truly think that climate over NZ is overall not very predictable, if we ignore this we are very likely to end up with poorly performing forecasts overall 
+
+**relevant** **references**:
+
+Hwang, J., P. Orenstein, J. Cohen, K. Pfeiffer, and L. Mackey, 2019: Improving Subseasonal Forecasting in the Western U.S. with Machine Learning. Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, KDD ’19: The 25th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Anchorage AK USA, ACM, 2325–2335.
+
+Cohen, J., D. Coumou, J. Hwang, L. Mackey, P. Orenstein, S. Totz, and E. Tziperman, 2019: S2S reboot: An argument for greater inclusion of machine learning in subseasonal to seasonal forecasts. WIREs Clim Change, 10, https://doi.org/10.1002/wcc.567.
+
+Mouatadid, S., P. Orenstein, G. Flaspohler, J. Cohen, M. Oprescu, E. Fraenkel, and L. Mackey, 2022: Adaptive Bias Correction for Improved Subseasonal Forecasting.
+
+Mouatadid, S., and Coauthors, 2022: Learned Benchmarks for Subseasonal Forecasting.
+
+Totz, S., E. Tziperman, D. Coumou, K. Pfeiffer, and J. Cohen, 2017: Winter Precipitation Forecast in the European and Mediterranean Regions Using Cluster Analysis. Geophys. Res. Lett., 44, https://doi.org/10.1002/2017GL075674.
+
+Ma, Y., J. Li, S. Zhang, and H. Zhao, 2021: A multi-model study of atmosphere predictability in coupled ocean–atmosphere systems. Clim Dyn, 56, 3489–3509, https://doi.org/10.1007/s00382-021-05651-w.
+
+Zheng, Z., Z.-Z. Hu, and M. L’Heureux, 2016: Predictable Components of ENSO Evolution in Real-time Multi-Model Predictions. Sci Rep, 6, 35909, https://doi.org/10.1038/srep35909.
+
+Robertson, A. W., N. Vigaud, J. Yuan, and M. K. Tippett, 2020: Toward Identifying Subseasonal Forecasts of Opportunity Using North American Weather Regimes. Monthly Weather Review, 148, 1861–1875, https://doi.org/10.1175/MWR-D-19-0285.1.
+
+Gordon, E. M., and E. A. Barnes, 2022: Incorporating Uncertainty Into a Regression Neural Network Enables Identification of Decadal State‐Dependent Predictability in CESM2. Geophysical Research Letters, 49, https://doi.org/10.1029/2022GL098635.
+
+Mayer, K. J., and E. A. Barnes, 2021: Subseasonal Forecasts of Opportunity Identified by an Explainable Neural Network. Geophysical Research Letters, 48, https://doi.org/10.1029/2020GL092092.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

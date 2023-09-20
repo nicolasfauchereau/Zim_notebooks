@@ -1,0 +1,108 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-03T10:57:38+13:00
+
+====== Wednesday 03 Nov 2021 ======
+
+
+co-author with Herve Quenol in: 
+
+==== Climate modeling at local scale in the Waipara winegrowing region in the climate change context ====
+
+Renan Le Roux1, Andrew Sturman2, Gwenaël Morin3, Pierre-Gilles Lemasle3, Benjamin Pohl4, Amber Parker5, Nicolas Fauchereau6? and Hervé Quénol3  
+
+for a communication at: https://terclim2022.symposium.inrae.fr/ 14th International Terroir congress and the 2nd ClimWine symposium 
+
+document dowloaded locally: 
+
+**/home/nicolasf/Documents/terclim -quenoletal_1.docx** 
+
+Generally speaking, raises interesting questions related to how micro-climates will change with climate change ... i.e. there could be some 'micro-climate' niches opening for some crops / practices 
+
+
+--------------------
+ 
+
+==== Participation in Smart Ideas led by Bodeker Scientific: Artificial intelligence approaches to probabilistic sub-seasonal to seasonal forecasting for New Zealand ====
+ 
+see google doc: https://docs.google.com/document/d/1ahXDrvHMxGYCYm6HCmEIqSBy5QTJ5f2KZujmsJ-hhQA/edit 
+
+suggested the use of Graph Neural Networks (GNNs) and XAI methods @GNN @Graph @Networks @XAI 
+
+references added: 
+
+→ Stevens, A., R. Willett, A. Mamalakis, E. Foufoula-Georgiou, A. Tejedor, J. T. Randerson, P. Smyth, and S. Wright, 2021: Graph-Guided Regularized Regression of Pacific Ocean Climate Variables to Increase Predictive Skill of Southwestern U.S. Winter Precipitation. Journal of Climate, 34, 737–754, https://doi.org/10.1175/JCLI-D-20-0079.1.
+
+→ Cachay, S. R., E. Erickson, A. F. C. Bucker, E. Pokropek, W. Potosnak, S. Bire, S. Osei, and B. Lütjens, 2021: The World as a Graph: Improving El Ni\~no Forecasts with Graph Neural Networks. arXiv:2104.05089 [physics, stat],.
+
+document downloaded: 
+
+**/home/nicolasf/Documents/Seasonal\ Smart\ Ideas\ 2021_2022\ Registration\ \&\ Concept\ Proposal.docx** 
+
+ 
+--------------------
+
+==== ED work paper ====
+
+@ED 
+
+
+see email from Samik regarding meeting with other DHBs on Monday the 8th of November 
+
+paper 
+
+--------------------
+
+==== Space for Planet Earth Challenge evaluations ====
+
+see: https://auaha.brightidea.com/app/action/scorecard/502377 
+
+for a list of the applications 
+
+The 9 applications are saved in 
+
+ [[/home/nicolasf/Documents/space_for_planet_earth_challenge]] 
+
+application #1 is submitted by a Fiji based group including Elisabeth Holland 
+
+→ Application 1: Nicholas Metheral: https://www.linkedin.com/in/nicholasmetherall/ 
+
+→ Application 6: Lynker Analytics, deforestation in the Solomon Isllands 
+
+→ Earthban, see CEO profile at https://www.linkedin.com/in/tomduncaninvestment/ 
+
+
+--------------------
+
+==== carbon plan forest risk models ====
+
+see: 
+
+https://www.linkedin.com/in/nicholasmetherall/ for the code, and https://carbonplan.org/research/forest-risks for the study 
+
+code is 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

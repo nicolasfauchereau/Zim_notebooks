@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-12T13:44:35+13:00
+
+====== IRI ======
+Created Wednesday 12 February 2020
+
+CODE: 
+
+INPUTS 
+
+OUTPUTS: 
+
+tmp = 
+final = cd 
+
+
+==== hindcasts ====
+
+[*] CanSIPSv2
+	[*] T2M
+	[*] PRECIP
+
+[*] NCEP_CFSv2
+	[*] T2M
+	[*] PRECIP
+
+[*] NASA_GEOSS2S
+	[*] T2M
+	[*] PRECIP
+
+[*] CanCM4i
+	[*] T2M
+	[*] PRECIP
+
+[*] GEM_NEMO
+	[*] T2M
+	[*] PRECIP
+
+
+==== forecasts ====
+
+[ ] CanSIPSv2
+[ ] NCEP_CFSv2
+[ ] NASA_GEOSS2S
+[ ] CanCM4i
+[ ] GEM_NEMO

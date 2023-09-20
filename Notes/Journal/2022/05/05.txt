@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-05T11:22:45+12:00
+
+====== Thursday 05 May 2022 ======
+
+==== Peter's paper on CCAM simulations ====
+
+@ICU @CMIP6 @MBIE 
+
+**High-resolution CCAM simulations over the South Pacific and New Zealand for the detection and attribution of weather extremes** 
+
+Incidentally, on the side, I have actually been working on a paper at the moment which is a climatological evaluation of CCAM. It is very broad to encompass multiple aspects of the large scale circulation, teleconnections, extremes, but has a brief look at tropical cyclones in CCAM from these runs. I have also been using IBTRACS for the evaluation of CCAM (1981-2020), so I’d be very keen to hear if this part of the analysis can be improved, given your knowledge of the IBTRACS issues. It was mainly a “first pass” look at tropical cyclones since this has never actually been looked at in any detail in the model. It appears CCAM can simulate these features about as well as ERA5 which is quite good I think (for a free running AGCM with no nudging to the observed atmosphere). Though the very extreme events are missing in CCAM. 
+
+see https://niwa-my.sharepoint.com/:w:/r/personal/nicolas_fauchereau_niwa_co_nz/Documents/Attachments/WACE_Gibson22.docx?d=w593697fe02694884a97af1585b42d561&csf=1&web=1&e=kOBdk2 
+
+Mention that the climate change node (led by Geoff Cooley of the CSIRO) could include NIWA representation, as we will make this data available (?) and it could be a great resou

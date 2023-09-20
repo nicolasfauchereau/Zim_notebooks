@@ -1,0 +1,184 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-19T09:57:45+13:00
+
+====== Friday 19 Feb 2021 ======
+
+==== ICU: GCM downloaded (prate) in /media/nicolasf/END19101/ICU/data/CDS/ ====
+
+== files missing ==
+
+see check_downloads.ipynb in [[/media/nicolasf/END19101/ICU/data/CDS/]] 
+
+8 files missing for GCM UKMO
+2017_01 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+2017_02 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+2017_03 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+2017_04 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+2017_05 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+2017_06 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+2017_07 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+2017_08 missing in /media/nicolasf/END19101/ICU/data/CDS/UKMO
+22 files missing for GCM CMCC
+2017_01 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_02 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_03 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_04 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_05 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_06 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_07 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_08 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_09 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_10 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_11 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2017_12 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_01 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_02 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_03 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_04 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_05 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_06 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_07 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_08 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_09 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+2018_10 missing in /media/nicolasf/END19101/ICU/data/CDS/CMCC
+33 files missing for GCM NCEP
+2017_01 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_02 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_03 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_04 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_05 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_06 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_07 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_08 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_09 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_10 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_11 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2017_12 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_01 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_02 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_03 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_04 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_05 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_06 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_07 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_08 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_09 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_10 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_11 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2018_12 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_01 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_02 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_03 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_04 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_05 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_06 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_07 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_08 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+2019_09 missing in /media/nicolasf/END19101/ICU/data/CDS/NCEP
+
+JMA is crap, only 148 files are available .... 
+
+--------------------
+
+==== sort out the files dimensions etc ====
+
+**NOTE**: only the leadtime 1 (one month ahead) has been downloaded .... 
+
+expand dimensions (expand_dims) example 
+
+dset = dset.expand_dims(dim={timevar:last_day}, axis=0) 
+
+== ECMWF: ==
+
+lat: 86, lon: 86, member: **25**, step: 5 
+
+then from 
+
+**ECMWF 2017 - 01** => lat: 86, lon: 86, member: **51**, step: 5
+
+== UKMO: ==
+
+lat: 86, lon: 86, member: **28**, step: 5
+
+then **50** to **62** members (varying, 50, 56, 60, 62) from 
+
+**UKMO 2017 - 09** => lat: 86, lon: 86, member: 50, step: 5
+
+== METEO_FRANCE ==
+
+lat: 86, lon: 86, member: **25**, step: 5
+
+then from 
+
+**METEO_FRANCE 2017 - 10** => lat: 86, lon: 86, member: **51**, step: 5
+
+== DWD ==
+
+lat: 86, lon: 86, member: **30**, step: 5 
+
+then from 
+
+**DWD 2018 - 01** => lat: 86, lon: 86, member: **50**, step: 5
+
+== CMCC ==
+
+lat: 86, lon: 86, member: **40**, step: 5
+
+then from 
+
+**CMCC 2018 - 11** => lat: 86, lon: 86, member: **50**, step: 5
+
+== NCEP ==
+
+lat: 86, lon: 86, member: **between 20 and 28 (20, 24, 28)**, step: 5
+
+then from: 
+
+**NCEP 2019 - 10** => lat: 86, lon: 86, **member: 120 or 124**, step: 5
+
+--------------------
+
+==== determine class of each member and step ====
+
+see **check_downloads.ipynb**
+
+in [[/media/nicolasf/END19101/ICU/data/CDS]] 
+
+
+--------------------
+
+==== check again climetlab after the ECMWF Summer of Code ====
+
+https://climetlab.readthedocs.io/en/latest/ 
+
+https://github.com/esowc/challenges_2021/issues/13 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

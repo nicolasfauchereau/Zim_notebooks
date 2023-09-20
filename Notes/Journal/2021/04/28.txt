@@ -1,0 +1,96 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-28T08:49:57+12:00
+
+====== Wednesday 28 Apr 2021 ======
+
+==== dython: data analysis in Python ====
+
+http://shakedzy.xyz/dython/
+
+some examples include **ROC curves:** 
+
+{{./screenshot_2021-04-28-085224.png?width=700}}
+
+and **Theil's U association plot** 
+
+{{./screenshot_2021-04-28-085322.png?width=700}}
+
+--------------------
+
+==== ICU hotspots development ====
+
+**things to do:** 
+
+see https://teams.microsoft.com/l/message/19:f6907003180c41198e1aa95641d4be63@thread.tacv2/1619559675893?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&groupId=cd4e2038-56c7-4920-b11a-e1a85a84b240&parentMessageId=1619559675893&teamName=Pacific%20Rim%20Team&channelName=Island%20Climate%20Update&createdTime=1619559675893 
+
+→ Table with proportion of land grid points in each EAR watch category
+→ 1 month forecast map with most likely precip value in mm taken from climatological deciles
+→ Seasonal forecast map with most likely precip value in mm taken from climatological deciles
+→ Colour scheme to be defines
+
+rename **calculate_and_map_GPM_IMERG_percentile_of_score.py** in [[~/operational/ICU/development/hotspots/notebooks/GPM_IMERG]] to **process_GPM-IMERG.py** 
+
+--------------------
+
+==== linux: list only directories ====
+
+ls -d */
+
+aliased to `lsd` in ~/.zshrc 
+
+--------------------
+
+==== GANS for modelling spatio-temporal weather extremes ====
+
+//GAN, Generative Models, Machine Learning// 
+
+https://arxiv.org/abs/2104.12469 
+
+see also: 
+
+**Augmenting Correlation Structures in Spatial Data Using Deep Generative Models** https://arxiv.org/abs/1905.09796 
+
+State-of-the-art deep learning methods have shown a remarkable capacity to model complex data domains, but struggle with geospatial data. In this paper, we introduce SpaceGAN, a novel generative model for geospatial domains that learns neighbourhood structures through spatial conditioning. We propose to enhance spatial representation beyond mere spatial coordinates, by conditioning each data point on feature vectors of its spatial neighbours, thus allowing for a more flexible representation of the spatial structure. To overcome issues of training convergence, we employ a metric capturing the loss in local spatial autocorrelation between real and generated data as stopping criterion for SpaceGAN parametrization. This way, we ensure that the generator produces synthetic samples faithful to the spatial patterns observed in the input. SpaceGAN is successfully applied for data augmentation and outperforms compared to other methods of synthetic spatial data generation. Finally, we propose an ensemble learning framework for the geospatial domain, taking augmented SpaceGAN samples as training data for a set of ensemble learners. We empirically show the superiority of this approach over conventional ensemble learning approaches and rivaling spatial data augmentation methods, using synthetic and real-world prediction tasks. **Our findings suggest that SpaceGAN can be used as a tool for (1) artificially inflating sparse geospatial data and (2) improving generalization of geospatial models**. 
+
+code: https://github.com/konstantinklemmer/spacegan 
+
+cloned into [[~/research/Smart_Ideas/resources/repos_application_cases]] 
+
+--------------------
+
+==== going around restrictions on web-scraping on websites: ====
+
+example for trying to pull the NINO indices from the BoM's website: 
+
+headers = {'User-Agent' : "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36"}
+
+for nino in ["3.4", "3", "4","1","2"]:
+    
+	print("processing NINO{}".format(nino))
+
+	url = "http://www.bom.gov.au/climate/enso/nino_%s.txt" % (nino)
+    
+	ll
+
+--------------------
+
+==== downloading OISST and calculating the NINO indices, including relative NINO indices ====
+
+see **download_OISST_calculates_NINOS.ipynb** in [[/home/nicolasf/data/SST/NOAA_hires_1981_present]]
+
+compare to the BoM Nino indices 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

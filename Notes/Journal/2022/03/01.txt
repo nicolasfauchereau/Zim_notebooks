@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-01T09:09:00+13:00
+
+====== Tuesday 01 Mar 2022 ======
+
+==== variable list for CMIP ====
+
+@CMIP6 
+
+The variable list for CMIP3 is here:
+
+https://pcmdi.llnl.gov/mips/cmip3/variableList.html
+
+ It hasn’t changed much for CMIP6 so that should be good guidance – but let me know if you don’t know what a specific variable is?
+
+ For the filenames (on synda at least) they look something like this :
+
+psl_Amon_CESM2_historical_r1i1p1f1_gn_185001-201412.nc
+
+ which is:
+
+**variable_frequency_model_experiment_ensembleMember_gridType_timePeriod**
+
+ The main differences from CMIP5 is the addition of the “f” in ensemble member, and the addition of grid-type – but for our purposes it should be fine to use either “gn” or “gr” for the grid types. Some model groups prefer to have their output on native grids (gr) so that if you are computing budgets they are not subject to interpolation errors. The “version” is stored as metadata and it not in the filename, but is in the directory structure on synda.
+
+--------------------
+
+==== stepwise regression in Python / scikit-learn ====
+
+see thread: 
+
+https://datascience.stackexchange.com/questions/937/does-scikit-learn-have-a-forward-selection-stepwise-regression-algorithm
+
+--------------------
+
+==== Julia for climate ====
+
+https://logankilpatrick.medium.com/julia-the-little-known-programming-language-that-might-be-the-key-to-understanding-climate-change-ff91be18973a
+
+--------------------
+
+==== zero padding with string formatting ====
+ 
+i = 1
+print(f"{i:02}") 
+
+--------------------
+get the path to the file corresponding to an opened xarray dataset 
+
+@xarray @pathlib 
+
+
+path_to_file = **ds[varname].encoding['source']**
+path_to_file = pathlib.Path(path_to_file)
+    
+
+
+
+
+
+

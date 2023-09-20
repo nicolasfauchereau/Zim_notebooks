@@ -1,0 +1,89 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-30T14:07:36+12:00
+
+====== Wednesday 30 Jun 2021 ======
+
+===== climtas: Climate Timeseries Analysis =====
+
+
+Climtas is a package for working with large climate analyses. It focuses on the time domain with custom functions for Xarray and Dask data.
+
+
+https://climtas.readthedocs.io/en/latest/index.html
+
+
+https://github.com/ScottWales/climtas
+
+Climtas includes a number of parallelised building blocks for **heatwave detection**
+
+also: **Using xesmf to efficiently regrid data to another resolution¶**
+
+https://climate-cms.org/2021/04/09/xesmf-regrid.html
+
+--------------------
+
+==== Python for climatology, oceanography and atmospheric science ====
+
+https://scrapbox.io/pycoaj/
+
+xarray: https://scrapbox.io/pycoaj/xarray
+
+--------------------
+
+==== Climate indices for drought monitoring, community reference implementations in Python ====
+
+https://github.com/monocongo/climate_indices
+
+
+
+	SPI, Standardized Precipitation Index, utilizing both gamma and Pearson Type III distributions
+	SPEI, Standardized Precipitation Evapotranspiration Index, utilizing both gamma and Pearson Type III distributions
+	PET, Potential Evapotranspiration, utilizing either Thornthwaite or Hargreaves equations
+	PDSI, Palmer Drought Severity Index
+	scPDSI, Self-calibrated Palmer Drought Severity Index
+	PHDI, Palmer Hydrological Drought Index
+	Z-Index, Palmer moisture anomaly index (Z-index)
+	PMDI, Palmer Modified Drought Index
+	PNP, Percentage of Normal Precipitationa
+
+--------------------
+
+===== xagg:  Aggregating gridded data (xarray) to polygons =====
+
+**!warning: again does not work with longitudes going from 0 to 360**
+
+https://github.com/ks905383/xagg
+http://www.bom.gov.au/climate/mjo/graphics/rmm.74toRealtime.txt
+and cloned in [[~/sources]]  
+
+see also: 
+
+https://github.com/ks905383/climate-downloads from the same author: https://github.com/ks905383/climate-downloads/blob/main/download_ERA5.ipynb downloads and process ERA5 reanalysis 
+
+--------------------
+
+==== Xarray version of Marine Heatwaves code by Eric Olivier ====
+
+@MHW @MHWs @heatwaves 
+
+https://github.com/coecms/xmhw
+
+see also: 
+
+https://github.com/oceanhackweek/ohw20-proj-marine-heat-waves
+
+the code is in https://github.com/oceanhackweek/ohw20-proj-marine-heat-waves/blob/master/heatwavexr/heatwavexr.py 
+
+these 2 repos are cloned in [[~/sources]] 
+
+also check: 
+
+https://github.com/ocetrac/ocetrac  Python package to label and track unique geospatial features from gridded datasets  
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-31T11:18:19+12:00
+
+====== Monday 31 Aug 2020 ======
+
+===== Radiant Earth API access key =====
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJqa3dNMEpFTURsRlFrSXdOemxDUlVZelJqQkdPRFpHUVRaRVFqWkRNRVJGUWpjeU5ERTFPQSJ9.eyJpc3MiOiJodHRwczovL3JhZGlhbnRlYXJ0aC5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY0YzMzODY5ZjdkYjEwMDY3MGUxZGIyIiwiYXVkIjpbImh0dHBzOi8vYXBpLnJhZGlhbnQuZWFydGgvdjEiLCJodHRwczovL3JhZGlhbnRlYXJ0aC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTk4ODI5NDQ5LCJleHAiOjE1OTk0MzQyNDksImF6cCI6IlAzSXFMcWJYUm0xMEJVSk1IWEJVdGU2U0FEbjBTOERlIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbXX0.ZnzlzoeusNC_nEGql1M3brPNZPnWBoZcfZ9NLBidd7suvP3mEY7frqmHrXFItChxwRirmWADV09Pea0qCsftTcOJy6VDqUYjRpzuA3U4KIlzoxVTdYHElBE9QzxYy3QTjxtBxoxGhNLuJj_gFZUnKcQDQ4T9xygI55WVwB_IU31dYKQFJZmtC25CXBqNM-RMdkYgKKfaad_NhD7iPVMBdWvf3cqsuRDS2otCN7ggQSoOeT0ChxI0-rWLLtK9RR73T0YbbMkpCTklTBEENROGYYo8zjU3RU2TWtu-7bYTG6i7REj-9JCYNjINmPci17DvipjZY1FejXDAIX3HjLQlYw 
+
+==== NZDI forecasting ====
+
+https://git.niwa.local/rampaln/drought-modelling
+
+==== IRI data library climatology ====
+
+Al the models climatologies  are available at: 
+
+ftp://ftp.cpc.ncep.noaa.gov/NMME/clim/ 
+
+=== NZRE hackathon ===
+
+see https://github.com/nesi/nzrse_hackathon_2020 
+
+plug this into pycaret 
+
+=== PYCARET ===
+
+5 things you don't know about pycaret: 
+
+https://towardsdatascience.com/5-things-you-dont-know-about-pycaret-528db0436eec 
+
+and downloaded locally in [[/home/nicolasf/research/Smart_Ideas/resources/PYCARET]] 

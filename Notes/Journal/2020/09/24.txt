@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-24T09:53:28+12:00
+
+====== Thursday 24 Sep 2020 ======
+
+--------------------
+
+==== GEFS version 12 now released ====
+
+see: https://ftp.ncep.noaa.gov/data/nccf/com/gens/prod/gefs.20200923/12/  for the data 
+
+evaluation: https://www.emc.ncep.noaa.gov/users/meg/gefsv12/ 
+
+press release: https://www.noaa.gov/media-release/noaa-upgrades-global-ensemble-forecast-system 
+
+--------------------
+
+==== APCC CLIKS MME and individual models ====
+
+website https://cliks.apcc21.org/ 
+
+**user** = 'dreamshot'
+**password** = 'niwaw3ath3r'
+
+--------------------
+
+==== copy of processed ECMWF PRECIP and T2M on DEUCE ====
+
+**from:**
+
+[[/media/nicolasf/END19101/data/GCMs/processed/CDS/ECMWF/PRECIP]]
+[[/media/nicolasf/END19101/data/GCMs/processed/CDS/ECMWF/T2M]] 
+
+**to** 
+
+[[/downscaling/GCMs/processed/CDS/ECMWF]] on deuce 
+
+number of files: 
+
+T2M: 3744: also contains the anomalies WRT to the 1993 2016 climatology
+PRECIP: 3744: also contains the anomalies WRT to the 1993 2016 climatology 
+
+--------------------
+
+==== Meeting with Dong and Eibe ====
+
+@TODO NICO: 
+
+[>] send Dong description of the updated ECMWF data on deuce
+[*] get the regional mask to Dong
+[ ] try simple, shallow network with dense layers 
+[ ] work out the shape and activation function for multitarget (6 regions) multiclass (3 classes) classification task 
+[ ] try simple shallow architectures for regression and classification, with only dense layers, and regularisation 
+[ ] try using the APCC data, 3 channels per variable (prob Below, Normal, Above) 
+
+--------------------
+
+==== make the regions mask ====
+
+see notebook **make_regions_mask.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN]] 
+
+
+
+
+
+
+
+
+
+
+
+
+

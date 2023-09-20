@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-06T09:24:10+12:00
+
+====== Friday 06 May 2022 ======
+
+Univversity of Canterbury Python course 
+
+Accessing temperature data remotely (openDAP) with multiple files datasets 
+
+see 
+
+https://earth-env-data-science.github.io/lectures/xarray/xarray_tips_and_tricks.html#build-a-multi-file-dataset-from-an-opendap-server 
+
+https://psl.noaa.gov/thredds/catalog/Datasets/ncep.reanalysis/surface/catalog.html 
+
+see the whole catalog at 
+
+https://psl.noaa.gov/thredds/catalog/Datasets/catalog.html 
+

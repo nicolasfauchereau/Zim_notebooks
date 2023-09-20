@@ -1,0 +1,90 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-19T10:55:21+12:00
+
+====== Friday 19 Jun 2020 ======
+
+===== Easily extend Pandas =====
+
+see https://zsailer.github.io/software/pandas-flwh%20avor/ 
+
+and 
+
+https://github.com/Zsailer/pandas_flavor 
+
+allows to extend Pandas with classes and methods of your own 
+
+===== ICU shapefiles issue with dateline =====
+
+=== problem: ===
+
+Because for some countries (e.g. Fiji) the dateline passes through the shapes, the geometry is actually a 
+shapely MultiPolygon : i.e. split in 2 polygons, this has unfortunate effects when plotting notably, see below: 
+
+{{./screenshot_2020-06-19-151610.png}}
+
+=== Solution: ===
+
+The solution consists in using the https://shapely.readthedocs.io/en/latest/manual.html?highlight=cascaded_union#shapely.ops.cascaded_union function of shapely to 'mege' the Polygons 
+
+This is implemented in a Jupyter notebook here: 
+
+[[/home/nicolasf/operational/ICU/ops/mapping/notebooks/read_GIS_merge_geometries.ipynb]] 
+
+relevant piece of code is: 
+
+"""
+shapes = gpd.read_file('../shapefiles/ICU_geometries0_360/ICU_geometries0_360.shp')
+
+shapes_dissolved = shapes.copy()
+
+sub_l = []
+
+for i in range(len(shapes_dissolved)):
+	sub = shapes_dissolved.loc[[i],:]
+	sub_l.append(gpd.GeoSeries(cascaded_union(sub.geometry))) 
+
+gdf = gpd.GeoDataFrame(gpd.pd.concat(sub_l))
+
+gdf.columns = ['geometry']
+
+gdf.loc[:,'COUNTRYNAM'] = shapes_dissolved.COUNTRYNAM.values
+
+gdf.index = range(len(gdf))
+
+gdf = gdf.loc[:,['COUNTRYNAM','geometry']]
+
+gdf.to_file('../shapefiles/ICU_geometries0_360_union/ICU_geometries0_360_union.shp') 
+
+gdf.to_file('../../data/shapefiles/ICU/ICU_EEZ_geometries_0_360_union/ICU_geometries0_360_union.shp') 
+"""
+
+and the result is 
+
+{{./screenshot_2020-06-19-152432.png}}
+
+===== ICU Hotspots =====
+
+=== 1) download and process the realtime GPM_IMERG ===
+
+	- download, extract Pacific, roll the longitudes ([-180 to 180] → [0 to 360]): 
+		[[/home/nicolasf/operational/ICU/ops/data/GPM_IMERG/daily/scripts/get_daily_GPM_IMERG_netcdf.py]] 
+		
+	- get the last 30, 60, 90 days 
+	
+	- derive the decile categories, using the climatologies, the calculation of which is described in notebook [[16]] 
+	
+	- map the observed rainfall over the past 30, 60, 90 days
+	
+	- map the observed decile category 
+	
+
+===== TODO =====
+
+Try **PyCOBRA** for Ensemble Learning 
+
+
+
+
+
+

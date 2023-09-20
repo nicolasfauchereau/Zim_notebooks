@@ -1,0 +1,93 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-13T09:55:09+12:00
+
+====== Wednesday 13 Sep 2023 ======
+
+AWS register of publicly available aerial imagery for NZ 
+
+https://www.rnz.co.nz/news/national/497814/aerial-imagery-datasets-to-be-stored-in-the-cloud-for-faster-easier-access-during-disasters
+
+https://registry.opendata.aws/nz-imagery/ 
+
+
+--------------------
+==== Global Downscaled Data Set ====
+
+
+→ A high-resolution daily global dataset of statistically downscaled CMIP6 models for climate impact analyses 
+
+use MSXW and MSWEP for calibration 
+
+https://www.nature.com/articles/s41597-023-02528-x 
+
+dataset available at: https://catalogue.ceda.ac.uk/uuid/c107618f1db34801bb88a1e927b82317
+
+https://data.ceda.ac.uk/badc/evoflood/data/Downscaled_CMIP6_Climate_Data
+
+
+email: Nicolas.Fauchereau@gmail.com (nfauchereau)
+pass: alh84oo1 
+
+→ NASA Global Daily Downscaled Projections, CMIP6 
+
+https://www.nature.com/articles/s41597-022-01393-4 
+
+
+--------------------
+==== A synergistic future for AI and ecology ====
+
+file:///home/nicolasf/Downloads/pnas.2220283120.pdf
+
+--------------------
+==== Nixtla: Open Source Time Series Ecosystem ====
+
+https://github.com/Nixtla/
+
+
+--------------------
+==== Increased occurrence of high impact compound events under climate change ====
+
+https://www.nature.com/articles/s41612-021-00224-4
+
+--------------------
+==== State-of-the-art global models underestimate impacts from climate extremes ====
+
+https://www.nature.com/articles/s41467-019-08745-6 
+
+--------------------
+==== A 10-km CMIP6 downscaled dataset of temperature and precipitation for historical and future Vietnam climate ====
+
+https://www.nature.com/articles/s41597-023-02159-2
+
+code: including really good examples for use of CDO: https://github.com/quanta1985/Bias-Correct-and-Spatial-Dissaggregation 
+
+copied: [[/home/nicolasf/research/CMIP6_downscaling/repos/Bias-Correct-and-Spatial-Dissaggregation]] 
+
+--------------------
+==== Bias-corrected climate projections for South Asia from Coupled Model Intercomparison Project-6 ====
+
+https://www.nature.com/articles/s41597-020-00681-1 
+
+code: https://github.com/udit1408/cmip6_downscaling
+
+nice illustration of interfacing Python with R 
+
+
+--------------------
+==== Global gridded GDP data set consistent with the shared socioeconomic pathways ====
+
+https://www.nature.com/articles/s41597-022-01300-x
+
+--------------------
+==== A unifying approach to measuring climate change impacts and adaptation ====
+
+https://www.sciencedirect.com/science/article/pii/S009506962300061X?via%3Dihub 
+
+
+
+
+
+
+
+

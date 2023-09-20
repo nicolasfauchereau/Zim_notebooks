@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-01-13T08:28:09+13:00
+
+====== Friday 13 Jan 2023 ======
+
+==== Note: C3S MME forecasts not avalaible ====
+
+error 
+
+Mars server task finished in error; UserError: Restricted access to current C3S seasonal forecast. Please check that your date selection is valid. For more information, visit https://climate.copernicus.eu/seasonal-forecasts [temporary-dhs-copy]; Error code is -2; Multibase error -2; Request failed; Some errors reported (last error -2)
+
+--------------------

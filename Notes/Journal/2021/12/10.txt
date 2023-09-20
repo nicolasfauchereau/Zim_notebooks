@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-10T11:30:15+13:00
+
+====== Friday 10 Dec 2021 ======
+
+==== Climate Networks ====
+
+**Graph Nino** 
+
+see website of Salva Ruhling-Cachay 
+
+https://salvarc.github.io/slides/Graphino.pdf
+
+
+
+see resources saved in [[/home/nicolasf/research/GRAPH/resources]] 
+
+
+
+--------------------
+
+==== Multiple Cursors in vscode ====
+
+@vscode 
+
+Go to settings, then search 
+
+```
+editor.multiCursorModifier
+```
+and set to control
+
+
+
+

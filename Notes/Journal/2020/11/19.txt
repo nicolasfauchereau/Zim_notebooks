@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-19T09:23:40+13:00
+
+====== Thursday 19 Nov 2020 ======
+
+==== CORAL implementation for ordinal regression with deep neural networks. ====
+
+https://github.com/rasbt/coral_pytorch 
+
+see paper: https://www.sciencedirect.com/science/article/pii/S016786552030413X 
+
+--------------------
+
+==== xarrayutils linear trend and linear regression ====
+
+https://github.com/jbusecke/xarrayutils 
+
+see https://nbviewer.jupyter.org/github/jbusecke/xarrayutils/blob/master/doc/utils.ipynb#Hatch-sign-agreement 
+
+from xarrayutils.utils import linear_trend, xr_linregress 
+
+--------------------
+
+

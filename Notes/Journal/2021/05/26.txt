@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-26T15:50:40+12:00
+
+====== Wednesday 26 May 2021 ======
+
+==== Circulation regimes paths as graphs ====
+
+@graph @network 
+
+see circulation_regimes_graphs.ipynb in [[/home/nicolasf/research/CPP/WRs/notebooks]] 
+
+{{./screenshot_2021-05-26-155146.png}}
+
+
+
+
+
+--------------------
+
+
+
+

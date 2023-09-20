@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-16T10:55:56+13:00
+
+====== Wednesday 16 Feb 2022 ======
+
+==== ICU latest products based on the C3S forecast data ====
+
+@ICU 
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/figures/C3S]] and [[/home/nicolasf/operational/ICU_Web/C3S]] 
+
+--------------------
+
+==== CPP indices ====
+
+@CPP 
+
+{{./screenshot_2022-02-16-145017.png}}
+
+for VARIMAX rotated EOF, see 
+
+https://pyeof.readthedocs.io/en/latest/index.html 
+
+and example in [[/home/nicolasf/Jupyter_notebooks/VARIMAX_EOF]] 
+
+and maybe http://meteothink.org/examples/meteoinfolab/meteo_analysis/eof.html 
+
+for filtering, see: **calculate_IPO_SST_filtered-checkpoint.ipynb** in [[~/Jupyter_notebooks]] 
+
+Elisabeth Barnes Group codes: 
+
+https://sites.google.com/view/barnesgroup-csu/courses?authuser=0 
+
+and 
+
+[[/home/nicolasf/Jupyter_notebooks/pangeo_tutorials/ClimateModeling_courseware/Lectures]] 
+
+some other stuff at  https://github.com/eabarnes1010 
+
+and cloned in [[~/Jupyter_notebooks/Elizabeth_Barnes]] 
+
+--------------------
+
+==== Quantus is an eXplainable AI toolkit for responsible evaluation of neural network explanations ====
+
+@XAI 
+
+https://github.com/understandable-machine-intelligence-lab/Quantus 
+
+--------------------
+
+==== Investigating the fidelity of explainable artificial intelligence methods for applications of convolutional neural networks in geoscience ====
+
+@XAI 
+
+https://arxiv.org/abs/2202.03407 
+
+
+	  Convolutional neural networks (CNNs) have recently attracted great attention in geoscience due to their ability to capture non-linear system behavior and extract predictive spatiotemporal patterns. Given their black-box nature however, and the importance of prediction explainability, methods of explainable artificial intelligence (XAI) are gaining popularity as a means to explain the CNN decision-making strategy. Here, we establish an intercomparison of some of the most popular XAI methods and investigate their fidelity in explaining CNN decisions for geoscientific applications. Our goal is to raise awareness of the theoretical limitations of these methods and gain insight into the relative strengths and weaknesses to help guide best practices. The considered XAI methods are first applied to an idealized attribution benchmark, where the ground truth of explanation of the network is known a priori, to help objectively assess their performance. Secondly, we apply XAI to a climate-related prediction setting, namely to explain a CNN that is trained to predict the number of atmospheric rivers in daily snapshots of climate simulations. Our results highlight several important issues of XAI methods (e.g., gradient shattering, inability to distinguish the sign of attribution, ignorance to zero input) that have previously been overlooked in our field and, if not considered cautiously, may lead to a distorted picture of the CNN decision-making strategy. We envision that our analysis will motivate further investigation into XAI fidelity and will help towards a cautious implementation of XAI in geoscience, which can lead to further exploitation of CNNs and deep learning for prediction problems. 
+	
+--------------------
+
+==== Forecasting Global Weather with Graph Neural Networks ====
+
+@networks @GNN 
+
+https://arxiv.org/abs/2202.07575
+
+	 We present a data-driven approach for forecasting global weather using graph neural networks. The system learns to step forward the current 3D atmospheric state by six hours, and multiple steps are chained together to produce skillful forecasts going out several days into the future. The underlying model is trained on reanalysis data from ERA5 or forecast data from GFS. Test performance on metrics such as Z500 (geopotential height) and T850 (temperature) improves upon previous data-driven approaches and is comparable to operational, full-resolution, physical models from GFS and ECMWF, at least when evaluated on 1-degree scales and when using reanalysis initial conditions. We also show results from connecting this data-driven model to live, operational forecasts from GFS. 
+
+
+https://rkeisler.github.io/graph_weather/
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-30T08:42:45+12:00
+
+====== Thursday 30 Apr 2020 ======
+
+--------------------
+
+==== CPP indices ====
+
+@CPP 
+
++ Added CEI, IOD, SPSD, IOD, EMI 
+
++ in Downloads folder, added notebooks to download the ERSST v 5 dataset (monthly) and the daily OISST v2 HIRES dataset from NOAA 
+
++ started to refactor the calculation of the IPO, notebook: calculate_IPO_EOF_filtered_SST.ipynb 
+
+==== XRVIZ ====
+
+see https://xrviz.readthedocs.io/en/latest/quickstart.html 

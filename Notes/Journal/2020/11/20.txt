@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-20T08:30:44+13:00
+
+====== Friday 20 Nov 2020 ======
+
+==== Idea for a smart idea: ====
+
+linking subseasonal to long-range windows of opportunities for climate forecasting to users' decision making: a systems approach
+
+links: 
+
+Mariotti, A., and Coauthors, 2020: Windows of Opportunity for Skillful Forecasts Subseasonal to Seasonal and Beyond. Bulletin of the American Meteorological Society, 101, E608–E625, https://doi.org/10.1175/BAMS-D-18-0326.1.
+ 
+to Geoff's draft paper: "The decision context for seasonal climate forecasts" 
+
+email sent today: 
+
+//Good morning everyone//
+
+//Geoff Kaine (cced) sent me yesterday the latest version of a draft paper he is working on, which I found immensely useful to effectively understand the decision making context for the use of seasonal climate forecasts. It is focus on farm systems and seasonal forecast, but it actually goes beyond this, as this conceptual framework is really useful for any kind of environmental prediction product, including weather, subseasonal forecasts, long range forecasts and to some extent climate change scenarios ...//
+
+//I have attached it to this mail, because I really think it's an important read, but obviously as it is in draft form please keep it for yourself ...//
+
+//I also have recently read this paper: https://journals.ametsoc.org/bams/article/101/5/E608/345558/Windows-of-Opportunity-for-Skillful-Forecasts//
+
+//and have started to think how we could link this idea of "windows of opportunities" for skillful weather to seasonal and beyond forecasts to end-users decision making processes, understood within the framework that Geoff laid out, and that it would make a really good Smart Idea proposal: the way I see it, it could be a 3 years programme, with background research on identifying first these windows of opportunities for NZ, and parallel an effort in the social sciences and economy to promote the adoption of this new way of looking at forecasts in end-users communities, i.e. as in the BAMS paper://
+
+//At the outset, it is a question of culture. Recognizing that a forecast tool has scientific standing and practical value even if it provides information only when the opportunity arises is not customary. On the user side, both forecast centers and forecast users are accustomed to expecting forecasts on time, all the time. Adapting to an approach that provides probabilistic forecasts with information only in certain conditions requires a significant mindset shift...//
+
+//What do you think ?//
+
+//cheers//
+
+
+
+
+--------------------
+
+==== Scikit-downscale: an open source Python package for scalable climate downscaling¶ ====
+
+
+see https://github.com/earthcube2020/ec20_hamman_etal/blob/master/2020ECAHM-scikit-downscale.ipynb
+
+
+
+part of a series of notebooks on EarthCube https://earthcube.blog/2020/11/18/new-earthcube-peer-reviewed-jupyter-notebooks-now-available/
+
+
+
+
+
+
+
+
+

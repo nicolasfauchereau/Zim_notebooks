@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-03T10:00:47+13:00
+
+====== Thursday 03 Mar 2022 ======
+
+===== Introduction to networks visualisations =====
+
+@networks @graphs 
+
+https://github.com/doktor-nick/intro-to-network-viz 
+
+uses cytoscape 
+
+--------------------
+
+==== Meeting with Herve Quenol ====
+
+Wairarapa 
+Marlborough 
+Central Otago 
+
+3 closest points 
+
+Ask about project led by R. Vautard using ML for downscaling 
+
+--------------------
+
+==== CMIP6: Search and Load CMIP6 Data via ESGF / OPeNDAP ====
+
+see http://gallery.pangeo.io/repos/pangeo-gallery/cmip6/search_and_load_with_esgf_opendap.html 
+
+see also the CORDEX project 
+
+https://py-cordex.readthedocs.io/en/latest/readme.html#why 
+
+see this document related to CMIP5 / CMIP6 data in the cloud 
+
+https://docs.google.com/document/d/1yUx6jr9EdedCOLd--CPdTfGDwEwzPpCF6p1jRmqx-0Q/edit 
+ 
+
+
+
+

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-13T08:46:41+12:00
+
+====== Thursday 13 Apr 2023 ======
+
+==== MSWEP processing ====
+
+@ICU @MSWEP 
+
+**Today:** 
+
+cdo  --timestat_date last runsum,90 merged_1979_2020_chunked_noleap_comp.nc 90days/merged_1979_2020_chunked_noleap_runsum_90.nc
+
+once 90days/merged_1979_2020_chunked_noleap_runsum_90.nc is ready, run: 
+
+python **extract_daily_MSWEP_runsum_DOY_with_buffer_to_zarr.py** --ndays_agg 90 --doy_start 1 --fname [[/home/nicolasf/data/MSWEP/90days/merged_1979_2020_chunked_noleap_runsum_90.nc]]
+
+
+--------------------
+
+
+ERA5 geopotential heights should be in this folder on Kupe: /nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/historical/ERA5_c192/OUTPUT/NZ_domain

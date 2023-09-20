@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-04T15:36:53+12:00
+
+====== Tuesday 04 Aug 2020 ======
+
+Example CNN working ! 
+
+see 
+
+https://github.com/nicolasfauchereau/ML4seas/blob/master/models/CNN/example_CNN.ipynb 
+
+and locally ... 
+

@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-28T16:23:23+13:00
+
+====== Monday 28 Mar 2022 ======
+
+==== climpred used to calculate the Ranked Probability score across all GCMs ====
+
+see: climpred_RPS.ipynb in 
+

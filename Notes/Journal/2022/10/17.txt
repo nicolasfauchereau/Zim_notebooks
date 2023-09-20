@@ -1,0 +1,77 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-17T12:44:43+13:00
+
+====== Monday 17 Oct 2022 ======
+
+==== Variability of ENSO Forecast Skill in 2-Year Global Reforecasts Over the 20th Century ====
+
+@CPP 
+
+Weisheimer, A., M. A. Balmaseda, T. N. Stockdale, M. Mayer, S. Sharmila, H. Hendon, and O. Alves, 2022: Variability of ENSO Forecast Skill in 2‐Year Global Reforecasts Over the 20th Century. Geophysical Research Letters, 49, https://doi.org/10.1029/2022GL097885.
+
+--------------------
+
+==== creating circular variables from monotically increasing variable ====
+
+e.g. how to make sure that in a regression model, month 1 (January) has a value close to month 12 (December) 
+
+tag: circular statistics @circular 
+
+**solution:** 
+
+import numpy as np
+
+months = np.arange(12) + 1
+
+months -= 1
+
+months_circular = [np.cos(2*np.pi*(x/12)) for x in months]
+
+{{./screenshot_2022-10-17-131112.png}}
+
+aspects = np.arange(360)  # for example degree 
+
+aspects_circular = [np.cos(2*np.pi*(x/360)) for x in aspects]
+
+plt.plot(aspects_circular) 
+
+{{./screenshot_2022-10-17-131347.png}}
+
+--------------------
+
+==== CCAM (ERA5 forced) runs on Kupe .. ====
+
+**NOTE: only on kupe** 
+
+/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/CCAM_CMIP6/historical/ERA5_c192/OUTPUT/NZ_surf_domain/
+
+[[/nesi/project/niwa00018/rampaln/downscaling-application/CDO/downscale_era5_ccam.py]] 
+
+script to process the data with CDO 
+
+see also in [[/home/fauchereaun/scripts]] on Maui 
+
+--------------------
+
+==== Notebook implementing SDBA (EQM) using xclim on Maui ====
+
+@CMIP6 @SDBA @XCLIM @MBIE 
+
+see **xclim_working_notebook.ipynb** in [[/scale_wlg_persistent/filesets/home/fauchereaun/notebooks/CCAM_VCSN_downscale]] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

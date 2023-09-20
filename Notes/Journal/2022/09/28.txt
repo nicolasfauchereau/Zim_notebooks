@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-28T13:43:34+13:00
+
+====== Wednesday 28 Sep 2022 ======
+
+
+--------------------
+
+==== Regional councils shapefiles clipped to the coastlines ====
+
+@CPP @WR 
+
+download from: 
+ 
+https://datafinder.stats.govt.nz/layer/87753-regional-council-2015-v1-00-clipped/
+
+see example for basemap generation in **make_topo.ipynb** in [[/home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper]] 
+
+--------------------
+
+==== CRs and extremes paper ====
+
+@CPP @WR 
+

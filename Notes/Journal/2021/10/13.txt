@@ -1,0 +1,115 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-13T11:46:58+13:00
+
+====== Wednesday 13 Oct 2021 ======
+
+==== ZESPRI presentation update ====
+
+@ZESPRI 
+
+PPT accessible at: 
+
+https://niwa-my.sharepoint.com/:p:/g/personal/samik_datta_niwa_co_nz/ERdg74unGrVIt_K-_4dJINkBgwL5JXxISdBWRXID7Au9PA?email=Nicolas.Fauchereau%40niwa.co.nz&e=4%3ABa8zyw&at=9&CID=2cc847ed-1018-f930-67af-a693a20d35b0
+
+Update on the plots on slide 24 - 26 
+
+see notebook: 
+
+→ 20210409_NF_read_smart_monitoring.ipynb
+
+figure: 
+
+{{./screenshot_2021-10-13-114813.png?width=500}}
+
+and: 
+
+→ 20210514_creates_VCSN_derived_time_series.ipynb 
+
+figures: 
+
+{{./screenshot_2021-10-13-114938.png?width=500}}
+
+{{./screenshot_2021-10-13-114915.png?width=500}}
+
+{{./screenshot_2021-10-13-115016.png?width=500}}
+
+--------------------
+
+==== Long-lead Prediction of ENSO Modoki Index using Machine Learning algorithms ====
+
+@ML @EMI 
+
+https://www.nature.com/articles/s41598-019-57183-3
+
+Pal, M., R. Maity, J. V. Ratnam, M. Nonaka, and S. K. Behera, 2020: Long-lead Prediction of ENSO Modoki Index using Machine Learning algorithms. Sci Rep, 10, 365, https://doi.org/10.1038/s41598-019-57183-3.
+
+--------------------
+
+==== GEFS Z1000 hindcast data from Neelesh ====
+
+for the investigation of the "windows of opportunity" as a function e.g. of the phase of the MJO 
+
+see in 
+
+[[/home/nicolasf/operational/GEFS/]]
+
+the hindcast data on a reduced resolution grid is: **hindcast.nc** in [[/home/nicolasf/operational/GEFS/data/]] 
+
+code: 
+
+https://git.niwa.local/rampaln/gefs-reforecast/-/blob/main/notebooks/Untitled1.ipynb
+
+cloned in [[/home/nicolasf/operational/GEFS/code/gefs-reforecast-main]] 
+
+--------------------
+
+==== Exploring the long-term changes in the Madden Julian Oscillation using machine learning ====
+
+@MJO @ML @20CR
+
+https://www.nature.com/articles/s41598-020-75508-5
+
+Dasgupta, P., A. Metya, C. V. Naidu, M. Singh, and M. K. Roxy, 2020: Exploring the long-term changes in the Madden Julian Oscillation using machine learning. Sci Rep, 10, 18567, https://doi.org/10.1038/s41598-020-75508-5.
+ 
+
+code: 
+
+https://github.com/abirmetya/MJO_ML
+
+cloned in 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

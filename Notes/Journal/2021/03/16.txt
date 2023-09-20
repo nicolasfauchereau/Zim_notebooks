@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-16T09:31:35+13:00
+
+====== Tuesday 16 Mar 2021 ======
+
+
+==== Guide to TimeSynth – A Python Library For Synthetic Time Series Generation ====
+
+https://analyticsindiamag.com/guide-to-timesynth-a-python-library-for-synthetic-time-series-generation/
+
+code: https://github.com/TimeSynth/TimeSynth
+
+TimeSynth is an open source library for generating synthetic time series for model testing. The library can generate regular and irregular time series. The architecture allows the user to match different signals with different architectures allowing a vast array of signals to be generated. The available signals and noise types are listed below.
+
+
+--------------------
+
+==== C3S: MetOffice contribution to C3S will come from their new seasonal forecasting system, GloSea6, from March 2021 ====
+
+https://confluence.ecmwf.int/display/CUSF/Changes+to+the+C3S+seasonal+forecast+multi-system+components
+
+so be sure to download the system 14 or 15, **NOT 600** 
+
+--------------------
+
+==== extraction of decile probabilities for one grid point ====
+
+see **CDS/version_2/4_read_ens_probabilities_extract_coords.py** 
+
+--------------------
+convert cftime to datetime index 
+
+index = dset_gpm.indexes['time'].to_datetimeindex()
+
+--------------------
+
+==== MSWEP processing ====
+
+The monthly TOTALS are already been calculated, in **read_MSWEP2.ipynb**
+
+in folder [[/home/nicolasf/operational/ICU/development/MSWEP/notebooks]] 

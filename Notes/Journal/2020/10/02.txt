@@ -1,0 +1,71 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-02T09:58:45+13:00
+
+====== Friday 02 Oct 2020 ======
+
+--------------------
+
+==== Application cases ====
+
+derivation of indices time-series
+
+see e.g. 
+
+**Watercare/notebooks/calculate_indices_from_daily.ipynb** 
+
+in [[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/]]  
+
+use this mechanism to derive indices from daily VCSN derived values: 
+
+{{./screenshot_2020-10-02-100059.png?width=900}}
+
+can get the proportion by 
+
+df_s = df_s.assign(Hunuas_prop = df_s.Hunuas / df_s.ndays)
+df_s = df_s.assign(Waitakere_prop = df_s.Waitakere / df_s.ndays) 
+
+--------------------
+
+==== descriptive statistics for the 6 regions for each season ====
+
+see 
+
+regional_descriptive_statistics_RAIN_per_season.csv
+regional_descriptive_statistics_TMEAN_per_season.csv
+
+in [[/home/nicolasf/research/Smart_Ideas/outputs/targets/NZ_regions/NZ_6_regions]] in the corresonding folders 
+
+and the notebooks: 
+
+**TMEAN/read_check_calc_descriptive_stats.ipynb **
+**RAIN/read_check_calc_descriptive_stats.ipynb** 
+
+
+
+--------------------
+
+==== Updated SEABORN to version 0.11 in env pangeo ====
+
+see https://seaborn.pydata.org/whatsnew.html
+
+and medium post: https://medium.com/@michaelwaskom/announcing-the-release-of-seaborn-0-11-3df0341af042 
+
+--------------------
+
+==== Pairwise distances (in meters) between collections of points ====
+
+see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.haversine_distances.html 
+
+needs conversion to radians first, see notebook in 
+
+
+
+--------------------
+
+
+
+
+
+
+

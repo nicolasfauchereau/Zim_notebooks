@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-17T12:43:56+12:00
+
+====== Thursday 17 Sep 2020 ======
+
+==== experiment with Pycaret and the ECMWF full period ====
+
+experiments with the ECMWF t2m predictors over the 1981 - 2016 period (with 1981 - 2010 climatology for the calculation of the anomalies)  
+
+see **pycaret_v2_wPCA_ECMWF_1981_2010.ipynb** 
+
+==== replace percentage signs in pandas ====
+
+df_GDP['GDP growth(real)'].replace({'%': ''}, regex=True).astype('float')
+
+==== NOTE: remove KNNs from the models evaluated when trained using the "augmented" data sets ====
+
+Instances are basically repeated (even though there are slight differences between the members) so this is not realistic 
+
+==== APCC CLIKS ====
+
+see https://cliks.apcc21.org 
+
+Nicolas.Fauchereau@gmail.com
+nicolasf
++love4ks
+

@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-25T09:17:52+12:00
+
+====== Wednesday 25 May 2022 ======
+
+2021 North American Heatwave Fueled by Climate-Change-Driven Nonlinear Interactions 
+
+→ paper: https://eartharxiv.org/repository/view/3067/ 
+
+→ code https://github.com/sambartusek/pnw_hw_2021
+
+--------------------
+
+==== GPM-IMERG data on AWS (from the ICU processes on the HPC) ====
+
+https://s3.ap-southeast-2.amazonaws.com/icu.niwa/netcdf/netcdf.html
+
+and images: 
+
+https://s3.ap-southeast-2.amazonaws.com/icu.niwa/images/images.html 

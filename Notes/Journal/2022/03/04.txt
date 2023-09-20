@@ -1,0 +1,80 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-04T09:01:01+13:00
+
+====== Friday 04 Mar 2022 ======
+
+===== ICU Bulletin March 2022 =====
+
+
+
+[[/home/nicolasf/operational/ICU/development/hotspots/outputs/GPM_IMERG]]
+
+--------------------
+
+==== Mertz ====
+
+@Mertz
+
+Write a piece on tipping points in socio-economic systems 
+
+include the thread: https://twitter.com/KaiHeron/status/1499346688246521857 
+
+
+People often say that a post-capitalist society would be a “simpler society”. I think this is a misdirected moral and aesthetic wish rather than a material fact. Here’s why. 🧵 1/15
+
+A simpler life sounds appealing in times of geopolitical upheaval and increasing ecological, zoonotic, and economic crisis, but a functioning post-capitalist society would introduce immeasurable new complexities *of a different kind* to capitalist complexity. 2/15
+
+For example, since post-capitalism requires the abolition of money or exchange equivalents like labour tokens (I take this as a pre-requisite for post-capitalism) there'd be no price mechanism to simplify deciding between what capital falsely presents as commensurable things.3/15
+
+And since a desirable post-capitalist society means an end to exploitation and domination, today’s complex imperialist classed racialized and gendered divisions of labour, complex financialized markets, and complex ex-post market coordination would be abolished. 4/15
+
+Instead, we’d be tasked with making complex ethical and political choices about production, reproduction, and distribution based on human and non-human needs, wants, and wishes at local, regional and world scales. 5/15
+
+Or another example: since we’d be living in a world with lower levels of energy consumption (another pre-requisite for a liveable post-capitalist future), the complicated energy intensive chemical concoctions used today to fertilize soils or kill ‘pests’ would be abolished. 6/15
+
+Instead, we’d manage complex biodiverse landscapes, seascapes, coastlines, conservation sites and food systems through an array of diverse — and, yes, complex — knowledges and practices. 7/15
+
+Our diets would be more complex, too. In a good way. Of the estimated 300,000 edible plants species on earth, just 17 currently provide 90% of our food. Capitalism’s simplification of landscapes and food systems makes our lives less diverse and less interesting. 8/15
+
+Or: since bourgeois law, which again falsely treats individuals and collectives as commensurable subjects of abstract rights would be abolished (another pre-requisite of post-capitalism), we’d leave behind complex property laws, incarceration systems, and regulations. 9/15
+
+Instead, we’d rely on a complex web of codified and uncodified customs and procedures, moral economies, and responsibilities, decided and iteratively revised in a democratic and deliberative fashion. 10/15
+
+And all of this is to say nothing of managing infrastructural systems, energy systems, transportation systems etc. along newly democratized deliberative lines at local, regional and world scales through richly complex and diverse associations. 11/15
+
+None of this is simple because reproducing ourselves in association with non-human nature is… complex. But this complexity would lead to a richer, fuller, life where we work less, play more, and organize together to build a world of human and non-human flourishing. 12/15
+
+Hence why I think the wish for a ‘simpler life’ is a sublimated critique of the lack of democratic control over the structures that direct our lives. It’s a romantic and misdirected longing that goes at least as far back as Rousseau’s Discourse on the Arts and Sciences. 13/15
+
+In this text Rousseau laments the loss of “simplicity which prevailed in the earliest times”. It's a line of argumentation that leads directly to the fetishized and racialized notion of the ‘noble savage’. 14/15
+
+But complexity per se isn’t the issue and an idealizing and idealist return to simplicity can’t be the goal. It’s power, control, ownership, and democratic participation that count. For that, we need to embrace certain kinds of complexity. 15/15
+
+see also: https://unrollthread.com/t/1499346688246521857/
+
+--------------------
+
+==== regionmask update to 0.9.0 ====
+
+@geo @python 
+
+see https://regionmask.readthedocs.io/en/stable/whats_new.html 
+
+--------------------
+
+==== coiled channel with videos ====
+
+https://fast.wistia.com/embed/channel/pjv47wv0u1?wchannelid=pjv47wv0u1 
+
+
+
+
+
+
+
+
+
+
+
+

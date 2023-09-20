@@ -1,0 +1,129 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-15T10:09:02+13:00
+
+====== Thursday 15 Dec 2022 ======
+
+==== convert notebooks to scripts ====
+
+use argparse 
+
+see example:  
+
+https://aaltoscicomp.github.io/python-for-scicomp/scripts/ 
+
+https://docs.python.org/3/howto/argparse.html 
+
+step 1: 
+
+conversion 
+Lo
+jupyter nbconvert --to script weather_observations.ipynb 
+
+--------------------
+minimum python packaging 
+
+see example: 
+
+[[~/operational/seasonal_forecasting]]
+
+have a folder called 'src' 
+
+in that folder, have 
+
+seasonal_forecasting 
+
+--------------------
+
+==== APCC API ====
+
+see: 
+
+https://cliks.apcc21.org/contents/openapi
+
+--------------------
+
+==== APCC download: ====
+
+via https://cliks.apcc21.org 
+
+**monthly, as of 15 December 2022, selection of DJF** 
+
+{{./screenshot_2022-12-15-155118.png}}
+
+**wget script:** 
+
+# certificate_option="--no-check-certificate"
+certificate_option=""
+
+wget ${certificate_option} https://download.apcc21.org/MME/3-MON/FORECAST/GAUS/DEC/2022/prec.nc -O 3-MON_FORECAST_GAUS_DEC_2022_prec.nc
+
+**seasonal, as of 15 December 2022, selection of DJF**
+
+{{./screenshot_2022-12-15-155401.png}}
+
+**wget script:** 
+
+# certificate_option="--no-check-certificate"
+certificate_option=""
+
+wget ${certificate_option} https://download.apcc21.org/MME/3-MON/FORECAST/GAUS/DEC/DJF/2022/prec.nccold -O 3-MON_FORECAST_GAUS_DEC_DJF_2022_prec.nc
+
+check if the forecasts are updated on the 16 December 2022 
+
+UPDATE: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

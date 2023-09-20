@@ -1,0 +1,212 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-09T08:49:11+13:00
+
+====== Friday 09 Oct 2020 ======
+
+==== Install new version of LUDWIG ====
+
+see https://github.com/uber/ludwig and https://ludwig-ai.github.io/ludwig-docs/ 
+
+ludwig is now in version 3.0, see announcement here 
+
+https://eng.uber.com/ludwig-v0-3/
+
+--------------------
+
+==== Application cases ====
+
+All daily files are in 
+
+[[~/research/Smart_Ideas/outputs/targets/application_cases/]] 
+
+variable names: 
+
+* TMEAN_N
+* TMIN_N
+* TMAX_N
+* RAIN_BC
+* SOILM
+* RAD 
+
+The time-series for the Watercare application case contain columns for the Waitakere and the Hunuas ranges catchments 
+
+For Watercare and Apple and Pears, as the original data is derived from an area rather than a point location (for Innovation Vineyards we have only a point location) various area statistic for any variable are available, e.g. for TMAX, we can have the maximum for each day over the area, minimum, mean, etc 
+
+So in the notebooks calculating the seasonally aggregated statistics, the area statistics needs to be specified, and is also saved in all the output files 
+
+all the seasonal anomalies have also been calculated 
+
+== Apple and Pears ==
+
+[*] TMAX_N, area stat mean 
+[*] TMAX_N, area stat max 
+[*] TMAX_N, area stat min 
+
+[*] TMIN_N, area stat mean 
+[*] TMIN_N, area stat max 
+[*] TMIN_N, area stat min 
+
+[*] RAIN_BC, area stat sum 
+[*] RAIN_BC, area stat mean 
+[*] RAIN_BC, area stat min
+[*] RAIN_BC, area stat max
+
+== Watercare ==
+
+[*] TMAX_N, area stat mean 
+[*] TMAX_N, area stat max 
+[*] TMAX_N, area stat min 
+
+[*] TMIN_N, area stat mean 
+[*] TMIN_N, area stat max 
+[*] TMIN_N, area stat min 
+
+[*] RAIN_BC, area stat sum 
+[*] RAIN_BC, area stat mean 
+[*] RAIN_BC, area stat min
+[*] RAIN_BC, area stat max
+
+== Innovation Vineyard ==
+
+[*] TMAX_N, mean 
+[*] TMIN_N, mean 
+[*] RAIN_BC, mean
+[*] SOILM, mean
+
+== Apple and Pears ==
+
+
+
+
+
+--------------------
+
+==== Note on Innovation Vineyards application case ====
+
+Added `stations` folder to  [[~/research/Smart_Ideas/code/targets/Innovation_Vineyards]] 
+
+contains station data that also needs processing (in addition to the Innvation Vineyards itself) 
+
+These stations have very short period and some missing values, must be coming from Innovation Vineyard 
+
+==== calculation of the tercile categories for the Watercare (to be applied to all application cases) ====
+
+see **Watercare/notebooks/calculate_terciles_categories.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/]] 
+
+the outputs are saved in 
+
+[[/home/nicolasf/research/Smart_Ideas/outputs/targets/application_cases/Watercare/SEASONAL/{varname}]]
+
+with filename pattern: 
+
+**f"Seasonal_{varname}_{stat}_anomalies_and_Q{num_quantiles}_categories.csv"** 
+
+calculation of the terciles done for 
+
+[*] TMEAN_N, mean, max, min
+[*] TMAX_N, 
+
+save the following functions somewhere 
+
+def make_terciles(ts_series, climyears=['1981','2010'], num_quantiles=3): 
+
+	if type(climyears[0] != str) or type(climyears[0] != str): 
+		climyears = list(map(str, climyears))
+    
+	quantiles_dict = {}
+
+	quant_values = np.linspace(0, 1, num_quantiles + 1, endpoint=True)
+    
+	quant_values = quant_values[1:-1]
+    
+	col_labs = [f"Q{int(x)}" for x in (quant_values*100)]
+    
+	ts_series_cat = []
+
+	quantiles_list = []
+
+	for month in range(1, 13):
+
+		ts_series_m = ts_series[ts_series.index.month == month]
+
+		clim = ts_series_m.loc[climyears[0]:climyears[1],]
+
+		quantiles = [clim.quantile(q=q) for q in quant_values.tolist()]
+
+		quantiles_list.append(quantiles.copy())
+
+		quantiles.insert(0, -np.inf)
+
+		quantiles.append(np.inf)
+
+		ts_series_m_cats = pd.cut(ts_series_m, quantiles, labels=list(range(1, num_quantiles + 1)))
+
+		ts_series_cat.append(ts_series_m_cats)
+
+		del(quantiles)
+
+	ts_series_cat = pd.concat(ts_series_cat, axis=0)
+
+	ts_series_cat = ts_series_cat.sort_index()
+    
+	return ts_series_cat
+
+def demean(x, climyears=['1981','2010']): 
+    
+	if type(climyears[0] != str) or type(climyears[0] != str): 
+		climyears = list(map(str, climyears))
+    
+	return x - x.loc[climyears[0]:climyears[1],:].mean()
+
+can be applied like so: 
+
+terciles_categories = data.apply(make_terciles, **{'climyears':[1981, 2010], 'num_quantiles':3}) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+==== Faiek (Faiek_outside, track 01) ! ====
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

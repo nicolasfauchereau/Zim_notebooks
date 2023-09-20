@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-13T09:59:55+13:00
+
+====== Monday 13 Jan 2020 ======
+
+=== Climate Informatics Workshops recorded videos: ===
+
+http://climateinformatics.org/?q=videos 
+
+=== LSTM for hydrological forecasting from satellite remote sensing data (soil moisture): ===
+
+https://journals.ametsoc.org/doi/10.1175/JHM-D-19-0169.1 
+
+=== Intro to deep learning, from a Masters of Datascience at Paris Saclay: ===
+
+https://m2dsupsdlclass.github.io/lectures-labs/ 
+
+=== Brett's code and data (CMORPH updated to December 2019) for the BAMS state of the climate report ===
+
+see in 
+
+[[/home/nicolasf/operational/BAMS_state_of_the_climate_2019]]
+
+Note that the CMORPH dataset is actually downloaded initially from the KNMI climate explorer ... 
+
+The notebooks translating Brett's code from IDL to Python are in 
+
+[[/home/nicolasf/operational/BAMS_state_of_the_climate_2019/notebooks]]
+
+* plot_monthly_maps.ipynb plots the lat / lon maps (monthly averages, anomalies and anomalies in percentage of normal) 
+* plot_sectors.ipynb plots the longitudinal sector plots 
+
+
+

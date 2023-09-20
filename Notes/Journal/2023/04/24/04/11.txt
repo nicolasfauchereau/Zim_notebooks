@@ -1,0 +1,149 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-11T10:12:05+12:00
+
+====== Tuesday 11 Apr 2023 ======
+
+==== CPP + CCAM simulations ====
+
+**for Hamish: **
+
+
+Take the cluster labels on ERA5, see composites_HGT_and_UV_ERA5.ipynb in /home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper 
+
+reminder, the daily Z1000 files, downloaded from the CDS by **download_ERA5_make_daily.ipynb** are in [[/media/nicolasf/END19101/data/REANALYSIS/ERA5/daily/]]
+
+in folders 
+
+Z1000/ 
+U1000/  
+V1000/
+
+subset for the domain  140, 205, -62.5, -17.5
+
+longitude=slice(140, 205)
+latitude=slice(-62.5, -17.5)
+
+have been extracted using CDO: 
+
+for f in *.nc; do cdo sellonlatbox,140,205,-65.5,-17.5 ${f} NZ_large_domain_netcdf/${f}; done 
+
+The ZARR files can then be made using the subsetted netcdf, see **read_ERA5_daily_make_zarr.ipynb** 
+
+NOW: 
+
+The extracted daily files are in the folders **NZ_large_domain_netcdf** 
+
+and there is one file covering the whole period, called e.g. **ERA5_Z1000_daily_1979_2021.nc** 
+
+This one is in the original resolution 
+
+
+
+--------------------
+
+==== Machine learning applications for weather and climate need greater focus on extremes ====
+
+Watson, P. A. G., 2022: Machine learning applications for weather and climate need greater focus on extremes. Environ. Res. Lett., 17, 111004, https://doi.org/10.1088/1748-9326/ac9d4e.
+cd 
+
+of interest for the project with Alan Tan 
+
+--------------------
+
+==== Dynamic Time Warping + DTW-based clustering ====
+
+see Setty, S., M. J. Cramwinckel, E. H. van Nes, I. A. van de Leemput, H. A. Dijkstra, L. J. Lourens, M. Scheffer, and A. Sluijs, 2023: Loss of Earth system resilience during early Eocene transient global warming events. Sci. Adv., 9, eade5466, https://doi.org/10.1126/sciadv.ade5466.
+ 
+https://github.com/wannesm/dtaidistance 
+
+
+DTW is an algorithm for measuring the distance between two time series. It's an alternative to the Euclidean distance (which is the mean squared distance between the time series at each time step), and is useful when the time series are or may be out of step, for example if one is phase shifted or stretched. DTW allows for this situation by "warping" or re-aligning the time series so the phase-shifted or stretched points are correctly matched. See A measure of distance between time series: Dynamic Time Warping by **Jessica Leung and Robert James** for a more complete explanation.
+
+https://www.informs.org/Publications/OR-MS-Tomorrow/A-measure-of-distance-between-time-series-Dynamic-Time-Warping 
+
+http://alexminnaar.com/2014/04/16/Time-Series-Classification-and-Clustering-with-Python.html 
+
+	UCR Time Series Classification/Clustering: main page, software page and corresponding paper
+	Time Series Classification and Clustering with Python: a blog post
+	Capital Bikeshare: Time Series Clustering: another blog post
+	Time Series Classification and Clustering: ipython notebook
+	Dynamic Time Warping using rpy and Python: another blog post
+	Mining Time-series with Trillions of Points: Dynamic Time Warping at Scale: another blog post
+	Time Series Analysis and Mining in R (to add R to the mix): yet another blog post
+	And, finally, two tools implementing/supporting DTW, to top it off: R package and Python module
+
+
+http://ofdataandscience.blogspot.com/2013/03/capital-bikeshare-time-series-clustering.html
+
+https://www.kaggle.com/code/aavigan/time-series-clustering-with-dynamic-time-warping and [[/home/nicolasf/Jupyter_notebooks/time-series-clustering-with-dynamic-time-warping.ipynb]] 
+
+code snippet from https://tslearn.readthedocs.io/en/stable/user_guide/clustering.html 
+
+{{{code: lang="python3" linenumbers="True"
+from tslearn.clustering import TimeSeriesKMeans
+
+model = TimeSeriesKMeans(n_clusters=3, metric="dtw",
+                         max_iter=10, random_state=seed)
+model.fit(X_train)
+}}}
+
+
+for Euclidean distance 
+
+
+{{{code: lang="python3" linenumbers="True"
+def euclid_dist(t1,t2):
+    return sqrt(sum((t1-t2)**2))
+}}}
+ 
+
+see also 
+
+https://github.com/eonu/sequentia which provides sequence classifiers using dynamic time warping and hidden Markov models. The package follows an sklearn-like interface, and the DTW-kNN classifier supports **multivariate sequences with varying durations**. → Tropical Cyclone Tracks 
+
+**Classifying TC tracks using dynamic time warping ???** 
+
+https://github.com/wannesm/dtaidistance
+
+--------------------
+
+==== calculate composite using CDO ====
+
+1) build a list of dates dates = 'YYYY-MM-DD,YYYY-MM-DD,....YYYY-MM-DD' using Python 
+2) use cdo select date=dates infile.nc outfile.nc
+3) cdo timmean outfile.nc ... 
+
+--------------------
+
+==== CPP / WRs ====
+
+@CPP 
+
+**do_AP_and_kmeans_ERA5_Z1000_1979_2019_original_resolution.ipynb**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

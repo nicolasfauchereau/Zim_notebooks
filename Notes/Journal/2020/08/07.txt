@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-07T10:32:52+12:00
+
+====== Friday 07 Aug 2020 ======
+
+===== Prepare VCSN files of temperature and rainfall anomalies =====
+
+see in  make_grid_monthly_seasonal_anomalies.ipynb in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN/2D]] 
+
+files copied in /downscaling/VCSN//RAIN and /downscaling/VCSN//TMEAN on **deuce.cms.waikato.ac.nz** 

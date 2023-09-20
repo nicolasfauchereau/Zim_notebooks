@@ -1,0 +1,126 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-21T09:16:16+12:00
+
+====== Friday 21 May 2021 ======
+
+==== ORCHEST ====
+
+Data science IDE 
+
+see https://orchest.readthedocs.io/en/stable/index.html 
+
+Orchest is a tool for creating data science pipelines. Orchest enables you to develop, train and run your models on the cloud without any knowledge of cloud infrastructure. 
+
+--------------------
+
+==== Simple Multiprocessing In Python: Comparing core vs libraries ====
+
+https://cosmiccoding.com.au/tutorials/multiprocessing
+
+interesting projects: 
+
+→ p_tqdm: https://github.com/swansonk14/p_tqdm  Parallel processing with progress bars  
+→ ray: https://docs.ray.io/en/master/index.html 
+
+
+--------------------
+
+==== bioneers ====
+
+https://bioneers.org/about/purpose/
+
+--------------------
+
+==== CAVA2101 achievement report (output 3): ====
+
+https://niwa-my.sharepoint.com/:w:/r/personal/nicolas_fauchereau_niwa_co_nz/Documents/CAVA2101_achievement_output_3.docx?d=w1979e39fdf8e4105b736436346752edd&csf=1&web=1&e=y9yfiF
+
+--------------------
+
+==== climate intelligence / services for earth stewardship ====
+
+project ?  funding 
+
+ecosystems 
+
+velocity of climate change 
+
+extinction 
+
+bio-diversity 
+
+ecosystem functions 
+
+functional diversity 
+
+relocations 
+
+corridors 
+
+assisted evolution 
+
+see: https://www.nps.gov/subjects/climatechange/radframework.htm 
+
+--------------------
+
+@pangeo 
+
+==== pangeo showcase: ====
+
+
+https://pangeo.io/pangeo-showcase.html
+
+--------------------
+
+==== using geoviews and hvplot for interactive plots ? ====
+
+see examples in 
+
+https://github.com/pangeo-gallery/osm2020tutorial/blob/master/GCP-notebooks/aws_mur_sst_tutorial_short.ipynb
+
+
+
+import hvplot.xarray
+import holoviews as hv
+from holoviews.operation.datashader import regrid
+hv.extension('bokeh')
+
+import cartopy.crs as ccrs
+import geoviews.feature as gf
+
+
+
+sst_dy = sst.sel(time='2016-09-01T09').load()
+
+basemap = gf.land() * gf.coastline() * gf.borders()
+
+mur_whole = sst_dy.sel(lat=slice(-70,80)).hvplot.quadmesh(x='lon', 
+														  y='lat', 
+														  rasterize=True, 
+														  geo=True, 
+														  cmap='turbo',    
+														  frame_width=400)
+
+mur_whole * basemap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

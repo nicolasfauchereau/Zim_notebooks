@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-09T08:05:59+12:00
+
+====== Tuesday 09 Aug 2022 ======
+
+==== MSWEP ====
+
+@ICU 
+
+--------------------
+
+===== New directory structure on AWS for the ICU products =====
+
+@ICU @AWS 
+
+https://s3.ap-southeast-2.amazonaws.com/icu.niwa/gpm/images/images.html images 
+
+https://s3.ap-southeast-2.amazonaws.com/icu.niwa/gpm/netcdf/netcdf.html  netcdfs
+
+

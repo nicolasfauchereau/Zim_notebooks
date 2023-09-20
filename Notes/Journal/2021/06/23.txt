@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-23T15:16:35+12:00
+
+====== Wednesday 23 Jun 2021 ======
+
+Revisiting Tabular Deep Learning¶
+
+https://yandex-research.github.io/rtdl/
+
+https://arxiv.org/abs/2106.11959?s=09 
+
+--------------------
+
+==== map_dataarray ====
+
+to add contours or anything really after a call to faceplot in xarray 
+
+fg.map_dataarray(xr.plot.contour, 'lon', 'lat', **dict(transform=ccrs.PlateCarree(), add_colorbar=False))

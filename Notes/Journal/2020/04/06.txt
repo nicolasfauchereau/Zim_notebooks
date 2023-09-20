@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-06T10:11:32+12:00
+
+====== Monday 06 Apr 2020 ======
+
+fixed the UKMO problems, were linked to problems exposed in [[Journal:2020:04:05|05/04/20]] + the fact that the grid IS NOT THE SAME 
+accross time, so all the forecasts need to be first interpolated onto the grid used for the UKMO hindcasts 
+
+this hindcast grid is saved in 
+
+set_root_dir(root='local') / 'GCMs' / 'target_grid' / 'target_grid_UKMO_hindcasts.nc')
+
+The notebook now processin the CDS forecasts and ensuring the grid attributes and the steps are all fixed is 
+
+[[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks/process_CDS_forecasts_fix_grids.ipynb]]
+
+continue to monitor the performance of AUTOGLUON 
+
+== T2M ==
+
+**UKMO, predictor t2m **
+
+**NNI:** SCO acc = **0.80** over the past 3 years, 
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.659420**	0.368012	0.000652	1
+
+**WNI**: SCO acc = **0.66** over the past 3 years,
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.612319**	0.357692	0.000539	1
+
+**ENI**: SCO acc = 0.61 over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.641304	0.346853	0.003124	1
+
+**NSI**: SCO acc =  0.58 over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	0.659420	0.372377	0.000653	1
+
+**WSI**: SCO acc =  over the past 3 years,
+LEADERBOARD 10	
+
+**ESI**: SCO acc = over the past 3 years,
+LEADERBOARD 10
+
+----------------------------------------------------------------------------------------------------------------
+
+=== Experiments with prior dimensionality reduction via PCA and then AutoML ===
+
+
+
+
+
+

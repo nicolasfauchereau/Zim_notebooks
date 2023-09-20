@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-27T09:23:14+12:00
+
+====== Friday 27 May 2022 ======
+
+==== CMIP6 downscaling on grids using scikit-downscale ====
+
+@CMIP6 @CMIP @downscaling @scikitdownscale Honon 
+
+see https://github.com/earthcube2020/ec20_hamman_etal/blob/master/2020ECAHM-scikit-downscale.ipynb 
+
+and locally saved in [[/home/nicolasf/research/CMIP6_downscaling/repos/ec20_hamman_etal]] 
+
+--------------------
+
+==== compound extremes ====
+
+@extremes 
+
+FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators 
+
+https://arxiv.org/abs/2202.11214
+
+https://www.youtube.com/watch?v=nuT_U1AQz3g 
+
+see also: 
+
+Davenport, F. V., and N. S. Diffenbaugh, 2021: Using Machine Learning to Analyze Physical Causes of Climate Change: A Case Study of U.S. Midwest Extreme Precipitation. Geophys Res Lett, 48, https://doi.org/10.1029/2021GL093787.
+
+Lopez-Gomez, I., A. McGovern, S. Agrawal, and J. Hickey, 2022: Global Extreme Heat Forecasting Using Neural Weather Models. 
+
+Ridder, N. N., A. J. Pitman, and A. M. Ukkola, 2022: High impact compound events in Australia. Weather and Climate Extremes, 36, 100457, https://doi.org/10.1016/j.wace.2022.100457.
+
+
+--------------------
+
+==== Pacific rainfall extremes data ====
+
+@extremes @Pacific 
+
+[Wednesday 12:54] Ashley Broadbent
+
+Q:\CLIMATE\Pacific Data for P_HIRDS
+
+copied in [[/media/nicolasf/END19101/ICU/data/Pacific_stations]] 
+
+--------------------
+
+==== Hotspots of Predictability: Identifying Regions of High Precipitation Predictability at Seasonal Timescales From Limited Time Series Observations ====
+
+https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2021WR031302
+
+code (Matlab): https://zenodo.org/record/6316579#.YpA10ZPMKPc 
+
+--------------------
+
+==== Tuvalu products: ====
+
+@ICU 
+
+https://niwa-my.sharepoint.com/:p:/r/personal/nicolas_fauchereau_niwa_co_nz/Documents/Tuvalu_products.pptx?d=w39cb4e5374024a128c04d27558573d7e&csf=1&web=1&e=wShanW 
+
+
+
+
+
+
+
+

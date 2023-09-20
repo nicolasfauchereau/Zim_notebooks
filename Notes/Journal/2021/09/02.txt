@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-02T10:15:18+12:00
+
+====== Thursday 02 Sep 2021 ======
+
+==== ICU calculation of parametrized values for climatological terciles (GCMs and ERA54) ====
+
+see: 
+
+**GCMs_admin_hindcast_climatologies.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_validation]] 
+
+--------------------
+
+==== Interesting libraries ====
+
+@Python 
+
+== Siuba: a port of dplyr, tidyr, and other R Tidyverse libraries. ==
+
+→ https://siuba.readthedocs.io/en/latest/
+→ https://github.com/machow/siuba 
+
+== Parse:  Parse strings using a specification based on the Python format() syntax. ==
+
+
+https://github.com/r1chardj0n3s/parse
+
+see also tutorial: https://calmcode.io/parse/introduction.html 
+
+
+
+--------------------
+
+==== NZTA crash data ====
+
+see read_crash_data.ipynb in [[/home/nicolasf/research/CRASH/notebooks]] 
+
+data downloaded from https://opendata-nzta.opendata.arcgis.com/datasets/crash-analysis-system-cas-data-1/ 
+
+in GeoJSON and CSV 

@@ -1,0 +1,136 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-18T15:28:11+13:00
+
+====== Thursday 18 Nov 2021 ======
+
+==== Network-based forecasting if climate phenomena ====
+
+@graph @network 
+
+Ludescher, J., and Coauthors, 2021: Network-based forecasting of climate phenomena. Proc Natl Acad Sci USA, 118, e1922872118, https://doi.org/10.1073/pnas.1922872118.
+ 
+Other papers / books to follow up with: 
+
+→ M. Newman, Networks: An introduction (Oxford University Press, Oxford, UK, 2010). 
+→ R. Cohen and S. Havlin, Complex Networks: Structure, Robustness and Function (Cambridge
+University Press, Cambridge, UK, 2010)
+→ A. L. Barabasi, Network Science (Cambridge University Press, Cambridge, UK, 2016).
+→ J. Fan et al., Statistical physics approaches to the complex Earth system. Physics Reports 896,
+1-84, (2021).
+→ Y. Zou, R. V. Donner, N. Marwan, J. F. Donges, J. Kurths, Complex network approaches to
+nonlinear time series analysis. Physics Reports, 787, 1-97, (2019).
+→ N. Molkenthin, K. Rehfeld, N. Marwan, N., J. Kurths, Networks from flows-from dynamics to
+topology. Scientific reports, 4(1), 1-5 (2014).
+→ A. A. Tsonis, P. J. Roebber, The architecture of the climate network. Physica A 333, 497-504
+(2004).
+→ K. Yamasaki, A. Gozolchiani, S. Havlin, Climate networks around the globe are significantly
+affected by El Niño. Phys. Rev. Lett. 100, 228501(2008).
+→ J. F. Donges, Y. Zou, N. Marwan, J. Kurths, Complex networks in climate dynamics. The Euro-
+pean Physical Journal Special Topics, 174(1), 157-179 (2009).
+→ J. Ludescher et al., Very early warning of next El Niño. Proc. Natl. Acad. Sci. USA 111, 2064-
+2066 (2014).
+→ Q. Y. Feng et al., ClimateLearn: a machine-learning approach for climate prediction using
+network measures. Geosci. Model Dev. Discuss. doi: 10.5194/gmd-2015-273 (2016).
+→ J. Meng et al., Forecasting the magnitude and onset of El Niño based on climate network. New
+Journal of Physics 20(4), 043036 (2018).
+→ P. D. Nooteboom, Q. Y. Feng, C. López, E. Hernández-García, H. A. Dijkstra, Using network
+theory and machine learning to predict El Niño. Earth Syst. Dynam. 9, 969-983 (2018).
+→ P. J. Petersik and H. A. Dijkstra, Probabilistic Forecasting of El Niño Using Neural Network
+Models. Geophys. Res. Lett. 47, 6, e2019GL086423 (2020).
+→ N. Boers et al., Complex networks identify spatial patterns of extreme rainfall events of the
+South American Monsoon System. Geophys. Res. Lett. 40, 16, 4386-4392 (2013).
+→ N. Boers et al., Prediction of extreme floods in the eastern Central Andes based on a complex
+networks approach. Nature Commun. 5, 5199 doi: 10.1038/ncomms6199 (2014).
+→ N. Malik, B. Bookhagen, N. Marwan, J. Kurths, Analysis of spatial and temporal extreme mon-
+soonal rainfall over South Asia using complex networks. Clim. Dyn. 39, 971-987 (2012).
+→ V. Stolbova, P. Martin, B. Bookhagen, N. Marwan, J. Kurths, Topology and seasonal evolution
+of the network of extreme precipitation over the Indian subcontinent and Sri Lanka. Nonlin.
+Processes Geophys. 21, 901–917 (2014).
+→ M. Kretschmer, D. Coumou, J. F. Donges, J. Runge, Using causal effect networks to analyze
+different arctic drivers of midlatitude winter circulation. J. Clim. 29, 4069-4081 (2016).
+→ M. Kretschmer, J. Runge, D. Coumou, Early prediction of extreme stratospheric polar vortex
+states based on causal precursors. Geophys. Res. Lett. 44, 16, 8592-8600 (2017).
+→ A. Gozolchiani, K. Yamasaki, S. Havlin, The Emergence of El-Niño as an Autonomous Com-
+ponent in the Climate Network. Phys. Rev. Lett. 107, 148501 (2011).
+→ M. A. De Castro Santos, D. A. Vega-Oliveros, L. Zhao, L. Berton, Classifying El Niño-Southern
+Oscillation Combining Network Science and Machine Learning. IEEE Access 8, 55711-55723
+(2020).
+→ N. Boers et al., Complex networks reveal global pattern of extreme-rainfall teleconnections.
+Nature 566, 373–377 (2019).
+→ J. Runge et al., Detecting and quantifying causal associations in large nonlinear time series
+datasets. Sci. Adv. 5, eaau4996 doi: 10.1126/sciadv.aau4996 (2019).
+→ Runge et al., Inferring Causation from Time Series in Earth System Sciences. Nature Com-
+mun. 10, 2553 (2019).
+→ G. Di Capua et al., Long-Lead Statistical Forecasts of the Indian Summer Monsoon Rainfall
+Based on Causal Precursors. Weather and Forecasting 34, 5, 1377–1394 (2019).
+→ P. Pfleiderer, C. Schleussner, T. Geiger, M. Kretschmer, Robust Predictors for Seasonal Atlantic
+Hurricane Activity Identified with Causal Effect Networks. Weather and Climate Dynamics 1,
+313-324 (2020).
+→ P. Nowack, J. Runge, V. Eyring, J. D. Haigh, Causal networks for climate model evaluation and
+constrained projections. Nature communications, 11(1), 1-11 (2020).
+→ H. A. Dijkstra, P. Petersik, E. Hernández-García, C. López, The application of machine learning
+techniques to improve El Niño prediction skill. Front. Phys. 7, 153 (2019).
+→ J. Ludescher et al., Improved El Niño forecasting by cooperativity detection. Proc. Natl. Acad. Sci. USA 110, 11742-11745
+(2013).
+→ N. Boers et al., Prediction of extreme floods in the eastern Central Andes based on a complex networks approach. Nature
+Commun. 5, 5199 doi: 10.1038/ncomms6199 (2014).
+→ M. Kretschmer, J. Runge, D. Coumou, Early prediction of extreme stratospheric polar vortex states based on causal
+precursors. Geophys. Res. Lett. 44, 16, 8592-8600 (2017).
+
+Note again that a package exists to use network theory in climate science, from Jakob Runge on github: 
+
+https://github.com/jakobrunge/tigramite
+
+https://jakobrunge.github.io/tigramite/s
+
+Tigramite is a causal time series analysis python package. It allows to efficiently reconstruct causal graphs from high-dimensional time series datasets and model the obtained causal dependencies for causal mediation and prediction analyses. Causal discovery is based on linear as well as non-parametric conditional independence tests applicable to discrete or continuously-valued time series. Also includes functions for high-quality plots of the results. Please cite the following papers depending on which method you use:
+
+0. J. Runge et al. (2019): Inferring causation from time series in Earth system sciences. Nature Communications, 10(1):2553. https://www.nature.com/articles/s41467-019-10105-3
+
+1. J. Runge, P. Nowack, M. Kretschmer, S. Flaxman, D. Sejdinovic (2019): Detecting and quantifying causal associations in large nonlinear time series datasets. Sci. Adv. 5, eaau4996. https://advances.sciencemag.org/content/5/11/eaau4996
+
+2. J. Runge (2020): Discovering contemporaneous and lagged causal relations in autocorrelated nonlinear time series datasets. Proceedings of the 36th Conference on Uncertainty in Artificial Intelligence, UAI 2020,Toronto, Canada, 2019, AUAI Press, 2020. http://auai.org/uai2020/proceedings/579_main_paper.pdf
+
+3. J. Runge et al. (2015): Identifying causal gateways and mediators in complex spatio-temporal systems. Nature Communications, 6, 8502. http://doi.org/10.1038/ncomms9502
+
+4. J. Runge (2015): Quantifying information transfer and mediation along causal pathways in complex systems. Phys. Rev. E, 92(6), 62829. http://doi.org/10.1103/PhysRevE.92.062829
+
+5. J. Runge (2018): Conditional Independence Testing Based on a Nearest-Neighbor Estimator of Conditional Mutual Information. In Proceedings of the 21st International Conference on Artificial Intelligence and Statistics. http://proceedings.mlr.press/v84/runge18a.html
+
+6. J. Runge (2018): Causal Network Reconstruction from Time Series: From Theoretical Assumptions to Practical Estimation. Chaos: An Interdisciplinary Journal of Nonlinear Science 28 (7): 075310. https://aip.scitation.org/doi/10.1063/1.5025050
+
+see also: 
+
+→    PCMCI: J. Runge, P. Nowack, M. Kretschmer, S. Flaxman, D. Sejdinovic, Detecting and quantifying causal associations in large nonlinear time series datasets. Sci. Adv. 5, eaau4996 (2019). https://advances.sciencemag.org/content/5/11/eaau4996
+
+→ PCMCI+: J. Runge (2020): Discovering contemporaneous and lagged causal relations in autocorrelated nonlinear time series datasets. Proceedings of the 36th Conference on Uncertainty in Artificial Intelligence, UAI 2020,Toronto, Canada, 2019, AUAI Press, 2020. http://auai.org/uai2020/proceedings/579_main_paper.pdf
+
+→ Gerhardus, A. & Runge, J. High-recall causal discovery for autocorrelated time series with latent confounders Advances in Neural Information Processing Systems, 2020, 33. https://proceedings.neurips.cc/paper/2020/hash/94e70705efae423efda1088614128d0b-Abstract.html
+
+→ Generally: J. Runge (2018): Causal Network Reconstruction from Time Series: From Theoretical Assumptions to Practical Estimation. Chaos: An Interdisciplinary Journal of Nonlinear Science 28 (7): 075310. https://aip.scitation.org/doi/10.1063/1.5025050
+
+→ Nature Communications Perspective paper: https://www.nature.com/articles/s41467-019-10105-3
+
+→ Mediation class: J. Runge et al. (2015): Identifying causal gateways and mediators in complex spatio-temporal systems. Nature Communications, 6, 8502. http://doi.org/10.1038/ncomms9502
+
+→ Mediation class: J. Runge (2015): Quantifying information transfer and mediation along causal pathways in complex systems. Phys. Rev. E, 92(6), 62829. http://doi.org/10.1103/PhysRevE.92.062829
+
+ → CMIknn: J. Runge (2018): Conditional Independence Testing Based on a Nearest-Neighbor Estimator of Conditional Mutual Information. In Proceedings of the 21st International Conference on Artificial Intelligence and Statistics. http://proceedings.mlr.press/v84/runge18a.html
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

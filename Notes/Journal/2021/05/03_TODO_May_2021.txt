@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-03T08:54:11+12:00
+
+====== 03 TODO May 2021 ======
+
+===== TODO list May 2021 =====
+
+==== ICU ====
+
+[ ] finish plotting code 
+	[*] EAR Watch 
+	[*] USDM 
+	[*] decile (percentile) values 
+	[*] precipitation accumulation 
+	[*] precipitation anomalies 
+	[*] number of dry days 
+	[*] days since last rain
+[ ] get in touch with Bernard → operationalisation 
+[>] re-factor in different modules: 
+
+	→ GPM 
+	→ C3S 
+	→ utils 
+	→ plot 
+	→ verification 
+	
+see in [[~/operational/ICU/development/hotspots/code/ICU_Water_Watch/src]] 
+
+and repo on github: https://github.com/nicolasfauchereau/ICU_Water_Watch 
+
+
+==== Smart Ideas ====
+
+[ ] move T2M and then other variables in same format as ICU GCMs so can use **get_one_GCM** / **get_GCMs** functions 
+[*] https://github.com/nicolasfauchereau/ClimateBench started a repo
+[*] get in touch with  https://carlgogo.github.io/ about   https://meetingorganizer.copernicus.org/EGU21/EGU21-12253.html (Deep learning-based downscaling of seasonal forecasts over the Iberian Peninsula) 
+[ ] start writing up report 
+[ ] Paper with Geoff Kaine: 
+
+Note that the end of May deadline is a 'soft' deadline, actual reports to MBIE are due end of August 
+
+Report Template by Janine: 
+
+see in [[/home/nicolasf/research/Smart_Ideas/reporting/end_of_project_report]] for template 
+
+
+
+==== CPP ====
+
+[ ] get list of weather regimes from Neelesh 
+[ ] prepare VCSN data (rainfall and min and max temperature anomalies) 
+[ ] run xclim (https://xclim.readthedocs.io/en/stable/) on the daily data 
+
+NOTE THAT XCLIM now contain some modules and function for **bias adjustment**: 
+
+see https://xclim.readthedocs.io/en/stable/sdba_api.html#bias-adjustment-algos 
+
+includes 
+→ Principal components inspired adjustment: https://xclim.readthedocs.io/en/stable/sdba_api.html#xclim.sdba.adjustment.PrincipalComponents
+and
+→ quantile mapping:  https://xclim.readthedocs.io/en/stable/sdba_api.html#xclim.sdba.adjustment.EmpiricalQuantileMapping 
+
+==== Proposals ====
+
+[ ] "Linking windows of opportunity for skillful subseasonal to seasonal forecasts to the user's decision context, a systems' approach" 
+
+	impetus: 
+	
+	→ Kaine et al examined the decision making process and constraints of end users of environmental forecasts with the framework of systems theory 
+	→ found error controls, anticipation etc 
+	→ possibility of switching between types if / when skillful forecasts are available 
+	→ on the other hand, examination of skill of weather, subseasonal to seasonal (S2S) forecasts reveal windows of opportunity 
+	
+	need to link the 2 c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

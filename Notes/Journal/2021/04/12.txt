@@ -1,0 +1,85 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-12T08:39:54+12:00
+
+====== Monday 12 Apr 2021 ======
+
+climetlab updated with more examples and tutorials 
+
+https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge
+
+ climetlab plugin to access subseasonal to seasonal (S2S) forecasts for the s2s-ai-challenge 
+
+
+--------------------
+
+==== CMCC has double ITCZ during the summer months ====
+
+see e.g. the plot of the seasonal climatological terciles (in this particular case for step 5)
+
+{{./screenshot_2021-04-12-110745.png}}
+
+--------------------
+
+==== A new index for variations in the position of the South Pacific convergence zone 1910/11–2011/2012 ====
+
+see https://link.springer.com/article/10.1007/s00382-013-2035-y 
+
+in particular, adopt this definition: 
+
+The curves are **polynomials fitted to the latitude of maximum precipitation between the equator and 25°S** for each year type shown.
+
+{{./screenshot_2021-04-12-112356.png}}
+
+
+--------------------
+
+==== MHWs for the Tasman regions for Drew ====
+
+see: 
+
+**MHWs_Tasman.ipynb** in [[/home/nicolasf/research/Marine_Heat_Waves/MHW/marineHeatWaves/docs]] 
+
+--------------------
+
+==== ORBIT: ====
+
+Orbit is a Python package for Bayesian time series modeling and inference. It provides a familiar and intuitive initialize-fit-predict interface for working with time series tasks, while utilizing probabilistic programing languages under the hood.
+
+paper: https://arxiv.org/abs/2004.08492 
+
+code: https://github.com/uber/orbit
+
+doc: https://orbit-ml.readthedocs.io/en/stable/
+
+can also add regressor as with fbprophet / neuralProphet 
+
+--------------------
+
+==== Ensembles of Localised Models for Time Series Forecasting ====
+
+paper:  https://arxiv.org/abs/2012.15059
+
+code: https://github.com/rakshitha123/Localised_Ensembles 
+
+see also: https://www.sciencedirect.com/science/article/abs/pii/S0169207020300996?via%3Dihub 
+
+Recurrent Neural Networks for Time Series Forecasting: Current status and future directions
+
+--------------------
+
+==== hindcast climatologies for NZ 6 regions ====
+
+s**calculate_seasonal_hindcast_climatology_region_mask_NZ_regions.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CDS/version_2]] 
+
+
+
+
+
+
+
+
+
+
+
+

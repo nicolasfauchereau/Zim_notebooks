@@ -1,0 +1,137 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-04-05T09:09:36+12:00
+
+====== Tuesday 05 Apr 2022 ======
+
+==== Netcdf files for Visual Cortex ====
+
+GPM diagnostics: 
+
+- accumulations datasets in: 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/outputs/GPM_IMERG]] 
+
+example for GPM_IMERG_accum_90ndays_to_2022-03-31.nc 
+
+	  1 netcdf GPM_IMERG_accum_90ndays_to_2022-03-31 {
+	  2 dimensions:
+	  3         time = UNLIMITED ; // (1 currently)
+	  4         lat = 220 ;
+	  5         lon = 439 ;
+	  6 variables:
+	  7         int64 time(time) ;
+	  8                 time:units = "days since 2022-03-31 00:00:00" ;
+	  9                 time:calendar = "proleptic_gregorian" ;
+	 10         double precipitationCal(time, lat, lon) ;
+	 11                 precipitationCal:_FillValue = NaN ;
+	 12                 precipitationCal:units = "mm" ;
+	 13                 precipitationCal:long_name = "Daily accumulated precipitation (combined microwave-IR) estimate" ;
+	 14         double lat(lat) ;
+	 15                 lat:_FillValue = NaN ;
+	 16                 lat:units = "degrees_north" ;
+	 17                 lat:long_name = "Latitude" ;
+	 18         double lon(lon) ;
+	 19                 lon:_FillValue = NaN ;
+	 20         double pctscore(time, lat, lon) ;
+	 21                 pctscore:_FillValue = NaN ;
+	 22         double anoms(time, lat, lon) ;
+	 23                 anoms:_FillValue = NaN ;
+	 24         double EEZ(lat, lon) ;
+	 25                 EEZ:_FillValue = NaN ;
+
+example for **GPM_IMERG_ndays_90ndays_to_2022-03-31.nc** 
+
+	  1 netcdf GPM_IMERG_ndays_90ndays_to_2022-03-31 {
+	  2 dimensions:
+	  3         time = 1 ;
+	  4         lat = 220 ;
+	  5         lon = 439 ;
+	  6 variables:
+	  7         int64 time(time) ;
+	  8                 time:units = "days since 2022-03-31 00:00:00" ;
+	  9                 time:calendar = "proleptic_gregorian" ;
+	 10         double wet_days(time, lat, lon) ;
+	 11                 wet_days:_FillValue = NaN ;
+	 12         double lat(lat) ;
+	 13                 lat:_FillValue = NaN ;
+	 14                 lat:units = "degrees_north" ;
+	 15                 lat:long_name = "Latitude" ;
+	 16         double lon(lon) ;
+	 17                 lon:_FillValue = NaN ;
+	 18         double dry_days(time, lat, lon) ;
+	 19                 dry_days:_FillValue = NaN ;
+	 20         double days_since_rain(time, lat, lon) ;
+	 21                 days_since_rain:_FillValue = NaN ;
+	 22         double EEZ(lat, lon) ;
+	 23                 EEZ:_FillValue = NaN ;
+	 24 
+	 25 // global attributes:
+	 26                 :ndays = 90LL ;
+	 27                 :last_day = "2022-03-31" ;
+
+example for the SPI **GPM_IMERG_SPI_90ndays_to_2022-03-31.nc** 
+
+--------------------
+
+==== CMIP6 bias corrected ensemble ====
+
+@CMIP6 
+
+see https://www.nature.com/articles/s41597-021-01079-3 
+
+and https://www.scidb.cn/en/detail?dataSetId=791587189614968832&dataSetType=personal  
+
+The GCMs are: 
+
+{{./screenshot_2022-04-05-132704.png}}
+
+
+--------------------
+
+==== SCO development ====
+
+@SCO 
+
+for this FY my todo list is: 
+
+- develop code / notebook for the realtime (updated every  month) validation (against VCSN)  of regional (6 NZ regions) tercile, quartile and decile probabilities for the C3S GCMs (and the MME ?). 
+	- past 6 months, past year, past 3 years (rolling) 
+	- overall accuracy (hit rate) 
+	- rainfall and temperature 
+	
+- develop code / notebook to create the equivalent of the ICU maps (tercile probs, decile probs, and probability for rainfall below the 25th percentile (1st quartile) but for NZ, and including T2M on top of precip 
+
+--------------------
+
+===== CMIP6 downscaling =====
+
+
+The CCAM reanalysis-forced runs from downscaling ERA-INT (with OSTIA SST) are available here, for years 1981-2018:
+
+[[/nesi/project/niwa00018/gibsonp/run_ccam/post_processing/production_runs/process_ERA-I_12km_production/OUTPUT]] 
+
+--------------------
+
+==== CESM Large Ensemble Community Project ====
+
+https://www.cesm.ucar.edu/projects/community-projects/LENS/ 
+
+
+tutorial
+
+
+https://github.com/ProjectPythiaTutorials/intake-esm-tutorial_2021_12_08
+
+--------------------
+
+==== geospatial: A collection of Python packages for geosptial analysis and data visualization ====
+
+@geospatial 
+
+https://geospatial.gishub.org/
+
+
+
+
+

@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-27T08:46:48+13:00
+
+====== Tuesday 27 Oct 2020 ======
+
+--------------------
+
+==== scikit lego ====
+
+https://github.com/koaning/scikit-lego 
+
+provides custom transformers + GMM (Gaussian Mixture Models) based classifier and regressors  
+
+
+--------------------
+
+==== Experiments with new (?) version of TPOT ====
+
+
+--------------------
+
+==== AUTOGOAL ====
+
+https://autogoal.github.io/ 
+
+--------------------
+
+==== ConTrack: Contour Tracking of circulation anomalies (atmospheric blocking, cyclones and anticyclones) in weather and climate data ====
+
+https://github.com/steidani/ConTrack
+
+cloned in [[~/sources]]  
+
+--------------------
+
+==== An upper-level Potential Vorticity Hemispheric Map using Python ====
+
+https://github.com/steidani/weather/blob/master/forecast/gfs_forecast_pv.ipynb
+
+This example plots a hemispheric map of Potential Vorticity interpolated on upper-level surface using latest **GFS forecasts**
+
+--------------------
+
+==== Risk of late frost in a warmer climate ====
+
+https://github.com/steidani/climate/tree/master/copernicus_frost 
+
+Frost occurence (FD) after warm period exceeding a certain amount of Growing Degree Days (GDD). 
+
+Agroclimatic indicators from 1981 - 2010 (historical) and 2017 - 2099 (RCP6 future scenario):
+
+	→ Biologically effective degree days (GDD): Sum of daily mean temperatures (TG) above 10°C and less than 30°C, over 10 days.
+	→ Frost Days (FD): Number of days per 10 days when TN $<$ 0°C, where TN is the daily minimum temperature. This indicator provides information on frost damage.
+
+cloned in [[/home/nicolasf/sources/frost_and_GDD]] 
+
+
+

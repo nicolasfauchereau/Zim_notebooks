@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-23T08:06:48+13:00
+
+====== Friday 23 Oct 2020 ======
+
+==== process to derive regional time-series from VCSN ====
+
+
+1) process_VCSN_monthly_daily_ops.ipynb in [[~/operational/VCSN/notebooks]]
+2) calculates_6_regions_terciles_from_grid.ipynb in [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN]] 
+
+NOTE: **calculates_6_regions_percentiles_from_grid_regionmask.ipynb** is the new version of the notebook, using regionmask to calculate the regional time-series ... the results are almost to the previous versions, which used https://github.com/fmaussion/salem 
+
+at the end of the notebook, a little piece of code compares the previous calculations (using salem), with the new calculations (using regionmask)
+
+see also updated version of **make_region_mask.ipynb** uncd
+
+--------------------
+ 
+
+==== experiments with using forecast SST as predictors, for the Apple and Pears application cases ====
+
+see **Apple_and_Pears_concat_ensemble_mean.ipynb**
+
+→ cannot use the `sample` method of a dataframe to extract train and test set, as it does not guarantee the same values will not be present 
+in both train and test set 
+
+→ the `train_test_split` function of scikit-learn works directly on pandas dataframes, so 
+
+train_df, test_df = train_test_split(df) 
+
+returns dataframes 
+
+--------------------
+
+==== experiments with using SST and SST EOFs as predictors ====
+
+**Apple_and_Pears_SSTs_obs.ipynb** in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/application_cases/classification/Apple_and_Pears/AutoML/AUTOGLUON/notebooks]] 
+
+with accuracies for rainfall **~ 0.6 **(cross validated using AutoGluon)
+
+try with prior detrend next 
+
+

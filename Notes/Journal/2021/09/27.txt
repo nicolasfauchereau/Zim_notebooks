@@ -1,0 +1,138 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-27T09:23:50+13:00
+
+====== Monday 27 Sep 2021 ======
+
+==== Some references for Climate Networks ====
+
+@graph @network 
+
+Runge, J., and Coauthors, 2019: Inferring causation from time series in Earth system sciences. Nat Commun, 10, 2553, https://doi.org/10.1038/s41467-019-10105-3.
+ 
+Runge, J., and Coauthors, 2015: Identifying causal gateways and mediators in complex spatio-temporal systems. Nat Commun, 6, 8502, https://doi.org/10.1038/ncomms9502.
+
+Kawale, J., and Coauthors, 2013: A graph-based approach to find teleconnections in climate data:. Statistical Analysis and Data Mining, 6, 158–179, https://doi.org/10.1002/sam.11181.
+ 
+Liess, S., and Coauthors, 2014: Different Modes of Variability over the Tasman Sea: Implications for Regional Climate*. Journal of Climate, 27, 8466–8486, https://doi.org/10.1175/JCLI-D-13-00713.1.
+
+
+Gregory, W., M. Tsamados, J. Stroeve, and P. Sollich, 2020: Regional September Sea Ice Forecasting with Complex Networks and Gaussian Processes. Weather and Forecasting, 35, 793–806, https://doi.org/10.1175/WAF-D-19-0107.1.
+
+PYUNICORN:  Unified Complex Network and Recurrence Analysis Toolbox. also reference: https://aip.scitation.org/doi/10.1063/1.4934554 (on ArXiv at https://arxiv.org/pdf/1507.01571.pdf) 
+
+https://ericmjl.github.io/Network-Analysis-Made-Simple/learn-more/ 
+
+and lots of references in the Wikipedia article: https://en.wikipedia.org/wiki/Climate_as_complex_networks  
+
+explainable Artifical Intelligence 
+
+
+Toms, B. A., E. A. Barnes, and I. Ebert-Uphoff, 2020: Physically Interpretable Neural Networks for the Geosciences: Applications to Earth System Variability. arXiv:1912.01752 [physics, stat],. and submitted to the Journal of Advances in Modeling Earth Systems (JAMES) 
+
+and 
+
+Barnes, E. A., B. Toms, J. W. Hurrell, I. Ebert‐Uphoff, C. Anderson, and D. Anderson, 2020: Indicator patterns of forced change learned by an artificial neural network. J. Adv. Model. Earth Syst., https://doi.org/10.1029/2020MS002195.
+
+based on some initial work from: 
+
+Kohlbrenner, M., A. Bauer, S. Nakajima, A. Binder, W. Samek, and S. Lapuschkin, 2020: Towards Best Practice in Explaining Neural Network Decisions with LRP. arXiv:1910.09840 [cs, stat],.
+
+
+Toms, B. A., K. Kashinath, Prabhat, and D. Yang, 2020: Testing the Reliability of Interpretable Neural Networks in Geoscience Using the Madden-Julian Oscillation. Climate and Earth System Modeling,.
+
+
+Note that the code and data is available on Zenodo at https://zenodo.org/record/3968896
+
+and cloned in /home/nicolasf/research/Smart_Ideas/resources/repos_application_cases/BenToms_MJO_DL_interpretation 
+
+--------------------
+
+==== NCO: make the time the record dimension in a netcdf file ====
+
+@NCO 
+
+**ncks -O --mk_rec_dmn time filein.nc fileout.nc** 
+
+--------------------
+
+==== Calculation of the SPI in Python ====
+
+@SPI @Python 
+
+formula ? 
+
+resources: 
+
+https://github.com/monocongo/climate_indices
+
+→ https://www.youtube.com/watch?v=Gok9zsA_RFk: NASA ARSET: Calculate SPI based on IMERG to Monitor Wet and Dry Conditions, Part 2/3 
+→ https://www.youtube.com/watch?v=WMF45KQiQAM: How to calculate PET, SPI, SPEI and Palmer drought indices in Python? | Jalal | Research Society 
+→ https://www.youtube.com/watch?v=zYT5VpQWJAQ: Standardized Precipitation Index (SPI) | Drought & Flood Monitor | Build Your Function in Python 
+→ https://www.youtube.com/watch?v=StfUmmP-44A: Standardized Precipitation Index Part 2 | Multi-dimensional Data (NetCDF) 
+
+https://github.com/jeffjay88/Climathttps://github.com/jeffjay88/Climate_Indices[[e_Indices]]
+
+https://github.com/e-baumer/standard_precip
+
+some background explanation: 
+
+https://climatedataguide.ucar.edu/climate-data/standardized-precipitation-index-spi
+
+https://wrcc.dri.edu/spi/explanation.html
+
+**Methodology** - First, a time series of the precipitation value of interest is generated. Then, a frequency distribution is selected and a statistical fit to the data is determined. The cumulative distribution is formed from the fitted frequency distribution. The percentile for the particular time series element of interest, usually the latest one, is selected from the cumulative distribution. For "ties" (multiple instances of the same value), the upper value is used (probability of non-exceedance). For any other theoretical probability distribution, the analogous point on its associated cumulative frequency distribution can be determined. Here, the normal distribution is used, with mean zero and standard deviation of one, and value in standardized units of a given percentile is found can be readily determined. For the normal distribution, these are exactly the same as units of standard deviations. The Standardized Precipitation Index can be thought of as the number of standard deviations that the precipitation value of interest would be away from the mean, for an equivalent normal distribution and adequate choice of fitted theoretical distribution for the actual data. **In effect, the method consists of a transformation of one frequency distribution to another frequency distribution, in this case the widely used normal, or Gaussian, distribution.**
+
+In this case, following McKee et al. (1993, 1995), we have chosen to use the incomplete beta distribution (see, for example, Wilks, 1995, p 95-97). This distribution is very robust and can deal with the wide range of extreme climates found in the western United States, especially those where monthly and seasonal precipitation of zero is common and expected. Guttman (1998, 1999) has examined the properties of the SPI in great detail, and has determined that the Pearson III distribution is likely to give essentially equivalent results, and in some instances slightly better. We have not yet modified the code (as of May 2001) to use the Pearson III, but the incomplete beta distribution in use is quite close. 
+
+see also other resources: 
+
+== Calculate SPI using monthly rainfall data in GeoTIFF format ==
+
+https://benny.istan.to/blog/20210125-calculate-spi-using-monthly-rainfall-data-in-geotiff-format
+
+uses: https://github.com/monocongo/climate_indices 
+
+
+--------------------
+
+==== ICU @TODO ====
+
+@TODO 
+
+recalculate the quantiles climatologies for the GCM gridded data (GCMs_hindcast_climatology_ops.ipynb in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/C3S]]) using parametrized quantiles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

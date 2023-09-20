@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-23T18:05:42+12:00
+
+====== Thursday 23 Apr 2020 ======
+
+=== Meeting about Smart Ideas ===
+
+see doc on one drive: 
+
+@TODO : 
+
+- get in touch with P. Blackett 
+- get in touch with Ben Wiercinsky (Landcare research)
+- NZDI: read the Mol et al paper and dig into the code, which is I think on cliops (re-dig into the code I wrote to convert to PCART)
+
+
+
+=== Notebook with ENSO prediction using LSTMs: ===
+
+https://github.com/nicolasfauchereau/ESRI_notebooks_redux 
+
+=== PYCARET experimentations ===
+
+updated notebook with prediction and evaluation on test data (2017 - 2019) 
+
+[[/home/nicolasf/research/Smart_Ideas/code/models/classification/autoML/PYCARET/pycaret.ipynb]] 
+
+seems when using ALL GCMs, **neigbouring approaches** (instance based learning) are doing quite well ...  
+
+1) that is surprising 
+2) this could mean that increasing the number of instances to learn from by using **ALL the members of each ensembles** 
+could lead to even better results: @TODO 
+
+Need to describe 'evaluation scores (cross validation on the training data' vs 'test scores' (test period 2017 - 2019

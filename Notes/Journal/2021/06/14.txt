@@ -1,0 +1,132 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-14T09:39:52+12:00
+
+====== Monday 14 Jun 2021 ======
+
+==== update the GCMs for the ICU ====
+
+@ICU @GCM 
+
+updating the forecasts and hindcasts from month 6 using these systems: 
+
+list_GCMs = ['ECMWF','UKMO','METEO_FRANCE', 'DWD', 'CMCC', 'NCEP', 'JMA', 'ECCC']
+list_systems = [5, 600, 7, 21, 35, 2, 2, 2] 
+d
+--------------------
+
+==== Mycorrhizas, alternative stable states, and landscape partitioning in south-temperate forests ====
+
+https://www.waikato.ac.nz/news-opinion/media/2020/university-of-waikato-researchers-to-uncover-secrets-of-our-planet
+
+see also projects: 
+
+**Illuminating the dark side of restoration: Soil food web reassembly in regenerating forests**
+
+This project will be the first to quantify how restoration planting drives the reassembly of soil food web structure and how ecosystems function. It will illuminate the dark, poorly understood realm of soil food webs in regenerating forests by looking at the energy flux across nation-wide forest restoration in New Zealand. The knowledge from this research will increase our ability to predict restoration outcomes for the biodiversity, functioning and stability of ecosystems. Funded by Marsden.
+
+by https://www.waikato.ac.nz/eri/people/barnesa 
+
+https://ecodivlab.com/ 
+
+see Ph.D position https://ecodivlab.com/opportunities/phd-in-the-temperature-dependence-of-soil-food-web-structure-and-energetics/ 
+
+
+
+**Enzymes and temperature in soil** 
+
+Enzymes are extraordinary catalysts that enable life to occupy nearly every available niche on our planet. These large, yet delicate, molecules show unusual responses to changes in temperature, which has a significant impact on how biological systems respond to temperature change. Vic and his team have developed a theoretical framework, Macromolecular Rate Theory (MMRT), which explains the catalytic behaviour of enzymes at different temperatures. Trends in the temperature dependence of biological rates at increasing levels of complexity (e.g. soil respiration and photosynthesis) can be quantified using MMRT. From this research it has been hypothesised that the signature of enzyme MMRT can be found in complex processes such as microbial growth rates, plant and soil respiration, photosynthesis and, ultimately, landscape carbon sequestration. This research may pave an underlying understanding for predicting the behaviour of biological systems and their response to increasing atmospheric greenhouse gases and climate warming.
+
+Contact: Professor Vic Arcus https://www.waikato.ac.nz/staff-profiles/people/varcus 
+
+
+--------------------
+
+==== The Mycophile’s Plea: On Merlin Sheldrake’s “Entangled Life” ====
+
+@fungi 
+
+https://lareviewofbooks.org/article/the-mycophiles-plea-on-merlin-sheldrakes-entangled-life/
+
+--------------------
+
+https://jbsteinhardt.com/writing/
+
+see in particular: 
+
+“Psychedelic Naturalism and Interspecies Alliance: Views from the Emerging Do-It-Yourself Mycology Movement.” Plant Medicines, Healing and Psychedelic Science, edited by B. C. Labate and C. Cavnar. Springer International Publishing AG, 2018, pp. 167-184. 
+https://jbsteinhardt.files.wordpress.com/2018/12/10_steinhardt_diy_mycology_movement_springer_2018-1.pdf 
+
+Hackers, Mason Jars, and the Psychedelic Science of DIY Shrooms
+https://www.wired.com/story/hackers-mason-jars-psychedelic-science-diy-shrooms/
+
+https://jbsteinhardt.com/784-2/
+
+--------------------
+
+==== averaging wind direction ====
+
+see https://math.stackexchange.com/questions/44621/calculate-average-wind-direction
+
+ assuming you use the standard meterological convention that wind direction is the source direction of winds (i.e. 270º means blowing west → "here"):
+
+Given two arrays containing wind speed (WS) and wind direction (WD, in degrees) observations, the vector mean wind direction is calculated as follows:
+
+V_east[i] = mean(WS[i] * sin(WD[i] * pi/180))
+V_north[i] = mean(WS[i] * cos(WD[i] * pi/180))
+
+mean_WD = arctan2(V_east, V_north)) * 180/pi
+mean_WD = (360 + mean_WD) % 360
+
+see also http://www.laketyersbeach.net.au/windaveraging.html 
+
+
+def avgWind(directions):
+	sinSum = 0
+	cosSum = 0
+	d2r = math.pi/180 #degree to radian
+	r2d = 180/math.pi
+       
+	for i in range(len(directions)):
+		sinSum += math.sin(directions[i]*d2r)
+		cosSum += math.cos(directions[i]*d2r)
+      
+	return ((r2d*(math.atan2(sinSum, cosSum)) + 360) % 360)
+a= np.random.randint(low=0, high=360, size=6)
+print(a)
+avgWind(a)
+
+
+for wind variability (variance or standard deviation) see Yamartino method: https://en.wikipedia.org/wiki/Yamartino_method 
+
+in python https://stats.stackexchange.com/questions/441559/compute-standard-deviation-of-wind-direction-angle 
+
+**from math import ***
+**def yamartino(thetalist):**
+**    s=0**
+**    c=0**
+**    n=0.0**
+**    for theta in thetalist:**
+**        s=s+sin(radians(theta))**
+**        c=c+cos(radians(theta))**
+**        n+=1**
+**    s=s/n**
+**    c=c/n**
+**    eps=(1-(s**2+c**2))**0.5**
+**    sigma=asin(eps)*(1+(2.0/3.0**0.5-1)*eps**3)**
+**    return degrees(sigma)**
+
+or simply: The simple method for calculating standard deviation requires two passes through the list of values. The first pass determines the average of those values; the second pass determines the sum of the squares of the differences between the values and the average. This double-pass method requires access to all values. 
+
+see paper: https://journals.ametsoc.org/view/journals/apme/23/9/1520-0450_1984_023_1362_acospe_2_0_co_2.xml 
+
+from https://www.ncl.ucar.edu/Document/Functions/Contributed/wind_stats.shtml
+
+The mean wind speed and standard deviation are the classical statistical values. The mean wind direction is the result of computing the mean zonal ("U") and meridional ("V") components and using atan2.
+
+Wind direction is a 'circular' quantity. It is defined [0..360); including 0 but excluding 360 and above. (Think of 360 as being a discontinuity.) Hence, the standard statistical formula is not appropriate in all cases. The wind_stats uses the method of Yamartino (1984) to approximate the directional standard deviation. This is accurate to within 2% of the theoretical value. This does assume that wind directions do not randomly span all directions. 
+
+
+
+
+

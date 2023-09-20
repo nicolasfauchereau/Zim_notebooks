@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-04T13:51:43+13:00
+
+====== Thursday 04 Nov 2021 ======
+
+==== convert GPX files to KML for display in Google Maps ====
+
+@adventure 
+
+1) sudo apt-get install gpsbabel-gui
+
+then 
+
+
+gpsbabel -w -i gpx -f Otorohaea_Trig_Road_250.gpx -o kml -F Otorohaea_Trig_Road_250.kml
+
+to import in google maps, go to 
+
+https://www.google.com/maps/d/?hl=en 
+
+
+	Open Google My Maps.
+	Create a new map.
+	Press import into the upper left corner.
+	Now open the KML file. Or drag the KML file into the import window.
+	You did it! You have successfully imported a KML into Google Maps.
+
+To view maps in google maps on the phone
+
+{{./screenshot_2021-11-04-140927.png}}
+
+
+
+
+
+

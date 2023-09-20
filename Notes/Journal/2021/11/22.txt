@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-22T15:43:31+13:00
+
+====== Monday 22 Nov 2021 ======
+
+==== Learning and Dynamical Models for Sub-seasonal Climate Forecasting: Comparison and Collaboration ====
+
+@ML @SI 
+
+He, S., X. Li, L. Trenary, B. A. Cash, T. DelSole, and A. Banerjee, 2021: Learning and Dynamical Models for Sub-seasonal Climate Forecasting: Comparison and Collaboration. arXiv:2110.05196 [physics],.
+
+code: 
+
+https://github.com/Sijie-umn/SSF-MIP
+
+cloned in [[/home/nicolasf/research/Smart_Ideas/resources/repos_application_cases]] 
+
+see also: 
+
+Hwang, J., P. Orenstein, J. Cohen, K. Pfeiffer, and L. Mackey, 2019: Improving Subseasonal Forecasting in the Western U.S. with Machine Learning. arXiv:1809.07394 [cs, stat],.
+
+with code: https://github.com/paulo-o/forecast_rodeo

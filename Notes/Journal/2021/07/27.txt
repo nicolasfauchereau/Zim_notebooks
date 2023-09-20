@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-27T09:57:36+12:00
+
+====== Tuesday 27 Jul 2021 ======
+
+Kretschmer, M., S. V. Adams, A. Arribas, R. Prudden, N. Robinson, E. Saggioro, and T. G. Shepherd, 2021: Quantifying causal pathways of teleconnections. Bulletin of the American Meteorological Society, 1–34, https://doi.org/10.1175/BAMS-D-20-0117.1.
+ 
+
+--------------------
+
+==== HPC / NeSI consultancy meeting ====
+
+with Wes Harrell and Maxime Rio 
+ 
+See meeting notes at: https://docs.google.com/document/d/12nevb9ZySbNif6jkTAgxbaGSAiwXGLsE11SQCmfK-Sw/edit 
+
+== some useful links: ==
+
+MyNesi: to change login / password, see what projects are allocated to me, etc 
+
+https://my.nesi.org.nz/
+
+== Some documentation from NeSI ==
+
+https://github.com/nesi/nesi_jupyter_helpers
+
+https://support.nesi.org.nz/hc/en-gb/articles/360000684396-Submitting-your-first-job
+
+== To connect on JupyterHub ==
+
+NeSI jupyterhub: https://jupyter.nesi.org.nz/ (Mahuika ?) → MAHUIKA ... all the good stuff 
+
+https://jupyter.maui.niwa.co.nz/
+
+NIWA Jupyterhub (Maui)
+
+https://jupyter.maui.niwa.co.nz/
+
+--------------------
+
+==== ZESPRI GDD ====
+
+see **20210727_creates_VCSN_derived_time_series_GDD.ipynb** 
+
+--------------------
+
+==== ERA 5 daily field on a coarser resolution (0.5 degree) ====
+
+see: https://climexp.knmi.nl/selectdailyfield2.cgi?id=someone@somewhere
+
+only a subset of variables are available ... 
+
+
+
+
+
+
+

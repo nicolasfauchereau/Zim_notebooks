@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-14T09:22:50+12:00
+
+====== Tuesday 14 Apr 2020 ======
+
+=== list of channels and list of domain experts for the hub ===
+
+see: [[/home/nicolasf/HUB/MS_Teams/Teams_channels.docx]] 
+
+=== KNN experiments ===
+
+see [[Journal:2020:04:13|13/04/20]] 
+
+
+ 
+
+
+
+
+

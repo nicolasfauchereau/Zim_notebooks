@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-29T11:00:34+12:00
+
+====== Thursday 29 Jul 2021 ======
+
+==== Composite maps for MJO ====
+
+see [[/home/nicolasf/operational/MJO_composite_maps]] for the notebooks, code and figures 

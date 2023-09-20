@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-26T17:23:10+12:00
+
+====== Thursday 26 Aug 2021 ======
+
+==== Parametrized quantile values for the derivation of climatologies from GCMs and obs ====
+
+@ICU 
+
+example: 
+
+
+{{./screenshot_2021-08-26-172631.png}}
+
+need to combine with fitting distribution to data, see: 
+
+https://github.com/nicolasfauchereau/Python-for-data-analysis-and-visualisation/blob/master/session_1/notebooks/Scipy.ipynb
+
+{{./screenshot_2021-08-26-173837.png}}
+
+see also additional library: https://open-hydrology.readthedocs.io/projects/lmoments3/en/stable/
+
+
+

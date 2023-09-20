@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-05T09:57:06+13:00
+
+====== Friday 05 Mar 2021 ======
+
+==== Non-linear Auto-Regressive Network with eXogenous inputs in Python ====
+
+https://pypi.org/project/fireTS/ 
+
+
+{{./screenshot_2021-03-05-095953.png}}
+
+and see paper: http://ceur-ws.org/Vol-2148/paper16.pdf 
+
+--------------------
+
+==== xskillscore examples ====
+
+→ probabilistic: https://github.com/raybellwaves/xskillscore-tutorial/blob/master/02_Probabilistic.ipynb
+→ deterministic: https://github.com/raybellwaves/xskillscore-tutorial/blob/master/01_Determinisitic.ipynb 
+→ "big data"  (using dask): https://github.com/raybellwaves/xskillscore-tutorial/blob/master/03_Big_Data.ipynb
+
+--------------------
+
+==== climpred paper: ====
+
+Brady, R., and A. Spring, 2021: climpred: Verification of weather and climate forecasts. JOSS, 6, 2781, https://doi.org/10.21105/joss.02781.
+
+
+
+
+
+
+

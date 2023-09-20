@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-13T10:32:40+12:00
+
+====== Tuesday 13 Apr 2021 ======
+
+==== GCM validation ====
+
+compute the ACC for each month → obtain a time-series → correlate time-series with background climate state (SST anomalies) 
+
+--------------------
+
+==== MHWs ====
+
+downloaded complete globe for OISST v2, see in  [[/home/nicolasf/data/SST/NOAA_hires_1981_present]] 
+
+MHWs recalculated in MHWs_Tasman.ipynb (folder: [[/home/nicolasf/research/Marine_Heat_Waves/MHW/marineHeatWaves/docs]]) 
+
+
+--------------------
+
+==== EOF on monthly SST anomalies for the Tasman region ====
+
+see: EOF_Tasman.ipynb (folder: [[/home/nicolasf/research/Marine_Heat_Waves/MHW/marineHeatWaves/docs]])  
+
+**includes code to detrend xarray:** 
+
+def detrend_dim(da, dim, deg=1):
+	# detrend along a single dimension
+	p = da.polyfit(dim=dim, deg=deg)
+#     fit = xr.polyval(dim, p.polyfit_coefficients)
+	fit = xr.polyval(da[dim], p.polyfit_coefficients)
+	return da - fit
+
+def detrend(da, dims, deg=1):
+	# detrend along multiple dimensions
+	# only valid for linear detrending (deg=1)
+	da_detrended = da
+	for dim in dims:
+		da_detrended = detrend_dim(da_detrended, dim, deg=deg)
+	return da_detrended
+

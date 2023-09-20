@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-04T09:56:57+13:00
+
+====== Thursday 04 Mar 2021 ======
+
+Notebook from rabernat illustrating obtaining the GHRSST dataset and Sea Surface Height 
+
+https://nbviewer.jupyter.org/gist/rabernat/961a429e7aaca4dcd764d83b7c7a576c
+
+{{./screenshot_2021-03-04-095932.png?width=800}}
+
+--------------------
+
+==== processing of the MSWEP 2.0 dataset for the validation ====
+
+see: **read_MSWEP2.ipynb** in [[/home/nicolasf/operational/ICU/development/MSWEP/notebooks]] 
+
+calculates the monthly accumulations, interpolate on same 1x1 grid as the forecasts, etc ... 
+
+--------------------
+
+==== climpred and xskillscore for validation ====
+
+see examples: using the NMME
+
+https://climpred.readthedocs.io/en/stable/examples/monseas/monthly-enso-subx-example.html 
+
+**for decoding the time dimension in the IRI forecasts:** 
+
+def decode_cf(ds, time_var):
+	"""Decodes time dimension to CFTime standards."""
+	if ds[time_var].attrs['calendar'] == '360':
+		ds[time_var].attrs['calendar'] = '360_day'
+	ds = xr.decode_cf(ds, decode_times=True)
+	return ds
+
+**For out-of-memory and parallel computation for large datasets with climpred example:** 
+
+https://github.com/pangeo-data/climpred/blob/AS_zenodo_DOI_pub/docs/source/examples/dask/efficient_dask.ipynb 
+
+--------------------
+
+==== to read:  A Thousand Brains: A New Theory of Intelligence ====
+
+https://www.goodreads.com/review/show/3870119227
+
+--------------------
+
+==== updated the Pacific RCC notebook to automatically adjust y-axis limits and ticks ====
+
+see 
+
+
+
+

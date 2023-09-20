@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-31T17:42:09+12:00
+
+====== Tuesday 31 Aug 2021 ======
+
+Herbie: Retrieve NWP Model Data
+
+https://github.com/blaylockbk/Herbie
+
+Brian's Carpenter Workshop
+
+https://github.com/blaylockbk/Carpenter_Workshop
+
+--------------------
+
+==== ERA5 download from AWS ====
+
+https://github.com/GeoscienceAustralia/dea-notebooks/blob/develop/Frequently_used_code/External_data_ERA5_Climate.ipynb
+
+To extract precipitation for one grid point for example: 
+
+https://github.com/GeoscienceAustralia/dea-notebooks/blob/develop/Frequently_used_code/External_data_ERA5_Climate.ipynb 
+
+To convert from RASTER to VECTOR: 
+
+https://github.com/GeoscienceAustralia/dea-notebooks/blob/develop/Frequently_used_code/Rasterize_vectorize.ipynb 
+

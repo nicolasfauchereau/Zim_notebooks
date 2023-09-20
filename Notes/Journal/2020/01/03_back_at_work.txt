@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-03T08:41:59+13:00
+
+====== Friday 03 Jan 2020 ======
+
+First day back at work on 2020 ! 
+
+SCO meeting scheduled for the Tuesday 7 January. 
+
+===== SCO =====
+
+From github repos: 
+
+[*] Global PPT: https://github.com/nicolasfauchereau/global_PPT
+	several missing slides 
+	No NCEP diagnostics 
+[*] NIWA SOI and indices: https://github.com/nicolasfauchereau/SOI_NINOs
+	outputs (figures) in the NCC S: drive, in 'indices/figures'
+[*] SCO validation: https://github.com/nicolasfauchereau/seasonal_validations
+[*] Seasonal forecasts from the CDS: https://github.com/nicolasfauchereau/SCO_copernicus 
+	outputs in [[/home/nicolasf/operational/NCC_ops/SCO_copernicus/outputs]] 
+	
+
+===== ICU =====
+
+github repo at  https://github.com/nicolasfauchereau/Island_Climate_Update 
+
+1) update TRMM rainfall data
+
+problem with username: https://urs.earthdata.nasa.gov//users/new 
+
+https://disc.gsfc.nasa.gov/data-access#mac_linux_wget explains how to create a .netrc file with the valid authentication tokens, you need first to create a new username on the earthdata and authorize the app NASA GESDISC DATA ARCHIVE, see https://disc.gsfc.nasa.gov/earthdata-login
+
+
+
+
+
+
+
+
+
+

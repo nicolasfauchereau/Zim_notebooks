@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-22T08:57:08+12:00
+
+====== Wednesday 22 Jul 2020 ======
+
+
+===== HUB project code and task =====
+
+**AK21TIME/LEAD**  project code for all hub-related activities 
+
+700 hours 
+
+===== Project planning =====
+
+== SCO / CACV2101 ==
+
+11  0 hours 
+
+-Have climatological terciles for as many models as possible (i.e. ones from smart ideas)
+-Develop interactive visualisations for seasonal VCSN normals in conjunction with SCO forecast
+-Update NOAA OISSTv2 normal period to reference 1991-2020
+-Explore machine learning techniques (e.g. Kidson types)
+-Discuss a plan for implementation of results of Smart Ideas work on time horizon of 2-3 years
+
+== Climate Adaptation Tools (subseasonal forecasts and Pacific RCC) / CAVA2101 ==
+
+subseasonal forecasts: 120 hours 
+
+Evaluate the accuracy of the probabilistic sub-seasonal forecasts made available through the Copernicus Data Store by calculating various metrics and skill scores (deterministic such as correlation and probabilistic such as Continuous Ranked Probability Skill Score and Brier Score). 
+
+Pacific RCC: 75 hours 
+
+
+
+
+
+

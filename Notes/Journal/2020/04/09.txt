@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-09T10:48:32+12:00
+
+====== Thursday 09 Apr 2020 ======
+
+=== taking stock of the state of the forecasts (test set) period ===
+
+CDS 
+
+- ECMWF: OK 
+
+- UKMO: OK, fixed now, see **process_CDS_forecasts_fix_grids.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks]]
+
+- CMCC: only starts in 2018-11 confirmed, all re-processed and saved in 'local' 
+		- [[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/CMCC/T2M]]
+		- [[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/CMCC/PRECIP]]
+
+- METEO_FRANCE: starts in 2017-01, finishes in 2019-12 
+
+			- was issue with 2017 - 08 T2M, redownloaded from the CDS → OK
+			- was issue with 2017 - 09 T2M, redownloaded from the CDS → OK 
+			- some datasets needed to be interpolated onto the hindcast grid, both for T2M and for PRECIP
+	
+	saved processed forecasts: 
+	
+		- [[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/METEO_FRANCE/T2M]]
+		- [[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/METEO_FRANCE/PRECIP]] 
+
+- DWD: all OK
+		
+		- [[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/DWD/T2M]]
+		- [[/home/nicolasf/research/Smart_Ideas/data/GCMs/processed/forecasts/CDS/DWD/PRECIP]]
+		 
+IRI 
+
+JMA 
+
+

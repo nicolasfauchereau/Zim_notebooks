@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-03T08:49:37+13:00
+
+====== Thursday 03 Feb 2022 ======
+
+==== CMORPH daily precipitation data ====
+
+see: notebooks/download_ds502.2.ipynb in [[/home/nicolasf/operational/BAMS_SOTC_2021/notebooks]] 
+
+and README.md in [[/home/nicolasf/operational/BAMS_SOTC_2021]] 
+
+--------------------
+
+ECO INDEX 
+
+@ClimateCommons
+
+https://bioheritage.nz/goals/stategic-objective/bioheritage-ecoindex/
+
+see https://www.waikato.ac.nz/staff-profiles/people/kwallace 
+
+check connections at https://www.waikato.ac.nz/eri/ 
+
+Louis Schipper: https://www.waikato.ac.nz/staff-profiles/people/schipper  
+
+co-author to https://www.science.org/doi/10.1126/sciadv.aay1052 
+
+Duffy, K. A., C. R. Schwalm, V. L. Arcus, G. W. Koch, L. L. Liang, and L. A. Schipper, 2021: **How close are we to the temperature tipping point of the terrestrial biosphere?** Sci. Adv., 7, eaay1052, https://doi.org/10.1126/sciadv.aay1052.
+
+--------------------
+
+==== To convert GRADS binary data to netcdf using CDO ====
+
+1. bzip2 -d 
+2. cdo -f nc import_binary file.ctl ofile
+
+--------------------
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-10T09:59:28+13:00
+
+====== Tuesday 10 Nov 2020 ======
+
+==== snippets in Jupyterlab ====
+
+The only extension that worked is the one 
+
+https://github.com/QuantStack/jupyterlab-snippets 
+
+to install the extension, run that (in each environment !): 
+
+**conda install -c conda-forge jupyterlab-snippets**
+**jupyter lab build** 
+
+Then place snippets (*.py files) in the first directory returned by the command under data 
+
+	jupyter --path 
+
+which is usually 
+
+	[[/home/nicolasf/.local/share/jupyter]] 
+
+you can organize the snippets in sub-directories, and all the snippets now become available from the jupyterlab menu 
+
+{{./screenshot_2020-11-10-102410.png}}
+
+--------------------
+
+==== some issues with utils.make_mask_from_gpd ====
+
+The application of a buffer in km or meters does not seem to work, because the conversion to EPSG:3395 does not work on the merged geometries
+
+see 
+
+{{./screenshot_2021-04-14-111534.png}}
+
+try 3857 ?
+
+Not working either ... 
+
+--------------------
+
+==== subplot mosaic in Matplotlib ====
+
+ 
+
+{{./screenshot_2021-04-14-141047.png}}
+
+{{./screenshot_2021-04-14-141139.png?width=600}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

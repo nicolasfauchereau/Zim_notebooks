@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-13T09:10:16+12:00
+
+====== Thursday 13 Aug 2020 ======
+
+--------------------
+
+==== SI reporting ====
+
+**Ensemble members** 
+
+ECMWF: 25
+UKMO: 28 
+METEO-FRANCE: 25 
+DWD: 30 
+CMCC: 40
+
+CanCM4i: 1981 - 2016: 10
+CanSIPSv2: 1981 - 2016: 20 
+NASA_GEOSS2S: 1981 - 2016: 4 
+NCEP-CFSv2: 1981 - 2016: 28 
+GEM - NEMO: 1981 - 2016: 10 
+
+JMA: 1981 - 2016: 1
+
+--------------------
+
+==== Regression Kriging (e.g. for VCSN) ====
+
+see https://pykrige.readthedocs.io/en/latest/examples/regression_kriging2d.html#sphx-glr-examples-regression-kriging2d-py 
+
+part of https://github.com/GeoStat-Framework/PyKrige 
+
+
+
+

@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-07T12:11:17+13:00
+
+====== Tuesday 07 Jan 2020 ======
+
+SCO meeting 9:30 ... 
+No changes to the temperature 3 months terciles 
+Change to the precipitation terciles: NNI now 35|40|25 (Normal or Below)
+
+==== CLIOPS login and password ====
+
+http://wellweblogic.niwa.co.nz:7772/pls/apex/f?p=102
+
+user id: ops$clifcst
+
+password: ensodude666
+
+SCO: updated code in notebooks to derive terciles probabilities for each of the individual CDS models
+
+see: 
+
++ https://github.com/nicolasfauchereau/SCO_copernicus/blob/master/notebooks/get_copernicus_seasonal_all_centres_precip_regionmask_NZ_6regions_loop.ipynb
++ https://github.com/nicolasfauchereau/SCO_copernicus/blob/master/notebooks/get_copernicus_seasonal_all_centres_temp_regionmask_NZ_6regions_loop.ipynb
+
+All the SCO files, including the final version of the SCO itself, can be found in [[/home/nicolasf/operational/NCC_ops/SCO_January_2020]] 
+
+
+
+
+
+
+
+

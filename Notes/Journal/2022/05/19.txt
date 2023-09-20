@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-05-19T11:35:56+12:00
+
+====== Thursday 19 May 2022 ======
+
+==== formatting dataframe to have int when no decimal and float elsewhere ====
+
+see: 
+
+https://stackoverflow.com/questions/58166923/pandas-convert-float-to-int-if-decimals-are-0 
+
+summary_stats.update(summary_stats.select_dtypes(include=np.number).applymap('{:,g}'.format))
+
+see summary statistics for ERA5 and NCEP CRs (clusters) sequences 
+
+{{./screenshot_2022-05-19-114210.png}}
+
+in notebook: **compare_NCEP_and_ERA5_cluster_stats.ipynb** in [[/home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper]] 

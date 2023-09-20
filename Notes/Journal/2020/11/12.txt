@@ -1,0 +1,88 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-12T13:38:17+13:00
+
+====== Thursday 12 Nov 2020 ======
+
+==== Innovation Vineyards ====
+
+Accuracy of the SCO forecasts if applied to the Innovation Vineyard location: 
+
+== rainfall: ==
+
+acc = 0.45 (45%) 
+
+acc per season 
+
+1     0.450000
+2     0.450000
+3     0.450000
+4     0.400000
+5     0.450000
+6     0.450000
+7     0.619048
+8     0.380952
+9     0.285714
+10    0.380952
+11    0.476190
+12    0.333333
+
+== temperature: ==
+
+acc =   0.59 (59%) 
+
+acc per season
+
+1     0.600000
+2     0.600000
+3     0.450000
+4     0.500000
+5     0.700000
+6     0.500000
+7     0.761905
+8     0.666667
+9     0.523810
+10    0.761905
+11    0.571429
+12    0.523810
+
+in both cases July (MJJ) seems to the the season with the best accuracy, wonder why 
+
+seasonal accuracy obtained using observed SSTs as predictors (no PCA, no detrends, extended regional domain [120, 290, -60, 40], see in 
+notebook: **Innovation_Vineyards_SSTs_obs_noPCA_seasonal.ipynb** 
+
+{{./screenshot_2020-11-12-144742.png}}
+
+1     0.578947
+2     0.447368
+3     0.605263
+4     0.552632
+5     0.578947
+6     0.552632
+7     0.578947
+8     0.552632
+9     0.631579
+10    0.615385
+11    0.717949
+12    0.589744
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

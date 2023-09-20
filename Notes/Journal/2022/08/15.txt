@@ -1,0 +1,105 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-15T13:02:01+12:00
+
+====== Monday 15 Aug 2022 ======
+
+==== World database of large urban areas, 1950-2050 ====
+
+Seaborn Facetgrid and Cartopy 
+
+{{./screenshot_2022-08-15-130350.png}}
+
+{{{code: lang="python3" linenumbers="True"
+def scatterplot(x, y, s, color=None, **kwargs):
+    # the default plt.scatter handles size scaling poorly, so we define our own
+    # see also: https://github.com/mwaskom/seaborn/issues/315
+    scaled_size = 0.005 * s
+    plt.scatter(x, y, s=scaled_size, edgecolor=color, facecolor='none', linewidth=1, **kwargs)
+
+g = sns.FacetGrid(df[df['Year'] % 25 == 0], col="Year", hue='PopulationCategory',
+                  col_wrap=2, size=3.5, aspect=2, palette=sns.dark_palette('Red', 5),
+                  subplot_kws=dict(projection=cartopy.crs.Mollweide()))
+g.map(scatterplot, "Longitude", "Latitude", "Population",
+      transform=cartopy.crs.PlateCarree(), zorder=10)
+for ax in g.axes.ravel():
+    ax.add_feature(cartopy.feature.COASTLINE)
+    ax.add_feature(cartopy.feature.BORDERS)
+    ax.set_global()
+
+
+}}}
+
+
+{{./screenshot_2022-08-15-130419.png}}
+
+--------------------
+
+==== MSWEP daily precipitation ====
+
+@MSWEP 
+
+version 2.8.0 
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/MSWEP]] 
+
+**README.md** 
+
+Instructions for download: 
+
+http://www.gloh2o.org/mswep/#methods  
+
+
+{{./screenshot_2022-08-15-141024.png?width=1000}}
+
+example, to download the daily NRT product (NRT): 
+
+{{{code: lang="sh" linenumbers="True"
+rclone sync -v --exclude 3hourly/ --exclude Monthly/ --drive-shared-with-me GoogleDrive:/MSWEP_V280 /media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280
+}}}
+
+
+and to download the archive (OLD)
+
+{{{code: lang="sh" linenumbers="True"
+rclone sync -v --exclude 3hourly/ --exclude Monthly/ --drive-shared-with-me GoogleDrive:/MSWEP_V280 /media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280
+}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

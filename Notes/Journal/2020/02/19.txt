@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-19T10:21:28+13:00
+
+====== Wednesday 19 Feb 2020 ======
+
+Auckland
+
+@HUB
+
+digital earth: https://www.iothub.com.au/news/as-digital-earth-gains-momentum-china-is-setting-the-pace-536760?eid=75&edate=20200207&utm_source=20200207&utm_medium=newsletter&utm_campaign=newsletter
+
+Digital Earth Manual: https://link.springer.com/content/pdf/10.1007/978-981-32-9915-3.pdf 
+
+and file:///home/nicolasf/HUB/Remote_Sensing/Digital_Earth/2020_Book_ManualOfDigitalEarth.pdf 
+
+------ 
+
+@PYTHON 
+
+AMS 10th Symposium on Advances in Modeling and Analysis Using Python online recordings 
+
+https://ams.confex.com/ams/2020Annual/meetingapp.cgi/Index/Recording~1/Program/1405
+
+------ 
+
+=== Lessons from Downscaling Precipitation in Tasmania, Australia, and the Northeast United States Using Machine Learning Approaches ===
+
+@ML @GAN @DOWNSCALING 
+
+AMS 19th Conference on Artificial Intelligence for Environmental Science 
+
+https://ams.confex.com/ams/2020Annual/meetingapp.cgi/Paper/368455
+
+**abstract:** 
+
+Precipitation prediction at a high spatial resolution is valuable and often essential, however its production using traditional approaches (e.g., numerical weather prediction models) is computationally expensive. Recently, researchers have been exploring the use of machine learning techniques to downscale coarser resolution simulations to a finer resolution grids. Broadly speaking, four machine learning methods for have been described in the literature: Regression based methods, analog methods, autoregression methods, and deep neural network super resolution based methods. The latter method encompasses promising artificial recurrent neural networks such as the long short-term memory (LSTM) and deep learning generative adversarial neural networks for super resolution (e.g., SRGAN).
+
+Here, we examine the use of a number of machine learning methods for downscaling precipitation. Using multi-year distributions of precipitation over Tasmania, Australia and northeast USA, we explore two methods of downscaling - a deep neural network approach and a distributed gradient boosting approach - and compare them to random forests and bilinear interpolation. The deep neural network approach is a generative adversarial neural network based on Pix2Pix framework, and the distributed gradient boosting approach is Xgboost.
+
+Our contribution is threefold. First, that we show novel feature engineering to maximize the performance of our regression methods is critical to improve downscaling accuracy within a machine learning method. Second, that we compare and contrast a Deep learning neural network based on Pix2Pix to Xgboost, random forests and bilinear interpolation. And third, that we apply these methods to two geographically unique locations at vastly different resolutions: our analysis in Tasmania downscales precipitation from 56 km to 28 km while our analysis in northeast US downscales precipitation from 3 km to 0.33 km).
+
+The goal of these methods is to enable reproduction of high spatial and temporal resolution of precipitation without the cost of an additional high resolution domain in a numerical weather prediction tool. Our results show that machine learning techniques are promising tools to aid in the spatial prediction of precipitation. We discuss and demonstrate advantages of precipitation location prediction, and details of the design used.
+
+authors
+
+Timothy Lynar
+	Univ. of New South Wales
+	Campbell, Australia
+
+Campbell D. Watson
+	Thomas J. Watson Research Center, IBM
+	Yorktown Heights, NY, USA
+
+---- 
+
+=== Rescale: Cloud HPC Simulation Platform ===
+
+@HPC @CLOUD
+
+https://www.rescale.com/
+
+---- 
+
+=== Emerging Technologies and Cray's New Shasta System for Weather, Water, and Climate ===
+
+@HPC @CLOUD @CRAY 
+
+https://ams.confex.com/ams/2020Annual/meetingapp.cgi/Paper/368604 
+
+
+High Performance Computing for Weather, Water and Climate is facing a rapid increase in the diversity of technologies. While individual processor core performance gains are slowing, the capabilities and performance of other elements of the HPC system, especially those that move data, continue to advance. Cray’s new Shasta system architecture is built around the new Slingshot interconnect, which brings new capabilities to reduce network congestion, allowing the network to run at much higher utilization while still improving runtime reproducibility and giving organizations the ability to run development jobs without impacting the time critical operational workload. Shasta systems will be deployed at Oak Ridge National Laboratory for the US Air Force 557th Weather Wing and at several Department of Energy laboratories, where they will be used by the climate modeling community. While these will all be Cray Shasta systems, each will have a different mix of processors and accelerators. This talk will discuss the challenges and opportunities that this presents for this community as well as how Shasta will enable the convergence of data analytics, machine learning and simulation workflows in the Exascale era.
+
+Ilene L. Carpenter, Cray Inc., Arvada, CO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------  

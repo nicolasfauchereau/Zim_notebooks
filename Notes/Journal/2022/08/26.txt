@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-26T09:54:07+12:00
+
+====== Friday 26 Aug 2022 ======
+
+
+==== StatsForecast ====
+
+**StatsForecast** offers a collection of widely used univariate time series forecasting models, including automatic ARIMA and ETS modeling optimized for high performance using numba. It also includes a large battery of benchmarking models.  
+
+https://nixtla.github.io/statsforecast/ 
+
+see also: 
+
+**mlforecast**: Scalable machine learning based time series forecasting. 
+
+Wrapper for XGBoost and lightGBM with time-series features generation  
+
+→ https://nixtla.github.io/mlforecast/ 
+
+**Neuralforecast**: Scalable and user friendly neural forecasting algorithms for time series data 
+
+→ https://github.com/Nixtla/neuralforecast 
+
+Hierarchical crown forecasting with statistical and econometric methods. 
+
+--------------------
+
+==== research methods in psychology ====
+
+see https://canvas.pitt.edu/courses/124970 
+
+
+

@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-01T10:31:50+12:00
+
+====== Monday 01 Jun 2020 ======
+
+===== Azure workshop =====
+
+=== resampling from rotated pole to regular grid ===
+
+for a working example of resampling the NZCSM rotated pole grid onto a regular grid as well as plotting, see: 
+
+check_netcdf_data_resample.ipynb
+
+in [[/home/nicolasf/operational/Azure_trial/notebooks]] 
+
+and private repo: 
+
+https://github.com/nicolasfauchereau/Azure_trial 
+
+code example 
+

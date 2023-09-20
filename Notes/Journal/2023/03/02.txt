@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-02T14:39:50+13:00
+
+====== Thursday 02 Mar 2023 ======
+
+==== extract and filter out aberrant values for the station data extracted from MSWEP for Tuvalu and RMI ====
+
+@ICU @IWRM @Tuvalu 
+
+see **extract_MSWEP_data.ipynb**  
+
+in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/Tuvalu]] 
+
+e.g. to filter all values above 5 X the 99th percentile 
+
+threshs = station_time_series_Past_df.quantile(0.99) * 5
+
+station_time_series_Past_df_filtered = station_time_series_Past_df_filtered**.mask**(station_time_series_Past_df_filtered > threshs)
+
+==== extracting several grid points at once (non contiguous) ====
+
+{{{code: lang="python3" linenumbers="True"
+import numpy as np
+import xarray as xr
+
+da = xr.DataArray(np.arange(16).reshape((4,4)), coords=[('lat', [40,45,50,55]), ('lon', [5,10,15,20])])
+
+points = da.sel(lat=xr.DataArray([40.1, 42.3, 39.78], dims='z'), 
+				lon=xr.DataArray([7.1, 6.2, 13.2], dims='z'), 
+				method='nearest')
+}}}
+
+
+
+

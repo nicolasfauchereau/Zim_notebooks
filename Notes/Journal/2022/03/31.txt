@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-31T10:52:29+13:00
+
+====== Thursday 31 Mar 2022 ======
+
+MAELSTROM workshop: 
+
+https://events.ecmwf.int/event/294/timetable/
+
+link to list of talks in below locally saved file 
+
+{{./screenshot_2022-03-31-105428.png}}
+
+[[~/Documents/MAELSTROM_Workshop_ML/MAELSTROM dissemination workshop (28 March) and Machine Learning Workshop (29 March - 1 April) (March 28, 2022 - April 1, 2022)_ Programme · ECMWF Events (Indico) (31_03_2022 10_52_47 am….html]]
+
+--------------------
+
+==== Black error when executing notebook with papermill 2.0.0 and higher #1464 ====
+
+@black 
+
+solution ? 
+
+@VasuBhog As a work around, use the black CLI at least once locally or run: python -c "import logging; logging.basicConfig(level='INFO'); import black" once in your python environment (see #1223 for details).
+
+Need also to do 
+
+mkdir -p /home/nicolasf/.cache/black/22.3.0/
+
+to get it to work 
+
+
+
+
+
+
+
+
+
+
+

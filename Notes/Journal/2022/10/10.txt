@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-10T12:31:36+13:00
+
+====== Monday 10 Oct 202 ======
+
+
+==== Learned Benchmarks for Subseasonal Forecasting ====
+
+Soukayna Mouatadid (University of Toronto); Paulo Orenstein (IMPA); Genevieve E Flaspohler (MIT); Miruna Oprescu (Microsoft Research); Judah Cohen (AER); Franklyn Wang (Harvard University); Sean Knight (MIT); Maria Geogdzhayeva (MIT); Sam Levang (Salient Predictions Inc.); Ernest Fraenkel (MIT); Lester Mackey (Microsoft Research)
+
+see: 
+
+→  https://arxiv.org/abs/2109.10399 
+→ https://arxiv.org/pdf/2209.10666.pdf 
+
+CODE: https://github.com/microsoft/subseasonal_toolkit
+
+DATA: https://github.com/microsoft/subseasonal_data
+
+--------------------
+
+==== Bias removal of seasonal forecasts ====
+
+@ICU 
+
+https://climpred.readthedocs.io/en/stable/bias_removal.html 
+
+leverages the package: https://github.com/pankajkarman/bias_correction 
+
+see: **bias_correction_precip.ipynb** in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/verification]] 

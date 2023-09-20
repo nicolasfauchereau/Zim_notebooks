@@ -1,0 +1,51 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-15T14:41:29+12:00
+
+====== data and resources ======
+Created Monday 15 August 2022
+
+== ICU products on AWS ==
+
+	Images: 	https://s3.ap-southeast-2.amazonaws.com/icu.niwa/gpm/images/images.html
+	
+	NetCDF: https://s3.ap-southeast-2.amazonaws.com/icu.niwa/gpm/netcdf/netcdf.html
+	
+	Water Stress: https://s3.ap-southeast-2.amazonaws.com/icu.niwa/c3s/Water_Stress/images.html  
+	
+	C3S imagery: https://s3.ap-southeast-2.amazonaws.com/icu.niwa/c3s/images/index.html 
+	
+
+== MSWEP ==
+
+How to update the 'historical' (*PAST*) *AND* at the same time the NRT MSWEP dataset 
+
+rclone sync -v --exclude 3hourly/ --exclude Monthly/ --drive-shared-with-me GoogleDrive:/MSWEP_V280 [[/media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280]]
+
+==== ICU web app ====
+
+https://wwwniwauat.niwa.local/icu-app 
+
+https://shiny.niwa.co.nz/icu-app/
+
+==== Paper on ESSOAR ====
+
+https://essopenarchive.org/doi/full/10.1002/essoar.10511702.2 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

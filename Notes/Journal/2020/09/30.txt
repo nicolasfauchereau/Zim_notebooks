@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-30T08:31:18+13:00
+
+====== Wednesday 30 Sep 2020 ======
+
+==== review weather and climate paper ====
+
+Machine learning-based climate time series anomaly detection using convolutional neural networks
+
+R. Srinivasan 1 , L. Wang 1 , J.L. Bulleid 1 
+
+--------------------
+
+==== NVIDIA GPU technology conference ====
+
+https://www.nvidia.com/en-us/gtc/
+
+https://resources.nvidia.com/events/GTC2020s21255?lx=RowcGr: GPU-Accelerated Deep Learning for Weather, Climate, and Space
+	https://resources.nvidia.com/events/GTC2020s22384?lx=RowcGr:  Can GPUs Transform Earth System Models and Help Mitigate Impacts of Weather and Climate on Society?
+	https://resources.nvidia.com/events/GTC2020s21548?lx=RowcGr: Interpretable Deep Learning for Hurricane Intensity Prediction
+
+--------------------
+
+==== ICU hotspot ====
+
+looping over each month in the GCM forecasts is slow, possibility to 
+
+--------------------
+
+==== Smart Ideas application cases ====
+
+=== Apple and Pears ===
+
+see in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/Apple_and_Pears/notebooks]] for the notebook (**read_shapefile.ipynb**) reading the shapefile, and getting the bounding box
+
+The netcdf file with the bounding box (latmin, latmax, lonmin, lonmax) 
+
+is [[/home/nicolasf/research/Smart_Ideas/data/shapefiles/application_cases/Apple_and_Pears/Apple_and_Pears_bounding_box.nc]] 
+
+[[/home/nicolasf/research/Smart_Ideas/data/shapefiles/application_cases/Apple_and_Pears/Apple_and_Pears_bounding_box.nc]] 
+
+use this for selection and extraction of VCSN data
+
+=== Innovation Vineyard ===
+
+see extraction notebook: **read_shapefile.ipynb** in  [[~/research/Smart_Ideas/code/targets/application_cases/Innovation_Vineyard/notebooks]] 
+
+The netcdf file with the bounding box (latmin, latmax, lonmin, lonmax) 
+
+is [[~/research/Smart_Ideas/data/shapefiles/application_cases/InnovationVineyards/Innovation_Vineyard_bounding_box.nc]] 
+
+The notebook also extracts the DAILY raw data for all variables (['TMEAN_N', 'TMIN_N', 'TMAX_N', 'RAIN_BC', 'SOILM', 'RAD']) 
+
+in [[~/research/Smart_Ideas/outputs/targets/application_cases/Innovation_Vineyard]]	
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

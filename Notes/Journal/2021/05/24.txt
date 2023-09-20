@@ -1,0 +1,87 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-24T08:58:18+12:00
+
+====== Monday 24 May 2021 ======
+
+==== Python-Picard: fast ICA with a scikit-learn interface ====
+
+@python @PCA @dimensionality_reduction 
+
+https://pierreablin.github.io/picard/
+
+--------------------
+
+==== Open-TSNE:  Extensible, parallel implementations of t-SNE ====
+
+@python @PCA @dimensionality_reduction @TSNE 
+
+openTSNE is a modular Python implementation of t-Distributed Stochasitc Neighbor Embedding (t-SNE) [1], a popular dimensionality-reduction algorithm for visualizing high-dimensional data sets. openTSNE incorporates the latest improvements to the t-SNE algorithm, including the ability to add new data points to existing embeddings [2], massive speed improvements [3] [4], enabling t-SNE to scale to millions of data points and various tricks to improve global alignment of the resulting visualizations [5].
+
+https://github.com/pavlin-policar/openTSNE
+
+--------------------
+
+==== proposal idea ====
+
+@networks @graph pwd
+
+== "connected: climate and fungal networks" ==
+
+Some references for Climate Networks: 
+
+Runge, J., and Coauthors, 2019: Inferring causation from time series in Earth system sciences. Nat Commun, 10, 2553, https://doi.org/10.1038/s41467-019-10105-3.
+ 
+Runge, J., and Coauthors, 2015: Identifying causal gateways and mediators in complex spatio-temporal systems. Nat Commun, 6, 8502, https://doi.org/10.1038/ncomms9502.
+
+Kawale, J., and Coauthors, 2013: A graph-based approach to find teleconnections in climate data: A Graph-Based Approach to Find Teleconnections in Climate Data. Statistical Analy Data Mining, 6, 158–179, https://doi.org/10.1002/sam.11181.
+ 
+Liess, S., and Coauthors, 2014: Different Modes of Variability over the Tasman Sea: Implications for Regional Climate*. Journal of Climate, 27, 8466–8486, https://doi.org/10.1175/JCLI-D-13-00713.1.
+
+Regional September Sea Ice Forecasting with Complex Networks andGaussian Processes: https://discovery.ucl.ac.uk/id/eprint/10091542/1/Gregory_wafd190107.pdf 
+
+PYUNICORN:  Unified Complex Network and Recurrence Analysis Toolbox. also reference: https://aip.scitation.org/doi/10.1063/1.4934554 (on ArXiv at https://arxiv.org/pdf/1507.01571.pdf) 
+
+https://ericmjl.github.io/Network-Analysis-Made-Simple/learn-more/ 
+
+and lots of references in the Wikipedia article: https://en.wikipedia.org/wiki/Climate_as_complex_networks  
+
+--------------------
+
+==== Network Theory representation of the circulation regimes evolution ====
+
+@networks @CPP 
+
+circulation regimes as nodes, number of transitions (or deviation from expected number) as edges ... what information can be gained ? 
+
+--------------------
+
+==== Time-series motifs and matrix profiles ====
+
+see https://towardsdatascience.com/how-to-painlessly-analyze-your-time-series-f52dab7ea80d 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

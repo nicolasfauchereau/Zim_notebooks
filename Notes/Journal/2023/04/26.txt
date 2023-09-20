@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-04-26T11:14:23+12:00
+
+====== Wednesday 26 Apr 2023 ======
+
+For a gross of 175000, and a tax rate of 33.0%:
+
+Takehome pay = 126330.0
+
+Increase compared to current, per annum = 40790.0
+Increase compared to current, per month = 3399.17
+Increase compared to current, per week = 784.42
+
+--------------------
+
+For a gross of 135000, and a tax rate of 33.0%:
+
+Takehome pay = 99530.0
+
+Increase compared to current, per annum = 13990.0
+Increase compared to current, per month = 1165.83
+Increase compared to current, per week = 269.04

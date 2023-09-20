@@ -1,0 +1,78 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-05T09:20:31+13:00
+
+====== Monday 05 Dec 2022 ======
+
+==== Processing of other CCAM runs ====
+
+see for list of runs and status 
+
+https://niwa-my.sharepoint.com/:x:/g/personal/peter_gibson_niwa_co_nz/Eevq4KDucxpEsap0eHuMe60B41w3nZLYMn5lVd2HgXE5Cw?email=Nicolas.Fauchereau%40niwa.co.nz&e=93Eb
+
+{{./screenshot_2022-12-05-092223.png?width=1831}}
+
+
+**Preprocess NorESM2-MM** 
+
+see in [[/nesi/project/niwa00018/fauchereaun/notebooks/processing/process_NorESM2-MM_CCAM]] 
+
+[*] first historical run 1960 - 2014: done  
+[*] SSP370 2015 - 2099
+
+see outputs in [[/media/nicolasf/END19101/research/CMIP6_downscaling/data/CCAM_CMIP6]] 
+
+
+--------------------
+
+==== calculations of ETCCDI indices ====
+
+see in **evaluate_ACCESS-CM2_BCSD_outputs_from_merged_dset.ipynb** 
+
+icclim could be faster than pyclimdex, but needs to be evaluated ... 
+
+e.g. compare
+
+{{{code: lang="python3" linenumbers="True"
+merged_dset_icclim = merged_dset.copy()
+
+for v in merged_dset_icclim.data_vars:
+	merged_dset_icclim[v].attrs = {}
+
+cdd = icclim.index(
+	in_files=merged_dset_icclim[f"pr_BCSDnquantilesquantiles"],
+	index_name="cdd",
+	var_name="pr",
+	slice_mode="QS",
+	out_file="./tmp.nc",
+)
+}}}
+
+
+to 
+
+cdd_bcsd_seasonal = indices.cdd(
+	merged_dset[f"pr_BCSD_{nquantiles}quantiles"], period="QS"
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+scp -r fauchereaun@hafs01.kupe.niwa.co.nz:/nesi/project/niwa00018/fauchereaun/outputs/ssp370/ACCESS-CM2/NZ_surf_domain ./.
+

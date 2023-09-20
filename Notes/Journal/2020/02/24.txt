@@ -1,0 +1,116 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-24T11:16:51+13:00
+
+====== Monday 24 Feb 2020 ======
+
+Stacked AE vs PCA for dimensionality reduction and ensemble generation 
+
+see in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/features-extractors/dimensionality_reduction/AE_vs_PCA/HOML_2_AE_GANS.ipynb]] for Fashion MNIST example and 
+
+[[/home/nicolasf/research/Smart_Ideas/code/features-extractors/dimensionality_reduction/AE_vs_PCA/HOML_2_AE_GANS_climate.ipynb]] for real life examples using 
+the ECMWF hindcasts datasets 
+
+! note: year 2011, T2M, ECMWF only has 11 months: 2011 - 12 missing 
+
+=== first try: ===
+
+== AE parameters: ==
+
+stacked_encoder = keras.models.Sequential([
+	keras.layers.Flatten(input_shape=[ny, nx]),
+	keras.layers.Dense(100, activation="selu"),
+	keras.layers.Dense(n_codings, activation="selu"),
+])
+
+stacked_decoder = keras.models.Sequential([
+	keras.layers.Dense(100, activation="selu", input_shape=[20]),
+	keras.layers.Dense(ny * nx),
+	keras.layers.Reshape([ny, nx])
+])
+
+stacked_ae = keras.models.Sequential([stacked_encoder, stacked_decoder])
+
+stacked_ae.compile(loss='mean_squared_error',
+			  optimizer='adam',
+			  metrics=['mae', 'acc'])
+
+history = stacked_ae.fit(X_train, X_train, epochs=20,
+						 validation_data=[X_valid, X_valid])
+
+
+{{./screenshot_2020-02-24-155539.png?width=800}}
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@ML @BIGDATA @TF 
+
+=== Tensorflow with DASK: ===
+
+see 
+
+http://matthewrocklin.com/blog/work/2017/02/11/dask-tensorflow
+
+and 
+
+https://github.com/dask/dask-tensorflow 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Compute the RMSE with latitude weighting from two xr.DataArrays.
+
+see: 
+
+https://github.com/pangeo-data/WeatherBench/blob/master/src/score.py
+
+{{{code: lang="python" linenumbers="True"
+def compute_weighted_rmse(da_fc, da_true, mean_dims=xr.ALL_DIMS):
+    """
+    Compute the RMSE with latitude weighting from two xr.DataArrays.
+    Args:
+        da_fc (xr.DataArray): Forecast. Time coordinate must be validation time.
+        da_true (xr.DataArray): Truth.
+    Returns:
+        rmse: Latitude weighted root mean squared error
+    """
+    error = da_fc - da_true
+    weights_lat = np.cos(np.deg2rad(error.lat))
+    weights_lat /= weights_lat.mean()
+    rmse = np.sqrt(((error)**2 * weights_lat).mean(mean_dims))
+    if type(rmse) is xr.Dataset:
+        rmse = rmse.rename({v: v + '_rmse' for v in rmse})
+    else: # DataArray
+        rmse.name = error.name + '_rmse' if not error.name is None else 'rmse'
+    return rmse
+}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

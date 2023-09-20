@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-28T11:10:13+12:00
+
+====== Tuesday 28 Jul 2020 ======
+
+===== Image inpainting =====
+
+related to 
+
+**Artificial intelligence reconstructs missing climate information** 
+
+see also in [[~/Documents/journal_club]]	
+
+== in Keras ==
+
+https://github.com/MathiasGruber/PConv-Keras 
+
+== In Pytorch ==
+
+https://github.com/naoto0804/pytorch-inpainting-with-partial-conv 
+
+https://github.com/NVIDIA/partialconv 
+
+https://arxiv.org/abs/1804.07723 
+
+===== NUMPYRO: probabilistic programming in Python and JAX =====
+
+https://github.com/pyro-ppl/numpyro
+
+see for example
+
+
+https://nbviewer.jupyter.org/github/pyro-ppl/numpyro/blob/master/notebooks/source/bayesian_regression.ipynb
+
+and Statistical Rethinking (2nd ed.) with NumPyro 
+
+https://github.com/fehiepsi/rethinking-numpyro 
+
+===== MUSIC =====
+
+Ant Nebula A journey into Hyperspace 11, 1:28
+
+

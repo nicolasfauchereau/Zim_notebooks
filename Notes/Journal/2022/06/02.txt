@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-06-02T16:09:53+12:00
+
+====== Thursday 02 Jun 2022 ======
+
+==== geodata ====
+
+https://github.com/GeodataTools/geodata 

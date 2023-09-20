@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-05T11:48:07+12:00
+
+====== Thursday 05 Aug 2021 ======
+
+==== XCLIM and extremes ====
+
+see in [[~/research/XCLIM]] 
+
+many methods to extract extremes, calculate return periods etc 
+
+https://xclim.readthedocs.io/en/stable/notebooks/frequency_analysis.html 
+
+--------------------
+
+==== meeting with NOAA on possible collaboration on GDIS (Global Drought Information System) ====
+
+chat recorded by Doug on the ICU channel of the Pacific Rim MS Team: 
+
+https://teams.microsoft.com/l/channel/19%3af6907003180c41198e1aa95641d4be63%40thread.tacv2/Island%2520Climate%2520Update?groupId=cd4e2038-56c7-4920-b11a-e1a85a84b240&tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77 
+
+present: 
+
+Richard Heim 
+Steve Ansari 
+Brandon Bukunt 
+Doug Ramsay 
+
+some resources that have been discussed during the meeting: 
+
+https://climate-indices.readthedocs.io/en/latest/
+
+https://climate.northwestknowledge.net/downscaledForecast/science_downscaling.php
+
+paper related to the latter: 
+
+Barbero, R., J. T. Abatzoglou, and K. C. Hegewisch, 2017: Evaluation of Statistical Downscaling of North American Multimodel Ensemble Forecasts over the Western United States. Weather and Forecasting, 32, 327–341, https://doi.org/10.1175/WAF-D-16-0117.1.
+
+https://climatetoolbox.org/data/seasonal-climate-data
+
+https://climate.northwestknowledge.net/downscaledForecast/download.php
+
+https://www.drought.gov/international
+
+--------------------
+
+==== It's Time for the Atmospheric Science Community to ACT Together ====
+
+https://zenodo.org/record/5151986
+
+https://arm-doe.github.io/ACT/
+
+
+
+

@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-30T09:20:44+13:00
+
+====== Friday 30 Sep 2022 ======
+
+==== web app from notebook: ====
+
+@Python @Jupyterlab 
+
+https://mljar.com/mercury/
+
+--------------------
+
+==== Bias-Adjustment-Python ====
+
+Includes QDM (Quantile Delta Mapping) see paper 
+
+Cannon, A. J., S. R. Sobie, and T. Q. Murdock, 2015: Bias Correction of GCM Precipitation by Quantile Mapping: How Well Do Methods Preserve Changes in Quantiles and Extremes? Journal of Climate, 28, 6938–6959, https://doi.org/10.1175/JCLI-D-14-00754.1.
+
+
+@MBIE @downscaling @CMIP6 
+
+https://github.com/btschwertfeger/Bias-Adjustment-Python
+
+see example: 
+
+https://github.com/btschwertfeger/Bias-Adjustment-Python/blob/master/examples/examples.ipynb 
+
+for the implementation in C++: 
+
+https://github.com/btschwertfeger/Bias-Adjustment-Cpp 

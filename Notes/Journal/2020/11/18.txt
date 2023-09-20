@@ -1,0 +1,64 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-18T10:32:07+13:00
+
+====== Wednesday 18 Nov 2020c ======
+
+
+==== Windows of Opportunity for Skillful Forecasts Subseasonal to Seasonal and Beyond ====
+
+Mariotti, A., and Coauthors, 2020: Windows of Opportunity for Skillful Forecasts Subseasonal to Seasonal and Beyond. Bulletin of the American Meteorological Society, 101, E608–E625, https://doi.org/10.1175/BAMS-D-18-0326.1.
+ 
+@toread 
+
+--------------------
+
+Introduction to computational thinking for real-world problems (in Julia) 
+
+see https://github.com/mitmath/18S191 
+
+and https://computationalthinking.mit.edu/Fall20/#introduction_to_computational_thinking 
+
+--------------------
+
+==== Stochastic Super-Resolution for Downscaling Time-Evolving Atmospheric Fields With a Generative Adversarial Network ====
+
+https://ieeexplore.ieee.org/document/9246532 
+
+code: https://github.com/jleinonen/downscaling-rnn-gan 
+data: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZDWWMG 
+
+
+Abstract:
+Generative adversarial networks (GANs) have been recently adopted for super-resolution, an application closely related to what is referred to as ``downscaling'' in the atmospheric sciences: improving the spatial resolution of low-resolution images. The ability of conditional GANs to generate an ensemble of solutions for a given input lends itself naturally to stochastic downscaling, but the stochastic nature of GANs is not usually considered in super-resolution applications. Here, we introduce a recurrent, stochastic super-resolution GAN that can generate ensembles of time-evolving high-resolution atmospheric fields for an input consisting of a low-resolution sequence of images of the same field. We test the GAN using two data sets: one consisting of radar-measured precipitation from Switzerland; the other of cloud optical thickness derived from the Geostationary Earth Observing Satellite 16 (GOES-16). We find that the GAN can generate realistic, temporally consistent super-resolution sequences for both data sets. The statistical properties of the generated ensemble are analyzed using rank statistics, a method adapted from ensemble weather forecasting; these analyses indicate that the GAN produces close to the correct amount of variability in its outputs. As the GAN generator is fully convolutional, it can be applied after training to input images larger than the images used to train it. It is also able to generate time series much longer than the training sequences, as demonstrated by applying the generator to a three-month data set of the precipitation radar data. The source code to our GAN is available at https://github.com/jleinonen/downscaling-rnn-gan.
+
+see also: https://jleinonen.github.io/  
+
+https://jleinonen.github.io/2019/06/06/gans-atmos.html
+
+and 
+
+--------------------
+
+==== Invertible CNN-Based Super Resolution with Downsampling Awareness ====
+
+by Andrew Geiss et al 
+
+https://andrewgeiss.com/ 
+
+https://arxiv.org/abs/2011.05586
+
+Single image super resolution involves artificially increasing the resolution of an image. Recently, convolutional neural networks have been demonstrated as very powerful tools for this problem. These networks are typically trained by artificially degrading high resolution images and training the neural network to reproduce the original. Because these neural networks are learning an inverse function for an image downsampling scheme, their high-resolution outputs should ideally re-produce the corresponding low-resolution input when the same downsampling scheme is applied. This constraint has not historically been explicitly and strictly imposed during training however. Here, a method for "downsampling aware" super resolution networks is proposed. A differentiable operator is applied as the final output layer of the neural network that forces the downsampled output to match the low resolution input data under 2D-average downsampling. It is demonstrated that appending this operator to a selection of state-of-the-art deep-learning-based super resolution schemes improves training time and overall performance on most of the common image super resolution benchmark datasets. In addition to this performance improvement for images, this method has potentially broad and significant impacts in the physical sciences. This scheme can be applied to data produced by medical scans, **precipitation radars, gridded numerical simulations**, **satellite imagers**, and many other sources. In such applications, **the proposed method's guarantee of strict adherence to physical conservation laws is of critical importance.** 
+
+code: https://github.com/avgeiss/invertible_sr 
+
+--------------------
+
+==== take target time-series, casts into xarray datasets ansd aligns with the GCM forecasts ====
+
+see **make_netcdf_targets.ipyn**b in [[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN]] 
+
+
+
+
+

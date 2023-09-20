@@ -1,0 +1,64 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-04T14:57:56+12:00
+
+====== resources ======
+Created Thursday 04 August 2022
+
+--------------------
+
+==== planning documents: ====
+
+→ [[~/research/CMIP6_downscaling/resources/programme/ML_methods_downscaling.pdf|Proposed ML Methodogy]] (see also [[https://niwa.sharepoint.com/:w:/r/sites/SP-BSP22301/Shared%20Documents/ML%20Downscaling/ML_methods_downscaling.docx?d=wcacb79e0b7c14d27a833e21801e6b6bb&csf=1&web=1&e=sfiJcG|File on the wiki]])
+
+→ [[~/research/CMIP6_downscaling/resources/programme/WP2_timetable.pdf|work programme]] (see also [[https://niwa.sharepoint.com/:w:/r/sites/SP-BSP22301/Shared%20Documents/ML%20Downscaling/Work%20Programme/WP2_timetable.docx?d=w9cb54d9b500547308d8e53de4d00585d&csf=1&web=1&e=CFNsnh|file on the wiki]]) 
+
+--------------------
+
+==== tracking and working ====
+
+For the JIRA page tracking the progress of the project: 
+
+https://tracking.niwa.co.nz/projects/MLAI/issues/MLAI-45?filter=allopenissues&orderby=cf%5B10551%5D+ASC%2C+priority+DESC%2C+updated+DESC 
+
+see also the Wiki on the Teams page 
+
+https://git.niwa.local/nz-climate-projections
+
+and the repository 
+
+https://git.niwa.local/nz-climate-projections 
+
+some slides 
+
+https://niwa-my.sharepoint.com/:p:/g/personal/neelesh_rampal_niwa_co_nz/ER9J5JquAsJJtPrqZDJ32d0B5aW4Xk3qL_F6OvYCnXlzdw?email=Nicolas.Fauchereau%40niwa.co.nz&e=4%3AVLxCh4&at=9&CID=b8bb522e-425a-2823-69cc-2f49761baec5 
+
+--------------------
+
+==== repositories ====
+
+https://github.com/ClimateImpactLab/downscaleCMIP6 
+
+https://github.com/carlos-gg/dl4ds 
+
+https://github.com/Dan-Boat/PyESD
+
+https://github.com/jhamman/LOCA_Downscaling_Analysis
+
+and the most relevant one: 
+
+https://github.com/carbonplan/cmip6-downscaling	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

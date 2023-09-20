@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-11T08:33:02+12:00
+
+====== Tuesday 11 May 2021 ======
+
+==== CPP WRs ====
+
+== todo ==
+
+redo dry runs analysis selecting longer dry spells (20 days ?) 
+
+see: **notebooks/read_VCSN_do_extremes_analysis_dryruns.ipynb** 
+
+For the paper: 
+
+That the occurence of extremes over NZ is determined by interactions between flow and topography seems self-evident, but to what extent the occurence of extremes is dominated by certain flow patterns ? this paper attempts to answer this question by mapping extremes to circulation regimes in a novel way. 
+
+--------------------
+
+==== GP regression for interpolation and kriging ====
+
+see post from Maxime Rio: 
+
+https://teams.microsoft.com/l/message/19:f20e52ccc3c54048b67e0995e37200d3@thread.tacv2/1620703215606?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&groupId=582cda94-a824-44da-a90a-d2c77e9e21ee&parentMessageId=1617059629915&teamName=T%26I%20Analytics%20%26%20Modelling%20Hub&channelName=Statistics&createdTime=1620703215606
+
+[15:20] Maxime Rio
+James Sturman some types of Kriging are called Gaussian processes in other communities and... there are some good toolboxes for these in Python (and certainly in R but I don't know them (smile)):
+
+→ GPy (the ancestor https://gpy.readthedocs.io/en/latest/index.html)
+→ GPflow (accelerated with Tensorflow https://github.com/GPflow/GPflow, quite useful if you need non-Gaussian likelihood or large scale regression using inducing-points, can use a GPU)
+→ GPyTorch (acceleratd using PyTorch https://gpytorch.ai/, also very scalable, even more if your data are already on a grid, can use a GPU)
+	
+
+Now I don't know about the specificities of Empirical Bayesian Kriging so... it might not be possible to replicate the method using these toolboxes
+
+

@@ -1,0 +1,76 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-22T12:13:34+12:00
+
+====== Monday 22 Jun 2020 ======
+
+===== ICU Hotspot =====
+
+Refactored the utility functions and the mapping functions in **utils.py** and **plot.py** respectively, see 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/code/hotspot]] 
+
+notebook now imports and uses these functions, see 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/notebooks/GPM_IMERG/calculate_and_map_decile_bin.ipynb]] 
+
+=== Processing steps ===
+
+**1) download the latest data, extract domain, interpolate on the TRMM grid** 
+
+see  get_daily_GPM_IMERG_netcdf.py in [[~/operational/ICU/ops/data/GPM_IMERG/daily/scripts]] 
+
+call with 
+
+./get_daily_GPM_IMERG_netcdf.py -o ../extended_SP -lonW 125 -lonE 240 -latN 25 -latS -50 -s 20200608 -e 20200622
+
+2**) get the last N [30, 60, 90] days **
+
+3) calculate and plots the deciles categories 
+
+
+===== Journal Club: =====
+
+
+The code is available at https://github.com/FREVA-CLINT/climatereconstructionAI  
+
+
+It i Is an applictaion of this code 
+
+https://github.com/naoto0804/pytorch-inpainting-with-partial-conv 
+
+and more probably this one 
+
+https://github.com/NVIDIA/partialconv 
+
+by NVIDIA 
+
+application of the paper https://arxiv.org/abs/1804.07723 
+
+Image Inpainting for Irregular Holes Using Partial Convolutions
+
+There's also a keras implementation here: 
+
+https://github.com/MathiasGruber/PConv-Keras 
+
+also see: 
+
+https://gitlab.insa-rouen.fr/sdelecourt/inpaintim 
+
+seems to be all based on the UNET architecture 
+
+BAGGING ensembles 
+
+"""
+ensemble learning using bootstrap aggregation to improve decadal climate predictions
+
+"""
+
+look for **Kadow, C., Illing, S., Kröner, I., Ulbrich, U. & Cubasch, U. Decadal climate predictions improved by ocean ensemble dispersion filtering. J. Adv. Modeling Earth Syst. 9, 1138–1149 (2017).** 
+
+
+
+
+
+
+

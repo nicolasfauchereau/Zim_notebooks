@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-09T15:19:00+12:00
+
+====== TODO ======
+Created Tuesday 09 August 2022
+
+→ Create documentation laying out the variables, diagnostics and metrics suggested to be used to evaluate the dynamical models' simulations 
+outputs against observations, and the downscaling models (SDBA / BCSD as well as ML) outputs against observations and against dynamical model's simulations 
+
+
+variable 							 statistic 
+
+		preciaxpitation 
+												monthly accumulations
+
+		
+		
+		
+		
+		
+		
+		temperature 
+
+--------------------
+
+==== on cliops ====
+
+VCSN augmented 
+
+files created in April 21 
+
+**home/srinivasanr/VCSN_ChristianZ/500comb/input**
+
+
+

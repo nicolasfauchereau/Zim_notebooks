@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-02-18T09:57:18+13:00
+
+====== Thursday 18 Feb 2021 ======
+
+==== finding the path to an executable in Python ====
+
+use 
+
+shutil.which(executable) 
+
+--------------------
+
+==== script to shift the longitudes in a shapefile to go from -180 → 180 to 0 → 360 ====
+
+see [[~/bin/shift_shapefile.py]] 
+
+Note that it does not get rid of the bloody dateline, so will need to do something about it e.g. for the EEZ if we ever re-generate the shapefiles ... 
+
+--------------------
+
+==== GADM shapefiles for countries etc .... ====
+
+https://gadm.org/index.html 
+
+GADM provides maps and spatial data for all countries and their sub-divisions. You can browse our maps or download the data to make your own maps.  
+
+--------------------
+
+==== read and clip shapefiles with other geometries ====
+
+see: [[~/Jupyter_notebooks/Geospatial_Python/read_and_clip_shapefiles.html]]
+
+illustrating how one can use geometries to clip shapefiles ... 
+
+--------------------
+
+DL catch up with Neelesh and Raghav 
+
+Neelesh: encodings (vanilla autoi-encorder for climate indices, resnet architecture for SSTs) fed into KNN give good results for NNI rainfall 
+Raghav: LSTM on climate indices, also good results ... 
+
+~ 50% accuracy for NNI rainfall over period 2015 - 2019 (for seasonal values) 
+
+--------------------
+
+==== reading a ZIPPED shapefile with Python / Geopandas ====
+
+shape = gpd.read_file('zip:///home/nicolasf/Desktop/gadm36_NZL_shp.zip') 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-07T09:13:58+12:00
+
+====== Wednesday 07 Apr 2021 ======
+
+==== EvalML: an AutoML library written in python. ====
+
+https://evalml.alteryx.com/ 
+
+https://github.com/alteryx/evalml
+
+--------------------
+
+==== ICU: calculation of the seasonal probabilities ====
+
+see [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CDS/version_2/2_calculate_ensemble_probabilities_of_forecasts_seasonal.py]] 
+
+**forecasts (most likely percentile category)**
+{{./screenshot_2021-04-07-110151.png}}
+
+**observed GPM-IMERG percentile of score **
+{{./screenshot_2021-04-07-105451.png}}
+
+**hotspots, based on next season (AMJ) percentile category** 
+{{./screenshot_2021-04-07-105606.png}}
+
+--------------------
+
+==== Library for converting non-nbdev libraries and projects to nbdev ====
+
+https://github.com/Novetta/lib2nbdev
+
+--------------------
+
+==== notebook for the calculation of the hindcast climatologies for each Island Group ====
+
+see **notebooks/CDS/version_2/calculate_hindcast_climatology_region_mask_version_2.ipynb** 
+
+
+
+
+
+
+
+
+
+
+
+
+

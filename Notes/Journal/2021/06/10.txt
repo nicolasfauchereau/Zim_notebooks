@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-10T10:50:27+12:00
+
+====== Thursday 10 Jun 2021 ======
+
+==== Tabular Data: Deep Learning is Not All You Need ====
+
+@SI @ML @DL 
+
+study shows that XGBoost outperforms these deep [learning] models across the [tabular] datasets, including [the] datasets used in the papers that proposed the deep [learning] models."
+
+
+--------------------
+
+==== Top 10 Automated Machine Learning(Auto ML) tools used in 2020-2021 ====
+
+@ML @autoML @SI 
+
+https://www.linkedin.com/pulse/top-10-automated-machine-learningauto-ml-tools-used-2020-2021-sahu 
+
+https://autokeras.com/
+
+https://www.automl.org/automl/auto-sklearn/: see also 
+
+--------------------
+
+

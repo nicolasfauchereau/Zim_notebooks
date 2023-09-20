@@ -1,0 +1,90 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-03T12:59:04+13:00
+
+====== Wednesday 03 Mar 2021 ======
+
+==== Meeting with Doug about the ICU forecast product (hotspot) ====
+
+see email sent to Doug, and forwarded to Ben: 
+
+"""
+Hi Ben
+
+I had a good catch up with Doug this morning about the new ICU products, based on the CDS probabilistic forecasts ... I just wanted to keep you in the loop as I think this very well could be applied to NZ, i.e. to highlight regions at drought potential: we could imagine something where we take the NZDI and then couple that with the regions where the CDS MME indicates that dry conditions (below some given percentile thresholds, e.g. 10, 20, 40%) are expected to either persist or worsen ... The notebooks attached hopefully will give you a feel for what we could do ...
+
+cheers
+
+Nico
+
+From: Nicolas Fauchereau
+Sent: Wednesday, 3 March 2021 11:50 AM
+To: Doug Ramsay <Doug.Ramsay@niwa.co.nz>
+Subject: HTML version of the notebooks
+ 
+Doug
+
+Thought I would send you the HTML version (that you can open in your browser) of the notebooks I went through with you just now, the first one (calculate_ensemble_probabilities.html) calculates the probability for each decile category, determine the most likely category, apply constraints (i.e. the situation either stay the same or worsen), etc, and the second (map_forecast_hostpots.html) creates a consolidated dataset with the observations (in this case the past 90 days percentiles) and apply further constraints (i.e. mask the forecasts except where the observations where below a given percentile, etc)
+
+Could help with your lists of products to show for the ICU and the Video + website .... 
+"""
+
+--------------------
+
+==== facetgrid plots with cartopy and xarray ====
+
+see example below: 
+
+def make_gridlines(ax, lonstep=5, latstep=5): 
+	gl = ax.gridlines(draw_labels=True, linestyle=':', xlocs=np.arange(-180, 180 + lonstep, lonstep), ylocs=np.arange(-90, 90+latstep, latstep), crs=ccrs.PlateCarree())
+	gl.top_labels = False
+	gl.right_labels = False
+
+cbar_ticklabels = [f"<= {x}" for x in range(10, 50, 10)]
+
+cbar_ticklabels 
+
+['<= 10', '<= 20', '<= 30', '<= 40']
+
+
+for GCM in GCMs: 
+
+	### plot something varying along lon, lat and another dimension, which will be mapped to the columns 
+	
+	### the colorbar keyword arguments can be set here, but note that the labels     
+	fg = sub_masked.sel(GCM=GCM).squeeze()['precip'].plot.pcolormesh(x='lon',y='lat',col='step', figsize=(10,5), \
+															cmap=plt.cm.Oranges_r, \
+															levels=range(5), \
+															cbar_kwargs={'ticks':np.arange(0.5, 4.5, 1), 'shrink':0.45, 'aspect':30, 'orientation':'horizontal', 'pad':0.1}, \
+															subplot_kws=dict(projection=ccrs.PlateCarree(central_longitude=180)), \
+															transform=ccrs.PlateCarree());
+    
+
+
+	fg.map(lambda: plt.gca().coastlines(resolution='10m', lw=0.5))
+	fg.cbar.ax.set_xticklabels(cbar_ticklabels)
+	fg.cbar.set_label('percentile')
+	[fg.axes[0][i].set_title(f'{GCM} ' + fg.axes[0][i].get_title()) for i in range(3)]
+	[make_gridlines(x, lonstep=20, latstep=10) for x in fg.axes[0]]
+    
+--------------------
+
+==== formatting date (init date for example) in an xarray dataset ====
+
+dset.time.dt.**strftime**('%Y-%m').data[0]
+
+
+--------------------
+
+==== superscript generator ====
+
+generate unicode superscript !!! 
+
+https://lingojam.com/SuperscriptGenerator
+
+
+
+
+
+
+

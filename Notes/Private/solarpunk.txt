@@ -1,0 +1,88 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-16T09:24:02+13:00
+
+====== solarpunk ======
+Created Thursday 16 January 2020
+
+technologies 
+
+AI and Humans working together (see 'human compatible') 
+smart sensors 
+IOT 
+autonomous drones
+
+especially needed because we are going to have to transition to a scarcity economy: wastages of resources (food, water, energy) cannot be tolerated anymore)  
+
+huge potential for ethical AI in a solarpunk future: good at ingesting and making sense of a huge amount of data, good at optimizing processes (caveat: one really needs to think deeply about what we are optimizing for and the side effects of this: provide AI with the right 'incentives')
+
+each community has its (group of) expert(s) on: 
+
++ decentralized communication networks and platforms (decentralized web, peer to peer, beaker browser, dat: protocol, scuttlebutt social network) 
++ data scientist 
+
+Also low tech plant-based technological solutions: 
+
+https://en.wikipedia.org/wiki/Tree_shaping
+
+see also: 
+
+https://www.taschen.com/pages/en/catalogue/architecture/all/04698/facts.julia_watson_lotek_design_by_radical_indigenism.htm
+
+also read: "The case for ... making low-tech 'dumb' cities instead of 'smart' ones"
+
+https://www.theguardian.com/cities/2020/jan/15/the-case-for-making-low-tech-dumb-cities-instead-of-smart-ones?CMP=Share_iOSApp_Other&fbclid=IwAR0wcKJ9Nasm3ypMeJlXotSXWQgMLIhele7wlinSS3Hu2gRUdgVHWpfG9NU 
+
+also look at alleviating urban flooding using the 'sponge city' concept: 
+
+https://www.theguardian.com/artanddesign/2018/mar/21/turning-cities-into-sponges-how-chinese-ancient-wisdom-is-taking-on-climate-change
+
+===== Micro-grids =====
+
+https://www.tumblr.com/search/solarpunk technology 
+
+===== AI to speak for the trees =====
+
+The lorax project: build an AI that 'speaks for the trees': i.e. each recognizable ecosystem has legal personhood, and an AI 'represents' them with regards to any decision that is made ... 
+
+Eco-historical regions 
+
+communities are organized along lines corresponding to identifiable eco-historical regions, respecting indigeneous demarcations 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== Sustainable Living Specialist ===
+
+https://www.linkedin.com/jobs/view/1747695311/?recommendedFlavor=IN_NETWORK&refId=3e5c1663-1d9b-4453-87f7-2e1f47b878e8&trk=eml-jymbii-organic-job-card&midToken=AQGpVisCBtV9JQ&trkEmail=eml-jobs_jymbii_digest-null-2-null-null-dgz69%7Ek7b2k15k%7Ecd-null-jobs%7Eview
+
+Company Name Auckland Council Company Location Auckland, NZ 
+
+Here are some examples of awesome sustainability initiatives out there that we love:
+
+Live Lightly, FutureFit, Love Food Hate Waste, climathon, Healthy Rentals, Compost Collective, Eco-Neighbourhoods, Sustainable Whanau Challenge, Home Energy Audit Toolkit, Auckland Transport bike challenge, Love Your Bike Hub - EcoMatters, Low carbon action plan for Waitematāv.
+
+==== Decentralized Web and communications ====
+
++ Beaker browser [https://beakerbrowser.com/about/](https://beakerbrowser.com/about/) 
++ decentralized web: 
++ https://matrix.org/: An open network for secure, decentralized communication 
++ kiwix: offline Wikipedia (78Bg for all of English Speaking wikipedia)
+
+==== Hydrogen generation ====
+
+https://www.renews.biz/59563/orsted-promotes-hydrogen-production-in-turbine-towers/#.XpE-jr2SIVI.twitter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

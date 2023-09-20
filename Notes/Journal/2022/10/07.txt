@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-07T09:16:48+13:00
+
+====== Friday 07 Oct 2022 ======
+
+==== French Pacific Fund ====
+
+@ICU 
+
+call for proposal, deadline 11 November 
+
+https://nz.ambafrance.org/Pacific-Fund-2023
+
+--------------------
+
+==== calculation of surface parameters from elevation (slope, curvature, and aspect ) using xarray-spatial ====
+
+@MBIE @CMIP6 
+
+see https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/tutorials/surface_analysis.ipynb 
+
+also downloaded in [[/home/nicolasf/Jupyter_notebooks/]]**surface_analysis_xarray-spatial_Planetary_Computer.ipynb**
+
+with example around Hamilton, NZ
+
+could use NASA-DEM to calculate the average and std quantities for each VCSN grid point, and feed that to a model including wind and spec etc 
+
+see also https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/tutorials/proximity_tools.ipynb 
+
+[[/home/nicolasf/Jupyter_notebooks/proximity_tools_xarray-spatial_Planetary_Computer.ipynb]] 
+
+--------------------
+
+===== Installation of pycaret =====
+
+@ED 
+
+installed in environment 'ED' 
+
+trick is just to create a barebone conda env (with mamba, and just Python=3.9) and install EVERYTHING using pip (not conda / mamba), including xarray etc
+
+**BUT** cannot install fbprophet ! 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+

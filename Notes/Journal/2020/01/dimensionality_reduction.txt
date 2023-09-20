@@ -1,0 +1,96 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-10T10:47:12+13:00
+
+====== dimensionality reduction ======
+Created Friday 10 January 2020
+
+=== comparing dimensionality reduction using PCA and Auto-encoders ... ===
+
+see:  
+
+https://github.com/shadiakiki1986/test-ml.git 
+
+and notably 
+
+https://nbviewer.jupyter.org/github/shadiakiki1986/test-ml/blob/master/t1-AE-PCA/t1e1_pca_ae_nonlinear-2-unchained.ipynb
+
+A local version of the code, using a modified version of the utils.py module, is available in
+
+ 
+
+[[/home/nicolasf/research/Smart_Ideas/resources/dimensionality_reduction/test_ML_autoencoders_notebooks/test-ml/t1-AE-PCA]]
+
+for a comparison between PCA and auto-encoders for dimensionality reduction. 
+
+----------------------------------------------------------------------------------------------------------------------
+
+Several interesting resources amd examples are available in the folder: 
+
+[[/home/nicolasf/research/Smart_Ideas/resources/dimensionality_reduction]]
+
+----------------------------------------------------------------------------------------------------------------------
+
+Try combining the code in 
+
+https://blog.keras.io/building-autoencoders-in-keras.html 
+
+with the code in 
+
+[[/home/nicolasf/research/Smart_Ideas/resources/dimensionality_reduction/test_ML_autoencoders_notebooks/test-ml/t1-AE-PCA]] 
+
+to actually get the low dimensional representation of the original data 
+
+----------------------------------------------------------------------------------------------------------------------
+
+=== Autoencoders with Keras, TensorFlow, and Deep Learning ===
+
+https://www.pyimagesearch.com/2020/02/17/autoencoders-with-keras-tensorflow-and-deep-learning/
+
+and file://home/nicolasf/research/Smart_Ideas/resources/dimensionality_reduction/Autoencoders with Keras, TensorFlow, and Deep Learning - PyImageSearch (2020-02-17 10_53_33 AM).html
+
+code: keras-autoencoders.zip in [[/home/nicolasf/research/Smart_Ideas/resources/dimensionality_reduction]]	 
+
+----------------------------------------------------------------------------------------------------------------------
+
+=== Deep inside: Autoencoders ===
+
+https://towardsdatascience.com/deep-inside-autoencoders-7e41f319999f 
+
+also: 
+
+file://home/nicolasf/research/Smart_Ideas/resources/dimensionality_reduction/Deep inside_ Autoencoders - Towards Data Science (2020-02-18 11_51_54 AM).html
+
+---------------------------------------------------------------------------------------------------------------------- 
+
+=== kNN classification using Neighbourhood Components Analysis ===
+
+see https://kevinzakka.github.io/2020/02/10/nca/ 
+
+and [[/home/nicolasf/research/Smart_Ideas/resources/dimensionality_reduction/NCA.html]] 
+
+https://papers.nips.cc/paper/2566-neighbourhood-components-analysis.pdf 
+
+https://github.com/kevinzakka/nca
+
++ local pull: [[/home/nicolasf/research/Smart_Ideas/resources/repos_libraries/nca]] 
+
+---------------------------------------------------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

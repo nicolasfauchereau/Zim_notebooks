@@ -1,0 +1,100 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-21T08:50:45+12:00
+
+====== Tuesday 21 Jul 2020 ======
+
+==== TODO ====
+
+@TODO 
+
+1. ~~review Shailesh's report ~~
+2. ~~write Simon Woodward~~ 
+3. Hubs: 
+	a. ~~statistics channel in the analytics and modelling hub~~ 
+	b. create a channel on each hub dedicated to ideas sharing, 'hounding' people who participated in the workshops to create a short post explaining their idea, hopefully this will generate discussions 
+	c. change the 'Key Experts' tab to 'Team members' expertise', the 'key experts' will emerge naturally (hopefully) from this, maybe people do not feel comfortable being seen a considering themselves 'experts' ? also change it to e.g. excel spreadsheet, it is a wiki presently and it seems it does not allow for simultaneous editing, same goes for the ideas / suggestions table 
+
+4. schedule follow up on T&I Hubs leadership meeting 
+
+
+do not forget to invite: 
+
+Aquaculture: Andrew Forsythe, CS
+CAH: Andrew Tait, CS | Petra Pearce, PM
+Coasts and Ocean: Barb Hayden, CS | Graeme Inglis, PM
+EI: Jochen, CS
+Fisheries: Rosemary Hurst, CS
+Freshwater and Eastuaries: Scott Larned, CS | Neale Hudson, PM
+Te Kuwaha ?
+Pacific Rim: Doug Ramsey, Manager
+HPC: Kameron
+IT ? 
+
+5. Watercare, see email from JM dated Monday 20 July 
+6. ~~write back to Raghav re. calculations of the observed categories~~ : definitely a problem on cliops 
+
+===== Deep Image Prior for image inpainting and image super-resolution =====
+
+see: 
+
+https://github.com/DmitryUlyanov/deep-image-prior 
+
+and 
+
+https://dmitryulyanov.github.io/deep_image_prior
+
+{{./screenshot_2020-07-21-101803.png}}
+
+particularly interesting for potential applications to image inpainting ... 
+
+
+===== PODPAC: Pipeline for Observational Data Processing Analysis and Collaboration =====
+
+see https://podpac.org/ 
+
+PODPAC is a python library that builds on the scientific python ecosystem to enable simple, reproducible geospatial analyses that run locally or in the cloud. 
+
+see **installation** in environment 'PODPAC' 
+
+conda create -n podpac python=3 anaconda
+
+conda activate podpac
+
+$ pip install podpac                		# base installation
+$ pip install podpac[datatype]      	# install podpac and optional data handling dependencies
+$ pip install podpac[notebook]      	# install podpac and optional notebook dependencies
+$ pip install podpac[aws]           	# install podpac and optional aws dependencies
+$ pip install podpac[algorithm]     	# install podpac and optional algorithm dependencies
+$ pip install podpac[all]           	# install podpac and all optional dependencies
+
+see related projects: 
+
+PODPAC Drought Monitor: https://github.com/creare-com/podpac-drought-monitor and cloned locally in [[~/operational/drought_monitor]]
+
+PODPAC examples: https://github.com/creare-com/podpac-examples.git and cloned into 'jupyter_notebooks" 
+
+===== Dimensionality-Reduction of Climate Data using Deep Autoencoders =====
+
+We explore the use of deep neural networks for nonlinear dimensionality reduction in climate applications. We train convolutional autoencoders (CAEs) to encode two temperature field datasets from pre-industrial control runs in the CMIP5 first ensemble, obtained with the CCSM4 model and the IPSL-CM5A-LR model, respectively. With the later dataset, consisting of 36500 96×96 surface temperature fields, the CAE out-performs PCA in terms of mean squared error of the reconstruction from a 40 dimensional encoding. Moreover, the noise in the filters of the convolutional layers in the autoencoders suggests that the CAE can be trained to produce better results. Our results indicate that convolutional autoencoders may provide an effective platform for the construction of surrogate climate models. 
+
+see: https://arxiv.org/abs/1809.00027 
+
+also paper from Sher: 
+
+Code and data for "Towards data-driven weather and climate forecasting: Approximating a simple general circulation model with deep learning"
+
+https://zenodo.org/record/1472023 
+
+and paper: 
+
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL080704
+
+see also the code from Philip Brohan 
+
+
+
+
+
+
+

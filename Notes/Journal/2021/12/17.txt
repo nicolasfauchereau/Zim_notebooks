@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-17T09:33:02+13:00
+
+====== Friday 17 Dec 2021 ======
+
+Python environment manager extension for vscode 
+
+{{./screenshot_2021-12-17-093309.png?width=1000}}
+
+automatically (select the arrow) activate an environment in the terminal 
+
+--------------------
+
+==== ETNA: Time Series Library ====
+
+@ML @timeseries 
+
+see blog post: 
+
+https://medium.com/its-tinkoff/forecasting-with-etna-fast-and-furious-1b58e1453809
+
+code: 
+
+https://github.com/tinkoff-ai/etna 
+
+Note that it requires a weight and biases login and API key, which is stored locally in the .netrc file 
+cd
+machine api.wandb.ai
+  login user
+  password 74579f1783da7100057c8b5a73ebc3f675ef9743
+
+exemples in 
+
+[[/home/nicolasf/sources/etna/examples]] 
+
+all working ! 
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-20T13:15:53+13:00
+
+====== Monday 20 Feb 2023 ======
+
+==== dataprep ====
+
+https://docs.dataprep.ai/index.html
+
+see for cleaning up of lat / lon 
+

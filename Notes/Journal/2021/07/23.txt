@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-23T09:11:06+12:00
+
+====== Friday 23 Jul 2021 ======
+
+==== How to structure a Python project ====
+
+@python 
+
+see chapter "Creating Packages with Python" in Research Software Engineering with Python book: https://merely-useful.tech/py-rse/ 
+
+https://merely-useful.tech/py-rse/packaging.html
+
+--------------------
+
+==== GDD (Growing Degree Days) calculation ====
+
+@ZESPRI 	
+
+check https://www.stats.govt.nz/indicators/growing-degree-days 
+
+
+To calculate GDDs, you must first find the mean temperature for the day. The mean temperature is found by adding together the high and low temperature for the day and dividing by two. If the mean temperature is at or below TBASE, then the Growing Degree Day value is zero. If the mean temperature is above TBASE, then the Growing Degree Day amount equals the mean temperature minus TBASE. For example, if the mean temperature was 75° F, then the GDD amount equals 10 for a TBASE of 65° F. You can think of Growing Degree Days as similar to Cooling Degree Days, only the base temperature can be something besides 65° F.
+4_map_MME_probabilistic_forecast.ipynb

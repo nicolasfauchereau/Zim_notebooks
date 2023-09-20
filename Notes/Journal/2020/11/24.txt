@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-24T11:19:19+13:00
+
+====== Tuesday 24 Nov 2020 ======
+
+Pyleoclim 
+
+see 
+
+https://pyleoclim-util.readthedocs.io/en/stable/
+
+especially 
+
+https://pyleoclim-util.readthedocs.io/en/stable/utils/introduction.html
+
+which includes several very useful functions, such as https://pyleoclim-util.readthedocs.io/en/stable/utils/correlation/corr_sig.html#utils-corr-sig which calculates the significance for non IID (i.e. serially correlated) time-series 
+
+also have a look at: https://nbviewer.jupyter.org/github/LinkedEarth/Pyleoclim_util/blob/master/example_notebooks/pyleoclim_ui_tutorial.ipynb 
+
+which is totally SICK, includes causality analysis, wavelets and wavelet coherence analysis, etc 
+
+"""
+//The current version of Pyleoclim supports analysis such as spectral analysis, wavelet analysis, correlation analysis, coherence analysis, and causality analysis, etc.//
+"""
+
+see also: 
+
+https://github.com/LinkedEarth/LiPDbooks/tree/master/notebooks
+
+geared towards the analysis of LiPD [Linked Paleo Data] data 
+

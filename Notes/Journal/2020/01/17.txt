@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-17T08:43:21+13:00
+
+====== Friday 17 Jan 2020 ======
+
+[[Journal:2019:12:19 data processing]] 
+
+NOTE: 
+
+need to re-download and pre-process the UKMO forecasts (2017 - 2019) because some fields were missing, see Page above 

@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-27T16:02:37+13:00
+
+====== Tuesday 27 Sep 2022 ======
+
+==== CPP:  Mapping weather extremes to circulation regimes in Aotearoa New Zealand ====
+
+@CPP @WR 
+
+see paper: 
+
+→ https://niwa-my.sharepoint.com/:w:/g/personal/nicolas_fauchereau_niwa_co_nz/EVcxo2IrcbhCjU064b_ymLkB5v-IFDPSl-jbrcq9UmP5Rg?e=C1eezO 
+
+and supplementary material: 
+
+→ https://niwa-my.sharepoint.com/:w:/g/personal/nicolas_fauchereau_niwa_co_nz/EW_SyghPEFVGjSU4vwXX2noBsUX4UmCBVBZeuBUvKteC1g?e=raQVbw 
+
+notebook for the maps presented in supplementary material: **read_extremes_mapping_results_map_types_filtered_shapefiles.ipynb** 
+
+in [[/home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper]] 
+
+--------------------
+
+==== Regional councils shapefiles clipped to the coastlines ====
+
+@CPP @WR 
+
+download from: 
+ 
+https://datafinder.stats.govt.nz/layer/87753-regional-council-2015-v1-00-clipped/
+
+see example for basemap generation in **make_topo.ipynb** in [[/home/nicolasf/research/CPP/WRs/notebooks/Weather_and_Climate_paper]] 
+

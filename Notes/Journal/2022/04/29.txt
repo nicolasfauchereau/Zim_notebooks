@@ -1,0 +1,108 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-04-29T13:10:39+12:00
+
+====== Friday 29 Apr 2022 ======
+
+==== Data for Wallis and Futuna ====
+
+@ICU @EVA  
+
+see email from 
+
+Christophe POINT-DUMONT <christophe.point-dumont@meteo.fr>
+Fri 29/04/2022 12:16 PM
+
+reading the data, doing the conversions, etc: 
+
+**read_WF_stations.py** 
+
+
+--------------------
+
+==== Difference in water availability in the Pacific ====
+
+@ICU
+
+**for the ICU paper** 
+
+email from Shaun Williams 
+
+"""
+Hi Nico
+
+Just to include some documents which are likely relevant unpacking (or deriving relationships for tools ingestion etc) re water availability differences in the Pacific (groundwater vs water tank, etc) and how meteorological drought translate into water security issues.
+
+Let me know if any of these are useful for deriving the info you need for your paper and what info gaps are still looming – as we can then follow-up with our SPC and other regional colleagues to help plug some of the info gaps.
+
+Cheers, Shaun
+
+--------------------
+
+2005:  Microsoft Word - JC0181_Mirti and Davies.DOC (pacificwater.org) -- Drinking Water Quality in the Pacific Island Countries: Situation Analysis and Needs Assessment
+
+2011:    Freshwater_Under_Threat-Pacific_Islands.pdf (reliefweb.int) -- Vulnerability Assessment of Freshwater Resources to Environmental Change
+
+2011:  15-RSC3-CLIMATE VARIABILTY, CHANGE AND WATER (iwlearn.net) -- Climate Variability & Climate Change Issues Affecting the Achievement of Water and Sanitation Outcomes in Pacific Island Countries
+
+2011:  Microsoft Word - Water Security in PICs & East Timor, for DCCEE by Tony Falkland, FINAL, 22Aug11.doc (theprif.org) -- Report on Water Security & Vulnerability to Climate Change and Other Impacts in Pacific Island Countries and East Timor
+
+2015:  SANITATION, DRINKING-WATER AND HEALTH IN PACIFIC ISLAND COUNTRIES - 2015 UPDATE AND FUTURE OUTLOOK – (see attached document)
+
+2017:  Climate Change Adaptation in Pacific Countries | springerprofessional.de – the Frontmatter and also Chapter 17 touch on Drinking Water Security pathways
+
+2019:  Frontiers | Lessons From the Pacific Islands – Adapting to Climate Change by Supporting Social and Ecological Resilience | Marine Science (frontiersin.org) – includes a section on “revitalizing traditional wells”
+
+2021:  1 Climate change-final.pdf (canterbury.ac.nz) -- Climate change adaptation programmes on water security in the Pacific: A focus on the Solomon Islands
+
+"""
+
+--------------------
+
+==== avoiding disk quotas issues with large conda environments ====
+
+@python @conda @mamba 
+
+see email from Wolfgang Hayek: 
+
+"""
+Hi David,
+
+I would recommend going with either Tristan’s solution of symlinking .conda, or pointing conda to a different directory for its package cache by adding the following config to “~/.condarc”,
+
+pkgs_dirs:
+
+  - /some/path/conda/pkgs
+
+and creating conda environments outside the home directory. Both ways will avoid filling up your home directory.
+
+Cheers,
+
+Wolfgang
+"""
+
+--------------------
+
+==== GANs for spatio-temporal modelling ====
+
+@GAN @ML @downscaling   
+
+SPATE-GAN: Improved Generative Modeling of Dynamic Spatio-Temporal Patterns with an Autoregressive Embedding Loss 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

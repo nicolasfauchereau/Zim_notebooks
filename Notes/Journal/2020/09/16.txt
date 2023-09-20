@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-16T08:09:57+12:00
+
+====== Wednesday 16 Sep 2020 ======
+
+==== T2M downloaded ====
+
+The notebook for downloads is download_ECMWF_1981_T2M.ipynb 
+
+The notebook for the processing is **process_ECMWF_nc_downloads.ipynb** in [[~/research/Smart_Ideas/code/processors/CDS/notebooks]] 
+
+--------------------
+
+==== xarray multi-columns geographic plots with coastlines ====
+
+fg = clim.isel(step=0)['t2m'].plot(x='lon',y='lat', col='month', col_wrap=3, \
+								   subplot_kws=dict(projection=ccrs.PlateCarree(central_longitude=180), 
+												   transform=ccrs.PlateCarree()))
+fg.map(lambda: plt.gca().coastlines(resolution='10m'))
+
+--------------------
+
+==== Using PyTorch + interpretability with captum ====
+
+Some tips from Alvin Jia (alvin.jia@waikato.ac.nz) 
+
+I find it useful to look at the official tutorial at https://pytorch.org/tutorials/ and there are plenty of examples. Most of the time I just need to copy/paste some examples and make some changes to fit my scenarios.
+
+Speaking of handling large files, pytorch has the class torch.utils.data.DataLoader where you can specify the batch size and it works even when the file size is larger than memory. Alternatively, for non-image data, you can simply use pandas.read_csv() method (https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#iterating-through-files-chunk-by-chunk), where the large file is split into chunks and loaded chunk by chunk.
+
+Best,
+Alvin
+
+--------------------
+
+==== VAE-SNE: a deep generative model for dimensionality reduction and clustering ====
+
+could be used for the Smart Ideas ?? 
+
+Note that the code has not been released yet ... the (empty) github repo is at https://github.com/jgraving/vaesne 
+
+paper is 
+
+Graving, J. M., and I. D. Couzin, 2020: VAE-SNE: a deep generative model for simultaneous dimensionality reduction and clustering. Animal Behavior and Cognition,.
+
+--------------------
+
+==== prepare the ECMWF + target values over 1981 - 2016 (train) and 2017 - 2019 (test) for PYCARET and AUTOGLUON ====
+
+see **prepare_ONE_GCMs_to_csv.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/engineer/notebooks]] 
+
+the files created are 
+
+ECMWF_1981_2010_and_targets_cat3_and_anomalies_TMEAN_training_set.csv
+ECMWF_1981_2010_and_targets_cat3_and_anomalies_TMEAN_test_set.csv 
+
+in [[/media/nicolasf/END19101/outputs/CSVs/]] 
+
+and copied in [[~/research/Smart_Ideas/outputs/CSVs/]] 
+
+The we can try structured Machine Learning models or meta-models such as AUTOGLUON, see **AutoGLUON_ensembling_ECMWF_1981_2010.ipynb** 
+
+
+

@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-12T13:30:32+13:00
+
+====== Tuesday 12 Oct 2021 ======
+
+Colorbars with choropleth and geopandas dataframes 
+
+@Python 
+
+see: https://geopandas.readthedocs.io/en/latest/docs/user_guide/mapping.html 
+
+interactive choropleth map
+
+see: https://vverde.github.io/blob/interactivechoropleth.html 

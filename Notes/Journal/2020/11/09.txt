@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-09T08:58:46+13:00
+
+====== Monday 09 Nov 2020 ======
+
+==== Apple and Pears, validation of the ENI forecasts agains the actual categories for the AP horticultural region: ====
+
+see: 
+
+**compare_ENI_Apple_and_Pears.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/targets/analysis]] 
+
+== rainfall ==
+
+percentage of categories matching (ENI category == HB region category) 
+
+69%
+
+accuracy is using the forecasts for ENI rainfall
+
+for rainfall, if I compare the forecast issued as part of the SCO with what actually happened in the AP horticultural region (a subsety of the whole ENI), the accuracy is 52% 
+
+== temperature ==
+
+percentage of categories matching (ENI category == HB region category) 
+
+81%
+
+for temperature, if I compare the forecast issued as part of the SCO with what actually happened in the AP horticultural region (a subsety of the whole ENI), the accuracy is 56% 
+ 
+**over the past 3 years**, the accuracy is ~ 54% for rainfall but up to 85% for temperature 
+
+== soil moisture ==
+
+percentage of categories matching (ENI category == HB region category)
+
+66% 
+
+for soil moisture, if I compare the forecast issued as part of the SCO with what actually happened in the AP horticultural region (a subsety of the whole ENI), the accuracy is **~ 56% with tolerance and 48% without tolerance** 
+
+**over the past 3 years**, the accuracy is ~ 60% with tolerance, 
+
+--------------------
+
+==== SOIL MOISTURE FORECASTs Apple and Pears ====
+
+running [[https://autogluon.mxnet.io/|AUTOGLUON]] models, soil moisture categories 
+
+so far preliminary results indicate ~ accuracy about **0.72** (!) for Soil Moisture, with simple random forest classifier, possibility that the resulting ensembles will exceed this accuracy. 
+
+for quintile categories, the preliminary accuracy is ~ 55%, using an extra-tree classifier with Gini criteria (will probably go up)
+
+possibly because the soil moisture results from the combination of rainfall (less predictable) and temperature (more predictable), but need to check first whether 
+it is not down to some preprocessing issues 
+
+
+

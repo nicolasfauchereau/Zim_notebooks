@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-01T07:53:59+13:00
+
+====== Thursday 01 Dec 2022 ======
+
+==== HPCF processing ====
+
+@HPCF @MBIE @downscaling 
+
+nn_storage_quota 
+
+{{./screenshot_2022-12-01-075454.png}}
+
+--------------------
+
+==== Processing of MSWEP ====
+
+@ICU @MSWEP
+
+see in 
+
+https://stackoverflow.com/questions/55370370/how-to-take-the-running-or-moving-average-from-multiple-daily-files
+
+**NOTE: conda activate CDO first**
+
+1) merge the files one year at a time first (quite slow) 
+
+for y in {1979..2020}; do cdo mergetime ${y}???.nc merged_${y}.nc; done 
+
+Then
+
+2) cdo mergetime merged_????.nc merged_1979_2020.nc: does not work: HDF error ... but that is due to the filesystem on [[/media/nicolasf/END19101,]] if output to [[/home/nicolasf/data/MSWEP/merged_1979_2020.nc]] it works 
+
+so now in  [[/home/nicolasf/data/MSWEP]] 
+
+3) delete the 29 Feb 
+
+cdo del29feb merged_1979_2020.nc **merged_1979_2020_noleap.nc**
+
+cdo del29feb: Processed 17167360000 values from 1 variable over 15339 timesteps [242.03s 119MB].
+
+4) then calculate running sum over 30, 60, 90 ... days  
+
+cdo  --timestat_date last runsum,30 merged_1979_2020_noleap.nc merged_1979_2020_noleap_runsum_30.nc 
+cdo  --timestat_date last runsum,60 merged_1979_2020_noleap.nc merged_1979_2020_noleap_runsum_60.nc 
+cdo  --timestat_date last runsum,90 merged_1979_2020_noleap.nc merged_1979_2020_noleap_runsum_90.nc
+
+
+5) 	then use the **process_runsums.ipynb** notebook in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/MSWEP]] to calculate the climatological averages and quantiles for each day of the year from the 30, 60, 90, 180 and 360 days accumulations. 
+
+
+
+
+
+
+

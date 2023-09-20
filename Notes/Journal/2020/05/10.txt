@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-10T18:29:58+12:00
+
+====== Sunday 10 May 20xarray leaflet ======
+
+==== Xarray leaflet: An xarray extension for tiled map plotting ====
+
+see: https://github.com/davidbrochart/xarray_leaflet 
+
+NOTE: only works in the classic notebook 
+
+==== xarray-events: events handling in xarray ====
+
+https://xarray-events.readthedocs.io/#
+
+see here for the definition of events: https://xarray-events.readthedocs.io/getting_started/what_are_events.html
+
+and here https://xarray-events.readthedocs.io/tutorials/weather_data/index.html  for example using weather data 
+
+but doesnt install with pip on linux 
+
+

@@ -1,0 +1,161 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-03T09:07:06+13:00
+
+====== Friday 03 Apr 2020 ======
+
+=== AutoGLUON experiments (continued) ===
+
+see [[Journal:2020:04:02|02/04/20]] 
+
+naming convention for the experiment folder: 
+
+**f'./autogluon_exp_{provider}_{GCM}_{var_X}pred_{region_name}_reg_{target_var}_targetvar_{target_type}_target_type'**
+
+**var_X** = features variables (e.g. //t2m// or //precip//)
+**target_var** = target variable (e.g. TMEAN, RAIN) 
+**target_type** = terciles categories (//cat_3//) → classification, or anomalies (//anomalies//) → regression
+**region_name** = region (NNI, WNI, ENI ...)
+
+To load a model from folder: 
+
+from autogluon import TabularPrediction as task
+
+pp = task.load(f'./autogluon_exp_{providerGCMvar_X}pred_{target_var}_targetvar_{target_type}_target_type')
+
+pp.fit_summary() 
+
+pp.predict_proba(): predict the probabilities in each category
+
+Then can compare with the calculation of the accuracy score 'the SCO way' with tolerance of 5% on the target category probability
+
+see in the module '**ml4seas/evaluation/calc_accuracy_sco**'
+
+will be then able to compare with the diagnostics coming from the SCO, e.g. for temperature
+
+@SCO_ACCURACY
+
+{{~/operational/NCC_ops/seasonal_validations/figures/3months/accuracy_variability_temp_tolerance_3months.png?width=800}}
+
+{{~/operational/NCC_ops/seasonal_validations/figures/3months/regions_accuracy_temp_forecasts_tolerance_3months.png?width=800}}
+
+and for **rainfall**: 
+
+{{~/operational/NCC_ops/seasonal_validations/figures/3months/regions_accuracy_rain_forecasts_tolerance_3months.png?width=800}}
+
+{{~/operational/NCC_ops/seasonal_validations/figures/3months/accuracy_variability_rain_tolerance_3months.png?width=800}}
+
+=== --- some diagnostics --- ===
+
+see **AutoGluon_in_depth.ipynb** 
+
+which includes some additional options when fitting compared to the demo example 
+
+I have included 
+
+**predictor = task.fit(train_data=train_data, label=region_name, auto_stack=True, output_directory=opath)**
+
+auto_stack set to True is expected to yield good results 
+
+see 
+
+https://autogluon.mxnet.io/tutorials/tabular_prediction/tabular-indepth.html#maximizing-predictive-performance
+
+=== T2M ===
+
+**ECMWF, predictor t2m **
+
+**NNI:** SCO acc = **0.88** over the past 3 years, 
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.596491**	0.160915	0.000609	1
+
+**WNI**: SCO acc = **0.77** over the past 3 years,
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.614035**	0.315983	0.000635	1
+
+**ENI**: SCO acc = **0.61** over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	**0.701754**	0.352713	0.000567	1
+
+**NSI**: SCO acc = **0.63** over the past 3 years,
+LEADERBOARD 10 	weighted_ensemble_k0_l1	**0.736842**	0.342669	0.000653	1
+
+**WSI**: SCO acc = **0.69** over the past 3 years,
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.666667**	0.426134	0.000621	1
+
+**ESI**: SCO acc = **0.58** over the past 3 years,
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.617544**	0.367487	0.000555	1
+
+=== PRECIP ===
+
+**ECMWF, predictor precip **
+
+**NNI:** SCO acc = **0.5555** over the past 3 years, 
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.684211**	0.328693	0.000619	1
+
+**WNI**: SCO acc = **0.50** over the past 3 years,
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.550877**	0.361925	0.000534	1
+
+**ENI**: SCO acc = **0.50** over the past 3 years,
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.557895**	0.352458	0.000726	1
+
+**NSI**: SCO acc =  **0.416** over the past 3 years,
+LEADERBOARD 10	weighted_ensemble_k0_l1	**0.561404**	0.421277	0.000628	1
+
+**WSI**: SCO acc = **0.2777** over the past 3 years,
+LEADERBOARD 10 weighted_ensemble_k0_l1	**0.550877**	0.400298	0.000545	1
+
+**ESI**: SCO acc = **0.5277** over the past 3 years,
+LEADERBOARD 10 weighted_ensemble_k0_l1	**0.568421**	0.348973	0.000528	1
+
+--- 
+
+**NOTES** 
+
+It seems that using  T2M as a predictor for precip (target, terciles) could better than using PRECIP as a predictor ... maybe because of the intermittent nature of precipitation, and its potential poor representation in the GCM. TODO: try using e.g. Z500 (to process to get the anomalies) as a predictor ... 
+
+Maybe suggest another strategy for the definition of the test set: shuffle, or select expressly seasons with particularly large anomalies. 
+
+processing of the Z500 downloads: change the permissions on GDATA to allow access to all subfolders in [[/media/nicolasf/GDATA]]
+
+The use the seasonal anomalies of Z500 to try and predict precip and temps 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-26T09:12:01+12:00
+
+====== Wednesday 26 Aug 2020 ======
+
+==== Ben Toms et al, MJO through Deep Learning and interpretability ====
+
+[[https://gmd.copernicus.org/preprints/gmd-2020-152/gmd-2020-152.pdf|Toms, B. A., K. Kashinath, Prabhat, and D. Yang, 2020: Testing the Reliability of Interpretable Neural Networks in Geoscience Using the Madden-Julian Oscillation. Climate and Earth System Modeling,.]]
+
+
+Note that the code and data is available on Zenodo at https://zenodo.org/record/3968896
+
+and cloned in [[/home/nicolasf/research/Smart_Ideas/resources/repos_application_cases/BenToms_MJO_DL_interpretation]] 
+
+and copied in [[/home/nicolasf/research/NN_climate]]  
+
+
+

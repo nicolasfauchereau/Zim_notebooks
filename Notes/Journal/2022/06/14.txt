@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-06-14T09:39:05+12:00
+
+====== Tuesday 14 Jun 2022 ======
+
+==== T2M hindcasts ====
+
+- ECMWF 288 
+**- UKMO: 96 !**
+- METEO-FRANCE: 288 
+- DWD: 288 
+- CMCC: 288 
+- NCEP: 288 
+**- JMA: 120**
+- ECCC_CanCM4i: 288 
+**- ECC_GEM5_NEMO: 168** 
+
+--------------------
+
+==== mlinsights: tricky scikit-learn ====
+
+http://www.xavierdupre.fr/app/mlinsights/helpsphinx/index.html
+
+dependency of scilkit-downscale 
+
+
+
+
+
+
+
+
+
+

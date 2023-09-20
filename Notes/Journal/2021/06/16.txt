@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-16T16:20:38+12:00
+
+====== Wednesday 16 Jun 2021 ======
+
+==== Waikato Biogeochemistry and Ecohydrology (WAIBER) ====
+
+@fungi 
+
+https://waiber.com/ 
+
+Dr. Louis Schipper 
+
+==== Functional Ecology & Biodiversity Research ====
+
+@fungi 
+
+https://ecodivlab.com/
+
+Dr Andrew D Barnes  

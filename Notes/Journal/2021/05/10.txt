@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-05-10T13:56:35+12:00
+
+====== Monday 10 May 2021 ======
+
+==== ICU script for the processing of GPM-IMERG ====
+
+Now includes the update as a call to the GPM.update() function 
+
+--------------------
+
+==== CPP, WRs, recalculated quantile climatologies using a 5 days half window ====
+
+see: Usable climate science is adaptation science 
+
+https://link.springer.com/epdf/10.1007/s10584-021-03108-x?sharing_token=jbXnjBRoVyf3z4IGAi4J9Pe4RwlQNchNByi7wbcMAY64nMs47lxsu6-qBFVVQm0qnMOdVoidZgIZgzpjMSwLONraZmWLlb07y0qDsgNeJ3NNqjkjw37Odeu-S-n15oo5yN7gbpiVJ2ZpMhOSUMKnTZXs5g1bSDPDJli7_NiPAg4%3D
+
+--------------------
+
+==== beyond adaptation: climate science for earth's stewardship ====
+
+Take Adam Sobel paper:
+
+Climate change veloicity is beyond capacity of individual organisms, poppulations and ecostystemns to adapt 
+
+A prime example is coral reef 
+
+If humanity if going to adapt, I make the argument that we will have to assist transitions of ecosystems to ensure maximum biodiversity, relocate, select, even potentially genetically engineer 
+
+to do that we 
+
+In that sense, we will become part of 'Nature', but with a twist that the definition of Nature needs to be expanded, it is probably the first - and last - chance we have to be truly part of nature 
+
+climate science / climate intelligence 
+

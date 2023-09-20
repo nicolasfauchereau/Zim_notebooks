@@ -1,0 +1,81 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-08-09T09:51:06+12:00
+
+====== Monday 09 Aug 2021 ======
+
+==== fix libmesa issue on Ubuntu ====
+
+@linux @ubuntu 
+
+First of all, one can boot in safe mode and get to a terminal by CTRL - ALT - F2 
+
+then, in the terminal, 
+
+sudo apt-get clean 
+sudo apt-get autoclean
+sudo apt autoremove
+sudo apt-get -f install
+
+
+sudo dpkg --audit
+
+returns the offending packages 
+
+to reinstall: 
+
+sudo apt-get install -f --reinstall libglapi-mesa:amd64
+
+--------------------
+
+==== Global Drought Information System (GDIS) ====
+
+@GDIS 
+
+special issue of BAMS on drought 
+
+https://journals.ametsoc.org/collection/GDIS-worldwide 
+
+Google Doc document, listing potential funding opportunities: 
+
+https://docs.google.com/document/d/1Gbn2UED6dyAu9NwyKaK36jEGtMoKLhCR4QH3YkYVT68/edit?usp=sharing 
+
+--------------------
+
+==== Graph Neural Networks for Improved El Nino Forecasting ====
+
+@graph @graphs @network @NN @deeplearning @AI @ML 
+
+paper: https://arxiv.org/pdf/2012.01598.pdf and (most recent, related to "Graphnino" package): https://arxiv.org/pdf/2104.05089.pdf 
+
+Cachay, S. R., E. Erickson, A. F. C. Bucker, E. Pokropek, W. Potosnak, S. Bire, S. Osei, and B. Lütjens, 2021: The World as a Graph: Improving El Nino Forecasts with Graph Neural Networks. arXiv:2104.05089 [physics, stat],.
+
+
+code: https://github.com/salvaRC/Ecdl-GNNino 
+
+and https://github.com/salvaRC/Graphino (most recent) 
+
+The data to reproduce the analyses is available at: https://drive.google.com/drive/folders/15L2cvpAQv_c6c6gmJ8RnR2tQ_mHQR9Oz 
+
+see also **NINOLEARN**: https://pjpetersik.github.io/ninolearn/index.html 
+
+One thing that could be in the @SI report: 
+
+**However, some of the fundamental assumptions** behind **CNNs** are not well suited for seasonal and long range forecasting:
+
+→ 	Parameter-shared convolutions lead to translational equivariance, meaning that if the input is moved, its output representation will move by the same amount. In earth science applications however, the location of a certain pattern is very important. For example, sea surface temperature anomalies occurring in the tropical Pacific should be treated differently from those occurring in the north Atlantic.
+→ CNNs build representations from spatially close regions of the input, leading to a spatial locality bias. Many climate qaphenomena however, are driven by global interactions.
+CNNs account for large-scale patterns only through deep layers, which misses the importance of modeling predominantly large-scale patterns.
+→ CNNs need to use all grid cells of the input. This makes them inflexible in cases where some regions of the input are known to not be needed and must be masked out for the CNN (e.g., as in this work, all terrestrial locations could be discarded when only using oceanic variables).
+
+
+
+
+
+
+
+
+
+
+
+

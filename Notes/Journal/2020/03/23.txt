@@ -1,0 +1,93 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-23T09:08:27+13:00
+
+====== Monday 23 Mar 2020 ======
+
+=== experimentations with xclim ===
+
+see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/VCSN/calculates_xclim_indices_from_daily_VCSN.ipynb]]
+
+not sure about the calculations of the days above / below a given percentile 
+
+other indices however can be calculated at the grid point scale: 
+
+* dry days: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.dry_days
+* fraction of total precip due to days over threshold: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.fraction_over_precip_thresh
+* frost days: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.frost_days
+* GDD: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.growing_degree_days 
+* growing season length: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.growing_season_length
+* Heat Wave Frequency: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.heat_wave_frequency
+* Heat Wave Index: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.heat_wave_index
+* Heat Wave Total Length: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.heat_wave_total_length
+* Hot Spell Frequeny: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.hot_spell_frequency
+* Maximum consecutive dry days: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.maximum_consecutive_dry_days
+* Accumulated total (liquid and/or solid) precipitation: https://xclim.readthedocs.io/en/stable/indices.html#xclim.indices.precip_accumulation 
+			→ the latter should be the same as the 3 months accumulated precipitation: **it is** 
+
+**Other useful utilities:** 
+
+* Percentile value for each day of the year: https://xclim.readthedocs.io/en/stable/api.html#xclim.core.calendar.percentile_doy
+* Converts eastward and northward wind components to wind speed and direction: https://xclim.readthedocs.io/en/stable/api.html#xclim.core.utils.uas_vas_2_sfcwind
+
+**Ensemble sub-module:** 
+
+{{{code: lang="python" linenumbers="True"
+from xlim import ensembles
+}}}
+
+
+see:  https://xclim.readthedocs.io/en/stable/api.html#module-xclim.ensembles 
+
+of particular interest: 
+
+https://xclim.readthedocs.io/en/stable/api.html#xclim.ensembles.kmeans_reduce_ensemble
+
+Return **a sample of ensemble members using k-means clustering**. The algorithm attempts to **reduce the total number of ensemble members while maintaining adequate coverage of the ensemble uncertainty in a N-dimensional data space**. K-Means clustering is carried out on the input selection criteria data-array in order to group individual ensemble members into a reduced number of similar groups. Subsequently a single representative simulation is retained from each group.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== Derivation of regional (6 regions) time-series from the GCM outputs ===
+
+see: 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/GCM/calculates_6_regions_terciles_from_grid.ipynb]]
+
+and the figures showing the regions (subsets) and ROI (shapes) for each GCM 
+
+[[/home/nicolasf/research/Smart_Ideas/figures]]
+
+e.g. **subset_and_ROI_map_UKMO_NNI.png**
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== Shapefiles for application cases ===
+
+for Watercare, see 
+
+[[/home/nicolasf/research/Smart_Ideas/data/shapefiles/application_cases/Mangatawhiri]]
+
+== SurfaceWater_SourceCatchment.shp ==
+
+{{~/research/Smart_Ideas/data/shapefiles/application_cases/Mangatawhiri/SurfaceWater_SourceCatchment.png}}
+
+== W_Source.shp ==
+
+{{~/research/Smart_Ideas/data/shapefiles/application_cases/Mangatawhiri/W_source.png}}
+
+== RainGauges.shp ==
+
+{{~/research/Smart_Ideas/data/shapefiles/application_cases/Mangatawhiri/RainGauge.png}}
+
+
+
+
+
+
+
+
+
+
+

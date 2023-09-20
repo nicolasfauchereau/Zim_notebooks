@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-30T13:42:01+12:00
+
+====== Friday 30 Apr 2021 ======
+
+==== AUTOGLUON new version ====
+
+@autoML, @automl 
+
+see https://github.com/awslabs/autogluon/releases/tag/v0.2.0
+
+includes now quantile regression: see https://github.com/awslabs/autogluon/blob/master/examples/tabular/example_quantile_regression.py 
+
+--------------------
+
+==== Carbon PLAN ====
+
+Systematic over-crediting in California's forest carbon offsets program
+
+paper 
+
+https://www.biorxiv.org/content/10.1101/2021.04.28.441870v1.full.pdf
+
+code: 
+
+https://github.com/carbonplan/forest-offsets

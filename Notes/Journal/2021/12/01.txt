@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-01T09:39:41+13:00
+
+====== Wednesday 01 Dec 2021 ======
+
+==== graspologic: graspologic is a Python package for analysis of graphs, or networks. ====
+
+@graphs @networks 
+
+→ statistics on complex networks 
+→ statistics on graphs 
+
+https://microsoft.github.io/graspologic/latest/index.html 
+
+data scientist in Hamilton with background in graphs / complex networks: **Enmei Tu** https://scholar.google.com/citations?user=TDg-0cQAAAAJ&hl=en 
+
+--------------------
+
+==== StellarGraph: state-of-the-art algorithms for graph machine learning ====
+
+@graphs @networks
+
+https://stellargraph.readthedocs.io/en/stable/README.html#introduction
+
+see some related blog posts: 
+
+**Knowing Your Neighbours: Machine Learning on Graphs**
+
+→ https://medium.com/stellargraph/knowinllmakeg-your-neighbours-machine-learning-on-graphs-9b7c3d0d5896
+
+**Can graph machine learning identify hate speech in online social networks?**
+
+→ https://medium.com/stellargraph/can-graph-machine-learning-identify-hate-speech-in-online-social-networks-58e3b80c9f7e 
+
+**Looking behind the curtain: saliency maps for graph machine learning**
+
+→ https://medium.com/stellargraph/https-medium-com-stellargraph-saliency-maps-for-graph-machine-learning-5cca536974da
+
+installed in the environment "graph" with 
+
+$ mamba install -c stellargraph stellargraph
+
+in the demo section of stellargraph (https://stellargraph.readthedocs.io/en/stable/demos/index.html) 
+
+→ Time series or sequence prediction for nodes within a graph (including spatio-temporal data): time series: https://stellargraph.readthedocs.io/en/stable/demos/time-series/gcn-lstm-time-series.html
+
+"""
+//Spatio-temporal data is a classic example of a graph with time series information. Spatial information can be encoded in the graph structure, where edges represent connectivity (such as roads) or distance between locations. Traffic prediction is an example of such data, where each node might be an intersection or traffic sensor that yields a time series of the number or speed of vehicles. The data from nearby nodes is likely to be helpful for predictions.//
+"""
+
+reference: T-GCN: A Temporal Graph Convolutional Network for Traffic Prediction
+
+github repo for the above: https://github.com/lehaifeng/T-GCN 
+
+
+
+→ Ensembling models to reduce prediction variance: ensembles: https://stellargraph.readthedocs.io/en/stable/demos/ensembles/index.html 
+
+
+→ Loading data into a StellarGraph object, with Pandas, NumPy, Neo4j or NetworkX: basics https://stellargraph.readthedocs.io/en/stable/demos/basics/index.html
+
+"""
+//StellarGraph has support for loading data via Pandas, NetworkX and Neo4j. This folder contains examples of the loading data into a StellarGraph object, which is the format used by the machine learning algorithms in this library.//
+"""
+
+
+--------------------
+
+==== libraries for working on graphs (in Python) ====
+
+→ tigramite (see 
+→ pyunicorn (see [[/home/nicolasf/sources/pyunicorn/examples/tutorials]]) 
+→ graspologic 
+→ stelllargraph (see above) 
+
+
+
+
+
+
+
+
+
+
+

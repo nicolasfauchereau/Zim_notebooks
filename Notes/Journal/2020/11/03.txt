@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-11-03T09:05:30+13:00
+
+====== Tuesday 03 Nov 2020 ======
+
+==== NGBoost: Natural Gradient Boosting for Probabilistic Prediction ====
+
+source: 
+
+https://github.com/stanfordmlgroup/ngboost 
+
+paper: 
+
+1.Duan, T. et al. NGBoost: Natural Gradient Boosting for Probabilistic Prediction. arXiv:1910.03225 [cs, stat] (2020).
+
+
+installed in the **pycaret** environment, with `pip install --upgrade git+https://github.com/stanfordmlgroup/ngboost.git `
+
+and cloned into [[~/research/Smart_Ideas/resources/repos_libraries]] 
+
+--------------------
+
+==== PYCARET: 5 things you are doing wrong with PYCARET ====
+
+https://towardsdatascience.com/5-things-you-are-doing-wrong-in-pycaret-e01981575d2a 
+
+and local copy in resources/PYCARET 
+
+--------------------
+stratification of derived daily statistics from tercile categories 
+
+see e.g.:
+
+**stratify_by_category.ipynb** 
+
+in  [[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/Apple_and_Pears/notebooks]] 
+
+the stratification needs to be done over the climatological period AND per month (season) 
+
+

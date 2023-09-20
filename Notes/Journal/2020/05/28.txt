@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-28T16:17:41+12:00
+
+====== Thursday 28 May 2020 ======
+
+===== Loaded ZIM notebooks =====
+
+===== Data and notebooks for the Azure trial =====
+
+see [[/home/nicolasf/operational/Azure_trial]] 
+
+==== checks on the datasets ====
+
+=== netcdf (Vaisala network gridded and NZCSM forecasts) ===
+
+=== Outage datasets ===
+
+- Aurora outages: already sanitized, and contain both the original latitude and longitude of the outage and its rotated longitude and latitude 

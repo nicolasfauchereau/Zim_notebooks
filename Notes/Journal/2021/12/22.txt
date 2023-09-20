@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-22T11:02:44+13:00
+
+====== Wednesday 22 Dec 2021 ======
+
+==== ICU forecast table operationalisation ====
+
+@ICU 
+
+what should be the steps ? 
+
+1) reads the hindcast for a given month, and calculates the climatological terciles and quartiles 
+
+see **drive_admin_GCMs_evaluation.ipynb** 
+
+make sure that the hindcasts data has been copied from [[/media/nicolasf/END19101/ICU/data/CDS/operational/hindcasts/]] to [[/media/nicolasf/END19101/ICU/data/CDS/]] in the right folders for the different GCMs 
+
+--------------------
+
+==== Climate and human behavior ====
+
+see https://www.sciencedaily.com/releases/2021/12/211220120634.htm 
+
+and https://www.nature.com/articles/s41586-021-04227-2 
+
+"""
+New archeological study shows ancient connection between populations 3,000 km apart, and provides **first direct link between climate change and ancient human social behavior**. 
+"""
+
+
+
+
+
+

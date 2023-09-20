@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-02T09:21:22+12:00
+
+====== Wednesday 02 Jun 2021 ======
+
+
+
+==== Paper submitted to ICML 2021: Seasonal forecasts of New Zealan's local climate conditions with limited GCM inputs using Convolutional Neural Networks ====
+
+@SI @ML @DL @CNN 
+
+Seasonal forecasts of New Zealan's local climate conditions with limited GCM inputs using Convolutional Neural Networks. ICML 2021, submitted 
+Begum, F, Vetrova V., Fauchereau, N. and Frank E.  
+

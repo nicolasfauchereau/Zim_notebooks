@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-26T12:08:31+12:00
+
+====== Tuesday 26 May 2020 ======
+
+==== RIOXARRAY ====
+
+https://corteva.github.io/rioxarray/stable/examples/examples.html 
+
+can handle **reprojecting xarray rasters** 
+
+see example of dealing with rotated pole coordinates in 
+
+[[/home/nicolasf/HUB/Azure/Aurora-master/notebooks/rioxarray.ipynb]] 
+
+try with **nzcsm_orog.nc** in [[/home/nicolasf/HUB/Azure]] 

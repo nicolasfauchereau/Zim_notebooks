@@ -1,0 +1,129 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-22T13:21:53+13:00
+
+====== Wednesday 22 Mar 2023 ======
+
+
+==== False Discovery Rate / Field Significance ====
+
+**for the t-test itself:** see 
+
+
+{{{code: lang="python3" linenumbers="True"
+import xarray as xr
+from scipy.stats import ttest_rel
+import numpy as np
+
+grid_1 = xr.tutorial.open_dataset('air_temperature').load().to_array().squeeze()
+grid_2 = grid_1 + np.random.randn(*grid_1.shape)  # Normally perturbed grid_1
+
+statres, pval = ttest_rel(grid_1, grid_2)
+}}}
+
+
+
+**Then, for the estimation of the **__field significance__ 
+
+
+{{{code: lang="python3" linenumbers="True"
+
+
+
+def xr_multipletest(p, alpha=0.05, method='fdr_bh', **multipletests_kwargs):
+    """Apply statsmodels.stats.multitest.multipletests for multi-dimensional xr.objects."""
+    from statsmodels.stats.multitest import multipletests
+    # stack all to 1d array
+    p_stacked = p.stack(s=p.dims)
+    # mask only where not nan: https://github.com/statsmodels/statsmodels/issues/2899
+    mask = np.isfinite(p_stacked)
+    pvals_corrected = np.full(p_stacked.shape, np.nan)
+    reject = np.full(p_stacked.shape, np.nan)
+    # apply test where mask
+    reject[mask] = multipletests(
+        p_stacked[mask], alpha=alpha, method=method, **multipletests_kwargs)[0]
+    pvals_corrected[mask] = multipletests(
+        p_stacked[mask], alpha=alpha, method=method, **multipletests_kwargs)[1]
+ 
+    def unstack(reject, p_stacked):
+        """Exchange values from p_stacked with reject (1d array) and unstack."""
+        xreject = p_stacked.copy()
+        xreject.values = reject
+        xreject = xreject.unstack()
+        return xreject
+ 
+    reject = unstack(reject, p_stacked)
+    pvals_corrected = unstack(pvals_corrected, p_stacked)
+    return reject, pvals_corrected
+ 
+reject, xpvals_corrected = xr_multipletest(p)
+}}}
+
+
+for the t-test, can also use: 
+
+{{{code: lang="python3" linenumbers="True"
+import xarray.ufuncs as xrf
+from scipy import stats
+import xarray as xr
+
+
+def ttest_1samp(a, popmean, dim):
+    """
+    This is a two-sided test for the null hypothesis that the expected value
+    (mean) of a sample of independent observations `a` is equal to the given
+    population mean, `popmean`
+    
+    Inspired here: https://github.com/scipy/scipy/blob/v0.19.0/scipy/stats/stats.py#L3769-L3846
+    
+    Parameters
+    ----------
+    a : xarray
+        sample observation
+    popmean : float or array_like
+        expected value in null hypothesis, if array_like than it must have the
+        same shape as `a` excluding the axis dimension
+    dim : string
+        dimension along which to compute test
+    
+    Returns
+    -------
+    mean : xarray
+        averaged sample along which dimension t-test was computed
+    pvalue : xarray
+        two-tailed p-value
+    """
+    n = a[dim].shape[0]
+    df = n - 1
+    a_mean = a.mean(dim)
+    d = a_mean - popmean
+    v = a.var(dim, ddof=1)
+    denom = xrf.sqrt(v / float(n))
+
+    t = d /denom
+    prob = stats.distributions.t.sf(xrf.fabs(t), df) * 2
+    prob_xa = xr.DataArray(prob, coords=a_mean.coords)
+    return a_mean, prob_xa
+}}}
+
+
+see also: 
+
+https://climate.usu.edu/people/yoshi/pyclm101/index.html 
+
+
+https://github.com/NCAR/geocat-comp 
+https://github.com/NCAR/geocat-examples
+https://github.com/NCAR/geocat-viz 
+
+see notebook: **false_discovery_rate.ipynb** in [[~/Jupyter_notebooks]] 
+
+
+
+
+
+
+
+
+
+

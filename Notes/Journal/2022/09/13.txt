@@ -1,0 +1,94 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-13T08:43:08+12:00
+
+====== Tuesday 13 Sep 2022 ======
+
+==== Overhaul of the ICU + SCO terciles / quartiles / decile tables generation and validation ====
+
+@ICU @SCO 
+
+→ make a CSV file with country / admin area (including NZ 6 regions) 
+
+create new directory structure: 
+
+→ **operational/seasonal_forecasting** 
+
+	→ data 
+		→ shapefiles 
+			 → Admin_boundaries
+				→ Coastlines
+					→ orig
+						- ICU_admin_geometries0_360.shp: all ICU admin boundaries in one shapefile 
+					→ .... shapefiles for each ICU district
+					
+		→ landsea_masks ... land sea masks (in netcdf) on the CDS GCMs resolution X 5 
+
+
+
+	→ config 
+		
+		→ '//country_district_shapefile_lsmask.csv//': csv file with
+			
+			//| country | district | shapefile (path) | landsea mask (path) |//
+			
+	→ outputs 
+	
+		→ ICU_districts
+			
+			ICU district's individual GCMs hindcast probabilities (1993 - 2016) and "observations" (from ERA) for the 73 ICU districts (+ the 6 NZ regions, but irrelevant as ERA5) 
+			
+			example output: **Vanuatu_Shefa_seasonal_METEO_FRANCE_empirical_quartile_probs_and_obs.csv** 
+			
+			The climatologies for the GCMs are in [[/home/nicolasf/operational/seasonal_forecasting/outputs/ICU_districts/climatologies]] 
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+			
+			includes NZ '6 regions' 
+			
+			see notebook: **split_shapefiles.ipynb** in [[/home/nicolasf/operational/seasonal_forecasting/notebooks]] 
+					
+	→ notebooks
+
+			- **split_shapefiles.ipynb **creates //country_district_shapefile_lsmask.csv //and outputs the individual 
+			- GCMs_ICU_districts_hindcast_climatologies_and_probabilities.ipynb calculates and saves qu
+
+	→ code 
+	→ outputs
+	→ figures 
+	
+--------------------
+
+
+
+
+
+
+
+
+
+--------------------
+
+==== To fix git asking for tokens / passwords all the time: ====
+
+@git 
+
+1) git config --global credential.helper store --replace-all
+2) git config --global credential.credentialStore secretservice 
+
+--------------------
+
+
+
+

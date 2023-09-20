@@ -1,0 +1,119 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-25T11:12:15+12:00
+
+====== Thursday 25 Jun 2020 ======
+
+===== Machine Learning Systems design =====
+
+see https://huyenchip.com/2020/06/22/mlops.html and https://github.com/chiphuyen/machine-learning-systems-design.git 
+
+as well as 
+
+[[/home/nicolasf/research/Smart_Ideas/resources/machine-learning-systems-design]]
+
+indicate notably that: 
+
+{{./screenshot_2020-06-25-111403.png}}
+
+===== Climate Data Store GCM systems for both hindcasts and forecasts =====
+
+== ECMWF: ==
+
+system 5 available for both forecasts and hindasts 
+
+== UKMO: ==
+
+systems are 12, 13, 14, 15
+
+**system 12**: available for hindcast period + 2017 and 2018, but NOT 2019 and 2020 
+**system 13**: available for hindcast period + 2018 and 2019, but NOT 2017 and 2020 
+**system 14**: available for hindcast period + 2019 and 2020, but NOT 2017 and 2018
+**system 15**: available for hindcast period + 2020, but NOT 2017, 2018 and 2019
+
+== METEO_FRANCE ==
+
+systems are 5, 6, 7 
+
+**system 5**: available for hindcasts years 1993 to 2014, but NOT for 2015, 2016. Forecast years available only 2017 and 2018 
+**system 6**: available for full hindcast period, and forecast years 2017 to 2019, but NOT 2020
+**system 7**: available for full hindcast period, and forecast years 2019 and 2020 
+
+== CMCC ==
+
+only system 3 available 
+
+**system 3**: available for full hindcast period, and forecast years 2018 to 2020, but NOT 2017 
+
+== DWD ==
+
+only system 2 available 
+
+ 
+**system 2**: available for full hindcast period, and all forecast years 2017 to 2020
+
+===== Download the CDS for the ICU =====
+
+see 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CDS/download_CDS_ICU.ipynb]] 
+
+
+===== Worth experimenting with scikit-downscale for precipitation ICU ? =====
+
+see 
+
+https://github.com/jhamman/scikit-downscale 
+
+in particular the BCSD (**BCSD, Bias correction and statistical disaggregation) **method, illustrated below 
+
+
+{{~/operational/ICU/development/hotspots/The-major-procedures-of-the-BCSD-downscaling-method.png}}
+
+**BCSD, Bias correction and statistical disaggregation** 
+
+see in particular the amended examples in 
+
+[[/home/nicolasf/operational/ICU/development/hotspots/downscale/scikit-downscale/examples]] 
+
+and **2020ECAHM-scikit-downscale.ipynb** in particular, which compares different models for downscaling, including applying the BCSD precipitation model on every point on a grid 
+
+see also (under development) 
+
+will implement, through method **SpatialDownscaler**: 
+
+== Multivariate Adaptive Constructed Analogs (MACA) ==
+
+http://www.climatologylab.org/maca.html 
+
+Multivariate Adaptive Constructed Analogs (MACA) is a statistical method for downscaling Global Climate Models (GCMs) from their native coarse resolution to a higher spatial resolution that captures reflects observed patterns of daily near-surface meteorology and simulated changes in GCMs experiments. This method has been shown to be slightly preferable to direct daily interpolated bias correction in regions of complex terrain due to its use of a historical library of observations and multivariate approach. 
+
+== LOCA Statistical Downscaling (Localized Constructed Analogs) ==
+
+http://loca.ucsd.edu/
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-02-28T10:34:19+13:00
+
+====== Monday 28 Feb 2022 ======
+
+==== Climate Commons ====
+
+Aotearoa Circle: https://www.theaotearoacircle.nz/ 
+THE NEW ZEALAND CLIMATE ACTION NETWORK: http://www.nzcan.org/ 
+
+--------------------
+
+==== MSWEP NRT ====
+
+@MSWEP @MSWX 
+
+MSWEP version 2.8.0: 
+
+→ Google drive: https://drive.google.com/drive/folders/1Kok05OPVESTpyyan7NafR-2WwuSJ4TO9 
+
+instructions for download: 
+
+http://www.gloh2o.org/mswep/#methods 
+
+**for the MSWX product:** 
+
+Beck, H. E., A. I. J. M. van Dijk, P. R. Larraondo, T. R. McVicar, M. Pan, E. Dutra, and D. G. Miralles, 2021: MSWX: global 3-hourly 0.1° bias-corrected meteorological data including near real-time updates and forecast ensembles. Bulletin of the American Meteorological Society, 1–55, https://doi.org/10.1175/BAMS-D-21-0145.1.
+
+Google drive: https://drive.google.com/drive/folders/1R1KRmldXmLj_09kzE2wKSrbXUzU3pQN9 
+
+rclone setup https://www.youtube.com/watch?v=vPs9K_VC-lg 
+
+e.g. to download the MONTHLY MSWX file for precipitation (P) in  **/media/nicolasf/END19101/ICU/data/glo2ho/MSWX**
+
+rclone sync -v --exclude  Daily/ --drive-shared-with-me GoogleDrive:/MSWX_V100/Long/P /media/nicolasf/END19101/ICU/data/glo2ho/MSWX/Long/P/Monthly/ 
+
+
+--------------------
+
+==== rioxarray reprojecting and clipping with shapefiles ====
+
+@geo @rioxarray @xarray 
+
+import geopandas
+import rioxarray
+import xarray
+from shapely.geometry import mapping
+
+
+MSWEP_monthly2 = xarray.open_dataarray('D:\G3P\DATA\Models\MSWEP\MSWEP_monthly.nc4')
+MSWEP_monthly2.rio.set_spatial_dims(x_dim="lon", y_dim="lat", inplace=True)
+MSWEP_monthly2.rio.write_crs("epsg:4326", inplace=True)
+Africa_Shape = geopandas.read_file('D:\G3P\DATA\Shapefile\Africa_SHP\Africa.shp', crs="epsg:4326")
+
+clipped = MSWEP_monthly2.rio.clip(Africa_Shape.geometry.apply(mapping), Africa_Shape.crs, drop=False)
+
+see example in [[/home/nicolasf/research/NZ_SST_EEZ/notebooks/ERSST_NZ_SST_anomalies.ipynb]] 
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-04T08:31:19+12:00
+
+====== Thursday 04 Aug 2022 ======
+
+==== Planning SCO CACV2301 ====
+
+@planning @SCO 
+
+for this FY:
+ 
+[ ] Complete the new tercile / decile / imagery generation for the SCO (leftover from last FY)
+[ ] Real-time validation (leftover from last FY)
+[ ] Monthly-to-seasonal marine heatwave outlooks (methodology consistent with ICU / SCO)
+[ ] Operational task - calculate SST indices (NOAA OISSTv2) with respect to 1991-2020 (cease relying on BoM SST values)
+    
+

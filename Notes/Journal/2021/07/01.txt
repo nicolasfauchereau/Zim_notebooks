@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-01T08:47:03+12:00
+
+====== Thursday 01 Jul 2021 ======
+
+==== hierarch: Resampling-Based Hypothesis Testing for Python ====
+
+@stats @statistics 
+
+https://github.com/rishi-kulkarni/hierarch
+
+**hierarch** is a package for hierarchical resampling (bootstrapping, permutation) of datasets in Python. Because for loops are ultimately intrinsic to cluster-aware resampling, hierarch uses Numba to accelerate many of its key functions.
+
+hierarch has several functions to assist in performing resampling-based (and therefore distribution-free) hypothesis tests, confidence interval calculations, and power analyses on hierarchical data.
+
+implements: https://en.wikipedia.org/wiki/Welch%27s_t-test 
+
+Welch's t-test, or unequal variances t-test, is a two-sample location test which is used to test the hypothesis that two populations have equal means
+
+Given that Welch's t-test has been less popular than Student's t-test[2] and may be less familiar to readers, a more informative name is "Welch's unequal variances t-test" — or "unequal variances t-test" for brevity
+
+--------------------
+
+==== climate change council ====
+
+Climate change is an infrastructure problem, which is a very, very hard thing to solve with software.
+
+I realised that climate change is in essence an **infrastructure problem** 
+
+climate intelligence will play a role, potentially an important role, to inform action, but ultimately action is implemented through changes in infrastructure, and that's where I want to be 
+
+
+
+Raghav

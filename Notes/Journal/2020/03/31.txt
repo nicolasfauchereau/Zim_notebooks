@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-31T11:16:45+13:00
+
+====== Tuesday 31 Mar 2020 ======
+
+=== GWRC trend analysis ===
+
+see in [[~/research/GWRC_trends_analysis]] 
+
+with Neelesh 
+
+spotted some outliers in the daily (mornings between 9AM and 11AM) data, see notebook **Wellington_extremes.ipynb**
+
+possibility of using a Bayesian framework for the trend analysis, see example for GLMs 
+
+https://docs.pymc.io/notebooks/GLM-linear.html
+
+Robust (to outliers) regression: 
+
+https://docs.pymc.io/notebooks/GLM-robust.html 
+
+-------------------------------------------------------------------------------------------------------
+
+=== Work with Christo ===
+
+Possible proposal ... 
+
+-------------------------------------------------------------------------------------------------------
+
+=== END19101 on the Hamilton project drive ===
+
+@SI 
+
+hamwfs03 is the ID 
+
+-------------------------------------------------------------------------------------------------------
+
+=== KNN classification trial ===
+
+see in 
+
+/home/nicolasf/research/Smart_Ideas/code/models/classification/KNN
+
+KNN.ipynb 
+
+
+
+
+
+
+
+
+
+
+
+
+

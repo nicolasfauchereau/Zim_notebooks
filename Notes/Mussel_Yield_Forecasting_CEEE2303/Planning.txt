@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-11T10:18:53+12:00
+
+
+
+====== Planning ======
+Created Thursday 11 August 2022
+
+Fauchereau Nicolas 
+
+Task 1: 90.00 
+Task 2: 50.0
+
+== Task 1: ==
+
+Via NIWA’s website:
+
+· on a monthly basis, over the period July 2022 and June 2023: delivery updated forecasts of SST for oceanic waters adjacent to/containing NZ major NZ marine farming zones [Output 1].
+
+· On a monthly basis, over the period July 2022 and June 2023: deliver updated forecasts of and the condition of harvested, harvest size mussels in Pelorus Sound
+
+In addition:
+
+· Continue analyses of the forecast SST data upon which we draw in order to better understand the merits of the various international SST forecast models to further improving the quality of the forecasts which we can deliver to industry. Any insights that lead to improved forecasts are to be incorporated into the routine monthly forecasts before June 30, 2023
+
+· Document the methods and forecast analyses for publication on the NIWA website and for submission to a Scientific Journal before June 30, 2023 [Outputs 2 and 3].
+
+
+== Task 2: ==
+
+In collaboration with Kono LLC and New Zealand King Salmon Ltd., maintain the existing network of temperature loggers associated with marine farms in the Marlborough Sounds region. Sensors will be (re-) deployed before end July 2022 and to remain in the water until at least May 2023 (barring brief turn-around intervals for downloading/servicing). Sensor data will be compiled into a readily accessible and properly documented electronic form (e.g. excel spreadsheet or similar) following each instrument turn-around. The data will be vetted (assessed for quality with ‘bad data’ clearly marked or explicitly deleted). The in-situ observations of water-temperature at the marine farms have been compared with from satellite observations of SST and forecasted SST (subject to availability of corresponding satellite-sensed and forecast SST data). [Output 4] In the longer term (beyond the 22/23 FY), we believe that these data will enable us to more reliably extrapolate from coarse spatial-scale forecasts of SST to bay-specific forecasts

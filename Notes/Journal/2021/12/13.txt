@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-12-13T14:26:56+13:00
+
+====== Monday 13 Dec 2021 ======
+
+==== ICU: SPI code (notebook) now reads the pre-calculated climatology (alpha and beta parameters) ====
+
+see GPM/calculates_GPM-IMERG_accumulations_SPI.ipynb 
+
+can be run by papermill
+
+e.g. 
+
+$ for ndays in 30 60 90 180 360; do papermill calculates_GPM-IMERG_accumulations_SPI.ipynb calculates_GPM-IMERG_accumulations_SPI.ipynb -p ndays ${ndays}; done 
+
+

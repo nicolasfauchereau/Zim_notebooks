@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-21T09:17:01+13:00
+
+====== Wednesday 21 Oct 2020 ======
+
+==== some weird artifacts in the ECMWF SSTs ====
+
+{{./screenshot_2020-10-21-091719.png}}
+
+a solution could have been to create a mask 
+
+{{./screenshot_2020-10-21-093307.png}}
+
+but there are still some strange artefacts 
+
+{{./screenshot_2020-10-21-093410.png}}
+
+but the mean does not seem affected, nor the max ... 
+{{./screenshot_2020-10-21-093621.png}}
+
+
+--------------------
+
+==== INTAKE AND REMOTE DATA ACCESS ====
+
+talk: https://gitlab.dkrz.de/m300524/intake_taking_the_pain_out_of_data_access/-/tree/master 
+slide / notebook: https://gitlab.dkrz.de/m300524/intake_taking_the_pain_out_of_data_access/-/tree/master
+examples with accessing remote data: https://github.com/aaronspring/remote_climate_data
+
+plugins: 
+
+intake-xarray: https://github.com/intake/intake-xarray 
+intake-geopandas: https://github.com/intake/intake_geopandas
+intake-esm: https://github.com/intake/intake-esm 
+
+
+
+
+
+
+
+
+
+

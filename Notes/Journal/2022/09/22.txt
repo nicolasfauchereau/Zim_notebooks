@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-22T11:43:43+12:00
+
+====== Thursday 22 Sep 2022 ======
+
+==== Updated KTs for detrended and non-detrended versions up to 31 Dec. 2022 ====
+
+@PICT @paleopy 
+
+see **reproject_Kidson_Types_detrend.ipynb** in [[/home/nicolasf/research/PICT_notebooks/notebooks/make_datasets]] 
+
+--------------------
+
+==== ICU validation MS ready for submission ====
+
+see https://niwa-my.sharepoint.com/:w:/g/personal/nicolas_fauchereau_niwa_co_nz/EVnRuhOvoQlCqGWU7UGKk24B2hZSYICVkQajY33Vb2lZTQ?e=HMGsFL 
+
+Figures in PDF (see in [[/home/nicolasf/Desktop/figures_ICU_paper_numbered]]) 
+
+[*] Figure 1
+[*] Figure 2
+[*] Figure 3
+[*] Figure 4
+[*] Figure 5
+[*] Figure 6
+[>] Figure 7 : Note, ENSO SST composite anomalies figure, converted to JPEG from PNG 
+[*] Figure 8
+[*] Figure 9
+[*] Figure 10
+[*] Figure 11
+[*] Figure 12
+
+--------------------
+
+==== Download of the T2M hindcasts for UKMO and JMA in ====
+
+[[/media/nicolasf/END19101/ICU/data/CDS/operational/hindcasts]] 
+
+see 

@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-30T08:43:32+13:00
+
+====== Wednesday 30 Nov 2022 ======
+
+**roll longitudes with NCO** 
+
+ncks -O --msa -d lon,0.,179.95 -d lon,-179.95,-0.05 file.nc out.nc
+
+ncap2 -O -s 'where(lon < 0) lon=lon+360' out.nc out1.nc 
+
+**flip latitudes with NCO** 
+
+ncks -C -H -v lat ~/nco/data/in.nc 
+
+ncpdq -O -a -lat ~/nco/data/in.nc ~/foo.nc 
+
+MSWEP past for the calculation of climatologies 
+
+[[/media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily/]] 
+
+see notebook **fix_and_extract_MSWEP_NCO.ipynb** in [[~/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/MSWEP]] 
+
+--------------------
+
+==== hvplot ====
+
+ Major advances in HoloViz for Pangeo: GUI explorer, interactive pipelines, and publishing apps 
+
+https://www.youtube.com/watch?v=2zNniXTOBSU&list=PLuQQBBQFfpgq0OvjKbjcYgTDzDxTqtwua 
+
+{{./screenshot_2022-11-30-131150.png}}

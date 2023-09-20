@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-16T10:48:14+13:00
+
+====== CDS  available data summary ======
+Created Thursday 16 January 2020
+
+https://confluence.ecmwf.int//display/COPSRV/Summary+of+available+data
+
+{{./screenshot_2020-01-16-114549.png}}
+
+{{./screenshot_2020-01-16-114633.png}}
+
+
+

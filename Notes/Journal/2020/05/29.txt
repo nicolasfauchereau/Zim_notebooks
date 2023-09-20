@@ -1,0 +1,68 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-29T08:20:51+12:00
+
+====== Friday 29 May 2020 ======
+
+===== PROJ =====
+
+A small project with executables to do transformations and projections 
+
+https://proj.org/index.html 
+
+see application to rotated to regular coordinates: 
+
+https://gis.stackexchange.com/questions/10808/manually-transforming-rotated-lat-lon-to-regular-lat-lon 
+
+===== CARTOPY =====
+
+Way to deal with grid lines and labels: 
+
+f, ax = plt.subplots(subplot_kw={'projection':ccrs.PlateCarree(central_longitude=180)}, figsize=(10,10))
+dset.sel(time='2016-01').mean('time')['wind'].plot.contourf(ax=ax, transform=ccrs.PlateCarree(), levels=20, cbar_kwargs={'shrink':0.5, 'pad':0.12})
+ax.coastlines()
+**gl = ax.gridlines(draw_labels=True, linestyle=':')**
+**gl.top_labels = False**
+**gl.right_labels = False**
+f.savefig(dpath.joinpath('domain_on_regular_grid.png'), dpi=200, bbox_inches='tight')
+
+to specify the locations for the labels: 
+
+**gl = ax.gridlines(draw_labels=True, linestyle=':', xlocs=np.arange(-180,180,20))**
+
+
+{{./screenshot_2020-05-29-170845.png?width=900}}
+
+to change the fontsize of the labels 
+
+gl.xlabel_style = {'size': 15, 'color': 'gray'}
+gl.ylabel_style = {'size': 15, 'color': 'gray'}
+
+
+===== FASTAI Neural Networks for Tabular data =====
+
+see https://docs.fast.ai/tabular.html 
+
+fastai is installed in the conda environment `fastai` 
+
+note that 
+
+**python -c "import fastai.utils; fastai.utils.check_perf()"**
+
+returns:
+
+(fastai) ╭─nicolasf@Dell-ML ~/operational/Azure_trial ‹master*› 
+╰─$ **python -c "import fastai.utils; fastai.utils.check_perf()"**
+Running performance checks.
+
+*** libjpeg-turbo status
+✘ libjpeg-turbo is not on. It's recommended you install libjpeg-turbo to speed up JPEG decoding. See https://docs.fast.ai/performance.html#libjpeg-turbo
+
+*** Pillow-SIMD status
+✘ Running Pillow 7.1.2; It's recommended you install Pillow-SIMD to speed up image resizing and other operations. See https://docs.fast.ai/performance.html#pillow-simd
+
+*** CUDA status
+✔ Running the latest CUDA 10.2 with NVIDIA driver 440.64
+
+
+

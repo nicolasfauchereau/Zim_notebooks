@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-14T08:47:21+12:00
+
+====== Wednesday 14 Sep 2022 ======
+
+==== SST validation paper ====
+
+→ Powerpoint in 2 weeks
+→ paper in draft form ~ January 2023
+
+rough structure: 
+
+	- deterministic 
+	- probabilistic (focus on MHWs ?) 
+	- control by ENSOs 
+	- sub-regional focus (Marlborough sounds) 
+	
+--------------------
+
+==== problem with regionmask: ====
+
+**AttributeError: module 'regionmask' has no attribute 'from_geopandas'**
+
+probably need to upgrade to development version, as the version installed is 0.5.0 but the latest version is 0.9 
+
+see https://regionmask.readthedocs.io/en/stable/whats_new.html#breaking-changes
+
+and  https://regionmask.readthedocs.io/en/stable/installation.html 
+
+pip install git+https://github.com/regionmask/regionmask

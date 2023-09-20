@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-04-01T14:37:19+13:00
+
+====== Friday 01 Apr 2022 ======
+
+==== Using verif as a module ====
+
+https://github.com/WFRT/verif/wiki/Using-verif-as-a-module
+

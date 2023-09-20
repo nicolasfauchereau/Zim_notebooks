@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-12T15:15:43+12:00
+
+====== Monday 12 Sep 2022 ======
+
+→ Supplementary material for the ICU (tercile and quartile forecast tables)
+→ text for Drew's Endeavour 
+→ commencing overhaul of all ICU *validation* and forecast tables (for administrative areas) see @ICU 
+
+
+--------------------
+
+==== VCSN update ====
+
+@VCSN 
+
+see also: **update_VCSN.ipynb** in  [[/home/nicolasf/operational/SCO/notebooks]] 
+
+--------------------
+
+==== CDS outage damage control ====
+
+@ICU @SCO 
+
+see maybe notebooks in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CLIKS]] 
+

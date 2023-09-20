@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-04T09:24:38+12:00
+
+====== Planning ======
+Created Thursday 04 August 2022
+
+@planning 
+
+Drew: 
+
+The tasks for this year for CAOA, in this order, will be: 
+
+1.) PICT codes completed and fully tested (with work completed by 30 Sept), 
+
+2.) Fundamental Data Page updates (only a couple more things to do on your end, will be flexible between now and 15 Dec), 
+
+3.) Once daily synoptic type paper on modes of variability (analyses begin 1 October, writing completed 15 Dec)) 
+
+4.) BAMS SOTC section on ITCZ (due end of January 2023), 
+
+5.) Once daily synoptic type paper on predictability (remaining time this FY put into framing that and working on it with me). 
+
+We are also through the short list for the MBIE endeavour fund bid, so I will co opt some of your time to help on that - EOI due in November or December I think
+
+see also: 
+
+[[Journal:2022:08:02]] for details on the Planning for the PICT notebooks and TODO list on the github repository: 
+
+https://github.com/nicolasfauchereau/PICT_notebooks/blob/master/README.md#notes-pict-refactoring-september-2022 

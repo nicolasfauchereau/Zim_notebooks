@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-20T08:44:02+12:00
+
+====== Wednesday 20 May 2020 ======
+
+@SI 
+
+==== Recalculation of the target time-series for comparison with the probs.lst file ====
+
+calculate for each grid point the tercile categories, then count the number and the proportion of grid points in each 
+category, the majority category is the category for the regional time series 
+
+@ADMIN , @SI Sort out the finance with Ramona: 
+
+	- hours from Brett transfered to me 
+	- subbies pushed to next FY 
+	- come back to Ben, Waikato regarding new schedule 
+
+@SI, come back to Apple and Pears @rachel@appleandpears.co.nz done 21 May 
+
+@SI come back to other end users re. scheduling of workshop end of 
+
+

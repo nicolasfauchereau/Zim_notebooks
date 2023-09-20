@@ -1,0 +1,83 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-12T07:47:39+13:00
+
+====== Wednesday 12 Jan 2022 ======
+
+==== Predicting Rain from Satellite Images ====
+
+How to train a neural network to predict precipitation based on satellite images pulled from the Meteomatics API
+
+https://towardsdatascience.com/predicting-rain-from-satellite-images-c9fec24c3dd1
+
+--------------------
+
+==== ICU: validation of the quartiles probabilistic forecasts for the administrative areas ====
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/ICU_forecast_table_validation]] 
+
+1) run  drive_admin_GCMs_evaluation.ipynb (which drives GCMs_admin_hindcast_climatologies_and_probabilities.ipynb): it will create - for each admin area - the tables containing the individual GCMs quartiles probabilities and the observed category (from ERA5) in [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/outputs/ICU_validation/admin]] 
+
+exemple file name: Marshall_Islands_Southern_Marshall_Islands_seasonal_ECMWF_quartile_probs_and_obs.csv 
+
+exemple content: 
+
+{{./screenshot_2022-01-12-104619.png}}
+
+2) run **drive_admin_MME_evaluation.ipynb**, which drives **C3S_MME_ICU_admin_validation.ipynb**: It reads all the files created above (e.g. "Marshall_Islands_Southern_Marshall_Islands_seasonal_ECMWF_quartile_probs_and_obs.csv") and calculates the MME average, then validates the individual GCMs as well MME against the observations, it will create the files (for example): 
+
+-rw-rw-r-- 1 nicolasf nicolasf  109 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_ECMWF_quartile.csv
+-rw-rw-r-- 1 nicolasf nicolasf  108 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_UKMO_quartile.csv
+-rw-rw-r-- 1 nicolasf nicolasf  108 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_METEO_FRANCE_quartile.csv
+-rw-rw-r-- 1 nicolasf nicolasf  107 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_DWD_quartile.csv
+-rw-rw-r-- 1 nicolasf nicolasf  107 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_CMCC_quartile.csv
+-rw-rw-r-- 1 nicolasf nicolasf  109 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_NCEP_quartile.csv
+-rw-rw-r-- 1 nicolasf nicolasf  108 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_JMA_quartile.csv
+**-rw-rw-r-- 1 nicolasf nicolasf  110 Jan 12 09:11 validation_Marshall_Islands_Northern_Marshall_Islands_seasonal_MME_quartile.csv**
+
+3) run **compile_ICU_admin_validation_scores.ipynb **which compiles all the validation scores for the MME (or for any particular GCM if needed)
+
+
+--------------------
+
+==== The tragedy of climate change science ====
+
+Glavovic, B. C., T. F. Smith, and I. White, 2021: The tragedy of climate change science. Climate and Development, 1–5, https://doi.org/10.1080/17565529.2021.2008855.
+
+
+
+--------------------
+
+==== vectorizing an xarray dataarray ====
+
+@geo 
+
+application case for the WR extremes mapping: we end up with map of dominant WRs associated with e.g. rainfall extremes, and we want to convert the areas belonging to each WR to a shapely geometry 
+
+see https://docs.dea.ga.gov.au/notebooks/Frequently_used_code/Rasterize_vectorize.html 
+
+need to install the Digital Earth Australia tools https://github.com/GeoscienceAustralia/dea-notebooks/tree/stable/Tools 
+
+see also: **rasterstats** (https://pythonhosted.org/rasterstats) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-09-25T07:50:44+12:00
+
+====== Friday 25 Sep 2020 ======
+
+--------------------
+
+==== Download of MSWEP finished ====
+
+See in  
+
+[[/media/nicolasf/END19101/data/MSWEP/data/global_daily_010deg]] 
+
+daily rainfall (mm/day) from 
+**1979-01 to 2017-10** 
+
+Note that the notebooks are now in [[/home/nicolasf/operational/ICU/development/MSWEP/notebooks]] 
+
+as there were some issues with the SSD ... 
+
+see read_MSWEP2.ipynb for reading the data, the longitudes need to be rolled (see **roll_longitudes.py** in [[/home/nicolasf/research/Smart_Ideas/code/ml4seas]]) 
+
+--------------------
+
+==== sent the VCSN "6 regions" mask to Dong ====
+
+see make_region_mask.ipynb in 
+
+
+--------------------
+
+==== pangeo-pyinterp: Python library for optimized geo-referenced interpolation. ====
+
+@interpolation @geo 
+
+https://github.com/CNES/pangeo-pyinterp 
+
+cloned in [[/home/nicolasf/sources/pangeo-pyinterp]] 
+
+--------------------
+
+==== xarray-spatial: ====
+
+https://makepath.github.io/xarray-spatial/index.html and https://github.com/makepath/xarray-spatial 
+
+e.g. for calculation of **slope**, **aspect**, **curvature**, etc from elevation model, could be used to calculate **ancillary variables in interpolation scheme for the VCSN** wih possible input to MGWR (https://github.com/pysal/mgwr)
+
+also presents a function 'viewshed': Calculate viewshed of a raster (**the visible cells in the raster**) for the given viewpoint (observer) location (x, y, z)
+
+cloned in [[/home/nicolasf/sources/pangeo-pyinterp/xarray-spatial]]
+
+--------------------
+
+==== ICU hotspots, gluing together GCM forecasts and observed past rainfall from GPM-IMERG ====
+
+== Step 1: download the latest GCM forecast anomalies ==
+
+see: download_CDS_monthly_anomalies_ICU.ipynb in [[~/operational/ICU/development/hotspots/notebooks/CDS]] 
+
+which downloads the precipiation (with options for other variables) anomalies from the CDS 
+
+== Step 2: read the GCM anomalies, conversion to anomalies in mm ==
+
+see:  **notebooks/CDS/read_CDS_convert_rainfall.ipynb** in [[~/operational/ICU/development/hotspots]]
+
+{{./screenshot_2020-09-25-161633.png?width=700}}
+
+{{./screenshot_2020-09-25-161558.png?width=500}}
+
+
+--------------------
+
+==== Learning Temporal Coherence via Self-Supervision for GAN-based Video Generation (TecoGAN) ====
+
+https://ge.in.tum.de/publications/2019-tecogan-chu/ 
+
+Their results in super resolution and inpainting is very impressive. Although a GAN architecture may not be directly applicable in the downscaling project, the way of exploiting temporal correlation in similar problem is still very inspiring for dealing with climate related data.
+
+paper: https://arxiv.org/pdf/1811.09393.pdf 
+code: https://github.com/thunil/TecoGAN.git 
+video: https://www.youtube.com/watch?v=pZXFXtfd-Ak 
+
+potentially useful for weather data augmentation as **it seems to improve temporal consistency** 
+
+→ **generative models for weather and climate data augmentation** 
+
+Chu, M., Y. Xie, J. Mayer, L. Leal-Taixé, and N. Thuerey, 2020: Learning **Temporal Coherence** via Self-Supervision for GAN-based Video Generation. ACM Trans. Graph., 39, https://doi.org/10.1145/3386569.3392457.
+
+
+--------------------
+
+==== R&D BoM workshop ====
+
+see email from Guomin Wang ... apparently need to talk about **Impact Based Forecasting at NIWA** ?? workshop is Monday 23 November, which clashes with the 
+NZ meteorological society meeting also 23 - 27th November ... email **Catherine DeBurg-Day** ... 
+
+→ sorted, Neelesh will present 
+
+--------------------
+
+==== Meeting with Zach Preston re. potential internship ====
+
+2 - 3 PM 
+
+possibility of Zach Preston working on GPM-IMERG bias correction and GCM (CDS) data downscaling 
+
+--------------------
+
+==== concatenating xarray Datasets along a named dimension ====
+
+see: [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/CDS/read_CDS_convert_rainfall.ipynb]] 
+
+dset_GCMs = xr.concat(dset_GCMs, dim=pd.Index(list_GCMs, name='GCM'))
+
+The key is to use a named pandas index: **dim=pd.Index(list_GCMs, name='GCM')**
+
+--------------------
+
+==== set up a custom cartopy projection ====
+
+example in: https://github.com/dgergel/scientific_computing_20190117/blob/master/scripts/scientific_computing_20190117.ipynb 
+
+{{./screenshot_2020-09-25-170313.png?width=700}}
+
+...
+
+result: 
+
+{{./screenshot_2020-09-25-170347.png?width=700}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-07-07T13:28:57+12:00
+
+====== Wednesday 07 Jul 2021 ======
+
+==== ICU: experiments with Deep Learning for downscaling / bias correction ====
+
+@ICU @ML @DL 
+
+see in [[/home/nicolasf/operational/ICU/development/hotspots/notebooks/Deep_Learning]] 
+
+**Train_bias_correction.ipynb**
+

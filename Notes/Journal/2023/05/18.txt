@@ -1,0 +1,136 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-18T09:01:47+12:00
+
+====== Thursday 18 May 2023 ======
+
+==== Forge the Future newsletter and resources ====
+
+@PwC 
+
+https://www.forgethefuture.com/climate_change 
+
+https://www.forgethefuture.com/resources?categories=report,information,data
+
+--------------------
+
+==== using jupyterlab desktop ====
+
+see https://github.com/jupyterlab/jupyterlab-desktop 
+
+after activating an environment, need to do: 
+ 
+python -m ipykernel install --user
+
+for the kernel to be available 
+
+
+--------------------
+
+==== CMIP6 in the cloud examples: ====
+
+@CMIP6 @PwC 
+
+https://github.com/jbusecke/presentation_2022_ams_cmip6_cloud 
+
+https://github.com/jbusecke/presentation_ams_2023 
+
+https://cmip6-preprocessing.readthedocs.io/en/latest/?badge=latest 
+
+https://github.com/jbusecke/presentation_scipy_2022_cmip 
+
+videos: 
+
+https://www.youtube.com/watch?v=WbUMjnZ9aLQ 
+
+https://www.youtube.com/watch?v=bJNpfuW_ypU
+
+https://www.youtube.com/watch?v=7niNfs3ZpfQ&list=PLfXS2mKtwkuaAHKuL_dd84mX8qAw6W8mB: good intro to CMIP6, models, etc 
+
+"""
+a climate model is basically a big numerical simulation of the whole planet, we are chopping up different components
+"""
+
+--------------------
+
+==== Easy IPCC Part 1: Multi-Model Datatree ====
+
+@CMIP6 @PwC 
+
+https://medium.com/pangeo/easy-ipcc-part-1-multi-model-datatree-469b87cf9114 
+
+see also 
+
+→ CMIP6 archive on AWS: https://registry.opendata.aws/cmip6/ 
+
+→ CMIP6 archive on google cloud: https://cloud.google.com/blog/products/data-analytics/new-climate-model-data-now-google-public-datasets
+
+for the latter see: https://github.com/hdrake/cmip6-temperature-demo/ 
+
+--------------------
+
+==== Taufiq Hassan CMIP6/5 utilities ====
+
+@CMIP6 @PwC 
+
+https://github.com/TaufiqHassan/e3sm_grid_analysis/blob/main/Target_resolution_v1.ipynb
+https://github.com/TaufiqHassan/cloud_CMIP6/blob/master/precip_analysis.ipynb
+https://github.com/TaufiqHassan/cloud_CMIP6/blob/master/precip_analysis.ipynb
+
+https://github.com/TaufiqHassan/cloud_CMIP6/blob/master/precip_analysis.ipynb: 
+
+rainfall rate 
+
+{{./screenshot_2023-05-18-120701.png}}
+
+--------------------
+
+==== cmpdata ====
+
+@CMIP6 @PwC 
+
+https://cmpdata.readthedocs.io/en/latest/
+
+is a python-based pre-processor for the 6th Coupled Model Intercomparison Project (CMIP6) raw data. It is often cumbersome to handle MIP data considering the number of variables, models and experments often used for a project! Multiple realizations/ensembles can make the total data size pretty large and even harder to handle. Users often save data in multiple directories, which makes handling them more time consuming. With cmpdata, users can forget about rearranging data into multiple directories and processing data from them separately. It can produce comprehensive information with list of variables, models and experiments of raw NetCDF data available in a directory and then pre-process them as necessary.’
+
+see also: 
+
+https://taufiqhassan.github.io/ 
+
+--------------------
+
+==== acccmip5 (Same as acccmip6 but for CMIP6) ====
+
+@CMIP6 @PwC 
+
+https://github.com/TaufiqHassan/acccmip5
+
+acccmip5 package can access CMIP5 database. If you are familiar with acccmip6, this is basically the same but for CMIP5 database. Remember this package hasn't been tested as heavily as acccmip6. Post any bugs you may find.
+
+--------------------
+
+==== CMIP Phase 6 (CMIP6) ====
+
+@CMIP6 @PwC 
+
+https://wcrp-cmip.org/cmip-phase-6-cmip6/
+
+see presentation: https://www.wcrp-climate.org/images/modelling/WGCM/CMIP/CMIP6FinalDesign_GMD_180329.pdf 
+
+special issue of GMD: Coupled Model Intercomparison Project Phase 6 (CMIP6) Experimental Design and Organization
+
+https://gmd.copernicus.org/articles/special_issue590.html
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+

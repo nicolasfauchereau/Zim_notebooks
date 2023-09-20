@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-27T09:23:37+12:00
+
+====== Thursday 27 Aug 2020 ======
+
+--------------------
+
+==== Thread on Hyperparameters optimization on MS Teams ====
+
+https://teams.microsoft.com/l/message/19:bc38bfabe50340b58a0cec6de446415f@thread.tacv2/1598433389824?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&groupId=582cda94-a824-44da-a90a-d2c77e9e21ee&parentMessageId=1598433389824&teamName=T%26I%20Analytics%20%26%20Modelling%20Hub&channelName=Machine%20Learning%20and%20AI&createdTime=1598433389824
+
+libraries to try: 
+
+* neuraxle: https://www.neuraxle.org/stable/index.html# 
+
+see example of a pipeline 
+
+{{./screenshot_2020-08-27-101244.png}}
+
+--------------------
+
+===== PYCARET presentation =====
+
+https://www.youtube.com/watch?time_continue=4&v=fOHgbKMem3k&feature=emb_logo
+
+--------------------
+
+===== Autokeras updated to version 1.0.8 =====
+
+see https://github.com/keras-team/autokeras/releases/tag/1.0.8 
+
+--------------------
+
+===== JMA forecasts =====
+
+see 
+
+https://ds.data.jma.go.jp/tcc/tcc/gpv/index.html
+
+https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2/CPS2_6mon_ens.html for the ensemble mean 
+
+https://ds.data.jma.go.jp/tcc/tcc/gpv/model/CPS2/CPS2_6mon_mem.html for all the ensemble members 
+
+--------------------
+
+===== SCO tercile probabilistic forecasts now fully objective =====
+
+see 
+
+[[/home/nicolasf/operational/NCC_ops/SCO_copernicus/notebooks/src]] 
+
+for all the function, including `make_mask` which create a mask (with regionmask) from a Geopandas DataFrame or GeoSeries  
+
+see portion of the documentation
+
+https://regionmask.readthedocs.io/en/stable/notebooks/geopandas.html 
+
+
+
+
+
+
+
+
+
+
+
+
+

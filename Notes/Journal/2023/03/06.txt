@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-06T09:32:22+13:00
+
+====== Monday 06 Mar 2023 ======
+
+==== CCDownscaling ====
+
+@downscaling @MBIE @CMIP6 
+
+check again https://github.com/drewpolasky/CCdownscaling as this seems to be regularly updated 
+
+--------------------
+
+==== compound extremes proposal ====
+
+consider vulnerability of infrastructure and socio-economic systems (including infrastructure) to different types of compound extreme events 
+
+e.g. in the context of January floods 
+
+compound diachronic weather extremes: first flooding due to atmospheric weather, then cyclone. Taking place within the context of climate extremes: La Nina and Marine Heatwaves. Spatial connection, slash from forestry → downstream destruction of infrastructure and properties, direct and indirect economic losses due to transport disruptions ... 
+
+estimates of cost is made *after the fact* ... our work will allow the anticipation of such risk profiles. We will focus on the compound extremes identified in a large ensemble of simulations that are the most likely, under SSP 370. 
+
+--------------------
+
+==== Physically Constrained Generative Adversarial Networks for Improving Precipitation Fields from Earth System Models ====
+
+@MBIE @downscaling @CMIP6 
+
+Hess, P., M. Drüke, S. Petri, F. M. Strnad, and N. Boers, 2022: Physically Constrained Generative Adversarial Networks for Improving Precipitation Fields from Earth System Models.
+
+https://www.nature.com/articles/s42256-022-00540-1 
+
+code:
+
+https://codeocean.com/capsule/3633745/tree/v1
+
+also downloaded in [[/media/nicolasf/END19101/Physically_constrained_GANs_downscaling]] 
+
+see also: 
+
+https://arxiv.org/pdf/1703.10593.pdf 
+
+https://machinelearningmastery.com/what-is-cyclegan/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-04T10:32:36+13:00
+
+====== Tuesday 04 Oct 2022 ======
+
+==== Pacific dataviz challenge ====
+
+@ICU 
+
+https://dataviz.pacificdata.org/#intro 
+
+https://dataviz.pacificdata.org/#datasources
+
+https://pacificdata.org/data/dataset 
+
+AROME - Modèle atmosphérique à aire limitée à haute résolution 
+
+https://data.gouv.nc/explore/dataset/arome-outre-mer/information/
+
+--------------------
+
+==== VCSN seasonal climatologies ====
+
+@VCSN ssss
+
+see maps and notebook: 
+
+[[/home/nicolasf/research/CMIP6_downscaling/notebooks/VCSN/VCSN_climatologies.ipynb]] 
+
+--------------------
+

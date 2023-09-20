@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-05T16:47:33+12:00
+
+====== Sunday 05 Apr 2020 ======
+
+problem with UKMO pinned down to the fact that 
+
+1) the pre-processed (grib to netcdf) datasets present some spurious "lines" of NaN values for some given latitudes 
+
+{{./screenshot_2020-04-05-165304.png}}
+
+2) therefore the interpolations fail, and yield some all NaNs fields 
+3) on possible solution could be to interpolate the NaNs accross the latitude dimension 
+4) a better solution is to re-process all the downloaded forecasts, which are in the "local" folder in 
+
+ [[/home/nicolasf/research/Smart_Ideas/data/GCMs/downloads/forecasts/CDS/UKMO/]]
+
+Note that for T2M it seems that not all months are valid: 2018-01 and 2018-02 seem corrupted 
+
+the notebook "try_fix_ukmo.ipynb" in /home/nicolasf/research/Smart_Ideas/code/processors/CDS/notebooks
+ 
+reads the grib files, fix the attributes and the grid, selects the steps, calculates the monthly anomalies, calculates the seasonal anomalies, 
+
+note: change of grids
+
+
+interpolate onto the 2x2 grid, then saves all this in the "local" processed folder ... 

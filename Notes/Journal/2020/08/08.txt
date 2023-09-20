@@ -1,0 +1,81 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-08-08T12:15:04+12:00
+
+====== Saturday 08 Aug 2020 ======
+
+==== READ: ====
+
+**Viewing Forced Climate Patterns Through an AI Lens** 
+
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL084944 
+
+and suggest that for the Data Science Journal Club 
+
+as well as 
+
+**Physically Interpretable Neural Networks for the Geosciences: Applications to Earth System Variability**
+
+https://arxiv.org/abs/1912.01752 
+
+Also 
+
+===== Interpretable neural Networks / interpretable Machine Learning =====
+
+Use **Layer-Wise Relevance Propagation (LRP)** 
+
+to identify signals learned by the Neural Network to be relevant for the prediction of regional NZ temperature and rainfall anomalies
+
+paper: 
+
+Toms, B. A., E. A. Barnes, and I. Ebert-Uphoff, 2020: Physically Interpretable Neural Networks for the Geosciences: Applications to Earth System Variability. arXiv:1912.01752 [physics, stat],. and submitted to the Journal of Advances in Modeling Earth Systems (JAMES) 
+
+and 
+
+Barnes, E. A., B. Toms, J. W. Hurrell, I. Ebert‐Uphoff, C. Anderson, and D. Anderson, 2020: Indicator patterns of forced change learned by an artificial neural network. J. Adv. Model. Earth Syst., https://doi.org/10.1029/2020MS002195.
+
+based on some initial work from: 
+
+Kohlbrenner, M., A. Bauer, S. Nakajima, A. Binder, W. Samek, and S. Lapuschkin, 2020: Towards Best Practice in Explaining Neural Network Decisions with LRP. arXiv:1910.09840 [cs, stat],.
+ 
+see 
+
+http://www.heatmapping.org/ 
+
+for the website of the group (Kohlbrenner et al etc) 
+
+"""
+This webpage aims to regroup publications and software produced as part of a joint project at Fraunhofer HHI, TU Berlin and SUTD Singapore on developing new method to understand nonlinear predictions of state-of-the-art machine learning models.
+"""
+
+see some implementations in Python: 
+
+https://github.com/albermax/innvestigate
+
+and local clone in [[~/research/Smart_Ideas/resources/repos_libraries]]  
+
+https://github.com/dshieble/Tensorflow_Deep_Taylor_LRP 
+
+and local clone in [[~/research/Smart_Ideas/resources/repos_libraries]] 
+ 
+https://github.com/atulshanbhag/Layerwise-Relevance-Propagation 
+
+and local clone in [[~/research/Smart_Ideas/resources/repos_libraries]] 
+
+see also a more general (?) framework called **depiction**, see: 
+
+https://github.com/IBM/depiction 
+
+and local clone in [[~/research/Smart_Ideas/resources/repos_libraries]]  
+
+see also  https://github.com/marcotcr/lime which is used by 
+
+== Interpretable Machine Learning in R ==
+
+https://cran.r-project.org/web/packages/iml/vignettes/intro.html 
+
+
+
+
+
+

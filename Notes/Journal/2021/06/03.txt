@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-03T15:14:10+12:00
+
+====== Thursday 03 Jun 2021 ======
+
+==== Atmospheric Rivers detection ====
+
+https://ipart.readthedocs.io/en/latest/ 
+
+github repo:  https://github.com/ihesp/IPART 
+
+paper: https://gmd.copernicus.org/articles/13/4639/2020/
+
+see also: https://github.com/thenaomig/ARdetection 
+
+--------------------
+
+==== cmaptools: A convenient package to read GMT style cpt-files to matplotlib cmaps and mimic the dynamic scaling around a hinge point. ====
+
+https://github.com/shaharkadmiel/cmaptools

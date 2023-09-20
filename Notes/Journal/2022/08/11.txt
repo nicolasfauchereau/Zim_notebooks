@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-11T09:52:26+12:00
+
+====== Thursday 11 Aug 2022 ======
+
+--------------------
+
+==== Evolutionary computation ====
+@python @algorithm @evolution 
+
+https://evotorch.ai/ 
+
+EvoTorch is an advanced evolutionary computation library built directly on top of PyTorch, created at NNAISENSE. 

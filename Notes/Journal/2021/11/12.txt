@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-11-12T12:16:01+13:00
+
+====== Friday 12 Nov 2021 ======
+
+==== WRs and waves with Christo ====
+
+For downloading the significant wave height from ERA5, see: 
+
+**download_ERA_SWH.ipynb**
+
+in 
+
+[[/home/nicolasf/research/WRs_and_waves/notebooks]]
+
+--------------------
+
+==== ERA5 Circulation Regimes s ====
+
+Z1000, U and V from Ben, in: 
+
+[[/home/nicolasf/research/CPP/WRs/data/ERA5_BP]] 
+
+**read_ERA5_Ben_Data.ipynb** reads the pickle file, transforms into xarray dataset and saves to zarr
+
+NOTE: saving and readiong from ZARR stores is order ofd magnitude faster than netcdf !!! 
+
+--------------------
+
+
+

@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-16T12:41:20+13:00
+
+====== Thursday 16 Feb 2023 ======
+
+==== MSWEP update for the ICU ====
+
+@ICU @MSWEP 
+
+Note: 
+
+in  [[/home/nicolasf/operational/ICU/development/hotspots/code/ICU_Water_Watch/scripts/GPM]] 
+
+I have changed the script **GPM_process.py**: now when making the mask, subset = False, meaning that the resulting datasets are not clipped to the boundaries of the merged Pacific Island countries EEZs
+
+Problem with MSWEP updates: nothing has changed since the day before yesterday (15 Feb) 
+
+The 3 hourly files (see https://drive.google.com/drive/folders/1XBonFS0_t3aSM_C4CYobwsN-spmj29vo) 
+
+have only been updated for day 45 hour 09 (i.e. hour 12, 15, 18 and 21 missing) 
+
+So it seems the delay to realtime is more like 3 days... 
+
+~~UPDATE: On the Friday 17 at 9 AM (so 8 PM UTC on Thursday the 16), the file with DOY 45 (2023, 2, 14) has been made available on the shared drive~~ 
+
+Also problem with the climatological percentiles, need to recalculate and include: 
+
+percentile 0.02 (for the USDI D4 [exceptional drought] category)
+percentile 0.05 (for the "severely dry" EAR watch category) 
+
+
+--------------------
+
+==== Fonds Pacifique Francais ====
+
+see in https://niwa-my.sharepoint.com/personal/nicolas_fauchereau_niwa_co_nz/_layouts/15/onedrive.aspx?login_hint=nicolas%2Efauchereau%40niwa%2Eco%2Enz&id=%2Fpersonal%2Fnicolas%5Ffauchereau%5Fniwa%5Fco%5Fnz%2FDocuments%2FDocuments%2FNIWA%2Fprojects%2FFrench%5FPacific%5FFund 
+
+for examples of project's proposal 
+

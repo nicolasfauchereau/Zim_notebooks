@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-05T11:51:23+12:00
+
+====== Tuesday 05 May 2020 ======
+
++ Waiting on the potential extension of my Smart Ideas project, 6 months, makes the deadline March 2021 
+
+granted: 
+
+"""
+We have received notice from MBIE about changes being made as a result of the COVID-19 lockdown and subsequent impacts on research programmes.  I am pleased to advise you that MBIE has decided to extend all Endeavour contracts (Smart Ideas and Research Programmes) due to end on 30 September 2020.  Therefore, your Endeavour programme will receive a 6-month extension, together with a half-year of additional funding.  The new end-date will be 31 March 2021, and so a report will probably be required for next financial year as well (rather than this year being the last report). 
+
+ 
+This extension is to enable us to complete the contract as originally envisaged and you should, therefore, start planning on that basis. MBIE will be in touch soon about a variation to the contract, and we will find out then whether they will just change the date or will require critical steps etc. to be modified as well.  I will be in touch once we find out what is required.
+
+Please feel free to contact me if you have any questions.
+"""
+
++ mail dated 6 May regarding the **planning of activities and sub-contracts until the end of the project (31 March 2021). ** 
+
+"""
+Hi Nico
+
+You can go ahead and reschedule your programme now according to the new end date, but the COVID-19 impacts are ongoing so you might not want to lock everything down just yet.  The main thing now is to figure out how you will deliver the project over the longer timeframe, so it is good that you have the extra breathing space in terms of Brett’s work.  You might also think about and extra work you might do to improve the research outcomes if you are able, now that there are additional resources, but that is not an obligation of the extension.  **You will, of course, need to engage with your subcontractors, because MBIE’s (and their) expectation is to have their work extended and funded as well, pro rated.** 
+
+I will be in touch once I hear from MBIE about what level of detail they are expecting for the variation.
+
+Regards
+
+ 
+
+Alan
+"""
+
+
+
+
+
+
++ read 
+
+https://medium.com/@ahmedbesbes/a-hackers-guide-to-efficiently-train-deep-learning-models-b2cccbd1bc0a 
+
+see also local save in [[/home/nicolasf/research/Smart_Ideas/resources/deep_learning]] 
+
+refers to the fact that **image augmentation** is a good strategy: see library: https://github.com/albumentations-team/albumentations 
+
+==== Ensemble methods ====
+
+see http://rasbt.github.io/mlxtend/user_guide/classifier/StackingClassifier/ for a good explanation of what a stacking classifier is 
+
+also examples look very promising: try next 
+
+
+==== Hyperparameters turing for Neural Networks ====
+
+see: https://openreview.net/pdf?id=B1g8VkHFPH (RETHINKING THE HYPERPARAMETERS FOR FINE-TUNING)
+
+also @IDEA: use transfer learning for CNN / NNs; train first on all but one GCM, save model, then use transfer learning on the held out GCM. Repeat, loop ..  
+
+
+==== Convolutional Aut-encoders ====
+
+Apparently " I think it is important to use convolutional AEs rather than full connected ones to reduce the chance of overfitting" (from Eibe) 
+
+see: https://blog.keras.io/building-autoencoders-in-keras.html
+
+
+
+
+

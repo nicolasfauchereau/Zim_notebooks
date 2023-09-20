@@ -1,0 +1,104 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-07-11T11:02:12+12:00
+
+====== Saturday 11 Jul 2020 ======
+
+=== Philip Brohan ML experiments ===
+
+@PhilipBrohan on twitter 
+
+see: http://brohan.org/Machine-Learning 
+
+Notably: 
+
+http://brohan.org/Machine-Learning/prepare_data/prepare_data.html 
+
+which prepares data: i.e. goes from a netcdf to a TF tensor, then saves to disk 
+
+# **converts to tensor** 
+
+ict=tf.convert_to_tensor(ic.data, numpy.float32)
+
+**# Write to tfrecord file**
+
+sict=tf.serialize_tensor(ict)
+
+tf.write_file(f"{filename}.tfd",sict)
+
+Convolutional Auto-encoder: 
+
+Philip Brohan has experimented with Autoencoders, for 
+
+=== Longitude padding and resizing for convolutional filters ===
+
+see: 
+
+http://brohan.org/Machine-Learning/convolutional_autoencoder/autoencoder.html 
+
+=== Submission of ideas for next week's T&I scoping workshops: ===
+
+One, aligned with the 'Visualisation' strategy is about developing a **realtime "dashboard" for climate and environmental metrics for NZ**. In short the idea is to develop new, innovative metrics based on realtime datasets, with spatial and temporal scales determined objectively using pattern recognition techniques, and serve them on an interactive dashboard. Examples could include e.g. the proportion / area of NZ's eco-regions in drought, ocean heatwaves tracking in NZ's ocean domain, primary productivity in NZ's EEZ, air quality markers, etc ... motivation is that our physical environment is under threat (climate change, direct human pressures) and that we need the equivalent of an 'electronic hospital monitor' to track the 'vital signs' of our environment. This could help recognize trends, convergence of pressures, tipping points, etc. There could be a link to the current Waikato-led TAIAO project (about ML for realtime environmental time-series).
+
+Another, aligned with the "AI / big data" strategy, is about what we talked briefly about Drew and Nellie: "**Machine Learning for data augmentation**": in short the idea is to leverage recent developments in ML (variational auto-encoders, generative models, transfer learning, image inpainting, ...) to 'augment' our climate and weather datasets (either observations or model-based). In the context of this project, 'augmentation' is the process by which existing datasets are enhanced: datasets with missing values infilled, short datasets extended back in time, coarse resolution datasets downscaled to higher resolutions, large ensemble created from small ensembles, etc. The outcomes would open both research and commercial opportunities I think.
+
+
+==== Blogging with fastpages ====
+
+See: 
+
+https://oriolabril.github.io/oriol_unraveled/blog/communication/2020/07/10/blog.html 
+
+where he discusses changing the default theme of the fastpages blogging platform 
+
+
+https://mmistakes.github.io/jekyll-theme-basically-basic/ 
+
+seems an option 
+
+see 
+
+https://github.com/mmistakes/jekyll-theme-basically-basic#ruby-gem-method 
+
+=== Blogging with NIKOLA and Jupyter Notebooks ===
+
+https://jiaweizhuang.github.io/blog/nikola-guide/ 
+
+have cloned his personal website in [[/home/nicolasf/blog/Nikola_JiaweiZhuang]] 
+
+see configuration at: 
+
+[[/home/nicolasf/blog/Nikola/blog]] 
+
+to deploy to github, it seems this 
+
+https://www.brainsorting.dev/posts/create-a-blog-with-nikola/ 
+
+seems to make the most sense ... yes ! follow the instructions there and it will work
+
+the issue seems related to the instructions below (from jiaweizhuang) 
+
+{{./screenshot_2020-07-11-175123.png}}
+
+i.e. DOT NOT create these, or alternatively use the exact commands, or the 
+
+
+=== Mail from Eibe regarding missing months in some GCMs ===
+
+Hi Nico,
+
+There may still be a couple of small issues with GCMs_and_targets_cat3_and_anomalies_TMEAN_training_set.csv and its standardised version:
+
+1993 - 2016: for each 05-31 season (and that season only!), the model outputs seem to be missing for both **CMCC** and **CanCM4i**.
+
+1981 - 1992: for each 05-31 season, the model outputs for CanCM4i are missing.
+
+In contrast, GCMs_and_targets_cat3_and_anomalies_RAIN_training_set.csv and its standardised version seem to be fine.
+
+
+
+
+
+
+
+

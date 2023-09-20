@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-29T17:54:40+13:00
+
+====== Wednesday 29 Jan 2020 ======
+
+* interview Neelesh 
+* fixed issue in [[~/Documents/data_scientist_position/notebooks/JJA_ECBiltClio_21ka.ipynb]]
+* notebook to calculate the ERA5 climatology and anomalies [[~/research/Smart_Ideas/code/processors/ERA5/notebooks/read_ERA_calculate_anomalies.ipynb]]

@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-08T09:17:21+13:00
+
+====== Monday 08 Mar 2021 ======
+
+==== corner ====
+
+see https://corner.readthedocs.io/en/latest/index.html 
+
+library for producing these kind of plots 
+
+{{./screenshot_2021-03-08-091736.png}}
+
+--------------------
+
+==== AOS tools: ====
+
+https://github.com/mjucker/aostools
+
+Helper functions for postprocessing and analysis of netCDF data. Also includes I/O routines to seamlessly work with pv_atmos. 
+
+see also:  https://github.com/mjucker/pv_atmos
+
+allows to calculate the  **Eliassen‐Palm** flux vectors, see paper: https://rmets.onlinelibrary.wiley.com/doi/10.1002/asl.1020 
+
+https://zenodo.org/record/4297024 
+
+can also compute stream function etc ... 
+
+see https://github.com/mjucker/aostools/blob/master/climate.py
+
+
+--------------------
+
+==== EOFs on CMAP and MSWEP ====
+
+see: **validation/make_obs_PCA.ipynb**
+
+
+{{./screenshot_2021-03-08-160137.png}}
+{{./screenshot_2021-03-08-160748.png}}
+
+
+
+
+
+
+

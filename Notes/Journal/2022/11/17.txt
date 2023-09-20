@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-11-17T09:55:40+13:00
+
+====== Thursday 17 Nov 2022 ======
+
+==== xarray plot: Working with Multidimensional Coordinates ====
+
+https://docs.xarray.dev/en/stable/examples/multidimensional-coords.html 
+
+--------------------
+
+==== CDO with compressed netcdf ====
+
+see exchange with Peter re. the compressed netcdfs on Kupe 
+
+CDO takes 12 hours (!) to calculate climatologies when reading the compressed netcdf files, that were generated in e.g. using these encoding options: 
+
+encode = {"pr_BCSD_QM_from_ERA-c192_CCAM": {"zlib": True, "complevel": 9}}
+
+This thread https://code.mpimet.mpg.de/boards/2/topics/12598 
+
+suggests using these values 
+
+encoding={v:{'zlib':True, 'shuffle':True, 'complevel':9}}
+encoding_chunksizes = encoding.copy()
+encoding_chunksizes[v]['chunksizes'] = (1,1,220,256)
+
+in the context of data with these dimensions `256x220 points over 588 time steps` 
+
+--------------------
+
+
+
+
+

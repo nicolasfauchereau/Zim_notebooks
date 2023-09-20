@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-11T16:34:09+13:00
+
+====== Friday 12 Mar 2021 ======
+
+--------------------
+
+==== !!!! TODO: process Z850 ====
+
+see [[/media/nicolasf/END19101/data/GCMs/processed/CDS/]] 
+
+then run **make_GCM_and_targets_csv.ipynb** 
+
+in [[/media/nicolasf/END19101/data/GCMs/downloads/ECMWF/Z850]] there is also TMEAN, WTF ? 
+
+moving to TMEAN folder one level up 
+
+
+--------------------
+
+==== Complex Networks: ====
+
+A python library for creating complex networks of geospatial time series data, with an accompanying Jupyter notebook containing an example with sea surface temperature data. 
+
+see paper 
+
+https://discovery.ucl.ac.uk/id/eprint/10091542/1/Gregory_wafd190107.pdf
+
+see code https://github.com/William-gregory/ComplexNetworks cloned in [[/home/nicolasf/sources/ComplexNetworks]] 
+
+also the code included to FORECAST sea ice extent using GPs leveraging the complex networks teleconnections uncovered using the methodology above: 
+
+https://github.com/William-gregory/SeaIceExtentForecasting
+
+also cloned into [[/home/nicolasf/sources]]
+
+see also this repo: https://github.com/William-gregory/PRML with **PRML.ipynb** which contains coded examples, which i have written myself (William Gregory), outlining various fundamental statistical concepts related to pattern recognition and machine learning, as covered in both textbooks by Bishop, 2006 and Rasmussen & Williams, 2006.
+
+With the addition of some more recent work into multi-task GPs from Stegle et al., 2011 and Rakitsch et al., 2013.
+
+
+
+
+--------------------
+
+==== Tesseract and images to csv ====
+
+https://github.com/artperrin/image2csv
+
+https://github.com/madmaze/pytesseract 
+
+could be of interest for Southern Weather Discovery ??? 
+
+--------------------
+
+==== Using ZARR to process meteorological datasets ====
+
+see: https://github.com/taylorgowan/zarr
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-08-30T12:53:04+12:00
+
+====== Wednesday 30 Aug 2023 ======
+
+**autoclose brackets and quotes in Jupyterlab** 
+
+@jupyter 
+
+to enable autoclose brackets and quotes in Jupyterlab 
+
+ go to 'settings/auto-close brackets'
+
+
+
+
+
+
+
+
+
+
+

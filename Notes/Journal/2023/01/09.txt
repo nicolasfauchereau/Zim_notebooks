@@ -1,0 +1,145 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-01-09T09:04:40+13:00
+
+====== Monday 09 Jan 2023 ======
+
+
+==== BAMS STOC 2022 figures selection and text ====
+
+document with text in 
+
+https://niwa-my.sharepoint.com/:w:/r/personal/nicolas_fauchereau_niwa_co_nz/_layouts/15/Doc.aspx?sourcedoc=%7B2ABC79C7-DDC3-41E2-9DB2-90695DEE7A5B%7D&file=Fauchereau_Tropics_PacificConvergenceZones_SOTC2022.docx&action=default&mobileredirect=true 
+
+first figure(s): sector plots
+second figure:  one / 2 anomalies maps, probably seasonal 
+third figure: longitude plots for one season and one particular sector, choose so that it is representative 
+
+For the text: 
+
+La Nina conditions persisted during the whole of 2022, with slight weakening in November and December, signalling a potential transition to ENSO Neutral conditions in 2023 
+
+according to the ONI, seasonal values never got over -0.8 over the year 2022
+
+
+--------------------
+
+==== SST forecasting / validation ====
+
+check the consistency of the ACC for the NZ domain: 
+
+- with and without the inclusion of the ECCC GCMs
+- with ERSST as validation dataset and OISST as the validation dataset 
+- monthly + seasonal values 
+
+ex. previously obtained ACC: 
+
+monthly ACC, ERSST 
+
+{{./screenshot_2023-01-09-092545.png?width=500}}
+
+monthly ACC, OISST 
+
+{{./screenshot_2023-01-09-092648.png?width=500}}
+
+seasonal ACC, OISST 
+
+{{./screenshot_2023-01-09-092726.png?width=500}}
+
+
+
+OK check done: results are fully compatible with what was obtained before .... 
+
+Note that the quick check of the raw fields for each GCM, in [[/home/nicolasf/operational/SST_forecasting/notebooks/tmp/]] shows nothing seems weird ... see check_sst_hindcasts.py for the code 
+
+currently processing JMA, NCEP and the ECCC GCMs for completion 
+
+HTML representations of the notebooks, with figures: 
+
+* **verification_deterministic_sst_monthly_OISST_verif.html**: monthly forecasts, OISST used as the verification dataset
+* **verification_deterministic_sst_seasonal_OISST_verif.html**: monthly forecasts, OISST used as the verification dataset
+
+Sent to Neelesh today, catch up on Tuesday 10 Jan 11 AM 
+
+paper on the correlation between mussel yields anomalies and SSTs / atmospheric teleconnections: 
+
+https://niwa-my.sharepoint.com/:w:/g/personal/neelesh_rampal_niwa_co_nz/EXUpGNSzbBdFsvZXi1759hMBHImPqCncWOc5oTaqCQJA5Q?email=Nicolas.Fauchereau%40niwa.co.nz&e=4%3AcsDHbj&at=9&CID=ce2fe308-1853-6c8c-ee04-c143c91284f5 
+
+--------------------
+
+==== MSWEP processing ====
+
+→ runsum 180 processed ... 
+
+runsum 30 seems to be missing ... 
+
+(base) ╭─nicolasf@Dell-ML **/media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily/SP/climatologies** 
+╰─$ ll *quantiles_60_* | wc -l   
+365
+
+(base) ╭─nicolasf@Dell-ML **/media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily/SP/climatologies** 
+╰─$ ll *quantiles_180_* | wc -l 
+365
+
+//(base) ╭─nicolasf@Dell-ML /media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily/SP/climatologies //
+//╰─$ ll *quantiles_90_* | wc -l  //
+//zsh: no matches found: *quantiles_90_*//
+//0//
+
+updated: now done 
+
+(base) ╭─nicolasf@Dell-ML /media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily/SP/climatologies 
+╰─$ ll *quantiles_90_* | wc -l 
+365
+
+(base) ╭─nicolasf@Dell-ML /media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily/SP/climatologies 
+╰─$ ll *quantiles_30_* | wc -l 
+zsh: no matches found: *quantiles_30_*
+0
+
+--- 
+
+== currently running ==
+
+[ ] **process_runsums.ipynb** with 90 days: calculate the climatologies 
+
+[*] **cdo  --timestat_date last runsum,30 merged_1979_2020_noleap.nc merged_1979_2020_noleap_runsum_30.nc**: calculate the running accumulations DONE !  see 
+
+		[[/home/nicolasf/data/MSWEP/merged_1979_2020_noleap_runsum_30.nc]] 
+
+outputs in /media/nicolasf/END19101/ICU/data/glo2ho/MSWEP280/Past/Daily/SP/climatologies  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

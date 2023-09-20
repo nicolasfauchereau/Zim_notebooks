@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-03-02T10:18:53+13:00
+
+====== Wednesday 02 Mar 2022 ======
+
+==== Data Science Stand up ====
+
+Presentation from Gemma Mason on piecewise curve fitting and change point detection 
+
+--------------------
+
+==== Mertz Institute ====
+
+→ Write a piece on tipping points in the socio-economic systems (summary of recent papers) 
+→ write a proposal exposing the approach and methodology for the identification of regions in NZ which are likely to be LEAST affected by Climate Change 
+
+--------------------
+
+==== Setting up evolution on Linux ====
+
+@evolution 
+
+"""
+Remove current account:From the menu in Evolution click “Edit” -> “Accounts”Select
+ your current email account then click “Delete” -> “Delete” Add Office 365 Mail Account:On the Welcome screen click “Next”(Note: If there is no welcome screen, from the menu in Evolution click
+ “Edit” -> “Accounts” -> “Add” -> “Mail Account” -> "Next")“Identity" -> type in your Full Name and Email Address, untick the lookup option, then click -> “Next”
+Receiving Email:
+Server Type: “Exchange Web Services”Username: your full email addressHost URL: https://outlook.office365.com/EWS/Exchange.asmxClick -> “Fetch URL” buttonYou will be prompted for you password -> Enter your passwordAuthentication -> Click “Check for Supported Types”Make sure OAuth2 (Office365) is selectedCheck “Override Office365 OAuth2 settings”Tenant: 41caed73-6a0c-468a-ba49-9ff6aafd1c77Application ID: 2cccbb28-4f2b-4fc1-82e7-8909e38abcb0Redirect URI: leave blankClick -> “Finish”Done: Click -> “Apply”
+Your Account should be visible on the left
+"""
+
+{{./screenshot_2022-03-02-121519.png}}
+
+--------------------
+
+==== Mercury: easily convert Python notebook to web app and share with others ====
+
+https://github.com/mljar/mercury
+
+
+

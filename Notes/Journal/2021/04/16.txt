@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-16T11:06:16+12:00
+
+====== Friday 16 Apr 2021 ======
+
+==== ML Hyperparameters fitting with DASK ====
+
+https://github.com/nesi/hpc_for_datascience_demos/tree/master/notebooks 
+
+try and apply https://github.com/nesi/hpc_for_datascience_demos/blob/master/notebooks/hyperparameters_search_nzrse.ipynb 
+
+with **skorch (pytorch)** applied to GCM data vs VCSN output 
+
+see: [[~/research/Smart_Ideas/resources/repos_application_cases/hpc_for_datascience_demos]] 
+
+--------------------
+
+==== Meeting with Drew and Neelesh about science planning for FY 2021 - 2022 ====
+
+== - improving VCSN ==
+
+1) step 1, back to 1972: 
+	→ using analogs methods to derive composite fields with which to guide the ANUSPLIN interpolation 
+	→ using ML methods (regression) accounting for e.g. topography or other ancillary variables 
+	→ use NZCSM or the (in progress) NZ reanalsis project 
+	→ comparing with e.g. image inpainting techniques ?  
+	
+2) step 2, back to 1950 
+	→ using reanalysis data (ERA5) 
+	→ using Image InPainting techniques 
+	
+3) → step 3, back to the early 20th Century (using the 20CR reanalysis) 
+
+WR papers: 
+
+1) contribution to 1st paper on methodology: subsidiary clustering based on surface variables (temperature and precipitation anomalies) 
+option: mask out values for elevation > 1000m ? 
+
+2) paper on predictability: using **MOTIF DETECTION:** see  https://github.com/ksanjeevan/ts-motif-detection and article: https://towardsdatascience.com/part-10-discovering-multidimensional-time-series-motifs-45da53b594bb, then look at precusors of sequences of WRs 
+
+The modified code (i.e. print statements mainly) is working in [[/home/nicolasf/research/CPP/WRs/ts-motif-detection]] 
+
+--------------------
+
+==== climpred workshop ====
+
+https://github.com/bradyrx/climpred_workshop
+
+and locally
+
+~/research/Smart_Ideas/resources/repos_libraries/climpred_workshop
+
+
+
+
+
+
+

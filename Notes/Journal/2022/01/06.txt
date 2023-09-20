@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-01-06T09:16:33+13:00
+
+====== Thursday 06 Jan 2022 ======
+
+==== xbatcher:  Batch generation from xarray datasets ====
+
+Xbatcher is a small library for iterating xarray DataArrays in batches. The goal is to make it easy to feed xarray datasets to machine learning libraries such as Keras.
+
+https://github.com/pangeo-data/xbatcher
+
+https://xbatcher.readthedocs.io/en/latest/
+
+--------------------
+
+==== animation of the last year 30 days accumulations anomalies ====
+
+@ICU 
+
+climatologies are in [[/home/nicolasf/operational/ICU/ops/data/GPM_IMERG/daily/extended_SP]] 
+
+**-rw-rw-r-- 1 nicolasf nicolasf 7.5G May 19  2021 GPM_IMERG_daily.v06.2001.2020_precipitationCal_30d_runsum.nc**
+-rw-rw-r-- 1 nicolasf nicolasf 7.5G May 19  2021 GPM_IMERG_daily.v06.2001.2020_precipitationCal_60d_runsum.nc
+-rw-rw-r-- 1 nicolasf nicolasf 7.5G May 19  2021 GPM_IMERG_daily.v06.2001.2020_precipitationCal_90d_runsum.nc
+-rw-rw-r-- 1 nicolasf nicolasf 7.4G May 21  2021 GPM_IMERG_daily.v06.2001.2020_precipitationCal_180d_runsum.nc
+-rw-rw-r-- 1 nicolasf nicolasf 7.2G May 21  2021 GPM_IMERG_daily.v06.2001.2020_precipitationCal_360d_runsum.nc
+
+365 daily files for 2021
+
+ll GPM_IMERG_daily.v06.2021*.nc | wc -l 
+365 
+
+see notebook: 
+
+**make_2021_anomalies.ipynb**
+
+in [[~/operational/ICU/development/hotspots/code/ICU_Water_Watch/notebooks/GPM]] 
+
+Note that there was a weird Geos_r error (see https://github.com/SciTools/cartopy/issues/1064) when plotting the EAR watch levels, for date 2021-02-10 ... problem solved by **interpolating the data array** (using `interp_like`) on the **same original grid** (go figure !), e.g.: 
+
+dset_interp = {}
+dset_interp['lat'] = (('lat'), np.linspace(-49.875, 24.875, 300, endpoint=True))
+dset_interp['lon'] = (('lon'), np.linspace(125.125, 239.875, 300, endpoint=True))
+dset_interp = xr.Dataset(dset_interp)
+
+dataarray = anoms_pctscore['pctscore'].squeeze()
+    
+dataarray = dataarray.interp_like(dset_interp
+
+
+--------------------
+
+==== formatting integers with leading zeroes in Python ====
+
+@Python 
+
+f"./tmp/2021_EAR_{d.dayofyr:03}.png": add leading zeroes and format over 3 characters 
+
+--------------------
+
+
+
+
+
+

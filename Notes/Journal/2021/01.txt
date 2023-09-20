@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-17T13:36:30+13:00
+
+====== January 2021 ======
+
+==== weird error while converting the NZ_regions_corrected.shp geodataframe from EPSG:4272 to EPSG:4326 ====
+
+For the first region (NNI) in the file, the geometry AFTER conversion contains only NaN values ... a temporary solution is not NOT do the conversion (as the coordinates are very very similar in both projections) 
+
+--------------------
+
+==== universal function for downloading either surface or pressure level CDS forecast monthly means or anomalies ====
+
+see **download_CDS.py** in [[/home/nicolasf/research/Smart_Ideas/code/ml4seas/downloaders]] 
+
+see **test_download_CDS.ipynb** in [[/home/nicolasf/research/Smart_Ideas/code/checks]] 
+
+see also CDS_variables_available.py in [[/home/nicolasf/research/Smart_Ideas/code/ml4seas/downloaders,]] which lists and print the variables availables 
+
+--------------------
+
+==== Shapash: a Python library which aims to make machine learning interpretable and understandable to everyone ====
+
+https://shapash.readthedocs.io/en/latest/index.html 

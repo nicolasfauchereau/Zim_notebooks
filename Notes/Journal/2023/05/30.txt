@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-30T08:51:52+12:00
+
+====== Tuesday 30 May 2023 ======
+
+==== interpolation ====
+
+xesmf 
+
+pyinterp 
+
+verde [[/]] fatiando: https://www.fatiando.org/verde/latest/index.html 
+
+https://github.com/czwchenzhun/tfinterpy
+
+https://github.com/pysal/tobler
+
+https://github.com/mikeRobWard/PyPolate 
+
+https://github.com/mikeRobWard/spatial-interpolation-toolbox 
+--------------------
+
+==== xarray issue with writing a netcdf4 file if dataset read from netcdf3 ('CLASSIC') ====
+
+@xarray 
+
+The issue is that the write fails, with error: 
+
+```
+**AttributeError: NetCDF: String match to name in use**
+```
+
+The solution is to remove the `_NCProperties` attribute in the dataset prior to writing to disk: 
+
+{{{code: lang="python3" linenumbers="True"
+del(dset.attrs['_NCProperties'])
+dset.to_netcdf(.....) 
+}}}
+
+
+--------------------
+
+==== quantile mapping in python utilities, built on XCLIM ====
+
+@PwC 
+
+see 
+
+https://github.com/climate-innovation-hub/qqscale 
+
+and 
+
+https://github.com/DamienIrving/qqscale 
+
+--------------------
+
+==== Unlocking a greener GDP through a circular bioeconomy ====
+
+@PwC 
+
+
+
+
+

@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-12T09:00:04+13:00
+
+====== Wednesday 12 Feb 2020 ======
+
+saves into temporary path locally on disk
+
+use the `shutile.move` function to  move to the project drive. Note that`pathlib.Path().rename()` function to does not work (as the source and destination are on different mounts)
+
+**note**: do that in one go after the processing: e.g. list all files in the 'processed' local folder, then copy to network project drive 
+
+=== VAEX for Machine Learning on large CSV files ===
+
+@bigdata 
+
+https://github.com/vaexio/vaex-examples/blob/master/medium-nyc-taxi-data-ml/vaex-taxi-ml-article.ipynb 
+
+===== ==== =====
+
+==== deep learning for science tutorials: ====
+
+https://sites.google.com/lbl.gov/dl4sci2019/agenda?authuser=0 
+
+and 
+
+
+https://github.com/NERSC/dl4sci-tf-tutorials
+

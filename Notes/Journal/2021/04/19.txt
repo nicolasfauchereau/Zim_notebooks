@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-19T14:38:52+12:00
+
+====== Monday 19 Apr 2021 ======
+
+==== ML4A: Machine Learning for Arts ====
+
+https://ml4a.net/
+
+see cartoonization:
+
+https://colab.research.google.com/github/ml4a/ml4a/blob/master/examples/models/cartoonization.ipynb#scrollTo=jqMX2INn_eQK
+
+--------------------
+
+===== IMPORTANT !!! =====
+
+see: 
+
+**DO NOT FORGET TO DROP THE MISSING VALUES OVER THE MEMBERS DIMENSIONS in e.g.** 
+
+CDS/version_2/2_calculate_ensemble_probabilities_of_forecasts_monthly.ipynb 
+
+and (most importantly) 
+
+**CDS/version_2/calculate_monthly_and_seasonal_hindcast_climatology_region_mask_NZ_regions.ipynb**
+
+
+

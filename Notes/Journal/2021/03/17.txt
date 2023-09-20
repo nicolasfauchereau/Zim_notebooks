@@ -1,0 +1,100 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-17T11:01:30+13:00
+
+====== Wednesday 17 Mar 2021 ======
+
+line legend 
+
+see function 
+
+def line_legend(fontsize: float = 15,
+				xoffset_spacing: float = 0.02,
+				extra_spacing: float = 0.1,
+				adjust_text_labels: bool = False):
+	'''Adds a legend with appropriately colored text labels next to each line
+	Params
+	------
+	fontsize
+		size of font for labels
+	xoffset_spacing
+		spacing between end of line and label (fraction of total line length)
+	extra_spacing
+		extra spacing at right side of plot for label (fraction of total line length)
+	adjust_text_labels
+		whether to try to adjust the label positions to avoid overlap
+	'''
+	ax = plt.gca()
+	handles, labels = ax.get_legend_handles_labels()
+	texts = []
+	for i in range(len(handles)):
+		line = handles[i]
+		x = line.get_xdata()[-1] * (1 + xoffset_spacing)
+		y = line.get_ydata()[-1]
+		c = line.get_color()
+		texts.append(plt.text(x, y, labels[i], color=c, fontsize=fontsize))
+	#     xticks = ax.get_xticks()
+	#     xticklabels = ax.get_xticklabels()
+	plt.xlim(right=x * (1 + extra_spacing))
+	plt.tight_layout()
+	if adjust_text_labels:
+		adjust_text(texts, only_move={'points': 'y', 'text': 'y', 'objects': 'y'})
+
+--------------------
+
+==== verif:  Software for verifying weather forecasts ====
+
+see 
+
+https://github.com/WFRT/verif
+
+includes **Linear error in probability space** (LEPS)
+
+--------------------
+
+==== issues with tercile probabilities for the hindcast period ====
+
+The member dimension contains NaNs, so need to remove NaNs before calculating probabilities !!!! 
+
+see in 
+
+need to recalculate all the tercile probabilities ... see script **notebooks/CDS/version_2/calculate_ensemble_probabilities_for_hindcast_terciles.py**
+
+ECMWF seasonal 
+
+lead
+3    0.603119
+4    0.553824
+5    0.520960
+
+
+UKMO seasonal
+
+lead
+3    0.518751
+4    0.474545
+5    0.441328
+
+METEO_FRANCE seasonal 
+
+
+CMCC seasonala bit l
+
+lead
+3    0.567170
+4    0.524372
+5    0.485316
+
+
+
+
+
+
+
+
+
+
+
+
+
+

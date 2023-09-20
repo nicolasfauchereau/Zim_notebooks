@@ -1,0 +1,158 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-04T09:33:41+13:00
+
+====== Tuesday 04 Feb 2020 ======
+
+copy all original files to data/GCMs/downloads in the project drive 
+
+=============================================================================================================================
+
+==== CDS ====
+
+hindcasts 1993 - 2016
+
+[*] ECMWF 
+[*] UKMO 
+[*] METEO_FRANCE 
+[*] DWD 
+[*] CMCC 
+
+=== forecasts 2017 - 2019 ===
+
+re-download: one file per month
+
+see [[/home/nicolasf/research/Smart_Ideas/code/exporters/CDS/download_CDS_forecasts.ipynb]] 
+
+run with: 
+
+{{{code: lang="sh" linenumbers="True"
+papermill ./download_CDS_forecasts.ipynb ./download_CDS_forecasts.ipynb -p GCM "ECMWF" -p var_name "T2M" -p year 2017 -p month 6
+}}}
+
+
+[*] ECMWF: T2M | PRECIP | 
+[ ] UKMO 
+[*] METEO_FRANCE: T2M | PRECIP | 
+[*] DWD: T2M | PRECIP
+[x] CMCC: T2M | PRECIP ⇒ only available from November 2018
+
+=============================================================================================================================
+
+==== IRI ====
+
+=== hindcasts 1979/81 - 2016 ===
+
+[*] CanSIPSv2: clean names ... still CFSv2 from 1981 to 1998 [OK]: missing CanSIPSv2_hindcasts_T2M_1998_9.nc
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	[*] Z500
+
+[*] NCEP_CFSv2  1982 to 2016
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	Z500 is NOT AVAILABLE 
+	
+[*] NASA_GEOSS2S  1982 to 2016
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	[*] Z500
+
+[*] CanCM4i  1981 to 2016
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	[*] Z500
+
+[*] GEM_NEMO  1981 to 2016
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	[*] Z500
+
+=== forecasts 2017 - 2018/2019 TODO: download year 2019 ===
+
+[*] CanSIPSv2: clean names ... still CFSv2 from 1981 to 1998 [OK]: missing CanSIPSv2_hindcasts_T2M_1998_9.nc
+	[*] T2M
+	[*] PRECIP 
+	[*] SST 
+	[*] Z500
+
+[*] NCEP_CFSv2  2017 to 2019
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	Z500 is NOT AVAILABLE 
+	
+[*] NASA_GEOSS2S  2017 to 2019
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	[*] Z500
+
+[*] CanCM4i  2017 to 2019
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	[*] Z500
+
+[*] GEM_NEMO  2017 to 2019
+	[*] T2M
+	[*] PRECIP 
+	[*] SST
+	[*] Z500
+
+== ====================================================================================================================== ==
+
+==== JMA ====
+
+=== hindcasts 1979/81 - 2016 ===
+
+[*] T2M
+[*] PRECIP 
+[*] SST 
+[x] Z500: one file missing 
+
+=== forecasts 2017 - 2019 ===
+
+[*] T2M
+[*] PRECIP 
+[*] SST 
+[*] Z500 
+
+
+== ====================================================================================================================== ==
+
+===== linux install =====
+
+see: 
+
+https://missing.csail.mit.edu/2020/potpourri/#booting--live-usbs
+
+and 
+
+https://unetbootin.github.io/
+
+to create live LINUX boot medias ... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

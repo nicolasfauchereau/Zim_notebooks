@@ -1,0 +1,106 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-19T09:40:13+12:00
+
+====== Friday 19 Aug 2022 ======
+
+==== MHWs detection ====
+
+On xarray datasets / time-series of masked data 
+
+see **OISST_realtime_NZ_detect_MHWs.ipynb**  in [[/home/nicolasf/operational/OISST_indices/notebooks]] 
+
+1) use interpolate_na with `max_gap` parameter to get rid of the gaps in the data
+
+2) fill_na (with 0) 
+
+3) ndimage.label 
+
+
+--------------------
+
+==== MBIE Downscaling, statistical methods ====
+
+**BCSD using xclim **
+
+**Generalized Analog Regression Downscaling (GARD)**
+
+Clark, M. P., & Hay, L. E. (2004). Use of medium-range numerical weather prediction model output to produce forecasts of streamflow. Journal of Hydrometeorology, 5(1), 15–32. doi:10.1175/1525-7541(2004)005<0015:UOMNWP>2.0.CO;2
+
+Clark, M. P., & Slater, A. G. (2006). Probabilistic quantitative precipitation estimation in complex terrain. Journal of Hydrometeorology, 7(1), 3–22. doi:10.1175/JHM474.1
+
+**Multivariate Adapted Constructed Analogs (MACA)**
+
+Abatzoglou, J.T., Brown, T.J., 2012. A comparison of statistical downscaling methods suited for wildfire applications: STATISTICAL DOWNSCALING FOR WILDFIRE APPLICATIONS. Int. J. Climatol. 32, 772–780. https://doi.org/10.1002/joc.2312
+
+**DeepSD** 
+
+Vandal, T., Kodra, E., Ganguly, S., Michaelis, A., Nemani, R., Ganguly, A.R., 2017. DeepSD: Generating High Resolution Climate Change Projections through Single Image Super-Resolution 4. https://doi.org/10.1145/3097983.3098004
+
+--------------------
+
+==== MBIE Downscaling ====
+
+@downscaling 
+
+
+1) we had a meeting with Raghav a couple of weeks ago about the augmented VCSN (rainfall). In order to contextualise the evaluation of the model's simulations (CCAM + ML and stats downscaling) against this product, we thought it would be good to have a dataset that gives for each VCSN pixel, the density of in-situ observations that went into the interpolation procedure, I have grabbed the relevant files from cliops, and started working on this, will generate maps and relevant netcdf / zarr files, which I will put on the HPC 
+
+→ see in 
+
+ 
+
+2) For the statistical downscaling and bias correction (BCSD), I did a bit of literature review and digging around, I think that besides Abha's method, we could choose to apply a set of methods, which are documented and for which there are already open-source software implementations which we could leverage. To start the discussion, these are the ones we could focus on: 
+ 
+a) The BCSD methods based on Empirical Quantile Mapping and derivatives, as implemented in https://xclim.readthedocs.io/en/stable/sdba.html#sdba-user-api. Each of these are based on published methods 
+ 
+b) Generalized Analog Regression Downscaling (GARD) as in:  
+ 
+Clark, M. P., & Hay, L. E. (2004). Use of medium-range numerical weather prediction model output to produce forecasts of streamflow. Journal of Hydrometeorology, 5(1), 15–32. doi:10.1175/1525-7541(2004)005<0015:UOMNWP>2.0.CO;2
+
+Clark, M. P., & Slater, A. G. (2006). Probabilistic quantitative precipitation estimation in complex terrain. Journal of Hydrometeorology, 7(1), 3–22. doi:10.1175/JHM474.1
+ 
+c) Multivariate Adapted Constructed Analogs (MACA) as in 
+ 
+Abatzoglou, J.T., Brown, T.J., 2012. A comparison of statistical downscaling methods suited for wildfire applications: STATISTICAL DOWNSCALING FOR WILDFIRE APPLICATIONS. Int. J. Climatol. 32, 772–780. https://doi.org/10.1002/joc.2312
+ 
+d) DeepSD (which is a Deep Learning approach, so not strictly speaking 'statistical' downscaling) as in 
+
+Vandal, T., Kodra, E., Ganguly, S., Michaelis, A., Nemani, R., Ganguly, A.R., 2017. DeepSD: Generating High Resolution Climate Change Projections through Single Image Super-Resolution 4. https://doi.org/10.1145/3097983.3098004
+ 
+The latter 3 have been used for the generation of a new global downscaled (1/4 degree, ERA5 precip, tasmin and tasmax as target variables) product available on Azure, created by CarbonPlan (see  https://docs.carbonplan.org/cmip6-downscaling). I have started looking at the historical downscaled products and my plan is to evaluate against a coarsened version of VCSN. These are downscaled straight from the CMIP6 simulations, but it might be valuable however to gauge what biases remain for what method. 
+ 
+3) have started to compile a document listing ideas for a set of consistent model evaluation approaches (variables, statistics, and metrics) which I will share next week. These are suggestions only, following the discussion we had related to the need for some kind of consistent, reproducible evaluation strategy. 
+ 
+cheers 
+ 
+Nico 
+
+--------------------
+
+==== Note on the properties than can be calculated, see e.g. ====
+
+@MBIE @downscaling 
+
+https://xclim.readthedocs.io/en/stable/sdba.html#properties-submodule 
+
+https://xclim.readthedocs.io/en/stable/sdba.html#measures-submodule 
+
+examples here include circular bias, relative bias, MAE, RMSE, etc 
+
+also see spatial analogs for NZ: The goal is to find regions where the present climate is similar to that simulated future climate. We call “candidates” the dataset that contains the present-day indices 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

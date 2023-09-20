@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-20T08:27:25+13:00
+
+====== Monday 20 Jan 2020 ======
+
+create set of questions and notebook for the data scientist position test: 
+
+===== Data scientist test =====
+
+**NOTE:** 
+
+We assume here that you are familiar with Python and the Python Scientific Ecosystem. The exercises below are best dealt with using the libraries pandas (https://pandas.pydata.org/) and xarray (http://xarray.pydata.org/en/stable/). Xarray is an library that allows the manipulation of multi-dimensional labelled arrays and is extremely convenient for reading and writing netcdf files (https://en.wikipedia.org/wiki/NetCDF) which is a widely used file format and data structure standard in the earth sciences, and in meteorology / climatology in particular. 
+
+Both pandas and xarray can be easily installed in a conda (https://www.anaconda.com/) environment using: 
+
+$ conda install pandas 
+$ conda install xarray 
+
+respectively. 
+
+==== PART 1: manipulating time-series data ====
+
+1) read the data contained in the file Southern_Oscillation_Index_dt_index_to_fix.csv
+	
+This time-series represents the monthly Southern Oscillation Index (SOI), an index of the standardized difference in atmospheric pressure between Tahiti (French Polynesia) and Darwin (Australia). The SOI is widely used to monitor the atmospheric component of the coupled climate phenomenon called El Niño – Southern Oscillation (ENSO, see https://en.wikipedia.org/wiki/El_Niño-Southern_Oscillation). 
+
+This time-series present some issues commonly found with instrumental meteorological or climatological time-series, please identify them and suggest possible remedies with their implementation.
+
+==== PART 2: investigating the correlation between 2 time-series ====
+
+Read the monthly NINO 3.4 index (or Ocean Nino Index)  from the URL: 
+
+https://www.esrl.noaa.gov/psd/data/correlation/oni.data 
+
+The NINO3.4 index presents the Sea Surface Temperature anomalies in the central – east Pacific (5N-5S, 170W-120W) and is widely used to monitor the Oceanic component of ENSO. 
+
+Investigate the correlation between these 2 time-series, notably try and show how the correlation varies along the annual cycle (i.e. as a function of the month of the year). 
+
+==== PART 3: reads and perform simple manipulations on a netcdf file ====
+
+The file air.mon.mean.nc is a netcdf file, containing the monthly global surface air temperature on a 2.5 x 2.5 degree grid, from January 1950 to December 2019, from the NCEP / NCAR reanalysis project. This can be best read using xarray, but note that other packages can also be used if you feel more comfortable with them. The goal is: 
+
+1) calculate a climatology: i.e. the average temperature for each grid point for January, February ..., December between 1981 and 2010 (the climatological ‘normal’ usually used at NIWA). You should obtain a dataset with dimensions 73 (latitudes) x 144 (longitudes) x 12 (months).
+
+2) calculate the anomalies by subtracting this climatology from the original dataset. You should obtain a dataset with dimensions 73 (latitudes) x 144 (longitudes) x 864 (months from Jan. 1950 to December 2019).
+
+3) calculate the global average anomalies: you should obtain a single time-series of length 864 (months from Jan. 1950 to December 2019).
+
+4) calculate the annual average: you should obtain a time-series of length 72 (annual values).
+
+5) plot 
+
+== =========================================================================================================================================================== ==
+
+Work on the BAMS section on the Pacific Convergence Zones 
+
+
+
+
+
+
+
+
+

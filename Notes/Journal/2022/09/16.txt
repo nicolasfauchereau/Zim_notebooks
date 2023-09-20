@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-16T09:09:35+12:00
+
+====== Friday 16 Sep 2022 ======
+
+==== Note @ICU ====
+
+@ICU 
+
+**ECCC CanCM4i** hindcast data is complete ... 
+
+it is currently in [[/media/nicolasf/END19101/ICU/data/CDS/operational/hindcasts/ECCC_CanCM4i/TPRATE]] 
+
+copied now in [[/media/nicolasf/END19101/ICU/data/CDS/ECCC_CanCM4i/]]
+
+and is ran by **papermill_GCM_ICU_districts_hindcast_climatologies_and_probabilities.ipynb** 
+
+for each district now, for **tercile** and then quartile 
+
+--------------------
+
+==== Complex Networks for climate downscaling ? ====
+
+Started a folder in Zotero ("complex_networks") 
+
+
+
+
+
+
+
+

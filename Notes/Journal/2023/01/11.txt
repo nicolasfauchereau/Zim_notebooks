@@ -1,0 +1,100 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-01-11T09:41:28+13:00
+
+====== Wednesday 11 Jan 2023 ======
+
+==== SST forecasting / validation ====
+
+**verification_probabilistic_sst_oneGCM.ipynb**
+
+when trying to concatenate all the GCMs together (binary forecasts of MHW) something goes wrong with NCEP ... 
+
+{{./screenshot_2023-01-11-094230.png}}
+
+it fails because of 
+
+{{./screenshot_2023-01-11-094351.png}}
+
+maybe because the number of members varies with each time step 
+
+solution: 
+
+{{{code: lang="python3" linenumbers="True"
+def interp_NCEP(gcm, gcm_name='NCEP', sst_hindcast_records='./SST_hindcast_summary.csv'): 
+    
+    sst_hindcasts_nmembers = pd.read_csv(sst_hindcast_records, index_col=0, parse_dates=True)
+    
+    sst_hindcasts_nmembers = sst_hindcasts_nmembers.sort_index()
+    
+    gcm_nmembers = sst_hindcasts_nmembers.loc[:,gcm_name]
+    
+    arrt_interp = []
+    
+    for t in gcm.time.data: 
+        
+        arrt = gcm.sel(time=t)
+    
+        arrt = arrt.isel(member=slice(None, gcm_nmembers.loc[t,]))
+        
+        arrt = utils.interpolate_NaN_da(arrt).load()
+        
+        arrt= arrt.expand_dims({'time':[t]})
+        
+        arrt_interp.append(arrt)
+    
+    arrt_interp = xr.concat(arrt_interp, dim='time')
+    
+    arrt_interp = arrt_interp.sortby('time')
+    
+    return arrt_interp
+}}}
+
+
+it is now in the **utils.py** module of `**seasonal_forecasting**` package ... 
+
+
+--------------------
+
+==== BAMS STOC 2022 ====
+
+see in [[/home/nicolasf/research/BAMS_Intertropical_Convergence_Zones/2022]] for the text and in the same folder for png figures 
+
+--------------------
+
+==== SST forecasting ====
+
+To evaluate the performance of (e.g.) the MME over a persistence forecast, we need to take the lagged (1 month) observed SSTs ... e.g. on the 13 of January, when the SST forecasts for February are available, we only have the complete month of December observed SSTs, *NOT* January ... so the 'persistence' skill as per e.g. 
+
+ACC = hindcast.verify(
+	metric="acc", comparison="e2o", dim=["init", "lat", "lon"], alignment="maximize", reference=["**persistence**", "climatology"]
+)
+
+will be biased ... 
+
+we can do 
+
+Rs = []
+for tshift in [2,3,4,5,6]: 
+	dset_obs_shift = dset_obs.shift(time=tshift)
+	dset_obs_shift = dset_obs_shift.dropna('time', how='all')
+	ts, t = xr.align(dset_obs_shift.time, dset_obs.time)
+	R = xs.pearson_r(dset_obs_shift.sel(time=t), dset_obs.sel(time=t))
+	Rs.append(float(R[varname].data))
+
+to obtain what would be an operational persistence forecast ... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

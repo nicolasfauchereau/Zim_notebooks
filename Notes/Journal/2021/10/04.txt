@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-04T12:27:41+13:00
+
+====== Monday 04 Oct 2021 ======
+
+==== ICU color schemes ====
+
+@ICU 
+
+See the document on teams defining the colors and thresholds: [[https://teams.microsoft.com/l/file/7C2671C8-1B6D-4451-8741-1E96770BC4D2?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&fileType=docx&objectUrl=https%3A%2F%2Fniwa.sharepoint.com%2Fsites%2FPacificRimTeam%2FShared Documents%2FIsland Climate Update%2FHotspot-development%2FICU-Colour swatches.docx&baseUrl=https%3A%2F%2Fniwa.sharepoint.com%2Fsites%2FPacificRimTeam&serviceName=teams&threadId=19:f6907003180c41198e1aa95641d4be63@thread.tacv2&groupId=cd4e2038-56c7-4920-b11a-e1a85a84b240|ICU-colour swatches]]
+
+as there can be values above the upper tick level, we need to repeat the color, so the parameters become: 
+
+
+thresholds = [-100, 50, 100, 250, 500, 750, 1000, 1500]
+hexes = [**'#01665e', '#01665e'**, '#5ab4ac', '#c7eae5', '#FFFFFF', '#f6e8c3', '#d8b365', '#8c510a']
+cbar_ticklabels = ['>1000 mm', '750 – 1000', '500 – 750',  '250 – 500',  '100 – 250',  '50 – 100', '< 50 mm']

@@ -1,0 +1,46 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-19T15:07:04+13:00
+
+====== Friday 19 Mar 2021 ======
+
+==== ACC scores for ENSO phases, monthly and seasonal ====
+
+see 
+
+validation/validation_initial_deterministic_monthly.ipynb
+
+validation/validation_initial_deterministic_seasonal.ipynb 
+
+e.g. type of plots generated: 
+
+{{./screenshot_2021-03-19-150757.png}}
+
+--------------------
+
+==== probabilistic forecasts validation, using xskillscore ====
+
+see **validation/validation_initial_probabilistic.ipynb** 
+
+use Contingency method, which then allow the calculation of metrics such as Accuracy etc ... 
+
+see e.g. accuracy calculated "manually" vs 
+
+xs_table = xs.Contingency(verif_tercile_categories, dset_gcm_m, np.array([1,2,3,4]), np.array([1,2,3,4]), dim='time')
+acc_xs = xs_table.accuracy()
+acc_xs = acc_xs.compute()
+
+{{./screenshot_2021-03-19-153758.png}}{{./screenshot_2021-03-19-153814.png}}
+
+"manual" () on the left, and using Contingency() then accuracy() on the right ... same thing 
+
+other scores available: 
+
+→ Contingency.heidke_score()
+→ Contingency.peirce_score()
+→ Contingency.gerrity_score()
+
+can also do that accross ALL ENSEMBLE members once they are categorised ... 
+
+
+Q: can we use https://xskillscore.readthedocs.io/en/stable/api/xskillscore.brier_score.html#xskillscore.brier_score 

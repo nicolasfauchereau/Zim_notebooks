@@ -1,0 +1,118 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-10-14T09:41:40+13:00
+
+====== Wednesday 14 Oct 2020 ======
+
+==== derive other quantiles for the application cases (5 quantiles) ====
+
+process: 
+
+1) take time-series, derive quantiles 
+
+**calculate_quantiles_categories.ipynb** in e.g. 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/Apple_and_Pears/notebooks]] 
+
+2) glue together with the ECMWF GCM data 
+
+see: 
+
+**prepare_GCMs_to_CSV_application_cases.ipynb** 
+
+in
+
+[[/home/nicolasf/research/Smart_Ideas/code/engineer/notebooks]] 
+
+3) evaluate tree-based and ensemble methods 
+
+see 
+
+**Apple_and_Pears_tree_based_classifiers_retrain.ipynb**    
+
+in  [[/home/nicolasf/research/Smart_Ideas/code/models/application_cases/classification/Apple_and_Pears/ExtraTrees/notebooks]] 
+
+these are the typical accuracy scores for the different classifiers, for the quintiles categories 
+
+KNN                           		0.291667
+**SVC                          	   0.625000**
+NuSVC                         		0.375000
+DecisionTreeClassifier        	0.312500
+RandomForestClassifier        	0.395833
+AdaBoostClassifier            	0.312500
+GradientBoostingClassifier    	0.250000
+ExtraTreesClassifier          	0.416667
+
+Support Vector Classifier, with** SVC(kernel="rbf", C=0.025, probability=True)** 
+
+Note that using the parameter class_weight='balanced' leads to huge performance decrease ... the SVC accuracy is degraded to **0.16 !**
+
+--------------------
+
+==== New version of climpred ====
+
+see release notes here 
+
+https://climpred.readthedocs.io/en/stable/ 
+
+and blog post 
+
+https://medium.com/@rileybrady/climpred-verification-of-weather-and-climate-forecasts-dd88333942d9 
+
+summary of the changes: 
+
+
+→ [[https://climpred.readthedocs.io/en/stable/bias_removal.html|An early implementation of bias correction.]]
+→ Spatial dimensions can now be used in metric calls, e.g. for pattern correlation.
+→ New metrics have been added from xskillscore, which are mostly based on the Contingency table. We have also added additional probability metrics: the ranked probability score, reliability, discrimination, and ranked histogram.
+→ Math operations can be used between PredictionEnsemble objects (see example [[https://climpred.readthedocs.io/en/stable/prediction-ensemble-object.html#Arithmetic-Operations-with-PredictionEnsemble-Objects|here]]).
+→ Users can now quick plot their prediction system (if there are no spatial dimensions) with plot(). See an example of this in the quick start.
+
+--------------------
+
+==== transfer entropy and information flow between 2 time-series ====
+
+see paper in Nature on the relationship between Total Solar Irradiance and Ocean Heat Content 
+
+https://www.nature.com/articles/s41598-020-74331-2#Sec7 
+
+The concept of **Transfer Entropy** is a non-symmetrical extension of the Multual Information (MI) concept, some implementations can be found here: 
+
+→ https://github.com/lcdm-uiuc/PyIF An open source implementation to compute bi-variate Transfer Entropy. 
+→ https://github.com/DarkEyes/VLTimeSeriesCausality  (in R)
+→ https://github.com/pwollstadt/IDTxl: The Information Dynamics Toolkit xl (IDTxl) is a comprehensive software package for efficient inference of networks and their node dynamics from multivariate time series data using information theory. 
+→ https://github.com/marcbrittain/Transfer_Entropy in Python 
+
+--------------------
+
+==== IDEA: for the forecast of e.g. number of days below / above threshold ====
+
+I do not actually forecast the time-series of these parameters directly: I can just forecast the category (preferentially quintiles ?) then give the distribution of the number of days below / above threshold for the predicted category 
+
+see notebook: 
+
+**stratify_by_category.ipynb** in 
+
+[[/home/nicolasf/research/Smart_Ideas/code/targets/application_cases/Apple_and_Pears/notebooks]] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

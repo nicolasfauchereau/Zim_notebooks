@@ -1,0 +1,100 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-08-03T09:08:44+12:00
+
+====== Wednesday 03 Aug 2022 ======
+
+==== xarray with multiple files, increasing efficiency ====
+
+@python @xarray 
+
+See [[https://teams.microsoft.com/l/message/19:03d43be132284b6583faf90697fb2e0d@thread.tacv2/1659390137909?tenantId=41caed73-6a0c-468a-ba49-9ff6aafd1c77&groupId=582cda94-a824-44da-a90a-d2c77e9e21ee&parentMessageId=1659390137909&teamName=T%26I%20Analytics%20%26%20Modelling%20Hub&channelName=Dask%20for%20geosciences&createdTime=1659390137909|discussion on Teams]]
+
+and code repository: 
+
+https://git.niwa.local/riom/smart_interpolation 
+
+
+from Maxime Rio 
+
+
+"""
+
+Hi, last week I bugged a couple of people with a problem I had when loading some netcdf files (NZCSM data) into an xarray... and I forgot that this channel may I have been more appropriate to discuss this issue. So here is the problem and the solution for thos interested .
+ 
+The problem appeared when using xr.open_mf_dataset to open a list of netcdfs files and concatenate them in one large xarray. I wanted to use Dask as a backend, so avoid loading any data (about 300GB of data) but still have a virtual view on the whole dataset. It was slow (more minutes than my patience) and the memory was going up (more than 3GB of RAM for a few hundred files).
+ 
+So I went down the rabbit hole... and found the rabbit... and a couple of things interesting:
+	
+the first part of xr.open_mfdataset nicely load (and preprocess) in parallel then hit a sequential part, quite time consuming due to...
+	
+the latitude/longitude coordinates, which are first loaded as dask.array (in the parallel phase) and these actually loaded during the concatenation of the coordinates, which is done one at a time (I could see one-off dask tasks appearingin the dask dashboards)
+	
+dropping these coordinates during preprocessing removes this bottleneck, runtime went from 5min30s to 1min30s (2 workers in both cases),
+	
+or the alternative is to use compat="override" and coords=["time1"] (the dimension of concatenation), which is probably fine if I trust the source (Amir Pirooz ) that the lat/lon never change over files. In this case, I can keep these coordinates as a dask array in the final dataset (and it loads faster too)
+	
+a bonus is that now the memory consumption went down too (more than 3GB to 390MB) which makes me more confident to load more files (currently testing with 800). Likely the lat/lon loading was eating the memory, as for NZCSM these are a decent size arrays (1350 x 1200). Even if the final array only contains one copy, temporary copies must have been made during concatenation and memory has not be given back to the OS (I look at memory consumption from htop).
+
+Then I have tested this with the full dataset of 26k files and it worked, taking 8 min top open and subset the full dataset when using 20 workers.
+
+"""
+
+{{./screenshot_2022-08-03-092118.png}}
+
+--------------------
+
+===== A tutorial for widgets =====
+
+@PICT  @widgets @jupyter 
+
+
+https://www.youtube.com/watch?v=1vuI22MkkrY&list=PLYx7XA2nY5Gfxu98P_HL1MnFb_BSkpxLV&index=10 
+
+https://github.com/jupyter-widgets/tutorial
+
+see also, for creating dashboards: 
+
+with VOILA 
+
+https://towardsdatascience.com/creating-an-interactive-dashboard-from-jupyter-notebook-with-voila-b64918b4d15a 
+
+https://github.com/jupyter-widgets/tutorial/tree/main/notebooks/07.Widgets_outside_notebook_context 
+
+with jupyter-dashboards 
+
+https://jupyter-dashboards-layout.readthedocs.io/en/latest/getting-started.html 
+
+--------------------
+
+==== Solarpunk ====
+
+https://edgeryders.eu/t/sci-fi-economics-sightings-some-interesting-things-that-are-brewing/17502?u=alberto 
+
+https://pluralistic.net/2022/07/26/aislands/#dead-ringers
+
+https://www.edgeryders.org/about-us/ 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

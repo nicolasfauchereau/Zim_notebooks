@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-06-24T09:50:42+12:00
+
+====== Thursday 24 Jun 2021 ======
+
+Mapping surface weather extremes to circulation regimes now and in the future 
+
+We will build on recent work (undertaken within the Climate Present and Past programme) which has led to a re-appraisal of the optimal number - and nature - of atmospheric circulation regimes over Aotearoa New Zealand (compared to the historical 'Kidson Types'). We will investigate the relationship between these circulation regimes and extremes in precipitation, temperature and relative humidity, as well as with compound extremes (i.e. the co-occurence of extremes), with consideration of their duration (i.e. heatwaves, cold-snaps, dry and wet spells). This work will be based on a state of the art reanalysis (ERA 5) to depict circulation regimes, and extremes will be examined using both the Virtual Climate Station Network (VCSN) as well as in-situ stations data. Relating extremes - and compound extremes - occurences to circulation regimes will provide a better understanding of what the dynamical controls on weather extremes, provide a regionalisation of New Zealand's climate based on the relationship between surface weather impact and atmospheric dynamics, and allow to better understand the role of potential changes in circulation regimes occupation statistics (frequency, persistence, preferred transition paths, ...) in potential trends in surface weather extremes over the country. If possible this framework will then be used to assist in the analysis of regional simulations under climate change scenarios. 
+
+Output: One paper submitted to Weather and Climate

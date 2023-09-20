@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-15T15:01:09+13:00
+
+====== Monday 15 Mar 2021 ======
+
+re. extraction of time-series 
+
+Maybe first correlate the observed time-series (GPM) to the hindcast, then select the best correlated point ??

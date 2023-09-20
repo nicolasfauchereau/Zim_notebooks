@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-12-14T08:39:56+13:00
+
+====== Wednesday 14 Dec 2022 ======
+
+==== Xarray extension for working with video data. ====
+
+https://github.com/oceanum-io/xarray-video
+
+--------------------

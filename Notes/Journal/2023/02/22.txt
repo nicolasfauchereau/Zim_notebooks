@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-02-22T09:35:28+13:00
+
+====== Wednesday 22 Feb 2023 ======
+
+==== Causal inference in Python ====
+
+https://github.com/pymc-labs/CausalPy 
+
+--------------------
+
+==== SCO / ICU ====
+
+== SST forecasts from 2017 to 2023 ==
+
+see https://niwa-my.sharepoint.com/:x:/r/personal/nicolas_fauchereau_niwa_co_nz/_layouts/15/Doc.aspx?sourcedoc=%7BA64FC94E-849E-4742-BC74-72B55BBB9439%7D&file=C3S_GCM_system_history.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1 
+
+To access one drive URL from Python: 
+
+https://towardsdatascience.com/onedrive-as-data-storage-for-python-project-2ff8d2d3a0aa → does not work 
+
+https://confluence.ecmwf.int/display/CKB/Description+of+the+C3S+seasonal+multi-system
+
+{{./pasted_image.png}}
+
+
+
+
+

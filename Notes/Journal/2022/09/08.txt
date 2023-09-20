@@ -1,0 +1,51 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-09-08T08:40:59+12:00
+
+====== Thursday 08 Sep 2022 ======
+
+==== PICT datasets update ====
+
+@PICT 
+
+[*] update GPCP, see Update_GPCP_dataset.ipynb 
+
+[*] update NCEP, see Update_NCEP_datasets.ipynb
+
+- MSLP: 1948 - 2021
+- HGT: 1948 - 2021
+- omega: 1948 - 2021 
+- wind: 1948 - 2021
+
+[*] GPCP: 1979 - 2021
+[*] ERSST 
+
+- ERSST_monthly_SST_1948_2021.nc 
+- ERSST_monthly_SST_1948_2021_detrend.nc 
+
+To make other datasets, look into: [[~/research/paleopy/notebooks/make_datasets]] 
+
+e.g. **reproject_Kidson_Types_detrend.ipynb** 
+
+now copied into [[~/research/PICT_notebooks/notebooks/make_datasets]] 
+
+problem: missing file h1000_clus.mat, might have to recalculate from scratch, if so, take: https://github.com/nicolasfauchereau/ACRE_workshop/blob/master/notebooks/weather_regimes.ipynb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

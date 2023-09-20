@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-09-24T10:44:37+12:00
+
+====== Friday 24 Sep 2021 ======
+
+==== ICU and ClimSA ====
+
+@ICU 
+
+see presentations: https://community.wmo.int/activity-areas/climate/meetings/strengthening-contribution-acp-rccs-climate-services-delivery-meeting-rcc-data-and-product-requirements 
+
+https://github.com/ecmwf-projects/copernicus-training
+
+Set of Jupyter notebooks illustrating accessing and processing data from the CDS 
+
+

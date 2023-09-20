@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-10-14T10:24:49+13:00
+
+====== Thursday 14 Oct 2021 ======
+
+==== geocube: rasterizing vector data ====
+
+@Python @xarray 
+
+
+see https://github.com/corteva/geocube 
+
+installed in `climetlab` environment 
+
+cloned into [[~/sources]] 
+

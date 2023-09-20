@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-20T09:20:26+13:00
+
+====== Thursday 20 Feb 2020 ======
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+===== CPP indices =====
+
+@CPP 
+
+meeting with Drew, related to the CPP indices to be developed and operationalised before the end of the FY 
+
+**list of indices: **
+
+* SOI 
+* NINO3.4 
+* NIWA CEI 
+* NZ Trenberth Indices 
+* 7 stations temperature time-series and derivatives (11 and 21 stations ?) 
+* SAM 
+* IOD 
+* ZW3 index 
+* IPO 
+* TPI (TPI (IPO) Tripole Index for the Interdecadal Pacific Oscillation: https://www.esrl.noaa.gov/psd/data/timeseries/IPOTPI/) 
+* PSA: 
+* Kidson types: update more frequently than James' updates 
+* Regional Coastal SST indices (daily) 
+* South Pacific Blocking index 
+* South Pacific Dipole Index (e.g. in the HB 
+
+=== sources: ===
+
+https://www.esrl.noaa.gov/psd/gcos_wgsp/Timeseries/ 
+
+https://climexp.knmi.nl/selectindex.cgi?id=someone@somewhere 
+
+=== codes: ===
+
+in [[/home/nicolasf/research/CPP/indices/notebooks]]
+
+e.g. 
+
+* IPO_HADSTT_KNMI.ipynb for the IPO (see https://climexp.knmi.nl/getindices.cgi?WMO=UWData/pdo_hadsst3&STATION=PDO_HadSST3&TYPE=i&id=someone@somewhere) 
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+=== NZCSM ensemble plots / maps issues ===
+
+@NZCSM @ENSEMBLE @HPC 
+
+discussion with Ben 1:30 - 2:30 
+
+NZCSM ensemble plots at: 
+
+web.kupe.niwa.co.nz/~mooresa/BC-FORECASTING/ and select NZENS 
+
+code at: 
+
+https://git.niwa.local/mooresa/nzcsm_ensemble 
+
+------------------------------------------------------------------------------------------------------------------------------------ 
+
+=== RCC ENSO tracker (BEN) ===
+
+see email from Ben `ENSO criteria` Thu 20/02/2020 3:31 PM 
+
+NOAA and APCC only have El Niño/La Niña/neutral and no intermediate steps.
+
+I think we’ll have to manually intervene to classify a watch for NIWA and BoM.
+
+For a BoM alert: two month average SOI is -7 or lower or 7 or higher
+For a NIWA alert: two month average SOI is -5 or lower or 5 or higher and two month average NINO3.4 is +/-0.5
+
+see below for ENSO criteria for the different institutions: 
+
+{{./screenshot_2020-02-20-161801.png?width=900}}
+
+
+
+
+
+
+
+
+
+
+
+
+ 

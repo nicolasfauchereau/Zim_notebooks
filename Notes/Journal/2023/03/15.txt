@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-03-15T10:40:55+13:00
+
+====== Wednesday 15 Mar 2023 ======
+
+ Are those numbers realistic or fake? Try using Benford's Law  
+
+https://www.softwarepragmatism.com/benfords-law 
+
+https://pypi.org/project/randalyze/ 
+
+--------------------
+
+==== ST-DBSCAN ====
+
+https://github.com/gitAtila/ST-DBSCAN 
+
+ST-DBSCAN is a density-based clustering algorithm that takes into account both spatial and non-spatial attributes of the points. Like DBSCAN, this algorithm has the ability to identify clusters with arbitrary shape and it does not necessarily predetermine the number of clusters. The non-spatial attribute could be anyone that is not related to coordinates in a space (e.g., color, time, temperature). Thus, ST-DBSCAN can create groups with points that are spatially near each other and that has similar non-spatial attributes.
+
+--------------------
+
+==== remove axes in matplotlib ====
+
+plt.delaxes()

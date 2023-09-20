@@ -1,0 +1,194 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2022-10-06T09:41:28+13:00
+
+====== Thursday 06 Oct 2022 ======
+
+==== CLIMFILL ====
+
+@VCSN 
+
+Filling missing values using interpolation, kriging, splines etc 
+
+see discussion with Andrew and Neelesh 
+
+[09:36] Nicolas Fauchereau
+
+CLIMFILL v0.9: a framework for intelligently gap filling Earth observations 
+https://gmd.copernicus.org/articles/15/4569/2022/ 
+
+and it made me think about the whole idea of extending VCSN back in time etc ... maybe something worth looking into along with the work  of Kadow et al (https://www.nature.com/articles/s41561-020-0582-5) 
+ like 1
+CLIMFILL v0.9: a framework for intelligently gap filling Earth observations
+Abstract. Remotely sensed Earth observations have many missing values. The abundance and often complex patterns of these missing values can be a barrier for combining different observational datase...
+
+CLIMFILL v0.9: a framework for intelligently gap filling Earth observations
+https://gmd.copernicus.org/articles/15/4569/2022/
+
+and it made me think about the whole idea of extending VCSN back in time etc ... maybe something worth looking into along with the work of Kadow et al (https://www.nature.com/articles/s41561-020-0582-5)
+
+[09:37] Nicolas Fauchereau
+climfill is available on github: https://github.com/climachine/climfill
+
+[09:39] Nicolas Fauchereau
+and to be honest it seems that climfill could be an option even to replace ANUSPLINE for contemporary VCSN ... 
+
+[10:10] Nicolas Fauchereau
+see also this paper: https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2008JD010201 
+
+--------------------
+
+==== CPP WRs ====
+
+@CPP @WRs 
+
+**regimes value counts** 
+
+== Rain_bc ==
+
+**CR#2 (HS)**
+
+**2    81**
+6    25
+5    23
+8    15
+1    11
+9     5
+3     1
+ 
+**CR#3 (LSW)** 
+
+**3    52**
+4    16
+6    15
+8     4
+7     4
+5     1
+
+**CR#4 (HSE)** 
+
+**4    238**
+3    183
+7    104
+5     27
+6     26
+8     20
+9     16
+1      2
+2      2
+
+**CR#6 (L) NI sub-region **
+
+**6    74**
+3    35
+8    21
+4    11
+1     9
+2     7
+5     7
+9     3
+
+**CR#6 (L) NSI sub-region **
+
+**6    75**
+3    26
+8    20
+4    17
+1    10
+2     6
+9     4
+5     1
+
+**CR#6 (L) ESI sub-region **
+
+**6    48**
+2    19
+1    11
+3    11
+8     2
+7     1
+9     1
+
+**CR#8 (LNW)**
+
+**8    138**
+6    103
+5     48
+4     31
+3     26
+9     14
+2     13
+1      2
+7      1
+ 
+
+== Tmean_n ==
+
+**CR#3 (LSW)** 
+
+**3    320**
+6    170
+7    117
+4    116
+8     84
+1     49
+9     49
+5     18
+2     11
+
+**CR#4 (HSE)** 
+
+**4    400**
+7    142
+9    105
+5     90
+8     82
+3     64
+6     58
+2     19
+1      1
+
+--------------------
+
+===== CIL datasets on the planetary computer =====
+
+it works, see  
+
+https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/datasets/cil-gdpcir/cil-gdpcir-example.ipynb 
+
+see also https://pccompute.westeurope.cloudapp.azure.com/compute/user/nicolas.fauchereau@niwa.co.nz/lab/tree/PlanetaryComputerExamples/datasets/cil-gdpcir/README.md 
+
+it seems to be working on binder https://hub.gke2.mybinder.org/user/climateimpactla-mip6-binder-env-jsgewv09/lab/tree/PlanetaryComputerExamples/datasets/cil-gdpcir/cil-gdpcir-example.ipynb 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

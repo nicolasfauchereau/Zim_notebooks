@@ -1,0 +1,166 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2023-05-12T08:47:51+12:00
+
+====== Friday 12 May 2023 ======
+
+==== AI for Impact Assessment ====
+
+@PwC 
+
+https://community.climatechange.ai/c/grants-finding-collaborators/ai-for-impact-assessment-challenge
+
+https://www.fruitpunch.ai/challenges/ai-for-impact-assessment 
+
+https://www.metabolic.nl/ 
+
+https://www.metabolic.nl/news/eight-steps-to-set-science-based-targets-for-your-organization/ 
+
+https://www.fruitpunch.ai/labs/ai-for-earth-lab
+
+"""
+**The finance sector is a critical leverage point for positive change. Through availability of credit and cost of capital, the finance sector shapes the structure of the economy.**
+"""
+
+FruitPunch AI is diving into Impact Assessment again! This time, we've teamed up with Metabolic to help companies get a grip on their societal and environmental impacts. We're going beyond just CO2 emissions. Water and land use, socio-economic impacts and biodiversity are all factored in! 
+
+To give an account of just one organization's impacts takes a tremendous amount of work. Data on procurement, travel and other expenses arrives in a variety of formats, which makes it hard to process. And then there's the problem of classifying these expenses into categories that allow an estimation of the consequences for earth. That's why we're going to use AI to automate this process and to classify expenses to estimate their impact.
+
+We're looking for AI enthusiasts, any natural language processing experience is welcome, to join 50 collaborators for 8 weeks, for about 8 hours per week to develop tackle this Challenge. The application deadline is June 11 and the Challenge will run until August 21. 
+
+It's a great opportunity to 
+
+	Solve real-world problems to help organizations take responsibility for their climate impact
+	Work with large language models, such as GPT-4
+	Learn from enthusiasts and experts all over the globe, both peer to peer and in Masterclasses
+	Expand your network in AI for Climate
+
+
+https://app.fruitpunch.ai/activity/09360822-c293-4b2d-ad5f-57aa31dfaa6f: 
+
+This SaaS solution helps companies assess and report their impact on nature and biodiversity, in addition to greenhouse gas (GHG) emissions. It minimizes the problem of data management by basing its analysis on existing GHG data and providing guidance on obtaining additional data. It also uses geospatial data to identify context-specific risks and opportunities and generate detailed insights on where and how to act successfully. Because the impact of water and land use is not the same everywhere on Earth. 🌎
+
+--------------------
+
+==== Making WRF model output Xarray-friendly using xWRF ====
+
+https://xarray.dev/blog/introducing-xwrf 
+
+--------------------
+
+==== DO NOT FORGET THAT THE CMIP6 data (a subset of it) is on the CDS ====
+
+== Climate extreme indices and heat stress indicators derived from CMIP6 global climate projections ==
+
+https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-extreme-indices-cmip6?tab=overview 
+
+== CMIP6 climate projections ==
+
+https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip6?tab=overview 
+
+--------------------
+
+==== geopotential and geopotential height ====
+
+https://codes.ecmwf.int/grib/param-db/?id=129
+
+Parameter ID		129
+Name			Geopotential
+Short Name		z
+Units			m2 s-2
+Description		This parameter is the gravitational potential energy of a unit mass, at a particular location, relative to mean sea level. It is also the amount of work that would have to be done, against the force of gravity, to lift a unit mass to that location from mean sea level.
+
+The geopotential height can be calculated by dividing the geopotential by the Earth's gravitational acceleration, g (=9.80665 m s-2). The geopotential height plays an important role in synoptic meteorology (analysis of weather patterns). Charts of geopotential height plotted at constant pressure levels (e.g., 300, 500 or 850 hPa) can be used to identify weather systems such as cyclones, anticyclones, troughs and ridges.
+
+At the surface of the Earth, this parameter shows the variations in geopotential (height) of the surface, and is often referred to as the orography.
+
+--------------------
+
+==== Climate Change Impact Assessment: A practical walk-through ====
+
+@PwC 
+
+https://claut.gitlab.io/man_ccia/
+
+https://claut.gitlab.io/man_ccia/pcic.html 
+
+getting the CMIP6 data from the ESGF: https://claut.gitlab.io/man_ccia/lab2.html#earth-system-grid-federation 
+
+see: https://github.com/ESGF/esgf-pyclient 
+ 
+Subset CMIP6 Datasets with xarray
+
+https://esgf-pyclient.readthedocs.io/en/latest/notebooks/demo/subset-cmip6.html 
+
+e.g.: 
+
+**Model selection strategies**
+
+Fenech, Comer, and Gough (2007) describe three approaches to selecting climate models: using the extremes; validating models based on their ability to reproduce some observed metric; and the use of multi-model ensembles.
+
+If we select the model extremes, we would select both the smallest and the largest projected changes as reference limits for policy planning. In this sense, the extreme models can provide an indicator of the upper and lower limits of the full range of possible futures projected by the available models.
+
+Another common approach to model selection is to validate models based on their ability to simulate the past and present climate. Some studies that have used validation methods include Ragettli et al. (2013), C. Xie et al. (2013), and Hewer and Gough (2016). When we use a validation-based approach, we are working under two assumptions: 1) that a model’s ability to simulate an observed baseline climate will be representative of the same model’s ability to project future climate, and 2) that the model is simulating a reasonable baseline climate for the right reasons.
+
+Scientists may also choose to use all (or a subset) of the available models to create a multi-model ensemble. In a multi-model ensemble, the output from the selected models is averaged, and that average is used to project future climate. Multi-model ensembles often outperform individual models (Pierce et al. 2009). The ensemble approach partially addresses the varying strengths and weaknesses of individual models, with the hope that model biases will be cancelled out within the averaged output (Knutti et al. 2010). The ensemble approach has been shown to cancel offsetting errors present in individual models (Pierce et al. 2009), and can correct for differences in the parametrization of the models (Knutti et al. 2010). Thus, many studies choose to make use of a full ensemble of all available models, to account for the entire range of available projection data, such as Gough, Anderson, and Herod (2016).
+
+**8.4 Change Factors**
+
+In our next lab, we are going to use change factors to describe changes in our baseline climate. The change factor method (sometimes called ΔT
+
+) calculates the projected temperature by adding the observed, baseline temperature time series to the change in the temperature projected by a GCM integration (typically using monthly GCM data). This process is intended to remove the mean bias in GCM historical and future simulated climate conditions, and represents a simplified form of downscaling. Change factors are described by the following equation:
+TFUTURE=TOBSERVED+ΔTGCM
+
+The first step for a change factor analysis is to calculate the change projected by a GCM over its baseline period. To do so, we will use 30-year “tridecades”, including our baseline (1981–2010), and three common climate change tridecades: the 2020s (2011–2040), the 2050s (2041–2070), and the 2080s (2071–2100). In this case, TOBSERVED
+is the observed 30-year average mean temperature over the baseline period, and ΔTGCM
+
+is the difference between the model-projected 30-year average mean temperature for the baseline period and the model-projected 30-year average mean temperature for each of the tridecades. In your research, you may opt to use a seasonal or monthly average instead of the annual average presented here.
+
+Let’s begin by filtering our “long” data frame to our time periods of interest. I will only provide examples for the baseline and the 2020s, but you should complete this work for the 2050s and 2080s as well.
+
+
+
+--------------------
+
+==== An asynchronous regional regression model for statistical downscaling of daily climate variables ====
+
+@PwC 
+
+see also https://www.linkedin.com/pulse/build-simple-statistical-bias-correction-model-4-lines-chonghua-yin
+
+--------------------
+
+==== SSPs and models selection ====
+
+@CMIP6 @PwC 
+
+Knutti, R., R. Furrer, C. Tebaldi, J. Cermak, and G. A. Meehl, 2010: Challenges in Combining Projections from Multiple Climate Models. Journal of Climate, 23, 2739–2758, https://doi.org/10.1175/2009JCLI3361.1.
+
+Meinshausen, M., and Coauthors, 2020: The shared socio-economic pathway (SSP) greenhouse gas concentrations and their extensions to 2500. Geosci. Model Dev., 13, 3571–3605, https://doi.org/10.5194/gmd-13-3571-2020.
+
+O’Neill, B. C., E. Kriegler, K. Riahi, K. L. Ebi, S. Hallegatte, T. R. Carter, R. Mathur, and D. P. Van Vuuren, 2014: A new scenario framework for climate change research: the concept of shared socioeconomic pathways. Climatic Change, 122, 387–400, https://doi.org/10.1007/s10584-013-0905-2.
+
+Pierce, D. W., T. P. Barnett, B. D. Santer, and P. J. Gleckler, 2009: Selecting global climate models for regional climate change studies. Proc. Natl. Acad. Sci. U.S.A., 106, 8441–8446, https://doi.org/10.1073/pnas.0900094106.
+
+--------------------
+
+==== copy MSWEP dataset on the HPC ====
+
+on Maui: ssh -Y fauchereaun@w-nwp01.maui.niwa.co.nz 
+pass: A..4!
+
+in [[/nesi/project/niwa00004/meyerstj/data/MSWEP]] 
+
+--------------------
+
+==== work phone number NIWA ====
+
++64-7-858-3844 
+
+
+
+
+
+
+
+
