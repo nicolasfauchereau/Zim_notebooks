@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-21T14:32:11+12:00
+
+====== Thursday 21 Sep 2023 ======
+
+2023 Statistical Review of World Energy
+
+https://www.energyinst.org/statistical-review
+
+--------------------
+==== Pacific data viz challenge: recording of the session ====
+
+@ICU 
+
+https://www.youtube.com/watch?v=43j0U3EGaVM 
+
+https://dataviz.pacificdata.org/ 
+
+--------------------
+==== Interaction with audience during workshops etc: SLIDO ====
+ 
+https://www.slido.com/pricing?plan=annual
+
+--------------------
+==== Our world in data IPCC scenarios ====
+
+
+https://ourworldindata.org/explorers/ipcc-scenarios
+
+https://ourworldindata.org/emissions-drivers 
+
+--------------------
+==== System IQ breakthrough effect ====
+
+https://ourworldindata.org/emissions-drivers 

@@ -66,7 +66,6 @@ https://drive.google.com/file/d/1uRfiYwHUviSepCWE8WihqUtzbZvxgUhM/view?usp=shari
 
 @git 
 
-
 https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed
 
 replace password by git token when signing in: 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 
