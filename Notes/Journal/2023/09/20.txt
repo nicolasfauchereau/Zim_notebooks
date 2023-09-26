@@ -74,6 +74,11 @@ then run
 
 $ git config --global credential.helper cache
 
+also: 
+
+git config --global credential.helper 'cache --timeout 2880000000' 
+
+increases the timeout 
 
 --------------------
 ==== A Theory on the Future of the Rebound Effect in a Resource-Constrained World ====
