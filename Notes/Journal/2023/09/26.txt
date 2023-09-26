@@ -104,6 +104,116 @@ https://www.gloh2o.org/koppen/
 
 https://en.wikipedia.org/wiki/Climate_change_in_New_Zealand
 
+--------------------
+==== DEA notebooks from Geoscience Australia ====
+
+https://github.com/GeoscienceAustralia/dea-notebooks 
+
+
+--------------------
+==== xENSO ====
+
+https://github.com/griverat/xENSO/blob/master/notebooks/tutorial.ipynb 
+
+{{{code: lang="python3" linenumbers="False"
+
+
+ersstv5 = (
+    xr.open_dataset(
+        "http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCDC/.ERSST/.version5/.sst/dods",
+        decode_cf=False,
+    )
+    .rename(X="lon", Y="lat", T="time")
+    .squeeze(drop=True)
+)
+ersstv5.time.attrs["calendar"] = "360_day"
+ersstv5 = xr.decode_cf(ersstv5).sst.convert_calendar("standard", align_on="date").load()
+ersstv5
+
+
+}}}
+
+
+
+--------------------
+==== XEOFS ====
+
+https://xeofs.readthedocs.io/en/latest/ 
+
+https://xeofs.readthedocs.io/en/latest/auto_examples/index.html 
+
+implements Optimal Persistence Analysis (OPA): see paper 
+
+Predictable Components in Australian Daily Temperature Data
+
+https://journals.ametsoc.org/view/journals/clim/28/15/jcli-d-14-00713.1.xml 
+
+see e.g. 
+
+https://xeofs.readthedocs.io/en/latest/auto_examples/1eof/plot_weighted-eof.html#sphx-glr-auto-examples-1eof-plot-weighted-eof-py
+
+can use sns.despine to remove spines !!! 
+
+{{{code: lang="python3" linenumbers="False"
+proj = Orthographic(central_latitude=30, central_longitude=-80)
+kwargs = {
+    'cmap' : 'mako', 'transform': PlateCarree(), 'vmin': 0,
+}
+titles = [
+    '(1) Covariances', '(2) Covariances + coslat',
+    '(3) Correlation', '(4) Correlation + coslat',
+]
+fig = plt.figure(figsize=(10, 12))
+gs = GridSpec(4, 2)
+ax_pcs = [fig.add_subplot(gs[i, 0]) for i in range(4)]
+ax_eofs = [fig.add_subplot(gs[i, 1], projection=proj) for i in range(4)]
+
+for i, (a1, a2) in enumerate(zip(ax_eofs, ax_pcs)):
+    a1.coastlines(color='.5')
+    components[i].sel(mode=1).plot(ax=a1, **kwargs)
+    scores[i].sel(mode=1).plot(ax=a2, color='darkred')
+    a2.set_xlabel('')
+    a1.set_title('', loc='center')
+    a2.set_title('', loc='center')
+    a2.set_title(titles[i], loc='left', weight='bold')
+    if i < 3:
+        a2.set_xticks([])
+        sns.despine(ax=a2, trim=True, bottom=True)
+    else:
+        sns.despine(ax=a2, trim=True, bottom=False)
+
+plt.tight_layout()
+plt.savefig('weighted_eof.jpg', dpi=200)
+}}}
+
+also see all the notebooks in 
+
+https://github.com/nicrie/sketchbook-earth/tree/main 
+
+https://github.com/ECMWFCode4Earth/sketchbook-earth 
+
+e.g. 
+
+https://github.com/nicrie/sketchbook-earth/blob/main/tutorials/01_greenhouse_gases/01a_greenhouse_gases.ipynb 
+
+{{./pasted_image001.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
