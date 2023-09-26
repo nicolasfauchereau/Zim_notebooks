@@ -1,0 +1,128 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-26T13:44:55+13:00
+
+====== Tuesday 26 Sep 2023 ======
+
+==== Compound extremes ====
+
+Advancing research on compound weather and climate events via large ensemble model simulations
+
+https://www.nature.com/articles/s41467-023-37847-5#Abs1 
+
+Increased occurrence of high impact compound events under climate change
+
+https://www.nature.com/articles/s41612-021-00224-4 
+
+https://www.nature.com/articles/s41612-023-00401-7
+
+https://www.nature.com/articles/s41558-018-0156-3
+
+https://www.nature.com/articles/s41598-018-34993-5 
+
+https://www.nature.com/articles/s41467-019-09729-2
+
+https://www.nature.com/articles/s41467-020-19639-3
+
+https://www.nature.com/articles/s43017-023-00410-3
+
+
+--------------------
+==== Geospatial Data Science in Python for Fall 2023 ====
+
+@geo 
+
+https://musa-550-fall-2023.github.io/
+
+Week 1
+Exploratory Data Science in Python
+
+https://github.com/MUSA-550-Fall-2023/week-1 
+
+Week 2
+Data Visualization Fundamentals
+
+https://github.com/MUSA-550-Fall-2023/week-2 
+
+Week 3
+More Interactive Data Viz, Intro to Vector Data & GeoPandas
+
+https://github.com/MUSA-550-Fall-2023/week-3 
+
+Week 4
+Geospatial Analysis & Mapping
+
+https://github.com/MUSA-550-Fall-2023/week-4
+
+== OSMnx: Python for Street Networks ==
+
+https://geoffboeing.com/2016/11/osmnx-python-street-networks/
+
+
+--------------------
+==== JS metrics:  A Python package of algorithms and metrics used to characterise and identify jet streams, based on xarray. ====
+
+@idea JS metrics in ERA5 and CMIP6 simulations ?  
+
+https://github.com/Thomasjkeel/jsmetrics 
+
+{{./pasted_image.png?height=500}}
+
+also cloned in [[~/repos]] 
+
+--------------------
+==== green growth and decoupling ====
+
+https://www.planetcritical.com/p/debunking-green-growth-tim-parrique#details 
+
+https://eeb.org/decoupling-debunked1/
+
+https://eeb.org/library/decoupling-debunked/ 
+
+
+--------------------
+==== Interactive Köppen-Geiger Climate Classification Map ====
+
+@idea do that for NZ 
+
+https://github.com/Thomasjkeel/interactive_koppen_climate_map 
+
+Beck, Hylke E.; E. Zimmermann, Niklaus; McVicar, Tim R.; Vergopolan, Noemi; Berg, Alexis; Wood, Eric F. (2018): Present and future Köppen-Geiger climate classification maps at 1-km resolution
+
+https://www.nature.com/articles/sdata2018214
+
+The present and future Köppen-Geiger classification maps and the corresponding confidence maps are freely available for download at (Data Citation 1) and www.gloh2o.org/koppen. The maps are stored in GeoTIFF format as unsigned 8-bit integers. We also provide a legend file (legend.txt) linking the numeric values in the maps to the Köppen-Geiger climate symbols and providing the color scheme used for displaying the maps in the current study (adapted from Peel et al.21). The maps are referenced to the World Geodetic Reference System 1984 (WGS 84) ellipsoid and made available at three resolutions (0.0083°, 0.083°, and 0.5°; approximately 1 km, 10 km, and 50 km at the equator, respectively). The classifications are upscaled from 0.0083° to 0.083° and 0.5° using majority resampling and the confidence levels using bilinear averaging. Table 3 presents the file naming convention. The maps can be visualized and analyzed using most Geographic Information Systems (GIS) software (e.g., QGIS, ArcGIS, and GRASS).
+
+https://www.gloh2o.org/koppen/
+
+--------------------
+==== EarthPy: A Python Package for Earth Data ====
+
+
+--------------------
+==== climate change in New Zealand on wikipedia ====
+
+https://en.wikipedia.org/wiki/Climate_change_in_New_Zealand
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

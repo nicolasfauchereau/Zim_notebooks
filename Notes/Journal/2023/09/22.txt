@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-22T12:07:19+12:00
+
+====== Friday 22 Sep 2023 ======
+
+==== To sort Zotero library by date added ====
+
+@Zotero 
+
+Right-Click on any column header, then tick 'date added' 
+
+--------------------
