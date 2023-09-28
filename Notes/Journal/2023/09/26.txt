@@ -138,13 +138,13 @@ ersstv5
 --------------------
 ==== XEOFS ====
 
+@idea : implement that for NZ 
+
 https://xeofs.readthedocs.io/en/latest/ 
 
 https://xeofs.readthedocs.io/en/latest/auto_examples/index.html 
 
-implements Optimal Persistence Analysis (OPA): see paper 
-
-Predictable Components in Australian Daily Temperature Data
+implements Optimal Persistence Analysis (OPA): see paper "Predictable Components in Australian Daily Temperature Data"
 
 https://journals.ametsoc.org/view/journals/clim/28/15/jcli-d-14-00713.1.xml 
 
@@ -152,7 +152,7 @@ see e.g.
 
 https://xeofs.readthedocs.io/en/latest/auto_examples/1eof/plot_weighted-eof.html#sphx-glr-auto-examples-1eof-plot-weighted-eof-py
 
-can use sns.despine to remove spines !!! 
+can use **sns.despine** to remove spines !!! 
 
 {{{code: lang="python3" linenumbers="False"
 proj = Orthographic(central_latitude=30, central_longitude=-80)

@@ -1,0 +1,98 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-28T08:50:58+13:00
+
+====== Thursday 28 Sep 2023 ======
+
+==== The geography of climate and the global patterns of species diversity | Nature ====
+
+https://www.nature.com/articles/s41586-023-06577-5 
+
+--------------------
+
+==== Seasonal advance of intense tropical cyclones in a warming climate ====
+
+https://www.nature.com/articles/s41586-023-06544-0 
+
+code (Matlab) https://zenodo.org/record/8163052 
+
+--------------------
+==== DAMOCLES compound extremes ====
+
+https://compoundevents.org/knowledgebase/ 
+
+--------------------
+==== code repos on github ====
+
+→ Code for "Hot extremes have become drier in the US Southwest" by Karen McKinnon 
+
+https://github.com/karenamckinnon/compound_extremes 
+
+→ Compound Extremes Data Benchmarking (ComExDBM) 
+
+https://github.com/XLinpnnl/ComExDBM/tree/master 
+
+--------------------
+==== Evaluating the dependence structure of compound precipitation and wind speed extremes ====
+
+https://esd.copernicus.org/articles/12/1/2021/ 
+
+--------------------
+
+==== Use ICCLIM python package to calculate various climate extreme indices ICCLIM documentation at https://icclim.readthedocs.io/en/latest/index.html ====
+
+https://github.com/PRIMAVERA-H2020/HighResMIP-extreme_indices
+
+https://gitlab.com/is-enes-cdi-c4i/notebooks/-/blob/master/C4I_TX90p._Calculate__subset_and_plot.ipynb 
+
+
+--------------------
+==== MEWS ====
+
+@CMIP6 
+
+https://github.com/sandialabs/MEWS
+
+MEWS downloads CMIP6 data when using the ClimateScenario class. This step can be messy though and requires many retries when downloading the data live from multiple servers. As a result, the entire dataset (~24Gb) has been uploaded to https://osf.io/ts9e8/files/osfstorage  and is publicly available to manually download.
+
+https://osf.io/ts9e8/files/osfstorage
+
+
+--------------------
+==== Evaluation and prediction of transportation resilience under extreme weather events: A diffusion graph convolutional approach ====
+
+https://github.com/Charles117/resilience_shenzhen 
+
+--------------------
+==== MPIRE (MultiProcessing Is Really Easy) ====
+
+https://github.com/sybrenjansen/mpire 
+
+--------------------
+==== GTAP, and The Effects of Climate Change on GDP by Country and the Global Economic Gains From Complying With the Paris Climate Accord ====
+
+https://www.bloomberg.com/graphics/2023-opinion-apple-supply-chain-climate-change/ 
+
+https://en.wikipedia.org/wiki/GTAP 
+
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018EF000922 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
