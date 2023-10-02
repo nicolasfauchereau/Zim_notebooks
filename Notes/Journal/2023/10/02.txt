@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-02T13:48:02+13:00
+
+====== Monday 02 Oct 2023 ======
+
+==== Storylines for unprecedented heatwaves based on ensemble boosting ====
+
+@idea → NZ 
+
+https://www.nature.com/articles/s41467-023-40112-4 
+
+--------------------
+==== PyETo ====
+
+PyETo is a Python package for calculating reference crop evapotranspiration (ETo), sometimes referred to as potential evapotranspiration (PET). The library provides numerous functions for estimating missing meteorological data.
+
+Three methods for estimating ETo/PET are implemented:
+
+	FAO-56 Penman-Monteith (Allen et al, 1998)
+	Hargreaves (Hargreaves and Samani, 1985)
+	Thornthwaite (Thornthwaite, 1948)
+
+https://pyeto.readthedocs.io/en/latest/ 
+
+
