@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-03T16:59:10+13:00
+
+====== Tuesday 03 Oct 2023 ======
+
+==== Climate and Nature, excellent website ====
+
+https://climateandnature.org.nz/ 
+
+--------------------
+==== EH heatwaves ====
+ 
+@heatwaves @MHWs 
+
+https://github.com/tammasloughran/ehfheatwaves/blob/master/ehfheatwaves/ehfheatwaves.py 
+
+A tool to calculate heatwaves from gridded daily datasets.
+
+pyMannKendall
+
+ A python package for non parametric Mann Kendall family of trend tests.  
+
+https://github.com/mmhs013/pymannkendall 
+
+https://github.com/agathangelidis/hotspell 
+
+--------------------
+==== Heatwave Analysis Package ====
+
+@heatwaves @MHWs 
+
+https://github.com/AgentOxygen/heatwave_analysis_package 
+
+also see https://github.com/janewbaldwin/Compound-Heat-Waves 
+
+This package contains methods for quantifying extreme heat events that have been optimized for code-readability while maintaining an acceptable level of performance for use on HPCs. The original algorithm was written by Dr. Tammas Loughran and later modified by Dr. Jane Baldwin for use in her AGU publication: Temporally Compound Heat Wave Events and Global Warming: An Emerging Hazard.
+
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018EF000989 
+
+heatwave_threshold.py contains the compute_threshold function which takes temperature time series data as an input and outputs a 365-day time series of threshold temperatures for each day of the year at the specified percentile. The data output by the compute_threshold function is a required input for many of the functions contained in heatwave_metrics.py.
+
+see also https://github.com/AgentOxygen/heat-research-scripts/tree/main 
+
+e.g. https://github.com/AgentOxygen/heat-research-scripts/blob/main/hwn_script.py 
+
+

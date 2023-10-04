@@ -23,4 +23,160 @@ Three methods for estimating ETo/PET are implemented:
 
 https://pyeto.readthedocs.io/en/latest/ 
 
+--------------------
+==== CESM-LENS ====
+
+https://medium.com/pangeo/cesm-lens-on-aws-4e2a996397a1 
+
+https://github.com/pangeo-data/pangeo-ocean-examples/blob/master/cesm-pop-highres-ocean.ipynb 
+
+https://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/ 
+
+--------------------
+==== to open py files in Jupyterlab: Ploomber ====
+
+@python 
+
+--------------------
+==== Interaction between dry and hot extremes at a global scale using a cascade modeling framework ====
+
+cascade modeling framework relies on network representation ... 
+
+@network 
+
+https://www.nature.com/articles/s41467-022-35748-7
+ 
+""Climate change amplifies dry and hot extremes, yet the mechanism, extent, scope, and temporal scale of causal linkages between dry and hot extremes remain underexplored. Here using the concept of system dynamics, we investigate cross-scale interactions within dry-to-hot and hot-to-dry extreme event networks and quantify the magnitude, temporal-scale, and physical drivers of cascading effects (CEs) of drying-on-heating and vice-versa, across the globe. We find that locations exhibiting exceptionally strong CE (hotspots) for dry-to-hot and hot-to-dry extremes generally coincide. However, the CEs differ strongly in their timescale of interaction, hydroclimatic drivers, and sensitivity to changes in the soil-plant-atmosphere continuum and background aridity. The CE of drying-on-heating in the hotspot locations reaches its peak immediately driven by the compounding influence of vapor pressure deficit, potential evapotranspiration, and precipitation. In contrast, the CE of heating-on-drying peaks gradually dominated by concurrent changes in potential evapotranspiration, precipitation, and net-radiation with the effect of vapor pressure deficit being strongly controlled by ecosystem isohydricity and background aridity. Our results help improve our understanding of the causal linkages and the predictability of compound extremes and related impacts."" 
+
+We assess the casual interaction between dry and hot extreme events across the globe using a probabilistic framework motivated by a system dynamics approach24,25,26,27,28. We design two independent cross-scale (temporal) interaction networks24,27 that represent the event-to-event (dry-to-hot and hot-to-dry event) cascades. The dry extreme events are calculated based on daily root-zone-soil-moisture (RZSM), whereas the hot extreme events are calculated based on daily maximum 2 m air temperature (Tmax) anomalies for each location across the globe. Three sets of thresholds, 1%, 5%, and 10% of daily climatological RZSM, and 99%, 95%, and 90% of daily climatological Tmax were used to identify the dry and hot extreme events, respectively.
+
+see also: 
+
+Global projections of flash drought show increased risk in a warming climate
+https://www.nature.com/articles/s43247-023-00826-1 
+
+→ Increased probability of hot and dry weather extremes during the growing season threatens global crop yields
+https://www.nature.com/articles/s41598-023-29378-2 
+
+see code: https://github.com/matheino/crops_vs_extremes 
+
+also cloned into [[~/repos]] 
+
+same authors authored: Climate change has likely already affected global food production https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217148 
+
+@idea 
+
+Transition to unstable state for dairy and beef in NZ → need to diversify proteins sources etc 
+
+concept of climate niche, or safe climatic space 
+
+introduce variability / variance 
+
+if 2 out of 5 years are bad: what does that mean ...
+
+combine heat stress and water stress 
+
+create matrix 
+
+y-axis = temp + rain category (based on percentiles) 
+x-axis = year 
+value = % of pasture (need land use data) under stress 
+roll this matrix from now to 2100 
+
+see relevant publications: 
+
+ **Climate change risks pushing one-third of global food production outside the safe climatic space** 
+
+https://pubmed.ncbi.nlm.nih.gov/34056573/
+
+contact author: https://github.com/matheino 
+
+https://people.aalto.fi/matias.heino 
+
+Scripts for analysing the relationship between climate oscillations and crop yields at global scale.
+
+https://github.com/matheino/crops_and_oscillations
+
+--------------------
+==== DSSAT: Decision Support System for Agrotechnology Transfer ====
+
+is a software application program that comprises crop simulation models for over 42 crops
+
+https://github.com/daquinterop/DSSATTools_notebooks/blob/main/Example%201%20(Basics).ipynb 
+
+really interesting examples in there 
+
+@idea take real weather data and try and run it 
+
+https://github.com/daquinterop/DSSATTools_notebooks
+
+--------------------
+==== FoodHQ alternative proteins reports ====
+
+
+https://www.foodhq.com/news-and-events/2023/unleashing-aotearoa-new-zealands-next-protein-revolution
+
+https://www.foodhq.com/news-and-events/downloadreport 
+
+https://www.foodhq.com/news-and-events/2021/5/6/report-emerging-proteins-in-aotearoa 
+
+
+--------------------
+==== ML for seasonal climate forecasting ====
+
+GCMs are too short 
+
+obs based approached statistical 
+
+instead of taking outputs of GCM, we use ensemble learning ... stacking, blending to combine the outputs of GCMs and DL models 
+
+--------------------
+==== Well below 2°C’ Paris Agreement goal will be met, says forecasting consortium ====
+
+https://www.ipe.com/news/well-below-2c-paris-agreement-goal-will-be-met-says-forecasting-consortium/10069271.article 
+
+[[./IPR_Summary_2023.pdf]]
+
+--------------------
+Multi-variable Hard Physical Constraints for Climate Model Downscaling 
+
+https://arxiv.org/abs/2308.01868 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
