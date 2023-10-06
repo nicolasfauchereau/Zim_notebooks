@@ -132,7 +132,7 @@ instead of taking outputs of GCM, we use ensemble learning ... stacking, blendin
 
 --------------------
 ==== Well below 2°C’ Paris Agreement goal will be met, says forecasting consortium ====
-
+q	
 https://www.ipe.com/news/well-below-2c-paris-agreement-goal-will-be-met-says-forecasting-consortium/10069271.article 
 
 [[./IPR_Summary_2023.pdf]]
@@ -141,6 +141,13 @@ https://www.ipe.com/news/well-below-2c-paris-agreement-goal-will-be-met-says-for
 Multi-variable Hard Physical Constraints for Climate Model Downscaling 
 
 https://arxiv.org/abs/2308.01868 
+
+
+--------------------
+==== Have some economists severely underestimated the financial hit from climate change? Recent evidence suggests yes ====
+
+https://theconversation.com/have-some-economists-severely-underestimated-the-financial-hit-from-climate-change-recent-evidence-suggests-yes-214579 
+
 
 
 

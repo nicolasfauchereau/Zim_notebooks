@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-06T08:57:53+13:00
+
+====== Friday 06 Oct 2023 ======
+
+==== Harnessing human and machine intelligence for planetary-level climate action ====
+
+https://www.nature.com/articles/s44168-023-00056-3 
+
+--------------------
+==== cmip6d: for the download of the NASA-NEX CMIP6 downscaled data ====
+
+does not work ... 
+
+
+--------------------
+==== Clustering and Regionalization: in Geographic Data Science book ====
+
+https://geographicdata.science/book/notebooks/10_clustering_and_regionalization.html
+
+--------------------
+==== The Tension in Climate Science Between Mitigation and Adaptation ====
+
+https://time.com/6319914/tension-climate-science-mitigation-adaptation/ 
+
+--------------------
+==== Solution to DAP issue with xarray when subsetting ====
+
+@openDAP @DAP 
+
+solution is to use proper chunking when opening the dataset e.g. 
+
+with url =  'https://ds.nccs.nasa.gov/thredds/dodsC/AMES/NEX/GDDP-CMIP6/ACCESS-CM2/historical/r1i1p1f1/pr/pr_day_ACCESS-CM2_historical_r1i1p1f1_gn_1950.nc'
+
+
+{{{code: lang="python3" linenumbers="False"
+dset = xr.open_dataset(url, chunks={'time':1, 'lat':-1, 'lon':-1})
+dset_sub = dset.sel(lat=lats, lon=lons, method='nearest') 
+dset_sub.load()
+}}}
+
+works 
+
+{{{code: lang="python3" linenumbers="False"
+dset = xr.open_dataset(url)
+dset_sub = dset.sel(lat=lats, lon=lons, method='nearest') 
+dset_sub.load()
+}}}
+
+didn't 
+
+
+
+
+

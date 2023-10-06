@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-05T15:49:58+13:00
+
+====== Thursday 05 Oct 2023 ======
+
+==== DAO: The community of the DAO ====
+
+@solarpunk 
+
+https://www.nature.com/articles/s41587-023-02005-1 
+
+and 
+
+https://law.stanford.edu/2023/07/27/unlocking-scientific-innovation-through-decentralized-science-part-i/
+
+The Decentralized Synthetic Biology Innovation Ecosystem 
+
+https://www.valleydao.bio/
+
+--------------------
+==== interacting with pandas dataframes in notebooks ====
+
+https://github.com/man-group/dtale 
+
+--------------------
+==== Global Downscaled Datasets ====
+
+Useful repos: 
+
+== NASA-NEX ==
+
+→ https://github.com/abhi8893/Statistical-Downscaling-NASA-NEX-GDDP/tree/master 
+
+→ https://github.com/fgassert/process-gddp  
+
+
+
+
+
+
+
