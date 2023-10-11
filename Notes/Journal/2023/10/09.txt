@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-09T14:02:33+13:00
+
+====== Monday 09 Oct 2023 ======
+
+==== 7 ChatGPT Prompts To Save Hours Of Boring Work ====
+
+https://www.forbes.com/sites/jodiecook/2023/10/05/7-chatgpt-prompts-to-save-hours-of-boring-work/?sh=3d84db231ec9 
+
+[[./7 ChatGPT Prompts To Save Hours Of Boring Work (9_10_2023 2_03_07 pm).html]]
+
+--------------------
+==== Tipping point arises earlier under a multiple-stressor scenario ====
+
+https://www.nature.com/articles/s41598-023-44012-x 
+
+--------------------
+==== Detection of human influences on temperature seasonality from the nineteenth century ====
+
+https://www.nature.com/articles/s41893-019-0276-4 
+
+--------------------
+==== Abrupt Climate Change in an Oscillating World ====
+
+https://www.nature.com/articles/s41598-018-23377-4 
+
+==== Quantifying the role of variability in future intensification of heat extremes ====
+
+https://www.nature.com/articles/s41467-022-35571-0 
+
+==== Future socio-ecosystem productivity threatened by compound drought–heatwave events ====
+
+https://www.nature.com/articles/s41893-022-01024-1 

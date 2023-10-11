@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-10T17:26:46+13:00
+
+====== Tuesday 10 Oct 2023 ======
+
+==== Greatly enhanced risk to humans as a consequence of empirically determined lower moist heat stress tolerance ====
+
+https://www.pnas.org/doi/full/10.1073/pnas.2305427120
+
+data availability: 
+
+Original CMIP6 data is freely available for download from the Lawrence Livermore National Laboratory (https://esgf-node.llnl.gov/search/cmip6/) (77). The downscaled, bias-corrected heat stress dataset is hosted in HPC cluster of Purdue University and be accessed by contacting kong97@purdue.edu. The post-processed data that can be used for reproducing figures in this paper has been deposited by the authors for public use (78).
+
+https://zenodo.org/record/8347178 
+
+https://github.com/QINQINKONG/Vecellio2023_PNAS/tree/Vecellio2023_PNAS_001 
+
+and in [[~/repos/Vecellio2023_PNAS]] 
+
+--------------------
+==== Python CMAPS ====
+
+https://github.com/hhuangwx/cmaps
