@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-18T09:14:57+13:00
+
+====== Wednesday 18 Oct 2023 ======
+
+==== day to day variability in min and max temperature in NZ ====
+
+@idea 
+
+see how variance has changed in NZ, large swings from day to day cause stress 
+
+--------------------
+==== data product management ====
+
+@NIWA @idea 
+
+https://towardsdatascience.com/data-product-management-ffa582f7e047 
+
+--------------------
+==== Accelerating Decarbonization in the United States: Technology, Policy, and Societal Dimensions ====
+
+https://www.nationalacademies.org/our-work/accelerating-decarbonization-in-the-united-states-technology-policy-and-societal-dimensions
+
+--------------------
+

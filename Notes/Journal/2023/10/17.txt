@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-17T16:53:52+13:00
+
+====== Tuesday 17 Oct 2023 ======
+
+==== the cloud platform for scientific data teams ====
+
+https://earthmover.io/ 
+
+https://discourse.pangeo.io/t/pangeo-showcase-arraylake-a-cloud-native-data-lake-platform-for-earth-system-science/3701 

@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-20T16:01:45+13:00
+
+====== Friday 20 Oct 2023 ======
+
+==== Tech and data analytics domain → NIWA and / or consulting ====
+
+@NIWA @idea 
+
+see folder [[/home/nicolasf/Documents/tech_and_data_analytics]] 
+
+all research from Verdantix related to climate risk analytics platforms 
+
+Verdantix.com 
+
+Login: prof. email 
+Pass: 2023C...muni 
+
+--------------------
+==== climate risk on github ====
+
+@idea 
+
+https://github.com/Assimila/ClimateRiskDisclosure 
+
+--------------------
+==== → **Physical climate risks** → **OS-CLIMATE** ====
+
+https://github.com/os-climate/physrisk 
+
+see in particular methodology: [[~/repos/climate_risks/physrisk/methodology]] 
+
+serves as the specification for OS-Climate 
+
+https://os-climate.org/ 
+
+https://github.com/os-climate/OS-Climate-Community-Hub#readme
+
+https://os-climate.org/physical-risk-resilience/ 
+
+see video: https://vimeo.com/824250039?share=copy 
+
+also see https://github.com/os-climate/hazard 
+
+
+--------------------
+==== Climate change AI dataset wishlist ====
+
+https://www.climatechange.ai/dataset-wishlist.pdf 
+
+and downloaded in  [[/home/nicolasf/Documents/tech_and_data_analytics]]  
+
+
+
+
