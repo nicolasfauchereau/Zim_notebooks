@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-24T08:58:57+13:00
+
+====== Tuesday 24 Oct 2023 ======
+
+==== High-resolution (1 km) Köppen-Geiger maps for 1901–2099 based on constrained CMIP6 projections ====
+
+https://www.nature.com/articles/s41597-023-02549-6 
+
+code: https://github.com/hylken/Koppen-Geiger_maps 
+
+and in [[~/repos]] 
+
+see https://github.com/hylken/Koppen-Geiger_maps/blob/main/tools.py 
+
+{{{code: lang="python3" linenumbers="False"
+def fill(data, invalid=None):
+    """This function performs nearest neighbor interpolation gap fill on the input
+    data. The input 'data' is expected to be a numpy array and 'invalid' is a 
+    boolean numpy array with the same shape as 'data' that marks invalid/missing
+    data points. The function uses the distance_transform_edt function from the
+    ndimage module to calculate the nearest valid data point for each invalid
+    data point, and returns the filled data. If the 'invalid' parameter is not
+    provided, the function assumes that nans in 'data' are invalid.
+    """
+    
+    if invalid is None: invalid = np.isnan(data)
+    ind = nd.distance_transform_edt(invalid, return_distances=False, return_indices=True)
+    return data[tuple(ind)]  
+}}}
+

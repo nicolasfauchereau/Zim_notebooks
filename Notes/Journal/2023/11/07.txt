@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-07T15:04:46+13:00
+
+====== Tuesday 07 Nov 2023 ======
+
+==== XEE: An Xarray extension for Google Earth Engine. ====
+
+https://github.com/google/Xee#xee-xarray--google-earth-engine earthengine authenticate --quiet

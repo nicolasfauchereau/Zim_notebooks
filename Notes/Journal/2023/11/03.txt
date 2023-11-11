@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-03T12:47:32+13:00
+
+====== Friday 03 Nov 2023 ======
+
+==== NGFS scenarios and downscaled (country level) data ====
+
+https://data.ece.iiasa.ac.at/ngfs-phase-3/#/workspaces 
+
+https://data.ece.iiasa.ac.at/ngfs-phase-3/#/downloads 
+
+see also in [[/home/nicolasf/PwC/NGFS]] 
+
+@idea  make explorer from NIWA ? 
+
+--------------------
+==== NIWA presentation context for commercial opportunities ====
+
+* regulatory context: TCFD, NZ climate standards, 
+* multitude of providers 
+* climate and weather hazards → financial risks ? 
+* open source projects / frameworks for risk modelling (OS-climate, OASIS Loss modelling framework, CLIMADA (used by e.g. PwC Zwitzerland) 
+* providers subscriptions ? monthly / annual 
+* climsystems: pay per data 
+* NIWA ? data provider or analytics provider ? riskscape ? riskscape.org.nz → market it to entities ? partnerships in the geospatial space 
+* what are opportunities for commercialisation of downscaled climate data ?
+
+--------------------
+
+
+

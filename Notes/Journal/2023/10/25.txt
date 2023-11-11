@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-25T10:07:03+13:00
+
+====== Wednesday 25 Oct 2023 ======
+
+==== helium built on top of selenium for browser automation ====
+
+https://github.com/mherrmann/selenium-python-helium/tree/master 
+
+https://github.com/mherrmann/selenium-python-helium/blob/master/docs/cheatsheet.md 
+
+--------------------
+
+
