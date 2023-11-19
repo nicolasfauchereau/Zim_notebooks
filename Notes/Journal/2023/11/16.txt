@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-16T15:22:21+13:00
+
+====== Thursday 16 Nov 2023 ======
+
+==== Tupaia ====
+
+https://tupaia.org/
+
+--------------------
+==== Wet Bulb Temperature → Pacific ====
+
+NASA-NEX on AWS 
+
+https://github.com/carbonplan/extreme-heat/blob/main/notebooks/utils.py 

@@ -1,0 +1,109 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-15T09:31:49+13:00
+
+====== Wednesday 15 Nov 2023 ======
+
+==== The Environment: How Geospatial Technology Is Shaping Our Future ====
+
+@NIWA @ideas 
+
+https://www.forbes.com/sites/google-maps/2023/11/13/the-environment-how-geospatial-technology-is-shaping-our-future/?sh=14c7d0e21ba2 
+
+see also Orbica platform ? Kurt Janssen contact 
+
+--------------------
+==== Learning skillful medium-range global weather forecasting | Science ====
+ 
+https://www.science.org/doi/10.1126/science.adi2336 
+
+--------------------
+==== Climate variability a key driver of recent Antarctic ice-mass change ====
+
+https://www.nature.com/articles/s41561-023-01317-w#Abs1 
+
+Multiple datasets show the Antarctic Ice Sheet has lost mass over recent decades and therefore contributed to sea-level rise. Short-term variability in ice mass has been associated partly with El Niño/Southern Oscillation (ENSO), for both the grounded ice sheet and its bounding ice shelves, but a connection with the Southern Annular Mode—the dominant climate mode in the region—is not fully clear. Here we show that satellite-based gravimetric estimates of ice-mass variability between 2002 and 2021 can be largely explained by a simple linear relation with both the Southern Annular Mode and lagged ENSO. Multiple linear regression reveals that the cumulative effects of the Southern Annular Mode and/or ENSO explain much of the decadal variability from the whole ice sheet down to individual drainage basins. A substantial portion of the net change in ice mass across the whole ice sheet between 2002 and 2021 can be attributed to a persistent forcing from a positive Southern Annular Mode. Understanding the drivers of variability in the Southern Annular Mode over this period, which are largely anthropogenic over multidecadal timescales, may be a pathway to partially attributing ice-sheet change to human activity.
+
+--------------------
+==== Committed Global Warming Risks Triggering Multiple Climate Tipping Points ====
+
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022EF003250 
+
+Many scenarios for limiting global warming to 1.5°C assume planetary-scale carbon dioxide removal sufficient to exceed anthropogenic emissions, resulting in radiative forcing falling and temperatures stabilizing. However, such removal technology may prove unfeasible for technical, environmental, political, or economic reasons, resulting in continuing greenhouse gas emissions from hard-to-mitigate sectors. This may lead to constant concentration scenarios, where net anthropogenic emissions remain non-zero but small, and are roughly balanced by natural carbon sinks. Such a situation would keep atmospheric radiative forcing roughly constant. Fixed radiative forcing creates an equilibrium “committed” warming, captured in the concept of “equilibrium climate sensitivity.” This scenario is rarely analyzed as a potential extension to transient climate scenarios. Here, we aim to understand the planetary response to such fixed concentration commitments, with an emphasis on assessing the resulting likelihood of exceeding temperature thresholds that trigger climate tipping points. We explore transients followed by respective equilibrium committed warming initiated under low to high emission scenarios. We find that the likelihood of crossing the 1.5°C threshold and the 2.0°C threshold is 83% and 55%, respectively, if today's radiative forcing is maintained until achieving equilibrium global warming. Under the scenario that best matches current national commitments (RCP4.5), we estimate that in the transient stage, two tipping points will be crossed. If radiative forcing is then held fixed after the year 2100, a further six tipping point thresholds are crossed. Achieving a trajectory similar to RCP2.6 requires reaching net-zero emissions rapidly, which would greatly reduce the likelihood of tipping events.
+
+--------------------
+==== Machine Learning for numerical weather and climate modelling: a review ====
+
+https://egusphere.copernicus.org/preprints/2023/egusphere-2023-350/egusphere-2023-350.pdf 
+
+Machine learning (ML) is increasing in popularity in the field of weather and climate modelling. Applications range7
+from improved solvers and preconditioners, to parametrisation scheme emulation and replacement, and recently even8
+to full ML-based weather and climate prediction models. While ML has been used in this space for more than 259
+years, it is only in the last 10 or so years that progress has accelerated to the point that ML applications are becoming10
+competitive with numerical knowledge-based alternatives. In this review, we provide a roughly chronological11
+summary of the application of ML to aspects of weather and climate modelling from early publications through to the12
+latest progress at the time of writing. We also provide an overview of key ML concepts and terms. Our aim is to13
+provide a primer for researchers and model developers to rapidly familiarize and update themselves with the world of14
+ML in the context of weather and climate models.
+
+--------------------
+==== MBIE ====
+
+@NIWA 
+
+some links maybe of interest: 
+
+ 
+FarmBeats: AI, Edge & IoT for Agriculture
+
+https://www.microsoft.com/en-us/research/project/farmbeats-iot-agriculture/?ranMID=24542&ranEAID=nOD/rLJHOac&ranSiteID=nOD_rLJHOac-AaMtURqOGcfhKqIr_Z4cWg&epi=nOD_rLJHOac-AaMtURqOGcfhKqIr_Z4cWg&irgwc=1&OCID=AIDcmm549zy227_aff_7593_1243925&tduid=%28ir__js0hwjmkgkkfdxkct9yc620ic32xbvsksiihpczh00%29%287593%29%281243925%29%28nOD_rLJHOac-AaMtURqOGcfhKqIr_Z4cWg%29%28%29&irclickid=_js0hwjmkgkkfdxkct9yc620ic32xbvsksiihpczh00
+
+
+Project FarmVibes: Democratizing digital tools for sustainable agriculture
+
+https://www.microsoft.com/en-us/research/project/project-farmvibes/?ranMID=24542&ranEAID=nOD/rLJHOac&ranSiteID=nOD_rLJHOac-AaMtURqOGcd76xk7DGX3PA&epi=nOD_rLJHOac-AaMtURqOGcd76xk7DGX3PA&irgwc=1&OCID=AIDcmm549zy227_aff_7593_1243925&tduid=%28ir__js0hwjmkgkkfdxkct9yc620ic32xbvskrrihpczh00%29%287593%29%281243925%29%28nOD_rLJHOac-AaMtURqOGcd76xk7DGX3PA%29%28%29&irclickid=_js0hwjmkgkkfdxkct9yc620ic32xbvskrrihpczh00 
+
+
+https://www.theverge.com/2023/11/14/23950666/ai-sustainable-farming-machine-learning-agriculture 
+
+--------------------
+==== Reimagining infrastructure for a biodiverse future ====
+
+@solarpunk 
+
+ https://www.pnas.org/doi/10.1073/pnas.2214334120?utm_source=TOC&utm_medium=ealert&TOC_v120_i46=&ref=d253816
+
+see profile: Arun Agrawal 
+
+https://seas.umich.edu/research/faculty/arun-agrawal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-19T19:42:08+13:00
+
+====== Sunday 19 Nov 2023 ======
+
+==== Our world in data github repository ====
+
+https://github.com/owid 
+
+see upload to S3 script 
+
+https://github.com/owid/energy-data/blob/master/scripts/upload_datasets_to_s3.py 
+
+GHG emissions https://github.com/owid/notebooks/blob/main/HannahRitchie/GHG-Emissions/ghg_emissions.ipynb 
+
+IPCC scenarios: https://github.com/owid/notebooks/blob/main/HannahRitchie/ipcc-scenarios/IPCC%20Scenarios.ipynb 
+
+for https://ourworldindata.org/explorers/ipcc-scenarios ? 
+
+also: https://github.com/owid/notebooks/blob/main/HannahRitchie/Global%20warming%20contributions%20(Global%20Carbon%20Project).ipynb 
