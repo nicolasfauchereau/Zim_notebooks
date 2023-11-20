@@ -1,0 +1,136 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-20T09:17:00+13:00
+
+====== Monday 20 Nov 2023 ======
+
+==== financial modelling course with python and Excel ====
+
+https://nickderobertis.github.io/fin-model-course/ 
+
+==== cat modelling in Python ====
+
+@idea @NIWA 
+
+ John Gill - Cat modelling with python  
+https://www.youtube.com/watch?v=m_lPe9Psed4 
+
+ Luis Miguel Sanchez - Using Python to Design a Parametric Catastrophic CAT Earthquake Bond 
+https://www.youtube.com/watch?v=heGtUhFm1-A 
+
+ Building Catastrophe Models With Open Data And Open Software 
+https://www.youtube.com/watch?v=a3c1E6m3egk 
+
+ Oasis: an Open Source Framework for the Modelling of Natural Disaster Risk - Mark Pinkerton  
+https://www.youtube.com/watch?v=356Kr9CTJWE 
+
+https://www.youtube.com/watch?v=qVbAhkXGw_0 
+
+Riskscape 
+https://riskscape.org.nz/ 
+
+--------------------
+==== climate and nature website ====
+
+@NIWA @climate @climate_change 
+
+https://climateandnature.org.nz/ 
+
+--------------------
+Neural NWPs at NIWA and elsewhere 
+
+@NIWA 
+
+see email from / to Tristan 
+
+//Hey Nico!//
+
+//Just hijacking this a little bit….//
+
+//That would be excellent – I’m trying to put together a bit of a strategy meeting of neural weather models (NWM) at NIWA on the 14th Dec.//
+
+//Neelesh, Gemma Mason, Nava, and potentially Jess Robertson (new head of Data Science and HPC) would be in attendance, and I was hoping you would be able to attend too?  The rough agenda would be://
+
+	//Update from Gemma on our progress with NWMs at NIWA//
+	//How we have been collaborating into the wider UM partnership and plans going forward with this collaboration (papers planned, etc)//
+	//What is holding us back (hardware, capacity, etc)//
+	//How we see the future of NWMs at NIWA//
+	//Other potential collaborators (Scripps)//
+
+//No time set in stone as yet… but it would probably be ~2 hours. Are you interested in attending?//
+
+//Cheers,//
+
+//Tristan//
+
+response: 
+
+//Awesome Tristan, thanks for the update ... curious about their use of LLMs//
+
+//re. Bodeker Scientific, have had a look at https://www.bodekerscientific.com/projects/deepweather and https://www.deepweather.org.nz/home, not sure where it's going, but noticed with interest https://www.redskyai.com/ which seems to be some kind of spin up of Bodeker (see https://www.redskyai.com/our-team) ? They also have a partnership with the Waikato Uni (Albert Bifet) who's behind the TAIAO programme///
+
+//cheers//
+
+//Nico//
+
+--------------------
+==== Equivalent of Market Intelligence insights but for Global, regional and NZ climate and weather events ? ====
+
+@idea @NIWA 
+
+see: https://www.pwc.co.nz/services/treasury-advisory/weekly-market-wrap-up-videos/weekly-market-wrap-up-20-november-2023.html?j=441602&sfmc_sub=12515318&l=16_HTML&u=8185845&mid=510000036&jb=2 
+
+i.e. review significant weather events bi-weekly 
+
+impacts 
+
+latest scientific insights ? 
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
