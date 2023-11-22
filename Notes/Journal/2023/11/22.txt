@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-22T09:21:17+13:00
+
+====== Wednesday 22 Nov 2023 ======
+
+==== Bayesian Model Averaging for forecasts ====
+
+@NIWA @SCO @idea 
+
+Model-Weighting-Toolbox 
+
+https://github.com/shamik394/Model-Weighting-Toolbox 
+
+ My research at NASA-JPL as a Student Intern presents a unique climate change simulation toolbox that merges multiple climate models and observations using Pseudo-Bayesian Model Averaging (BMA) and other techniques. It allows researchers to select optimal model weights for accurate forecasts and flexibility in addressing various climatic inquiries.  
+
+also cloned in [[~/repos]] 
+
+see in particular: 
+
+https://github.com/shamik394/Model-Weighting-Toolbox/blob/main/Model_Weighting_Toolbox_(cleaner_version)_full_version%20(1).ipynb 
+
+which seems to apply to both forecasts and projections 
+
+see also: 
+
+https://github.com/martinaragoneses/bma 
+
+--------------------
+==== nbdev for development in Jupyter Notebooks ====
+
+@jupyter @python 
+
+https://nbdev.fast.ai/ 
+
+--------------------
+==== MHWs tracking ====
+
+@MHW 
+
+https://escience.washington.edu/using-data-science-to-track-marine-heatwaves/ 
+
+https://ocetrac.readthedocs.io/en/latest/index.html 
+
+developed by Hilary Scannell, now at Jupiter Climate Intelligence: https://www.hillaryscannell.com/ 
+
+see also: https://github.com/hscannell/mhw-2020 
+
+for ARGO climatology: Roemmich-Gilson Argo Climatology  
+
+https://sio-argo.ucsd.edu/RG_Climatology.html 
+
+--------------------
+==== Marine Heat Waves in the Pacific ====
+
+Tropical western and central Pacific marine heatwave data (mhw_pacific) 
+
+https://github.com/jbkajtar/mhw_pacific  
+
+
+
+
+
+
+
+
