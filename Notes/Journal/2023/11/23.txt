@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-23T14:21:29+13:00
+
+====== Thursday 23 Nov 2023 ======
+
+==== XCDAT ====
+
+ An extension of xarray for climate data analysis on structured grids. 
+
+https://github.com/xCDAT/xcdat 
+
+e.g. 
+
+Calculate Geospatial Weighted Averages from Monthly Time Series 
+
+https://xcdat.readthedocs.io/en/stable/examples/spatial-average.html 
+
+Horizontal Regridding
+
+https://xcdat.readthedocs.io/en/stable/examples/regridding-horizontal.html 
+
+https://xcdat.readthedocs.io/en/stable/demos/1-25-23-cwss-seminar/introduction-to-xcdat.html 

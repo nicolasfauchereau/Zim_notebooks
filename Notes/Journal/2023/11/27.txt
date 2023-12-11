@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-27T13:36:26+13:00
+
+====== Monday 27 Nov 2023 ======
+
+==== to configure ZIM ====
+
+@ZIM 
+
+see in [[~/.config/zim]] 
+
+in particular:  [[~/.config/zim/style.conf]] 
+
+--------------------
+==== Sensitive intervention points: a strategic approach to climate action ====
+
+While some countries are making progress reducing greenhouse gas emissions, few are progressing rapidly enough to be on track to reach net zero emissions by mid-century. The transition to net zero involves deep structural transformation of the global economy and its associated complex socio-technical systems. Here, we set out a conceptual framework to identify ‘sensitive intervention points’ (SIPs) in systems where a small or moderately-sized intervention could drive outsized impacts and transformational change. These points take three forms: (i) critical tipping points, such as a critical price threshold, (ii) critical nodes in networks, such as an influential actor in a social network, and (iii) critical points in time, where windows of opportunity for change open up. We also propose an assessment methodology for prioritizing interventions in terms of their potential impacts, risks, and ease of implementation. We apply our framework and assessment methodology to evaluate a list of proposed interventions for accelerating global decarbonization. Promising interventions include investing in key clean energy technologies with consistent cost declines, introducing central bank policies to reduce the value of polluting collateral, and enhancing climate-related financial risk disclosure.
+
+{{./pasted_image.png}}
+
+https://academic.oup.com/oxrep/article/39/4/694/7425301 
+
+==== Sensitive intervention points in the post-carbon transition ====
+
+https://www.science.org/doi/10.1126/science.aaw7287 
+
+--------------------
+==== A set of Python notebooks focusing on interactive visualization of meteorological data ====
+
+https://github.com/ktyle/interactive_viz
+
+
+--------------------
+==== To reproject a raster ====
+
+Open netcdf 
+set crs 
+reproject 
+
+
+
+{{./pasted_image001.png}}
+
+
+
+
+
+
+

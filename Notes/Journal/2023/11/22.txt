@@ -57,6 +57,15 @@ Tropical western and central Pacific marine heatwave data (mhw_pacific)
 
 https://github.com/jbkajtar/mhw_pacific  
 
+--------------------
+==== Extreme Value Analysis tutorial ====
+
+@EVA 
+
+https://github.com/royalosyin/A-Beginner-Guide-to-Carry-out-Extreme-Value-Analysis-with-Codes-in-Python/tree/master 
+
+see also: https://github.com/antarcticrainforest/RainfallExtremes 
+
 
 
 

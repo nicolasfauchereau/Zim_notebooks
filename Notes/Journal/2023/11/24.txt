@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-24T09:00:59+13:00
+
+====== Friday 24 Nov 2023 ======
+
+==== Coral Reef Monitoring and AI ====
+
+https://app.fruitpunch.ai/challenge/ai-for-coral-reefs-2 
+
+https://www.reef.support/ 
+
+
+--------------------
+==== Evaluation of Dynamically Downscaled CMIP6-CCAM Models Over Australia ====
+
+@NIWA @idea 
+
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023EF003548 
+
+High-resolution climate change projections are increasingly necessary to inform climate policy and adaptation planning. Downscaling of global climate models (GCMs) is required to simulate the climate at the spatial scale relevant for local impacts. Here, we dynamically downscaled 15 CMIP6 GCMs to a 10 km resolution over Australia using the Conformal Cubic Atmospheric model (CCAM), creating the largest ensemble of high-resolution downscaled CMIP6 projections for Australia. We compared the host CMIP6 models and downscaled simulations to the Australian Gridded Climate Data (AGCD) observational data and evaluated performance using the Kling-Gupta efficiency and Perkins skill score. Downscaling improved performance over host GCMs for seasonal temperature and precipitation (10% and 43% respectively), and for annual cycles of temperature and precipitation (6% and 13% respectively). Downscaling also improved the fraction of dry days, reducing the bias for too many low-rain days. The largest improvements were found in climate extremes, with enhancements to extreme minimum temperatures in all seasons varying from 142% to 201%, and to extreme precipitation of 52% in Austral winter and 47% in summer. The ensemble average integrated skill score improved by 16%. Temperature and precipitation biases were reduced in mountainous and coastal areas. CCAM downscaling outperformed host CMIP6 GCMs at multiple spatial scales and regions—continental Australia, Australian IPCC regions and Queensland's regions—with integrated added value ranging from 9% to 150% and higher over densely populated regions more exposed to climate impacts. This data set will be a valuable resource for understanding future climate changes in Australia.
+
+idea: as now NZ and Australia have coordinated (CCAM, SSPs) downscaled data, how about collaborating across the ditch to ensure alignment with the NZ climate standards + the nascent Australian climate standards 
+
+see https://aasb.gov.au/news/exposure-draft-ed-sr1-australian-sustainability-reporting-standards-disclosure-of-climate-related-financial-information/ 
+
+--------------------
+==== Data-driven predictions of the time remaining until critical global warming thresholds are reached ====
+
+Noah S. Diffenbaugh https://orcid.org/0000-0002-8856-4964 diffenbaugh@stanford.edu and Elizabeth A. Barnes https://orcid.org/0000-0003-4284-9320
+
+Leveraging artificial neural networks (ANNs) trained on climate model output, we use the spatial pattern of historical temperature observations to predict the time until critical global warming thresholds are reached. Although no observations are used during the training, validation, or testing, the ANNs accurately predict the timing of historical global warming from maps of historical annual temperature. The central estimate for the 1.5 °C global warming threshold is between 2033 and 2035, including a ±1σ range of 2028 to 2039 in the Intermediate (SSP2-4.5) climate forcing scenario, consistent with previous assessments. However, our data-driven approach also suggests a substantial probability of exceeding the 2 °C threshold even in the Low (SSP1-2.6) climate forcing scenario. While there are limitations to our approach, our results suggest a higher likelihood of reaching 2 °C in the Low scenario than indicated in some previous assessments—though the possibility that 2 °C could be avoided is not ruled out. Explainable AI methods reveal that the ANNs focus on particular geographic regions to predict the time until the global threshold is reached. Our framework provides a unique, data-driven approach for quantifying the signal of climate change in historical observations and for constraining the uncertainty in climate model projections. Given the substantial existing evidence of accelerating risks to natural and human systems at 1.5 °C and 2 °C, our results provide further evidence for high-impact climate change over the next three decades.
+
+https://www.pnas.org/doi/full/10.1073/pnas.2207183120 
+
+code: https://github.com/eabarnes1010/target_temp_detection 
+
+--------------------
+==== some XCDAT goodies ====
+
+== adding a kernel ==
+
+conda activate <ENV NAME>
+conda install -c conda-forge ipykernel
+python -m ipykernel install --user --name <ENV NAME> --display-name <ENV NAME>
+ 
+nc-time-axis is an optional dependency required for matplotlib to plot cftime coordinates 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

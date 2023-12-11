@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-07T10:35:43+13:00
+
+====== Thursday 07 Dec 2023 ======
+
+==== NWM meeting with Tristan ====
+
+Funded initiatives at NIWA 
+
+→ project (SSIF) on forecasting for preventing loss of life 
+→ Nowcasting for renewable energy generation ... in conjunction with Ben Lively ... 400K of funding 
+
+
+some other stuff to think about 
+
+NZRA: is that already available ?
+
+Graphcast 
+MetNet3 
+
+doing away with assimilation (expensive) and focus on obs instead of reanalyses. Initialisation 
+
+SUB-SEASONAL FORECASTING
+
+Catherine De Burgh-Day: focus on subseasonal forecasting 
+
+
+NOWCASTING 
+
+
+report / paper that shows the financial impacts of insufficient forecasts (persistence!) in the renewable energy sector and the added value of nowcasting ... look for that open-source project ? 
+
+NZX. Market info on hydro provided to NZX 
+
+collab with generators 
+
+
+ISSUES 
+
+Vertical velocity issues in the forecasts, not adequately represented. Neelesh's work in ablation studies has shown that omega has a disproportionate impact 
+
+downscaling is rendered difficult because physical inconsistencies 
+
+
+
+
+
+

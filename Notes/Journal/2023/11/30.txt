@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-30T09:41:27+13:00
+
+====== Thursday 30 Nov 2023 ======
+
+Growing for good: producing a healthy, low greenhouse gas and water quality footprint diet in Aotearoa, New Zealand
+
+https://www.tandfonline.com/doi/full/10.1080/03036758.2022.2137532 
+
+NOTE: 
+
+Optimisation was carried out in Microsoft Excel using an Excel add-in, ‘Solver’. The solver function worked with a group of cells, called decision variables (e.g. grams of fruit). Solver adjusted the values in the decision variable cells to satisfy the limits on constraint cells and produce the desired result for the objective cells (e.g. total sodium content of the diet). 
+
+→ https://github.com/ryayoung/py-excel-solver:  Simple python package to closely mimic Excel Solver. 
+
+

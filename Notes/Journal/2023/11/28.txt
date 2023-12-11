@@ -1,0 +1,94 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-28T09:53:56+13:00
+
+====== Tuesday 28 Nov 2023 ======
+
+==== Climate Change and AutoML, a call for action ====
+
+https://arxiv.org/abs/2210.03324
+
+AutoML for Climate Change: A Call to Action
+Renbo Tu, Nicholas Roberts, Vishak Prasad, Sibasis Nayak, Paarth Jain, Frederic Sala, Ganesh Ramakrishnan, Ameet Talwalkar, Willie Neiswanger, Colin White
+
+	The challenge that climate change poses to humanity has spurred a rapidly developing field of artificial intelligence research focused on climate change applications. The climate change AI (CCAI) community works on a diverse, challenging set of problems which often involve physics-constrained ML or heterogeneous spatiotemporal data. It would be desirable to use automated machine learning (AutoML) techniques to automatically find high-performing architectures and hyperparameters for a given dataset. In this work, we benchmark popular AutoML libraries on three high-leverage CCAI applications: climate modeling, wind power forecasting, and catalyst discovery. We find that out-of-the-box AutoML libraries currently fail to meaningfully surpass the performance of human-designed CCAI models. However, we also identify a few key weaknesses, which stem from the fact that most AutoML techniques are tailored to computer vision and NLP applications. For example, while dozens of search spaces have been designed for image and language data, none have been designed for spatiotemporal data. Addressing these key weaknesses can lead to the discovery of novel architectures that yield substantial performance gains across numerous CCAI applications. Therefore, we present a call to action to the AutoML community, since there are a number of concrete, promising directions for future work in the space of AutoML for CCAI. We release our code and a list of resources at this https URL. 
+
+ 
+https://github.com/climate-change-automl/climate-change-automl 
+
+
+--------------------
+==== GEFS forecasts with intake-thredds and intake-xarray ====
+
+see: https://climpred.readthedocs.io/en/stable/examples/NWP/NWP_GEFS_6h_forecasts.html 
+
+--------------------
+==== autoML for tabular data ====
+
+see https://www.automl.org/automl-for-x/tabular-data/ 
+
+
+https://www.automl.org/tabpfn-a-transformer-that-solves-small-tabular-classification-problems-in-a-second/
+
+→ NOTE: only works if 
+
+{{{code: lang="python3" linenumbers="False"
+mamba create -n automl -c conda-forge python=3.9 pip 
+pip install "tabpfn[full]" 
+}}}
+
+--------------------
+==== Constraining the pattern and magnitude of projected extreme precipitation change in a multi-model ensemble ====
+ 
+https://journals.ametsoc.org/view/journals/clim/aop/JCLI-D-23-0492.1/JCLI-D-23-0492.1.xml 
+
+Projections of precipitation extremes over land are crucial for socioeconomic risk assessments, yet model discrepancies limit their application. Here we use a pattern-filtering technique to identify low-frequency changes in individual members of a multi-model ensemble, to assess discrepancies across models in the projected pattern and magnitude of change. Specifically, we apply low-frequency component analysis (LFCA) to the intensity and frequency of daily precipitation extremes over land in 21 CMIP-6 models. LFCA brings modest but statistically significant improvements in the agreement between models in the spatial pattern of projected change, particularly in scenarios with weak greenhouse forcing. Moreover, we show that LFCA facilitates a robust identification of the rates at which increasing precipitation extremes scale with global temperature change within individual ensemble members. While these rates approximately match expectations from the Clausius-Clapeyron relation on average across models, individual models exhibit considerable and significant differences. Monte-Carlo simulations indicate that these differences contribute to uncertainty in the magnitude of projected change at least as much as differences in the climate sensitivity. Finally, we compare these scaling rates to those identified from observational products, **demonstrating that virtually all climate models significantly underestimate the rates at which increases in precipitation extremes have scaled with global temperatures historically**. Constraining projections with observations therefore amplifies the projected intensification of precipitation extremes as well as reducing the relative error of their distribution.
+
+ Low-frequency component analysis (LFCA)  in Python (and Matlab) 
+
+https://github.com/rcjwills/lfca 
+
+Reference for Method: Wills, R.C., T. Schneider, J.M. Wallace, D.S. Battisti, and D.L. Hartmann, 2018: Disentangling global warming, multidecadal variability, and El Niño in Pacific temperatures. Geophysical Research Letters, 45, doi:10.1002/2017GL076327. 
+
+https://iacweb.ethz.ch/staff/rjnglin/code.html 
+
+see also other repos from Wills (https://iacweb.ethz.ch/staff/rjnglin/index.html): 
+
+→ https://github.com/rcjwills/cmip6hack-pacific-sst.git 
+
+→ https://github.com/rcjwills/forced-patterns 
+
+Reference for Method: Wills, R.C.J., D.S. Battisti, K.C. Armour, T. Schneider, and C. Deser, 2020: Pattern recognition methods to separate forced responses from internal variability in climate model ensembles and observations, Journal of Climate, 33, 8693–8719.
+
+→ """Signal-to-noise-maximizing pattern (S/NP) filtering is a method to identify spatial patterns (linear combinations of empirical orthogonal functions (EOFs)) with the maximum ratio of signal to noise (with signal defined as variance that is agreed upon across an ensemble). The resulting patterns (S/NPs) isolate the patterns of forced change within climate model ensembles (where each simulation is subject to the same external forcing). """ 
+
+applied to CESM-LENS 
+
+@idea 
+
+question: what is the forced pattern of temperature and precipitation over NZ ? 
+
+question: what differences with other methods, such as the NN approaches applied by Elizabeth Barnes et al ?  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

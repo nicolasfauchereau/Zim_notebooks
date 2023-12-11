@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-29T11:02:58+13:00
+
+====== Wednesday 29 Nov 2023 ======
+
+==== Streamlit webapps gallery ====
+
+https://streamlit.io/gallery 
+
+--------------------
+==== Forecasting the El Niño type well before the spring predictability barrier ====
+
+https://www.nature.com/articles/s41612-023-00519-8
+
+uses a climate network approach 
+
+references: 
+
+* Tsonis, A. A., Swanson, K. L. & Roebber, P. J. What do networks have to do with climate? Bull. Am. Meteorol. Soc. 87, 585–595 (2006).
+
+* Fan, J. et al. Statistical physics approaches to the complex Earth system. Phys. Rep. 896, 1–84 (2020).
+
+* Ludescher, J. et al. Network-based forecasting of climate phenomena. Proc. Natl. Acad. Sci. USA 118, e1922872118 (2021).
+
+* Ludescher, J. et al. Improved El Niño forecasting by cooperativity detection. Proc. Natl. Acad. Sci. USA 110, 11742–11745 (2013).
+
+* Ludescher, J. et al. Very early warning of next El Niño. Proc. Natl. Acad. Sci. USA 111, 2064–2066 (2014).
+
+--------------------
+==== AOS tools, including some hairy Eliassen-Palm flux calculations ====
+
+https://github.com/mjucker/aostools  

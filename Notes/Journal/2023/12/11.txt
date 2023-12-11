@@ -1,0 +1,83 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-11T13:21:41+13:00
+
+====== Monday 11 Dec 2023 ======
+
+==== XCAST: A python climate forecasting toolkit ====
+
+https://www.frontiersin.org/articles/10.3389/fclim.2022.953262/full 
+
+https://xcast-lib.github.io/ 
+
+https://github.com/kjhall01/PyELM-MME 
+
+https://github.com/kjhall01/xcast 
+
+--------------------
+==== 17 declarations of emergency in NZ in 2023 ====
+
+--------------------
+===== Jonathan Boston, political scientist =====
+
+https://people.wgtn.ac.nz/Jonathan.Boston 
+
+interview on the role of the public service:  What National’s changes will mean for NZ’s public service | Q+A 2023  https://www.youtube.com/watch?v=TG1wI-coz9U 
+
+some publications: 
+
+Living Within Biophysical Limits: green growth versus degrowth  
+https://ojs.victoria.ac.nz/pq/article/view/7578 
+
+ Transforming the Economy 
+https://ojs.victoria.ac.nz/pq/article/view/6558 
+
+see also: 
+
+== Economics for the future – Beyond the superorganism ==
+
+https://www.sciencedirect.com/science/article/pii/S0921800919310067 
+
+"""
+Our environment and economy are at a crossroads. This paper attempts a cohesive narrative on how human evolved behavior, money, energy, economy and the environment fit together. Humans strive for the same emotional state of our successful ancestors. In a resource rich environment, we coordinate in groups, corporations and nations, to maximize financial surplus, tethered to energy, tethered to carbon. At global scales, the emer**gent result of this combination is a mindless, energy hungry, CO2 emitting Superorganism.** Under this dynamic we are now behaviorally ‘growth constrained’ and will use any means possible to avoid facing this reality. The farther we kick the can, the larger the disconnect between our financial and physical reality becomes. The moment of this recalibration will be a watershed time for our culture, but could also be the birth of a new ‘systems economics’. and resultant different ways of living. The next 30 years are the time to apply all we’ve learned during the past 30 years. We’ve arrived at a species level conversation.s
+"""
+
+=== Nate Hagens: the great simplification ===
+
+https://www.postcarbon.org/our-people/nate-hagens/ 
+
+see also: **Doomberg** https://doomberg.substack.com/p/doomcasts 
+
+--------------------
+==== JAMOVI ====
+
+stats software associated with **OMV** files 
+
+https://flathub.org/apps/org.jamovi.jamovi
+
+for **climate anxiety** on OSF:  https://osf.io/u3r75/ 
+
+preprint: https://osf.io/preprints/psyarxiv/eaq4k 
+
+to install JAMOVI: 
+
+flatpak install flathub org.jamovi.jamovi
+
+to run: 
+
+flatpak run org.jamovi.jamovi
+ 
+for meta-analysis: 
+
+Meta-analysis using Python: a hands-on tutorial https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-022-01673-y 
+
+see also: https://towardsdatascience.com/meta-analysis-in-python-introduction-to-pythonmeta-pymare-and-nimare-e6efd7bdbe87 
+
+Introduction to PythonMeta, PyMARE and NiMARE 
+
+zEpid is an epidemiology analysis toolkit for Python 3.6 to 3.10. The purpose of this library is to make epidemiology e-z to do in Python. A variety of calculations, estimators, and plots can be implemented. Current features include: https://zepid.readthedocs.io/en/latest/index.html 
+
+
+--------------------
+
+

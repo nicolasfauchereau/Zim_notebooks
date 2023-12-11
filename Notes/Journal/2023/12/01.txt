@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-01T11:19:24+13:00
+
+====== Friday 01 Dec 2023 ======
+
+==== excalidraw ====
+
+https://excalidraw.com/
+
+excalibur libraries 
+
+https://libraries.excalidraw.com/?theme=light&sort=default 
+
+{{./pasted_image.png}}
+
+--------------------
+==== The ecosystem of geospatial machine learning tools in the Pangeo world ====
+
+https://talks.osgeo.org/foss4g-sotm-oceania-2023/talk/YP3KPT/ 
+
+video: https://www.youtube.com/watch?v=X2LBuUfSo5Q 
+
+repo: https://github.com/weiji14/foss4g2023oceania 
+
+https://github.com/weiji14/ 
+
+see also company: https://developmentseed.org/ 
+
+https://zen3geo.readthedocs.io/en/latest/walkthrough.html 
+
+
+
+
+
+
+
