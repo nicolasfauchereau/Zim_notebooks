@@ -59,6 +59,10 @@ for **climate anxiety** on OSF:  https://osf.io/u3r75/
 
 preprint: https://osf.io/preprints/psyarxiv/eaq4k 
 
+**A meta-analysis on the relationship between climate anxiety and wellbeing**
+Tomás Gago, Rebecca J. Sargisson, and Taciano L. Milfont 
+Te Kura Whatu Oho Mauri - School of Psychology, Tauranga, University of Waikato 
+
 to install JAMOVI: 
 
 flatpak install flathub org.jamovi.jamovi
@@ -77,7 +81,14 @@ Introduction to PythonMeta, PyMARE and NiMARE
 
 zEpid is an epidemiology analysis toolkit for Python 3.6 to 3.10. The purpose of this library is to make epidemiology e-z to do in Python. A variety of calculations, estimators, and plots can be implemented. Current features include: https://zepid.readthedocs.io/en/latest/index.html 
 
+in R: 
 
---------------------
+doing meta-analysis in R: 
 
+https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/ 
 
+cited by Gago et al 
+
+**Factor Analysis in Python:** 
+
+https://quanp.readthedocs.io/en/latest/tutorials.html 
