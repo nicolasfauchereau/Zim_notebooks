@@ -92,3 +92,53 @@ cited by Gago et al
 **Factor Analysis in Python:** 
 
 https://quanp.readthedocs.io/en/latest/tutorials.html 
+
+see also: 
+
+**factor_analyzer:** https://factor-analyzer.readthedocs.io/en/latest/ 
+
+https://www.youtube.com/watch?v=jRjeC9Bre8M:  **Python factor analysis with FactorAnalyzer**  
+
+created a mamba environment called  'psych' for dealing with climate anxiety analyses 
+
+https://github.com/EducationalTestingService/factor_analyzer 
+
+Note that in the main module, there is an argument: 
+
+	is_corr_matrix : bool, optional
+		Set to ``True if the ``data`` is the correlation matrix.
+		Defaults to `False`.
+
+So you can perform the Factor Analysis on the correlation matrix directly 
+
+FactorAnalyzer(
+	n_factors=3,
+	rotation='promax',
+	method='minres',
+	use_smc=True,
+	is_corr_matrix=False,
+	bounds=(0.005, 1),
+	impute='median',
+	svd_method='randomized',
+	rotation_kwargs=None,
+)
+
+see example of Factor Analysis using FactorAnalyzer: https://www.kaggle.com/code/alexandrehsd/binary-multiclass-classification-factor-analysis/notebook  
+
+and [[./notebook_Factor_Analysis.ipynb]] 
+
+--------------------
+==== Skrub: Prepping tables for machine learning ====
+
+@ML 
+
+https://skrub-data.org/stable/index.html
+
+see also: Re: [scikit-learn] Announcing skrub: Prepping tables for machine learning
+
+https://mail.google.com/mail/u/0/#inbox/WhctKKZPGTdrJMZLXRXDJxShdkLdnPWHNcqtTBjQhfsJjgztNFnXGcVlbwptPMGKgLshNkV 
+
+
+
+
+

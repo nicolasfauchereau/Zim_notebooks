@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-15T16:22:53+13:00
+
+====== Friday 15 Dec 2023 ======
+
+==== cf-python regridding ====
+
+http://www.met.reading.ac.uk/~swsheaps/ncas_data_tools/pdf/cf-python_regridding.pdf 
+
+cf python package¶ 
+
+https://ncas-cms.github.io/cf-python/ 
+
+A CF-compliant earth science data analysis library 
+
+see examples: 
+
+Plotting statistically significant temperature trends with stippling
+
+uses cf-plot 
+
+super easy to use 
+
+{{./pasted_image.png}}
+

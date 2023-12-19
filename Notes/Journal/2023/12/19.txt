@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-19T12:11:22+13:00
+
+====== Tuesday 19 Dec 2023 ======
+
+Tipping points: Both problem and solution 
+
+https://www.sciencedirect.com/science/article/abs/pii/S2590332223005523 
+
+Standardized benchmark of historical compound wind and solar energy droughts across the Continental United States
+
+https://www.sciencedirect.com/science/article/pii/S0960148123014659?via%3Dihub
+
+--------------------
+==== Energy Droughts ====
+
+@idea 
+
+email to Tristan: 
+
+Hi Tristan
+
+In the context of the work you are doing around nowcasting / forecasting for renewable energy, I thought you would be interested in reading this paper:
+
+https://www.sciencedirect.com/science/article/pii/S0960148123014659?via%3Dihub
+
+ might be worth looking into this for NZ ? I have worked on a national offshore feasibility study report over the past couple of months, I know this is a serious consideration especially in the context of green H2 production, so would have to look at e.g. NZ reanalysis for wind offshore
+
+cheers
+
+Nico 

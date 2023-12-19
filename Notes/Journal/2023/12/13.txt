@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-13T13:48:16+13:00
+
+====== Wednesday 13 Dec 2023 ======
+
+==== CCAM outputs ====
+
+https://hpc.csiro.au/users/244528/ACS/CCAM_GIBSON23/ 
+
+See: High-Resolution CCAM Simulations Over New Zealand and the South Pacific for the Detection and Attribution of Weather Extremes 
+
+Gibson, P. B., D. Stone, M. Thatcher, A. Broadbent, S. Dean, S. M. Rosier, S. Stuart, and A. Sood, 2023: High‐Resolution CCAM Simulations Over New Zealand and the South Pacific for the Detection and Attribution of Weather Extremes. JGR Atmospheres, 128, e2023JD038530, https://doi.org/10.1029/2023JD038530.
+ 
+--------------------
+==== IDEA: climate change and deprivation index in NZ ====
+
+see ehinz.ac.nz 
+
+see: https://www.ehinz.ac.nz/indicators/population-vulnerability/socioeconomic-deprivation-profile/#people-in-more-deprived-areas-are-more-vulnerable-to-environmental-risks 
+
+https://www.arcgis.com/apps/Embed/index.html?webmap=bd6277d69e844652917bf174ee017c64&extent=158.8544,-47.8746,180,-34.2558&zoom=true&scale=true&search=true&searchextent=true&details=true&legend=true&active_panel=legend&disable_scroll=true&theme=light 
+
+NZDep for 2018 (NZDep2018)
+
+The NZDep for 2018 (NZDep2018) provides a deprivation score for each Statistical Area 1 (SA1) (and its constituent meshblocks) in New Zealand (Figure 1). The map in Figure 1 shows NZDep2018 deciles at the SA2 level, and when you zoom in at the SA1 level.
+
+@idea @NIWA 
+
+climate change and deprivation index in NZ 
