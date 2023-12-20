@@ -1,0 +1,103 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-21T09:44:18+13:00
+
+====== Thursday 21 Dec 2023 ======
+
+==== Global land moisture trends: drier in dry and wetter in wet over land ====
+ 
+https://www.nature.com/articles/srep18018
+
+{{./pasted_image.png?width=500}}
+
+Their trend figure shows very strong soil moisture trends especially in the west of the South Island → very unlikely 
+
+--------------------
+==== IDEA: ENSO changes and teleconnections changes for NZ ====
+
+@idea 
+
+based on RONI ? use CCAM simulations ? 
+
+--------------------
+==== On rate-induced tipping points: Rate-induced tipping in complex high-dimensional ecological networks ====
+
+Panahi, S., Y. Do, A. Hastings, and Y.-C. Lai, 2023: Rate-induced tipping in complex high-dimensional ecological networks. Proc. Natl. Acad. Sci. U.S.A., 120, e2308820120, https://doi.org/10.1073/pnas.2308820120.
+
+https://phys.org/news/2023-12-critical-climate-collapse-conditions-ecological.html 
+
+https://www.pnas.org/doi/10.1073/pnas.2308820120 
+
+Human activities are havingincreasingly negative impacts onnatural systems, and it is ofinterest to understand how the“pace” of parameter changemay lead to catastrophicconsequences. This work studiesthe phenomenon of rate-inducedtipping (R-tipping) inhigh-dimensional ecologicalnetworks, where the rate ofparameter change can cause thesystem to undergo a tippingpoint from healthy survival toextinction. **A quantitative scaling law between the probability of R-tipping and the rate was uncovered, with a striking and devastating consequence: In order to reduce the probability, parameter changes must beslowed down to such an extent that the rate practically reaches zero. This may pose an extremely significant challenge in our efforts to protect and preserve the natural environment.** 
+
+--------------------
+==== Smart Ideas on Graphs ====
+
+title: "it's all connected: identification of NNN using graph networks" 
+
+Graph-Based Deep Learning for Sea Surface Temperature Anomaly Forecasts 
+
+https://www.youtube.com/watch?v=mgsLhBv6Kt4&list=PLxP0oxENawENjvgRaswmzdUgmhSTvCfNk&index=12 
+
+
+{{./pasted_image001.png}}
+
+This is the opposite to what they say: In the tropics persistence is generally a good predictor ( @idea : calculate autocorrelation, e-folding time !) because of SST - atmosphere coupling.
+
+Around Antarctica: sea-ice ... probably 
+
+In the Pacific tropics: poor prediction in the ENSO regions ! 
+
+Seems that they use **GraphSAGE: Inductive Representation Learning on Large Graphs**:   https://snap.stanford.edu/graphsage/
+
+comparison with 
+
+A deep learning model for forecasting global monthly mean sea surface temperature anomalies 
+https://www.frontiersin.org/articles/10.3389/fclim.2022.932932/full 
+
+{{./pasted_image002.png}}
+
+GEOSTGGC on github: 
+
+→ https://github.com/ding05/geo_st_grid_graph_converter 
+→ https://github.com/ding05/geo_st_grid_graph_converter_2.0 
+
+also in [[~/repos]] 
+
+also: https://github.com/ding05/graphsage_sst_anomaly_forecasts 
+ 
+https://github.com/ding05/graphwaves_dgl 
+
+Scripts for ocean temperature anomaly forecasting with FCNs, CNNs, GNNs, and other model attempts, plus auxiliary functions, data preprocessing and result demonstration, last updated 03/2023 
+
+https://github.com/ding05/gnn_cnn_ocean_temp_forecasting.git 
+
+ Jupyter notebooks for ocean temperature anomaly forecasting with GNNs and CNNs and data preprocessing from NetCDF multidimensional data, last updated 07/2022 
+
+--------------------
+==== IDEA: instead of drones, using tethered ballons, with solar panel, could be reeled in an out at regular intervals ====
+
+@idea 
+
+https://geojournalism.org/2013/08/balloon-mapping-how-to-make-your-own-low-flying-satellite/ 
+
+https://www.nzherald.co.nz/nz/google-launches-project-loon/GFHWZAK4J2KNWU6IEPVC35TBIY/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

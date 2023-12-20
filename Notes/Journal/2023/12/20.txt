@@ -1,0 +1,142 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-20T10:41:43+13:00
+
+====== Wednesday 20 Dec 2023 ======
+
+NeurIPS talks and papers related to Machine Learning and Climate Change 
+
+**Graph-based Neural Weather Prediction for Limited Area Modeling (Papers Track)**  
+https://www.climatechange.ai/papers/neurips2023/17 
+
+Asset Bundling for Wind Power Forecasting (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/86 
+https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2023/86/poster.jpg 
+
+ACE: A fast, skillful learned global atmospheric model for climate prediction (Papers Track)
+https://www.climatechange.ai/papers/neurips2023/14 
+
+Self-supervised Pre-training for Precipitation Post-processor (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/18 
+
+Price-Aware Deep Learning for Electricity Markets (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/20 
+
+Spatially-resolved emulation of climate extremes via machine learning stochastic models (Papers Track) s
+https://www.climatechange.ai/papers/neurips2023/23 
+
+Machine learning derived sub-seasonal to seasonal extremes (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/26 
+
+Machine learning applications for weather and climate predictions need greater focus on extremes (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/29 
+also see paper in ERL: https://iopscience.iop.org/article/10.1088/1748-9326/ac9d4e 
+
+Combining deep generative models with extreme value theory for synthetic hazard simulation: a multivariate and spatially coherent approach (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/32 
+
+Southern Ocean Dynamics Under Climate Change: New Knowledge Through Physics-Guided Machine Learning (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/37 
+
+An LSTM-based Downscaling Framework for Australian Precipitation Projections (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/46 
+
+Climate Variable Downscaling with Conditional Normalizing Flows (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/48 
+
+Global Coastline Evolution Forecasting from Satellite Imagery using Deep Learning (Papers Track)  → **Christo** 
+https://www.climatechange.ai/papers/neurips2023/49 
+
+Can Reinforcement Learning support policy makers? A preliminary study with Integrated Assessment Models (Papers Track) → **Hunter**
+https://www.climatechange.ai/papers/neurips2023/50 
+
+Stress-testing the coupled behavior of hybrid physics-machine learning climate simulations on an unseen, warmer climate (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/62 
+
+Data Assimilation using ERA5, ASOS, and the U-STN model for Weather Forecasting over the UK (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/61 
+
+Towards a spatio-temporal deep learning approach to predict malaria outbreaks using earth observation measurements in South Asia (Papers Track) 
+https://www.climatechange.ai/papers/neurips2023/66 
+
+RMM-VAE: a machine learning method for identifying probabilistic weather regimes targeted to a local-scale impact variable (Papers Track)  → **Drew** 
+https://www.climatechange.ai/papers/neurips2023/73 
+check that for Weather Regimes 
+
+Deep Glacier Image Velocimetry: Mapping glacier velocities from Sentinel-2 imagery with deep learning (Papers Track) → **Drew**
+https://www.climatechange.ai/papers/neurips2023/88 
+
+ALSO (sent by Tristan): 
+
+Learning to forecast diagnostic parameters using pre-trained weather embedding
+https://www.climatechange.ai/papers/neurips2023/104
+
+for this, see also: https://excarta.io/  
+
+--------------------
+==== FuXi-S2S: An accurate machine learning model for global subseasonal forecasts ====
+
+https://arxiv.org/abs/2312.09926 
+
+--------------------
+==== Flash droughts and drought clusters ====
+
+@idea 
+
+Flash drought drives rapid vegetation stress in arid regions in Europe, ERL, O and Park (2023) https://doi.org/10.1088/1748-9326/acae3a 
+
+code: https://github.com/osungmin/Flash_Drought 	
+
+Paper codes for "Divergent ecosystem responses to flash droughts across climate-vegetation regimes", submitted (2023): doi not available yet. 
+
+https://github.com/osungmin/paper_2023_FlashDrought
+
+**Identifying and tracking droughts through space and time** 
+
+https://github.com/julherest/drought_clusters 
+
+
+--------------------
+==== Climate classification with Keras ====
+
+https://jessicastringham.net/2019/06/02/climate-with-keras/ 
+
+https://jessicastringham.net/2018/06/11/climate-classification-with-neural-nets/ 
+
+--------------------
+==== xbatcher ====
+
+presentation on xbatcher starts from 45:30 mins  
+
+https://ams.confex.com/recording/ams/103ANNUAL/mp4/CGNTFL54WCL/67cfb841cba94216ff99f1eb15286ba2/session63444_5.mp4 
+
+also downloaded in [[~/Videos]] 
+
+--------------------
+==== Deep Learning for empirical DownScaling ====
+
+@ML @DL 
+
+https://github.com/carlos-gg/dl4ds 
+
+{{./pasted_image.png}} 
+
+also cloned in the [[~/repos]] folder  
+
+TUTORIAL for DL4DS: https://github.com/carlos-gg/dl4ds/blob/master/notebooks/DL4DS_tutorial.ipynb 
+
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
